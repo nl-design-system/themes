@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const Template = ({ content, disabled }) => `<example-button>${content}</example-button>`;
+
+<Meta
+  title="Web Component/Button"
+  argTypes={{
+    content: {
+      description: "Set the text content",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Example Button
+
+<Canvas>
+  <Story name="Button" args={{ content: "Press me!" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button" />
