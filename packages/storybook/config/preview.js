@@ -1,8 +1,8 @@
-import '@example/design-tokens/dist/index.css';
+import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
 
-import { defineCustomElements } from '@example/web-components-stencil';
+import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil';
 
-defineCustomElements();
+defineUtrechtComponents();
 
 const statuses = {
   BETA: '#9F5E0F',
