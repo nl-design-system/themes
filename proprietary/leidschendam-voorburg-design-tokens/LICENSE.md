@@ -1,12 +1,12 @@
-# Auteursrecht Gemeente Amsterdam
+# Auteursrecht Gemeente Leidschendam-Voorburg
 
-Copyright (c) 2021 Gemeente Amsterdam
+Copyright (c) 2021 Gemeente Leidschendam-Voorburg
 
 ## Logo en huisstijl
 
-Op het huisstijl en logo zijn auteursrechten van toepassing. Het gebruik van logo en huisstijl is alleen toegestaan voor gebruik door Gemeente Amsterdam.
+Op het huisstijl en logo zijn auteursrechten van toepassing. Het gebruik van logo en huisstijl is alleen toegestaan voor gebruik door Gemeente Leidschendam-Voorburg.
 
-Wanneer je een bewerking van de software wilt gebruiken voor andere doeleinden, mag je niet het logo van Gemeente Amsterdam gebruiken en je ontwerpt een eigen huisstijl.
+Wanneer je een bewerking van de software wilt gebruiken voor andere doeleinden, mag je niet het logo van Gemeente Leidschendam-Voorburg gebruiken en je ontwerpt een eigen huisstijl.
 
 ## Lettertype
 
@@ -14,4 +14,4 @@ Lettertypes die worden gebruikt voor de huisstijl zijn niet allemaal gratis en o
 
 ## Toestemming
 
-Wanneer je het logo of de huisstijl wilt gebruiken kun je voor toestemming contact opnemen met [huisstijl@amsterdam.nl](mailto:huisstijl@amsterdam.nl).
+Wanneer je het logo of de huisstijl wilt gebruiken kun je voor toestemming contact opnemen met Gemeente Leidschendam-Voorburg.
