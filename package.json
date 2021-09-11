@@ -78,7 +78,7 @@
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package",
     "release": "lerna version prerelease --no-changelog --no-private",
-    "start": "node_modules/http-server/bin dist/",
+    "start": "node_modules/http-server/bin/http-server dist/",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm run test-workspaces",
     "test-workspaces": "lerna run --no-bail test",
