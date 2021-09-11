@@ -1,0 +1,14 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Tilburg/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["tilburg"]["color"]["blue"])} />
+  <ColorItem title="Pink" colors={listColors(tokens["tilburg"]["color"]["pink"])} />
+  <ColorItem title="Orange" colors={listColors(tokens["tilburg"]["color"]["orange"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["tilburg"]["color"]["grey"])} />
+</ColorPalette>

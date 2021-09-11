@@ -1,0 +1,19 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import tokens from "../dist/index.json";
+
+export const isToken = (arg) => !!arg && typeof arg === "object" && typeof arg.value === "object" && !!arg.value;
+
+export const listColors = (arg) => {
+  let array = isToken(arg) ? [arg] : arg ? Object.values(arg) : [];
+  return array.map((color) => color.value);
+};
+
+<Meta title="Bodegraven-Reeuwijk/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["bodegraven"]["color"]["blue"])} />
+  <ColorItem title="Green" colors={listColors(tokens["bodegraven"]["color"]["green"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["bodegraven"]["color"]["grey"])} />
+</ColorPalette>

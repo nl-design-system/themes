@@ -1,0 +1,13 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Enkhuizen/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["enkhuizen"]["color"]["blue"])} />
+  <ColorItem title="Yellow" colors={listColors(tokens["enkhuizen"]["color"]["yellow"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["enkhuizen"]["color"]["grey"])} />
+</ColorPalette>

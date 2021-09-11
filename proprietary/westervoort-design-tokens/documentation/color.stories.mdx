@@ -1,0 +1,14 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Westervoort/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["westervoort"]["color"]["blue"])} />
+  <ColorItem title="Yellow" colors={listColors(tokens["westervoort"]["color"]["yellow"])} />
+  <ColorItem title="Green" colors={listColors(tokens["westervoort"]["color"]["green"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["westervoort"]["color"]["grey"])} />
+</ColorPalette>

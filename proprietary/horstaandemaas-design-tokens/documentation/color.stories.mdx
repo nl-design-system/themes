@@ -1,0 +1,12 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Horst aan de Maas/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["horstaandemaas"]["color"]["blue"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["horstaandemaas"]["color"]["grey"])} />
+</ColorPalette>

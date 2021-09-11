@@ -1,0 +1,15 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Vught/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["vught"]["color"]["blue"])} />
+  <ColorItem title="Red" colors={listColors(tokens["vught"]["color"]["red"])} />
+  <ColorItem title="Green" colors={listColors(tokens["vught"]["color"]["green"])} />
+  <ColorItem title="Green 2" colors={listColors(tokens["vught"]["color"]["green2"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["vught"]["color"]["grey"])} />
+</ColorPalette>

@@ -1,0 +1,13 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Groningen/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Red" colors={listColors(tokens["groningen"]["color"]["red"])} />
+  <ColorItem title="Green" colors={listColors(tokens["groningen"]["color"]["green"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["groningen"]["color"]["grey"])} />
+</ColorPalette>

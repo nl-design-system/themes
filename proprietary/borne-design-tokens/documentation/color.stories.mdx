@@ -1,0 +1,15 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Borne/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["borne"]["color"]["blue"])} />
+  <ColorItem title="Green" colors={listColors(tokens["borne"]["color"]["green"])} />
+  <ColorItem title="Light Green" colors={listColors(tokens["borne"]["color"]["green-light"])} />
+  <ColorItem title="Petrol" colors={listColors(tokens["borne"]["color"]["petrol"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["borne"]["color"]["grey"])} />
+</ColorPalette>

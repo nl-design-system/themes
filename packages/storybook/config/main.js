@@ -1,6 +1,9 @@
 /* eslint-env node */
 module.exports = {
-  stories: ['../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)'],
+  stories: [
+    '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
+    '../../../proprietary/*/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
+  ],
   features: {
     postcss: false,
   },

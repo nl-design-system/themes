@@ -1,0 +1,13 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Zwolle/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["zwolle"]["color"]["blue"])} />
+  <ColorItem title="Pink" colors={listColors(tokens["zwolle"]["color"]["pink"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["zwolle"]["color"]["grey"])} />
+</ColorPalette>

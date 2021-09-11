@@ -1,0 +1,14 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Duiven/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Blue" colors={listColors(tokens["duiven"]["color"]["blue"])} />
+  <ColorItem title="Orange" colors={listColors(tokens["duiven"]["color"]["orange"])} />
+  <ColorItem title="Yellow" colors={listColors(tokens["duiven"]["color"]["yellow"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["duiven"]["color"]["grey"])} />
+</ColorPalette>

@@ -1,0 +1,12 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { listColors } from "../../../documentation/util";
+import tokens from "../dist/index.json";
+
+<Meta title="Noordoostpolder/Color" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Pink" colors={listColors(tokens["noordoostpolder"]["color"]["pink"])} />
+  <ColorItem title="Grey" colors={listColors(tokens["noordoostpolder"]["color"]["grey"])} />
+</ColorPalette>
