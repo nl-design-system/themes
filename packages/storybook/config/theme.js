@@ -4,5 +4,5 @@ import { create } from '@storybook/theming/create';
 // https://storybook.js.org/docs/react/configure/theming
 export default create({
   base: 'light',
-  brandTitle: 'NL Design System: Example',
+  brandTitle: 'NL Design System: Themes',
 });
