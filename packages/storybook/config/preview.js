@@ -1,3 +1,7 @@
+import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil';
+import '@utrecht/component-library-css/dist/bem.css';
+
+// Import all themes
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/borne-design-tokens/dist/index.css';
@@ -19,8 +23,8 @@ import '@nl-design-system-unstable/vught-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/westervoort-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zevenaar-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
-
-import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil';
+import '@utrecht/design-tokens/dist/theme/index.css';
+import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 
 defineUtrechtComponents();
 
@@ -37,11 +41,41 @@ const previewTabs = {
   canvas: { title: 'Design Tokens' },
 };
 
+const themes = [
+  'Amsterdam',
+  'Bodegraven-Reeuwijk',
+  'Borne',
+  'Den Haag',
+  'Drechterland',
+  'Duiven',
+  'Enkhuizen',
+  'Groningen',
+  'Haarlemmermeer',
+  'Horst aan de Maas',
+  'Leidschendam Voorburg',
+  'Noordoostpolder',
+  'Rotterdam',
+  'Stede Broec',
+  'Tilburg',
+  'Utrecht',
+  'Venray',
+  'Vught',
+  'Westervoort',
+  'Zevenaar',
+  'Zwolle',
+].sort();
+
+const flatten = (a, b) => [...a, ...b];
+const order = [['Themes', ['README']], ...themes.sort().map((org) => [org, ['README']])].reduce(flatten, []);
+
 export const parameters = {
   controls: { expanded: false },
   previewTabs,
   statuses,
   options: {
     panelPosition: 'bottom',
+    storySort: {
+      order,
+    },
   },
 };
