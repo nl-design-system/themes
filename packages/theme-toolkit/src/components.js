@@ -1,3 +1,13 @@
+import { Button } from '@utrecht/components/button/bem';
+import { Heading1 } from '@utrecht/components/heading-1/bem';
+import { Heading2 } from '@utrecht/components/heading-2/bem';
+import { Heading3 } from '@utrecht/components/heading-3/bem';
+import { Heading4 } from '@utrecht/components/heading-4/bem';
+import { Heading5 } from '@utrecht/components/heading-5/bem';
+import { Heading6 } from '@utrecht/components/heading-6/bem';
+import { Paragraph } from '@utrecht/components/paragraph/bem';
+import { TextBox } from '@utrecht/components/textbox/bem';
+
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 export const components = [
@@ -62,39 +72,39 @@ export const components = [
   { name: '@utrecht/unordered-list', template: () => '' },
   {
     name: '@utrecht/button',
-    template: () => `<utrecht-button>Button</utrecht-button>`,
+    template: () => Button({ textContent: 'Button' }),
   },
   {
     name: '@utrecht/heading-1',
-    template: () => `<utrecht-heading-1>The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-1>`,
+    template: () => Heading1({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
   {
     name: '@utrecht/heading-2',
-    template: () => `<utrecht-heading-2>The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>`,
+    template: () => Heading2({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
   {
     name: '@utrecht/heading-3',
-    template: () => `<utrecht-heading-3>The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-3>`,
+    template: () => Heading3({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
   {
     name: '@utrecht/heading-4',
-    template: () => `<utrecht-heading-4>The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-4>`,
+    template: () => Heading4({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
   {
     name: '@utrecht/heading-5',
-    template: () => `<utrecht-heading-5>The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-5>`,
+    template: () => Heading5({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
   {
     name: '@utrecht/heading-6',
-    template: () => `<utrecht-heading-6>The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-6>`,
+    template: () => Heading6({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
   {
     name: '@utrecht/paragraph',
-    template: () => `<utrecht-paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>`,
+    template: () => Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
   {
     name: '@utrecht/textbox',
-    template: () => `<utrecht-textbox value="The Quick Brown Fox Jumps Over The Lazy Dog"></utrecht-textbox>`,
+    template: () => TextBox({ value: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
 ]
   .filter(Boolean)
