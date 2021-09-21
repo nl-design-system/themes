@@ -42,3 +42,21 @@ export const flattenColorTokens = (tokens) => {
 export const getColorGroupName = (token) => token.path[token.path.length - 2];
 
 export const getColorName = (token) => token.path[token.path.length - 1];
+
+export const formatDeltaE = (deltaE) => {
+  let description;
+  if (deltaE === 0) {
+    description = 'Exact match!';
+  } else if (deltaE < 1) {
+    description = 'Looks the same!';
+  } else if (deltaE < 3) {
+    description = 'Looks the same, unless you look very closely';
+  } else if (deltaE < 10) {
+    description = 'Similar';
+  } else if (deltaE < 49) {
+    description = 'Related';
+  } else {
+    description = 'Different';
+  }
+  return `${description} (ΔE = ${Math.round(deltaE)})`;
+};

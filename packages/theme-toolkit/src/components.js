@@ -8,6 +8,7 @@ import { Heading6 } from '@utrecht/components/heading-6/bem';
 import { Link } from '@utrecht/components/link/bem';
 import { OrderedList } from '@utrecht/components/ordered-list/bem';
 import { PageFooter } from '@utrecht/components/page-footer/bem';
+import { Select } from '@utrecht/components/select/bem';
 import { Paragraph } from '@utrecht/components/paragraph/bem';
 import { Separator } from '@utrecht/components/separator/bem';
 import { TextArea } from '@utrecht/components/textarea/bem';
@@ -142,13 +143,20 @@ export const components = [
     template: () =>
       OrderedList({
         distanced: true,
+        items: [
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+        ],
       }),
   },
   { name: '@utrecht/page', template: () => '' },
   { name: '@utrecht/page-content', template: () => '' },
   {
     name: '@utrecht/page-footer',
-    template: () => PageFooter({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+    template: () =>
+      `${PageFooter({
+        innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+      })}</footer>`,
   },
   { name: '@utrecht/page-header', template: () => '' },
   {
@@ -165,7 +173,24 @@ export const components = [
   { name: '@utrecht/pre-heading', template: () => '' },
   { name: '@utrecht/radio-button', template: () => '' },
   { name: '@utrecht/search-bar', template: () => '' },
-  { name: '@utrecht/select', template: () => '' },
+  {
+    name: '@utrecht/select',
+    template: () =>
+      Select({
+        options: [
+          {
+            label: 'Option 1',
+          },
+          {
+            label: 'Option 2',
+            selected: true,
+          },
+          {
+            label: 'Option 3',
+          },
+        ],
+      }),
+  },
   {
     name: '@utrecht/separator',
     template: () =>
@@ -287,6 +312,10 @@ export const components = [
     template: () =>
       UnorderedList({
         distanced: true,
+        items: [
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+        ],
       }),
   },
 ]

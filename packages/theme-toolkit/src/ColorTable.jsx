@@ -6,20 +6,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { ColorPalette, ColorItem } from '@storybook/addon-docs';
-import { cssVariable, getColors, getColorName, getColorGroupName, styleDictionaryRef } from './util';
+import { CopyCode } from './CopyCode';
+import { cssVariable, formatDeltaE, getColors, getColorName, getColorGroupName, styleDictionaryRef } from './util';
+import { parseColor } from './color-util';
 
 export const ColorRow = ({ name, token }) => (
   <ColorItem
     title={name}
     subtitle={
       <>
-        <button onClick={() => navigator.clipboard.writeText(cssVariable(token))}>
-          <code>{cssVariable(token)}</code>
-        </button>
+        <CopyCode code={cssVariable(token)}></CopyCode>
         <br />
-        <button onClick={() => navigator.clipboard.writeText(styleDictionaryRef(token))}>
-          <code>{styleDictionaryRef(token)}</code>
-        </button>
+        <CopyCode code={styleDictionaryRef(token)}></CopyCode>
+        {typeof token.deltaE === 'number' ? <p>{formatDeltaE(token.deltaE)}</p> : ''}
       </>
     }
     colors={[token.value]}
@@ -59,4 +58,27 @@ export const ColorTable = ({ tokens }) => {
 
 ColorTable.propTypes = {
   tokens: PropTypes.object.isRequired,
+};
+
+export const ColorCard = ({ color }) => {
+  const parsed = parseColor(color);
+
+  return parsed ? (
+    <div>
+      <div
+        style={{
+          display: 'inline-block',
+          width: '50px',
+          height: '50px',
+          backgroundColor: color,
+        }}
+      ></div>
+    </div>
+  ) : (
+    <></>
+  );
+};
+
+ColorCard.propTypes = {
+  color: PropTypes.string.isRequired,
 };
