@@ -7,6 +7,7 @@ import { Heading5 } from '@utrecht/components/heading-5/bem';
 import { Heading6 } from '@utrecht/components/heading-6/bem';
 import { Link } from '@utrecht/components/link/bem';
 import { OrderedList } from '@utrecht/components/ordered-list/bem';
+import { PageFooter } from '@utrecht/components/page-footer/bem';
 import { Paragraph } from '@utrecht/components/paragraph/bem';
 import { Separator } from '@utrecht/components/separator/bem';
 import { TextArea } from '@utrecht/components/textarea/bem';
@@ -145,7 +146,10 @@ export const components = [
   },
   { name: '@utrecht/page', template: () => '' },
   { name: '@utrecht/page-content', template: () => '' },
-  { name: '@utrecht/page-footer', template: () => '' },
+  {
+    name: '@utrecht/page-footer',
+    template: () => PageFooter({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+  },
   { name: '@utrecht/page-header', template: () => '' },
   {
     name: '@utrecht/paragraph',
@@ -305,3 +309,14 @@ export const Template = (args) =>
       return component ? component.template(variants) : '';
     })
     .join('\n');
+
+export const getComponentArgs = (config) => ({
+  ...Object.fromEntries(
+    Object.entries(config.components)
+      .filter(([, settings]) => settings)
+      .map(([name]) => [name, true]),
+  ),
+  variants: Object.fromEntries(
+    Object.entries(config.components).filter(([, settings]) => !!settings && typeof settings === 'object'),
+  ),
+});

@@ -1,12 +1,17 @@
 import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
-import { listColors } from "../../../documentation/util";
 import tokens from "../dist/index.json";
+import { ColorSearch } from "@nl-design-system-unstable/theme-toolkit/src/ColorSearch";
+import { ColorTable } from "@nl-design-system-unstable/theme-toolkit/src/ColorTable";
+import config from "../src/config.json";
 
-<Meta title="Noordoostpolder/Color" />
+<Meta title={`${config.name}/Color`} />
 
-# Colors
+# Color
 
-<ColorPalette>
-  <ColorItem title="Pink" colors={listColors(tokens["noordoostpolder"]["color"]["pink"])} />
-  <ColorItem title="Grey" colors={listColors(tokens["noordoostpolder"]["color"]["grey"])} />
-</ColorPalette>
+## Find a color
+
+<ColorSearch tokens={tokens[config.prefix]["color"]}></ColorSearch>
+
+## Color palette
+
+<ColorTable tokens={tokens[config.prefix]["color"]}></ColorTable>
