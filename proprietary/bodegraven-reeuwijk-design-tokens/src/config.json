@@ -3,17 +3,41 @@
   "name": "Bodegraven-Reeuwijk",
   "prefix": "bodegraven",
   "components": {
+    "@utrecht/article": true,
     "@utrecht/button": {
-      "hover": true
+      "hover": true,
+      "focus": true
     },
     "@utrecht/document": true,
     "@utrecht/link": {
-      "hover": true
+      "hover": true,
+      "focus": true
     },
-    "@utrecht/paragraph": true,
+    "@utrecht/paragraph": {
+      "lead": true
+    },
     "@utrecht/heading-1": true,
     "@utrecht/heading-2": true,
     "@utrecht/heading-3": true,
-    "@utrecht/textbox": true
+    "@utrecht/page-footer": true,
+    "@utrecht/separator": true,
+    "@utrecht/select": {
+      "hover": true,
+      "focus": true
+    },
+    "@utrecht/textbox": {
+      "hover": true,
+      "focus": true,
+      "placeholder": true
+    },
+    "@utrecht/ordered-list": true,
+    "@utrecht/unordered-list": true,
+    "@utrecht/search-bar": true,
+    "@utrecht/table": true,
+    "@utrecht/textarea": {
+      "hover": true,
+      "focus": true,
+      "placeholder": true
+    }
   }
 }

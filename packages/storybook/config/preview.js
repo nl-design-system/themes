@@ -5,6 +5,7 @@ import '@utrecht/component-library-css/dist/bem.css';
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/borne-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/font';
 import '@nl-design-system-unstable/drechterland-design-tokens/dist/index.css';
 // import '@nl-design-system-unstable/dso-toolkit-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duiven-design-tokens/dist/index.css';
