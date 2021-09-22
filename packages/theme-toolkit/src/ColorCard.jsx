@@ -28,7 +28,7 @@ export const ColorCard = ({ color }) => {
           border: '1px solid silver',
         }}
       ></div>
-      <ul style={{ margin: 0, 'list-style': 'none', padding: '0' }}>
+      <ul style={{ margin: 0, listStyle: 'none', padding: '0' }}>
         <li>
           <CopyCode code={d3color.formatHex()}></CopyCode>
         </li>

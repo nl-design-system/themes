@@ -1,10 +1,13 @@
 import { Button } from '@utrecht/components/button/bem';
+import { Emphasis } from '@utrecht/components/emphasis/bem';
 import { Heading1 } from '@utrecht/components/heading-1/bem';
 import { Heading2 } from '@utrecht/components/heading-2/bem';
 import { Heading3 } from '@utrecht/components/heading-3/bem';
 import { Heading4 } from '@utrecht/components/heading-4/bem';
 import { Heading5 } from '@utrecht/components/heading-5/bem';
 import { Heading6 } from '@utrecht/components/heading-6/bem';
+import { FormFieldset } from '@utrecht/components/form-fieldset/bem';
+import { FormToggle } from '@utrecht/components/form-toggle/bem';
 import { Link } from '@utrecht/components/link/bem';
 import { OrderedList } from '@utrecht/components/ordered-list/bem';
 import { PageFooter } from '@utrecht/components/page-footer/bem';
@@ -15,55 +18,9 @@ import { TextArea } from '@utrecht/components/textarea/bem';
 import { TextBox } from '@utrecht/components/textbox/bem';
 import { UnorderedList } from '@utrecht/components/unordered-list/bem';
 
-const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
-
 const Document = ({ innerHTML = '' }) => `<div class="utrecht-document">${innerHTML}</div>`;
 
-const genericArgs = {
-  variants: {},
-};
-
 export const components = [
-  { name: '@utrecht/alternate-lang-link', template: () => '' },
-  { name: '@utrecht/alternate-lang-nav', template: () => '' },
-  { name: '@utrecht/article', template: () => '' },
-  { name: '@utrecht/badge', template: () => '' },
-  { name: '@utrecht/badge-counter', template: () => '' },
-  { name: '@utrecht/badge-data', template: () => '' },
-  { name: '@utrecht/badge-status', template: () => '' },
-  { name: '@utrecht/blockquote', template: () => '' },
-  { name: '@utrecht/breadcrumb', template: () => '' },
-
-  {
-    name: '@utrecht/button',
-    template: ({ active = false, disabled = false, focus = false, hover = false }) => {
-      return `<dl>
-      <dt>normal</dt>
-      <dd>${Button({ textContent: 'Send' })}</dd>
-      ${hover ? `<dt>hover</dt><dd>${Button({ hover: true, textContent: 'Send' })}</dd>` : ''}
-      ${focus ? `<dt>focus</dt><dd>${Button({ focus: true, textContent: 'Send' })}</dd>` : ''}
-      ${active ? `<dt>active</dt><dd>${Button({ active: true, textContent: 'Send' })}</dd>` : ''}
-      ${disabled ? `<dt>disabled</dt><dd>${Button({ textContent: 'Send', disabled: true })}</dd>` : ''}
-      </dl>`;
-    },
-  },
-  { name: '@utrecht/checkbox', template: () => '' },
-  { name: '@utrecht/document', template: () => Document({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) },
-  { name: '@utrecht/emphasis', template: () => '' },
-  { name: '@utrecht/form-field', template: () => '' },
-  { name: '@utrecht/form-field-checkbox', template: () => '' },
-  { name: '@utrecht/form-field-checkbox-group', template: () => '' },
-  { name: '@utrecht/form-field-description', template: () => '' },
-  { name: '@utrecht/form-field-radio', template: () => '' },
-  { name: '@utrecht/form-field-radio-group', template: () => '' },
-  { name: '@utrecht/form-field-textarea', template: () => '' },
-  { name: '@utrecht/form-field-textbox', template: () => '' },
-  { name: '@utrecht/form-field-toggle', template: () => '' },
-  { name: '@utrecht/form-fieldset', template: () => '' },
-  { name: '@utrecht/form-input', template: () => '' },
-  { name: '@utrecht/form-label', template: () => '' },
-  { name: '@utrecht/form-toggle', template: () => '' },
-  { name: '@utrecht/heading', template: () => '' },
   {
     name: '@utrecht/heading-1',
     template: () => Heading1({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
@@ -88,7 +45,62 @@ export const components = [
     name: '@utrecht/heading-6',
     template: () => Heading6({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
   },
-  { name: '@utrecht/icon', template: () => '' },
+  {
+    name: '@utrecht/paragraph',
+    template: ({ lead = false } = {}) =>
+      [
+        lead && Paragraph({ distanced: true, lead: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+        Paragraph({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+      ]
+        .filter(Boolean)
+        .join('\n'),
+  },
+  {
+    name: '@utrecht/unordered-list',
+    template: () =>
+      UnorderedList({
+        distanced: true,
+        items: [
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+        ],
+      }),
+  },
+  {
+    name: '@utrecht/separator',
+    template: () =>
+      Separator({
+        distanced: true,
+      }),
+  },
+  {
+    name: '@utrecht/ordered-list',
+    template: () =>
+      OrderedList({
+        distanced: true,
+        items: [
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
+        ],
+      }),
+  },
+  {
+    name: '@utrecht/table',
+    template: ({ caption = false }) => `<utrecht-html-content>
+  <table>
+    ${caption ? '<caption>Caption of the Table</caption>' : ''}
+    <thead>
+      <tr><th>Column Heading Cell 1</th><th>Column Heading Cell 2</th><th>Column Heading Cell 3</th></tr>
+    </theed>
+    <tbody>
+      <tr><th>Row Heading Cell 1</th><th>Data Cell 1</th><th>Data Cell 2</th></tr>
+      <tr><th>Row Heading Cell 2</th><th>Data Cell 3</th><th>Data Cell 4</th></tr>
+      <tr><th>Row Heading Cell 3</th><th>Data Cell 5</th><th>Data Cell 6</th></tr>
+    </tbody>
+  </table>
+</utrecht-html-content>
+  `,
+  },
   {
     name: '@utrecht/link',
     template: ({ active = false, focus = false, hover = false, visited = false }) => {
@@ -130,6 +142,94 @@ export const components = [
       </dl>`;
     },
   },
+  {
+    name: '@utrecht/emphasis',
+    template: ({ stressed = false, strong = true, stressedStrong = false }) => `<dl>
+  ${
+    stressed
+      ? `<dt>stressed</dt><dd>${Emphasis({
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          stressed: true,
+        })}</dd>`
+      : ''
+  }
+  ${
+    strong
+      ? `<dt>strong</dt><dd>${Emphasis({
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          strong: true,
+        })}</dd>`
+      : ''
+  }
+  ${
+    stressedStrong
+      ? `<dt>strong and stressed</dt><dd>${Emphasis({
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          stressed: true,
+          strong: true,
+        })}</dd>`
+      : ''
+  }
+</dl>
+`,
+  },
+  { name: '@utrecht/alternate-lang-link', template: () => '' },
+  { name: '@utrecht/alternate-lang-nav', template: () => '' },
+  { name: '@utrecht/article', template: () => '' },
+  { name: '@utrecht/badge', template: () => '' },
+  { name: '@utrecht/badge-counter', template: () => '' },
+  { name: '@utrecht/badge-data', template: () => '' },
+  { name: '@utrecht/badge-status', template: () => '' },
+  { name: '@utrecht/blockquote', template: () => '' },
+  { name: '@utrecht/breadcrumb', template: () => '' },
+
+  {
+    name: '@utrecht/button',
+    template: ({ active = false, disabled = false, focus = false, hover = false }) => {
+      return `<dl>
+      <dt>normal</dt>
+      <dd>${Button({ textContent: 'Send' })}</dd>
+      ${hover ? `<dt>hover</dt><dd>${Button({ hover: true, textContent: 'Send' })}</dd>` : ''}
+      ${focus ? `<dt>focus</dt><dd>${Button({ focus: true, textContent: 'Send' })}</dd>` : ''}
+      ${active ? `<dt>active</dt><dd>${Button({ active: true, textContent: 'Send' })}</dd>` : ''}
+      ${disabled ? `<dt>disabled</dt><dd>${Button({ textContent: 'Send', disabled: true })}</dd>` : ''}
+      </dl>`;
+    },
+  },
+  {
+    name: '@utrecht/form-fieldset',
+    template: () =>
+      FormFieldset({
+        legend: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+        content: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+      }),
+  },
+  { name: '@utrecht/checkbox', template: () => '' },
+  { name: '@utrecht/document', template: () => Document({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) },
+  { name: '@utrecht/form-field', template: () => '' },
+  { name: '@utrecht/form-field-description', template: () => '' },
+  { name: '@utrecht/form-field-textbox', template: () => '' },
+  { name: '@utrecht/form-field-textarea', template: () => '' },
+  { name: '@utrecht/form-field-checkbox', template: () => '' },
+  { name: '@utrecht/form-field-checkbox-group', template: () => '' },
+  { name: '@utrecht/form-field-toggle', template: () => '' },
+  { name: '@utrecht/form-field-radio', template: () => '' },
+  { name: '@utrecht/form-field-radio-group', template: () => '' },
+  { name: '@utrecht/form-input', template: () => '' },
+  { name: '@utrecht/form-label', template: () => '' },
+  {
+    name: '@utrecht/form-toggle',
+    template: ({ checked = false, disabled = false, checkedDisabled = false }) => `<dl>
+  <dt>normal</dt><dd>${FormToggle({})}</dd>
+  ${checked ? `<dt>checked</dt><dd>${FormToggle({ checked: true })}</dd>` : ''}
+  ${disabled ? `<dt>disabled</dt><dd>${FormToggle({ disabled: true })}</dd>` : ''}
+  ${checkedDisabled ? `<dt>disabled and checked</dt><dd>${FormToggle({ checked: true })}</dd>` : ''}
+  </dl>`,
+  },
+  { name: '@utrecht/heading', template: () => '' },
+
+  { name: '@utrecht/icon', template: () => '' },
+
   { name: '@utrecht/link-list', template: () => '' },
   { name: '@utrecht/link-social', template: () => '' },
   { name: '@utrecht/logo', template: () => '' },
@@ -138,67 +238,34 @@ export const components = [
   { name: '@utrecht/nav-top', template: () => '' },
   { name: '@utrecht/navigatie sidenav', template: () => '' },
   { name: '@utrecht/navigatie topnav', template: () => '' },
-  {
-    name: '@utrecht/ordered-list',
-    template: () =>
-      OrderedList({
-        distanced: true,
-        items: [
-          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
-          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
-        ],
-      }),
-  },
   { name: '@utrecht/page', template: () => '' },
   { name: '@utrecht/page-content', template: () => '' },
-  {
-    name: '@utrecht/page-footer',
-    template: () =>
-      `${PageFooter({
-        innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
-      })}</footer>`,
-  },
   { name: '@utrecht/page-header', template: () => '' },
-  {
-    name: '@utrecht/paragraph',
-    template: ({ lead = false } = {}) =>
-      [
-        lead && Paragraph({ distanced: true, lead: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
-        Paragraph({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
-      ]
-        .filter(Boolean)
-        .join('\n'),
-  },
-  // { name: '@utrecht/paragraph', template: () => '' },
   { name: '@utrecht/pre-heading', template: () => '' },
   { name: '@utrecht/radio-button', template: () => '' },
   { name: '@utrecht/search-bar', template: () => '' },
   {
     name: '@utrecht/select',
-    template: () =>
-      Select({
-        options: [
-          {
-            label: 'Option 1',
-          },
-          {
-            label: 'Option 2',
-            selected: true,
-          },
-          {
-            label: 'Option 3',
-          },
-        ],
-      }),
+    template: ({ disabled = false, empty = false }) => {
+      const options = [
+        {
+          label: 'Option 1',
+        },
+        {
+          label: 'Option 2',
+          selected: true,
+        },
+        {
+          label: 'Option 3',
+        },
+      ];
+      return `<dl>
+        <dt>normal</dt><dd>${Select({ options })}</dd>
+        ${disabled ? `<dt>disabled</dt><dd>${Select({ disabled: true })}</dd>` : ''}
+        ${empty ? `<dt>empty</dt><dd>${Select()}</dd>` : ''}
+      </dl>`;
+    },
   },
-  {
-    name: '@utrecht/separator',
-    template: () =>
-      Separator({
-        distanced: true,
-      }),
-  },
-  { name: '@utrecht/table', template: () => '' },
   {
     name: '@utrecht/textarea',
     template: ({
@@ -308,19 +375,13 @@ export const components = [
     </dl>`,
   },
   {
-    name: '@utrecht/unordered-list',
+    name: '@utrecht/page-footer',
     template: () =>
-      UnorderedList({
-        distanced: true,
-        items: [
-          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
-          { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' },
-        ],
-      }),
+      `${PageFooter({
+        innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+      })}</footer>`,
   },
-]
-  .filter(Boolean)
-  .sort((a, b) => stringSort(a.name, b.name));
+].filter(Boolean);
 
 export const defaultArgs = components.reduce((args, { name }) => ({ ...args, [name]: false }), {});
 
@@ -329,11 +390,10 @@ export const argTypes = components
   .reduce((obj, component) => ({ ...obj, [component.description]: component }), {});
 
 export const Template = (args) =>
-  Object.entries(args)
-    .filter(([name]) => !Object.prototype.hasOwnProperty.call(genericArgs, name))
-    .filter(([, checked]) => checked)
-    .map(([name]) => {
-      const component = components.find((comp) => comp.name === name);
+  components
+    .filter(({ name }) => Object.prototype.hasOwnProperty.call(args, name) && !!args[name])
+    .map((component) => {
+      const { name } = component;
       const variants = (args.variants && args.variants[name]) || {};
       return component ? component.template(variants) : '';
     })
