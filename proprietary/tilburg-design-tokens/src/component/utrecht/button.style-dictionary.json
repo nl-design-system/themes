@@ -1,11 +1,11 @@
 {
   "utrecht": {
     "button": {
-      "background-color": { "value": "{tilburg.color.blue.20b.value}" },
+      "background-color": { "value": "{tilburg.color.grey.40.value}" },
       "border-radius": { "value": "0" },
       "border-width": { "value": "0" },
-      "color": { "value": "{tilburg.color.white.value}" },
-      "font-family": { "value": "{tilburg.typography.sans-serif.font-family.value}" },
+      "color": { "value": "{tilburg.color.grey.100.value}" },
+      "font-family": { "value": "{tilburg.typography.heading.font-family.value}" },
       "font-size": { "value": "{tilburg.typography.scale.md.font-size.value}" },
       "margin-block-end": { "value": "{utrecht.space.row.xs.value}" },
       "margin-block-start": { "value": "{utrecht.space.row.xs.value}" },
@@ -15,9 +15,14 @@
       "padding-block-start": { "value": "{utrecht.space.block.sm.value}" },
       "padding-inline-end": { "value": "{utrecht.space.inline.lg.value}" },
       "padding-inline-start": { "value": "{utrecht.space.inline.lg.value}" },
+      "text-transform": { "value": "uppercase" },
+      "primary-action": {
+        "background-color": { "value": "{tilburg.color.orange.50.value}" },
+        "color": { "value": "{tilburg.color.grey.100.value}" }
+      },
       "secondary-action": {
         "background-color": { "value": "{tilburg.color.blue.20b.value}" },
-        "color": { "value": "{tilburg.color.white.value}" },
+        "color": { "value": "{tilburg.color.grey.100.value}" },
         "border-color": {},
         "border-width": {},
         "hover": {
@@ -26,9 +31,14 @@
         }
       },
       "focus": {
-        "border-color": { "value": "{tilburg.color.black.value}" },
+        "background-color": { "value": "{tilburg.color.green.20.value}" },
+        "color": { "value": "{tilburg.color.grey.100.value}" },
         "border-width": {},
         "transform-scale": {}
+      },
+      "disabled": {
+        "background-color": { "value": "{tilburg.color.grey.80.value}" },
+        "color": { "value": "{tilburg.color.grey.100.value}" }
       }
     }
   }

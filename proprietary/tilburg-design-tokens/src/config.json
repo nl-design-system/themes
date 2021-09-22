@@ -4,16 +4,28 @@
   "prefix": "tilburg",
   "components": {
     "@utrecht/button": {
+      "disabled": true,
+      "focus": true,
       "hover": true
     },
     "@utrecht/document": true,
     "@utrecht/link": {
+      "focus": true,
       "hover": true
     },
+    "@utrecht/form-description": {
+      "invalid": true
+    },
+    "@utrecht/form-fieldset": true,
     "@utrecht/paragraph": true,
     "@utrecht/heading-1": true,
     "@utrecht/heading-2": true,
     "@utrecht/heading-3": true,
-    "@utrecht/textbox": true
+    "@utrecht/separator": true,
+    "@utrecht/ordered-list": true,
+    "@utrecht/unordered-list": true,
+    "@utrecht/textbox": {
+      "invalid": true
+    }
   }
 }
