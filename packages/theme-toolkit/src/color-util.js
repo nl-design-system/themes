@@ -23,11 +23,12 @@ export const parseColor = (color) => {
     colorLAB = !!colorLAB && isFinite(colorLAB.l) ? colorLAB : null;
 
     // Parse colors such as `fff` and `ffffff`
-    const HEX = /\s*([0-9a-f]{3,6})\s*/i;
+    const HEX = /^\s*([0-9a-f]{3,6})\s*$/i;
     if (!colorLAB && HEX.test(query)) {
       query = query.replace(HEX, '#$1');
       try {
         colorLAB = lab(query);
+        colorLAB = !!colorLAB && isFinite(colorLAB.l) ? colorLAB : null;
       } catch (e) {
         colorLAB = null;
       }
