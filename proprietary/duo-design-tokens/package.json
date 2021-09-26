@@ -1,8 +1,8 @@
 {
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.3",
   "author": "Community for NL Design System",
   "description": "NL Design System design tokens for DUO",
-  "website": "https://www.enkhuizen.nl",
+  "website": "https://www.duo.nl",
   "keywords": [
     "nl-design-system"
   ],
@@ -23,9 +23,10 @@
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.style-dictionary.json'",
     "build": "npm-run-all build:**",
     "build:scss": "sass --no-source-map src/:dist/",
-    "skip-build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json"
   },
   "devDependencies": {
+    "@nl-design-system-unstable/rijkshuisstijl-design-tokens": "1.0.0-alpha.3",
     "chokidar-cli": "2.1.0",
     "npm-run-all": "4.1.5",
     "rimraf": "3.0.2",

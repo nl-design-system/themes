@@ -1,0 +1,38 @@
+{
+  "utrecht": {
+    "textbox": {
+      "background-color": { "value": "{duo.color.white.value}", "comment": "FIXME: NEW" },
+      "border-bottom-width": { "value": "{utrecht.textbox.border-width.value}" },
+      "border-color": { "value": "{duo.color.neutral.65.value}" },
+      "border-radius": { "value": "0" },
+      "border-width": { "value": "1px" },
+      "color": { "value": "{duo.color.neutral.95.value}" },
+      "font-weight": { "value": "700", "comment": "FIXME: NEW" },
+      "font-family": { "value": "{utrecht.document.font-family.value}" },
+      "font-size": { "value": "{duo.typography.scale.xs.font-size.value}" },
+      "max-width": { "value": "27rem" },
+      "block-size": {
+        "value": "calc({utrecht.form-input.block-size.value} - 2px)",
+        "comment": "FIXME: NEW /  (48px - 2 * 1px border = 4.6rem) / Use height instead of lineheight for non-webkit compatibility"
+      },
+      "padding-block-end": { "value": "0" },
+      "padding-block-start": { "value": "0" },
+      "padding-inline-end": { "value": "1rem" },
+      "padding-inline-start": { "value": "1rem" },
+      "disabled": {
+        "background-color": { "value": "#f0f0f0", "comment": "FIXME: NEW" },
+        "border-color": {},
+        "color": { "value": "{duo.color.neutral.45.value}" },
+        "font-weight": { "value": "400", "comment": "FIXME: NEW" }
+      },
+      "invalid": {
+        "border-color": { "value": "{utrecht.feedback.invalid.border-color.value}" },
+        "border-width": {}
+      },
+      "read-only": {
+        "border-color": {},
+        "color": {}
+      }
+    }
+  }
+}
