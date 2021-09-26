@@ -23,7 +23,7 @@
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.style-dictionary.json'",
     "build": "npm-run-all build:**",
     "build:scss": "sass --no-source-map src/:dist/",
-    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js",
     "install-font": "npm-run-all install-font:**",
     "install-font:1": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/257c802f-349c-4b4d-aefa-546d5de15ec6.eot",
     "install-font:2": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/5fdc935e-9e30-442a-bbe9-8d887b858471.woff",
