@@ -1,30 +1,151 @@
 {
   "dso": {
     "color": {
-      "green": {
-        "25": {
-          "value": "hsl(139 39% 25%)",
-          "$comment": "#275937"
+      "bosgroen": {
+        "130": {
+          "value": "#15301e",
+          "comment": "130% tint"
         },
-        "30": {
-          "value": "hsl(98 84% 29%)",
-          "$comment": "#39870c",
-          "comment": "Primary-Red"
+        "100": {
+          "value": "#275937",
+          "comment": "100% tint; Normal text: WCAG AA: OK;  WCAG AAA: Fail - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "80": {
+          "value": "#527a5e",
+          "comment": "80% tint; Normal text: WCAG AA: OK;  WCAG AAA: Fail - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "60": {
+          "value": "#7d9886",
+          "comment": "60% tint; Normal text: WCAG AA: OK;  WCAG AAA: Fail - Large text: WCAG AA: OK;  WCAG AAA: Fail;"
+        },
+        "40": {
+          "value": "#a8bcaf",
+          "comment": "40% tint; niet te gebruiken als leestekst"
+        },
+        "10": {
+          "value": "#e9eeeb",
+          "comment": "10% tint; niet te gebruiken als leestekst"
         }
       },
-      "white": {
-        "value": "hsl(0 0% 100%)",
-        "$comment": "#ffffff",
-        "comment": "Primary-White"
+      "grijs": {
+        "100": {
+          "value": "#000",
+          "comment": "100% tint; Normal text: WCAG AA: OK;  WCAG AAA: OK - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "90": {
+          "value": "#191919",
+          "comment": "Normal text: WCAG AA: OK;  WCAG AAA: OK - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "80": {
+          "value": "#323232",
+          "comment": "Normal text: WCAG AA: OK;  WCAG AAA: OK - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "70": {
+          "value": "#4c4c4c",
+          "comment": "Normal text: WCAG AA: OK;  WCAG AAA: OK - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "60": {
+          "value": "#666",
+          "comment": "Normal text: WCAG AA: OK;  WCAG AAA: Fail - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "50": {
+          "value": "#7f7f7f",
+          "comment": "niet te gebruiken als leestekst"
+        },
+        "40": {
+          "value": "#999",
+          "comment": "niet te gebruiken als leestekst"
+        },
+        "30": {
+          "value": "#b2b2b2",
+          "comment": "niet te gebruiken als leestekst"
+        },
+        "20": {
+          "value": "#ccc",
+          "comment": "niet te gebruiken als leestekst"
+        },
+        "10": {
+          "value": "#e5e5e5",
+          "comment": "niet te gebruiken als leestekst"
+        },
+        "5": {
+          "value": "#f2f2f2",
+          "comment": "niet te gebruiken als leestekst"
+        },
+        "0": {
+          "value": "#fff",
+          "comment": ""
+        }
       },
-      "black": {
-        "value": "hsl(0 0% 0%)",
-        "$comment": "#000000",
-        "comment": "Primary-Black"
+      "grasgroen": {
+        "100": {
+          "value": "#39870c",
+          "comment": "100% tint; Normal text: WCAG AA: OK;  WCAG AAA: Fail - Large text: WCAG AA: OK;  WCAG AAA: OK;"
+        },
+        "80": {
+          "value": "#609f3c",
+          "comment": " 80% tint; Normal text: WCAG AA: Fail;  WCAG AAA: Fail - Large text: WCAG AA: OK;  WCAG AAA: Fail;"
+        },
+        "40": {
+          "value": "#afcf9d",
+          "comment": " 40% tint; niet te gebruiken als leestekst"
+        },
+        "10": {
+          "value": "#ebf3e6",
+          "comment": " 10% tint; niet te gebruiken als leestekst"
+        }
       },
-      "yellow": {
-        "value": "hsl(45 100% 51%)",
-        "$comment": "#ffc107"
+      "oranje": {
+        "100": {
+          "value": "#e17000",
+          "comment": "100% tint; Normal text: WCAG AA: Fail;  WCAG AAA: Fail - Large text: WCAG AA: OK;  WCAG AAA: Fail;"
+        },
+        "80": {
+          "value": "#e78c32"
+        },
+        "40": {
+          "value": "#f3c599"
+        },
+        "10": {
+          "value": "#fcf0e5"
+        }
+      },
+      "lime": {
+        "100": {
+          "value": "#79b929"
+        },
+        "20": {
+          "value": "#e4f1d4"
+        }
+      },
+      "scampi": {
+        "100": {
+          "value": "#676CB0"
+        }
+      },
+      "cannon-pink": {
+        "100": {
+          "value": "#8b4a6a"
+        }
+      },
+      "invalid": {
+        "color": { "value": "#b62f41" }
+      },
+      "success": {
+        "color": { "value": "{dso.color.grasgroen.100.value}" },
+        "background-color": { "value": "{dso.color.lime.20.value}" }
+      },
+      "info": {
+        "color": { "value": "#6ca4d9" },
+        "background-color": { "value": "#e1ecf7" }
+      },
+      "warning": {
+        "color": { "value": "#dcd400" },
+        "background-color": { "value": "#f8f6cc" }
+      },
+      "danger": {
+        "color": { "value": "#ce3f51" },
+        "background-color": { "value": "#f5d8dc" }
       }
     }
   }
