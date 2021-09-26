@@ -1,6 +1,7 @@
 import { Meta, Description } from "@storybook/addon-docs";
 import markdown from "./README.md";
+import config from "./config.json";
 
-<Meta title="Den Haag/README" />
+<Meta title={`${config.name}/README`} />
 
 <Description>{markdown}</Description>
