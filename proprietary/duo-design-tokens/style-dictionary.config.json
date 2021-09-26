@@ -1,5 +1,8 @@
 {
-  "source": ["src/**/*.style-dictionary.json"],
+  "source": [
+    "../../node_modules/@nl-design-system-unstable/rijkshuisstijl-design-tokens/src/**/*.style-dictionary.json",
+    "src/**/*.style-dictionary.json"
+  ],
   "platforms": {
     "js": {
       "transforms": ["attribute/cti", "name/cti/camel", "color/hsl-4"],
@@ -29,7 +32,7 @@
           "destination": "design-tokens.css",
           "format": "css/variables",
           "options": {
-            "selector": ".amsterdam-theme",
+            "selector": ".duo-theme",
             "outputReferences": true
           }
         }
