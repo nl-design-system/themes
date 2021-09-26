@@ -1,3 +1,4 @@
+import { BadgeCounter } from '@utrecht/components/badge-counter/bem';
 import { BadgeData } from '@utrecht/components/badge-data/bem';
 import { Button } from '@utrecht/components/button/bem';
 import { CustomCheckbox } from '@utrecht/components/custom-checkbox/bem';
@@ -181,8 +182,8 @@ export const components = [
   { name: '@utrecht/alternate-lang-link', template: () => '' },
   { name: '@utrecht/alternate-lang-nav', template: () => '' },
   { name: '@utrecht/article', template: () => '' },
-  { name: '@utrecht/badge-counter', template: () => '' },
-  { name: '@utrecht/badge-data', template: () => BadgeData({ textContent: 'Category 1' }) },
+  { name: '@utrecht/badge-counter', template: () => `<div>${BadgeCounter({ textContent: '42' })}</div>` },
+  { name: '@utrecht/badge-data', template: () => `<div>${BadgeData({ textContent: 'Category 1' })}</div>` },
   { name: '@utrecht/badge-status', template: () => '' },
   { name: '@utrecht/blockquote', template: () => '' },
   { name: '@utrecht/breadcrumb', template: () => '' },
