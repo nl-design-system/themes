@@ -99,9 +99,9 @@ export const components = [
       <tr><th>Column Heading Cell 1</th><th>Column Heading Cell 2</th><th>Column Heading Cell 3</th></tr>
     </theed>
     <tbody>
-      <tr><th>Row Heading Cell 1</th><th>Data Cell 1</th><th>Data Cell 2</th></tr>
-      <tr><th>Row Heading Cell 2</th><th>Data Cell 3</th><th>Data Cell 4</th></tr>
-      <tr><th>Row Heading Cell 3</th><th>Data Cell 5</th><th>Data Cell 6</th></tr>
+      <tr><th>Row Heading Cell 1</th><td>Data Cell 1</td><td>Data Cell 2</td></tr>
+      <tr><th>Row Heading Cell 2</th><td>Data Cell 3</td><td>Data Cell 4</td></tr>
+      <tr><th>Row Heading Cell 3</th><td>Data Cell 5</td><td>Data Cell 6</td></tr>
     </tbody>
   </table>
 </utrecht-html-content>
