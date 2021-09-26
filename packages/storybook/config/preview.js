@@ -1,5 +1,8 @@
 import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil';
 import '@utrecht/component-library-css/dist/bem.css';
+import '@utrecht/components/custom-checkbox/bem.scss';
+import '@utrecht/components/form-field-description/bem.scss';
+import '@utrecht/components/pagination/bem.scss';
 
 // Import all themes
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';

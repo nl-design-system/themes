@@ -1,18 +1,23 @@
+import { BadgeData } from '@utrecht/components/badge-data/bem';
 import { Button } from '@utrecht/components/button/bem';
+import { CustomCheckbox } from '@utrecht/components/custom-checkbox/bem';
 import { Emphasis } from '@utrecht/components/emphasis/bem';
+import { FormFieldDescription } from '@utrecht/components/form-field-description/bem';
+import { FormFieldset } from '@utrecht/components/form-fieldset/bem';
+import { FormLabel } from '@utrecht/components/form-label/bem';
+import { FormToggle } from '@utrecht/components/form-toggle/bem';
 import { Heading1 } from '@utrecht/components/heading-1/bem';
 import { Heading2 } from '@utrecht/components/heading-2/bem';
 import { Heading3 } from '@utrecht/components/heading-3/bem';
 import { Heading4 } from '@utrecht/components/heading-4/bem';
 import { Heading5 } from '@utrecht/components/heading-5/bem';
 import { Heading6 } from '@utrecht/components/heading-6/bem';
-import { FormFieldset } from '@utrecht/components/form-fieldset/bem';
-import { FormToggle } from '@utrecht/components/form-toggle/bem';
 import { Link } from '@utrecht/components/link/bem';
 import { OrderedList } from '@utrecht/components/ordered-list/bem';
 import { PageFooter } from '@utrecht/components/page-footer/bem';
-import { Select } from '@utrecht/components/select/bem';
+import { Pagination } from '@utrecht/components/pagination/bem';
 import { Paragraph } from '@utrecht/components/paragraph/bem';
+import { Select } from '@utrecht/components/select/bem';
 import { Separator } from '@utrecht/components/separator/bem';
 import { TextArea } from '@utrecht/components/textarea/bem';
 import { TextBox } from '@utrecht/components/textbox/bem';
@@ -176,13 +181,11 @@ export const components = [
   { name: '@utrecht/alternate-lang-link', template: () => '' },
   { name: '@utrecht/alternate-lang-nav', template: () => '' },
   { name: '@utrecht/article', template: () => '' },
-  { name: '@utrecht/badge', template: () => '' },
   { name: '@utrecht/badge-counter', template: () => '' },
-  { name: '@utrecht/badge-data', template: () => '' },
+  { name: '@utrecht/badge-data', template: () => BadgeData({ textContent: 'Category 1' }) },
   { name: '@utrecht/badge-status', template: () => '' },
   { name: '@utrecht/blockquote', template: () => '' },
   { name: '@utrecht/breadcrumb', template: () => '' },
-
   {
     name: '@utrecht/button',
     template: ({ active = false, disabled = false, focus = false, hover = false }) => {
@@ -204,10 +207,106 @@ export const components = [
         content: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
       }),
   },
+  {
+    name: '@utrecht/form-label',
+    template: ({ checkbox = false, checked = false, disabled = false, radio = false }) => {
+      return `<dl>
+      <dt>normal</dt>
+      <dd>${FormLabel({ textContent: 'Form input' })}</dd>
+      ${
+        disabled
+          ? `<dt>for disabled input</dt><dd>${FormLabel({ textContent: 'Form input', disabled: true })}</dd>`
+          : ''
+      }
+      ${
+        checkbox
+          ? `<dt>label for option with checkbox</dt><dd>${FormLabel({
+              textContent: 'Form option',
+              type: 'checkbox',
+            })}</dd>`
+          : ''
+      }
+      ${
+        checkbox && checked
+          ? `<dt>label for checked checkbox</dt><dd>${FormLabel({
+              checked: true,
+              textContent: 'Form option',
+              type: 'checkbox',
+            })}</dd>`
+          : ''
+      }
+      ${
+        radio
+          ? `<dt>label for option with radio button</dt><dd>${FormLabel({
+              textContent: 'Form option',
+              type: 'radio',
+            })}</dd>`
+          : ''
+      }
+      ${
+        radio && checked
+          ? `<dt>label for selected radio button</dt><dd>${FormLabel({
+              checked: true,
+              textContent: 'Form option',
+              type: 'radio',
+            })}</dd>`
+          : ''
+      }
+      </dl>`;
+    },
+  },
+  {
+    name: '@utrecht/form-field-description',
+    template: ({ invalid = false, valid = false }) => {
+      return `<dl>
+      <dt>normal</dt>
+      <dd>${FormFieldDescription({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
+      ${
+        invalid
+          ? `<dt>invalid</dt><dd>${FormFieldDescription({
+              innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+              status: 'invalid',
+            })}</dd>`
+          : ''
+      }
+      ${
+        valid
+          ? `<dt>valid</dt><dd>${FormFieldDescription({
+              innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+              status: 'valid',
+            })}</dd>`
+          : ''
+      }
+      </dl>`;
+    },
+  },
   { name: '@utrecht/checkbox', template: () => '' },
+  {
+    name: '@utrecht/custom-checkbox',
+    template: ({ active, checked, disabled, focus, invalid }) => {
+      return `<dl>
+      <dt>not checked</dt>
+      <dd>${CustomCheckbox({ textContent: 'Send' })}</dd>
+      ${checked ? `<dt>checked</dt><dd>${CustomCheckbox({ checked: true })}</dd>` : ''}
+      ${active ? `<dt>active</dt><dd>${CustomCheckbox({ active: true })}</dd>` : ''}
+      ${focus ? `<dt>focus</dt><dd>${CustomCheckbox({ focus: true })}</dd>` : ''}
+      ${disabled ? `<dt>disabled</dt><dd>${CustomCheckbox({ disabled: true })}</dd>` : ''}
+      ${
+        disabled && checked
+          ? `<dt>disabled and checked</dt><dd>${CustomCheckbox({ checked: true, disabled: true })}</dd>`
+          : ''
+      }
+      ${invalid ? `<dt>invalid</dt><dd>${CustomCheckbox({ invalid: true })}</dd>` : ''}
+      ${
+        invalid && checked
+          ? `<dt>invalid and checked</dt><dd>${CustomCheckbox({ checked: true, invalid: true })}</dd>`
+          : ''
+      }
+      </dl>`;
+    },
+  },
   { name: '@utrecht/document', template: () => Document({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) },
   { name: '@utrecht/form-field', template: () => '' },
-  { name: '@utrecht/form-field-description', template: () => '' },
   { name: '@utrecht/form-field-textbox', template: () => '' },
   { name: '@utrecht/form-field-textarea', template: () => '' },
   { name: '@utrecht/form-field-checkbox', template: () => '' },
@@ -215,8 +314,6 @@ export const components = [
   { name: '@utrecht/form-field-toggle', template: () => '' },
   { name: '@utrecht/form-field-radio', template: () => '' },
   { name: '@utrecht/form-field-radio-group', template: () => '' },
-  { name: '@utrecht/form-input', template: () => '' },
-  { name: '@utrecht/form-label', template: () => '' },
   {
     name: '@utrecht/form-toggle',
     template: ({ checked = false, disabled = false, checkedDisabled = false }) => `<dl>
@@ -241,12 +338,53 @@ export const components = [
   { name: '@utrecht/page', template: () => '' },
   { name: '@utrecht/page-content', template: () => '' },
   { name: '@utrecht/page-header', template: () => '' },
+  {
+    name: '@utrecht/pagination',
+    template: () =>
+      Pagination({
+        currentIndex: 3,
+        distanced: true,
+        links: [
+          {
+            href: './1',
+            index: 1,
+            title: 'Result 1 to 10',
+          },
+          {
+            href: './2',
+            index: 2,
+            title: 'Result 11 to 20',
+          },
+          {
+            href: './3',
+            index: 3,
+            title: 'Result 21 to 30',
+          },
+          {
+            href: './4',
+            index: 4,
+            title: 'Result 31 to 40',
+          },
+          {
+            href: './5',
+            index: 5,
+            title: 'Result 41 to 50',
+          },
+        ],
+        next: {
+          href: './4',
+        },
+        prev: {
+          href: './2',
+        },
+      }),
+  },
   { name: '@utrecht/pre-heading', template: () => '' },
   { name: '@utrecht/radio-button', template: () => '' },
   { name: '@utrecht/search-bar', template: () => '' },
   {
     name: '@utrecht/select',
-    template: ({ disabled = false, empty = false }) => {
+    template: ({ disabled = false, empty = false, invalid = false, required = false }) => {
       const options = [
         {
           label: 'Option 1',
@@ -261,8 +399,10 @@ export const components = [
       ];
       return `<dl>
         <dt>normal</dt><dd>${Select({ options })}</dd>
-        ${disabled ? `<dt>disabled</dt><dd>${Select({ disabled: true })}</dd>` : ''}
+        ${disabled ? `<dt>disabled</dt><dd>${Select({ disabled: true, options })}</dd>` : ''}
         ${empty ? `<dt>empty</dt><dd>${Select()}</dd>` : ''}
+        ${invalid ? `<dt>invalid</dt><dd>${Select({ invalid: true, options })}</dd>` : ''}
+        ${required ? `<dt>required</dt><dd>${Select({ required: true, options })}</dd>` : ''}
       </dl>`;
     },
   },
@@ -274,6 +414,7 @@ export const components = [
       focus = false,
       hover = false,
       invalid = false,
+      readOnly = false,
       required = false,
     } = {}) => `<dl>
     <dt>normal</dt>
@@ -316,6 +457,14 @@ export const components = [
         : ''
     }
     ${
+      readOnly
+        ? `<dt>read-only</dt><dd>${TextArea({
+            readOnly: true,
+            textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          })}</dd>`
+        : ''
+    }
+    ${
       required
         ? `<dt>required</dt><dd>${TextArea({
             required: true,
@@ -333,6 +482,7 @@ export const components = [
       focus = false,
       hover = false,
       invalid = false,
+      readOnly = false,
       required = false,
     } = {}) => `<dl>
     <dt>normal</dt><dd>${TextBox({ value: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
@@ -362,6 +512,14 @@ export const components = [
     ${
       invalid
         ? `<dt>invalid</dt><dd>${TextBox({ invalid: true, value: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>`
+        : ''
+    }
+    ${
+      readOnly
+        ? `<dt>read-only</dt><dd>${TextBox({
+            readOnly: true,
+            value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          })}</dd>`
         : ''
     }
     ${
