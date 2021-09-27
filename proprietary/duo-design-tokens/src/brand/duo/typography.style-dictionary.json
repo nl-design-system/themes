@@ -1,44 +1,45 @@
 {
   "duo": {
     "typography": {
+      "rem": { "value": "10px" },
       "base": {
         "font-size": { "value": "18px" },
         "line-height": { "value": "24px" }
       },
       "scale": {
         "xxxl": {
-          "font-size": { "value": "3.1rem" },
-          "line-height": { "value": "5rem" }
+          "font-size": { "value": "calc(3.1 * {duo.typography.rem.value})" },
+          "line-height": { "value": "calc(5 * {duo.typography.rem.value})" }
         },
         "xxl": {
-          "font-size": { "value": "2.8rem" },
-          "line-height": { "value": ".2rem" }
+          "font-size": { "value": "calc(2.8 * {duo.typography.rem.value})" },
+          "line-height": { "value": "calc(.2 * {duo.typography.rem.value})" }
         },
         "xl": {
-          "font-size": { "value": "2.6rem" },
-          "line-height": { "value": "3rem" }
+          "font-size": { "value": "calc(2.6 * {duo.typography.rem.value})" },
+          "line-height": { "value": "calc(3 * {duo.typography.rem.value})" }
         },
         "l": {
-          "font-size": { "value": "2.3rem" },
-          "line-height": { "value": " 2.7rem" }
+          "font-size": { "value": "calc(2.3 * {duo.typography.rem.value})" },
+          "line-height": { "value": "calc(2.7 * {duo.typography.rem.value})" }
         },
         "m": {
-          "font-size": { "value": "2rem" },
-          "line-height": { "value": " 2.6rem" }
+          "font-size": { "value": "calc(2 * {duo.typography.rem.value})" },
+          "line-height": { "value": "calc(2.6 * {duo.typography.rem.value})" }
         },
         "s": {
-          "font-size": { "value": "1.8rem" },
-          "line-height": { "value": " 2.2rem" }
+          "font-size": { "value": "calc(1.8 * {duo.typography.rem.value})" },
+          "line-height": { "value": "calc(2.2 * {duo.typography.rem.value})" }
         },
         "xs": {
-          "font-size": { "value": "1.6rem" },
-          "line-height": { "value": "1.8rem" }
+          "font-size": { "value": "calc(1.6 * {duo.typography.rem.value})" },
+          "line-height": { "value": "calc(1.8 * {duo.typography.rem.value})" }
         },
         "xxs": {
-          "font-size": { "value": "1.4rem" }
+          "font-size": { "value": "calc(1.4 * {duo.typography.rem.value})" }
         },
         "xxxs": {
-          "font-size": { "value": "1.2rem" }
+          "font-size": { "value": "calc(1.2 * {duo.typography.rem.value})" }
         }
       },
       "sans-serif": {

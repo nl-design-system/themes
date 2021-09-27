@@ -1,20 +1,20 @@
 {
   "duo": {
     "space": {
-      "default-margin": { "value": "1.2rem" },
+      "default-margin": { "value": "calc(1.2 * {duo.typography.rem.value})" },
       "scale": {
-        "xxs": { "value": "0.2rem" },
-        "xs": { "value": "0.4rem" },
-        "s": { "value": "0.8rem" },
+        "xxs": { "value": "calc(0.2 * {duo.typography.rem.value})" },
+        "xs": { "value": "calc(0.4 * {duo.typography.rem.value})" },
+        "s": { "value": "calc(0.8 * {duo.typography.rem.value})" },
         "m": { "value": "{duo.space.default-margin.value}" },
-        "l": { "value": "1.6rem" },
-        "xl": { "value": "2.4rem" },
-        "xxl": { "value": "3.2rem" },
-        "xxxl": { "value": "4rem" }
+        "l": { "value": "calc(1.6 * {duo.typography.rem.value})" },
+        "xl": { "value": "calc(2.4 * {duo.typography.rem.value})" },
+        "xxl": { "value": "calc(3.2 * {duo.typography.rem.value})" },
+        "xxxl": { "value": "calc(4 * {duo.typography.rem.value})" }
       },
       "grid": {
-        "gutter-width": { "value": "2rem" },
-        "text-padding": { "value": "3rem" }
+        "gutter-width": { "value": "calc(2 * {duo.typography.rem.value})" },
+        "text-padding": { "value": "calc(3 * {duo.typography.rem.value})" }
       }
     }
   }

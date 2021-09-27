@@ -10,15 +10,15 @@
       "font-weight": { "value": "700", "comment": "FIXME: NEW" },
       "font-family": { "value": "{utrecht.document.font-family.value}" },
       "font-size": { "value": "{duo.typography.scale.xs.font-size.value}" },
-      "max-width": { "value": "27rem" },
+      "max-width": { "value": "calc(27 * {duo.typography.rem.value})" },
       "block-size": {
         "value": "calc({utrecht.form-input.block-size.value} - 2px)",
         "comment": "FIXME: NEW /  (48px - 2 * 1px border = 4.6rem) / Use height instead of lineheight for non-webkit compatibility"
       },
       "padding-block-end": { "value": "0" },
       "padding-block-start": { "value": "0" },
-      "padding-inline-end": { "value": "1rem" },
-      "padding-inline-start": { "value": "1rem" },
+      "padding-inline-end": { "value": "{duo.typography.rem.value}" },
+      "padding-inline-start": { "value": "{duo.typography.rem.value}" },
       "disabled": {
         "background-color": { "value": "#f0f0f0", "comment": "FIXME: NEW" },
         "border-color": {},

@@ -14,6 +14,7 @@ import '@nl-design-system-unstable/dso-toolkit-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/dso-toolkit-design-tokens/src/font';
 import '@nl-design-system-unstable/duiven-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duo-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/duo-design-tokens/src/_responsive.scss';
 import '@nl-design-system-unstable/enkhuizen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/groningen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlemmermeer-design-tokens/dist/index.css';

@@ -5,3 +5,48 @@
  */
 
 /* stylelint-disable no-duplicate-selectors */
+
+$duo-viewport-scale-xs-min-width: 0;
+$duo-viewport-scale-sm-min-width: 544px;
+$duo-viewport-scale-md-min-width: 768px;
+$duo-viewport-scale-lg-min-width: 992px;
+$duo-viewport-scale-xl-min-width: 1200px;
+$duo-viewport-scale-xxl-min-width: 1600px;
+
+@media (min-width: $duo-viewport-scale-xs-min-width) {
+  .duo-theme {
+  }
+}
+
+@media (min-width: $duo-viewport-scale-sm-min-width) {
+  .duo-theme {
+  }
+}
+
+@media (min-width: $duo-viewport-scale-md-min-width) {
+  .duo-theme {
+    --utrecht-heading-1-font-size: var(--duo-typography-scale-xxl-font-size);
+    --utrecht-heading-2-font-size: var(--duo-typography-scale-xxl-font-size);
+    --utrecht-heading-3-font-size: var(--duo-typography-scale-l-font-size);
+    --utrecht-heading-3-line-height: var(--duo-typography-scale-l-line-height);
+    --utrecht-button-font-size: var(--duo-typography-scale-s-font-size);
+  }
+}
+
+@media (min-width: $duo-viewport-scale-lg-min-width) {
+  .duo-theme {
+  }
+}
+
+@media (min-width: $duo-viewport-scale-xl-min-width) {
+  .duo-theme {
+    --utrecht-heading-1-font-size: var(--duo-typography-scale-xxxl-font-size);
+    --utrecht-heading-1-line-height: var(--duo-typography-scale-xxxl-line-height);
+    --utrecht-heading-3-font-size: calc(var(--duo-typography-scale-l-font-size) + 0.1);
+  }
+}
+
+@media (min-width: $duo-viewport-scale-xxl-min-width) {
+  .duo-theme {
+  }
+}
