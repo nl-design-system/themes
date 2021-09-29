@@ -20,6 +20,7 @@ import '@nl-design-system-unstable/haarlemmermeer-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/horstaandemaas-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/leidschendam-voorburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
 import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
