@@ -1,5 +1,6 @@
 import { BadgeCounter } from '@utrecht/components/badge-counter/bem';
 import { BadgeData } from '@utrecht/components/badge-data/bem';
+import { Blockquote } from '@utrecht/components/blockquote/bem';
 import { Button } from '@utrecht/components/button/bem';
 import { CustomCheckbox } from '@utrecht/components/custom-checkbox/bem';
 import { Emphasis } from '@utrecht/components/emphasis/bem';
@@ -185,7 +186,13 @@ export const components = [
   { name: '@utrecht/badge-counter', template: () => `<div>${BadgeCounter({ textContent: '42' })}</div>` },
   { name: '@utrecht/badge-data', template: () => `<div>${BadgeData({ textContent: 'Category 1' })}</div>` },
   { name: '@utrecht/badge-status', template: () => '' },
-  { name: '@utrecht/blockquote', template: () => '' },
+  {
+    name: '@utrecht/blockquote',
+    template: () =>
+      Blockquote({
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      }),
+  },
   { name: '@utrecht/breadcrumb', template: () => '' },
   {
     name: '@utrecht/button',
