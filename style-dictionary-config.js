@@ -1,4 +1,4 @@
-const createConfig = ({ selector, source = ['src/**/*.style-dictionary.json'] }) => ({
+const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
   source,
   platforms: {
     js: {
