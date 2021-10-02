@@ -265,7 +265,7 @@ export const components = [
   },
   {
     name: '@utrecht/form-field-description',
-    template: ({ invalid = false, valid = false }) => {
+    template: ({ invalid = false, valid = false, warning = false }) => {
       return `<dl>
       <dt>normal</dt>
       <dd>${FormFieldDescription({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
@@ -282,6 +282,14 @@ export const components = [
           ? `<dt>valid</dt><dd>${FormFieldDescription({
               innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog',
               status: 'valid',
+            })}</dd>`
+          : ''
+      }
+      ${
+        warning
+          ? `<dt>warning</dt><dd>${FormFieldDescription({
+              innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+              status: 'warning',
             })}</dd>`
           : ''
       }
