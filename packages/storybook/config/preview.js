@@ -20,6 +20,8 @@ import '@nl-design-system-unstable/groningen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlemmermeer-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/horstaandemaas-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/leidschendam-voorburg-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/nijmegen-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/nijmegen-design-tokens/src/font';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
 import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
@@ -64,6 +66,7 @@ const themes = [
   'Haarlemmermeer',
   'Horst aan de Maas',
   'Leidschendam Voorburg',
+  'Nijmegen',
   'Noordoostpolder',
   'Rijkshuisstijl',
   'Rotterdam',
