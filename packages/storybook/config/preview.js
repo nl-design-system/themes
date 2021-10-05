@@ -4,8 +4,13 @@ import '@utrecht/component-library-css/dist/bem.css';
 // Import all themes
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
-import '@nl-design-system-unstable/borne-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/font';
+
+// Borne:
+import '@nl-design-system-unstable/borne-design-tokens/dist/design-tokens.css';
+import '@nl-design-system-unstable/borne-design-tokens/src/custom.scss';
+import '@nl-design-system-unstable/borne-design-tokens/src/font';
+
 import '@nl-design-system-unstable/drechterland-design-tokens/dist/index.css';
 // import '@nl-design-system-unstable/dso-toolkit-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duiven-design-tokens/dist/index.css';

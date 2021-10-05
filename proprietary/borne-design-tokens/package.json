@@ -23,9 +23,19 @@
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.style-dictionary.json'",
     "build": "npm-run-all build:**",
     "build:scss": "sass --no-source-map src/:dist/",
-    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json"
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
+    "install-font": "npm-run-all install-font:**",
+    "install-font:1": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/0b9078f5-ac64-4117-aa25-f1f9ee6944d1.woff2",
+    "install-font:2": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/255de0f2-9684-4e87-aeb2-de450f1a3a54.ttf",
+    "install-font:3": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/5259f2df-627b-4f22-9887-01600b197b5d.ttf",
+    "install-font:4": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/8618e3ee-2a2d-404e-8da4-c5fa9b2126ed.woff2",
+    "install-font:5": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/af7ca8f9-0e64-40b9-990b-c0a1c58462ad.eot",
+    "install-font:6": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/b224fac8-6105-4d9b-88aa-3cf88d79c091.woff",
+    "install-font:7": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/b655d4d7-3fa3-4307-8a87-036fe1918191.woff",
+    "install-font:8": "mkdir -p src/font/droid-sans && cd src/font/droid-sans && curl -O https://www.borne.nl/sites/all/themes/custom/borne/fonts/droid-sans/c80948dc-8034-4871-92e4-09e62a065734.eot"
   },
   "devDependencies": {
+    "@fontsource/roboto": "4.5.0",
     "chokidar-cli": "2.1.0",
     "npm-run-all": "4.1.5",
     "rimraf": "3.0.2",
