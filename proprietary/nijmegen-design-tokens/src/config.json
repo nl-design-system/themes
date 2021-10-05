@@ -3,6 +3,9 @@
   "name": "Nijmegen",
   "prefix": "nijmegen",
   "components": {
+    "@utrecht/badge-status": {
+      "info": true
+    },
     "@utrecht/button": {
       "disabled": true,
       "focus": true,
@@ -18,19 +21,37 @@
       "invalid": true,
       "valid": true
     },
+    "@utrecht/form-toggle": {
+      "checked": true,
+      "disabled": true
+    },
     "@utrecht/heading-1": true,
     "@utrecht/heading-2": true,
     "@utrecht/heading-3": true,
     "@utrecht/heading-4": true,
+    "@utrecht/heading-5": true,
+    "@utrecht/heading-6": true,
     "@utrecht/link": {
       "focus": true,
       "hover": true
     },
     "@utrecht/ordered-list": true,
-    "@utrecht/paragraph": true,
+    "@utrecht/pagination": true,
+    "@utrecht/paragraph": {
+      "lead": true
+    },
     "@utrecht/select": true,
-    "@utrecht/textbox": true,
-    "@utrecht/textarea": true,
+    "@utrecht/table": {
+      "caption": true
+    },
+    "@utrecht/textbox": {
+      "focus": true,
+      "invalid": true
+    },
+    "@utrecht/textarea": {
+      "focus": true,
+      "invalid": true
+    },
     "@utrecht/unordered-list": true
   }
 }
