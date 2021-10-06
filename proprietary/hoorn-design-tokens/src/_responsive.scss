@@ -1,0 +1,30 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 NL Design System Community
+ * All rights reserved
+ */
+
+$hoorn-viewport-sm-min-width: 0 !default;
+$hoorn-viewport-md-min-width: 768px !default;
+$hoorn-viewport-lg-min-width: 992px !default;
+$hoorn-viewport-xl-min-width: 1200px !default;
+
+.hoorn-theme {
+  @media (min-width: $hoorn-viewport-md-min-width) {
+    & {
+      --utrecht-page-max-width: 750px;
+    }
+  }
+
+  @media (min-width: $hoorn-viewport-xl-min-width) {
+    & {
+      --utrecht-page-max-width: 970px;
+    }
+  }
+
+  @media (min-width: $hoorn-viewport-xl-min-width) {
+    & {
+      --utrecht-page-max-width: 1170px;
+    }
+  }
+}

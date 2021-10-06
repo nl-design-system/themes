@@ -47,6 +47,11 @@ const builtinThemes = [
     href: 'https://unpkg.com/@nl-design-system-unstable/haarlemmermeer-design-tokens/dist/index.css',
   },
   {
+    className: 'hoorn-theme',
+    title: 'Gemeente Hoorn',
+    href: 'https://unpkg.com/@nl-design-system-unstable/hoorn-design-tokens/dist/index.css',
+  },
+  {
     className: 'horstaandemaas-theme',
     title: 'Gemeente Horst aan de Maas',
     href: 'https://unpkg.com/@nl-design-system-unstable/horstaandemaas-design-tokens/dist/index.css',
