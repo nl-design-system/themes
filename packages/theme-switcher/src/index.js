@@ -134,6 +134,18 @@ const setTheme = ({ className, cdn }) => {
   }
 };
 
+const getCurrentTheme = () => {
+  const root = document.documentElement;
+
+  return (
+    (root &&
+      Array.from(root.classList)
+        .map((className) => themes.find((theme) => theme.className === className))
+        .filter(Boolean)[0]) ||
+    null
+  );
+};
+
 class NLThemeSwitcherElement extends HTMLElement {
   constructor() {
     super();
@@ -155,6 +167,7 @@ class NLThemeSwitcherElement extends HTMLElement {
       .map((theme) => {
         const option = new Option(theme.name);
         option.value = theme.className;
+        option.selected = this.currentTheme === theme;
         return option;
       })
       .forEach((option) => select.appendChild(option));
@@ -173,6 +186,7 @@ class NLThemeSwitcherElement extends HTMLElement {
   }
 
   connectedCallback() {
+    this.currentTheme = getCurrentTheme();
     this.render();
   }
 }
