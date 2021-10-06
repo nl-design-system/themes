@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Theme Switcher for NL Design System",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "license": "EUPL-1.2",
+  "name": "@nl-design-system-unstable/theme-switcher",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src/index.js"
+  ],
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/themes.git"
+  },
+  "scripts": {
+    "build": "mkdir -p dist/ && node src/generate-json.js > dist/themes.json"
+  }
+}
