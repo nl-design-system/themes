@@ -1,4 +1,13 @@
+const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
+
+const sortByName = (a, b) => stringSort(a.name, b.name);
+
 const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
+  format: {
+    'json/list': function ({ dictionary }) {
+      return JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ');
+    },
+  },
   source,
   platforms: {
     js: {
@@ -16,8 +25,12 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       buildPath: 'dist/',
       files: [
         {
-          destination: 'index.json',
+          destination: 'tokens.json',
           format: 'json',
+        },
+        {
+          destination: 'index.json',
+          format: 'json/list',
         },
       ],
     },
