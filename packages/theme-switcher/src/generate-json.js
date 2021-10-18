@@ -49,8 +49,8 @@ const themes = [
 ]
   .map(({ cdn, name, fullName, prefix, npm }) => ({
     className: `${prefix}-theme`,
-    name: fullName || name,
-    cdn: cdn || `https://unpkg.com/${npm}/dist/index.css`,
+    title: fullName || name,
+    href: cdn || `https://unpkg.com/${npm}/dist/index.css`,
   }))
   .sort((a, b) => stringSort(a.name, b.name));
 
