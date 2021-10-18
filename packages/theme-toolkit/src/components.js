@@ -16,7 +16,10 @@ import { Heading5 } from '@utrecht/components/heading-5/bem';
 import { Heading6 } from '@utrecht/components/heading-6/bem';
 import { Link } from '@utrecht/components/link/bem';
 import { OrderedList } from '@utrecht/components/ordered-list/bem';
+import { Page } from '@utrecht/components/page/bem';
+import { PageContent } from '@utrecht/components/page-content/bem';
 import { PageFooter } from '@utrecht/components/page-footer/bem';
+import { PageHeader } from '@utrecht/components/page-header/bem';
 import { Pagination } from '@utrecht/components/pagination/bem';
 import { Paragraph } from '@utrecht/components/paragraph/bem';
 import { Select } from '@utrecht/components/select/bem';
@@ -563,7 +566,7 @@ export const argTypes = components
   .map(({ name }) => ({ description: name, control: 'boolean' }))
   .reduce((obj, component) => ({ ...obj, [component.description]: component }), {});
 
-export const Template = (args) =>
+export const ComponentsTemplate = (args) =>
   components
     .filter(({ name }) => Object.prototype.hasOwnProperty.call(args, name) && !!args[name])
     .map((component) => {
@@ -572,6 +575,32 @@ export const Template = (args) =>
       return component ? component.template(variants) : '';
     })
     .join('\n');
+
+export const Template = (args) => {
+  let html = ComponentsTemplate({
+    ...args,
+    '@utrecht/page-footer': false,
+    '@utrecht/page-header': false,
+  });
+
+  if (args['@utrecht/page-content']) {
+    html = PageContent({ innerHTML: html });
+  }
+
+  if (args['@utrecht/page-header']) {
+    html = PageHeader({ innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) }) + html;
+  }
+
+  if (args['@utrecht/page-footer']) {
+    html = html + PageFooter({ innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) });
+  }
+
+  if (args['@utrecht/page']) {
+    html = Page({ innerHTML: html });
+  }
+
+  return html;
+};
 
 export const getComponentArgs = (config) => ({
   ...Object.fromEntries(
