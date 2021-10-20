@@ -1,7 +1,6 @@
 const amsterdam = require('@nl-design-system-unstable/amsterdam-design-tokens/src/config.json');
 const bodegraven = require('@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/config.json');
 const drechterland = require('@nl-design-system-unstable/drechterland-design-tokens/src/config.json');
-const dsoToolkit = require('@nl-design-system-unstable/dso-toolkit-design-tokens/src/config.json');
 const duiven = require('@nl-design-system-unstable/duiven-design-tokens/src/config.json');
 // const duo = require('@nl-design-system-unstable/duo-design-tokens/src/config.json');
 const enkhuizen = require('@nl-design-system-unstable/enkhuizen-design-tokens/src/config.json');
@@ -27,7 +26,6 @@ const themes = [
   amsterdam,
   bodegraven,
   drechterland,
-  dsoToolkit,
   duiven,
   // duo,
   enkhuizen,

@@ -2,11 +2,6 @@
 
 const builtinThemes = [
   {
-    className: 'dso-theme',
-    title: 'DSO',
-    href: 'https://unpkg.com/@nl-design-system-unstable/dso-toolkit-design-tokens/dist/index.css',
-  },
-  {
     className: 'amsterdam-theme',
     title: 'Gemeente Amsterdam',
     href: 'https://unpkg.com/@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css',
