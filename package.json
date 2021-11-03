@@ -86,12 +86,12 @@
     "publish": "lerna publish from-package",
     "release": "lerna version prerelease --no-changelog --no-private",
     "start": "node_modules/http-server/bin/http-server dist/",
+    "prestorybook": "lerna run build",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm-run-all test-workspaces test-build:**",
     "test-build:css": "find proprietary/*/dist -type d \\( -name node_modules \\) -prune -false -o -name '*.css' -print0 -exec sass --no-source-map {}:/dev/null \\;",
     "test-build:scss": "find proprietary/*/dist -type d \\( -name node_modules \\) -prune -false -o -name '*.scss' -print0 -exec sass --no-source-map {} \\;",
     "test-workspaces": "lerna run --no-bail test",
-    "prewatch:storybook": "lerna run build:stencil && lerna run build:style-dictionary",
     "watch:storybook": "start-storybook --config-dir packages/storybook/config/ --no-manager-cache --port 6006",
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   },
