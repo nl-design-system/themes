@@ -20,7 +20,7 @@
     "clean": "rimraf -rf dist/",
     "prebuild": "npm run clean",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.tokens.json'",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm run --ignore-scripts build' 'src/**/*.tokens.json'",
     "build": "npm-run-all build:**",
     "build:scss": "sass --no-source-map src/:dist/",
     "skip-build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
