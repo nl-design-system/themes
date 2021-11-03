@@ -1,0 +1,41 @@
+# Secrets
+*.pem
+.env
+*.env
+*.env.*
+
+## The token in `.npmrc` should never end up in the Docker image
+*/.npmrc
+
+# Log files
+*.log
+*.err
+*.log*
+
+# Generated files
+**/dist/
+**/tmp/
+**/node_modules/
+**/coverage/
+**/out/
+
+
+
+# Version control files
+.git
+
+# Config files
+.mdlrc
+.editorconfig
+.eslintrc
+.eslintignore
+
+# Documentation
+*.md
+
+# Docker files
+docker-compose.yml
+Dockerfile
+
+# OS files
+.DS_Store
