@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" class="denhaag-theme utrecht-document">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NL Design System theme logo</title>
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/component-library-css/dist/index.css" />
+    <script async src="./index.js"></script>
+    <script async src="../../theme-switcher/src/index.js"></script>
+    <style>
+      :root {
+        --utrecht-logo-max-width: 200px;
+        --utrecht-logo-max-height: 200px;
+        --utrecht-logo-min-width: 100px;
+        --utrecht-logo-min-height: 100px;
+      }
+    </style>
+    <script
+      src="https://unpkg.com/@utrecht/web-component-library-stencil/dist/utrecht/utrecht.esm.js"
+      type="module"
+    ></script>
+  </head>
+  <body class="utrecht-html">
+    <nl-theme-logo></nl-theme-logo>
+    <h1>Example page</h1>
+    <nl-theme-switcher></nl-theme-switcher>
+  </body>
+</html>
