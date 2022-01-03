@@ -8,14 +8,30 @@ updates:
     target-branch: "main"
     versioning-strategy: "increase-if-necessary"
     ignore:
-      # Stay at webpack 4 until webpack 5 is fully supported by Storybook
-      - dependency-name: "webpack"
-        update-types: ["version-update:semver-major"]
-      # Stay at css-loader 5 which is compatible with webpack 4
+      # Storybook 6.4 causes issues with the code samples in our stories.
+      # A fix and manual update is needed before upgrading.
+      - dependency-name: "@storybook/addon-a11y"
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+      - dependency-name: "@storybook/addon-docs"
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+      - dependency-name: "@storybook/addon-viewport"
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+      - dependency-name: "@storybook/html"
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+      - dependency-name: "@storybook/theming"
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+      # Webpack 5 update can only happen after Storybook supports it, we'll need to do a manual upgrade then.
+      # For now keep the loader versions compatible with Webpack 4.
       - dependency-name: "css-loader"
         update-types: ["version-update:semver-major"]
-      # Stay at style-loader 2 which is compatible with webpack 4
+      - dependency-name: "sass-loader"
+        update-types: ["version-update:semver-major"]
       - dependency-name: "style-loader"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "webpack"
+        update-types: ["version-update:semver-major"]
+      # Color package uses ES6 syntax from v4+ which is not compatible with our setup
+      - dependency-name: "color"
         update-types: ["version-update:semver-major"]
       # Stay at React 16 until React 17 is fully supported by Storybook
       - dependency-name: "@types/react"
@@ -25,29 +41,21 @@ updates:
       - dependency-name: "react"
         update-types: ["version-update:semver-major"]
       - dependency-name: "react-dom"
-        update-types: ["version-update:semver-major"]
-      # Stay at Angular 11 until manual upgrade to Angular 12
-      - dependency-name: "@angular/cli"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "@angular/compiler-cli"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "@angular/core"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "ng-packagr"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "rxjs"
-        update-types: ["version-update:semver-major"]
-      # `angular-devkit` follows unusual versioning rules.
-      # The important thing is to stay on a version matching Angular 11:
-      #
-      #     npm install --save-dev @angular-devkit/build-angular@v11-lts
-      - dependency-name: "@angular-devkit/build-angular"
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
-      # Angular Compiler requires TypeScript >=4.0.0 and <4.2.0
-      - dependency-name: "typescript"
-        update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
+        update-types: ["version-update:semver-major"],
+      # Percy needs a manual upgrade as it doesn't work without breaking
+      - dependency-name: "@percy/storybook"
+        update-types: ["version-update:semver-major"],
+        # Manual update needed, will do so in separate PR
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"],
+      - dependency-name: "@typescript-eslint/eslint-plugin"
+        update-types: ["version-update:semver-major"],
+      - dependency-name: "@typescript-eslint/parser"
+        update-types: ["version-update:semver-major"],
+      - dependency-name: "stylelint"
+        update-types: ["version-update:semver-major"],
+      - dependency-name: "stylelint-config-prettier"
+        update-types: ["version-update:semver-major"],
 
   - package-ecosystem: "npm"
     directory: "/documentation/"
