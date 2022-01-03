@@ -10,6 +10,8 @@ module.exports = {
     // but the benefit of upgrading is currently not high enough.
     'react',
     'react-dom',
+    '@types/react',
+    '@types/react-dom',
     // Webpack 5 update can only happen after Storybook supports it, we'll need to do a manual upgrade then.
     // For now keep the loader versions compatible with Webpack 4.
     'css-loader',
