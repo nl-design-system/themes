@@ -8,6 +8,8 @@ import '@utrecht/components/pagination/bem.scss';
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/borne-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/buren-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/buren-design-tokens/src/font';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/font';
 import '@nl-design-system-unstable/drechterland-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duiven-design-tokens/dist/index.css';
@@ -56,6 +58,7 @@ const themes = [
   'Amsterdam',
   'Bodegraven-Reeuwijk',
   'Borne',
+  'Buren',
   'Den Haag',
   'Drechterland',
   'DSO',
