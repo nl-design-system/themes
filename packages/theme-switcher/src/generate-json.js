@@ -1,5 +1,6 @@
 const amsterdam = require('@nl-design-system-unstable/amsterdam-design-tokens/src/config.json');
 const bodegraven = require('@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/config.json');
+const buren = require('@nl-design-system-unstable/buren-design-tokens/src/config.json');
 const drechterland = require('@nl-design-system-unstable/drechterland-design-tokens/src/config.json');
 const duiven = require('@nl-design-system-unstable/duiven-design-tokens/src/config.json');
 // const duo = require('@nl-design-system-unstable/duo-design-tokens/src/config.json');
@@ -25,6 +26,7 @@ const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 const themes = [
   amsterdam,
   bodegraven,
+  buren,
   drechterland,
   duiven,
   // duo,

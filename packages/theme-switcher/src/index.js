@@ -12,6 +12,11 @@ const builtinThemes = [
     href: 'https://unpkg.com/@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css',
   },
   {
+    className: 'buren-theme',
+    title: 'Gemeente Buren',
+    href: 'https://unpkg.com/@nl-design-system-unstable/buren-design-tokens/dist/index.css',
+  },
+  {
     className: 'denhaag-theme',
     title: 'Gemeente Den Haag',
     href: 'https://unpkg.com/@gemeente-denhaag/design-tokens-components/dist/theme/index.css',
@@ -107,7 +112,6 @@ const builtinThemes = [
     href: 'https://unpkg.com/@nl-design-system-unstable/zwolle-design-tokens/dist/index.css',
   },
 ];
-
 const stylesheetExists = (href) =>
   Array.from(document.querySelectorAll('link[rel="stylesheet"]')).some((link) => link.href === href);
 
