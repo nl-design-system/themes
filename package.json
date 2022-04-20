@@ -98,7 +98,8 @@
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
     "watch:storybook": "start-storybook --config-dir packages/storybook/config/ --no-manager-cache --port 6006",
-    "watch:style-dictionary": "lerna run watch:style-dictionary"
+    "watch:style-dictionary": "lerna run watch:style-dictionary",
+    "serve:theme-switcher": "http-server packages/theme-switcher/src/"
   },
   "dependencies": {
     "http-server": "14.0.0"

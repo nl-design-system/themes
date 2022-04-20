@@ -7,6 +7,11 @@ const builtinThemes = [
     href: 'https://unpkg.com/@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css',
   },
   {
+    className: 'buren-theme',
+    title: 'Gemeente Buren',
+    href: 'http://localhost:8080/index.css',
+  },
+  {
     className: 'bodegraven-theme',
     title: 'Gemeente Bodegraven-Reeuwijk',
     href: 'https://unpkg.com/@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css',
