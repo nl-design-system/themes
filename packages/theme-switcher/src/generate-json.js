@@ -7,6 +7,7 @@ const duiven = require('@nl-design-system-unstable/duiven-design-tokens/src/conf
 const enkhuizen = require('@nl-design-system-unstable/enkhuizen-design-tokens/src/config.json');
 const groningen = require('@nl-design-system-unstable/groningen-design-tokens/src/config.json');
 const haarlemmermeer = require('@nl-design-system-unstable/haarlemmermeer-design-tokens/src/config.json');
+const hoorn = require('@nl-design-system-unstable/hoorn-design-tokens/src/config.json');
 const horstaandemaas = require('@nl-design-system-unstable/horstaandemaas-design-tokens/src/config.json');
 const leidschendam = require('@nl-design-system-unstable/leidschendam-voorburg-design-tokens/src/config.json');
 const noordoostpolder = require('@nl-design-system-unstable/noordoostpolder-design-tokens/src/config.json');
@@ -33,6 +34,7 @@ const themes = [
   enkhuizen,
   groningen,
   haarlemmermeer,
+  hoorn,
   horstaandemaas,
   leidschendam,
   noordoostpolder,
@@ -52,6 +54,6 @@ const themes = [
     title: fullName || name,
     href: cdn || `https://unpkg.com/${npm}/dist/index.css`,
   }))
-  .sort((a, b) => stringSort(a.name, b.name));
+  .sort((a, b) => stringSort(a.className, b.className));
 
 console.log(JSON.stringify(themes, null, '  '));
