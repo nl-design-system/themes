@@ -16,6 +16,8 @@ import '@nl-design-system-unstable/duiven-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duiven-design-tokens/src/font';
 // import '@nl-design-system-unstable/duo-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/enkhuizen-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/govuk-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/govuk-design-tokens/src/font';
 import '@nl-design-system-unstable/groningen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlemmermeer-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/hoorn-design-tokens/dist/design-tokens.css';
@@ -65,6 +67,7 @@ const themes = [
   'Duiven',
   'DUO',
   'Enkhuizen',
+  'GOV.UK',
   'Groningen',
   'Haarlemmermeer',
   'Hoorn',
