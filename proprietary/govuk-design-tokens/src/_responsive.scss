@@ -1,0 +1,27 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 NL Design System Community
+ * All rights reserved
+ */
+
+$govuk-breakpoints: (
+  mobile: 320px,
+  tablet: 641px,
+  desktop: 769px,
+) !default;
+
+/* stylelint-disable no-duplicate-selectors */
+@media (max-width: map-get($govuk-breakpoints, "mobile")) {
+  .govuk-theme {
+    --govuk-spacing-tablet-responsive-0: var(--govuk-spacing-tablet-mobile-0);
+    --govuk-spacing-tablet-responsive-1: var(--govuk-spacing-tablet-mobile-1);
+    --govuk-spacing-tablet-responsive-2: var(--govuk-spacing-tablet-mobile-2);
+    --govuk-spacing-tablet-responsive-3: var(--govuk-spacing-tablet-mobile-3);
+    --govuk-spacing-tablet-responsive-4: var(--govuk-spacing-tablet-mobile-4);
+    --govuk-spacing-tablet-responsive-5: var(--govuk-spacing-tablet-mobile-5);
+    --govuk-spacing-tablet-responsive-6: var(--govuk-spacing-tablet-mobile-6);
+    --govuk-spacing-tablet-responsive-7: var(--govuk-spacing-tablet-mobile-7);
+    --govuk-spacing-tablet-responsive-8: var(--govuk-spacing-tablet-mobile-8);
+    --govuk-spacing-tablet-responsive-9: var(--govuk-spacing-tablet-mobile-9);
+  }
+}
