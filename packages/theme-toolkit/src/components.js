@@ -96,7 +96,7 @@ export const components = [
   },
   {
     name: '@utrecht/table',
-    template: ({ caption = false }) => `<utrecht-html-content>
+    template: ({ caption = false }) => `
   <table>
     ${caption ? '<caption>Caption of the Table</caption>' : ''}
     <thead>
@@ -108,12 +108,11 @@ export const components = [
       <tr><th>Row Heading Cell 3</th><td>Data Cell 5</td><td>Data Cell 6</td></tr>
     </tbody>
   </table>
-</utrecht-html-content>
   `,
   },
   {
     name: '@utrecht/link',
-    template: ({ active = false, focus = false, hover = false, visited = false }) => {
+    template: ({ active = false, focus = false, focusVisible = false, hover = false, visited = false }) => {
       return `<dl>
       <dt>normal</dt>
       <dd>${Link({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
@@ -129,6 +128,15 @@ export const components = [
         focus
           ? `<dt>focus</dt><dd>${Link({
               focus: true,
+              textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+            })}</dd>`
+          : ''
+      }
+      ${
+        focusVisible
+          ? `<dt>focus-visible</dt><dd>${Link({
+              focus: true,
+              focusVisible: true,
               textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
             })}</dd>`
           : ''
@@ -199,15 +207,52 @@ export const components = [
   { name: '@utrecht/breadcrumb', template: () => '' },
   {
     name: '@utrecht/button',
-    template: ({ active = false, disabled = false, focus = false, hover = false }) => {
-      return `<dl>
+    template: ({
+      active = false,
+      disabled = false,
+      danger = false,
+      focus = false,
+      focusVisible = false,
+      hover = false,
+      primaryAction = false,
+      secondaryAction = false,
+      tertiaryAction = false,
+    }) => {
+      const ButtonVariants = ({
+        active = false,
+        danger = false,
+        disabled = false,
+        focus = false,
+        focusVisible = false,
+        hover = false,
+        textContent,
+        primaryAction = false,
+        secondaryAction = false,
+        tertiaryAction = false,
+      }) => {
+        const args = { dangerousAction: danger, textContent, primaryAction, secondaryAction, tertiaryAction };
+        return `<dl>
       <dt>normal</dt>
-      <dd>${Button({ textContent: 'Send' })}</dd>
-      ${hover ? `<dt>hover</dt><dd>${Button({ hover: true, textContent: 'Send' })}</dd>` : ''}
-      ${focus ? `<dt>focus</dt><dd>${Button({ focus: true, textContent: 'Send' })}</dd>` : ''}
-      ${active ? `<dt>active</dt><dd>${Button({ active: true, textContent: 'Send' })}</dd>` : ''}
-      ${disabled ? `<dt>disabled</dt><dd>${Button({ textContent: 'Send', disabled: true })}</dd>` : ''}
+      <dd>${Button({ ...args })}</dd>
+      ${hover ? `<dt>hover</dt><dd>${Button({ ...args, hover: true })}</dd>` : ''}
+      ${focus ? `<dt>focus</dt><dd>${Button({ ...args, focus: true })}</dd>` : ''}
+      ${focusVisible ? `<dt>focus-visible</dt><dd>${Button({ ...args, focus: true, focusVisible: true })}</dd>` : ''}
+      ${active ? `<dt>active</dt><dd>${Button({ ...args, active: true })}</dd>` : ''}
+      ${disabled ? `<dt>disabled</dt><dd>${Button({ ...args, disabled: true })}</dd>` : ''}
       </dl>`;
+      };
+
+      const args = { active, disabled, focus, focusVisible, hover };
+
+      return [
+        ButtonVariants({ ...args, textContent: 'Print' }),
+        primaryAction && ButtonVariants({ ...args, primaryAction: true, textContent: 'Send' }),
+        secondaryAction && ButtonVariants({ ...args, secondaryAction: true, textContent: 'Skip' }),
+        tertiaryAction && ButtonVariants({ ...args, tertiaryAction: true, textContent: 'Edit' }),
+        danger && ButtonVariants({ ...args, danger: true, textContent: 'Delete' }),
+      ]
+        .filter(Boolean)
+        .join('\n');
     },
   },
   {
