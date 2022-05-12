@@ -38,6 +38,8 @@ import '@nl-design-system-unstable/zevenaar-design-tokens/src/font';
 import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/theme/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
+import '@nl-rvo/design-tokens/dist/index.css';
+import '@nl-rvo/fonts/fonts.css';
 
 defineUtrechtComponents();
 
@@ -74,6 +76,7 @@ const themes = [
   'Noordoostpolder',
   'Rijkshuisstijl',
   'Rotterdam',
+  'RVO',
   'Stede Broec',
   'Tilburg',
   'Utrecht',
