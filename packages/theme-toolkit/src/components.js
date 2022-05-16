@@ -1,66 +1,98 @@
-import { BadgeCounter } from '@utrecht/components/badge-counter/bem';
-import { BadgeData } from '@utrecht/components/badge-data/bem';
-import { Blockquote } from '@utrecht/components/blockquote/bem';
+import { BadgeCounter } from '@utrecht/components/badge-counter/css/template';
+import { BadgeData } from '@utrecht/components/badge-data/css/template';
+import { Blockquote } from '@utrecht/components/blockquote/css/template';
 import { Button } from '@utrecht/components/button/bem';
-import { CustomCheckbox } from '@utrecht/components/custom-checkbox/bem';
-import { Emphasis } from '@utrecht/components/emphasis/bem';
+import { CustomCheckbox } from '@utrecht/components/custom-checkbox/css/template';
+import { Emphasis } from '@utrecht/components/emphasis/css/template';
 import { FormFieldDescription } from '@utrecht/components/form-field-description/bem';
-import { FormFieldset } from '@utrecht/components/form-fieldset/bem';
-import { FormLabel } from '@utrecht/components/form-label/bem';
-import { FormToggle } from '@utrecht/components/form-toggle/bem';
+import { FormFieldset } from '@utrecht/components/form-fieldset/css/template';
+import { FormLabel } from '@utrecht/components/form-label/css/template';
+import { FormToggle } from '@utrecht/components/form-toggle/css/template';
 import { Heading1 } from '@utrecht/components/heading-1/bem';
 import { Heading2 } from '@utrecht/components/heading-2/bem';
 import { Heading3 } from '@utrecht/components/heading-3/bem';
 import { Heading4 } from '@utrecht/components/heading-4/bem';
 import { Heading5 } from '@utrecht/components/heading-5/bem';
 import { Heading6 } from '@utrecht/components/heading-6/bem';
-import { Link } from '@utrecht/components/link/bem';
-import { OrderedList } from '@utrecht/components/ordered-list/bem';
-import { Page } from '@utrecht/components/page/bem';
-import { PageContent } from '@utrecht/components/page-content/bem';
-import { PageFooter } from '@utrecht/components/page-footer/bem';
-import { PageHeader } from '@utrecht/components/page-header/bem';
-import { Pagination } from '@utrecht/components/pagination/bem';
-import { Paragraph } from '@utrecht/components/paragraph/bem';
-import { Select } from '@utrecht/components/select/bem';
-import { Separator } from '@utrecht/components/separator/bem';
-import { TextArea } from '@utrecht/components/textarea/bem';
-import { TextBox } from '@utrecht/components/textbox/bem';
-import { UnorderedList } from '@utrecht/components/unordered-list/bem';
+import { Link } from '@utrecht/components/link/css/template';
+import { OrderedList } from '@utrecht/components/ordered-list/css/template';
+import { Page } from '@utrecht/components/page/css/template';
+import { PageContent } from '@utrecht/components/page-content/css/template';
+import { PageFooter } from '@utrecht/components/page-footer/css/template';
+import { PageHeader } from '@utrecht/components/page-header/css/template';
+import { Pagination } from '@utrecht/components/pagination/css/template';
+import { Paragraph } from '@utrecht/components/paragraph/css/template';
+import { Select } from '@utrecht/components/select/css/template';
+import { Separator } from '@utrecht/components/separator/css/template';
+import { Textarea } from '@utrecht/components/textarea/css/template';
+import { Textbox } from '@utrecht/components/textbox/css/template';
+import { UnorderedList } from '@utrecht/components/unordered-list/css/template';
 
 const Document = ({ innerHTML = '' }) => `<div class="utrecht-document">${innerHTML}</div>`;
 
 export const components = [
   {
     name: '@utrecht/heading-1',
-    template: () => Heading1({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+    template: () =>
+      Heading1({
+        distanced: true,
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      }),
   },
   {
     name: '@utrecht/heading-2',
-    template: () => Heading2({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+    template: () =>
+      Heading2({
+        distanced: true,
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      }),
   },
   {
     name: '@utrecht/heading-3',
-    template: () => Heading3({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+    template: () =>
+      Heading3({
+        distanced: true,
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      }),
   },
   {
     name: '@utrecht/heading-4',
-    template: () => Heading4({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+    template: () =>
+      Heading4({
+        distanced: true,
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      }),
   },
   {
     name: '@utrecht/heading-5',
-    template: () => Heading5({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+    template: () =>
+      Heading5({
+        distanced: true,
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      }),
   },
   {
     name: '@utrecht/heading-6',
-    template: () => Heading6({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+    template: () =>
+      Heading6({
+        distanced: true,
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      }),
   },
   {
     name: '@utrecht/paragraph',
     template: ({ lead = false } = {}) =>
       [
-        lead && Paragraph({ distanced: true, lead: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
-        Paragraph({ distanced: true, textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+        lead &&
+          Paragraph({
+            distanced: true,
+            lead: true,
+            textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          }),
+        Paragraph({
+          distanced: true,
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+        }),
       ]
         .filter(Boolean)
         .join('\n'),
@@ -116,7 +148,9 @@ export const components = [
     template: ({ active = false, focus = false, hover = false, visited = false }) => {
       return `<dl>
       <dt>normal</dt>
-      <dd>${Link({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
+      <dd>${Link({
+        textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      })}</dd>
       ${
         hover
           ? `<dt>hover</dt><dd>${Link({
@@ -186,8 +220,14 @@ export const components = [
   { name: '@utrecht/alternate-lang-link', template: () => '' },
   { name: '@utrecht/alternate-lang-nav', template: () => '' },
   { name: '@utrecht/article', template: () => '' },
-  { name: '@utrecht/badge-counter', template: () => `<div>${BadgeCounter({ textContent: '42' })}</div>` },
-  { name: '@utrecht/badge-data', template: () => `<div>${BadgeData({ textContent: 'Category 1' })}</div>` },
+  {
+    name: '@utrecht/badge-counter',
+    template: () => `<div>${BadgeCounter({ textContent: '42' })}</div>`,
+  },
+  {
+    name: '@utrecht/badge-data',
+    template: () => `<div>${BadgeData({ textContent: 'Category 1' })}</div>`,
+  },
   { name: '@utrecht/badge-status', template: () => '' },
   {
     name: '@utrecht/blockquote',
@@ -203,10 +243,38 @@ export const components = [
       return `<dl>
       <dt>normal</dt>
       <dd>${Button({ textContent: 'Send' })}</dd>
-      ${hover ? `<dt>hover</dt><dd>${Button({ hover: true, textContent: 'Send' })}</dd>` : ''}
-      ${focus ? `<dt>focus</dt><dd>${Button({ focus: true, textContent: 'Send' })}</dd>` : ''}
-      ${active ? `<dt>active</dt><dd>${Button({ active: true, textContent: 'Send' })}</dd>` : ''}
-      ${disabled ? `<dt>disabled</dt><dd>${Button({ textContent: 'Send', disabled: true })}</dd>` : ''}
+      ${
+        hover
+          ? `<dt>hover</dt><dd>${Button({
+              hover: true,
+              textContent: 'Send',
+            })}</dd>`
+          : ''
+      }
+      ${
+        focus
+          ? `<dt>focus</dt><dd>${Button({
+              focus: true,
+              textContent: 'Send',
+            })}</dd>`
+          : ''
+      }
+      ${
+        active
+          ? `<dt>active</dt><dd>${Button({
+              active: true,
+              textContent: 'Send',
+            })}</dd>`
+          : ''
+      }
+      ${
+        disabled
+          ? `<dt>disabled</dt><dd>${Button({
+              textContent: 'Send',
+              disabled: true,
+            })}</dd>`
+          : ''
+      }
       </dl>`;
     },
   },
@@ -215,7 +283,9 @@ export const components = [
     template: () =>
       FormFieldset({
         legend: 'The Quick Brown Fox Jumps Over The Lazy Dog',
-        content: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+        content: Paragraph({
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+        }),
       }),
   },
   {
@@ -226,7 +296,10 @@ export const components = [
       <dd>${FormLabel({ textContent: 'Form input' })}</dd>
       ${
         disabled
-          ? `<dt>for disabled input</dt><dd>${FormLabel({ textContent: 'Form input', disabled: true })}</dd>`
+          ? `<dt>for disabled input</dt><dd>${FormLabel({
+              textContent: 'Form input',
+              disabled: true,
+            })}</dd>`
           : ''
       }
       ${
@@ -271,7 +344,9 @@ export const components = [
     template: ({ invalid = false, valid = false, warning = false }) => {
       return `<dl>
       <dt>normal</dt>
-      <dd>${FormFieldDescription({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
+      <dd>${FormFieldDescription({
+        innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+      })}</dd>
       ${
         invalid
           ? `<dt>invalid</dt><dd>${FormFieldDescription({
@@ -312,19 +387,28 @@ export const components = [
       ${disabled ? `<dt>disabled</dt><dd>${CustomCheckbox({ disabled: true })}</dd>` : ''}
       ${
         disabled && checked
-          ? `<dt>disabled and checked</dt><dd>${CustomCheckbox({ checked: true, disabled: true })}</dd>`
+          ? `<dt>disabled and checked</dt><dd>${CustomCheckbox({
+              checked: true,
+              disabled: true,
+            })}</dd>`
           : ''
       }
       ${invalid ? `<dt>invalid</dt><dd>${CustomCheckbox({ invalid: true })}</dd>` : ''}
       ${
         invalid && checked
-          ? `<dt>invalid and checked</dt><dd>${CustomCheckbox({ checked: true, invalid: true })}</dd>`
+          ? `<dt>invalid and checked</dt><dd>${CustomCheckbox({
+              checked: true,
+              invalid: true,
+            })}</dd>`
           : ''
       }
       </dl>`;
     },
   },
-  { name: '@utrecht/document', template: () => Document({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) },
+  {
+    name: '@utrecht/document',
+    template: () => Document({ innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+  },
   { name: '@utrecht/form-field', template: () => '' },
   { name: '@utrecht/form-field-textbox', template: () => '' },
   { name: '@utrecht/form-field-textarea', template: () => '' },
@@ -437,15 +521,19 @@ export const components = [
       required = false,
     } = {}) => `<dl>
     <dt>normal</dt>
-    <dd>${TextArea({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
+    <dd>${Textarea({
+      textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    })}</dd>
     ${
       placeholder
-        ? `<dt>placeholder</dt><dd>${TextArea({ placeholder: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>`
+        ? `<dt>placeholder</dt><dd>${Textarea({
+            placeholder: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          })}</dd>`
         : ''
     }
     ${
       disabled
-        ? `<dt>disabled</dt><dd>${TextArea({
+        ? `<dt>disabled</dt><dd>${Textarea({
             disabled: true,
             textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -453,7 +541,7 @@ export const components = [
     }
     ${
       hover
-        ? `<dt>hover</dt><dd>${TextArea({
+        ? `<dt>hover</dt><dd>${Textarea({
             hover: true,
             textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -461,7 +549,7 @@ export const components = [
     }
     ${
       focus
-        ? `<dt>focus</dt><dd>${TextArea({
+        ? `<dt>focus</dt><dd>${Textarea({
             focus: true,
             textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -469,7 +557,7 @@ export const components = [
     }
     ${
       invalid
-        ? `<dt>invalid</dt><dd>${TextArea({
+        ? `<dt>invalid</dt><dd>${Textarea({
             invalid: true,
             textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -477,7 +565,7 @@ export const components = [
     }
     ${
       readOnly
-        ? `<dt>read-only</dt><dd>${TextArea({
+        ? `<dt>read-only</dt><dd>${Textarea({
             readOnly: true,
             textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -485,7 +573,7 @@ export const components = [
     }
     ${
       required
-        ? `<dt>required</dt><dd>${TextArea({
+        ? `<dt>required</dt><dd>${Textarea({
             required: true,
             textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -504,15 +592,19 @@ export const components = [
       readOnly = false,
       required = false,
     } = {}) => `<dl>
-    <dt>normal</dt><dd>${TextBox({ value: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>
+    <dt>normal</dt><dd>${Textbox({
+      value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    })}</dd>
     ${
       placeholder
-        ? `<dt>placeholder</dt><dd>${TextBox({ placeholder: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>`
+        ? `<dt>placeholder</dt><dd>${Textbox({
+            placeholder: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          })}</dd>`
         : ''
     }
     ${
       disabled
-        ? `<dt>disabled</dt><dd>${TextBox({
+        ? `<dt>disabled</dt><dd>${Textbox({
             disabled: true,
             value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -520,22 +612,31 @@ export const components = [
     }
     ${
       hover
-        ? `<dt>hover</dt><dd>${TextBox({ hover: true, value: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>`
+        ? `<dt>hover</dt><dd>${Textbox({
+            hover: true,
+            value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          })}</dd>`
         : ''
     }
     ${
       focus
-        ? `<dt>focus</dt><dd>${TextBox({ focus: true, value: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>`
+        ? `<dt>focus</dt><dd>${Textbox({
+            focus: true,
+            value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          })}</dd>`
         : ''
     }
     ${
       invalid
-        ? `<dt>invalid</dt><dd>${TextBox({ invalid: true, value: 'The Quick Brown Fox Jumps Over The Lazy Dog' })}</dd>`
+        ? `<dt>invalid</dt><dd>${Textbox({
+            invalid: true,
+            value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+          })}</dd>`
         : ''
     }
     ${
       readOnly
-        ? `<dt>read-only</dt><dd>${TextBox({
+        ? `<dt>read-only</dt><dd>${Textbox({
             readOnly: true,
             value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -543,7 +644,7 @@ export const components = [
     }
     ${
       required
-        ? `<dt>required</dt><dd>${TextBox({
+        ? `<dt>required</dt><dd>${Textbox({
             required: true,
             value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
           })}</dd>`
@@ -555,7 +656,9 @@ export const components = [
     name: '@utrecht/page-footer',
     template: () =>
       `${PageFooter({
-        innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }),
+        innerHTML: Paragraph({
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+        }),
       })}</footer>`,
   },
 ].filter(Boolean);
@@ -588,11 +691,22 @@ export const Template = (args) => {
   }
 
   if (args['@utrecht/page-header']) {
-    html = PageHeader({ innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) }) + html;
+    html =
+      PageHeader({
+        innerHTML: Paragraph({
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+        }),
+      }) + html;
   }
 
   if (args['@utrecht/page-footer']) {
-    html = html + PageFooter({ innerHTML: Paragraph({ textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' }) });
+    html =
+      html +
+      PageFooter({
+        innerHTML: Paragraph({
+          textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+        }),
+      });
   }
 
   if (args['@utrecht/page']) {
