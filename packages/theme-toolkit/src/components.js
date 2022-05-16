@@ -4,7 +4,7 @@ import { Blockquote } from '@utrecht/components/blockquote/css/template';
 import { Button } from '@utrecht/components/button/bem';
 import { CustomCheckbox } from '@utrecht/components/custom-checkbox/css/template';
 import { Emphasis } from '@utrecht/components/emphasis/css/template';
-import { FormFieldDescription } from '@utrecht/components/form-field-description/bem';
+import { FormFieldDescription } from '@utrecht/components/form-field-description/css/template';
 import { FormFieldset } from '@utrecht/components/form-fieldset/css/template';
 import { FormLabel } from '@utrecht/components/form-label/css/template';
 import { FormToggle } from '@utrecht/components/form-toggle/css/template';
