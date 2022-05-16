@@ -11,15 +11,20 @@ updates:
       # Storybook 6.4 causes issues with the code samples in our stories.
       # A fix and manual update is needed before upgrading.
       - dependency-name: "@storybook/addon-a11y"
-        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+        update-types:
+          ["version-update:semver-minor", "version-update:semver-major"]
       - dependency-name: "@storybook/addon-docs"
-        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+        update-types:
+          ["version-update:semver-minor", "version-update:semver-major"]
       - dependency-name: "@storybook/addon-viewport"
-        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+        update-types:
+          ["version-update:semver-minor", "version-update:semver-major"]
       - dependency-name: "@storybook/html"
-        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+        update-types:
+          ["version-update:semver-minor", "version-update:semver-major"]
       - dependency-name: "@storybook/theming"
-        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+        update-types:
+          ["version-update:semver-minor", "version-update:semver-major"]
       # Webpack 5 update can only happen after Storybook supports it, we'll need to do a manual upgrade then.
       # For now keep the loader versions compatible with Webpack 4.
       - dependency-name: "css-loader"
@@ -41,21 +46,21 @@ updates:
       - dependency-name: "react"
         update-types: ["version-update:semver-major"]
       - dependency-name: "react-dom"
-        update-types: ["version-update:semver-major"],
+        update-types: ["version-update:semver-major"]
       # Percy needs a manual upgrade as it doesn't work without breaking
       - dependency-name: "@percy/storybook"
-        update-types: ["version-update:semver-major"],
+        update-types: ["version-update:semver-major"]
         # Manual update needed, will do so in separate PR
       - dependency-name: "eslint"
-        update-types: ["version-update:semver-major"],
+        update-types: ["version-update:semver-major"]
       - dependency-name: "@typescript-eslint/eslint-plugin"
-        update-types: ["version-update:semver-major"],
+        update-types: ["version-update:semver-major"]
       - dependency-name: "@typescript-eslint/parser"
-        update-types: ["version-update:semver-major"],
+        update-types: ["version-update:semver-major"]
       - dependency-name: "stylelint"
-        update-types: ["version-update:semver-major"],
+        update-types: ["version-update:semver-major"]
       - dependency-name: "stylelint-config-prettier"
-        update-types: ["version-update:semver-major"],
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "npm"
     directory: "/documentation/"
