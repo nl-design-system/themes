@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas, ArgsTable, Typeset } from "@storybook/addon-docs";
+import tokens from "../dist/tokens.json";
+import config from "../src/config.json";
+
+<Meta title={`${config.name}/Typography`} />
+
+export const typography = tokens["pzh"]["typography"];
+export const fontSizes = Object.values(typography["scale"]).map(size => size["font-size"].value);
+
+# Typography
+
+See also: [Lettertypes voor vormgeving](https://wapenfeiten.zuid-holland.nl/bouwstenen/lettertype/lettertypes-voor-vormgeving).
+
+## Karbon
+
+Non-free font. Contact provincie Zuid-Holland if you need access and are developing for them.
+Sans serif font. 
+
+<Typeset
+  fontFamily={typography["sans-serif"]["font-family"].value}
+  fontSizes={fontSizes}
+  sampleText="The Quick Brown Fox Jumps Over The Lazy Dog"
+/>
+
+<Typeset
+  fontFamily={typography["sans-serif"]["font-family"].value}
+  fontSizes={fontSizes}
+  fontWeight={600}
+  sampleText="The Quick Brown Fox Jumps Over The Lazy Dog"
+/>
+
+
+## Georgia
+
+Serif font. This serif font is used for subtitles and quotes. 
+
+<Typeset
+  fontFamily={typography["serif"]["font-family"].value}
+  fontSizes={fontSizes}
+  sampleText="The Quick Brown Fox Jumps Over The Lazy Dog"
+/>
