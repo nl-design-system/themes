@@ -14,7 +14,6 @@ module.exports = {
       name: '@storybook/addon-docs',
       options: { configureJSX: true },
     },
-    '@storybook/addon-notes/register',
     '@storybook/addon-viewport/register',
     '@storybook/preset-scss',
     '@whitespace/storybook-addon-html',

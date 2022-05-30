@@ -1,5 +1,5 @@
 import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil';
-import '@utrecht/component-library-css/dist/bem.css';
+import '@utrecht/component-library-css/';
 
 // Import all themes
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
@@ -46,7 +46,6 @@ const statuses = {
 };
 
 const previewTabs = {
-  'storybookjs/notes/panel': { title: 'Documentation' },
   'storybook/docs/panel': { title: 'API' },
   canvas: { title: 'Design Tokens' },
 };
