@@ -13,7 +13,7 @@ Example usage: put the `script` element in the `<head>` section of your code, an
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NL Design System theme switcher</title>
-    <link rel="stylesheet" href="https://unpkg.com/@utrecht/component-library-css/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/component-library-css" />
     <script async src="https://unpkg.com/@nl-design-system-unstable/theme-switcher"></script>
   </head>
   <body class="utrecht-html">
