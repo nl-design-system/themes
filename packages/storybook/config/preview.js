@@ -1,5 +1,5 @@
 import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil';
-import '@utrecht/component-library-css/';
+import '@utrecht/component-library-css';
 
 // Import all themes
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
@@ -23,6 +23,7 @@ import '@nl-design-system-unstable/nijmegen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/nijmegen-design-tokens/src/font';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
+import '@nl-design-system-unstable/provincie-zuid-holland-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
@@ -77,6 +78,7 @@ const themes = [
   'Vught',
   'Westervoort',
   'Zevenaar',
+  'Zuid-Holland',
   'Zwolle',
 ].sort();
 
