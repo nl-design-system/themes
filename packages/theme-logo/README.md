@@ -11,7 +11,7 @@ This is an experimental package for developers that want to showcase the theme s
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NL Design System theme logo</title>
-    <link rel="stylesheet" href="https://unpkg.com/@utrecht/component-library-css/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/component-library-css" />
     <script async src="https://unpkg.com/@nl-design-system-unstable/theme-switcher"></script>
     <style>
       :root {
