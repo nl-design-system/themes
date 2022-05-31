@@ -5,7 +5,7 @@ import config from "../src/config.json";
 <Meta title={`${config.name}/Typography`} />
 
 export const typography = tokens["pzh"]["typography"];
-export const fontSizes = Object.values(typography["scale"]).map(size => size["font-size"].value);
+export const fontSizes = Object.values(typography["scale"]).map((size) => size["font-size"].value);
 
 # Typography
 
@@ -14,7 +14,7 @@ See also: [Lettertypes voor vormgeving](https://wapenfeiten.zuid-holland.nl/bouw
 ## Karbon
 
 Non-free font. Contact provincie Zuid-Holland if you need access and are developing for them.
-Sans serif font. 
+Sans serif font.
 
 <Typeset
   fontFamily={typography["sans-serif"]["font-family"].value}
@@ -29,10 +29,9 @@ Sans serif font.
   sampleText="The Quick Brown Fox Jumps Over The Lazy Dog"
 />
 
-
 ## Georgia
 
-Serif font. This serif font is used for subtitles and quotes. 
+Serif font. This serif font is used for subtitles and quotes.
 
 <Typeset
   fontFamily={typography["serif"]["font-family"].value}
