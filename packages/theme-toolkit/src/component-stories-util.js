@@ -1,0 +1,16 @@
+export const STORY_GROUPS = {
+  BUTTON_DEFAULT: 'Default Button',
+  PARAGRAPH: 'Paragraph',
+  HEADINGS: 'Headings',
+  LISTS: 'Lists',
+  TEXTBOX: 'Textbox',
+  TEXTAREA: 'Textarea',
+  SELECT: 'Select',
+  BADGES: 'Badges',
+  LINK: 'Link',
+  FORM_LABEL_DEFAULT: 'Default Form Label',
+  FORM_LABEL_CHECKBOX: 'Form Label for Checkbox',
+  FORM_LABEL_RADIO: 'Form Label for Radio Button',
+  EMPHASIS: 'Emphasis',
+  FORM_FIELD_DESCRIPTION: 'Form Field Description',
+};

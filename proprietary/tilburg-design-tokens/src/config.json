@@ -3,30 +3,26 @@
   "name": "Tilburg",
   "prefix": "tilburg",
   "npm": "@nl-design-system-unstable/tilburg-design-tokens",
-  "components": {
-    "@utrecht/button": {
-      "disabled": true,
-      "focus": true,
-      "hover": true
-    },
-    "@utrecht/document": true,
-    "@utrecht/link": {
-      "focus": true,
-      "hover": true
-    },
-    "@utrecht/form-description": {
-      "invalid": true
-    },
-    "@utrecht/form-fieldset": true,
-    "@utrecht/paragraph": true,
-    "@utrecht/heading-1": true,
-    "@utrecht/heading-2": true,
-    "@utrecht/heading-3": true,
-    "@utrecht/separator": true,
-    "@utrecht/ordered-list": true,
-    "@utrecht/unordered-list": true,
-    "@utrecht/textbox": {
-      "invalid": true
-    }
-  }
+  "stories": [
+    "react-utrecht-button--default",
+    "react-utrecht-button--disabled",
+    "react-utrecht-button--focus",
+    "react-utrecht-button--hover",
+    "react-utrecht-document--default",
+    "react-utrecht-link--default",
+    "react-utrecht-link--focus",
+    "react-utrecht-link--hover",
+    "react-utrecht-form-field-description--default",
+    "react-utrecht-form-field-description--invalid",
+    "react-utrecht-form-fieldset--default",
+    "react-utrecht-paragraph--default",
+    "react-utrecht-heading-1--default",
+    "react-utrecht-heading-2--default",
+    "react-utrecht-heading-3--default",
+    "react-utrecht-separator--default",
+    "react-utrecht-ordered-list--default",
+    "react-utrecht-unordered-list--default",
+    "react-utrecht-textbox--default",
+    "react-utrecht-textbox--invalid"
+  ]
 }

@@ -3,35 +3,29 @@
   "name": "Buren",
   "prefix": "buren",
   "npm": "@nl-design-system-unstable/buren-design-tokens",
-  "components": {
-    "@utrecht/button": {
-      "hover": true,
-      "focus": true
-    },
-    "@utrecht/link": {
-      "hover": true,
-      "focus": true
-    },
-    "@utrecht/paragraph": {
-      "lead": true
-    },
-    "@utrecht/heading-1": true,
-    "@utrecht/heading-2": true,
-    "@utrecht/heading-3": true,
-    "@utrecht/select": {
-      "hover": true,
-      "focus": true
-    },
-    "@utrecht/textbox": {
-      "hover": true,
-      "focus": true,
-      "placeholder": true
-    },
-    "@utrecht/table": true,
-    "@utrecht/textarea": {
-      "hover": true,
-      "focus": true,
-      "placeholder": true
-    }
-  }
+  "stories": [
+    "react-utrecht-button--default",
+    "react-utrecht-button--hover",
+    "react-utrecht-button--focus",
+    "react-utrecht-link--default",
+    "react-utrecht-link--hover",
+    "react-utrecht-link--focus",
+    "react-utrecht-paragraph--default",
+    "react-utrecht-paragraph--lead",
+    "react-utrecht-heading-1--default",
+    "react-utrecht-heading-2--default",
+    "react-utrecht-heading-3--default",
+    "react-utrecht-select--default",
+    "react-utrecht-select--hover",
+    "react-utrecht-select--focus",
+    "react-utrecht-textbox--default",
+    "react-utrecht-textbox--hover",
+    "react-utrecht-textbox--focus",
+    "react-utrecht-textbox--placeholder",
+    "react-utrecht-table--default",
+    "react-utrecht-textarea--default",
+    "react-utrecht-textarea--hover",
+    "react-utrecht-textarea--focus",
+    "react-utrecht-textarea--placeholder"
+  ]
 }
