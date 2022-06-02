@@ -3,43 +3,20 @@
   "name": "Zuid-Holland",
   "prefix": "pzh",
   "npm": "@nl-design-system-unstable/provincie-zuid-holland-design-tokens",
-  "components": {
-    "@utrecht/blockquote": false,
-    "@utrecht/button": {
-      "focus": true,
-      "hover": true
-    },
-    "@utrecht/document": false,
-    "@utrecht/form-field-description": {
-      "warning": false
-    },
-    "@utrecht/form-label": {
-      "checkbox": false,
-      "radio": false
-    },
-    "@utrecht/heading-1": true,
-    "@utrecht/heading-2": true,
-    "@utrecht/heading-3": true,
-    "@utrecht/heading-4": true,
-    "@utrecht/link": {
-      "focus": false,
-      "hover": false
-    },
-    "@utrecht/ordered-list": false,
-    "@utrecht/page-footer": false,
-    "@utrecht/paragraph": {
-      "lead": false
-    },
-    "@utrecht/emphasis": true,
-    "@utrecht/table": false,
-    "@utrecht/textarea": {
-      "invalid": false,
-      "focus": false
-    },
-    "@utrecht/textbox": {
-      "invalid": false,
-      "focus": false
-    },
-    "@utrecht/unordered-list": false
-  }
+  "stories": [
+    "react-utrecht-button--default",
+    "react-utrecht-button--focus",
+    "react-utrecht-button--hover",
+    "react-utrecht-form-field-description--default",
+    "react-utrecht-form-label--default",
+    "react-utrecht-heading-1--default",
+    "react-utrecht-heading-2--default",
+    "react-utrecht-heading-3--default",
+    "react-utrecht-heading-4--default",
+    "react-utrecht-link--default",
+    "react-utrecht-paragraph--default",
+    "react-utrecht-emphasis--strong",
+    "react-utrecht-textarea--default",
+    "react-utrecht-textbox--default"
+  ]
 }

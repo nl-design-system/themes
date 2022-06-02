@@ -4,28 +4,25 @@
   "prefix": "denhaag",
   "npm": "@gemeente-denhaag/design-tokens-components",
   "cdn": "https://unpkg.com/@gemeente-denhaag/design-tokens-components/dist/theme/index.css",
-  "components": {
-    "@utrecht/button": {
-      "disabled": true,
-      "focus": true
-    },
-    "@utrecht/document": true,
-    "@utrecht/link": {
-      "focus": true
-    },
-    "@utrecht/paragraph": true,
-    "@utrecht/heading-1": true,
-    "@utrecht/heading-2": true,
-    "@utrecht/heading-3": true,
-    "@utrecht/heading-4": true,
-    "@utrecht/heading-5": true,
-    "@utrecht/textbox": true,
-    "@utrecht/textarea": true,
-    "@utrecht/table": true,
-    "@utrecht/form-toggle": {
-      "checked": true,
-      "checkedDisabled": true,
-      "disabled": true
-    }
-  }
+  "stories": [
+    "react-utrecht-button--default",
+    "react-utrecht-button--disabled",
+    "react-utrecht-button--focus",
+    "react-utrecht-document--default",
+    "react-utrecht-link--default",
+    "react-utrecht-link--focus",
+    "react-utrecht-paragraph--default",
+    "react-utrecht-heading-1--default",
+    "react-utrecht-heading-2--default",
+    "react-utrecht-heading-3--default",
+    "react-utrecht-heading-4--default",
+    "react-utrecht-heading-5--default",
+    "react-utrecht-textbox--default",
+    "react-utrecht-textarea--default",
+    "react-utrecht-table--default",
+    "react-utrecht-form-toggle--default",
+    "react-utrecht-form-toggle--checked",
+    "react-utrecht-form-toggle--disabled",
+    "react-utrecht-form-toggle--disabled-checked"
+  ]
 }
