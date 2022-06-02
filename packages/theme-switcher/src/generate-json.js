@@ -21,6 +21,7 @@ const zevenaar = require('@nl-design-system-unstable/zevenaar-design-tokens/src/
 const zwolle = require('@nl-design-system-unstable/zwolle-design-tokens/src/config.json');
 const utrecht = require('../../../documentation/utrecht/config.json');
 const denhaag = require('../../../documentation/denhaag/config.json');
+const openforms = require('../../../documentation/open-forms/config.json');
 
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
@@ -48,6 +49,7 @@ const themes = [
   zwolle,
   denhaag,
   utrecht,
+  openforms,
 ]
   .map(({ cdn, name, fullName, prefix, npm }) => ({
     className: `${prefix}-theme`,

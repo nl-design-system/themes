@@ -67,6 +67,11 @@ const builtinThemes = [
     href: 'https://unpkg.com/@nl-design-system-unstable/noordoostpolder-design-tokens/dist/index.css',
   },
   {
+    className: 'openforms-theme',
+    title: 'Open Formulieren',
+    href: 'https://unpkg.com/@open-formulieren/design-tokens/dist/index.css',
+  },
+  {
     className: 'rotterdam-theme',
     title: 'Gemeente Rotterdam',
     href: 'https://unpkg.com/@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css',
