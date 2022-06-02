@@ -84,7 +84,7 @@ const builtinThemes = [
   {
     className: 'utrecht-theme',
     title: 'Gemeente Utrecht',
-    href: 'https://unpkg.com/@utrecht/design-tokens/dist/theme/index.css',
+    href: 'https://unpkg.com/@utrecht/design-tokens/dist/index.css',
   },
   {
     className: 'venray-theme',
