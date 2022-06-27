@@ -142,6 +142,21 @@ const setTheme = ({ target, className, href, themes = [] }) => {
   }
 };
 
+const prefetchThemes = (themes = []) => {
+  const head = document.querySelector('head');
+
+  // Only prefetch themes once
+  if (head && !head.querySelector('link[rel~="alternate"][rel~="prefetch"][rel~="stylesheet"]')) {
+    themes.forEach(({ href }) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate prefetch stylesheet';
+      link.type = 'text/css';
+      link.href = href;
+      head.appendChild(link);
+    });
+  }
+};
+
 const getCurrentTheme = ({ target, themes }) => {
   return (
     (target &&
@@ -169,6 +184,8 @@ class NLThemeSwitcherElement extends HTMLElement {
     const select = document.createElement('select');
     select.className = 'utrecht-select';
     select.setAttribute('aria-label', 'NL Design System thema');
+
+    prefetchThemes(themes);
 
     themes
       .map((theme) => {
