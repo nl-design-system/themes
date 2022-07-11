@@ -1,4 +1,6 @@
 export const STORY_GROUPS = {
+  AVATAR: 'Avatars',
+  ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
   PARAGRAPH: 'Paragraph',
   HEADINGS: 'Headings',

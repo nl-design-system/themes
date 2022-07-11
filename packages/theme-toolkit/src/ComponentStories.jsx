@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { DENHAAG_COMPONENT_STORIES } from './component-stories-denhaag';
 import { UTRECHT_COMPONENT_STORIES } from './component-stories-utrecht';
 import { CustomStory } from './CustomStory';
 
@@ -26,7 +27,7 @@ Heading.propTypes = {
 };
 
 export const ComponentStories = ({ config, showAll = false }) => {
-  const availableComponents = [...UTRECHT_COMPONENT_STORIES];
+  const availableComponents = [...UTRECHT_COMPONENT_STORIES, ...DENHAAG_COMPONENT_STORIES];
   if (Array.isArray(config.stories)) {
     // TODO: Add glob option for variants to config https://www.npmjs.com/package/glob
     const components = showAll
