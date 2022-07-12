@@ -68,12 +68,14 @@ BadgeData.propTypes = {
 export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--default',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button',
     render: () => <Button>Default</Button>,
   },
   {
     storyId: 'react-utrecht-button--disabled',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button: Disabled',
     state: true,
@@ -81,6 +83,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-button--active',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button: Active',
     state: true,
@@ -88,6 +91,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-button--hover',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button: Hover',
     state: true,
@@ -95,6 +99,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-button--focus',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button: Focus',
     state: true,
@@ -102,6 +107,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-button--focus-visible',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button: Focus Visible',
     state: true,
@@ -109,6 +115,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-button--busy',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button: Busy',
     state: true,
@@ -116,6 +123,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-button--submit',
+    component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button: Submit Type',
     state: true,
@@ -129,48 +137,56 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-paragraph--lead',
+    component: 'utrecht-paragraph',
     group: STORY_GROUPS.PARAGRAPH,
     name: 'Utrecht Lead Paragraph',
     render: () => <Paragraph lead>Lead</Paragraph>,
   },
   {
     storyId: 'react-utrecht-heading-1--default',
+    component: 'utrecht-heading-1',
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 1',
     render: () => <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>,
   },
   {
     storyId: 'react-utrecht-heading-2--default',
+    component: 'utrecht-heading-2',
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 2',
     render: () => <Heading2>The Quick Brown Fox Jumps Over The Lazy Dog</Heading2>,
   },
   {
     storyId: 'react-utrecht-heading-3--default',
+    component: 'utrecht-heading-3',
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 3',
     render: () => <Heading3>The Quick Brown Fox Jumps Over The Lazy Dog</Heading3>,
   },
   {
     storyId: 'react-utrecht-heading-4--default',
+    component: 'utrecht-heading-4',
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 4',
     render: () => <Heading4>The Quick Brown Fox Jumps Over The Lazy Dog</Heading4>,
   },
   {
     storyId: 'react-utrecht-heading-5--default',
+    component: 'utrecht-heading-5',
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 5',
     render: () => <Heading5>The Quick Brown Fox Jumps Over The Lazy Dog</Heading5>,
   },
   {
     storyId: 'react-utrecht-heading-6--default',
+    component: 'utrecht-heading-6',
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 6',
     render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
   },
   {
     storyId: 'react-utrecht-unordered-list--default',
+    component: 'utrecht-unordered-list',
     group: STORY_GROUPS.LISTS,
     name: 'Utrecht Unordered list',
     render: () => (
@@ -182,6 +198,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-ordered-list--default',
+    component: 'utrecht-ordered-list',
     group: STORY_GROUPS.LISTS,
     name: 'Utrecht Ordered list',
     render: () => (
@@ -193,6 +210,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-separator--default',
+    component: 'utrecht-separator',
     name: 'Utrecht Separator',
     render: () => <Separator />,
   },
@@ -207,18 +225,21 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textbox--default',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox',
     render: () => <Textbox />,
   },
   {
     storyId: 'react-utrecht-textbox--placeholder',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Textbox with placeholder',
     render: () => <Textbox placeholder="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--disabled',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Disabled',
     state: true,
@@ -226,6 +247,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textbox--hover',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Hover',
     state: true,
@@ -233,6 +255,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textbox--focus',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Focus',
     state: true,
@@ -240,6 +263,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textbox--focus-visible',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Focus Visible',
     state: true,
@@ -247,6 +271,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textbox--invalid',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Invalid',
     state: true,
@@ -254,30 +279,35 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textbox--readonly',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Read Only',
     render: () => <Textbox readOnly />,
   },
   {
     storyId: 'react-utrecht-textbox--required',
+    component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Required',
     render: () => <Textbox required />,
   },
   {
     storyId: 'react-utrecht-textarea--default',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea',
     render: () => <Textarea />,
   },
   {
     storyId: 'react-utrecht-textarea--placeholder',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea with placeholder',
     render: () => <Textarea placeholder="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textarea--disabled',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Disabled',
     state: true,
@@ -285,6 +315,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textarea--hover',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Hover',
     state: true,
@@ -292,6 +323,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textarea--focus',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Focus',
     state: true,
@@ -299,6 +331,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textarea--focus-visible',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Focus Visible',
     state: true,
@@ -306,6 +339,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textarea--invalid',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Invalid',
     state: true,
@@ -313,18 +347,21 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-textarea--readonly',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Read Only',
     render: () => <Textarea readOnly />,
   },
   {
     storyId: 'react-utrecht-textarea--required',
+    component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Required',
     render: () => <Textarea required />,
   },
   {
     storyId: 'react-utrecht-table--default',
+    component: 'utrecht-table',
     name: 'Utrecht Table',
     render: () => (
       <Table>
@@ -357,6 +394,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-table--caption',
+    component: 'utrecht-table',
     name: 'Utrecht Table with caption',
     render: () => (
       <Table>
@@ -390,6 +428,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-select--default',
+    component: 'utrecht-select',
     group: STORY_GROUPS.SELECT,
     name: 'Utrecht Select',
     render: () => (
@@ -402,6 +441,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-select--disabled',
+    component: 'utrecht-select',
     group: STORY_GROUPS.SELECT,
     name: 'Utrecht Select: Disabled',
     state: true,
@@ -415,6 +455,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-select--invalid',
+    component: 'utrecht-select',
     group: STORY_GROUPS.SELECT,
     name: 'Utrecht Select: Invalid',
     state: true,
@@ -428,6 +469,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-select--required',
+    component: 'utrecht-select',
     group: STORY_GROUPS.SELECT,
     name: 'Utrecht Select: Required',
     render: () => (
@@ -440,6 +482,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-select--readonly',
+    component: 'utrecht-select',
     group: STORY_GROUPS.SELECT,
     name: 'Utrecht Select: Read Only',
     render: () => (
@@ -452,6 +495,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-select--focus',
+    component: 'utrecht-select',
     group: STORY_GROUPS.SELECT,
     name: 'Utrecht Select: Focus',
     state: true,
@@ -465,6 +509,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-select--focus-visible',
+    component: 'utrecht-select',
     group: STORY_GROUPS.SELECT,
     name: 'Utrecht Select: Focus Visible',
     state: true,
