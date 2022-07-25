@@ -21,9 +21,6 @@ module.exports = {
     // Color package uses ES6 syntax from v4+ which is not compatible with our setup
     'color',
     // Manual update needed, will do so in separate PR
-    'eslint',
-    '@typescript-eslint/eslint-plugin',
-    '@typescript-eslint/parser',
     'stylelint',
     'stylelint-config-prettier',
   ],
