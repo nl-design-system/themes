@@ -50,11 +50,6 @@ updates:
       # Percy needs a manual upgrade as it doesn't work without breaking
       - dependency-name: "@percy/storybook"
         update-types: ["version-update:semver-major"]
-        # Manual update needed, will do so in separate PR
-      - dependency-name: "stylelint"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "stylelint-config-prettier"
-        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "npm"
     directory: "/documentation/"
