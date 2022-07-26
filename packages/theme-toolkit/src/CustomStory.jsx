@@ -1,7 +1,9 @@
 import { Canvas } from '@storybook/addon-docs';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOMServer from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { format as prettierFormat } from 'prettier/standalone';
+import prettierHtml from 'prettier/parser-html';
 
 const Preview = ({ children }) => (
   <div
@@ -30,17 +32,36 @@ Preview.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 };
 
-export const CustomStory = ({ children }) => {
+export const CustomStory = ({ children, theme, inline }) => {
   // HACK: Only the docs addon supports the custom rendering of the Canvas element
   const hasCanvas = location.search.includes('viewMode=docs');
 
+  const prettierConfig = {
+    htmlWhitespaceSensitivity: 'ignore',
+    parser: 'html',
+    plugins: [prettierHtml],
+  };
+
+  const source = prettierFormat(
+    renderToStaticMarkup(
+      <html className={theme}>{inline ? <body className="utrecht-document">{children}</body> : <>{children}</>}</html>,
+    ),
+    prettierConfig,
+  );
+
+  const component = <div className={`${theme} utrecht-document`}>{children}</div>;
+
   return hasCanvas ? (
-    <Canvas mdxSource={ReactDOMServer.renderToStaticMarkup(children)}>{children}</Canvas>
+    <Canvas mdxSource={source}>
+      <div className="utrecht-document">{component}</div>
+    </Canvas>
   ) : (
-    <Preview>{children}</Preview>
+    <Preview>{component}</Preview>
   );
 };
 
 CustomStory.propTypes = {
+  inline: PropTypes.bool,
+  theme: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 };
