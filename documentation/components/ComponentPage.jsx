@@ -61,33 +61,37 @@ export const configs = [
 
 export const stories = [...DENHAAG_COMPONENT_STORIES, ...UTRECHT_COMPONENT_STORIES];
 
+const ThemedComponents = ({ component }) =>
+  configs
+    .map((config) => {
+      const componentStories = config.stories
+        .map((storyId) => {
+          const story = stories.find((story) => story.storyId === storyId);
+          return story && story.component === component ? story : null;
+        })
+        .filter(Boolean);
+      return componentStories.length >= 1 ? { config, stories: componentStories } : null;
+    })
+    .filter(Boolean)
+    .map(({ config: { prefix, fullName }, stories }) => (
+      <section key={prefix}>
+        <h3>{fullName}</h3>
+        {stories.map((story) => (
+          <section key={story.storyId}>
+            <h4>{story.name}</h4>
+            <CustomStory theme={`${prefix}-theme`} inline={story.inline}>
+              {story.render()}
+            </CustomStory>
+          </section>
+        ))}
+      </section>
+    ));
+
 export const ComponentPage = ({ component }) => (
-  <div>
-    {configs
-      .map((config) => {
-        const componentStories = config.stories
-          .map((storyId) => {
-            const story = stories.find((story) => story.storyId === storyId);
-            return story && story.component === component ? story : null;
-          })
-          .filter(Boolean);
-        return componentStories.length >= 1 ? { config, stories: componentStories } : null;
-      })
-      .filter(Boolean)
-      .map(({ config, stories }) => (
-        <section key={config.prefix}>
-          <h2>{config.fullName}</h2>
-          {stories.map((story) => (
-            <section key={story.storyId}>
-              <h3>{story.name}</h3>
-              <div className={`${config.prefix}-theme utrecht-document`}>
-                <CustomStory>{story.render()}</CustomStory>
-              </div>
-            </section>
-          ))}
-        </section>
-      ))}
-  </div>
+  <>
+    <h2>Themas</h2>
+    <ThemedComponents component={component} />
+  </>
 );
 
 ComponentPage.propTypes = {
