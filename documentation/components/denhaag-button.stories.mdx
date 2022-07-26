@@ -1,9 +1,31 @@
 import { Meta, Story } from "@storybook/addon-docs";
 import { ComponentPage } from "./ComponentPage";
+import { LinkBadge } from "./Badge";
 
 <Meta title="Themes/Components/Button" />
 
 # Button component (contributed by Den Haag)
+
+<LinkBadge
+  href="https://www.npmjs.com/package/@gemeente-denhaag/button"
+  label="npm"
+  message="@gemeente-denhaag/button"
+  logo="npm"
+/>
+
+<LinkBadge
+  href="https://github.com/nl-design-system/denhaag/tree/main/components/Button"
+  label="github"
+  message="nl-design-system/denhaag"
+  logo="github"
+/>
+
+<LinkBadge
+  href="https://nl-design-system.github.io/denhaag/?path=/story/css-input-button--default-story"
+  label="storybook"
+  message="denhaag/css-button"
+  logo="storybook"
+/>
 
 <Story name="Den Haag">
   <ComponentPage component="denhaag-button" />
