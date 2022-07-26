@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { STORY_GROUPS } from './component-stories-util';
-import { ProcessSteps, Avatar, Alert, BadgeCounter, Divider } from '@gemeente-denhaag/components-react';
+import { Button, ProcessSteps, Avatar, Alert, BadgeCounter, Divider } from '@gemeente-denhaag/components-react';
 
 export const DENHAAG_COMPONENT_STORIES = [
   {
@@ -126,5 +126,30 @@ export const DENHAAG_COMPONENT_STORIES = [
         <p>After the divider.</p>
       </div>
     ),
+  },
+  {
+    storyId: 'react-denhaag-button--default',
+    component: 'denhaag-button',
+    name: 'Den Haag Default Button',
+    render: () => <Button>Den Haag Button</Button>,
+  },
+  {
+    storyId: 'react-denhaag-button--disabled',
+    component: 'denhaag-button',
+    state: true,
+    name: 'Den Haag Disabled Button',
+    render: () => <Button disabled>Den Haag Button</Button>,
+  },
+  {
+    storyId: 'react-denhaag-button--primary-action',
+    component: 'denhaag-button',
+    name: 'Den Haag Primary Action Button',
+    render: () => <Button variant="primary-action">Den Haag Button</Button>,
+  },
+  {
+    storyId: 'react-denhaag-button--secondary-action',
+    component: 'denhaag-button',
+    name: 'Den Haag Secondary Action Button',
+    render: () => <Button variant="secondary-action">Den Haag Button</Button>,
   },
 ];
