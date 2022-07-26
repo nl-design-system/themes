@@ -58,7 +58,7 @@ export const ComponentStories = ({ config, showAll = false }) => {
     }, {});
 
     return (
-      <div className={`${config.prefix}-theme utrecht-document`}>
+      <div>
         {Object.entries(groupedStories).map(([group, stories]) => {
           const isGrouped = group !== UNGROUPED && stories.length > 1;
           return (
@@ -80,7 +80,9 @@ export const ComponentStories = ({ config, showAll = false }) => {
                       wordt getest
                     </p>
                   ) : null}
-                  <CustomStory>{story.render()}</CustomStory>
+                  <CustomStory theme={`${config.prefix}-theme`} inline={story.inline}>
+                    {story.render()}
+                  </CustomStory>
                 </section>
               ))}
             </div>

@@ -542,6 +542,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     storyId: 'react-utrecht-link--default',
     group: STORY_GROUPS.LINK,
     name: 'Utrecht Link',
+    inline: true,
     render: () => (
       <Link href="https://example.com" target="_new" external>
         The Quick Brown Fox Jumps Over The Lazy Dog
@@ -553,6 +554,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.LINK,
     name: 'Utrecht Link: Hover',
     state: true,
+    inline: true,
     render: () => (
       <Link href="https://example.com" target="_new" external className="utrecht-link--hover">
         The Quick Brown Fox Jumps Over The Lazy Dog
@@ -564,6 +566,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.LINK,
     name: 'Utrecht Link: Focus',
     state: true,
+    inline: true,
     render: () => (
       <Link href="https://example.com" target="_new" external className="utrecht-link--focus">
         The Quick Brown Fox Jumps Over The Lazy Dog
@@ -575,6 +578,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.LINK,
     name: 'Utrecht Link: Focus Visible',
     state: true,
+    inline: true,
     render: () => (
       <Link href="https://example.com" target="_new" external className="utrecht-link--focus-visible">
         The Quick Brown Fox Jumps Over The Lazy Dog
@@ -586,6 +590,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.LINK,
     name: 'Utrecht Link: Visited',
     state: true,
+    inline: true,
     render: () => (
       <Link href="https://example.com" target="_new" external className="utrecht-link--visited">
         The Quick Brown Fox Jumps Over The Lazy Dog
