@@ -6,29 +6,34 @@ import { Button, ProcessSteps, Avatar, Alert, BadgeCounter, Divider } from '@gem
 export const DENHAAG_COMPONENT_STORIES = [
   {
     storyId: 'react-denhaag-process-steps--default',
+    component: 'denhaag-process-steps',
     name: 'Den Haag Process Steps',
     render: () => <ProcessSteps></ProcessSteps>,
   },
   {
     storyId: 'react-denhaag-avatar--default',
+    component: 'denhaag-avatar',
     group: STORY_GROUPS.AVATAR,
     name: 'Den Haag Avatar',
     render: () => <Avatar>DS</Avatar>,
   },
   {
     storyId: 'react-denhaag-avatar--square',
+    component: 'denhaag-avatar',
     group: STORY_GROUPS.AVATAR,
     name: 'Den Haag Avatar Square',
     render: () => <Avatar variant="square">DS</Avatar>,
   },
   {
     storyId: 'react-denhaag-avatar--image',
+    component: 'denhaag-avatar',
     group: STORY_GROUPS.AVATAR,
     name: 'Den Haag Image Avatar',
     render: () => <Avatar alt="Planet Earth" src="https://c1.staticflickr.com/9/8486/8245351490_2746ef972c_b.jpg" />,
   },
   {
     storyId: 'react-denhaag-alert--default',
+    component: 'denhaag-alert',
     name: 'Den Haag Error Alert ',
     group: STORY_GROUPS.ALERT,
     render: () => (
@@ -45,6 +50,7 @@ export const DENHAAG_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-denhaag-alert--error',
+    component: 'denhaag-alert',
     name: 'Den Haag Error Alert ',
     group: STORY_GROUPS.ALERT,
     render: () => (
@@ -62,6 +68,7 @@ export const DENHAAG_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-denhaag-alert--warning',
+    component: 'denhaag-alert',
     name: 'Den Haag Warning Alert ',
     group: STORY_GROUPS.ALERT,
     render: () => (
@@ -79,6 +86,7 @@ export const DENHAAG_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-denhaag-alert--success',
+    component: 'denhaag-alert',
     name: 'Den Haag Success Alert ',
     group: STORY_GROUPS.ALERT,
     render: () => (
@@ -96,6 +104,7 @@ export const DENHAAG_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-denhaag-alert--info',
+    component: 'denhaag-alert',
     name: 'Den Haag Info Alert ',
     group: STORY_GROUPS.ALERT,
     render: () => (
@@ -113,11 +122,13 @@ export const DENHAAG_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-denhaag-badgecounter--default',
+    component: 'denhaag-badgecounter',
     name: 'Den Haag Badge Counter',
     render: () => <BadgeCounter>13</BadgeCounter>,
   },
   {
     storyId: 'react-denhaag-divider--default',
+    component: 'denhaag-divider',
     name: 'Den Haag Default Divider',
     render: () => (
       <div>
