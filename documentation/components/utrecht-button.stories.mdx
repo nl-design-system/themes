@@ -1,8 +1,17 @@
-import { Meta, Story } from "@storybook/addon-docs";
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs";
 import { ComponentPage } from "./ComponentPage";
 import { LinkBadge } from "./Badge";
+import designTokens from "@utrecht/design-tokens/dist/tokens.js";
+import { getTokens, getDesignTokenArgs } from "./designTokenUtils";
+import { Button } from "@utrecht/component-library-react";
 
-<Meta title="Themes/Components/Button" />
+export const tokens = getTokens(designTokens.utrecht.button);
+
+<Meta title="Themes/Components/Button" argTypes={getDesignTokenArgs(tokens)} />
+
+export const Template = (args) => {
+  return <Button style={args}>Hello World</Button>;
+};
 
 # Button component (contributed by Utrecht)
 
@@ -27,6 +36,21 @@ import { LinkBadge } from "./Badge";
   logo="storybook"
 />
 
-<Story name="Utrecht">
-  <ComponentPage component="utrecht-button" />
-</Story>
+<Canvas>
+  <Story
+    name="Utrecht"
+    args={{
+      ...tokens.reduce((styles, token) => {
+        return { ...styles, [token.name]: token.value };
+      }, {}),
+      "--utrecht-button-background-color": "#004152",
+      "--utrecht-button-color": "#fff",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Utrecht" />
+
+<ComponentPage component="utrecht-button" />
