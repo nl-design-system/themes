@@ -1,4 +1,4 @@
-import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil';
+import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil/loader';
 import '@utrecht/component-library-css';
 
 // Import all themes
