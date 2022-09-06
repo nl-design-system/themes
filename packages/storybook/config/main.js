@@ -1,4 +1,10 @@
 /* eslint-env node */
+const path = require('path');
+
+const babelSettings = {
+  extends: path.join(__dirname, './.babelrc'),
+};
+
 module.exports = {
   stories: [
     '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
@@ -8,6 +14,7 @@ module.exports = {
     postcss: false,
   },
   addons: [
+    '@storybook/addon-controls',
     '@etchteam/storybook-addon-status/register',
     '@storybook/addon-a11y/register',
     {
@@ -18,4 +25,12 @@ module.exports = {
     '@storybook/preset-scss',
     '@whitespace/storybook-addon-html',
   ],
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.jsx$/,
+      use: ['babel-loader?' + JSON.stringify(babelSettings)],
+      include: [path.resolve(__dirname, '../../../node_modules'), path.resolve(__dirname, '../../../')],
+    });
+    return config;
+  },
 };

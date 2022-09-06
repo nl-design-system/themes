@@ -55,6 +55,7 @@ const themes = [
     className: `${prefix}-theme`,
     title: fullName || name,
     href: cdn || `https://unpkg.com/${npm}/dist/index.css`,
+    package: npm,
   }))
   .sort((a, b) => stringSort(a.className, b.className));
 

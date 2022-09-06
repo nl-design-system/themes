@@ -1,5 +1,9 @@
+import React from 'react';
 import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil/loader';
 import '@utrecht/component-library-css';
+import * as ReactDOMServer from 'react-dom/server';
+import prettierBabel from 'prettier/parser-babel';
+import prettier from 'prettier/standalone';
 
 // Import all themes
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
@@ -94,5 +98,23 @@ export const parameters = {
     storySort: {
       order,
     },
+  },
+  decorators: [
+    (Story, storyContext) => {
+      // Hack to make current args for a story available in the transformSource of the docs addon
+      storyContext.parameters.args = storyContext.args;
+
+      return <Story />;
+    },
+  ],
+  transformSource: (src, storyContext) => {
+    // Ensure valid HTML in the Preview source
+    if (storyContext.component) {
+      return prettier.format(
+        ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.parameters.args)),
+        { parser: 'babel', plugins: [prettierBabel] },
+      );
+    }
+    return src;
   },
 };
