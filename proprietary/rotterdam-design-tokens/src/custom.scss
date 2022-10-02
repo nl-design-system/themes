@@ -4,4 +4,11 @@
  * All rights reserved
  */
 
-@import url("./index.css");
+@import "./responsive";
+
+.utrecht-form-fieldset__legend {
+  border-block-end-color: var(--rotterdam-form-fieldset-legend-border-block-end-color);
+  border-block-end-style: solid;
+  border-block-end-width: var(--rotterdam-form-fieldset-legend-border-block-end-width, 0);
+  padding-block-end: var(--rotterdam-form-fieldset-legend-padding-block-end, 0);
+}

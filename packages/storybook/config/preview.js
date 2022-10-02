@@ -29,6 +29,9 @@ import '@nl-design-system-unstable/noordoostpolder-design-tokens/dist/index.css'
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
 import '@nl-design-system-unstable/provincie-zuid-holland-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/rotterdam-design-tokens/src/custom.scss';
+// Uncomment the following line when proprietary fonts for Rotterdam are available:
+// import '@nl-design-system-unstable/rotterdam-design-tokens/src/font.scss';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/venray-design-tokens/dist/index.css';
