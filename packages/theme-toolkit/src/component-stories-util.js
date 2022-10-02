@@ -2,6 +2,8 @@ export const STORY_GROUPS = {
   AVATAR: 'Avatars',
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
+  BUTTON_LINK_DEFAULT: 'Link that looks like a button',
+  LINK_BUTTON_DEFAULT: 'Button that looks like a link',
   PARAGRAPH: 'Paragraph',
   HEADINGS: 'Headings',
   LISTS: 'Lists',

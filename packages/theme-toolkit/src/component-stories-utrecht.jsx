@@ -5,6 +5,8 @@ import { STORY_GROUPS } from './component-stories-util';
 
 import {
   Button,
+  LinkButton,
+  ButtonLink,
   Heading1,
   Heading2,
   Heading3,
@@ -130,6 +132,118 @@ export const UTRECHT_COMPONENT_STORIES = [
     render: () => <Button type="submit">Default</Button>,
   },
   {
+    storyId: 'react-utrecht-button--primary-action-button',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Primary Action Button',
+    state: true,
+    render: () => <Button appearance="primary-action-button">Primary action</Button>,
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-danger',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Primary Action Button: Danger',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" hint="danger">
+        Dangerous primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-ok',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Primary Action Button: OK',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" hint="ready">
+        OK primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Secondary Action Button',
+    state: true,
+    render: () => <Button appearance="secondary-action-button">Secondary action</Button>,
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-danger',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Secondary Action Button: Danger',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" hint="danger">
+        Dangerous secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-ok',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Secondary Action Button: OK',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" hint="ready">
+        OK secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--subtle-button',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Subtle Button',
+    state: true,
+    render: () => <Button appearance="subtle-button">Subtle button</Button>,
+  },
+  {
+    storyId: 'react-utrecht-button--subtle-button-danger',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Subtle Button: Danger',
+    state: true,
+    render: () => (
+      <Button appearance="subtle-button" hint="danger">
+        Dangerous subtle button
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--subtle-button-ok',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_DEFAULT,
+    name: 'Utrecht Subtl Button: OK',
+    state: true,
+    render: () => (
+      <Button appearance="subtle-button" hint="ready">
+        OK subtle button
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button-link--default',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.LINK_BUTTON_DEFAULT,
+    name: 'Utrecht Link that looks like a button',
+    state: true,
+    render: () => <ButtonLink href="#">Link that looks like a button</ButtonLink>,
+  },
+  {
+    storyId: 'react-utrecht-link-button--default',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_LINK_DEFAULT,
+    name: 'Utrecht Button that looks like a link',
+    state: true,
+    render: () => <LinkButton>Button that looks like a link</LinkButton>,
+  },
+  {
     storyId: 'react-utrecht-paragraph--default',
     group: STORY_GROUPS.PARAGRAPH,
     name: 'Utrecht Paragraph',
@@ -228,7 +342,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox',
-    render: () => <Textbox />,
+    render: () => <Textbox value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--placeholder',
@@ -243,7 +357,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Disabled',
     state: true,
-    render: () => <Textbox disabled />,
+    render: () => <Textbox disabled value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--hover',
@@ -251,7 +365,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Hover',
     state: true,
-    render: () => <Textbox className="utrecht-textbox--hover" />,
+    render: () => <Textbox className="utrecht-textbox--hover" value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--focus',
@@ -259,7 +373,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Focus',
     state: true,
-    render: () => <Textbox className="utrecht-textbox--focus" />,
+    render: () => <Textbox className="utrecht-textbox--focus" value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--focus-visible',
@@ -267,7 +381,9 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Focus Visible',
     state: true,
-    render: () => <Textbox className="utrecht-textbox--focus-visible" />,
+    render: () => (
+      <Textbox className="utrecht-textbox--focus-visible" value="The Quick Brown Fox Jumps Over The Lazy Dog" />
+    ),
   },
   {
     storyId: 'react-utrecht-textbox--invalid',
@@ -275,28 +391,28 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Invalid',
     state: true,
-    render: () => <Textbox invalid />,
+    render: () => <Textbox invalid value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--readonly',
     component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Read Only',
-    render: () => <Textbox readOnly />,
+    render: () => <Textbox readOnly value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--required',
     component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Required',
-    render: () => <Textbox required />,
+    render: () => <Textbox required value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textarea--default',
     component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea',
-    render: () => <Textarea />,
+    render: () => <Textarea>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
   },
   {
     storyId: 'react-utrecht-textarea--placeholder',
@@ -311,7 +427,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Disabled',
     state: true,
-    render: () => <Textarea disabled />,
+    render: () => <Textarea disabled>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
   },
   {
     storyId: 'react-utrecht-textarea--hover',
@@ -319,7 +435,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Hover',
     state: true,
-    render: () => <Textarea className="utrecht-textarea--hover" />,
+    render: () => <Textarea className="utrecht-textarea--hover">The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
   },
   {
     storyId: 'react-utrecht-textarea--focus',
@@ -327,7 +443,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Focus',
     state: true,
-    render: () => <Textarea className="utrecht-textarea--focus" />,
+    render: () => <Textarea className="utrecht-textarea--focus">The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
   },
   {
     storyId: 'react-utrecht-textarea--focus-visible',
@@ -335,7 +451,9 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Focus Visible',
     state: true,
-    render: () => <Textarea className="utrecht-textarea--focus-visible" />,
+    render: () => (
+      <Textarea className="utrecht-textarea--focus-visible">The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>
+    ),
   },
   {
     storyId: 'react-utrecht-textarea--invalid',
@@ -343,21 +461,21 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Invalid',
     state: true,
-    render: () => <Textarea invalid />,
+    render: () => <Textarea invalid>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
   },
   {
     storyId: 'react-utrecht-textarea--readonly',
     component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Read Only',
-    render: () => <Textarea readOnly />,
+    render: () => <Textarea readOnly>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
   },
   {
     storyId: 'react-utrecht-textarea--required',
     component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Required',
-    render: () => <Textarea required />,
+    render: () => <Textarea required>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
   },
   {
     storyId: 'react-utrecht-table--default',
