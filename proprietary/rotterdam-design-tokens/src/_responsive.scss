@@ -5,3 +5,20 @@
  */
 
 /* stylelint-disable no-duplicate-selectors */
+.rotterdam-theme {
+  @media (min-width: 768px) {
+    & {
+      --utrecht-page-footer-padding-inline-start: 24px;
+      --utrecht-page-footer-padding-inline-end: 24px;
+      --utrecht-page-footer-block-end: 115px;
+      --utrecht-page-footer-block-start: 52px;
+    }
+  }
+  @media (max-width: 375px) {
+    & {
+      --utrecht-page-footer-padding-inline-start: 24px;
+      --utrecht-page-footer-padding-inline-end: 24px;
+      --utrecht-page-footer-block-end: 48px;
+    }
+  }
+}
