@@ -90,7 +90,11 @@ const themes = [
 ].sort();
 
 const flatten = (a, b) => [...a, ...b];
-const order = [['Themes', ['README']], ...themes.sort().map((org) => [org, ['README']])].reduce(flatten, []);
+const order = [
+  ['Themes', ['README']],
+  ['Example', ['README']],
+  ...themes.sort().map((org) => [org, ['README']]),
+].reduce(flatten, []);
 
 export const parameters = {
   controls: { expanded: false },

@@ -8,6 +8,7 @@ const babelSettings = {
 module.exports = {
   stories: [
     '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
+    '../../../packages/*-theme/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
     '../../../proprietary/*/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
   ],
   features: {
