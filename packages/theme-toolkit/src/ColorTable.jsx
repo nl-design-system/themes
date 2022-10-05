@@ -10,6 +10,10 @@ import { CopyCode } from './CopyCode';
 import { cssVariable, formatDeltaE, getColors, getColorName, getColorGroupName, styleDictionaryRef } from './util';
 import { parseColor } from './color-util';
 
+// Figma Tokens assign `type` properties for tokens or groups
+// Utility to filter out non-color type tokens.
+const isColorOrUnknown = (arg) => (arg && typeof arg.type === 'string' ? arg.type === 'color' : true);
+
 export const ColorRow = ({ name, token }) => (
   <ColorItem
     title={name}
@@ -44,10 +48,13 @@ export const ColorTable = ({ tokens }) => {
 
   return (
     <ColorPalette>
-      {grouped.map((tokens) => {
-        const name = getColorGroupName(tokens[0]);
-        return <ColorGroupRow key={name} name={name} tokens={tokens} />;
-      })}
+      {grouped
+        .filter((group) => isColorOrUnknown(group))
+        .map((tokens) => {
+          const name = getColorGroupName(tokens[0]);
+          const colorTokens = tokens.filter(isColorOrUnknown);
+          return colorTokens.length >= 1 ? <ColorGroupRow key={name} name={name} tokens={colorTokens} /> : null;
+        })}
       {nonGrouped.map((token) => {
         const name = getColorName(token);
         return <ColorRow key={token.path.join('-')} name={name} token={token} />;
