@@ -17,11 +17,11 @@
     "url": "git@github.com:nl-design-system/themes.git"
   },
   "scripts": {
-    "clean": "rimraf -rf dist/ src/figma-tokens.tokens.json",
+    "clean": "rimraf -rf dist/ src/figma/",
     "prebuild": "npm run clean",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm run --ignore-scripts build' 'src/**/*.tokens.json'",
-    "build-figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/figma.tokens.json nl-design-system",
+    "build-figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/figma/index.tokens.json nl-design-system",
     "build": "npm-run-all build:**",
     "build:scss": "sass --no-source-map src/:dist/",
     "prebuild:style-dictionary": "npm run build-figma-tokens",
