@@ -68,7 +68,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout release branch
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Node.js version
         uses: actions/setup-node@v2
