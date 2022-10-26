@@ -856,43 +856,43 @@
         },
         "primary": {
           "font-family": {
-            "value": "Roboto Slab",
+            "value": "Roboto Slab, Georgia, serif",
             "type": "fontFamilies"
           }
         },
         "secondary": {
           "font-family": {
-            "value": "Roboto",
+            "value": "Roboto, Tahoma, Verdana, sans-serif",
             "type": "fontFamilies"
           }
         },
         "icon-scale": {
           "sm": {
-            "value": "14px",
-            "type": "sizing"
-          },
-          "md": {
-            "value": "16px",
-            "type": "sizing"
-          },
-          "lg": {
-            "value": "18px",
-            "type": "sizing"
-          },
-          "xl": {
             "value": "20px",
             "type": "sizing"
           },
-          "2xl": {
-            "value": "22px",
-            "type": "sizing"
-          },
-          "3xl": {
+          "md": {
             "value": "24px",
             "type": "sizing"
           },
-          "4xl": {
+          "lg": {
+            "value": "24px",
+            "type": "sizing"
+          },
+          "xl": {
+            "value": "24px",
+            "type": "sizing"
+          },
+          "2xl": {
             "value": "32px",
+            "type": "sizing"
+          },
+          "3xl": {
+            "value": "32px",
+            "type": "sizing"
+          },
+          "4xl": {
+            "value": "40px",
             "type": "sizing"
           }
         }
@@ -920,7 +920,7 @@
             },
             "background-color": {
               "type": "color",
-              "value": "{example.brand.blue.900}"
+              "value": "{example.brand.gray.950}"
             }
           },
           "subtle": {
@@ -1050,13 +1050,7 @@
           "type": "color",
           "value": "{nl.common.document.default.color}"
         },
-        "subtle": {
-          "color": {
-            "type": "color",
-            "value": "{nl.common.document.subtle.color}"
-          }
-        },
-        "large": {
+        "lead": {
           "value": {
             "fontFamily": "{nl.common.body.font-family}",
             "fontWeight": "{example.brand.weight-scale.normal.font-weight}",
@@ -1067,9 +1061,13 @@
             "textCase": "none",
             "textDecoration": "none"
           },
-          "type": "typography"
+          "type": "typography",
+          "font-size": {
+            "value": "{example.brand.font-scale.lg.font-size}",
+            "type": "fontSizes"
+          }
         },
-        "medium": {
+        "default": {
           "value": {
             "fontFamily": "{nl.common.body.font-family}",
             "fontWeight": "{example.brand.weight-scale.normal.font-weight}",
@@ -1093,74 +1091,19 @@
             "textCase": "none",
             "textDecoration": "none"
           },
-          "type": "typography"
-        },
-        "strong": {
-          "large": {
-            "value": {
-              "fontFamily": "{nl.common.body.font-family}",
-              "fontWeight": "{example.brand.weight-scale.bold.font-weight}",
-              "lineHeight": "{example.brand.line-height.md}",
-              "fontSize": "{example.brand.font-scale.lg.font-size}",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          },
-          "medium": {
-            "value": {
-              "fontFamily": "{nl.common.body.font-family}",
-              "fontWeight": "{example.brand.weight-scale.bold.font-weight}",
-              "lineHeight": "{example.brand.line-height.md}",
-              "fontSize": "{example.brand.font-scale.md.font-size}",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          },
-          "small": {
-            "value": {
-              "fontFamily": "{nl.common.body.font-family}",
-              "fontWeight": "{example.brand.weight-scale.bold.font-weight}",
-              "lineHeight": "{example.brand.line-height.md}",
-              "fontSize": "{example.brand.font-scale.sm.font-size}",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          },
-          "font-weight": {
-            "value": "{example.brand.weight-scale.bold.font-weight}",
-            "type": "fontWeights"
+          "type": "typography",
+          "font-size": {
+            "value": "{example.brand.font-scale.sm.font-size}",
+            "type": "fontSizes"
           }
         },
         "font-family": {
           "value": "{nl.common.body.font-family}",
           "type": "fontFamilies"
         },
-        "md": {
-          "font-size": {
-            "value": "{example.brand.font-scale.md.font-size}",
-            "type": "fontSizes"
-          }
-        },
-        "lg": {
-          "font-size": {
-            "value": "{example.brand.font-scale.lg.font-size}",
-            "type": "fontSizes"
-          }
-        },
-        "sm": {
-          "font-size": {
-            "value": "{example.brand.font-scale.sm.font-size}",
-            "type": "fontSizes"
-          }
+        "font-size": {
+          "value": "{example.brand.font-scale.md.font-size}",
+          "type": "fontSizes"
         },
         "font-weight": {
           "value": "{example.brand.weight-scale.normal.font-weight}",
@@ -1431,7 +1374,7 @@
         "icon": {
           "size": {
             "type": "sizing",
-            "value": "{example.brand.icon-scale.3xl}"
+            "value": "{example.brand.icon-scale.md}"
           },
           "gap": {
             "value": "{example.brand.inline.xs}",
@@ -1601,7 +1544,7 @@
         "icon": {
           "size": {
             "type": "sizing",
-            "value": "{example.brand.icon-scale.3xl}"
+            "value": "{example.brand.icon-scale.md}"
           },
           "gap": {
             "value": "{example.brand.inline.xs}",
@@ -2310,7 +2253,7 @@
         "type": "color"
       },
       "font-family": {
-        "value": "Lucida Grande",
+        "value": "Lucida Grande, Arial, sans-serif",
         "type": "fontFamilies"
       },
       "white": {
@@ -2446,7 +2389,7 @@
             "value": "{nl.common.document.subtle.color}"
           }
         },
-        "large": {
+        "lead": {
           "value": {
             "fontFamily": "{nl.common.body.font-family}",
             "fontWeight": "{gemeente-x.brand.weight-scale.normal.font-weight}",
@@ -2457,9 +2400,13 @@
             "textCase": "none",
             "textDecoration": "none"
           },
-          "type": "typography"
+          "type": "typography",
+          "font-size": {
+            "value": "{gemeente-x.brand.font-scale.lg.font-size}",
+            "type": "fontSizes"
+          }
         },
-        "medium": {
+        "default": {
           "value": {
             "fontFamily": "{nl.common.body.font-family}",
             "fontWeight": "{gemeente-x.brand.weight-scale.normal.font-weight}",
@@ -2483,74 +2430,19 @@
             "textCase": "none",
             "textDecoration": "none"
           },
-          "type": "typography"
-        },
-        "strong": {
-          "large": {
-            "value": {
-              "fontFamily": "{nl.common.body.font-family}",
-              "fontWeight": "{gemeente-x.brand.weight-scale.bold.font-weight}",
-              "lineHeight": "{gemeente-x.brand.line-height.md}",
-              "fontSize": "{gemeente-x.brand.font-scale.lg.font-size}",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          },
-          "medium": {
-            "value": {
-              "fontFamily": "{nl.common.body.font-family}",
-              "fontWeight": "{gemeente-x.brand.weight-scale.bold.font-weight}",
-              "lineHeight": "{gemeente-x.brand.line-height.md}",
-              "fontSize": "{gemeente-x.brand.font-scale.md.font-size}",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          },
-          "small": {
-            "value": {
-              "fontFamily": "{nl.common.body.font-family}",
-              "fontWeight": "{gemeente-x.brand.weight-scale.bold.font-weight}",
-              "lineHeight": "{gemeente-x.brand.line-height.md}",
-              "fontSize": "{gemeente-x.brand.font-scale.sm.font-size}",
-              "letterSpacing": "0",
-              "paragraphSpacing": "0",
-              "textCase": "none",
-              "textDecoration": "none"
-            },
-            "type": "typography"
-          },
-          "font-weight": {
-            "value": "{gemeente-x.brand.weight-scale.bold.font-weight}",
-            "type": "fontWeights"
+          "type": "typography",
+          "font-size": {
+            "value": "{gemeente-x.brand.font-scale.sm.font-size}",
+            "type": "fontSizes"
           }
         },
         "font-family": {
           "value": "{nl.common.body.font-family}",
           "type": "fontFamilies"
         },
-        "md": {
-          "font-size": {
-            "value": "{gemeente-x.brand.font-scale.md.font-size}",
-            "type": "fontSizes"
-          }
-        },
-        "lg": {
-          "font-size": {
-            "value": "{gemeente-x.brand.font-scale.lg.font-size}",
-            "type": "fontSizes"
-          }
-        },
-        "sm": {
-          "font-size": {
-            "value": "{gemeente-x.brand.font-scale.sm.font-size}",
-            "type": "fontSizes"
-          }
+        "font-size": {
+          "value": "{gemeente-x.brand.font-scale.md.font-size}",
+          "type": "fontSizes"
         },
         "font-weight": {
           "value": "{gemeente-x.brand.weight-scale.normal.font-weight}",
