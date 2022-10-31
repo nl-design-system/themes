@@ -68,7 +68,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: playroom
-          path: packages/storybook/dist/
+          path: packages/storybook/dist
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3

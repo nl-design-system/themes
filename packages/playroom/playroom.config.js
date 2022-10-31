@@ -5,17 +5,13 @@ module.exports = {
   port: 6012,
   themes: './themes',
   title: 'NL Design System community playground',
-
-  // Optional:
-  //   snippets: './playroom/snippets.js',
   frameComponent: './FrameComponent.jsx',
-  //   scope: './playroom/useScope.js',
   widths: [1024],
-  //   paramType: 'search', // default is 'hash'
   exampleCode: `
     <UtrechtButton appearance='primary-action-button'>Read more...</UtrechtButton>
   `,
-  baseUrl: '/playroom/',
+  // baseUrl: '/playroom/',
+  baseUrl: '/themes/playroom/',
   webpackConfig: () => ({
     module: {
       rules: [
@@ -37,4 +33,8 @@ module.exports = {
     },
   }),
   iframeSandbox: 'allow-scripts',
+  // Optional:
+  //   snippets: './playroom/snippets.js',
+  //   scope: './playroom/useScope.js',
+  //   paramType: 'search', // default is 'hash'
 };
