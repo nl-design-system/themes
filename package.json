@@ -63,6 +63,7 @@
     "rimraf": "3.0.2",
     "sass": "1.54.0",
     "sass-loader": "10.3.1",
+    "storybook-addon-playroom": "3.0.2",
     "style-loader": "2.0.0",
     "stylelint": "14.9.1",
     "stylelint-config-prettier": "9.0.3",
@@ -104,6 +105,7 @@
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
+    "watch:playroom": "lerna run playroom:start",
     "watch:storybook": "start-storybook --config-dir packages/storybook/config/ --no-manager-cache --port 6006",
     "watch:style-dictionary": "lerna run watch:style-dictionary",
     "write-component-pages": "ts-node --project ./tsconfig.commonjs.json script/generate-component-pages"
