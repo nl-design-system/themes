@@ -25,6 +25,7 @@ module.exports = {
     '@storybook/addon-viewport/register',
     '@storybook/preset-scss',
     '@whitespace/storybook-addon-html',
+    'storybook-addon-playroom',
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
