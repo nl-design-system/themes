@@ -862,7 +862,7 @@
         },
         "secondary": {
           "font-family": {
-            "value": "Roboto, Tahoma, Verdana, sans-serif",
+            "value": "Comic Sans MS, Tahoma, Verdana, sans-serif",
             "type": "fontFamilies"
           }
         },
@@ -1754,6 +1754,74 @@
       }
     }
   },
+  "nl-avatar": {
+    "nl": {
+      "avatar": {
+        "background-color": {
+          "value": "{nl.common.interaction.color}",
+          "type": "color"
+        },
+        "border-radius": {
+          "value": "{example.brand.border-radius.round}",
+          "type": "borderRadius"
+        },
+        "height": {
+          "value": "{nl.common.pointer-target.min-size}",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "{nl.common.pointer-target.min-size}",
+          "type": "sizing"
+        },
+        "color": {
+          "value": "{nl.common.document.inverse.color}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{nl.common.body.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{example.brand.weight-scale.bold.font-weight}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{example.brand.line-height.md}",
+          "type": "lineHeights"
+        },
+        "text-transform": {
+          "value": "uppercase",
+          "type": "textCase"
+        },
+        "font-size": {
+          "value": "{example.brand.font-scale.md.font-size}",
+          "type": "fontSizes"
+        },
+        "border-width": {
+          "value": "{example.brand.border-width.sm}",
+          "type": "borderWidth"
+        },
+        "border-color": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "hover": {
+          "background-color": {
+            "value": "{nl.common.interaction.active.color}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{nl.common.document.inverse.color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -1764,7 +1832,8 @@
       "nl-paragraph-lead",
       "nl-paragraph-small-print",
       "nl-link",
-      "nl-button"
+      "nl-button",
+      "nl-avatar"
     ]
   }
 }
