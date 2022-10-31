@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - playroom
   pull_request:
 
 jobs:
@@ -52,7 +53,7 @@ jobs:
   publish-storybook:
     runs-on: ubuntu-latest
     needs: continuous-integration
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/playroom'
 
     steps:
       - uses: actions/checkout@v2
@@ -67,7 +68,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: playroom
-          path: packages/storybook/dist/playroom/
+          path: packages/storybook/dist/
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
