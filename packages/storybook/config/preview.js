@@ -139,4 +139,8 @@ export const parameters = {
       return src;
     },
   },
+  playroom: {
+    // url: 'http://localhost:6012',
+    url: 'playroom/',
+  },
 };
