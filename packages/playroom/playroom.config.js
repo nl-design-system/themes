@@ -34,7 +34,7 @@ module.exports = {
   }),
   iframeSandbox: 'allow-scripts',
   // Optional:
-  //   snippets: './playroom/snippets.js',
+  snippets: './snippets',
   //   scope: './playroom/useScope.js',
   //   paramType: 'search', // default is 'hash'
 };
