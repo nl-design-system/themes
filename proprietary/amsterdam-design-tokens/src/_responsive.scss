@@ -4,6 +4,8 @@
  * All rights reserved
  */
 
+@use "sass:math";
+
 // Temporarily harcdoed and copied from ../dist/index.scss
 $amsterdam-viewport-lg-margin-inline-end: 42.67px;
 $amsterdam-viewport-lg-margin-inline-start: 42.67px;
@@ -24,81 +26,307 @@ $amsterdam-viewport-sm-columns: 4;
 $amsterdam-viewport-sm-max-width: 428px;
 $amsterdam-viewport-sm-min-width: 0;
 
+$amsterdam-typography-weight-scale-normal-font-weight: 400;
+$amsterdam-typography-weight-scale-semi-bold-font-weight: 500;
+$amsterdam-typography-weight-scale-bold-font-weight: 800;
+$amsterdam-typography-scale-sm-quote-line-height: 130%;
+$amsterdam-typography-scale-sm-quote-font-weight: 800;
+$amsterdam-typography-scale-sm-quote-font-size: 24px;
+$amsterdam-typography-scale-sm-body-small-line-height: 150%;
+$amsterdam-typography-scale-sm-body-small-font-weight: 400;
+$amsterdam-typography-scale-sm-body-small-font-size: 16px;
+$amsterdam-typography-scale-sm-body-line-height: 160%;
+$amsterdam-typography-scale-sm-body-font-weight: 400;
+$amsterdam-typography-scale-sm-body-font-size: 18px;
+$amsterdam-typography-scale-sm-intro-line-height: 160%;
+$amsterdam-typography-scale-sm-intro-font-weight: 400;
+$amsterdam-typography-scale-sm-intro-font-size: 22px;
+$amsterdam-typography-scale-sm-h6-line-height: 140%;
+$amsterdam-typography-scale-sm-h6-font-weight: 800;
+$amsterdam-typography-scale-sm-h6-font-size: 16px;
+$amsterdam-typography-scale-sm-h5-line-height: 140%;
+$amsterdam-typography-scale-sm-h5-font-weight: 800;
+$amsterdam-typography-scale-sm-h5-font-size: 18px;
+$amsterdam-typography-scale-sm-h4-line-height: 140%;
+$amsterdam-typography-scale-sm-h4-font-weight: 800;
+$amsterdam-typography-scale-sm-h4-font-size: 22px;
+$amsterdam-typography-scale-sm-h3-line-height: 130%;
+$amsterdam-typography-scale-sm-h3-font-weight: 800;
+$amsterdam-typography-scale-sm-h3-font-size: 24px;
+$amsterdam-typography-scale-sm-h2-line-height: 120%;
+$amsterdam-typography-scale-sm-h2-font-weight: 800;
+$amsterdam-typography-scale-sm-h2-font-size: 28px;
+$amsterdam-typography-scale-sm-h1-small-line-height: 110%;
+$amsterdam-typography-scale-sm-h1-small-font-weight: 800;
+$amsterdam-typography-scale-sm-h1-small-font-size: 30px;
+$amsterdam-typography-scale-sm-h1-line-height: 100%;
+$amsterdam-typography-scale-sm-h1-font-weight: 800;
+$amsterdam-typography-scale-sm-h1-font-size: 32px;
+$amsterdam-typography-scale-md-quote-line-height: 110%;
+$amsterdam-typography-scale-md-quote-font-weight: 800;
+$amsterdam-typography-scale-md-quote-font-size: 40px;
+$amsterdam-typography-scale-md-body-small-line-height: 160%;
+$amsterdam-typography-scale-md-body-small-font-weight: 400;
+$amsterdam-typography-scale-md-body-small-font-size: 18px;
+$amsterdam-typography-scale-md-body-line-height: 160%;
+$amsterdam-typography-scale-md-body-font-weight: 400;
+$amsterdam-typography-scale-md-body-font-size: 24px;
+$amsterdam-typography-scale-md-intro-line-height: 150%;
+$amsterdam-typography-scale-md-intro-font-weight: 400;
+$amsterdam-typography-scale-md-intro-font-size: 30px;
+$amsterdam-typography-scale-md-h6-line-height: 130%;
+$amsterdam-typography-scale-md-h6-font-weight: 800;
+$amsterdam-typography-scale-md-h6-font-size: 18px;
+$amsterdam-typography-scale-md-h5-line-height: 130%;
+$amsterdam-typography-scale-md-h5-font-weight: 800;
+$amsterdam-typography-scale-md-h5-font-size: 24px;
+$amsterdam-typography-scale-md-h4-line-height: 120%;
+$amsterdam-typography-scale-md-h4-font-weight: 800;
+$amsterdam-typography-scale-md-h4-font-size: 32px;
+$amsterdam-typography-scale-md-h3-line-height: 110%;
+$amsterdam-typography-scale-md-h3-font-weight: 800;
+$amsterdam-typography-scale-md-h3-font-size: 40px;
+$amsterdam-typography-scale-md-h2-line-height: 110%;
+$amsterdam-typography-scale-md-h2-font-weight: 800;
+$amsterdam-typography-scale-md-h2-font-size: 56px;
+$amsterdam-typography-scale-md-h1-small-line-height: 110%;
+$amsterdam-typography-scale-md-h1-small-font-weight: 800;
+$amsterdam-typography-scale-md-h1-small-font-size: 60px;
+$amsterdam-typography-scale-md-h1-line-height: 100%;
+$amsterdam-typography-scale-md-h1-font-weight: 800;
+$amsterdam-typography-scale-md-h1-font-size: 80px;
+$amsterdam-typography-scale-lg-quote-line-height: 110%;
+$amsterdam-typography-scale-lg-quote-font-weight: 800;
+$amsterdam-typography-scale-lg-quote-font-size: 51.93px;
+$amsterdam-typography-scale-lg-body-small-line-height: 160%;
+$amsterdam-typography-scale-lg-body-small-font-weight: 400;
+$amsterdam-typography-scale-lg-body-small-font-size: 23.37px;
+$amsterdam-typography-scale-lg-body-line-height: 160%;
+$amsterdam-typography-scale-lg-body-font-weight: 400;
+$amsterdam-typography-scale-lg-body-font-size: 31.16px;
+$amsterdam-typography-scale-lg-intro-line-height: 150%;
+$amsterdam-typography-scale-lg-intro-font-weight: 400;
+$amsterdam-typography-scale-lg-intro-font-size: 38.95px;
+$amsterdam-typography-scale-lg-h6-line-height: 130%;
+$amsterdam-typography-scale-lg-h6-font-weight: 800;
+$amsterdam-typography-scale-lg-h6-font-size: 24.12px;
+$amsterdam-typography-scale-lg-h5-line-height: 120%;
+$amsterdam-typography-scale-lg-h5-font-weight: 800;
+$amsterdam-typography-scale-lg-h5-font-size: 31.16px;
+$amsterdam-typography-scale-lg-h4-line-height: 120%;
+$amsterdam-typography-scale-lg-h4-font-weight: 800;
+$amsterdam-typography-scale-lg-h4-font-size: 41.54px;
+$amsterdam-typography-scale-lg-h3-line-height: 110%;
+$amsterdam-typography-scale-lg-h3-font-weight: 800;
+$amsterdam-typography-scale-lg-h3-font-size: 51.93px;
+$amsterdam-typography-scale-lg-h2-line-height: 110%;
+$amsterdam-typography-scale-lg-h2-font-weight: 800;
+$amsterdam-typography-scale-lg-h2-font-size: 72.7px;
+$amsterdam-typography-scale-lg-h1-small-line-height: 110%;
+$amsterdam-typography-scale-lg-h1-small-font-weight: 800;
+$amsterdam-typography-scale-lg-h1-small-font-size: 77.98px;
+$amsterdam-typography-scale-lg-h1-line-height: 100%;
+$amsterdam-typography-scale-lg-h1-font-weight: 800;
+$amsterdam-typography-scale-lg-h1-font-size: 103.85px;
+@mixin amsterdam-typography-scale-sm {
+  --amsterdam-typography-scale-quote-line-height: var(--amsterdam-typography-scale-sm-quote-line-height);
+  --amsterdam-typography-scale-quote-font-weight: var(--amsterdam-typography-scale-sm-quote-font-weight);
+  --amsterdam-typography-scale-quote-font-size: var(--amsterdam-typography-scale-sm-quote-font-size);
+  --amsterdam-typography-scale-body-small-line-height: var(--amsterdam-typography-scale-sm-body-small-line-height);
+  --amsterdam-typography-scale-body-small-font-weight: var(--amsterdam-typography-scale-sm-body-small-font-weight);
+  --amsterdam-typography-scale-body-small-font-size: var(--amsterdam-typography-scale-sm-body-small-font-size);
+  --amsterdam-typography-scale-body-line-height: var(--amsterdam-typography-scale-sm-body-line-height);
+  --amsterdam-typography-scale-body-font-weight: var(--amsterdam-typography-scale-sm-body-font-weight);
+  --amsterdam-typography-scale-body-font-size: var(--amsterdam-typography-scale-sm-body-font-size);
+  --amsterdam-typography-scale-intro-line-height: var(--amsterdam-typography-scale-sm-intro-line-height);
+  --amsterdam-typography-scale-intro-font-weight: var(--amsterdam-typography-scale-sm-intro-font-weight);
+  --amsterdam-typography-scale-intro-font-size: var(--amsterdam-typography-scale-sm-intro-font-size);
+  --amsterdam-typography-scale-h6-line-height: var(--amsterdam-typography-scale-sm-h6-line-height);
+  --amsterdam-typography-scale-h6-font-weight: var(--amsterdam-typography-scale-sm-h6-font-weight);
+  --amsterdam-typography-scale-h6-font-size: var(--amsterdam-typography-scale-sm-h6-font-size);
+  --amsterdam-typography-scale-h5-line-height: var(--amsterdam-typography-scale-sm-h5-line-height);
+  --amsterdam-typography-scale-h5-font-weight: var(--amsterdam-typography-scale-sm-h5-font-weight);
+  --amsterdam-typography-scale-h5-font-size: var(--amsterdam-typography-scale-sm-h5-font-size);
+  --amsterdam-typography-scale-h4-line-height: var(--amsterdam-typography-scale-sm-h4-line-height);
+  --amsterdam-typography-scale-h4-font-weight: var(--amsterdam-typography-scale-sm-h4-font-weight);
+  --amsterdam-typography-scale-h4-font-size: var(--amsterdam-typography-scale-sm-h4-font-size);
+  --amsterdam-typography-scale-h3-line-height: var(--amsterdam-typography-scale-sm-h3-line-height);
+  --amsterdam-typography-scale-h3-font-weight: var(--amsterdam-typography-scale-sm-h3-font-weight);
+  --amsterdam-typography-scale-h3-font-size: var(--amsterdam-typography-scale-sm-h3-font-size);
+  --amsterdam-typography-scale-h2-line-height: var(--amsterdam-typography-scale-sm-h2-line-height);
+  --amsterdam-typography-scale-h2-font-weight: var(--amsterdam-typography-scale-sm-h2-font-weight);
+  --amsterdam-typography-scale-h2-font-size: var(--amsterdam-typography-scale-sm-h2-font-size);
+  --amsterdam-typography-scale-h1-small-line-height: var(--amsterdam-typography-scale-sm-h1-small-line-height);
+  --amsterdam-typography-scale-h1-small-font-weight: var(--amsterdam-typography-scale-sm-h1-small-font-weight);
+  --amsterdam-typography-scale-h1-small-font-size: var(--amsterdam-typography-scale-sm-h1-small-font-size);
+  --amsterdam-typography-scale-h1-line-height: var(--amsterdam-typography-scale-sm-h1-line-height);
+  --amsterdam-typography-scale-h1-font-weight: var(--amsterdam-typography-scale-sm-h1-font-weight);
+  --amsterdam-typography-scale-h1-font-size: var(--amsterdam-typography-scale-sm-h1-font-size);
+}
+
+@mixin amsterdam-typography-scale-lg {
+  --amsterdam-typography-scale-quote-line-height: var(--amsterdam-typography-scale-lg-quote-line-height);
+  --amsterdam-typography-scale-quote-font-weight: var(--amsterdam-typography-scale-lg-quote-font-weight);
+  --amsterdam-typography-scale-quote-font-size: var(--amsterdam-typography-scale-lg-quote-font-size);
+  --amsterdam-typography-scale-body-small-line-height: var(--amsterdam-typography-scale-lg-body-small-line-height);
+  --amsterdam-typography-scale-body-small-font-weight: var(--amsterdam-typography-scale-lg-body-small-font-weight);
+  --amsterdam-typography-scale-body-small-font-size: var(--amsterdam-typography-scale-lg-body-small-font-size);
+  --amsterdam-typography-scale-body-line-height: var(--amsterdam-typography-scale-lg-body-line-height);
+  --amsterdam-typography-scale-body-font-weight: var(--amsterdam-typography-scale-lg-body-font-weight);
+  --amsterdam-typography-scale-body-font-size: var(--amsterdam-typography-scale-lg-body-font-size);
+  --amsterdam-typography-scale-intro-line-height: var(--amsterdam-typography-scale-lg-intro-line-height);
+  --amsterdam-typography-scale-intro-font-weight: var(--amsterdam-typography-scale-lg-intro-font-weight);
+  --amsterdam-typography-scale-intro-font-size: var(--amsterdam-typography-scale-lg-intro-font-size);
+  --amsterdam-typography-scale-h6-line-height: var(--amsterdam-typography-scale-lg-h6-line-height);
+  --amsterdam-typography-scale-h6-font-weight: var(--amsterdam-typography-scale-lg-h6-font-weight);
+  --amsterdam-typography-scale-h6-font-size: var(--amsterdam-typography-scale-lg-h6-font-size);
+  --amsterdam-typography-scale-h5-line-height: var(--amsterdam-typography-scale-lg-h5-line-height);
+  --amsterdam-typography-scale-h5-font-weight: var(--amsterdam-typography-scale-lg-h5-font-weight);
+  --amsterdam-typography-scale-h5-font-size: var(--amsterdam-typography-scale-lg-h5-font-size);
+  --amsterdam-typography-scale-h4-line-height: var(--amsterdam-typography-scale-lg-h4-line-height);
+  --amsterdam-typography-scale-h4-font-weight: var(--amsterdam-typography-scale-lg-h4-font-weight);
+  --amsterdam-typography-scale-h4-font-size: var(--amsterdam-typography-scale-lg-h4-font-size);
+  --amsterdam-typography-scale-h3-line-height: var(--amsterdam-typography-scale-lg-h3-line-height);
+  --amsterdam-typography-scale-h3-font-weight: var(--amsterdam-typography-scale-lg-h3-font-weight);
+  --amsterdam-typography-scale-h3-font-size: var(--amsterdam-typography-scale-lg-h3-font-size);
+  --amsterdam-typography-scale-h2-line-height: var(--amsterdam-typography-scale-lg-h2-line-height);
+  --amsterdam-typography-scale-h2-font-weight: var(--amsterdam-typography-scale-lg-h2-font-weight);
+  --amsterdam-typography-scale-h2-font-size: var(--amsterdam-typography-scale-lg-h2-font-size);
+  --amsterdam-typography-scale-h1-small-line-height: var(--amsterdam-typography-scale-lg-h1-small-line-height);
+  --amsterdam-typography-scale-h1-small-font-weight: var(--amsterdam-typography-scale-lg-h1-small-font-weight);
+  --amsterdam-typography-scale-h1-small-font-size: var(--amsterdam-typography-scale-lg-h1-small-font-size);
+  --amsterdam-typography-scale-h1-line-height: var(--amsterdam-typography-scale-lg-h1-line-height);
+  --amsterdam-typography-scale-h1-font-weight: var(--amsterdam-typography-scale-lg-h1-font-weight);
+  --amsterdam-typography-scale-h1-font-size: var(--amsterdam-typography-scale-lg-h1-font-size);
+}
+
+@function amsterdam-fluid-font-size-rem($minSizePx, $maxSizePx, $minScreenWidthPx: 320, $maxScreenWidthPx: 1920) {
+  $rem: 16px;
+  $minSize: math.div($minSizePx, $rem);
+  $maxSize: math.div($maxSizePx, $rem);
+  $minScreenWidth: math.div($minScreenWidthPx, $rem);
+  $maxScreenWidth: math.div($maxScreenWidthPx, $rem);
+
+  // original version
+  // @return clamp(
+  //   #{$minSize}rem,
+  //   calc(
+  //     #{$minSize}rem + (#{$maxSize} - #{$minSize}) * (100vw - #{$minScreenWidth}rem) /
+  //       (#{$maxScreenWidth} - #{$minScreenWidth})
+  //   ),
+  //   #{$maxSize}rem
+  // );
+
+  // simplified multiplier version
+  // @return clamp(
+  //   #{$minSize}rem,
+  //   calc(
+  //     #{$minSize}rem + #{math.div($maxSize - $minSize, $maxScreenWidth - $minScreenWidth)} * (100vw - #{$minScreenWidth}rem)
+  //   ),
+  //   #{$maxSize}rem
+  // );
+
+  // no clamp version
+  @return calc(
+    #{$minSize}rem + #{math.div($maxSize - $minSize, $maxScreenWidth - $minScreenWidth)} * (var(
+            --_viewport-inline-size,
+            100vw
+          ) - #{$minScreenWidth}rem)
+  );
+}
+
+@function amsterdam-fluid-font-size($minSizePx, $maxSizePx, $minScreenWidthPx: 320px, $maxScreenWidthPx: 1920px) {
+  $minSize: math.div($minSizePx, 1px);
+  $maxSize: math.div($maxSizePx, 1px);
+  $minScreenWidth: math.div($minScreenWidthPx, 1px);
+  $maxScreenWidth: math.div($maxScreenWidthPx, 1px);
+
+  @return clamp(
+    #{$minSizePx},
+    calc(
+      #{$minSizePx} + (#{$maxSize} - #{$minSize}) * ((var(--_viewport-inline-size, 100vw) - #{$minScreenWidthPx}) /
+            (#{$maxScreenWidth} - #{$minScreenWidth}))
+    ),
+    #{$maxSizePx}
+  );
+}
+
 /* stylelint-disable no-duplicate-selectors */
 .amsterdam-theme {
+  /* prefer `vi` over `vw` when available */
+  --_viewport-inline-size: 100vw;
+  --_viewport-inline-size: 100vi;
+
+  $amsterdam-viewport-min-width: 320px;
+  $amsterdam-viewport-max-width: 1920px;
+  --amsterdam-typography-scale-h1-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-h1-font-size,
+      $amsterdam-typography-scale-md-h1-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-h2-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-h2-font-size,
+      $amsterdam-typography-scale-md-h2-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-h3-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-h3-font-size,
+      $amsterdam-typography-scale-md-h3-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-h4-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-h4-font-size,
+      $amsterdam-typography-scale-md-h4-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-h5-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-h5-font-size,
+      $amsterdam-typography-scale-md-h5-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-h6-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-h6-font-size,
+      $amsterdam-typography-scale-md-h6-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-body-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-body-font-size,
+      $amsterdam-typography-scale-md-body-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-intro-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-intro-font-size,
+      $amsterdam-typography-scale-md-intro-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  --amsterdam-typography-scale-body-small-font-size: #{amsterdam-fluid-font-size-rem(
+      $amsterdam-typography-scale-sm-body-small-font-size,
+      $amsterdam-typography-scale-md-body-small-font-size,
+      $amsterdam-viewport-min-width,
+      $amsterdam-viewport-max-width
+    )};
+  /*
   @media (max-width: $amsterdam-viewport-sm-max-width) {
     & {
-      --amsterdam-typography-scale-quote-line-height: var(--amsterdam-typography-scale-sm-quote-line-height);
-      --amsterdam-typography-scale-quote-font-weight: var(--amsterdam-typography-scale-sm-quote-font-weight);
-      --amsterdam-typography-scale-quote-font-size: var(--amsterdam-typography-scale-sm-quote-font-size);
-      --amsterdam-typography-scale-body-small-line-height: var(--amsterdam-typography-scale-sm-body-small-line-height);
-      --amsterdam-typography-scale-body-small-font-weight: var(--amsterdam-typography-scale-sm-body-small-font-weight);
-      --amsterdam-typography-scale-body-small-font-size: var(--amsterdam-typography-scale-sm-body-small-font-size);
-      --amsterdam-typography-scale-body-line-height: var(--amsterdam-typography-scale-sm-body-line-height);
-      --amsterdam-typography-scale-body-font-weight: var(--amsterdam-typography-scale-sm-body-font-weight);
-      --amsterdam-typography-scale-body-font-size: var(--amsterdam-typography-scale-sm-body-font-size);
-      --amsterdam-typography-scale-intro-line-height: var(--amsterdam-typography-scale-sm-intro-line-height);
-      --amsterdam-typography-scale-intro-font-weight: var(--amsterdam-typography-scale-sm-intro-font-weight);
-      --amsterdam-typography-scale-intro-font-size: var(--amsterdam-typography-scale-sm-intro-font-size);
-      --amsterdam-typography-scale-h6-line-height: var(--amsterdam-typography-scale-sm-h6-line-height);
-      --amsterdam-typography-scale-h6-font-weight: var(--amsterdam-typography-scale-sm-h6-font-weight);
-      --amsterdam-typography-scale-h6-font-size: var(--amsterdam-typography-scale-sm-h6-font-size);
-      --amsterdam-typography-scale-h5-line-height: var(--amsterdam-typography-scale-sm-h5-line-height);
-      --amsterdam-typography-scale-h5-font-weight: var(--amsterdam-typography-scale-sm-h5-font-weight);
-      --amsterdam-typography-scale-h5-font-size: var(--amsterdam-typography-scale-sm-h5-font-size);
-      --amsterdam-typography-scale-h4-line-height: var(--amsterdam-typography-scale-sm-h4-line-height);
-      --amsterdam-typography-scale-h4-font-weight: var(--amsterdam-typography-scale-sm-h4-font-weight);
-      --amsterdam-typography-scale-h4-font-size: var(--amsterdam-typography-scale-sm-h4-font-size);
-      --amsterdam-typography-scale-h3-line-height: var(--amsterdam-typography-scale-sm-h3-line-height);
-      --amsterdam-typography-scale-h3-font-weight: var(--amsterdam-typography-scale-sm-h3-font-weight);
-      --amsterdam-typography-scale-h3-font-size: var(--amsterdam-typography-scale-sm-h3-font-size);
-      --amsterdam-typography-scale-h2-line-height: var(--amsterdam-typography-scale-sm-h2-line-height);
-      --amsterdam-typography-scale-h2-font-weight: var(--amsterdam-typography-scale-sm-h2-font-weight);
-      --amsterdam-typography-scale-h2-font-size: var(--amsterdam-typography-scale-sm-h2-font-size);
-      --amsterdam-typography-scale-h1-small-line-height: var(--amsterdam-typography-scale-sm-h1-small-line-height);
-      --amsterdam-typography-scale-h1-small-font-weight: var(--amsterdam-typography-scale-sm-h1-small-font-weight);
-      --amsterdam-typography-scale-h1-small-font-size: var(--amsterdam-typography-scale-sm-h1-small-font-size);
-      --amsterdam-typography-scale-h1-line-height: var(--amsterdam-typography-scale-sm-h1-line-height);
-      --amsterdam-typography-scale-h1-font-weight: var(--amsterdam-typography-scale-sm-h1-font-weight);
-      --amsterdam-typography-scale-h1-font-size: var(--amsterdam-typography-scale-sm-h1-font-size);
+      --utrecht-form-input-padding-block-start: 9.5px;
+      --utrecht-form-input-padding-block-end: 9.5px;
+
+      @include amsterdam-typography-scale-sm;
     }
   }
 
   @media (min-width: $amsterdam-viewport-lg-min-width) {
     & {
-      --amsterdam-typography-scale-quote-line-height: var(--amsterdam-typography-scale-lg-quote-line-height);
-      --amsterdam-typography-scale-quote-font-weight: var(--amsterdam-typography-scale-lg-quote-font-weight);
-      --amsterdam-typography-scale-quote-font-size: var(--amsterdam-typography-scale-lg-quote-font-size);
-      --amsterdam-typography-scale-body-small-line-height: var(--amsterdam-typography-scale-lg-body-small-line-height);
-      --amsterdam-typography-scale-body-small-font-weight: var(--amsterdam-typography-scale-lg-body-small-font-weight);
-      --amsterdam-typography-scale-body-small-font-size: var(--amsterdam-typography-scale-lg-body-small-font-size);
-      --amsterdam-typography-scale-body-line-height: var(--amsterdam-typography-scale-lg-body-line-height);
-      --amsterdam-typography-scale-body-font-weight: var(--amsterdam-typography-scale-lg-body-font-weight);
-      --amsterdam-typography-scale-body-font-size: var(--amsterdam-typography-scale-lg-body-font-size);
-      --amsterdam-typography-scale-intro-line-height: var(--amsterdam-typography-scale-lg-intro-line-height);
-      --amsterdam-typography-scale-intro-font-weight: var(--amsterdam-typography-scale-lg-intro-font-weight);
-      --amsterdam-typography-scale-intro-font-size: var(--amsterdam-typography-scale-lg-intro-font-size);
-      --amsterdam-typography-scale-h6-line-height: var(--amsterdam-typography-scale-lg-h6-line-height);
-      --amsterdam-typography-scale-h6-font-weight: var(--amsterdam-typography-scale-lg-h6-font-weight);
-      --amsterdam-typography-scale-h6-font-size: var(--amsterdam-typography-scale-lg-h6-font-size);
-      --amsterdam-typography-scale-h5-line-height: var(--amsterdam-typography-scale-lg-h5-line-height);
-      --amsterdam-typography-scale-h5-font-weight: var(--amsterdam-typography-scale-lg-h5-font-weight);
-      --amsterdam-typography-scale-h5-font-size: var(--amsterdam-typography-scale-lg-h5-font-size);
-      --amsterdam-typography-scale-h4-line-height: var(--amsterdam-typography-scale-lg-h4-line-height);
-      --amsterdam-typography-scale-h4-font-weight: var(--amsterdam-typography-scale-lg-h4-font-weight);
-      --amsterdam-typography-scale-h4-font-size: var(--amsterdam-typography-scale-lg-h4-font-size);
-      --amsterdam-typography-scale-h3-line-height: var(--amsterdam-typography-scale-lg-h3-line-height);
-      --amsterdam-typography-scale-h3-font-weight: var(--amsterdam-typography-scale-lg-h3-font-weight);
-      --amsterdam-typography-scale-h3-font-size: var(--amsterdam-typography-scale-lg-h3-font-size);
-      --amsterdam-typography-scale-h2-line-height: var(--amsterdam-typography-scale-lg-h2-line-height);
-      --amsterdam-typography-scale-h2-font-weight: var(--amsterdam-typography-scale-lg-h2-font-weight);
-      --amsterdam-typography-scale-h2-font-size: var(--amsterdam-typography-scale-lg-h2-font-size);
-      --amsterdam-typography-scale-h1-small-line-height: var(--amsterdam-typography-scale-lg-h1-small-line-height);
-      --amsterdam-typography-scale-h1-small-font-weight: var(--amsterdam-typography-scale-lg-h1-small-font-weight);
-      --amsterdam-typography-scale-h1-small-font-size: var(--amsterdam-typography-scale-lg-h1-small-font-size);
-      --amsterdam-typography-scale-h1-line-height: var(--amsterdam-typography-scale-lg-h1-line-height);
-      --amsterdam-typography-scale-h1-font-weight: var(--amsterdam-typography-scale-lg-h1-font-weight);
-      --amsterdam-typography-scale-h1-font-size: var(--amsterdam-typography-scale-lg-h1-font-size);
+      @include amsterdam-typography-scale-lg;
     }
   }
+  */
 }
