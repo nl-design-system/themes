@@ -4,10 +4,12 @@
  * All rights reserved
  */
 
+/* stylelint-disable no-duplicate-selectors */
+
 @use "sass:math";
 @use "../dist/variables";
 
-@import "../dist/design-tokens.scss";
+@import "../dist/design-tokens";
 
 // Temporarily harcdoed and copied from ../dist/index.scss
 $amsterdam-viewport-lg-margin-inline-end: 42.67px;
@@ -28,7 +30,6 @@ $amsterdam-viewport-sm-gap: 18.21px;
 $amsterdam-viewport-sm-columns: 4;
 $amsterdam-viewport-sm-max-width: 428px;
 $amsterdam-viewport-sm-min-width: 0;
-
 $amsterdam-typography-weight-scale-normal-font-weight: 400;
 $amsterdam-typography-weight-scale-semi-bold-font-weight: 500;
 $amsterdam-typography-weight-scale-bold-font-weight: 800;
@@ -224,7 +225,6 @@ $amsterdam-typography-scale-lg-h1-font-size: 103.85px;
   );
 }
 
-/* stylelint-disable no-duplicate-selectors */
 :root {
   /*
    * Don't mess with the user stylesheet!
@@ -233,23 +233,29 @@ $amsterdam-typography-scale-lg-h1-font-size: 103.85px;
   font-size: initial !important;
 }
 
-/* stylelint-disable no-duplicate-selectors */
 @media screen {
   .amsterdam-theme--responsive {
-    /*
-   * Prefer `vi` over `vw` when available.
-   * Like `inline-size` and other logical properties, `vi` is based on the `inline` axis,
-   * instead of making assumptions about the text direction.
-   * The `vi` unit is unfortunately not yet implemented by all evergreen browsers.
-   */
-    --_viewport-inline-size: 100vw;
-    --_viewport-inline-size: 100vi;
     $amsterdam-viewport-min-inline-size: 320px;
     $amsterdam-viewport-max-inline-size: 1920px;
+    $amsterdam-paragraph-margin-block-end: 40px;
+    $amsterdam-paragraph-font-size: $amsterdam-typography-scale-md-body-font-size;
+    $amsterdam-unordered-list-margin-block-end: 40px;
+    $amsterdam-unordered-list-font-size: $amsterdam-typography-scale-md-body-font-size;
+    $amsterdam-ordered-list-margin-block-end: 40px;
+    $amsterdam-ordered-list-font-size: $amsterdam-typography-scale-md-body-font-size;
 
+    /*
+     * Prefer `vi` over `vw` when available.
+     * Like `inline-size` and other logical properties, `vi` is based on the `inline` axis,
+     * instead of making assumptions about the text direction.
+     * The `vi` unit is unfortunately not yet implemented by all evergreen browsers.
+     */
+    --_viewport-inline-size: 100vw;
+
+    /* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties,unit-no-unknown */
+    --_viewport-inline-size: 100vi;
     --_viewport-min-inline-size: #{math.div($amsterdam-viewport-min-inline-size, 16px) * 1rem};
     --_viewport-max-inline-size: #{math.div($amsterdam-viewport-max-inline-size, 16px) * 1rem};
-
     --amsterdam-typography-scale-h1-font-size: #{amsterdam-relative-inline-size(
         $amsterdam-typography-scale-sm-h1-font-size,
         $amsterdam-typography-scale-md-h1-font-size,
@@ -390,18 +396,7 @@ $amsterdam-typography-scale-lg-h1-font-size: 103.85px;
         $amsterdam-viewport-min-inline-size,
         $amsterdam-viewport-max-inline-size
       )};
-
     --utrecht-form-input-font-size: var(--amsterdam-typography-scale-body-small-font-size);
-
-    $amsterdam-paragraph-margin-block-end: 40px;
-    $amsterdam-paragraph-font-size: $amsterdam-typography-scale-md-body-font-size;
-
-    $amsterdam-unordered-list-margin-block-end: 40px;
-    $amsterdam-unordered-list-font-size: $amsterdam-typography-scale-md-body-font-size;
-
-    $amsterdam-ordered-list-margin-block-end: 40px;
-    $amsterdam-ordered-list-font-size: $amsterdam-typography-scale-md-body-font-size;
-
     --utrecht-paragraph-margin-block-end: #{1em *
       math.div($amsterdam-paragraph-margin-block-end, $amsterdam-paragraph-font-size)};
     --utrecht-ordered-list-margin-block-end: #{1em *
