@@ -10,8 +10,8 @@ module.exports = {
   exampleCode: `
     <UtrechtButton appearance='primary-action-button'>Read more...</UtrechtButton>
   `,
-  // baseUrl: '/playroom/',
-  baseUrl: '/themes/playroom/',
+  baseUrl: '/playroom/',
+  // baseUrl: '/themes/playroom/',
   webpackConfig: () => ({
     module: {
       rules: [

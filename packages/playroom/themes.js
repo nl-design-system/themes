@@ -1,5 +1,5 @@
 export const Amsterdam = {
-  className: 'amsterdam-theme',
+  className: 'amsterdam-theme amsterdam-theme--responsive',
   styleSheet: require('@nl-design-system-unstable/amsterdam-design-tokens/dist/design-tokens.css'),
 };
 

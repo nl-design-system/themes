@@ -141,7 +141,7 @@ export const parameters = {
     },
   },
   playroom: {
-    // url: 'http://localhost:6012',
-    url: 'playroom/',
+    url: 'http://localhost:6012',
+    // url: 'playroom/',
   },
 };
