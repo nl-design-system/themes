@@ -7,7 +7,6 @@ import { addons } from '@storybook/addons';
 
 // Import all themes
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
-import '@nl-design-system-unstable/amsterdam-design-tokens/src/custom.scss';
 import '@nl-design-system-unstable/amsterdam-design-tokens/src/font.scss';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/borne-design-tokens/dist/index.css';
