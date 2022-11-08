@@ -112,16 +112,19 @@ const DenHaagHeader = () => (
 );
 
 export const ThemedHeader = ({ theme }) => {
-  switch (theme) {
-    case 'amsterdam-theme':
+    if(theme.includes('amsterdam-theme')) {
       return <AmsterdamHeader />;
-    case 'utrecht-theme':
+    }
+
+    if(theme.includes('utrecht-theme')) {
       return <UtrechtHeader />;
-    case 'denhaag-theme':
+    }
+
+    if(theme.includes('denhaag-theme')) {
       return <DenHaagHeader />;
-    default:
-      return <></>;
-  }
+    }
+
+    return <></>;
 };
 
 ThemedHeader.propTypes = {
