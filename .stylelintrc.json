@@ -1,9 +1,18 @@
 {
+  "extends": ["stylelint-config-standard-scss"],
   "rules": {
+    "scss/at-mixin-pattern": "^[a-z][a-z0-9-_]*$",
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-default": null,
+    "scss/dollar-variable-first-in-block": [true, { "ignore": ["comments", "imports"] }],
+    "scss/dollar-variable-pattern": ["^(amsterdam|example|hoorn|utrecht)-[a-z0-9-]+$", { "ignore": "local" }],
+    "scss/percent-placeholder-pattern": "^(amsterdam|example|hoorn|utrecht)-[a-z0-9-]+$",
+    "scss/operator-no-newline-after": null,
+    "scss/at-extend-no-missing-placeholder": null,
     "custom-property-pattern": "[a-z0-9-]+",
     "selector-class-pattern": "[a-z0-9-]+",
     "keyframes-name-pattern": "[a-z0-9-]+",
-    "at-rule-no-unknown": [true],
+    "at-rule-no-unknown": null,
     "block-no-empty": [true],
     "color-no-invalid-hex": [true],
     "comment-no-empty": [true],
@@ -137,6 +146,7 @@
     "selector-max-empty-lines": null,
     "media-feature-name-case": null,
     "at-rule-name-case": null,
-    "string-quotes": null
+    "string-quotes": null,
+    "declaration-block-no-redundant-longhand-properties": null
   }
 }
