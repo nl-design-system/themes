@@ -1948,6 +1948,116 @@
       }
     }
   },
+  "nl-common_dm": {
+    "nl": {
+      "common": {
+        "document": {
+          "default": {
+            "color": {
+              "type": "color",
+              "value": "{example.brand.white}"
+            },
+            "background-color": {
+              "type": "color",
+              "value": "{example.brand.gray.950}"
+            }
+          },
+          "inverse": {
+            "color": {
+              "type": "color",
+              "value": "{example.brand.gray.950}"
+            },
+            "background-color": {
+              "type": "color",
+              "value": "{example.brand.white}"
+            }
+          },
+          "subtle": {
+            "color": {
+              "type": "color",
+              "value": "{example.brand.gray.400}"
+            }
+          }
+        },
+        "interaction": {
+          "color": {
+            "type": "color",
+            "value": "{example.brand.violet.500}"
+          },
+          "active": {
+            "color": {
+              "type": "color",
+              "value": "{example.brand.violet.400}"
+            }
+          }
+        },
+        "focus": {
+          "color": {
+            "type": "color",
+            "value": "{example.brand.white}"
+          },
+          "background-color": {
+            "type": "color",
+            "value": "{example.brand.violet.800}"
+          },
+          "outline-color": {
+            "type": "color",
+            "value": "{example.brand.violet.500}"
+          },
+          "box-shadow-color": {
+            "type": "color",
+            "value": "{example.brand.white}"
+          },
+          "reverse": {
+            "outline-color": {
+              "type": "color",
+              "value": "{example.brand.black}"
+            }
+          }
+        },
+        "form-input": {
+          "focus": {
+            "color": {
+              "type": "color",
+              "value": "{example.brand.white}"
+            },
+            "background-color": {
+              "type": "color",
+              "value": "{example.brand.black}"
+            }
+          },
+          "border-color": {
+            "value": "{example.brand.gray.300}",
+            "type": "color"
+          }
+        },
+        "root": {
+          "background-color": {
+            "value": "{example.brand.gray.900}",
+            "type": "color"
+          }
+        },
+        "line": {
+          "border-color": {
+            "value": "{example.brand.gray.700}",
+            "type": "color"
+          }
+        },
+        "container": {
+          "border-color": {
+            "value": "{example.brand.gray.700}",
+            "type": "color"
+          }
+        },
+        "transparent": {
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -1964,7 +2074,8 @@
       "nl-link",
       "nl-paragraph",
       "nl-paragraph-lead",
-      "nl-paragraph-small-print"
+      "nl-paragraph-small-print",
+      "nl-common_dm"
     ]
   }
 }
