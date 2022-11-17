@@ -1,3 +1,53 @@
+/* STICKER LOGIC */
+
+.nlds-sticker__names {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+.nlds-sticker__name {
+  background-color: #f5f6f8;
+  color: #586c88;
+  padding: 10px;
+  width: fit-content;
+  margin: 0;
+  margin-block-end: 20px;
+  border-radius: 4px;
+  border: 1px solid #586c88;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.nlds-sticker {
+  border: 4px solid black;
+  padding: 20px;
+  border-radius: 8px 8px;
+  margin-block-end: 20px;
+  position: relative;
+}
+
+.nlds-sticker--inline {
+  width: fit-content;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nlds-sticker--proprietary .nlds-sticker__name {
+  border-style: dashed;
+  color: #7892b6;
+}
+
+.nlds-sticker--no-print {
+  border: none;
+  margin-block-end: 0;
+}
+
+.page-break {
+  page-break-after: always;
+}
+
 /* Reset */
 
 body {
@@ -5,6 +55,11 @@ body {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+.utrecht-page {
+  padding-block-start: 20px;
+  background-color: var(--utrecht-page-background-color);
 }
 
 /* WIP Utrecht */
@@ -15,10 +70,6 @@ body {
   );
   padding-block-end: var(--utrecht-page-header-banner-padding-block-end, var(--utrecht-page-header-padding-block-end));
   background-color: var(--utrecht-page-header-banner-background-color);
-}
-
-.utrecht-page {
-  background-color: var(--utrecht-page-background-color);
 }
 
 .utrecht-page-header {
@@ -97,12 +148,25 @@ body {
   --utrecht-custom-radio-button-checked-color: var(--rvo-color-hemelblauw);
   --utrecht-custom-radio-button-icon-margin-block-start: 3px;
   --utrecht-form-label-checkbox-font-weight: 400;
+  --utrecht-custom-checkbox-size: 24px;
+  --utrecht-custom-checkbox-border-width: 2px;
+  --utrecht-custom-checkbox-checked-background-color: var(--rvo-checkbox-checked-background-color);
+  --utrecht-button-group-margin-block-start: 32px;
 }
 
 /* Reset RVO special CSS */
 .rvo-theme .utrecht-custom-radio-button:checked,
 .utrecht-custom-radio-button--checked {
   background: inherit;
+}
+
+.rvo-theme .utrecht-checkbox--custom {
+  box-shadow: 0 0 0 2px white inset;
+}
+
+.utrecht-form-fieldset .utrecht-form-fieldset {
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }
 
 .denhaag-theme {
@@ -117,6 +181,16 @@ body {
   --utrecht-custom-radio-button-checked-background-color: var(--denhaag-color-green-3);
   --utrecht-custom-radio-button-checked-border-color: var(--denhaag-color-green-3);
   --utrecht-custom-radio-button-icon-margin-block-start: 6px;
+  --utrecht-form-fieldset-legend-font-weight: 600;
+}
+
+.denhaag-theme .denhaag-responsive-content--narrow,
+.rvo-theme .denhaag-responsive-content--narrow {
+  --denhaag-responsive-content-lg-max-width: 700px;
+  --denhaag-responsive-content-md-max-width: 600px;
+  --denhaag-responsive-content-sm-max-width: 500px;
+  --denhaag-responsive-content-xs-padding: 1.5rem;
+  --denhaag-responsive-content-2xs-padding: 0.75rem;
 }
 
 .utrecht-theme {
@@ -127,4 +201,5 @@ body {
   --utrecht-custom-radio-button-icon-size: 14px;
   --utrecht-custom-radio-button-checked-color: white;
   --utrecht-custom-radio-button-icon-margin-block-start: 4px;
+  --utrecht-form-fieldset-margin-block-start: 20px;
 }

@@ -1,7 +1,8 @@
 export const HalsbandParkiet = {
   group: 'Amsterdam',
   name: 'Nieuws: Halsband Parkiet',
-  code: `
+  code: `<div className='denhaag-responsive-content denhaag-responsive-content--narrow'>
+  <UtrechtPageContent>
     <UtrechtArticle>
       <UtrechtHeading1>Knalgroen en luidruchtig: waar komen die vogels toch vandaan?</UtrechtHeading1>
       <UtrechtParagraph lead>
@@ -64,5 +65,7 @@ export const HalsbandParkiet = {
           </UtrechtLink>
         </UtrechtUnorderedListItem>
       </UtrechtUnorderedList>
-    </UtrechtArticle>`,
-};
+    </UtrechtArticle>
+  </UtrechtPageContent>
+</div>`,
+}

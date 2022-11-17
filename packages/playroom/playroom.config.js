@@ -6,11 +6,11 @@ module.exports = {
   themes: './themes',
   title: 'NL Design System community playground',
   frameComponent: './FrameComponent.jsx',
-  widths: [768, 1024],
+  widths: [768, 1024, 2480],
   exampleCode: `
     <UtrechtButton appearance='primary-action-button'>Read more...</UtrechtButton>
   `,
-  baseUrl: '/playroom/',
+  baseUrl: '/',
   // baseUrl: '/themes/playroom/',
   webpackConfig: () => ({
     module: {
@@ -37,4 +37,4 @@ module.exports = {
   snippets: './snippets',
   //   scope: './playroom/useScope.js',
   //   paramType: 'search', // default is 'hash'
-};
+}

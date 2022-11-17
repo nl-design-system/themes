@@ -70,3 +70,5 @@ export {
   UnorderedList as UtrechtUnorderedList,
   UnorderedListItem as UtrechtUnorderedListItem,
 } from '@utrecht/component-library-react';
+
+export * from './WithSticker';
