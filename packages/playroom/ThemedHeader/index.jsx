@@ -4,127 +4,85 @@ import AmsterdamLogo from './AmsterdamLogo';
 import UtrechtLogo from './UtrechtLogo';
 import DenHaagLogo from './DenHaagLogo';
 import { UtrechtPageHeader } from '../components';
+import { RvoLogo } from './RvoLogo';
+import clsx from 'clsx';
 
-const AmsterdamHeader = () => (
-  <UtrechtPageHeader>
-    <div className="utrecht-page">
-      <AmsterdamLogo />
-    </div>
-    <div className="rvo-topnav__background">
-      <div className="utrecht-page">
-        <nav className="rvo-topnav rvo-topnav--md">
-          <ul className="utrecht-topnav__list">
-            <li className="utrecht-topnav__item">
-              <a className="utrecht-topnav__link" href="https://example.com/">
-                Onderwerpen
-              </a>
-            </li>
-            <li className="utrecht-topnav__item">
-              <a className="utrecht-topnav__link" href="https://example.com/">
-                Nieuws
-              </a>
-            </li>
-            <li className="utrecht-topnav__item">
-              <a className="utrecht-topnav__link" href="https://example.com/">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </UtrechtPageHeader>
-);
+const TopNav = ({ brand }) => {
+  const getTopnavItems = {
+    amsterdam: ['Onderwerpen', 'Nieuws', 'Contact'],
+    utrecht: ['Wonen en leven', 'Zorg en onderwijs', 'Werk en inkomen', 'Ondernemen', 'Bestuur en organsiatie'],
+    denhaag: ['Onderwerpen', 'Ondernemen', 'De gemeente'],
+    rvo: ['Home', 'Mijn aanvragen', 'Nieuwe aanvraag'],
+  };
 
-const UtrechtHeader = () => (
-  <UtrechtPageHeader>
-    <div>
-      <UtrechtLogo />
-    </div>
-    <div className="utrecht-navhtml">
-      <nav className="topnav">
-        <ul className="utrecht-topnav__list">
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="https://example.com/">
-              Wonen en leven
-            </a>
-          </li>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="https://example.com/">
-              Zorg en onderwijs
-            </a>
-          </li>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="https://example.com/">
-              Werk en inkomen
-            </a>
-          </li>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="https://example.com">
-              Ondernemen
-            </a>
-          </li>
-          <li className="utrecht-topnav__item">
-            <a className="utrecht-topnav__link" href="https://example.com">
-              Bestuur en organisatie
-            </a>
-          </li>
+  return (
+    getTopnavItems[brand].length && (
+      <nav
+        className={clsx('denhaag-header__navigation', 'utrecht-topnav', 'utrecht-navhtml', 'rvo-topnav__background')}
+      >
+        <ul className={clsx('utrecht-topnav__list', { 'denhaag-responsive-content': brand !== 'denhaag' })}>
+          {getTopnavItems[brand].map((item) => (
+            <li className="utrecht-topnav__item" key={item}>
+              <a className="utrecht-topnav__link" href="#">
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
-    </div>
-  </UtrechtPageHeader>
-);
+    )
+  );
+};
 
-const DenHaagHeader = () => (
-  <header id="site-header" className="denhaag-header">
-    <div className="denhaag-responsive-content">
-      <div className="denhaag-header__content">
-        <div className="denhaag-header__logo">
-          <a className="denhaag-logo denhaag-header__link" href="#" aria-label="Gemeente Den Haag">
-            <DenHaagLogo />
-          </a>
-        </div>
-        <div className="denhaag-header__navigation rvo-topnav__background">
-          <nav className="rvo-topnav rvo-topnav--md">
-            <ul className="utrecht-topnav__list">
-              <li className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link" href="https://example.com/">
-                  Onderwerpen
-                </a>
-              </li>
-              <li className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link" href="https://example.com/">
-                  Ondernemen
-                </a>
-              </li>
-              <li className="utrecht-topnav__item">
-                <a className="utrecht-topnav__link" href="https://example.com/">
-                  De gemeente
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className="denhaag-header__actions"></div>
-      </div>
-    </div>
-  </header>
-);
+TopNav.propTypes = {
+  brand: PropTypes.any,
+};
 
 export const ThemedHeader = ({ theme }) => {
-    if(theme.includes('amsterdam-theme')) {
-      return <AmsterdamHeader />;
-    }
+  const brand = theme.includes('amsterdam')
+    ? 'amsterdam'
+    : theme.includes('utrecht')
+    ? 'utrecht'
+    : theme.includes('denhaag')
+    ? 'denhaag'
+    : theme.includes('rvo')
+    ? 'rvo'
+    : '';
 
-    if(theme.includes('utrecht-theme')) {
-      return <UtrechtHeader />;
-    }
+  console.log(brand);
 
-    if(theme.includes('denhaag-theme')) {
-      return <DenHaagHeader />;
-    }
+  const getLogo = {
+    amsterdam: AmsterdamLogo,
+    utrecht: UtrechtLogo,
+    denhaag: DenHaagLogo,
+    rvo: RvoLogo,
+  };
 
-    return <></>;
+  const Logo = getLogo[brand] || <></>;
+
+  const fullWidthTopnav = !theme.includes('denhaag');
+
+  return (
+    brand && (
+      <UtrechtPageHeader>
+        <div className="denhaag-responsive-content utrecht-page-header__banner">
+          {fullWidthTopnav ? (
+            <div className="denhaag-header__logo">
+              <Logo />
+            </div>
+          ) : (
+            <div className="denhaag-header__content">
+              <div className="denhaag-header__logo">
+                <Logo />
+              </div>
+              <TopNav brand={brand} />
+            </div>
+          )}
+        </div>
+        {fullWidthTopnav && <TopNav brand={brand} />}
+      </UtrechtPageHeader>
+    )
+  );
 };
 
 ThemedHeader.propTypes = {

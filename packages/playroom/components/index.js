@@ -47,7 +47,7 @@ export {
   Paragraph as UtrechtParagraph,
   PreHeading as UtrechtPreHeading,
   PrimaryActionButton as UtrechtPrimaryActionButton,
-  RadioButton as UtrechtRadioButton,
+  CustomRadioButton as UtrechtRadioButton,
   Select as UtrechtSelect,
   SelectOption as UtrechtSelectOption,
   Separator as UtrechtSeparator,

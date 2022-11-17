@@ -77,9 +77,9 @@ export default {
   },
 };
 
-export const ${organisation.replace(/\s/, '')} = Template.bind({});
+export const ${name} = Template.bind({});
 
-${organisation.replace(/\s/, '')}.args = {
+${name}.args = {
   ...exampleArgs,
   theme: 'utrecht-theme',
   ...tokens.reduce((styles, token) => {

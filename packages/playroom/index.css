@@ -1,0 +1,130 @@
+/* Reset */
+
+body {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+/* WIP Utrecht */
+.utrecht-page-header__banner {
+  padding-block-start: var(
+    --utrecht-page-header-banner-padding-block-start,
+    var(--utrecht-page-header-padding-block-start)
+  );
+  padding-block-end: var(--utrecht-page-header-banner-padding-block-end, var(--utrecht-page-header-padding-block-end));
+  background-color: var(--utrecht-page-header-banner-background-color);
+}
+
+.utrecht-page {
+  background-color: var(--utrecht-page-background-color);
+}
+
+.utrecht-page-header {
+  padding-block-start: 0;
+  padding-block-end: 0;
+  background-color: var(--utrecht-page-header-background-color, var(--utrecht-page-background-color));
+  max-inline-size: calc(
+    var(--utrecht-page-max-inline-size) - var(--utrecht-page-margin-inline-start, 0px) -
+      var(--utrecht-page-margin-inline-end, 0px)
+  );
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+}
+
+.utrecht-topnav {
+  font-weight: var(--utrecht-topnav-font-weight);
+}
+
+.utrecht-page-content {
+  background-color: var(--utrecht-page-content-background-color);
+}
+
+.utrecht-custom-radio-button--html-input:checked {
+  background-image: none !important;
+}
+
+.utrecht-custom-radio-button--html-input:checked::after {
+  content: "";
+  background-color: var(--utrecht-custom-radio-button-checked-color);
+  width: var(--utrecht-custom-radio-button-icon-size);
+  height: var(--utrecht-custom-radio-button-icon-size);
+  display: block;
+  border-radius: 999px;
+  margin-inline: auto;
+  margin-block-start: var(--utrecht-custom-radio-button-icon-margin-block-start); /* Is there another better way? */
+}
+
+/* WIP Themes */
+
+.amsterdam-theme {
+  --denhaag-responsive-content-lg-max-width: 60.5rem;
+  --denhaag-responsive-content-md-max-width: 50.5rem;
+  --denhaag-responsive-content-sm-max-width: 40.5rem;
+  --denhaag-responsive-content-xs-padding: 1.5rem;
+  --denhaag-responsive-content-2xs-padding: 0.75rem;
+  --utrecht-page-header-padding-block-start: 0;
+  --utrecht-page-header-padding-block-end: 0;
+  --utrecht-page-header-banner-padding-block-start: 1em;
+  --utrecht-page-header-banner-padding-block-end: 1em;
+  --utrecht-topnav-font-weight: 600;
+  --utrecht-document-background-color: var(--amsterdam-color-neutral-grey1);
+  --utrecht-topnav-list-background-color: #f5f5f5;
+  --utrecht-page-header-banner-background-color: white;
+  --utrecht-page-content-background-color: white;
+  --utrecht-page-background-color: white;
+  --utrecht-page-header-background-color: white;
+  --utrecht-page-content-padding-block-end: 60px;
+  --utrecht-space-around: 1;
+}
+
+/* Reset RVO special CSS */
+.utrecht-form-fieldset__legend {
+  float: none !important;
+}
+
+.rvo-theme {
+  --denhaag-responsive-content-lg-max-width: 67.5rem;
+  --denhaag-responsive-content-md-max-width: 56.5rem;
+  --denhaag-responsive-content-sm-max-width: 40.5rem;
+  --denhaag-responsive-content-xs-padding: 1.5rem;
+  --denhaag-responsive-content-2xs-padding: 0.75rem;
+  --utrecht-document-background-color: white;
+  --utrecht-page-content-padding-block-end: 2em;
+  --utrecht-space-around: 1;
+  --utrecht-custom-radio-button-icon-size: 14px;
+  --utrecht-custom-radio-button-checked-color: var(--rvo-color-hemelblauw);
+  --utrecht-custom-radio-button-icon-margin-block-start: 3px;
+  --utrecht-form-label-checkbox-font-weight: 400;
+}
+
+/* Reset RVO special CSS */
+.rvo-theme .utrecht-custom-radio-button:checked,
+.utrecht-custom-radio-button--checked {
+  background: inherit;
+}
+
+.denhaag-theme {
+  --utrecht-document-background-color: white;
+  --utrecht-page-content-padding-block-end: 2em;
+  --utrecht-space-around: 1;
+  --utrecht-custom-radio-button-icon-size: 10px;
+  --utrecht-custom-radio-button-border-radius: 0;
+  --utrecht-custom-radio-button-focus-border-width: 3px;
+  --utrecht-custom-radio-button-size: 24px;
+  --utrecht-custom-radio-button-border-width: 1px;
+  --utrecht-custom-radio-button-checked-background-color: var(--denhaag-color-green-3);
+  --utrecht-custom-radio-button-checked-border-color: var(--denhaag-color-green-3);
+  --utrecht-custom-radio-button-icon-margin-block-start: 6px;
+}
+
+.utrecht-theme {
+  --utrecht-document-background-color: #f2f2f2;
+  --utrecht-page-header-banner-background-color: white;
+  --utrecht-page-content-background-color: white;
+  --utrecht-space-around: 1;
+  --utrecht-custom-radio-button-icon-size: 14px;
+  --utrecht-custom-radio-button-checked-color: white;
+  --utrecht-custom-radio-button-icon-margin-block-start: 4px;
+}

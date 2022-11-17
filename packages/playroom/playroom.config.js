@@ -6,7 +6,7 @@ module.exports = {
   themes: './themes',
   title: 'NL Design System community playground',
   frameComponent: './FrameComponent.jsx',
-  widths: [1024],
+  widths: [768, 1024],
   exampleCode: `
     <UtrechtButton appearance='primary-action-button'>Read more...</UtrechtButton>
   `,

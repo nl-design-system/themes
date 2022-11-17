@@ -2,7 +2,6 @@ export const HalsbandParkiet = {
   group: 'Amsterdam',
   name: 'Nieuws: Halsband Parkiet',
   code: `
-  <UtrechtPageContent>
     <UtrechtArticle>
       <UtrechtHeading1>Knalgroen en luidruchtig: waar komen die vogels toch vandaan?</UtrechtHeading1>
       <UtrechtParagraph lead>
@@ -65,6 +64,5 @@ export const HalsbandParkiet = {
           </UtrechtLink>
         </UtrechtUnorderedListItem>
       </UtrechtUnorderedList>
-    </UtrechtArticle>
-  </UtrechtPageContent>`,
+    </UtrechtArticle>`,
 };
