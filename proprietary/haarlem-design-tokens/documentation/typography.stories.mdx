@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas, ArgsTable, Typeset } from "@storybook/addon-docs";
+import tokens from "../dist/tokens.json";
+import config from "../src/config.json";
+
+<Meta title={`${config.name}/Typography`} />
+
+export const typography = tokens[config.prefix]["typography"];
+export const textContent = "Tweede Kamerverkiezingen gaan anders dan anders";
+export const renderScale = (scale) => (
+  <div>
+    {Object.entries(scale).map(([key, size]) => (
+      <div>
+        <h3>{key}</h3>
+        {size["description"] && <p>{size["description"]}</p>}
+        <div
+          style={{
+            fontFamily: typography["sans-serif"]["font-family"].value,
+            fontSize: size["font-size"] ? size["font-size"].value : null,
+            fontWeight: size["font-weight"] ? size["font-weight"].value : null,
+            lineHeight: size["line-height"] ? size["line-height"].value : null,
+          }}
+        >
+          {textContent}
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
+# Typography
+
+## Scale for large viewport: desktop
+
+<div>{renderScale(typography["scale"]["lg"])}</div>
+
+## Scale for medium viewport: desktop
+
+<div>{renderScale(typography["scale"]["md"])}</div>
+
+## Scale for small viewport: mobile
+
+<div>{renderScale(typography["scale"]["sm"])}</div>
