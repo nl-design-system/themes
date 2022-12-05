@@ -75,6 +75,9 @@
     "ts-node": "10.9.1",
     "webpack": "5.75.0"
   },
+  "overrides": {
+    "react": "17.0.2"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "prebuild": "npm run clean && npm run write-component-pages",
