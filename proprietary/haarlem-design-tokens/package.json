@@ -1,13 +1,13 @@
 {
-  "version": "1.0.0-alpha.35",
+  "version": "1.0.0-alpha.42",
   "author": "Community for NL Design System",
-  "description": "NL Design System design tokens for Gemeente Drechterland",
-  "website": "https://www.drechterland.nl",
+  "description": "Haarlem Design System design tokens for NL Design System",
+  "website": "https://www.haarlem.nl/",
   "keywords": [
     "nl-design-system"
   ],
   "license": "SEE LICENSE IN LICENSE.md",
-  "name": "@nl-design-system-unstable/drechterland-design-tokens",
+  "name": "@nl-design-system-unstable/haarlem-design-tokens",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -21,7 +21,7 @@
     "prebuild": "npm run clean",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm run --ignore-scripts build' 'src/**/*.tokens.json'",
-    "build": "npm-run-all build:**",
+    "build": "npm run build:style-dictionary && cp dist/index.scss dist/_variables.scss && cp dist/design-tokens.css dist/design-tokens.scss && npm run build:scss",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
   },
