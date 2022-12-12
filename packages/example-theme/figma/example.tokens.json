@@ -952,10 +952,6 @@
           "type": "color",
           "value": "{voorbeeld.violet.700}"
         },
-        "box-shadow-color": {
-          "type": "color",
-          "value": "{voorbeeld.white}"
-        },
         "reverse": {
           "outline-color": {
             "type": "color",
@@ -971,12 +967,8 @@
           "type": "other"
         },
         "outline-width": {
-          "value": "2px",
-          "type": "other"
-        },
-        "box-shadow-spread-radius": {
-          "value": "2px",
-          "type": "other"
+          "value": "{voorbeeld.border-width.md}",
+          "type": "borderWidth"
         }
       },
       "form-input": {
@@ -1955,10 +1947,6 @@
           "type": "color",
           "value": "{voorbeeld.violet.700}"
         },
-        "box-shadow-color": {
-          "type": "color",
-          "value": "{voorbeeld.white}"
-        },
         "reverse": {
           "outline-color": {
             "type": "color",
@@ -2010,6 +1998,11 @@
   },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": ["brand", "common", "component", "common_dm"]
+    "tokenSetOrder": [
+      "brand",
+      "common",
+      "component",
+      "common_dm"
+    ]
   }
 }
