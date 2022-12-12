@@ -2,6 +2,9 @@ export const STORY_GROUPS = {
   AVATAR: 'Avatars',
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
+  BUTTON_PRIMARY_ACTION: 'Primary Action Button',
+  BUTTON_SECONDARY_ACTION: 'Secondary Action Button',
+  BUTTON_SUBTLE: 'Subtle Button',
   BUTTON_LINK_DEFAULT: 'Link that looks like a button',
   LINK_BUTTON_DEFAULT: 'Button that looks like a link',
   PARAGRAPH: 'Paragraph',
@@ -17,4 +20,4 @@ export const STORY_GROUPS = {
   FORM_LABEL_RADIO: 'Form Label for Radio Button',
   EMPHASIS: 'Emphasis',
   FORM_FIELD_DESCRIPTION: 'Form Field Description',
-};
+}

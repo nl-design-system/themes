@@ -134,15 +134,99 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--primary-action-button',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
     name: 'Utrecht Primary Action Button',
     state: true,
     render: () => <Button appearance="primary-action-button">Primary action</Button>,
   },
   {
+    storyId: 'react-utrecht-button--primary-action-button-disabled',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
+    name: 'Utrecht Primary Action Button: Disabled',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" disabled>
+        Primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-active',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
+    name: 'Utrecht Primary Action Button: Active',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" className="utrecht-button--active">
+        Primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-hover',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
+    name: 'Utrecht Primary Action Button: Hover',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" className="utrecht-button--hover">
+        Primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-focus',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
+    name: 'Utrecht Primary Action Button: Focus',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" className="utrecht-button--focus">
+        Primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-focus-visible',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
+    name: 'Utrecht Primary Action Button: Focus Visible',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" className="utrecht-button--focus-visible">
+        Primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-busy',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
+    name: 'Utrecht Primary Action Button: Busy',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" busy>
+        Primary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-button-submit',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
+    name: 'Utrecht Primary Action Button: Submit Type',
+    state: true,
+    render: () => (
+      <Button appearance="primary-action-button" type="submit">
+        Primary action
+      </Button>
+    ),
+  },
+  {
     storyId: 'react-utrecht-button--primary-action-button-danger',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
     name: 'Utrecht Primary Action Button: Danger',
     state: true,
     render: () => (
@@ -154,7 +238,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--primary-action-button-ok',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_PRIMARY_ACTION,
     name: 'Utrecht Primary Action Button: OK',
     state: true,
     render: () => (
@@ -166,15 +250,99 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--secondary-action-button',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
     name: 'Utrecht Secondary Action Button',
     state: true,
     render: () => <Button appearance="secondary-action-button">Secondary action</Button>,
   },
   {
+    storyId: 'react-utrecht-button--secondary-action-button-disabled',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
+    name: 'Utrecht Secondary Action Button: Disabled',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" disabled>
+        Secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-active',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
+    name: 'Utrecht Secondary Action Button: Active',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" className="utrecht-button--active">
+        Secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-hover',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
+    name: 'Utrecht Secondary Action Button: Hover',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" className="utrecht-button--hover">
+        Secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-focus',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
+    name: 'Utrecht Secondary Action Button: Focus',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" className="utrecht-button--focus">
+        Secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-focus-visible',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
+    name: 'Utrecht Secondary Action Button: Focus Visible',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" className="utrecht-button--focus-visible">
+        Secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-busy',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
+    name: 'Utrecht Secondary Action Button: Busy',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" busy>
+        Secondary action
+      </Button>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-button-submit',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
+    name: 'Utrecht Secondary Action Button: Submit Type',
+    state: true,
+    render: () => (
+      <Button appearance="secondary-action-button" type="submit">
+        Secondary action
+      </Button>
+    ),
+  },
+  {
     storyId: 'react-utrecht-button--secondary-action-button-danger',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
     name: 'Utrecht Secondary Action Button: Danger',
     state: true,
     render: () => (
@@ -186,7 +354,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--secondary-action-button-ok',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_SECONDARY_ACTION,
     name: 'Utrecht Secondary Action Button: OK',
     state: true,
     render: () => (
@@ -198,7 +366,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--subtle-button',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_SUBTLE,
     name: 'Utrecht Subtle Button',
     state: true,
     render: () => <Button appearance="subtle-button">Subtle button</Button>,
@@ -206,7 +374,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--subtle-button-danger',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_SUBTLE,
     name: 'Utrecht Subtle Button: Danger',
     state: true,
     render: () => (
@@ -218,7 +386,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-button--subtle-button-ok',
     component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
+    group: STORY_GROUPS.BUTTON_SUBTLE,
     name: 'Utrecht Subtl Button: OK',
     state: true,
     render: () => (
