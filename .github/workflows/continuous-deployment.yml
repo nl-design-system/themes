@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js version
         uses: actions/setup-node@v2
@@ -34,6 +36,14 @@ jobs:
       - name: "Continuous Integration: test"
         run: |
           npm run test --if-present
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        if: github.event.pull_request.draft == false
+        with:
+          autoAcceptChanges: main
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: packages/storybook/dist/
 
       - name: "Retain build artifact: Storybook"
         uses: actions/upload-artifact@v2
