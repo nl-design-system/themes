@@ -3,6 +3,8 @@ export const STORY_GROUPS = {
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
   BUTTON_LINK_DEFAULT: 'Link that looks like a button',
+  CHECKBOX: 'Checkbox',
+  RADIO_BUTTON: 'Radio Button',
   LINK_BUTTON_DEFAULT: 'Button that looks like a link',
   PARAGRAPH: 'Paragraph',
   HEADINGS: 'Headings',

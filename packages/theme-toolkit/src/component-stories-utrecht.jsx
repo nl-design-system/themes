@@ -23,6 +23,7 @@ import {
   // BadgeCounter,
   // BadgeData,
   // Blockquote,
+  Checkbox,
   // CustomCheckbox ,
   // Emphasis,
   FormFieldDescription,
@@ -47,6 +48,7 @@ import {
   TableHeaderCell,
   TableCell,
   TableCaption,
+  RadioButton,
 } from '@utrecht/component-library-react';
 
 const Blockquote = ({ children }) => <div className="utrecht-blockquote">{children}</div>;
@@ -234,6 +236,14 @@ export const UTRECHT_COMPONENT_STORIES = [
     name: 'Utrecht Link that looks like a button',
     state: true,
     render: () => <ButtonLink href="#">Link that looks like a button</ButtonLink>,
+  },
+  {
+    storyId: 'react-utrecht-checkbox--default',
+    component: 'utrecht-button',
+    group: STORY_GROUPS.CHECKBOX,
+    name: 'Checkbox',
+    state: true,
+    render: () => <Checkbox />,
   },
   {
     storyId: 'react-utrecht-link-button--default',
@@ -816,5 +826,11 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.FORM_FIELD_DESCRIPTION,
     name: 'Utrecht Form field description: Warning',
     render: () => <FormFieldDescription warning>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--default',
+    group: STORY_GROUPS.RADIO_BUTTON,
+    name: 'Utrecht Radio Button: Default',
+    render: () => <RadioButton />,
   },
 ];
