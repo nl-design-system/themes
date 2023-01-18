@@ -6,6 +6,7 @@ const duiven = require('@nl-design-system-unstable/duiven-design-tokens/src/conf
 // const duo = require('@nl-design-system-unstable/duo-design-tokens/src/config.json');
 const enkhuizen = require('@nl-design-system-unstable/enkhuizen-design-tokens/src/config.json');
 const groningen = require('@nl-design-system-unstable/groningen-design-tokens/src/config.json');
+const haarlem = require('@nl-design-system-unstable/haarlem-design-tokens/src/config.json');
 const haarlemmermeer = require('@nl-design-system-unstable/haarlemmermeer-design-tokens/src/config.json');
 const hoorn = require('@nl-design-system-unstable/hoorn-design-tokens/src/config.json');
 const horstaandemaas = require('@nl-design-system-unstable/horstaandemaas-design-tokens/src/config.json');
@@ -34,6 +35,7 @@ const themes = [
   // duo,
   enkhuizen,
   groningen,
+  haarlem,
   haarlemmermeer,
   hoorn,
   horstaandemaas,
