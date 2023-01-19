@@ -4,6 +4,7 @@ import React from 'react';
 import { STORY_GROUPS } from './component-stories-util';
 
 import {
+  Alert,
   Button,
   LinkButton,
   ButtonLink,
@@ -71,19 +72,43 @@ BadgeData.propTypes = {
 
 export const UTRECHT_COMPONENT_STORIES = [
   {
+    storyId: 'react-utrecht-alert--ok',
+    component: 'utrecht-alert',
+    group: STORY_GROUPS.ALERT,
+    name: 'Utrecht Alert ok',
+    render: () => (
+      <Alert type="ok">
+        <Heading1>Alert Ok</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam vero nesciunt, dolore assumenda
+          accusamus perspiciatis in similique inventore voluptatum reiciendis reprehenderit totam qui suscipit obcaecati
+          pariatur, harum nemo veritatis.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-alert--error',
+    component: 'utrecht-alert',
+    group: STORY_GROUPS.ALERT,
+    name: 'Utrecht Alert error',
+    render: () => (
+      <Alert type="error">
+        <Heading1>Alert Error</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam vero nesciunt, dolore assumenda
+          accusamus perspiciatis in similique inventore voluptatum reiciendis reprehenderit totam qui suscipit obcaecati
+          pariatur, harum nemo veritatis.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
     storyId: 'react-utrecht-button--default',
     component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
     name: 'Utrecht Default Button',
     render: () => <Button>Default</Button>,
-  },
-  {
-    storyId: 'react-utrecht-button--disabled',
-    component: 'utrecht-button',
-    group: STORY_GROUPS.BUTTON_DEFAULT,
-    name: 'Utrecht Default Button: Disabled',
-    state: true,
-    render: () => <Button disabled>Default</Button>,
   },
   {
     storyId: 'react-utrecht-button--active',
@@ -346,6 +371,13 @@ export const UTRECHT_COMPONENT_STORIES = [
         <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
       </PageFooter>
     ),
+  },
+  {
+    storyId: 'react-utrecht-textbox--default',
+    component: 'utrecht-textbox',
+    group: STORY_GROUPS.TEXTBOX,
+    name: 'Utrecht Textbox',
+    render: () => <Textbox value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--default',
