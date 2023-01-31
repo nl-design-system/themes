@@ -21,32 +21,34 @@
       "font-weight": {
         "value": "{hlzv.typography.common.font-weight.700}"
       },
-      "inline-size": {
-        "value": "239px"
-      },
+      "inline-size": {},
       "letter-spacing": {
         "value": "-0.3px"
       },
       "line-height": {
         "value": "28px"
       },
-      "margin-block-start": {},
-      "margin-block-end": {},
+      "margin-block-start": {
+        "value": "{haarlem.space.150}"
+      },
+      "margin-block-end": {
+        "value": "{haarlem.space.150}"
+      },
       "margin-inline-start": {},
       "margin-inline-end": {},
       "min-block-size": {},
       "min-inline-size": {},
       "padding-block-start": {
-        "value": "20px"
+        "value": "{haarlem.space.75}"
       },
       "padding-block-end": {
-        "value": "20px"
+        "value": "{haarlem.space.75}"
       },
       "padding-inline-start": {
-        "value": "30px"
+        "value": "{haarlem.space.133}"
       },
       "padding-inline-end": {
-        "value": "30px"
+        "value": "{haarlem.space.133}"
       },
       "text-transform": {},
       "active": {
@@ -141,30 +143,31 @@
         }
       },
       "subtle": {
-        "background-color": {},
-        "border-color": {},
-        "border-width": {},
+        "background-color": { "value": "transparent" },
+        "border-width": { "value": "0" },
         "color": {},
-        "font-weight": {},
-        "active": {
-          "background-color": {},
-          "border-color": {},
-          "color": {}
-        },
+        "hover": {},
         "disabled": {
-          "background-color": {},
-          "border-color": {},
-          "color": {}
+          "background-color": { "value": "transparent" },
+          "color": { "value": "{haarlem.color.dark-mode.25}" }
         },
-        "hover": {
-          "background-color": {},
-          "border-color": {},
-          "color": {}
+        "danger": {
+          "color": {},
+          "hover": {
+            "color": {}
+          },
+          "focus": {
+            "color": {}
+          }
         },
-        "focus": {
-          "background-color": {},
-          "border-color": {},
-          "color": {}
+        "ready": {
+          "color": {},
+          "hover": {
+            "color": {}
+          },
+          "focus": {
+            "color": {}
+          }
         }
       }
     }
