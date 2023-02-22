@@ -1529,6 +1529,220 @@
           }
         }
       },
+      "checkbox": {
+        "border-radius": {
+          "type": "borderRadius",
+          "value": "0"
+        },
+        "size": {
+          "type": "sizing",
+          "value": "{nl.icon.functional.size}"
+        },
+        "icon": {
+          "size": {
+            "type": "sizing",
+            "value": "{nl.icon.functional.size}"
+          }
+        },
+        "gap": {
+          "value": "{voorbeeld.space.inline.beetle}",
+          "type": "spacing"
+        },
+        "background-color": {
+          "value": "{nl.form-input.background-color}",
+          "type": "color"
+        },
+        "border-color": {
+          "value": "{nl.form-input.border-color}",
+          "type": "color"
+        },
+        "label": {
+          "color": {
+            "value": "{nl.form-input.color}",
+            "type": "color"
+          },
+          "font-size": {
+            "value": "{voorbeeld.typography.font-size.md}",
+            "type": "fontSizes"
+          },
+          "line-height": {
+            "value": "{voorbeeld.typography.line-height.md}",
+            "type": "lineHeights"
+          },
+          "font-family": {
+            "value": "{nl.body.font-family}",
+            "type": "fontFamilies"
+          },
+          "font-weight": {
+            "value": "{voorbeeld.typography.font-weight.normal}",
+            "type": "fontWeights"
+          },
+          "invalid": {
+            "color": {
+              "value": "{nl.form-input.color}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "color": {
+              "value": "{nl.form-input.focus.color}",
+              "type": "color"
+            }
+          },
+          "disabled": {
+            "color": {
+              "value": "{voorbeeld.color.gray.600}",
+              "type": "color"
+            }
+          },
+          "checked": {
+            "color": {
+              "value": "{nl.form-input.color}",
+              "type": "color"
+            }
+          },
+          "indeterminate": {
+            "color": {
+              "value": "{nl.form-input.color}",
+              "type": "color"
+            }
+          },
+          "hover": {
+            "color": {
+              "value": "{nl.form-input.color}",
+              "type": "color"
+            }
+          }
+        },
+        "invalid": {
+          "background-color": {
+            "value": "{nl.form-input.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{nl.feedback.negative.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{voorbeeld.border-width.md}",
+            "type": "borderWidth"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "value": "{nl.form-input.focus.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{nl.form-input.focus.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{nl.form-input.focus.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "disabled": {
+          "background-color": {
+            "value": "{voorbeeld.color.gray.50}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{nl.form-input.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{nl.form-input.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "checked": {
+          "background-color": {
+            "value": "{nl.interaction.color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "color": {
+            "value": "{voorbeeld.color.white}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{nl.form-input.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "indeterminate": {
+          "background-color": {
+            "value": "{nl.interaction.color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "color": {
+            "value": "{voorbeeld.color.white}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{nl.form-input.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "border-width": {
+          "value": "{nl.form-input.border-width}",
+          "type": "borderWidth"
+        },
+        "hover": {
+          "border-width": {
+            "value": "{nl.form-input.focus.border-width}",
+            "type": "borderWidth"
+          },
+          "background-color": {
+            "value": "{nl.form-input.focus.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{nl.form-input.focus.border-color}",
+            "type": "color"
+          }
+        }
+      },
+      "form-field-error-message": {
+        "icon": {
+          "size": {
+            "type": "sizing",
+            "value": "{nl.icon.functional.size}"
+          },
+          "gap": {
+            "value": "{voorbeeld.space.inline.beetle}",
+            "type": "spacing"
+          }
+        },
+        "color": {
+          "type": "color",
+          "value": "{nl.feedback.negative.color}"
+        },
+        "font-family": {
+          "value": "{nl.body.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{voorbeeld.typography.font-size.md}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{voorbeeld.typography.font-weight.normal}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{voorbeeld.typography.line-height.md}",
+          "type": "lineHeights"
+        }
+      },
       "link": {
         "line-height": {
           "value": "{voorbeeld.typography.line-height.md}",
@@ -2011,7 +2225,7 @@
       "textbox": {
         "border-radius": {
           "type": "borderRadius",
-          "value": "none"
+          "value": "0"
         },
         "font-family": {
           "value": "{nl.body.font-family}",
@@ -2138,6 +2352,24 @@
             "value": "{nl.form-input.color}",
             "type": "color"
           }
+        },
+        "hover": {
+          "border-width": {
+            "value": "{nl.form-input.focus.border-width}",
+            "type": "borderWidth"
+          },
+          "background-color": {
+            "value": "{nl.form-input.focus.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{nl.form-input.focus.border-color}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{nl.form-input.focus.color}",
+            "type": "color"
+          }
         }
       },
       "ordered-list": {
@@ -2210,28 +2442,6 @@
         "color": {
           "type": "color",
           "value": "{nl.document.subtle.color}"
-        },
-        "font-family": {
-          "value": "{nl.body.font-family}",
-          "type": "fontFamilies"
-        },
-        "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
-          "type": "fontSizes"
-        },
-        "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
-          "type": "fontWeights"
-        },
-        "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
-          "type": "lineHeights"
-        }
-      },
-      "form-field-error": {
-        "color": {
-          "type": "color",
-          "value": "{nl.feedback.negative.color}"
         },
         "font-family": {
           "value": "{nl.body.font-family}",
