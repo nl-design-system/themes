@@ -794,6 +794,10 @@
         "md": {
           "value": "2px",
           "type": "borderWidth"
+        },
+        "lg": {
+          "value": "4px",
+          "type": "borderWidth"
         }
       },
       "size": {
@@ -1114,11 +1118,7 @@
           "value": "{voorbeeld.border-radius.round}",
           "type": "borderRadius"
         },
-        "height": {
-          "value": "{nl.pointer-target.min-size}",
-          "type": "sizing"
-        },
-        "width": {
+        "size": {
           "value": "{nl.pointer-target.min-size}",
           "type": "sizing"
         },
@@ -2527,6 +2527,22 @@
           "color": {
             "value": "{nl.form-input.focus.color}",
             "type": "color"
+          }
+        }
+      },
+      "form-field": {
+        "invalid": {
+          "padding-inline-start": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          },
+          "border-color": {
+            "value": "{nl.feedback.negative.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{voorbeeld.border-width.lg}",
+            "type": "borderWidth"
           }
         }
       },
