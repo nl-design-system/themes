@@ -939,6 +939,24 @@
         "font-family": {
           "value": "{voorbeeld.typography.font-family.secondary}",
           "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{voorbeeld.typography.font-size.md}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{voorbeeld.typography.font-weight.normal}",
+          "type": "fontWeights"
+        },
+        "strong": {
+          "font-weight": {
+            "value": "{voorbeeld.typography.font-weight.bold}",
+            "type": "fontWeights"
+          }
+        },
+        "line-height": {
+          "value": "{voorbeeld.typography.line-height.md}",
+          "type": "lineHeights"
         }
       },
       "interaction": {
@@ -1151,6 +1169,10 @@
         "font-family": {
           "value": "{voorbeeld.typography.font-family.primary}",
           "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{voorbeeld.typography.font-weight.bold}",
+          "type": "fontWeights"
         }
       },
       "root": {
@@ -1238,11 +1260,11 @@
             "type": "fontFamilies"
           },
           "font-weight": {
-            "value": "{voorbeeld.typography.font-weight.bold}",
+            "value": "{nl.document.strong.font-weight}",
             "type": "fontWeights"
           },
           "line-height": {
-            "value": "{voorbeeld.typography.line-height.md}",
+            "value": "{nl.document.line-height}",
             "type": "lineHeights"
           },
           "text-transform": {
@@ -1250,7 +1272,7 @@
             "type": "textCase"
           },
           "font-size": {
-            "value": "{voorbeeld.typography.font-size.md}",
+            "value": "{nl.document.font-size}",
             "type": "fontSizes"
           }
         },
@@ -1332,7 +1354,7 @@
             }
           },
           "font-weight": {
-            "value": "{voorbeeld.typography.font-weight.bold}",
+            "value": "{nl.document.strong.font-weight}",
             "type": "fontWeights"
           },
           "active": {
@@ -1406,7 +1428,7 @@
             }
           },
           "font-weight": {
-            "value": "{voorbeeld.typography.font-weight.bold}",
+            "value": "{nl.document.strong.font-weight}",
             "type": "fontWeights"
           },
           "active": {
@@ -1459,16 +1481,16 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.document.strong.font-weight}",
           "type": "fontWeights"
         },
         "subtle": {
           "font-weight": {
-            "value": "{voorbeeld.typography.font-weight.bold}",
+            "value": "{nl.document.strong.font-weight}",
             "type": "fontWeights"
           },
           "hover": {
@@ -1541,7 +1563,7 @@
           }
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         },
         "padding-block-end": {
@@ -1973,11 +1995,11 @@
           "type": "color"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         },
         "font-family": {
@@ -1985,7 +2007,7 @@
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "disabled": {
@@ -2213,21 +2235,21 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         }
       },
       "link": {
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         },
         "color": {
@@ -2297,7 +2319,7 @@
           }
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-family": {
@@ -2313,7 +2335,7 @@
           "type": "other"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         }
       },
@@ -2322,25 +2344,12 @@
           "type": "color",
           "value": "{nl.document.color}"
         },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.heading.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.bold}",
-            "lineHeight": "{voorbeeld.typography.line-height.sm}",
-            "fontSize": "{voorbeeld.typography.font-size.3xl}",
-            "letterSpacing": "normal",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
-        },
         "font-family": {
           "value": "{nl.heading.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.heading.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -2357,25 +2366,12 @@
           "type": "color",
           "value": "{nl.document.color}"
         },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.heading.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.bold}",
-            "lineHeight": "{voorbeeld.typography.line-height.sm}",
-            "fontSize": "{voorbeeld.typography.font-size.2xl}",
-            "letterSpacing": "normal",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
-        },
         "font-family": {
           "value": "{nl.heading.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.heading.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -2392,25 +2388,12 @@
           "type": "color",
           "value": "{nl.document.color}"
         },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.heading.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.bold}",
-            "lineHeight": "{voorbeeld.typography.line-height.sm}",
-            "fontSize": "{voorbeeld.typography.font-size.xl}",
-            "letterSpacing": "normal",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
-        },
         "font-family": {
           "value": "{nl.heading.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.heading.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -2427,25 +2410,12 @@
           "type": "color",
           "value": "{nl.document.color}"
         },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.heading.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.bold}",
-            "lineHeight": "{voorbeeld.typography.line-height.md}",
-            "fontSize": "{voorbeeld.typography.font-size.lg}",
-            "letterSpacing": "normal",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
-        },
         "font-family": {
           "value": "{nl.heading.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.heading.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -2462,25 +2432,12 @@
           "type": "color",
           "value": "{nl.document.color}"
         },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.heading.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.bold}",
-            "lineHeight": "{voorbeeld.typography.line-height.md}",
-            "fontSize": "{voorbeeld.typography.font-size.md}",
-            "letterSpacing": "normal",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
-        },
         "font-family": {
           "value": "{nl.heading.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.heading.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -2497,25 +2454,12 @@
           "type": "color",
           "value": "{nl.document.color}"
         },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.heading.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.bold}",
-            "lineHeight": "{voorbeeld.typography.line-height.md}",
-            "fontSize": "{voorbeeld.typography.font-size.sm}",
-            "letterSpacing": "normal",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
-        },
         "font-family": {
           "value": "{nl.heading.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.heading.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -2532,33 +2476,20 @@
           "type": "color",
           "value": "{nl.document.color}"
         },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.document.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.normal}",
-            "lineHeight": "{voorbeeld.typography.line-height.md}",
-            "fontSize": "{voorbeeld.typography.font-size.md}",
-            "letterSpacing": "0",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
-        },
         "font-family": {
           "value": "{nl.document.font-family}",
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         }
       },
@@ -2566,19 +2497,6 @@
         "color": {
           "type": "color",
           "value": "{nl.document.color}"
-        },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.document.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.normal}",
-            "lineHeight": "{voorbeeld.typography.line-height.md}",
-            "fontSize": "{voorbeeld.typography.font-size.lg}",
-            "letterSpacing": "0",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
         },
         "font-family": {
           "value": "{nl.document.font-family}",
@@ -2589,11 +2507,11 @@
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         }
       },
@@ -2601,19 +2519,6 @@
         "color": {
           "type": "color",
           "value": "{nl.document.color}"
-        },
-        "text-style": {
-          "value": {
-            "fontFamily": "{nl.document.font-family}",
-            "fontWeight": "{voorbeeld.typography.font-weight.normal}",
-            "lineHeight": "{voorbeeld.typography.line-height.md}",
-            "fontSize": "{voorbeeld.typography.font-size.sm}",
-            "letterSpacing": "0",
-            "paragraphSpacing": "0",
-            "textCase": "none",
-            "textDecoration": "none"
-          },
-          "type": "typography"
         },
         "font-family": {
           "value": "{nl.document.font-family}",
@@ -2624,11 +2529,11 @@
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         }
       },
@@ -2642,15 +2547,15 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         },
         "max-inline-size": {
@@ -2796,15 +2701,15 @@
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         },
         "item": {
@@ -2828,15 +2733,15 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.bold}",
+          "value": "{nl.document.strong.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         }
       },
@@ -2850,15 +2755,15 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         }
       },
@@ -2882,15 +2787,15 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         },
         "padding-inline-start": {
@@ -3072,15 +2977,15 @@
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{voorbeeld.typography.font-weight.normal}",
+          "value": "{nl.document.font-weight}",
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{voorbeeld.typography.line-height.md}",
+          "value": "{nl.document.line-height}",
           "type": "lineHeights"
         },
         "font-size": {
-          "value": "{voorbeeld.typography.font-size.md}",
+          "value": "{nl.document.font-size}",
           "type": "fontSizes"
         }
       }
