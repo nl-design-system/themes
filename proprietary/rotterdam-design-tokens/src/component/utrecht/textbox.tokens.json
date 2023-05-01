@@ -1,31 +1,35 @@
 {
   "utrecht": {
     "textbox": {
-      "border-bottom-width": {},
-      "border-color": {},
+      "border-color": {"value": "{rotterdam.color.base.gray.tint-08}"},
       "border-radius": {},
-      "border-width": {},
+      "border-width": {"value": "1px"},
       "background-color": {},
-      "color": {},
-      "font-family": {},
-      "font-size": {},
+      "color": {"value": "{rotterdam.color.base.gray.tint-11}"},
+      "font-family": {"value": "{rotterdam.typography.sans-serif.font-family}"},
+      "font-size": {"value": "16px"},
       "min-inline-size": {},
       "max-inline-size": {},
-      "padding-block-end": {},
-      "padding-block-start": {},
-      "padding-inline-end": {},
-      "padding-inline-start": {},
+      "padding-block-end": {"value": "8px"},
+      "padding-block-start": {"value": "8px"},
+      "padding-inline-end": {"value": "16px"},
+      "padding-inline-start": {"value": "16px"},
       "disabled": {
-        "border-color": {},
-        "color": {}
+        "background-color": {"value": "{rotterdam.color.gray.tint-01}"}
       },
-      "invalid": {
-        "border-color": {},
-        "border-width": {}
+      "hover": {
+        "border-color": {"value": "{rotterdam.color.base.green}"}
       },
-      "read-only": {
-        "border-color": {},
-        "color": {}
+      "selected": {
+        "border-width": {"value": "2px"}
+      },
+      "error": {
+        "border-bottom-width": {"value": "2px"},
+        "border-bottom-color": {"value": "{rotterdam.color.red.tint-01}"} 
+      },
+      "validation": {
+        "border-bottom-width": {"value": "2px"},
+        "border-bottom-color": {"value": "{rotterdam.color.green.tint-01}"} 
       }
     }
   }
