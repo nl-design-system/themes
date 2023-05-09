@@ -232,11 +232,17 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-checkbox--default',
-    component: 'utrecht-button',
+    component: 'utrecht-checkbox',
     group: STORY_GROUPS.CHECKBOX,
-    name: 'Checkbox',
-    state: true,
+    name: 'Utrecht Checkbox Default',
     render: () => <Checkbox />,
+  },
+  {
+    storyId: 'react-utrecht-checkbox--checked',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS.CHECKBOX,
+    name: 'Utrecht Checkbox Checked',
+    render: () => <Checkbox checked />,
   },
   {
     storyId: 'react-utrecht-link-button--default',
@@ -300,12 +306,6 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 6',
     render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
-  },
-  {
-    storyId: 'react-utrecht-checkbox--default',
-    component: 'utrecht-checkbox',
-    name: 'Utrecht Checkbox Default',
-    render: () => <Checkbox />,
   },
   {
     storyId: 'react-utrecht-alert--default',
