@@ -302,6 +302,11 @@ export const UTRECHT_COMPONENT_STORIES = [
     render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
   },
   {
+    storyId: 'react-utrecht-checkbox--default',
+    component: 'utrecht-checkbox',
+    render: () => <Checkbox />,
+  },
+  {
     storyId: 'react-utrecht-alert--default',
     component: 'utrecht-alert',
     name: 'Utrecht Alert Default',
