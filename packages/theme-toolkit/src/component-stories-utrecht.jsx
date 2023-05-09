@@ -308,6 +308,12 @@ export const UTRECHT_COMPONENT_STORIES = [
     render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
   },
   {
+    storyId: 'react-utrecht-radio-button--default',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Default',
+    render: () => <RadioButton />,
+  },
+  {
     storyId: 'react-utrecht-alert--default',
     component: 'utrecht-alert',
     name: 'Utrecht Alert Default',
