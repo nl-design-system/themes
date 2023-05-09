@@ -304,6 +304,7 @@ export const UTRECHT_COMPONENT_STORIES = [
   {
     storyId: 'react-utrecht-checkbox--default',
     component: 'utrecht-checkbox',
+    name: 'Utrecht Checkbox Default',
     render: () => <Checkbox />,
   },
   {
