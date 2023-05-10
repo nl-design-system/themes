@@ -72,38 +72,6 @@ BadgeData.propTypes = {
 
 export const UTRECHT_COMPONENT_STORIES = [
   {
-    storyId: 'react-utrecht-alert--ok',
-    component: 'utrecht-alert',
-    group: STORY_GROUPS.ALERT,
-    name: 'Utrecht Alert ok',
-    render: () => (
-      <Alert type="ok">
-        <Heading1>Alert Ok</Heading1>
-        <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam vero nesciunt, dolore assumenda
-          accusamus perspiciatis in similique inventore voluptatum reiciendis reprehenderit totam qui suscipit obcaecati
-          pariatur, harum nemo veritatis.
-        </Paragraph>
-      </Alert>
-    ),
-  },
-  {
-    storyId: 'react-utrecht-alert--error',
-    component: 'utrecht-alert',
-    group: STORY_GROUPS.ALERT,
-    name: 'Utrecht Alert error',
-    render: () => (
-      <Alert type="error">
-        <Heading1>Alert Error</Heading1>
-        <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam vero nesciunt, dolore assumenda
-          accusamus perspiciatis in similique inventore voluptatum reiciendis reprehenderit totam qui suscipit obcaecati
-          pariatur, harum nemo veritatis.
-        </Paragraph>
-      </Alert>
-    ),
-  },
-  {
     storyId: 'react-utrecht-button--default',
     component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
@@ -264,11 +232,17 @@ export const UTRECHT_COMPONENT_STORIES = [
   },
   {
     storyId: 'react-utrecht-checkbox--default',
-    component: 'utrecht-button',
+    component: 'utrecht-checkbox',
     group: STORY_GROUPS.CHECKBOX,
-    name: 'Checkbox',
-    state: true,
+    name: 'Utrecht Checkbox Default',
     render: () => <Checkbox />,
+  },
+  {
+    storyId: 'react-utrecht-checkbox--checked',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS.CHECKBOX,
+    name: 'Utrecht Checkbox Checked',
+    render: () => <Checkbox checked />,
   },
   {
     storyId: 'react-utrecht-link-button--default',
@@ -332,6 +306,87 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.HEADINGS,
     name: 'Utrecht Heading 6',
     render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--default',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Default',
+    render: () => <RadioButton />,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--checked',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Checked',
+    render: () => <RadioButton checked />,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--disabled',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Disabled',
+    render: () => <RadioButton disabled />,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--disabled-checked',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Disabled Checked',
+    render: () => <RadioButton checked disabled />,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--invalid',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Invalid',
+    render: () => <RadioButton invalid />,
+  },
+  {
+    storyId: 'react-utrecht-alert--default',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert Default',
+    render: () => (
+      <Alert>
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-alert--error',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert Error',
+    render: () => (
+      <Alert type="error">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-alert--ok',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert Ok',
+    render: () => (
+      <Alert type="ok">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Alert>
+    ),
   },
   {
     storyId: 'react-utrecht-unordered-list--default',
@@ -858,11 +913,5 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.FORM_FIELD_DESCRIPTION,
     name: 'Utrecht Form field description: Warning',
     render: () => <FormFieldDescription warning>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
-  },
-  {
-    storyId: 'react-utrecht-radio-button--default',
-    group: STORY_GROUPS.RADIO_BUTTON,
-    name: 'Utrecht Radio Button: Default',
-    render: () => <RadioButton />,
   },
 ];
