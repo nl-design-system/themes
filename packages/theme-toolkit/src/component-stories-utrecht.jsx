@@ -314,6 +314,30 @@ export const UTRECHT_COMPONENT_STORIES = [
     render: () => <RadioButton />,
   },
   {
+    storyId: 'react-utrecht-radio-button--checked',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Checked',
+    render: () => <RadioButton checked />,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--disabled',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Disabled',
+    render: () => <RadioButton disabled />,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--disabled-checked',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Disabled Checked',
+    render: () => <RadioButton checked disabled />,
+  },
+  {
+    storyId: 'react-utrecht-radio-button--invalid',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Invalid',
+    render: () => <RadioButton invalid />,
+  },
+  {
     storyId: 'react-utrecht-alert--default',
     component: 'utrecht-alert',
     name: 'Utrecht Alert Default',
@@ -889,11 +913,5 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.FORM_FIELD_DESCRIPTION,
     name: 'Utrecht Form field description: Warning',
     render: () => <FormFieldDescription warning>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
-  },
-  {
-    storyId: 'react-utrecht-radio-button--default',
-    group: STORY_GROUPS.RADIO_BUTTON,
-    name: 'Utrecht Radio Button: Default',
-    render: () => <RadioButton />,
   },
 ];

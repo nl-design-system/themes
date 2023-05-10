@@ -250,6 +250,20 @@ $amsterdam-typography-scale-lg-h1-font-size: 103.85px;
   background-color: #00387A;
 }
 
+.utrecht-radio-button--html-input:checked:hover {
+  background-color: #00387A;
+  border-color: #00387A;
+}
+.utrecht-radio-button--html-input:disabled:hover {
+  background-color: #B4B4B4;
+  border-color: #B4B4B4;
+}
+
+.utrecht-radio-button--invalid:hover {
+  border-width: 2px;
+  border-color: #EC0000;
+}
+
 @media screen {
   .amsterdam-theme--responsive {
     $amsterdam-viewport-min-inline-size: 320px;
