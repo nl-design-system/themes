@@ -145,6 +145,12 @@ const builtinThemes = [
     href: 'https://unpkg.com/@nl-design-system-unstable/zwolle-design-tokens/dist/index.css',
     package: '@nl-design-system-unstable/zwolle-design-tokens',
   },
+  {
+    className: 'overheidnl-theme',
+    title: 'overheidnl',
+    href: 'https://unpkg.com/@nl-design-system-unstable/overheidnl-design-tokens/dist/index.css',
+    package: '@nl-design-system-unstable/overheidnl-design-tokens',
+  },
 ];
 
 const stylesheetExists = (href) =>

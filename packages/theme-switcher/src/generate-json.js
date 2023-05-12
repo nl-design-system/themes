@@ -20,6 +20,7 @@ const vught = require('@nl-design-system-unstable/vught-design-tokens/src/config
 const westervoort = require('@nl-design-system-unstable/westervoort-design-tokens/src/config.json');
 const zevenaar = require('@nl-design-system-unstable/zevenaar-design-tokens/src/config.json');
 const zwolle = require('@nl-design-system-unstable/zwolle-design-tokens/src/config.json');
+const overheidnl = require('@nl-design-system-unstable/overheidnl-design-tokens/src/config.json');
 const utrecht = require('../../../documentation/utrecht/config.json');
 const denhaag = require('../../../documentation/denhaag/config.json');
 const openforms = require('../../../documentation/open-forms/config.json');
@@ -52,6 +53,7 @@ const themes = [
   denhaag,
   utrecht,
   openforms,
+  overheidnl,
 ]
   .map(({ cdn, name, fullName, prefix, npm }) => ({
     className: `${prefix}-theme`,
