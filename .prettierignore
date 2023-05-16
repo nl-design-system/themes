@@ -9,6 +9,7 @@ dist/
 tmp/
 figma/
 CHANGELOG.md
+packages/example-theme/src/generated/
 
 # The indentation of dependency JSON files should only be updated by `yarn` and
 # `npm` commands, so dependency automation scripts (such as Dependabot and
@@ -22,3 +23,6 @@ components/components.d.ts
 packages/web-components-stencil/loader
 packages/web-components-react/src/react-component-lib/
 packages/web-components-react/src/components.ts
+
+# Ignore files managed by Figma Token Studio
+figma/*.tokens.json

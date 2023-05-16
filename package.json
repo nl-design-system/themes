@@ -86,7 +86,7 @@
     "build-workspaces": "lerna run build",
     "clean": "rimraf dist/ documentation/build/ packages/storybook/dist && lerna run clean",
     "deploy": "npm-run-all deploy:**",
-    "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
+    "lint": "npm-run-all --continue-on-error lint:** lint-workspaces && prettier --check .",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --no-error-on-unmatched-pattern '**/*.{js,jsx,ts,tsx}'",
     "lint:html": "find . -type d \\( -name node_modules \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
