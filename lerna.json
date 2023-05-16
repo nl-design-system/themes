@@ -1,5 +1,6 @@
 {
-  "npmClient": "npm",
+  "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
+  "npmClient": "pnpm",
   "version": "independent",
   "useWorkspaces": true,
   "command": {
@@ -7,6 +8,7 @@
     "version": {
       "allowBranch": ["main"],
       "conventionalCommits": true,
+      "syncWorkspaceLock": true,
       "exact": true,
       "message": "docs(release): design system packages\n\nskip-checks: true"
     }

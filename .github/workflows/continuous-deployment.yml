@@ -20,10 +20,29 @@ jobs:
         with:
           node-version: "18.12.x"
 
-      - name: Install
+      - uses: pnpm/action-setup@v2.2.4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
         run: |
-          npm ci
-          npm ls
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+          pnpm ls --recursive
 
       - name: "Continuous Integration: lint"
         run: |
@@ -101,10 +120,29 @@ jobs:
         with:
           node-version: "18.12.x"
 
-      - name: "Continuous Deployment: install"
+      - uses: pnpm/action-setup@v2.2.4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
         run: |
-          npm ci
-          npm ls
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+          pnpm ls --recursive
 
       - name: "Continuous Deployment: build"
         run: |
@@ -119,12 +157,12 @@ jobs:
           GIT_COMMITTER_NAME: "NL Design System"
         run: |
           git push --set-upstream origin HEAD
-          npm run release -- --yes
+          pnpm run release
 
       - name: "Continuous Deployment: publish to npm"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          npm run publish -- --no-verify-access --yes
-          npm config delete "//registry.npmjs.org/:_authToken"
+          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          pnpm run publish
+          pnpm config delete "//registry.npmjs.org/:_authToken"
