@@ -253,6 +253,20 @@ export const UTRECHT_COMPONENT_STORIES = [
     render: () => <Checkbox checked />,
   },
   {
+    storyId: 'react-utrecht-checkbox--disabled-checked',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS.CHECKBOX,
+    name: 'Utrecht Checkbox Disabled Checked',
+    render: () => <Checkbox checked disabled />,
+  },
+  {
+    storyId: 'react-utrecht-checkbox--disabled',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS.CHECKBOX,
+    name: 'Utrecht Checkbox Disabled',
+    render: () => <Checkbox disabled />,
+  },
+  {
     storyId: 'react-utrecht-link-button--default',
     component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_LINK_DEFAULT,
@@ -921,5 +935,14 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.FORM_FIELD_DESCRIPTION,
     name: 'Utrecht Form field description: Warning',
     render: () => <FormFieldDescription warning>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
+  },
+  {
+    storyId: 'react-utrecht-page-footer',
+    name: 'Utrecht Page Footer',
+    render: () => (
+      <PageFooter>
+        <Paragraph>Page Footer Area</Paragraph>
+      </PageFooter>
+    ),
   },
 ];
