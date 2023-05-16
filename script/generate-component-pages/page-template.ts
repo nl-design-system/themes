@@ -8,7 +8,7 @@ import { LinkBadge } from '../components/Badge';
 import { getTokens, getDesignTokenArgs } from '../components/designTokenUtils';
 import themes from '@nl-design-system-unstable/theme-switcher/dist/themes.json';
 import Template, {argTypes, defaultArgs, exampleArgs} from "${storyTemplate}";
-import designTokens from '@utrecht/design-tokens/dist/tokens.js';
+import designTokens from '@utrecht/design-tokens/dist/tokens.cjs';
 import { ComponentPage } from '../components/ComponentPage';
 import get from 'lodash.get';
 
