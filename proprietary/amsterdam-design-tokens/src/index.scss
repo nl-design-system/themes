@@ -233,38 +233,37 @@ $amsterdam-typography-scale-lg-h1-font-size: 103.85px;
   font-size: initial !important;
 }
 
-
 .amsterdam-theme {
-/* button secondary width */
-.utrecht-button--secondary-action:hover{
-  border-width: 3px;
-}
+  /* button secondary width */
+  .utrecht-button--secondary-action:hover {
+    border-width: 3px;
+  }
 
-.utrecht-button:focus,
-.utrecht-textarea--html-textarea:focus,
-.utrecht-select--html-select:focus,
-.utrecht-link:focus, 
-.utrecht-textbox--html-input:focus {
-  --utrecht-focus-outline-style: solid;
-}
+  .utrecht-button:focus,
+  .utrecht-textarea--html-textarea:focus,
+  .utrecht-select--html-select:focus,
+  .utrecht-link:focus,
+  .utrecht-textbox--html-input:focus {
+    --utrecht-focus-outline-style: solid;
+  }
 
-.utrecht-checkbox--html-input:checked:hover {
-  background-color: #00387A;
-}
+  .utrecht-checkbox--html-input:checked:hover {
+    background-color: #00387a;
+  }
 
-.utrecht-radio-button--html-input:checked:hover {
-  background-color: #00387A;
-  border-color: #00387A;
-}
-.utrecht-radio-button--html-input:disabled:hover {
-  background-color: #B4B4B4;
-  border-color: #B4B4B4;
-}
+  .utrecht-radio-button--html-input:checked:hover {
+    background-color: #00387a;
+    border-color: #00387a;
+  }
+  .utrecht-radio-button--html-input:disabled:hover {
+    background-color: #b4b4b4;
+    border-color: #b4b4b4;
+  }
 
-.utrecht-radio-button--invalid:hover {
-  border-width: 2px;
-  border-color: #EC0000;
-}
+  .utrecht-radio-button--invalid:hover {
+    border-width: 2px;
+    border-color: #ec0000;
+  }
 }
 @media screen {
   .amsterdam-theme--responsive {
