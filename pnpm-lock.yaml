@@ -29,6 +29,87 @@ importers:
       '@lerna-lite/run':
         specifier: 2.3.0
         version: 2.3.0(bluebird@3.7.2)
+      '@nl-design-system-unstable/amsterdam-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/amsterdam-design-tokens
+      '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/bodegraven-reeuwijk-design-tokens
+      '@nl-design-system-unstable/borne-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/borne-design-tokens
+      '@nl-design-system-unstable/buren-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/buren-design-tokens
+      '@nl-design-system-unstable/drechterland-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/drechterland-design-tokens
+      '@nl-design-system-unstable/duiven-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/duiven-design-tokens
+      '@nl-design-system-unstable/duo-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/duo-design-tokens
+      '@nl-design-system-unstable/enkhuizen-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/enkhuizen-design-tokens
+      '@nl-design-system-unstable/example-theme':
+        specifier: workspace:*
+        version: link:packages/example-theme
+      '@nl-design-system-unstable/groningen-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/groningen-design-tokens
+      '@nl-design-system-unstable/haarlem-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/haarlem-design-tokens
+      '@nl-design-system-unstable/haarlemmermeer-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/haarlemmermeer-design-tokens
+      '@nl-design-system-unstable/hoorn-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/hoorn-design-tokens
+      '@nl-design-system-unstable/horstaandemaas-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/horstaandemaas-design-tokens
+      '@nl-design-system-unstable/leidschendam-voorburg-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/leidschendam-voorburg-design-tokens
+      '@nl-design-system-unstable/nijmegen-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/nijmegen-design-tokens
+      '@nl-design-system-unstable/noordoostpolder-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/noordoostpolder-design-tokens
+      '@nl-design-system-unstable/provincie-zuid-holland-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/provincie-zuid-holland-design-tokens
+      '@nl-design-system-unstable/rotterdam-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/rotterdam-design-tokens
+      '@nl-design-system-unstable/stedebroec-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/stedebroec-design-tokens
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:packages/theme-toolkit
+      '@nl-design-system-unstable/tilburg-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/tilburg-design-tokens
+      '@nl-design-system-unstable/venray-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/venray-design-tokens
+      '@nl-design-system-unstable/vught-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/vught-design-tokens
+      '@nl-design-system-unstable/westervoort-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/westervoort-design-tokens
+      '@nl-design-system-unstable/zevenaar-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/zevenaar-design-tokens
+      '@nl-design-system-unstable/zwolle-design-tokens':
+        specifier: workspace:*
+        version: link:proprietary/zwolle-design-tokens
       '@nl-design-system/component-index':
         specifier: 1.0.0-alpha.12
         version: 1.0.0-alpha.12
@@ -260,7 +341,74 @@ importers:
 
   packages/theme-logo: {}
 
-  packages/theme-switcher: {}
+  packages/theme-switcher:
+    devDependencies:
+      '@nl-design-system-unstable/amsterdam-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/amsterdam-design-tokens
+      '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/bodegraven-reeuwijk-design-tokens
+      '@nl-design-system-unstable/buren-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/buren-design-tokens
+      '@nl-design-system-unstable/drechterland-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/drechterland-design-tokens
+      '@nl-design-system-unstable/duiven-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/duiven-design-tokens
+      '@nl-design-system-unstable/duo-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/duo-design-tokens
+      '@nl-design-system-unstable/enkhuizen-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/enkhuizen-design-tokens
+      '@nl-design-system-unstable/groningen-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/groningen-design-tokens
+      '@nl-design-system-unstable/haarlem-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/haarlem-design-tokens
+      '@nl-design-system-unstable/haarlemmermeer-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/haarlemmermeer-design-tokens
+      '@nl-design-system-unstable/hoorn-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/hoorn-design-tokens
+      '@nl-design-system-unstable/horstaandemaas-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/horstaandemaas-design-tokens
+      '@nl-design-system-unstable/leidschendam-voorburg-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/leidschendam-voorburg-design-tokens
+      '@nl-design-system-unstable/noordoostpolder-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/noordoostpolder-design-tokens
+      '@nl-design-system-unstable/rotterdam-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/rotterdam-design-tokens
+      '@nl-design-system-unstable/stedebroec-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/stedebroec-design-tokens
+      '@nl-design-system-unstable/tilburg-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/tilburg-design-tokens
+      '@nl-design-system-unstable/venray-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/venray-design-tokens
+      '@nl-design-system-unstable/vught-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/vught-design-tokens
+      '@nl-design-system-unstable/westervoort-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/westervoort-design-tokens
+      '@nl-design-system-unstable/zevenaar-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/zevenaar-design-tokens
+      '@nl-design-system-unstable/zwolle-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/zwolle-design-tokens
 
   packages/theme-toolkit:
     dependencies:
