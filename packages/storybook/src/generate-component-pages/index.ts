@@ -5,7 +5,7 @@ import * as path from 'path';
 
 import { pageTemplate } from './page-template';
 
-const DOCS_PATH = '../../documentation/build';
+const DOCS_PATH = '../generated';
 
 // Ensure Directory
 const dirPath = path.join(__dirname, DOCS_PATH);
