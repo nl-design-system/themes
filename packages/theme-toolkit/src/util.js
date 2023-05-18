@@ -17,12 +17,7 @@ export const listColors = (arg) => {
 export const getColors = (tokens) => {
   const grouped = Object.values(tokens)
     .filter(
-      (item) =>
-        !isToken(item) &&
-        item &&
-        typeof item === 'object' &&
-        Object.values(item).filter(isToken).length >= 1 &&
-        Object.values(item).filter(isToken),
+      (item) => !isToken(item) && item && typeof item === 'object' && Object.values(item).filter(isToken).length >= 1,
     )
     .map(Object.values);
 
