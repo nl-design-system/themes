@@ -20,9 +20,9 @@ import vught from "@nl-design-system-unstable/vught-design-tokens/src/config.jso
 import westervoort from "@nl-design-system-unstable/westervoort-design-tokens/src/config.json" assert { type: "json" };
 import zevenaar from "@nl-design-system-unstable/zevenaar-design-tokens/src/config.json" assert { type: "json" };
 import zwolle from "@nl-design-system-unstable/zwolle-design-tokens/src/config.json" assert { type: "json" };
-import utrecht from "../../../documentation/utrecht/config.json" assert { type: "json" };
-import denhaag from "../../../documentation/denhaag/config.json" assert { type: "json" };
-import openforms from "../../../documentation/open-forms/config.json" assert { type: "json" };
+import utrecht from "../../storybook/src/utrecht/config.json" assert { type: "json" };
+import denhaag from "../../storybook/src/denhaag/config.json" assert { type: "json" };
+import openforms from "../../storybook/src/open-forms/config.json" assert { type: "json" };
 
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 

@@ -8,7 +8,7 @@ const babelSettings = {
 module.exports = {
   core: { builder: 'webpack5' },
   stories: [
-    '../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
+    '../src/**/*stories.@(js|jsx|mdx|ts|tsx)',
     '../../../packages/*-theme/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
     '../../../proprietary/*/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
   ],
