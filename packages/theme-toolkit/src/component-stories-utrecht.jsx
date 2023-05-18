@@ -454,14 +454,14 @@ export const UTRECHT_COMPONENT_STORIES = [
     component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox',
-    render: () => <Textbox value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textbox defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--default',
     component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox',
-    render: () => <Textbox value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textbox defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--placeholder',
@@ -476,7 +476,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Disabled',
     state: true,
-    render: () => <Textbox disabled value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textbox disabled defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--hover',
@@ -484,7 +484,9 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Hover',
     state: true,
-    render: () => <Textbox className="utrecht-textbox--hover" value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textbox className="utrecht-textbox--hover" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+    ),
   },
   {
     storyId: 'react-utrecht-textbox--focus',
@@ -492,7 +494,9 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Focus',
     state: true,
-    render: () => <Textbox className="utrecht-textbox--focus" value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textbox className="utrecht-textbox--focus" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+    ),
   },
   {
     storyId: 'react-utrecht-textbox--focus-visible',
@@ -501,7 +505,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     name: 'Utrecht Textbox: Focus Visible',
     state: true,
     render: () => (
-      <Textbox className="utrecht-textbox--focus-visible" value="The Quick Brown Fox Jumps Over The Lazy Dog" />
+      <Textbox className="utrecht-textbox--focus-visible" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
     ),
   },
   {
@@ -510,28 +514,28 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Invalid',
     state: true,
-    render: () => <Textbox invalid value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textbox invalid defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--readonly',
     component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Read Only',
-    render: () => <Textbox readOnly value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textbox readOnly defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--required',
     component: 'utrecht-textbox',
     group: STORY_GROUPS.TEXTBOX,
     name: 'Utrecht Textbox: Required',
-    render: () => <Textbox required value="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textbox required defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textarea--default',
     component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea',
-    render: () => <Textarea>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
+    render: () => <Textarea defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textarea--placeholder',
@@ -546,7 +550,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Disabled',
     state: true,
-    render: () => <Textarea disabled>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
+    render: () => <Textarea disabled defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textarea--hover',
@@ -554,7 +558,9 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Hover',
     state: true,
-    render: () => <Textarea className="utrecht-textarea--hover">The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
+    render: () => (
+      <Textarea className="utrecht-textarea--hover" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+    ),
   },
   {
     storyId: 'react-utrecht-textarea--focus',
@@ -562,7 +568,9 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Focus',
     state: true,
-    render: () => <Textarea className="utrecht-textarea--focus">The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
+    render: () => (
+      <Textarea className="utrecht-textarea--focus" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+    ),
   },
   {
     storyId: 'react-utrecht-textarea--focus-visible',
@@ -571,7 +579,10 @@ export const UTRECHT_COMPONENT_STORIES = [
     name: 'Utrecht Textarea: Focus Visible',
     state: true,
     render: () => (
-      <Textarea className="utrecht-textarea--focus-visible">The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>
+      <Textarea
+        className="utrecht-textarea--focus-visible"
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
     ),
   },
   {
@@ -580,21 +591,21 @@ export const UTRECHT_COMPONENT_STORIES = [
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Invalid',
     state: true,
-    render: () => <Textarea invalid>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
+    render: () => <Textarea invalid defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textarea--readonly',
     component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Read Only',
-    render: () => <Textarea readOnly>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
+    render: () => <Textarea readOnly defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textarea--required',
     component: 'utrecht-textarea',
     group: STORY_GROUPS.TEXTAREA,
     name: 'Utrecht Textarea: Required',
-    render: () => <Textarea required>The Quick Brown Fox Jumps Over The Lazy Dog</Textarea>,
+    render: () => <Textarea required defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-table--default',
