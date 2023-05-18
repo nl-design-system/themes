@@ -21,10 +21,9 @@
     "prebuild": "npm run clean",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm run --ignore-scripts build' 'src/**/*.tokens.json'",
-    "build-figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/generated/figma.tokens.json",
-    "build": "npm-run-all build:**",
+    "build": "npm-run-all --sequential build:figma-tokens build:style-dictionary build:scss",
+    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/generated/figma.tokens.json",
     "build:scss": "sass --no-source-map src/:dist/",
-    "prebuild:style-dictionary": "npm run build-figma-tokens",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
   },
   "devDependencies": {
