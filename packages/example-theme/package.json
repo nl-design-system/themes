@@ -17,7 +17,7 @@
     "url": "git@github.com:nl-design-system/themes.git"
   },
   "scripts": {
-    "clean": "rimraf -rf dist/ src/figma-tokens.tokens.json",
+    "clean": "rimraf -rf dist/ src/generated/",
     "prebuild": "npm run clean",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm run --ignore-scripts build' 'src/**/*.tokens.json'",
