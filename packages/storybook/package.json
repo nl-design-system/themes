@@ -21,9 +21,9 @@
     "prebuild": "npm run clean",
     "build": "npm-run-all --sequential build:generated-stories build:storybook",
     "build:generated-stories": "ts-node --project ./tsconfig.commonjs.json src/generate-component-pages",
-    "build:storybook": "build-storybook --config-dir config/ --output-dir dist/",
+    "build:storybook": "storybook build --config-dir config/ --output-dir dist/",
     "storybook": "npm-run-all --sequential clean build:generated-stories dev:storybook",
-    "dev:storybook": "start-storybook --config-dir config/ --no-manager-cache --port 6006"
+    "dev:storybook": "storybook dev --config-dir config/ --port 6006"
   },
   "dependencies": {
     "@babel/core": "7.21.8",
@@ -59,16 +59,14 @@
     "@nl-design-system-unstable/zevenaar-design-tokens": "workspace:*",
     "@nl-design-system-unstable/zwolle-design-tokens": "workspace:*",
     "@open-formulieren/design-tokens": "0.25.0",
-    "@percy/storybook": "3.3.1",
-    "@storybook/addon-a11y": "6.5.16",
-    "@storybook/addon-controls": "6.5.16",
-    "@storybook/addon-docs": "6.5.16",
-    "@storybook/addon-viewport": "6.5.16",
-    "@storybook/builder-webpack5": "6.5.16",
-    "@storybook/manager-webpack5": "6.5.16",
+    "@percy/storybook": "4.3.6",
+    "@storybook/addon-a11y": "7.0.12",
+    "@storybook/addon-controls": "7.0.12",
+    "@storybook/addon-docs": "7.0.12",
+    "@storybook/addon-viewport": "7.0.12",
     "@storybook/preset-scss": "1.0.3",
-    "@storybook/react": "6.5.16",
-    "@storybook/theming": "6.5.16",
+    "@storybook/react": "7.0.12",
+    "@storybook/theming": "7.0.12",
     "@utrecht/design-tokens": "1.0.0-alpha.499",
     "@utrecht/web-component-library-stencil": "1.0.0-alpha.505",
     "@whitespace/storybook-addon-html": "5.1.4",
@@ -81,12 +79,15 @@
     "react-syntax-highlighter": "15.5.0",
     "rimraf": "3.0.2",
     "sass-loader": "10.4.1",
-    "storybook-addon-playroom": "3.0.2",
+    "storybook": "7.0.12",
+    "storybook-addon-playroom": "4.0.0",
     "style-loader": "2.0.0",
     "ts-node": "10.9.1",
     "webpack": "5.82.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "7",
+    "@storybook/react-webpack5": "7.0.12",
     "@utrecht/components": "1.0.0-alpha.467",
     "@utrecht/icon": "1.0.0-alpha.394"
   }

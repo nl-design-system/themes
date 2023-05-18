@@ -1,12 +1,9 @@
 /* eslint-env node */
 const path = require('path');
-
 const babelSettings = {
   extends: path.join(__dirname, './.babelrc'),
 };
-
 module.exports = {
-  core: { builder: 'webpack5' },
   stories: [
     '../src/**/*stories.@(js|jsx|mdx|ts|tsx)',
     '../../../packages/*-theme/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
@@ -14,6 +11,7 @@ module.exports = {
   ],
   features: {
     postcss: false,
+    storyStoreV7: false,
   },
   addons: [
     '@storybook/addon-controls',
@@ -21,7 +19,9 @@ module.exports = {
     '@storybook/addon-a11y/register',
     {
       name: '@storybook/addon-docs',
-      options: { configureJSX: true },
+      options: {
+        configureJSX: true,
+      },
     },
     '@storybook/addon-viewport/register',
     '@storybook/preset-scss',
@@ -35,5 +35,12 @@ module.exports = {
       include: [path.resolve(__dirname, '../../../node_modules'), path.resolve(__dirname, '../../../')],
     });
     return config;
+  },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  docs: {
+    autodocs: true,
   },
 };
