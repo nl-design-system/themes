@@ -1,6 +1,6 @@
 # Auteursrecht Gemeente Nijmegen
 
-Copyright (c) 2021 Gemeente Nijmegen
+Copyright (c) 2023 Gemeente Nijmegen
 
 ## Logo en huisstijl
 
