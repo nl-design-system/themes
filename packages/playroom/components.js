@@ -8,7 +8,6 @@ export {
   ButtonLink as UtrechtButtonLink,
   Calendar as UtrechtCalendar,
   Checkbox as UtrechtCheckbox,
-  CustomRadioButton as UtrechtCustomRadioButton,
   DataList as UtrechtDataList,
   DataListActions as UtrechtDataListActions,
   DataListItem as UtrechtDataListItem,
