@@ -39,11 +39,7 @@ export default {
       const designTokens = Object.entries(args)
         .filter(([key]) => /^--/.test(key))
 
-      const rootElement = document.documentElement;
-
-      rootElement.classList.add(theme);
-      designTokens.forEach(([token, value]) => rootElement.style.setProperty(token, value) )
-      return Story();
+        return <div className={theme} style={designTokens}><div className="utrecht-document">{Story()}</div></div>;
     },
   ],
   parameters: {
@@ -75,6 +71,13 @@ export default {
       ),
     },
   },
+};
+
+export const ExampleTheme = Template.bind({});
+
+ExampleTheme.args = {
+  ...exampleArgs,
+  theme: 'voorbeeld-theme',
 };
 
 export const ${organisation.replace(/\s/, '')} = Template.bind({});

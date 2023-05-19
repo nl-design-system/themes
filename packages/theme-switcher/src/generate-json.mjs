@@ -1,3 +1,4 @@
+import example from "@nl-design-system-unstable/example-theme/src/config.json" assert { type: "json" };
 import amsterdam from "@nl-design-system-unstable/amsterdam-design-tokens/src/config.json" assert { type: "json" };
 import bodegraven from "@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/config.json" assert { type: "json" };
 import buren from "@nl-design-system-unstable/buren-design-tokens/src/config.json" assert { type: "json" };
@@ -27,6 +28,7 @@ import openforms from "../../storybook/src/open-forms/config.json" assert { type
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 const themes = [
+  example,
   amsterdam,
   bodegraven,
   buren,
