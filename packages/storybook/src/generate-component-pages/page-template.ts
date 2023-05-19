@@ -11,6 +11,7 @@ import Template, {argTypes, defaultArgs, exampleArgs} from "${storyTemplate}";
 import designTokens from '@utrecht/design-tokens/dist/tokens.cjs';
 import { ComponentPage } from '../components/ComponentPage';
 import get from 'lodash.get';
+import pickBy from 'lodash.pickby';
 
 const designTokenPrefixes = ${designTokenPrefixes ? `[${designTokenPrefixes?.map((p) => `"${p}"`)}]` : `[]`};
 const tokens = designTokenPrefixes.length ? designTokenPrefixes.flatMap(prefix => getTokens(get(designTokens, prefix))) : getTokens(designTokens.utrecht["${id}"]);
@@ -36,8 +37,7 @@ export default {
   component: Template,
   decorators: [
     (Story, { args: { theme, ...args } }, b) => {
-      const designTokens = Object.entries(args)
-        .filter(([key]) => /^--/.test(key))
+        const designTokens = pickBy(args, (_, key) => /^--/.test(key));
 
         return <div className={theme} style={designTokens}><div className="utrecht-document">{Story()}</div></div>;
     },
