@@ -1,0 +1,280 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+<Meta
+  title="Voorbeelden/Formulieren/Toegankelijk label"
+  decorators={[
+    (Story) => (
+      <div className="example-theme">
+        <Story />
+      </div>
+    ),
+  ]}
+/>
+
+# Een toegankelijk formulier begint met goede labels
+
+Maak je formulier meer toegankelijk door het `<label>` element op de juiste manier in te zetten.
+
+Het `<label>` element is niet alleen bedoeld om de bedoeling van de inhoud te beschrijven, maar er zit ook ingebouwde toegankelijkheid in die je met geen enkel ander element zo makkelijk kan bereiken. Elk zichtbaar formulier element moet daarom een bijbehorend `<label>` element hebben.
+Voor mensen die het formulier gebruiken zonder de zichtbare pagina context is het invullen van elk formulierveld waar een gekoppeld label aan zit stukken makkelijker.
+
+Ook kun je op het label klikken om automatisch het juiste formulierveld te selecteren.
+
+## Fout: Helemaal geen label
+
+Zonder label is het voor niemand duidelijk
+
+<Canvas>
+  <Story name="Fout: Geen label">
+    <form className="utrecht-form">
+      <input
+        type="text"
+        name="first_name"
+        className="utrecht-textbox utrecht-textbox--html-input utrecht-form-field__input"
+      />
+    </form>
+  </Story>
+</Canvas>
+
+## Fout: Placeholder in plaats van label
+
+Met alleen een placeholder is het niet meer duidelijk waar de input voor is als de gebruiker begint met invullen
+Ook lezen niet alle screen-readers de placeholder voor waardoor het net zo slecht werkt als zonder label
+
+<Canvas>
+  <Story name="Fout: Placeholder in plaats van label">
+    <form className="utrecht-form">
+      <input
+        type="text"
+        name="first_name"
+        className="utrecht-textbox utrecht-textbox--html-input utrecht-form-field__input"
+        placeholder="Voornaam"
+      />
+    </form>
+  </Story>
+</Canvas>
+
+## Fout: Verkeede HTML element voor het label
+
+Door geen `<label>` element te gebruiken mis je de ingebouwde logica die zorgt dat hij als label kan worden geinterpreteerd.
+Er bestaat zo geen enkele koppeling tussen het label en de input voor mensen die de visuele context niet waarnemen.
+
+<Canvas>
+  <Story name="Fout: Verkeerd element als label">
+    <form className="utrecht-form">
+      <div className="utrecht-form-field">
+        <p className="utrecht-form-label">Voornaam</p>
+        <input
+          type="text"
+          name="first_name"
+          className="utrecht-textbox utrecht-textbox--html-input utrecht-form-field__input"
+        />
+      </div>
+    </form>
+  </Story>
+</Canvas>
+
+## Fout: Label zonder gekoppelde input
+
+Door het `<label>` element te gebruiken zonder `htmlFor` mis je de koppeling tussen het label en de input voor mensen die de visuele context niet waarnemen.
+
+<Canvas>
+  <Story name="Fout: Label niet gekoppeld">
+    <form className="utrecht-form">
+      <div className="utrecht-form-field">
+        <p>
+          <label className="utrecht-form-label">Voornaam</label>
+        </p>
+        <input
+          type="text"
+          name="first_name"
+          className="utrecht-textbox utrecht-textbox--html-input utrecht-form-field__input"
+        />
+      </div>
+    </form>
+  </Story>
+</Canvas>
+
+## Fout: Input ID niet uniek
+
+Door het id van de input dubbel te gebruiken krijg je niet de juiste koppeling tussen het label en de input voor mensen die de visuele context niet waarnemen.
+
+<Canvas>
+  <Story name="Fout: Id niet uniek">
+    <form className="utrecht-form">
+      <div className="utrecht-form-field">
+        <p>
+          <label className="utrecht-form-label" htmlFor="name">
+            Voornaam
+          </label>
+        </p>
+        <input
+          type="text"
+          name="first_name"
+          className="utrecht-textbox utrecht-textbox--html-input utrecht-form-field__input"
+          id="name"
+        />
+        <p>
+          <label className="utrecht-form-label" htmlFor="name">
+            Achternaam
+          </label>
+        </p>
+        <input
+          type="text"
+          name="first_name"
+          className="utrecht-textbox utrecht-textbox--html-input utrecht-form-field__input"
+          id="name"
+        />
+      </div>
+    </form>
+  </Story>
+</Canvas>
+
+## Fout: één label voor meerdere inputs
+
+Voor meerdere checkbox of radio elementen moeten meerdere label elementen gebruikt worden
+Gebruik een `fieldset` met `legend` om de groep van checkbox of radio inputs heen
+
+<Canvas>
+  <Story name="Fout:Te weinig labels">
+    <div>
+      <p>
+        <label className="utrecht-form-label" htmlFor="contact">
+          Hoe wil je dat wij contact opnemen?
+        </label>
+      </p>
+      <div className="utrecht-form-field utrecht-form-field--checkbox">
+        <p className="utrecht-form-label utrecht-form-field__label utrecht-form-field__label--checkbox">
+          <input
+            className="utrecht-checkbox utrecht-checkbox--html-input utrecht-checkbox--custom utrecht-form-field__input"
+            id="for"
+            name="phone"
+            type="checkbox"
+            value="true"
+          />
+          Telefoon
+        </p>
+      </div>
+      <div className="utrecht-form-field utrecht-form-field--checkbox">
+        <p className="utrecht-form-label utrecht-form-field__label utrecht-form-field__label--checkbox">
+          <input
+            className="utrecht-checkbox utrecht-checkbox--html-input utrecht-checkbox--custom utrecht-form-field__input"
+            id="714205e8-d33b-40d8-9721-e2ea71c62a20"
+            name="email"
+            type="checkbox"
+            value="true"
+          />
+          E-mail
+        </p>
+      </div>
+      <div className="utrecht-form-field utrecht-form-field--checkbox">
+        <p className="utrecht-form-label utrecht-form-field__label utrecht-form-field__label--checkbox">
+          <input
+            className="utrecht-checkbox utrecht-checkbox--html-input utrecht-checkbox--custom utrecht-form-field__input"
+            id="67fa8ea7-6b75-4049-ae4f-ebaa816e4c35"
+            name="mail"
+            type="checkbox"
+            value="true"
+          />
+          Brief
+        </p>
+      </div>
+    </div>
+  </Story>
+</Canvas>
+
+## Goed: Gekoppeld label met een duidelijke naam
+
+Door een `<label>` te gebruiken met een duidelijk naam
+en de `<input>` te voorzien van een `id` attribuut
+kan het label aan de input gekoppeld worden met het `htmlFor` attribuut
+
+<Canvas>
+  <Story name="Goed: Gekoppeld label">
+    <form className="utrecht-form">
+      <div className="utrecht-form-field">
+        <p>
+          <label
+            htmlFor="357f1ba2-0c4a-4cbb-b393-3c474d9a8de9"
+            className="utrecht-form-label utrecht-form-field__label"
+          >
+            Voornaam
+          </label>
+        </p>
+        <input
+          type="text"
+          name="first_name"
+          id="357f1ba2-0c4a-4cbb-b393-3c474d9a8de9"
+          className="utrecht-textbox utrecht-textbox--html-input utrecht-form-field__input"
+        />
+      </div>
+    </form>
+  </Story>
+</Canvas>
+
+## Goed: elke input een eigen label
+
+<Canvas>
+  <Story name="Goed: Genoeg labels">
+    <div className="utrecht-form-fieldset">
+      <fieldset className="utrecht-form-fieldset__fieldset utrecht-form-fieldset__fieldset--html-fieldset">
+        <p>
+          <legend className="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--html-legend">
+            Hoe wil je dat wij contact opnemen?
+          </legend>
+        </p>
+        <div className="utrecht-form-field utrecht-form-field--checkbox">
+          <p className="utrecht-form-field__label utrecht-form-field__label--checkbox">
+            <label
+              htmlFor="2a5524f5-6ee8-4be1-90a1-87d0d619d2ee"
+              className="utrecht-form-label utrecht-form-label--checkbox"
+            >
+              <input
+                className="utrecht-checkbox utrecht-checkbox--html-input utrecht-checkbox--custom utrecht-form-field__input"
+                id="2a5524f5-6ee8-4be1-90a1-87d0d619d2ee"
+                name="phone"
+                type="checkbox"
+                value="true"
+              />
+              Telefoon
+            </label>
+          </p>
+        </div>
+        <div className="utrecht-form-field utrecht-form-field--checkbox">
+          <p className="utrecht-form-field__label utrecht-form-field__label--checkbox">
+            <label
+              htmlFor="1fe84cc2-16fc-4e9b-9498-856583652181"
+              className="utrecht-form-label utrecht-form-label--checkbox"
+            >
+              <input
+                className="utrecht-checkbox utrecht-checkbox--html-input utrecht-checkbox--custom utrecht-form-field__input"
+                id="1fe84cc2-16fc-4e9b-9498-856583652181"
+                name="email"
+                type="checkbox"
+                value="true"
+              />
+              E-mail
+            </label>
+          </p>
+        </div>
+        <div className="utrecht-form-field utrecht-form-field--checkbox">
+          <p className="utrecht-form-field__label utrecht-form-field__label--checkbox">
+            <label
+              htmlFor="96493bfe-2caa-4cb3-80ce-a4a46fc69c10"
+              className="utrecht-form-label utrecht-form-label--checkbox"
+            >
+              <input
+                className="utrecht-checkbox utrecht-checkbox--html-input utrecht-checkbox--custom utrecht-form-field__input"
+                id="96493bfe-2caa-4cb3-80ce-a4a46fc69c10"
+                name="mail"
+                type="checkbox"
+                value="true"
+              />
+              Brief
+            </label>
+          </p>
+        </div>
+      </fieldset>
+    </div>
+  </Story>
+</Canvas>
