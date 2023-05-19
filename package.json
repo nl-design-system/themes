@@ -67,7 +67,7 @@
     "prepare": "husky install",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --no-verify-access --yes",
-    "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --git-dry-run --yes",
+    "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --dry-run --yes",
     "start": "node_modules/http-server/bin/http-server dist/",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm-run-all test-workspaces test-build:**",
