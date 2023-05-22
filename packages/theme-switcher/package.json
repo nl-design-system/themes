@@ -20,7 +20,7 @@
     "url": "git@github.com:nl-design-system/themes.git"
   },
   "scripts": {
-    "build": "mkdir -p dist/ && node src/generate-json.mjs > dist/themes.json"
+    "build": "make-dir dist/ && node src/generate-json.mjs > dist/themes.json"
   },
   "devDependencies": {
     "@nl-design-system-unstable/amsterdam-design-tokens": "workspace:*",

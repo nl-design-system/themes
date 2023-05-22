@@ -23,7 +23,7 @@
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm run --ignore-scripts build' 'src/**/*.tokens.json'",
     "build": "npm-run-all build:**",
-    "build:font": "make-dir dist/font && cp -R src/font/* dist/font",
+    "build:font": "make-dir dist/font && cpy src/font/* dist/font",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
   },
