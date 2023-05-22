@@ -25,12 +25,12 @@
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js",
     "install-font": "npm-run-all install-font:**",
-    "install-font:1": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/257c802f-349c-4b4d-aefa-546d5de15ec6.eot",
-    "install-font:2": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/5fdc935e-9e30-442a-bbe9-8d887b858471.woff",
-    "install-font:3": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/616c4c87-a077-43f4-a9f4-f01267c13818.ttf",
-    "install-font:4": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/087e5c21-3358-4cf3-9d2c-289a03a48292.eot",
-    "install-font:5": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/fb754dec-aa8f-444c-be48-868464c47ab0.woff",
-    "install-font:6": "mkdir -p src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/295ff20c-2b48-4fa6-be92-a53bbf9bbbb4.ttf"
+    "install-font:1": "make-dir src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/257c802f-349c-4b4d-aefa-546d5de15ec6.eot",
+    "install-font:2": "make-dir src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/5fdc935e-9e30-442a-bbe9-8d887b858471.woff",
+    "install-font:3": "make-dir src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/616c4c87-a077-43f4-a9f4-f01267c13818.ttf",
+    "install-font:4": "make-dir src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/087e5c21-3358-4cf3-9d2c-289a03a48292.eot",
+    "install-font:5": "make-dir src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/fb754dec-aa8f-444c-be48-868464c47ab0.woff",
+    "install-font:6": "make-dir src/font && cd src/font && curl -O https://beta.tilburg.nl/winkel/css/font/295ff20c-2b48-4fa6-be92-a53bbf9bbbb4.ttf"
   },
   "devDependencies": {
     "chokidar-cli": "3.0.0",
