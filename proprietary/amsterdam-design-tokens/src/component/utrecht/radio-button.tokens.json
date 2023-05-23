@@ -4,8 +4,11 @@
       "background-color": {},
       "border-color": { "value": "{amsterdam.color.primary-blue}" },
       "border-width": { "value": "2px" },
-      "size": {},
+      "size": { "value": "24px" },
       "margin-block-start": {},
+      "icon": {
+        "size": { "value": "8px" }
+      },
       "active": {
         "border-color": {},
         "border-width": {},
@@ -15,8 +18,26 @@
       "checked": {
         "border-color": {},
         "border-width": {},
-        "background-color": { "value": "{amsterdam.color.primary-blue}" },
-        "color": {}
+        "background-color": { "value": "{amsterdam.color.primary-white}" },
+        "color": { "value": "{amsterdam.color.primary-blue}" },
+        "active": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        },
+        "hover": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        },
+        "focus": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        }
       },
       "hover": {
         "border-color": {},
@@ -33,8 +54,8 @@
       "disabled": {
         "border-color": { "value": "{amsterdam.color.neutral-grey2}" },
         "border-width": {},
-        "background-color": { "value": "{amsterdam.color.neutral-grey2}" },
-        "color": {}
+        "background-color": { "value": "{amsterdam.color.primary-white}" },
+        "color": { "value": "{amsterdam.color.neutral-grey2}" }
       },
       "invalid": {
         "border-color": { "value": "{amsterdam.color.primary-red}" },
