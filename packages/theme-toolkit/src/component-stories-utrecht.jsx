@@ -72,6 +72,70 @@ BadgeData.propTypes = {
 
 export const UTRECHT_COMPONENT_STORIES = [
   {
+    storyId: 'react-utrecht-alert--info',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert Info',
+    render: () => (
+      <Alert type="info">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-alert--ok',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert Ok',
+    render: () => (
+      <Alert type="ok">
+        <Heading1>Alert Ok</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam vero nesciunt, dolore assumenda
+          accusamus perspiciatis in similique inventore voluptatum reiciendis reprehenderit totam qui suscipit obcaecati
+          pariatur, harum nemo veritatis.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-alert--warning',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert Warning',
+    render: () => (
+      <Alert type="warning">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-alert--error',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert error',
+    render: () => (
+      <Alert type="error">
+        <Heading1>Alert Error</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quam vero nesciunt, dolore assumenda
+          accusamus perspiciatis in similique inventore voluptatum reiciendis reprehenderit totam qui suscipit obcaecati
+          pariatur, harum nemo veritatis.
+        </Paragraph>
+      </Alert>
+    ),
+  },
+  {
     storyId: 'react-utrecht-button--default',
     component: 'utrecht-button',
     group: STORY_GROUPS.BUTTON_DEFAULT,
