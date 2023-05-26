@@ -1,0 +1,11 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { ComponentStories } from "@nl-design-system-unstable/theme-toolkit/src/ComponentStories";
+import config from "../src/config.json";
+
+<Meta title={`${config.name}`} />
+
+# Components
+
+<Story name="Components">
+  <ComponentStories config={config} />
+</Story>
