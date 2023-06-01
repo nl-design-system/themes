@@ -1,0 +1,56 @@
+{
+  "brand/example/color.tokens": {
+    "example": {
+      "color": {
+        "blue": {
+          "50": {
+            "value": "cornflowerblue",
+            "type": "other"
+          }
+        },
+        "grey": {
+          "0": {
+            "value": "black",
+            "type": "other"
+          },
+          "100": {
+            "value": "white",
+            "type": "other"
+          }
+        }
+      }
+    }
+  },
+  "common/example/focus.tokens": {
+    "example": {
+      "focus": {
+        "outline-offset": {
+          "value": "2px",
+          "type": "other"
+        }
+      }
+    }
+  },
+  "components/example/button.tokens": {
+    "example": {
+      "button": {
+        "background-color": {
+          "value": "{example.color.blue.50}",
+          "type": "other"
+        },
+        "color": {
+          "value": "{example.color.grey.100}",
+          "type": "other"
+        }
+      }
+    }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "brand/example/color.tokens",
+      "common/example/focus.tokens",
+      "components/example/button.tokens"
+    ]
+  }
+}
