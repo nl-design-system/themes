@@ -50,6 +50,7 @@ import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@nl-design-system-unstable/overheidnl-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/overheidnl-design-tokens/src/font';
 
 defineUtrechtComponents();
 
