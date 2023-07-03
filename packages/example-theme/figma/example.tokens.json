@@ -1198,13 +1198,13 @@
       "icon": {
         "functional": {
           "size": {
-            "value": "{voorbeeld.size.xs}",
+            "value": "{voorbeeld.size.icon.md}",
             "type": "sizing"
           }
         },
         "toptask": {
           "size": {
-            "value": "{voorbeeld.size.md}",
+            "value": "{voorbeeld.size.icon.4xl}",
             "type": "sizing"
           }
         }
@@ -4583,12 +4583,34 @@
       }
     }
   },
+  "test/aap": {
+    "nl": {
+      "aap": {
+        "background-color": {
+          "value": "{voorbeeld.color.red.600}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "test/paard": {
+    "nl": {
+      "paard": {
+        "background-color": {
+          "value": "{voorbeeld.color.yellow.400}",
+          "type": "color"
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "brand",
       "common",
-      "component"
+      "component",
+      "test/aap",
+      "test/paard"
     ]
   }
 }
