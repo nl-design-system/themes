@@ -3089,11 +3089,11 @@
             "value": "{voorbeeld.space.block.snail}",
             "type": "spacing"
           },
-          "padding-inline-end": {
+          "padding-inline-start": {
             "value": "0px",
             "type": "spacing"
           },
-          "padding-inline-start": {
+          "padding-inline-end": {
             "value": "0px",
             "type": "spacing"
           },
@@ -3179,16 +3179,18 @@
             "type": "sizing",
             "value": "{utrecht.pointer-target.min-size}"
           },
-          "previous": {
-            "padding-inline-end": {
-              "value": "{voorbeeld.space.inline.ant}",
-              "type": "spacing"
-            }
-          },
-          "next": {
-            "padding-inline-start": {
-              "value": "{voorbeeld.space.inline.ant}",
-              "type": "spacing"
+          "disabled": {
+            "background-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "color": {
+              "type": "color",
+              "value": "{voorbeeld.color.gray.500}"
             }
           }
         },
@@ -3212,7 +3214,7 @@
             },
             "background-color": {
               "type": "color",
-              "value": "transparent"
+              "value": "{voorbeeld.color.gray.100}"
             },
             "border-color": {
               "type": "color",
@@ -3318,10 +3320,6 @@
             "value": "{utrecht.pointer-target.min-size}"
           }
         },
-        "gap": {
-          "value": "{voorbeeld.space.inline.ant}",
-          "type": "spacing"
-        },
         "font-family": {
           "value": "{utrecht.document.font-family}",
           "type": "fontFamilies"
@@ -3344,11 +3342,11 @@
             "type": "spacing"
           },
           "padding-inline-end": {
-            "value": "0px",
+            "value": "{voorbeeld.space.inline.ant}",
             "type": "spacing"
           },
           "padding-inline-start": {
-            "value": "0px",
+            "value": "{voorbeeld.space.inline.ant}",
             "type": "spacing"
           },
           "color": {
