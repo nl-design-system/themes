@@ -238,14 +238,16 @@ $amsterdam-typography-scale-lg-h1-font-size: 103.85px;
   .utrecht-button--secondary-action:hover {
     border-width: 3px;
   }
+
+  .utrecht-button,
+  .utrecht-textarea--html-textarea,
+  .utrecht-select--html-select,
+  .utrecht-link,
+  .utrecht-textbox--html-input {
+    --utrecht-focus-outline-style: solid;
+  }
 }
-.utrecht-button,
-.utrecht-textarea--html-textarea,
-.utrecht-select--html-select,
-.utrecht-link,
-.utrecht-textbox--html-input {
-  --utrecht-focus-outline-style: solid;
-}
+
 @media screen {
   .amsterdam-theme--responsive {
     $amsterdam-viewport-min-inline-size: 320px;
