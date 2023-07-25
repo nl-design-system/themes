@@ -733,6 +733,24 @@ importers:
         specifier: 3.8.0
         version: 3.8.0
 
+  proprietary/leiden-design-tokens:
+    devDependencies:
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../../packages/theme-toolkit
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      rimraf:
+        specifier: 3.0.2
+        version: 3.0.2
+      style-dictionary:
+        specifier: 3.8.0
+        version: 3.8.0
+
   proprietary/leidschendam-voorburg-design-tokens:
     devDependencies:
       '@nl-design-system-unstable/theme-toolkit':
@@ -15609,7 +15627,7 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
-      glob: 10.2.4
+      glob: 10.2.5
     dev: true
 
   /ripemd160@2.0.2:
