@@ -101,7 +101,7 @@ const themes = [
 const flatten = (a, b) => [...a, ...b];
 const order = [
   ['Themes', ['README']],
-  ['Example', ['README']],
+  ['Voorbeeld Thema', ['README']],
   ...themes.sort().map((org) => [org, ['README']]),
 ].reduce(flatten, []);
 
