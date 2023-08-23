@@ -1,1 +1,1 @@
-# NL Design System example theme
+# NL Design System voorbeeld thema
