@@ -11,7 +11,7 @@ These tokens have been obtained by analysing the [website of Gemeente Example](h
 ## Getting started with your own NL Design System theme
 
 1. Kies een unieke prefix voor jouw organisatie, die je gebruikt voor je npm package, BEM class names, CSS variabelen, etcetera. Wij gebruiken `nl-`, jij kiest iets anders. Gebruik alleen letters en cijfers in de prefix, geen andere tekens zoals het koppelstreepje. Bijvoorbeeld: gemeente Den Haag gebruikt `denhaag`.
-2. Kopieer `properietary/example-design-tokens/` naar `proprietary/prefix-design-tokens`, waarbij je `prefix` vervangt door de prefix die je kiest.
+2. Kopieer `proprietary/example-design-tokens/` naar `proprietary/prefix-design-tokens`, waarbij je `prefix` vervangt door de prefix die je kiest.
 3. Gebruik "_Find and replace_" in `proprietary/prefix-design-tokens`, vervang _case-sensitive_ `example` door jouw `prefix`.
 4. Gebruik "_Find and replace_" in `proprietary/prefix-design-tokens`, vervang _case-sensitive_ `Example Organisation` door jouw de naam van jouw organisatie.
 5. Bewerk `packages/storybook/package.json`, en voeg `"@nl-design-system-unstable/prefix-design-tokens": "workspace:*",` toe onder `"dependencies"`. Vervang weer de `prefix` met je eigen prefix.
