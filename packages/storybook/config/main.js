@@ -9,7 +9,7 @@ module.exports = {
   core: { builder: 'webpack5' },
   stories: [
     '../src/**/*stories.@(js|jsx|mdx|ts|tsx)',
-    '../../../packages/*-theme/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
+    '../../../packages/voorbeeld-design-tokens/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
     '../../../proprietary/*/documentation/**/*stories.@(js|jsx|mdx|ts|tsx)',
   ],
   features: {
