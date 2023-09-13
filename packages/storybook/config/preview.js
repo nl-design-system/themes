@@ -21,6 +21,8 @@ import '@nl-design-system-unstable/voorbeeld-design-tokens/src/custom.scss';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 // import '@nl-design-system-unstable/duo-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/enkhuizen-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/epe-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/epe-design-tokens/src/font';
 import '@nl-design-system-unstable/groningen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlem-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlem-design-tokens/src/font.scss';
@@ -78,6 +80,7 @@ const themes = [
   'Duiven',
   'DUO',
   'Enkhuizen',
+  'Epe',
   'Groningen',
   'Haarlem',
   'Haarlemmermeer',
