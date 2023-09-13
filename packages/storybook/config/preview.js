@@ -34,6 +34,8 @@ import '@nl-design-system-unstable/nijmegen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/nijmegen-design-tokens/src/font';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
+import '@nl-design-system-unstable/noordwijk-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/noordwijk-design-tokens/src/font';
 import '@nl-design-system-unstable/provincie-zuid-holland-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/rotterdam-design-tokens/src/custom.scss';
@@ -84,6 +86,7 @@ const themes = [
   'Leiden',
   'Leidschendam Voorburg',
   'Nijmegen',
+  'Noordwijk',
   'Noordoostpolder',
   'Rijkshuisstijl',
   'Rotterdam',
