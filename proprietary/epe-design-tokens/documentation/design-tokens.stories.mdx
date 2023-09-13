@@ -1,0 +1,14 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { DesignTokensTable } from "@nl-design-system-unstable/theme-toolkit/src/DesignTokensTable";
+import tokens from "../dist/index.json";
+import config from "../src/config.json";
+
+<Meta title={`${config.name}/Design Tokens`} />
+
+# Design Tokens
+
+<DesignTokensTable tokens={tokens.filter((token) => token.path[0] !== config.prefix)}></DesignTokensTable>
+
+## Proprietary Design Tokens
+
+<DesignTokensTable tokens={tokens.filter((token) => token.path[0] === config.prefix)}></DesignTokensTable>
