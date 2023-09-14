@@ -102,6 +102,7 @@ const themes = [
   'Rotterdam',
   'Stede Broec',
   'Tilburg',
+  'Tubbergen',
   'Utrecht',
   'Venray',
   'Vught',
