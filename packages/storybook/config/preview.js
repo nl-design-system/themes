@@ -53,6 +53,7 @@ import '@nl-design-system-unstable/venray-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/vught-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/westervoort-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/westervoort-design-tokens/src/font';
+import '@nl-design-system-unstable/xxllnc-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zevenaar-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zevenaar-design-tokens/src/font';
 import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
@@ -105,6 +106,7 @@ const themes = [
   'Venray',
   'Vught',
   'Westervoort',
+  'Xxllnc',
   'Zevenaar',
   'Zuid-Holland',
   'Zwolle',
