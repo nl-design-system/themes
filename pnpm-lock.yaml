@@ -180,6 +180,9 @@ importers:
       '@nl-design-system-unstable/buren-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/buren-design-tokens
+      '@nl-design-system-unstable/dinkelland-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/dinkelland-design-tokens
       '@nl-design-system-unstable/drechterland-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/drechterland-design-tokens
@@ -555,6 +558,30 @@ importers:
       '@fontsource/source-sans-pro':
         specifier: 4.5.11
         version: 4.5.11
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../../packages/theme-toolkit
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      rimraf:
+        specifier: 3.0.2
+        version: 3.0.2
+      style-dictionary:
+        specifier: 3.8.0
+        version: 3.8.0
+
+  proprietary/dinkelland-design-tokens:
+    devDependencies:
+      '@fontsource/lato':
+        specifier: 5.0.12
+        version: 5.0.12
+      '@fontsource/montserrat':
+        specifier: 5.0.8
+        version: 5.0.8
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
@@ -2602,6 +2629,14 @@ packages:
 
   /@fontsource/clear-sans@4.5.3:
     resolution: {integrity: sha512-092h3D/WVUPVyGPFxdAqr4KwFsAxzxB1o01YY3qQGA3vB9zATYiCsXWGKXiztDzggIgJmC4TdUq+gEVZPZuXuA==}
+    dev: true
+
+  /@fontsource/lato@5.0.12:
+    resolution: {integrity: sha512-49kN7Ty0mDicmxNdaaDuOFtY5hvAwFN1pXkxaJJVlozh4v/houKwvodM3L7QVJEUC4KfNVEwn5Y409Us+EyFWw==}
+    dev: true
+
+  /@fontsource/montserrat@5.0.8:
+    resolution: {integrity: sha512-bNj6wfiWXXbsxb2ffatjpX+GBv30cWZ1lwNXW9qTeX2FnzPomsGRV4HdPrf3TqyTiVqX6fLo80zrQcMi7r8+fA==}
     dev: true
 
   /@fontsource/open-sans@4.5.14:
@@ -13332,6 +13367,7 @@ packages:
   /normalize-path@2.1.1:
     resolution: {integrity: sha512-3pKJwH184Xo/lnH6oyP1q2pMd7HcypqqmRs91/6/i2CGtWwIKGCkOOMTm/zXbgTEWHw1uNpNi/igc3ePOYHb6w==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dependencies:
       remove-trailing-separator: 1.1.0
 
@@ -14162,6 +14198,7 @@ packages:
 
   /path-dirname@1.0.2:
     resolution: {integrity: sha512-ALzNPpyNq9AqXMBjeymIjFDAkAFH06mHJH/cSBHAgU0s4vfpBn6b2nf8tiRLvagKD8RbTpq2FKTBg7cl9l3c7Q==}
+    requiresBuild: true
 
   /path-exists@2.1.0:
     resolution: {integrity: sha512-yTltuKuhtNeFJKa1PiRzfLAU5182q1y4Eb4XCJ3PBqyzEDkAZRzBrKKBct682ls9reBVHf9udYLN5Nd+K1B9BQ==}
@@ -15525,6 +15562,7 @@ packages:
 
   /remove-trailing-separator@1.1.0:
     resolution: {integrity: sha512-/hS+Y0u3aOfIETiaiirUFwDBDzmXPvO+jAfKTitUngIPzdKc6Z0LoFjM/CK5PL4C+eKwHohlHAb6H0VFfmmUsw==}
+    requiresBuild: true
 
   /renderkid@2.0.7:
     resolution: {integrity: sha512-oCcFyxaMrKsKcTY59qnCAtmDVSLfPbrv6A3tVbPdFMMrv5jaK10V6m40cKsoPNhAqN6rmHW9sswW4o3ruSrwUQ==}

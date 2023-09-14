@@ -1,0 +1,17 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import tokens from "../dist/tokens.json";
+import { ColorSearch } from "@nl-design-system-unstable/theme-toolkit/src/ColorSearch";
+import { ColorTable } from "@nl-design-system-unstable/theme-toolkit/src/ColorTable";
+import config from "../src/config.json";
+
+<Meta title={`${config.name}/Color`} />
+
+# Color
+
+## Find a color
+
+<ColorSearch tokens={tokens[config.prefix]["color"]}></ColorSearch>
+
+## Color palette
+
+<ColorTable tokens={tokens[config.prefix]["color"]}></ColorTable>
