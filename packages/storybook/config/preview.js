@@ -48,6 +48,8 @@ import '@nl-design-system-unstable/rotterdam-design-tokens/src/custom.scss';
 // import '@nl-design-system-unstable/rotterdam-design-tokens/src/font.scss';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/tubbergen-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/tubbergen-design-tokens/src/font';
 import '@nl-design-system-unstable/venray-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/vught-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/westervoort-design-tokens/dist/index.css';
