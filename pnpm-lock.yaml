@@ -810,6 +810,9 @@ importers:
 
   proprietary/leiden-design-tokens:
     devDependencies:
+      '@fontsource/open-sans':
+        specifier: 5.0.12
+        version: 5.0.12
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
@@ -2641,6 +2644,10 @@ packages:
 
   /@fontsource/open-sans@4.5.14:
     resolution: {integrity: sha512-mBXIIETBlW8q/ocuUN0hyGow2iuf75hQEHQt8R/RJ/HcphVbLg8KB7pHYGbFGDqs75W+SWvTC7JkVeAjT65BuQ==}
+
+  /@fontsource/open-sans@5.0.12:
+    resolution: {integrity: sha512-Ptri5McmTGEJkQ5nvGQeJX8YdGbZpOT6V03By1pISIPZygO/ps4bQIvwPO+X/WtBY+2C1xKeyqx7LX+3fxlo2A==}
+    dev: true
 
   /@fontsource/roboto-slab@5.0.11:
     resolution: {integrity: sha512-p6rk+Xjn7cVO7jkTpJlKA5QSa7eflNruUQBida4pUr2vLcY6XRMvO/ESqhPSxKQwGMjd8Opz8erZp/hPcP/dBw==}
@@ -7805,6 +7812,7 @@ packages:
 
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    requiresBuild: true
 
   /corser@2.0.1:
     resolution: {integrity: sha512-utCYNzRSQIZNPIcGZdQc92UVJYAhtGAteCFg0yRaFm8f0P+CPtyGyHXJcGXnffjCybUCEx3FQ2G7U3/o9eIkVQ==}
@@ -14756,6 +14764,7 @@ packages:
 
   /process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
+    requiresBuild: true
 
   /process@0.11.10:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
@@ -16730,6 +16739,7 @@ packages:
 
   /string_decoder@1.1.1:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
+    requiresBuild: true
     dependencies:
       safe-buffer: 5.1.2
 
