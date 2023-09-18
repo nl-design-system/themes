@@ -12,6 +12,8 @@ import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.
 import '@nl-design-system-unstable/borne-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/buren-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/buren-design-tokens/src/font';
+import '@nl-design-system-unstable/dinkelland-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/dinkelland-design-tokens/src/font';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/font';
 import '@nl-design-system-unstable/drechterland-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duiven-design-tokens/dist/index.css';
@@ -21,6 +23,8 @@ import '@nl-design-system-unstable/voorbeeld-design-tokens/src/custom.scss';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
 // import '@nl-design-system-unstable/duo-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/enkhuizen-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/epe-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/epe-design-tokens/src/font';
 import '@nl-design-system-unstable/groningen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlem-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlem-design-tokens/src/font.scss';
@@ -29,9 +33,11 @@ import '@nl-design-system-unstable/hoorn-design-tokens/dist/design-tokens.css';
 import '@nl-design-system-unstable/hoorn-design-tokens/src/font';
 import '@nl-design-system-unstable/horstaandemaas-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/leiden-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/leiden-design-tokens/src/font';
 import '@nl-design-system-unstable/leidschendam-voorburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/nijmegen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/nijmegen-design-tokens/src/font';
+import '@nl-design-system-unstable/noaberkracht-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
 import '@nl-design-system-unstable/noordwijk-design-tokens/dist/index.css';
@@ -43,10 +49,13 @@ import '@nl-design-system-unstable/rotterdam-design-tokens/src/custom.scss';
 // import '@nl-design-system-unstable/rotterdam-design-tokens/src/font.scss';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/tubbergen-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/tubbergen-design-tokens/src/font';
 import '@nl-design-system-unstable/venray-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/vught-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/westervoort-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/westervoort-design-tokens/src/font';
+import '@nl-design-system-unstable/xxllnc-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zevenaar-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zevenaar-design-tokens/src/font';
 import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
@@ -73,11 +82,13 @@ const themes = [
   'Borne',
   'Buren',
   'Den Haag',
+  'Dinkelland',
   'Drechterland',
   'DSO',
   'Duiven',
   'DUO',
   'Enkhuizen',
+  'Epe',
   'Groningen',
   'Haarlem',
   'Haarlemmermeer',
@@ -86,16 +97,19 @@ const themes = [
   'Leiden',
   'Leidschendam Voorburg',
   'Nijmegen',
+  'Noaberkracht',
   'Noordwijk',
   'Noordoostpolder',
   'Rijkshuisstijl',
   'Rotterdam',
   'Stede Broec',
   'Tilburg',
+  'Tubbergen',
   'Utrecht',
   'Venray',
   'Vught',
   'Westervoort',
+  'Xxllnc',
   'Zevenaar',
   'Zuid-Holland',
   'Zwolle',
