@@ -1,15 +1,62 @@
-// import React from 'react';
+import React from 'react';
 
-// import { STORY_GROUPS } from './component-stories-util';
+import { STORY_GROUPS } from './component-stories-util';
 // import { Button, ProcessSteps, Avatar, Alert, BadgeCounter, Divider } from '@gemeente-denhaag/components-react';
+import { Status } from '@gemeente-denhaag/components-react';
 
 export const DENHAAG_COMPONENT_STORIES = [
-  // {
-  //   storyId: 'react-denhaag-process-steps--default',
-  //   component: 'denhaag-process-steps',
-  //   name: 'Den Haag Process Steps',
-  //   render: () => <ProcessSteps></ProcessSteps>,
-  // },
+  {
+    storyId: 'react-denhaag-status--default',
+    component: 'denhaag-steps',
+    group: STORY_GROUPS.STEPS,
+    name: 'Den Haag Status',
+    render: () => (
+      <Status
+        steps={[
+          {
+            id: 'deelname',
+            marker: 1,
+            status: 'checked',
+            steps: [
+              {
+                status: 'checked',
+                title: 'Aanmelding ontvangen',
+              },
+            ],
+            title: 'Deelname aan geluidsonderzoek',
+          },
+          {
+            id: 'onderzoek',
+            marker: 2,
+            status: 'current',
+            steps: [
+              {
+                status: 'checked',
+                title: 'Afspraak meten geluidsoverlast gemaakt',
+              },
+              {
+                title: 'Geluidsoverlast gemeten',
+              },
+              {
+                title: 'Onderzoek resultaten verwerkt',
+              },
+            ],
+            title: 'Onderzoek naar geluidsoverlast',
+          },
+          {
+            id: 'uitvoeren',
+            marker: 3,
+            title: 'Uitvoeren van maatregelen',
+          },
+          {
+            id: 'klaar',
+            marker: 4,
+            title: 'Maatregelen zijn uitgevoerd',
+          },
+        ]}
+      ></Status>
+    ),
+  },
   // {
   //   storyId: 'react-denhaag-avatar--default',
   //   component: 'denhaag-avatar',
