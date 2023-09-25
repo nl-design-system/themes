@@ -19,4 +19,5 @@ export const STORY_GROUPS = {
   FORM_LABEL_RADIO: 'Form Label for Radio Button',
   EMPHASIS: 'Emphasis',
   FORM_FIELD_DESCRIPTION: 'Form Field Description',
+  STEPS: 'Steps',
 };

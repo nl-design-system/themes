@@ -1,5 +1,6 @@
 import { defineCustomElements as defineUtrechtComponents } from '@utrecht/web-component-library-stencil/loader';
 import '@utrecht/component-library-css';
+import '@gemeente-denhaag/components-css';
 import * as ReactDOMServer from 'react-dom/server';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
