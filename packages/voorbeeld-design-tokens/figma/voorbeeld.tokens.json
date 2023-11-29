@@ -1677,6 +1677,40 @@
       }
     }
   },
+  "components/backdrop": {
+    "todo": {
+      "backdrop": {
+        "background-color": {
+          "value": "{voorbeeld.color.white}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{voorbeeld.color.white}",
+          "type": "color"
+        },
+        "opacity": {
+          "value": "0.1",
+          "type": "opacity"
+        },
+        "reduced-transparency": {
+          "opacity": {
+            "value": "0.98",
+            "type": "opacity"
+          }
+        },
+        "z-index": {
+          "value": "auto",
+          "type": "other"
+        },
+        "fade-in": {
+          "animation-duration": {
+            "value": "0.4s",
+            "type": "other"
+          }
+        }
+      }
+    }
+  },
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
@@ -3293,6 +3327,116 @@
       }
     }
   },
+  "components/modal-dialog": {
+    "todo": {
+      "modal-dialog": {
+        "border-radius": {
+          "value": "{voorbeeld.border-radius.lg}",
+          "type": "borderRadius"
+        },
+        "box-shadow": {
+          "value": "{voorbeeld.box-shadow.lg}",
+          "type": "boxShadow"
+        },
+        "header": {
+          "padding-block-start": {
+            "value": "{voorbeeld.space.block.beetle}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{voorbeeld.space.inline.beetle}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{voorbeeld.space.block.beetle}",
+            "type": "spacing"
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "label": {
+            "color": {
+              "value": "{utrecht.document.color}",
+              "type": "color"
+            },
+            "font-familiy": {
+              "value": "{utrecht.document.font-family}",
+              "type": "fontFamilies"
+            },
+            "font-weight": {
+              "value": "{utrecht.document.strong.font-weight}",
+              "type": "fontWeights"
+            },
+            "font-size": {
+              "value": "{utrecht.document.font-size}",
+              "type": "fontSizes"
+            },
+            "line-height": {
+              "value": "{utrecht.document.line-height}",
+              "type": "lineHeights"
+            }
+          },
+          "border-color": {
+            "value": "{utrecht.line.border-color}",
+            "type": "color"
+          },
+          "column-gap": {
+            "value": "{voorbeeld.space.column.snail}",
+            "type": "spacing"
+          }
+        },
+        "background-color": {
+          "value": "{utrecht.document.background-color}",
+          "type": "color"
+        },
+        "footer": {
+          "padding-block-start": {
+            "value": "{voorbeeld.space.block.mouse}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{voorbeeld.space.block.mouse}",
+            "type": "spacing"
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          }
+        },
+        "content": {
+          "padding-block-start": {
+            "value": "{voorbeeld.space.block.rabbit}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{voorbeeld.space.block.rabbit}",
+            "type": "spacing"
+          },
+          "padding-inline": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          }
+        }
+      }
+    }
+  },
   "components/ordered-list": {
     "utrecht": {
       "ordered-list": {
@@ -4830,7 +4974,7 @@
     }
   },
   "components/toolbar-button": {
-    "voorbeeld": {
+    "todo": {
       "toolbar-button": {
         "icon": {
           "margin-inline": {
@@ -4915,6 +5059,7 @@
       "components/accordion",
       "components/alert",
       "components/avatar",
+      "components/backdrop",
       "components/blockquote",
       "components/breadcrumb",
       "components/button",
@@ -4934,6 +5079,7 @@
       "components/heading",
       "components/icon-only-button",
       "components/link",
+      "components/modal-dialog",
       "components/ordered-list",
       "components/pagination",
       "components/paragraph",
