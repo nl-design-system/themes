@@ -1269,78 +1269,6 @@
       }
     }
   },
-  "components/avatar": {
-    "nl": {
-      "avatar": {
-        "background-color": {
-          "value": "{utrecht.interaction.color}",
-          "type": "color"
-        },
-        "border-radius": {
-          "value": "{voorbeeld.border-radius.round}",
-          "type": "borderRadius"
-        },
-        "size": {
-          "value": "{utrecht.pointer-target.min-size}",
-          "type": "sizing"
-        },
-        "icon": {
-          "icon-size": {
-            "value": "{utrecht.icon.functional.size}",
-            "type": "sizing"
-          }
-        },
-        "border-color": {
-          "value": "transparent",
-          "type": "color"
-        },
-        "color": {
-          "value": "{voorbeeld.color.white}",
-          "type": "color"
-        },
-        "text": {
-          "font-family": {
-            "value": "{utrecht.document.font-family}",
-            "type": "fontFamilies"
-          },
-          "font-weight": {
-            "value": "{utrecht.document.strong.font-weight}",
-            "type": "fontWeights"
-          },
-          "line-height": {
-            "value": "{utrecht.document.line-height}",
-            "type": "lineHeights"
-          },
-          "text-transform": {
-            "value": "uppercase",
-            "type": "textCase"
-          },
-          "font-size": {
-            "value": "{utrecht.document.font-size}",
-            "type": "fontSizes"
-          }
-        },
-        "border-width": {
-          "value": "{voorbeeld.border-width.sm}",
-          "type": "borderWidth"
-        },
-        "hover": {
-          "background-color": {
-            "value": "{utrecht.interaction.hover.color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "transparent",
-            "type": "color"
-          },
-          "color": {
-            "value": "{voorbeeld.color.white}",
-            "type": "color"
-          }
-        }
-      }
-    }
-  },
   "components/accordion": {
     "utrecht": {
       "accordion": {
@@ -1666,6 +1594,118 @@
           "padding-block-start": {
             "value": "{voorbeeld.space.block.beetle}",
             "type": "spacing"
+          }
+        },
+        "content": {
+          "row-gap": {
+            "value": "{voorbeeld.space.row.snail}",
+            "type": "spacing"
+          }
+        }
+      }
+    }
+  },
+  "components/avatar": {
+    "todo": {
+      "avatar": {
+        "background-color": {
+          "value": "{utrecht.interaction.color}",
+          "type": "color"
+        },
+        "border-radius": {
+          "value": "{voorbeeld.border-radius.round}",
+          "type": "borderRadius"
+        },
+        "size": {
+          "value": "{utrecht.pointer-target.min-size}",
+          "type": "sizing"
+        },
+        "icon": {
+          "icon-size": {
+            "value": "{utrecht.icon.functional.size}",
+            "type": "sizing"
+          }
+        },
+        "border-color": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "color": {
+          "value": "{voorbeeld.color.white}",
+          "type": "color"
+        },
+        "text": {
+          "font-family": {
+            "value": "{utrecht.document.font-family}",
+            "type": "fontFamilies"
+          },
+          "font-weight": {
+            "value": "{utrecht.document.strong.font-weight}",
+            "type": "fontWeights"
+          },
+          "line-height": {
+            "value": "{utrecht.document.line-height}",
+            "type": "lineHeights"
+          },
+          "text-transform": {
+            "value": "uppercase",
+            "type": "textCase"
+          },
+          "font-size": {
+            "value": "{utrecht.document.font-size}",
+            "type": "fontSizes"
+          }
+        },
+        "border-width": {
+          "value": "{voorbeeld.border-width.sm}",
+          "type": "borderWidth"
+        },
+        "hover": {
+          "background-color": {
+            "value": "{utrecht.interaction.hover.color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "color": {
+            "value": "{voorbeeld.color.white}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "components/backdrop": {
+    "todo": {
+      "backdrop": {
+        "background-color": {
+          "value": "{voorbeeld.color.white}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{voorbeeld.color.white}",
+          "type": "color"
+        },
+        "opacity": {
+          "value": "0.1",
+          "type": "opacity"
+        },
+        "reduced-transparency": {
+          "opacity": {
+            "value": "0.98",
+            "type": "opacity"
+          }
+        },
+        "z-index": {
+          "value": "auto",
+          "type": "other"
+        },
+        "fade-in": {
+          "animation-duration": {
+            "value": "0.4s",
+            "type": "other"
           }
         }
       }
@@ -3283,6 +3323,116 @@
       }
     }
   },
+  "components/modal-dialog": {
+    "todo": {
+      "modal-dialog": {
+        "border-radius": {
+          "value": "{voorbeeld.border-radius.lg}",
+          "type": "borderRadius"
+        },
+        "box-shadow": {
+          "value": "{voorbeeld.box-shadow.lg}",
+          "type": "boxShadow"
+        },
+        "header": {
+          "padding-block-start": {
+            "value": "{voorbeeld.space.block.beetle}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{voorbeeld.space.inline.beetle}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{voorbeeld.space.block.beetle}",
+            "type": "spacing"
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "label": {
+            "color": {
+              "value": "{utrecht.document.color}",
+              "type": "color"
+            },
+            "font-familiy": {
+              "value": "{utrecht.document.font-family}",
+              "type": "fontFamilies"
+            },
+            "font-weight": {
+              "value": "{utrecht.document.strong.font-weight}",
+              "type": "fontWeights"
+            },
+            "font-size": {
+              "value": "{utrecht.document.font-size}",
+              "type": "fontSizes"
+            },
+            "line-height": {
+              "value": "{utrecht.document.line-height}",
+              "type": "lineHeights"
+            }
+          },
+          "border-color": {
+            "value": "{utrecht.line.border-color}",
+            "type": "color"
+          },
+          "column-gap": {
+            "value": "{voorbeeld.space.column.snail}",
+            "type": "spacing"
+          }
+        },
+        "background-color": {
+          "value": "{utrecht.document.background-color}",
+          "type": "color"
+        },
+        "footer": {
+          "padding-block-start": {
+            "value": "{voorbeeld.space.block.mouse}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{voorbeeld.space.block.mouse}",
+            "type": "spacing"
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          }
+        },
+        "content": {
+          "padding-block-start": {
+            "value": "{voorbeeld.space.block.rabbit}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{voorbeeld.space.block.rabbit}",
+            "type": "spacing"
+          },
+          "padding-inline": {
+            "value": "{voorbeeld.space.inline.mouse}",
+            "type": "spacing"
+          }
+        }
+      }
+    }
+  },
   "components/ordered-list": {
     "utrecht": {
       "ordered-list": {
@@ -4819,6 +4969,34 @@
       }
     }
   },
+  "components/toolbar-button": {
+    "todo": {
+      "toolbar-button": {
+        "icon": {
+          "margin-inline": {
+            "value": "{voorbeeld.space.text.beetle}",
+            "type": "spacing"
+          }
+        },
+        "padding-block-end": {
+          "value": "{voorbeeld.space.block.snail}",
+          "type": "spacing"
+        },
+        "padding-block-start": {
+          "value": "{voorbeeld.space.block.snail}",
+          "type": "spacing"
+        },
+        "padding-inline-end": {
+          "value": "{voorbeeld.space.inline.beetle}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {
+          "value": "{voorbeeld.space.inline.beetle}",
+          "type": "spacing"
+        }
+      }
+    }
+  },
   "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
@@ -4869,42 +5047,15 @@
       }
     }
   },
-  "local/toolbar-button": {
-    "voorbeeld": {
-      "toolbar-button": {
-        "icon": {
-          "margin-inline": {
-            "value": "{voorbeeld.space.text.beetle}",
-            "type": "spacing"
-          }
-        },
-        "padding-block-end": {
-          "value": "{voorbeeld.space.block.snail}",
-          "type": "spacing"
-        },
-        "padding-block-start": {
-          "value": "{voorbeeld.space.block.snail}",
-          "type": "spacing"
-        },
-        "padding-inline-end": {
-          "value": "{voorbeeld.space.inline.beetle}",
-          "type": "spacing"
-        },
-        "padding-inline-start": {
-          "value": "{voorbeeld.space.inline.beetle}",
-          "type": "spacing"
-        }
-      }
-    }
-  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "brand",
       "common",
-      "components/avatar",
       "components/accordion",
       "components/alert",
+      "components/avatar",
+      "components/backdrop",
       "components/blockquote",
       "components/breadcrumb",
       "components/button",
@@ -4924,6 +5075,7 @@
       "components/heading",
       "components/icon-only-button",
       "components/link",
+      "components/modal-dialog",
       "components/ordered-list",
       "components/pagination",
       "components/paragraph",
@@ -4937,8 +5089,8 @@
       "components/table",
       "components/textarea",
       "components/text-input",
-      "components/unordered-list",
-      "local/toolbar-button"
+      "components/toolbar-button",
+      "components/unordered-list"
     ]
   }
 }
