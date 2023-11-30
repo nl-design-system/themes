@@ -1681,7 +1681,7 @@
     "todo": {
       "backdrop": {
         "background-color": {
-          "value": "{voorbeeld.color.white}",
+          "value": "{voorbeeld.color.black}",
           "type": "color"
         },
         "color": {
@@ -2832,6 +2832,10 @@
           "border-color": {
             "value": "{utrecht.line.border-color}",
             "type": "color"
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
           }
         },
         "border-radius": {
@@ -2862,6 +2866,10 @@
           "border-color": {
             "value": "{utrecht.line.border-color}",
             "type": "color"
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
           }
         },
         "border-width": {
@@ -2877,11 +2885,7 @@
             "value": "{voorbeeld.space.block.rabbit}",
             "type": "spacing"
           },
-          "padding-inline-start": {
-            "value": "{voorbeeld.space.inline.mouse}",
-            "type": "spacing"
-          },
-          "padding-inline-end": {
+          "padding-inline": {
             "value": "{voorbeeld.space.inline.mouse}",
             "type": "spacing"
           }
@@ -3384,10 +3388,22 @@
           "column-gap": {
             "value": "{voorbeeld.space.column.snail}",
             "type": "spacing"
+          },
+          "border-width": {
+            "value": "{voorbeeld.border-width.sm}",
+            "type": "borderWidth"
           }
+        },
+        "border-color": {
+          "value": "transparent",
+          "type": "color"
         },
         "background-color": {
           "value": "{utrecht.document.background-color}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{utrecht.document.color}",
           "type": "color"
         },
         "footer": {
@@ -3414,6 +3430,10 @@
           "border-color": {
             "value": "transparent",
             "type": "color"
+          },
+          "border-width": {
+            "value": "{voorbeeld.border-width.sm}",
+            "type": "borderWidth"
           }
         },
         "content": {
@@ -3429,6 +3449,10 @@
             "value": "{voorbeeld.space.inline.mouse}",
             "type": "spacing"
           }
+        },
+        "border-width": {
+          "value": "{voorbeeld.border-width.sm}",
+          "type": "borderWidth"
         }
       }
     }
