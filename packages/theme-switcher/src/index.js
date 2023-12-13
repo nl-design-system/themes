@@ -94,8 +94,8 @@ const builtinThemes = [
   {
     className: 'rotterdam-theme',
     title: 'Gemeente Rotterdam',
-    href: 'https://unpkg.com/@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css',
-    package: '@nl-design-system-unstable/rotterdam-design-tokens',
+    href: 'https://unpkg.com/@gemeente-rotterdam/design-tokens/dist/index.css',
+    package: '@gemeente-rotterdam/design-tokens',
   },
   {
     className: 'stedebroec-theme',
