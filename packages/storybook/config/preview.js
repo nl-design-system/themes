@@ -26,6 +26,7 @@ import '@nl-design-system-unstable/enkhuizen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/epe-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/epe-design-tokens/src/font';
 import '@nl-design-system-unstable/groningen-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/groningen-design-tokens/src/font';
 import '@nl-design-system-unstable/haarlem-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/haarlem-design-tokens/src/font.scss';
 import '@nl-design-system-unstable/haarlemmermeer-design-tokens/dist/index.css';
