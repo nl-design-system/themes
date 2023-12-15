@@ -12,7 +12,7 @@ import hoorn from "@nl-design-system-unstable/hoorn-design-tokens/src/config.jso
 import horstaandemaas from "@nl-design-system-unstable/horstaandemaas-design-tokens/src/config.json" assert { type: "json" };
 import leidschendam from "@nl-design-system-unstable/leidschendam-voorburg-design-tokens/src/config.json" assert { type: "json" };
 import noordoostpolder from "@nl-design-system-unstable/noordoostpolder-design-tokens/src/config.json" assert { type: "json" };
-import rotterdam from "@nl-design-system-unstable/rotterdam-design-tokens/src/config.json" assert { type: "json" };
+import rotterdam from "../../storybook/src/rotterdam/config.json" assert { type: "json" };
 import stedebroec from "@nl-design-system-unstable/stedebroec-design-tokens/src/config.json" assert { type: "json" };
 import tilburg from "@nl-design-system-unstable/tilburg-design-tokens/src/config.json" assert { type: "json" };
 import venray from "@nl-design-system-unstable/venray-design-tokens/src/config.json" assert { type: "json" };

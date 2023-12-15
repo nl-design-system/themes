@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.121",
+  "version": "1.0.0-alpha.123",
   "author": "Community for NL Design System",
   "description": "Theme Switcher for NL Design System",
   "keywords": [
@@ -23,6 +23,7 @@
     "build": "mkdir -p dist/ && node src/generate-json.mjs > dist/themes.json"
   },
   "devDependencies": {
+    "@gemeente-rotterdam/design-tokens": "1.0.0-alpha.10",
     "@nl-design-system-unstable/amsterdam-design-tokens": "workspace:*",
     "@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens": "workspace:*",
     "@nl-design-system-unstable/buren-design-tokens": "workspace:*",
@@ -37,7 +38,6 @@
     "@nl-design-system-unstable/horstaandemaas-design-tokens": "workspace:*",
     "@nl-design-system-unstable/leidschendam-voorburg-design-tokens": "workspace:*",
     "@nl-design-system-unstable/noordoostpolder-design-tokens": "workspace:*",
-    "@nl-design-system-unstable/rotterdam-design-tokens": "workspace:*",
     "@nl-design-system-unstable/stedebroec-design-tokens": "workspace:*",
     "@nl-design-system-unstable/tilburg-design-tokens": "workspace:*",
     "@nl-design-system-unstable/venray-design-tokens": "workspace:*",

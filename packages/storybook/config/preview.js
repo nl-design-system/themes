@@ -44,10 +44,10 @@ import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
 import '@nl-design-system-unstable/noordwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordwijk-design-tokens/src/font';
 import '@nl-design-system-unstable/provincie-zuid-holland-design-tokens/dist/index.css';
-import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
-import '@nl-design-system-unstable/rotterdam-design-tokens/src/custom.scss';
+import '@gemeente-rotterdam/design-tokens/dist/index.css';
+// import '@gemeente-rotterdam/design-tokens/src/custom.scss';
 // Uncomment the following line when proprietary fonts for Rotterdam are available:
-// import '@nl-design-system-unstable/rotterdam-design-tokens/src/font.scss';
+// import '@gemeente-rotterdam/design-tokens/js/font';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tubbergen-design-tokens/dist/index.css';
