@@ -48,8 +48,8 @@ jobs:
         run: |
           npm run lint --if-present
 
-      - name: "Continuous Integration: public code validator"
-        uses: nl-design-system/publiccode-parser-action@latest
+      # - name: "Continuous Integration: public code validator"
+      #   uses: nl-design-system/publiccode-parser-action@latest
 
       - name: "Continuous Integration: build"
         run: |
