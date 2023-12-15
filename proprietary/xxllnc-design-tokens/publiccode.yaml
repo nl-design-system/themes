@@ -1,22 +1,29 @@
-publiccodeYmlVersion: "0.1"
+publiccodeYmlVersion: "0.3"
 name: "@nl-design-system-unstable/xxllnc-design-tokens"
-url: https://github.com/nl-design-system/themes/tree/main/proprietary/xxllnc-design-tokens
+url: https://github.com/nl-design-system/themes
 platforms:
   - web
 releaseDate: 2023-09-19
+categories:
+  - it-development
 developmentStatus: development
+softwareType: "standalone/desktop"
 description:
   en:
     localisedName: NL Design Tokens XXLLNC
     shortDescription: "The NL Design Tokens of XXLLNC"
-    longDescription: "The NL Design Tokens of XXLLNC"
+    longDescription: "The NL Design Tokens set from the of XXLLNC, this token set is used to style websites such as Woo and OpenCatalogi that are used by XXLLNC in its colors."
     documentation: https://github.com/nl-design-system/documentatie
+    features:
+      - Just one feature
   nl:
     localisedName: NL Design Tokens XXLLNC
     shortDescription: "De NL Design Tokens van XXLLNC"
-    longDescription: "De NL Design Tokens van XXLLNC"
+    longDescription: "De NL Design Tokens set van XXLLNC, deze token set wordt gebruikt om websites zoals Woo en OpenCatalogi die door XXLLNC gebruikt worden te stylen in zijn kleuren."
     documentation: https://github.com/nl-design-system/documentatie
-intendedaudience:
+    features:
+      - Just one feature
+intendedAudience:
   countries:
     - nl
   scope:
@@ -31,14 +38,15 @@ maintenance:
   contractors:
     - name: Conduction
       until: 2035-01-01
-      email: info\x64conduction.nl
+      email: info@conduction.nl
       website: https://www.conduction.nl
-  contact:
+  contacts:
     - name: Ruben van der Linde
-      email: info\x64conduction.nl
+      email: info@conduction.nl
       phone: 085 303 6840
       affiliation: Conduction
 localisation:
+  localisationReady: true
   availableLanguages:
     - en
     - nl
