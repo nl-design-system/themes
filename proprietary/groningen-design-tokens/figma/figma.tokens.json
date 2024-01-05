@@ -115,7 +115,7 @@
         "state": {
           "information": {
             "bg": {
-              "value": "#66ABEA",
+              "value": "#C0DCF6",
               "type": "color"
             },
             "text": {
@@ -447,6 +447,10 @@
         },
         "8px": {
           "value": "8px",
+          "type": "sizing"
+        },
+        "12px": {
+          "value": "12px",
           "type": "sizing"
         },
         "16px": {
@@ -1154,7 +1158,7 @@
             "type": "color"
           },
           "background-color": {
-            "value": "{voorbeeld.color.gray.100}",
+            "value": "{groningen.color.grey.background}",
             "type": "color"
           },
           "border-color": {
@@ -1348,11 +1352,11 @@
     }
   },
   "components/accordion": {
-    "utrecht": {
+    "groningen": {
       "accordion": {
         "border-radius": {
           "type": "borderRadius",
-          "value": "0px"
+          "value": "{groningen.border-radius.4px}"
         },
         "section": {
           "border-block-end-width": {
@@ -1395,22 +1399,10 @@
           }
         },
         "button": {
-          "font-size": {
-            "value": "{groningen.document.font-size}",
-            "type": "fontSizes"
-          },
-          "line-height": {
-            "value": "{groningen.document.line-height}",
-            "type": "lineHeights"
-          },
           "icon": {
             "margin-inline": {
               "value": "{groningen.space.text.4px}",
               "type": "spacing"
-            },
-            "size": {
-              "type": "sizing",
-              "value": "{groningen.icon.functional.size}"
             }
           },
           "padding-block-end": {
@@ -1432,7 +1424,7 @@
           "hover": {
             "background-color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.100}"
+              "value": "{groningen.color.grey.background}"
             },
             "border-color": {
               "value": "transparent",
@@ -1440,16 +1432,16 @@
             },
             "color": {
               "type": "color",
-              "value": "{groningen.interaction.hover.color}"
+              "value": "{groningen.focus.background-color}"
             }
           },
           "expanded": {
             "background-color": {
-              "value": "{voorbeeld.color.gray.50}",
+              "value": "{groningen.color.white}",
               "type": "color"
             },
             "border-color": {
-              "value": "transparent",
+              "value": "{groningen.color.grey.border}",
               "type": "color"
             },
             "color": {
@@ -1459,10 +1451,10 @@
           },
           "background-color": {
             "type": "color",
-            "value": "{voorbeeld.color.gray.50}"
+            "value": "{groningen.color.white}"
           },
           "border-color": {
-            "value": "transparent",
+            "value": "{groningen.color.grey.border}",
             "type": "color"
           },
           "color": {
@@ -1486,7 +1478,7 @@
           "active": {
             "background-color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.200}"
+              "value": "{groningen.color.grey.background}"
             },
             "border-color": {
               "value": "transparent",
@@ -1494,7 +1486,7 @@
             },
             "color": {
               "type": "color",
-              "value": "{groningen.interaction.active.color}"
+              "value": "{groningen.color.grey.text}"
             }
           },
           "border-width": {
@@ -1511,10 +1503,30 @@
           }
         }
       }
+    },
+    "utrecht": {
+      "accordion": {
+        "button": {
+          "font-size": {
+            "value": "{groningen.document.font-size}",
+            "type": "fontSizes"
+          },
+          "line-height": {
+            "value": "{groningen.document.line-height}",
+            "type": "lineHeights"
+          },
+          "icon": {
+            "size": {
+              "type": "sizing",
+              "value": "{groningen.icon.functional.size}"
+            }
+          }
+        }
+      }
     }
   },
   "components/alert": {
-    "utrecht": {
+    "groningen": {
       "alert": {
         "heading": {
           "font-family": {
@@ -1528,10 +1540,6 @@
           "line-height": {
             "value": "{groningen.typography.line-height.120}",
             "type": "lineHeights"
-          },
-          "font-size": {
-            "value": "{groningen.typography.font-size.l}",
-            "type": "fontSizes"
           }
         },
         "column-gap": {
@@ -1564,18 +1572,18 @@
             "type": "color"
           },
           "border-color": {
-            "value": "{groningen.feedback.informative.border-color}",
+            "value": "transparant",
             "type": "color"
           },
           "color": {
-            "value": "{groningen.document.color}",
+            "value": "{groningen.color.state.information.text}",
             "type": "color"
           }
         },
         "icon": {
           "informative": {
             "color": {
-              "value": "{groningen.feedback.informative.color}",
+              "value": "{groningen.color.state.information.text}",
               "type": "color"
             }
           },
@@ -1612,10 +1620,6 @@
               "value": "{groningen.feedback.warning.color}",
               "type": "color"
             }
-          },
-          "size": {
-            "type": "sizing",
-            "value": "{groningen.icon.functional.size}"
           }
         },
         "negative": {
@@ -1624,11 +1628,11 @@
             "type": "color"
           },
           "border-color": {
-            "value": "{groningen.feedback.negative.border-color}",
+            "value": "transparant",
             "type": "color"
           },
           "color": {
-            "value": "{groningen.document.color}",
+            "value": "{groningen.color.state.error.text}",
             "type": "color"
           }
         },
@@ -1638,11 +1642,11 @@
             "type": "color"
           },
           "border-color": {
-            "value": "{groningen.feedback.positive.border-color}",
+            "value": "transparant",
             "type": "color"
           },
           "color": {
-            "value": "{groningen.document.color}",
+            "value": "{groningen.color.state.success.text}",
             "type": "color"
           }
         },
@@ -1652,11 +1656,11 @@
             "type": "color"
           },
           "border-color": {
-            "value": "{groningen.feedback.warning.border-color}",
+            "value": "transparant",
             "type": "color"
           },
           "color": {
-            "value": "{groningen.document.color}",
+            "value": "{groningen.color.state.warning.text}",
             "type": "color"
           }
         },
@@ -1678,6 +1682,22 @@
           "row-gap": {
             "value": "{groningen.space.row.8px}",
             "type": "spacing"
+          }
+        }
+      }
+    },
+    "utrecht": {
+      "alert": {
+        "heading": {
+          "font-size": {
+            "value": "{groningen.typography.font-size.l}",
+            "type": "fontSizes"
+          }
+        },
+        "icon": {
+          "size": {
+            "type": "sizing",
+            "value": "{groningen.icon.functional.size}"
           }
         }
       }
@@ -1756,7 +1776,7 @@
     }
   },
   "components/backdrop": {
-    "todo": {
+    "groningen": {
       "backdrop": {
         "background-color": {
           "value": "{groningen.color.black}",
@@ -1790,7 +1810,7 @@
     }
   },
   "components/blockquote": {
-    "utrecht": {
+    "groningen": {
       "blockquote": {
         "attribution": {
           "font-size": {
@@ -1800,10 +1820,6 @@
           "font-family": {
             "value": "{groningen.document.font-family}",
             "type": "fontFamilies"
-          },
-          "line-height": {
-            "value": "{groningen.typography.line-height.130}",
-            "type": "lineHeights"
           },
           "font-weight": {
             "value": "{groningen.document.font-weight}",
@@ -1822,10 +1838,6 @@
           "font-family": {
             "value": "{groningen.heading.font-family}",
             "type": "fontFamilies"
-          },
-          "line-height": {
-            "value": "{groningen.typography.line-height.120}",
-            "type": "lineHeights"
           },
           "font-weight": {
             "value": "{groningen.document.font-weight}",
@@ -1861,10 +1873,26 @@
           "type": "color"
         }
       }
+    },
+    "utrecht": {
+      "blockquote": {
+        "attribution": {
+          "line-height": {
+            "value": "{groningen.typography.line-height.130}",
+            "type": "lineHeights"
+          }
+        },
+        "content": {
+          "line-height": {
+            "value": "{groningen.typography.line-height.120}",
+            "type": "lineHeights"
+          }
+        }
+      }
     }
   },
   "components/breadcrumb": {
-    "utrecht": {
+    "groningen": {
       "breadcrumb": {
         "line-height": {
           "value": "{groningen.document.line-height}",
@@ -1909,6 +1937,10 @@
             "color": {
               "type": "color",
               "value": "{groningen.interaction.active.color}"
+            },
+            "text-decoration": {
+              "value": "none",
+              "type": "textDecoration"
             }
           },
           "focus": {
@@ -1929,6 +1961,10 @@
             "color": {
               "type": "color",
               "value": "{groningen.interaction.hover.color}"
+            },
+            "text-decoration": {
+              "value": "underline",
+              "type": "textDecoration"
             }
           },
           "current": {
@@ -1963,24 +1999,6 @@
         "font-weight": {
           "value": "{groningen.document.font-weight}",
           "type": "fontWeights"
-        }
-      }
-    },
-    "groningen": {
-      "breadcrumb": {
-        "link": {
-          "active": {
-            "text-decoration": {
-              "value": "none",
-              "type": "textDecoration"
-            }
-          },
-          "hover": {
-            "text-decoration": {
-              "value": "underline",
-              "type": "textDecoration"
-            }
-          }
         }
       }
     }
@@ -2018,7 +2036,7 @@
           "disabled": {
             "background-color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.50}"
+              "value": "{groningen.color.grey.background}"
             },
             "border-color": {
               "value": "transparent",
@@ -2026,7 +2044,7 @@
             },
             "color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.500}"
+              "value": "{groningen.color.grey.text}"
             }
           },
           "focus": {
@@ -2100,7 +2118,7 @@
             },
             "color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.500}"
+              "value": "{groningen.color.grey.text}"
             }
           },
           "focus": {
@@ -2216,7 +2234,7 @@
             },
             "color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.500}"
+              "value": "{groningen.color.grey.text}"
             }
           },
           "focus": {
@@ -2278,7 +2296,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{voorbeeld.color.gray.500}",
+            "value": "{groningen.color.grey.text}",
             "type": "color"
           }
         },
@@ -2331,11 +2349,7 @@
         "min-inline-size": {
           "type": "sizing",
           "value": "{groningen.pointer-target.min-size}"
-        }
-      }
-    },
-    "utrecht": {
-      "button": {
+        },
         "font-family": {
           "value": "{groningen.document.font-family}",
           "type": "fontFamilies"
@@ -2378,11 +2392,11 @@
     }
   },
   "components/checkbox": {
-    "utrecht": {
+    "groningen": {
       "checkbox": {
         "border-radius": {
           "type": "borderRadius",
-          "value": "0px"
+          "value": "{groningen.border-radius.4px}"
         },
         "size": {
           "type": "sizing",
@@ -2404,7 +2418,7 @@
         },
         "invalid": {
           "background-color": {
-            "value": "{groningen.form-control.invalid.background-color}",
+            "value": "{groningen.color.state.error.bg}",
             "type": "color"
           },
           "border-color": {
@@ -2422,7 +2436,7 @@
             "type": "color"
           },
           "border-color": {
-            "value": "{groningen.form-control.focus.border-color}",
+            "value": "{groningen.form-control.accent-color}",
             "type": "color"
           },
           "border-width": {
@@ -2432,7 +2446,7 @@
         },
         "disabled": {
           "background-color": {
-            "value": "{groningen.form-control.disabled.background-color}",
+            "value": "{groningen.form-control.disabled.accent-color}",
             "type": "color"
           },
           "border-color": {
@@ -2459,15 +2473,15 @@
           },
           "disabled": {
             "background-color": {
-              "value": "{groningen.form-control.disabled.accent-color}",
+              "value": "{groningen.checkbox.disabled.background-color}",
               "type": "color"
             },
             "border-color": {
-              "value": "transparent",
+              "value": "{groningen.form-control.disabled.border-color}",
               "type": "color"
             },
             "color": {
-              "value": "{groningen.color.white}",
+              "value": "{groningen.form-control.disabled.border-color}",
               "type": "color"
             }
           },
@@ -2545,15 +2559,15 @@
           },
           "disabled": {
             "background-color": {
-              "value": "{groningen.form-control.disabled.accent-color}",
+              "value": "{groningen.color.grey.background}",
               "type": "color"
             },
             "border-color": {
-              "value": "transparent",
+              "value": "{groningen.form-control.disabled.border-color}",
               "type": "color"
             },
             "color": {
-              "value": "{groningen.color.white}",
+              "value": "{groningen.form-control.disabled.border-color}",
               "type": "color"
             }
           },
@@ -2622,11 +2636,11 @@
             "type": "borderWidth"
           },
           "background-color": {
-            "value": "{groningen.form-control.hover.background-color}",
+            "value": "{groningen.checkbox.checked.active.background-color}",
             "type": "color"
           },
           "border-color": {
-            "value": "{groningen.form-control.hover.border-color}",
+            "value": "transparant",
             "type": "color"
           }
         },
@@ -2634,10 +2648,6 @@
           "border-width": {
             "value": "{groningen.form-control.active.border-width}",
             "type": "borderWidth"
-          },
-          "background-color": {
-            "value": "{groningen.form-control.active.background-color}",
-            "type": "color"
           },
           "border-color": {
             "value": "{groningen.form-control.active.border-color}",
@@ -2648,7 +2658,7 @@
     }
   },
   "components/checkbox-group": {
-    "utrecht": {
+    "groningen": {
       "checkbox-group": {
         "padding-block-end": {
           "value": "{groningen.space.block.8px}",
@@ -2666,7 +2676,7 @@
     }
   },
   "components/counter-badge": {
-    "utrecht": {
+    "groningen": {
       "counter-badge": {
         "font-size": {
           "value": "{groningen.typography.font-size.xs}",
@@ -2702,7 +2712,7 @@
         },
         "background-color": {
           "type": "color",
-          "value": "{voorbeeld.color.violet.100}"
+          "value": "{groningen.color.grey.background}"
         },
         "border-color": {
           "type": "color",
@@ -2724,7 +2734,7 @@
     }
   },
   "components/data-list": {
-    "utrecht": {
+    "groningen": {
       "data-list": {
         "font-family": {
           "value": "{groningen.document.font-family}",
@@ -2878,7 +2888,31 @@
           "border-width": {
             "type": "borderWidth",
             "value": "{groningen.border-width.1px}"
-          },
+          }
+        },
+        "border-radius": {
+          "type": "borderRadius",
+          "value": "0px"
+        },
+        "footer": {
+          "border-width": {
+            "type": "borderWidth",
+            "value": "{groningen.border-width.1px}"
+          }
+        },
+        "border-width": {
+          "type": "borderWidth",
+          "value": "{groningen.border-width.1px}"
+        },
+        "box-shadow": {
+          "value": "{voorbeeld.box-shadow.lg}",
+          "type": "boxShadow"
+        }
+      }
+    },
+    "groningen": {
+      "drawer": {
+        "header": {
           "label": {
             "font-family": {
               "value": "{groningen.document.font-family}",
@@ -2930,15 +2964,7 @@
             "type": "color"
           }
         },
-        "border-radius": {
-          "type": "borderRadius",
-          "value": "0px"
-        },
         "footer": {
-          "border-width": {
-            "type": "borderWidth",
-            "value": "{groningen.border-width.1px}"
-          },
           "padding-block-end": {
             "value": "{groningen.space.block.16px}",
             "type": "spacing"
@@ -2963,10 +2989,6 @@
             "value": "transparent",
             "type": "color"
           }
-        },
-        "border-width": {
-          "type": "borderWidth",
-          "value": "{groningen.border-width.1px}"
         },
         "content": {
           "padding-block-end": {
@@ -2993,16 +3015,12 @@
         "color": {
           "value": "{groningen.document.color}",
           "type": "color"
-        },
-        "box-shadow": {
-          "value": "{voorbeeld.box-shadow.lg}",
-          "type": "boxShadow"
         }
       }
     }
   },
   "components/form-field": {
-    "utrecht": {
+    "groningen": {
       "form-field": {
         "invalid": {
           "border-inline-start-color": {
@@ -3022,7 +3040,7 @@
     }
   },
   "components/form-field-description": {
-    "utrecht": {
+    "groningen": {
       "form-field-description": {
         "color": {
           "type": "color",
@@ -3039,7 +3057,11 @@
         "font-weight": {
           "value": "{groningen.document.font-weight}",
           "type": "fontWeights"
-        },
+        }
+      }
+    },
+    "utrecht": {
+      "form-field-description": {
         "line-height": {
           "value": "{groningen.document.line-height}",
           "type": "lineHeights"
@@ -3048,7 +3070,7 @@
     }
   },
   "components/form-field-checkbox-option": {
-    "utrecht": {
+    "groningen": {
       "form-field-checkbox-option": {
         "column-gap": {
           "value": "{groningen.space.column.8px}",
@@ -3058,7 +3080,7 @@
     }
   },
   "components/form-field-error-message": {
-    "utrecht": {
+    "groningen": {
       "form-field-error-message": {
         "icon": {
           "size": {
@@ -3094,7 +3116,7 @@
     }
   },
   "components/form-field-label": {
-    "utrecht": {
+    "groningen": {
       "form-field-label": {
         "color": {
           "type": "color",
@@ -3120,10 +3142,10 @@
     }
   },
   "components/form-field-option-label": {
-    "utrecht": {
+    "groningen": {
       "form-field-option-label": {
         "color": {
-          "value": "{groningen.form-control.color}",
+          "value": "{groningen.form-control.read-only.color}",
           "type": "color"
         },
         "font-size": {
@@ -3138,21 +3160,25 @@
           "value": "{groningen.document.font-family}",
           "type": "fontFamilies"
         },
+        "disabled": {
+          "color": {
+            "value": "{groningen.form-control.disabled.border-color}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "utrecht": {
+      "form-field-option-label": {
         "font-weight": {
           "value": "{groningen.document.font-weight}",
           "type": "fontWeights"
-        },
-        "disabled": {
-          "color": {
-            "value": "{voorbeeld.color.gray.600}",
-            "type": "color"
-          }
         }
       }
     }
   },
   "components/form-field-radio-option": {
-    "utrecht": {
+    "groningen": {
       "form-field-radio-option": {
         "column-gap": {
           "value": "{groningen.space.column.8px}",
@@ -3298,7 +3324,7 @@
     }
   },
   "components/icon-only-button": {
-    "utrecht": {
+    "groningen": {
       "icon-only-button": {
         "padding-block-end": {
           "value": "{groningen.space.block.12px}",
@@ -3320,7 +3346,7 @@
     }
   },
   "components/link": {
-    "utrecht": {
+    "groningen": {
       "link": {
         "line-height": {
           "value": "{groningen.document.line-height}",
@@ -3420,7 +3446,7 @@
     }
   },
   "components/modal-dialog": {
-    "todo": {
+    "groningen": {
       "modal-dialog": {
         "border-radius": {
           "value": "{groningen.border-radius.16px}",
@@ -3463,14 +3489,6 @@
             "font-weight": {
               "value": "{groningen.document.strong.font-weight}",
               "type": "fontWeights"
-            },
-            "font-size": {
-              "value": "{groningen.document.font-size}",
-              "type": "fontSizes"
-            },
-            "line-height": {
-              "value": "{groningen.document.line-height}",
-              "type": "lineHeights"
             }
           },
           "border-color": {
@@ -3547,10 +3565,26 @@
           "type": "borderWidth"
         }
       }
+    },
+    "todo": {
+      "modal-dialog": {
+        "header": {
+          "label": {
+            "font-size": {
+              "value": "{groningen.document.font-size}",
+              "type": "fontSizes"
+            },
+            "line-height": {
+              "value": "{groningen.document.line-height}",
+              "type": "lineHeights"
+            }
+          }
+        }
+      }
     }
   },
   "components/ordered-list": {
-    "utrecht": {
+    "groningen": {
       "ordered-list": {
         "padding-inline-start": {
           "value": "{groningen.space.inline.24px}",
@@ -3563,10 +3597,6 @@
         "font-familiy": {
           "value": "{groningen.document.font-family}",
           "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{groningen.document.font-weight}",
-          "type": "fontWeights"
         },
         "font-size": {
           "value": "{groningen.document.font-size}",
@@ -3587,10 +3617,18 @@
           }
         }
       }
+    },
+    "utrecht": {
+      "ordered-list": {
+        "font-weight": {
+          "value": "{groningen.document.font-weight}",
+          "type": "fontWeights"
+        }
+      }
     }
   },
   "components/pagination": {
-    "utrecht": {
+    "groningen": {
       "pagination": {
         "relative-link": {
           "border-width": {
@@ -3633,7 +3671,7 @@
           },
           "color": {
             "type": "color",
-            "value": "{groningen.interaction.color}"
+            "value": "{groningen.color.blue.cta}"
           },
           "active": {
             "background-color": {
@@ -3716,7 +3754,7 @@
             },
             "color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.500}"
+              "value": "{groningen.color.grey.border}"
             }
           }
         },
@@ -3740,7 +3778,7 @@
             },
             "background-color": {
               "type": "color",
-              "value": "{voorbeeld.color.gray.100}"
+              "value": "{groningen.color.grey.background}"
             },
             "border-color": {
               "type": "color",
@@ -3972,11 +4010,59 @@
           "border-width": {
             "value": "{groningen.form-control.active.border-width}",
             "type": "borderWidth"
+          }
+        },
+        "invalid": {
+          "border-width": {
+            "value": "{groningen.form-control.invalid.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "focus": {
+          "border-width": {
+            "value": "{groningen.form-control.focus.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "checked": {
+          "hover": {
+            "border-width": {
+              "value": "{groningen.form-control.hover.border-width}",
+              "type": "borderWidth"
+            }
           },
-          "background-color": {
-            "value": "{groningen.form-control.active.background-color}",
-            "type": "color"
+          "active": {
+            "border-width": {
+              "value": "{groningen.form-control.active.border-width}",
+              "type": "borderWidth"
+            }
           },
+          "focus": {
+            "border-width": {
+              "value": "{groningen.form-control.focus.border-width}",
+              "type": "borderWidth"
+            }
+          },
+          "border-width": {
+            "value": "{groningen.form-control.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "hover": {
+          "border-width": {
+            "value": "{groningen.form-control.hover.border-width}",
+            "type": "borderWidth"
+          }
+        },
+        "border-width": {
+          "value": "{groningen.form-control.border-width}",
+          "type": "borderWidth"
+        }
+      }
+    },
+    "groningen": {
+      "radio": {
+        "active": {
           "border-color": {
             "value": "{groningen.form-control.active.border-color}",
             "type": "color"
@@ -3986,32 +4072,24 @@
           "type": "sizing",
           "value": "{groningen.size.24px}"
         },
-        "dot": {
-          "size": {
-            "type": "sizing",
-            "value": "{groningen.size.8px}"
-          }
-        },
         "background-color": {
           "value": "{groningen.form-control.background-color}",
           "type": "color"
         },
-        "border-color": {
-          "value": "{groningen.form-control.border-color}",
-          "type": "color"
+        "dot": {
+          "size": {
+            "type": "sizing",
+            "value": "{groningen.size.12px}"
+          }
         },
         "invalid": {
           "background-color": {
-            "value": "{groningen.form-control.invalid.background-color}",
+            "value": "{groningen.color.state.error.bg}",
             "type": "color"
           },
           "border-color": {
             "value": "{groningen.form-control.invalid.border-color}",
             "type": "color"
-          },
-          "border-width": {
-            "value": "{groningen.form-control.invalid.border-width}",
-            "type": "borderWidth"
           }
         },
         "focus": {
@@ -4022,10 +4100,6 @@
           "border-color": {
             "value": "{groningen.form-control.focus.border-color}",
             "type": "color"
-          },
-          "border-width": {
-            "value": "{groningen.form-control.focus.border-width}",
-            "type": "borderWidth"
           }
         },
         "disabled": {
@@ -4040,33 +4114,29 @@
         },
         "checked": {
           "background-color": {
-            "value": "{groningen.form-control.accent-color}",
+            "value": "{groningen.color.white}",
             "type": "color"
           },
           "border-color": {
-            "value": "transparent",
+            "value": "{groningen.color.blue.cta}",
             "type": "color"
           },
           "color": {
-            "value": "{groningen.color.white}",
+            "value": "{groningen.color.blue.cta}",
             "type": "color"
           },
           "hover": {
             "background-color": {
-              "value": "{groningen.form-control.hover.accent-color}",
-              "type": "color"
-            },
-            "border-color": {
-              "value": "transparent",
-              "type": "color"
-            },
-            "color": {
               "value": "{groningen.color.white}",
               "type": "color"
             },
-            "border-width": {
-              "value": "{groningen.form-control.hover.border-width}",
-              "type": "borderWidth"
+            "border-color": {
+              "value": "{groningen.color.blue.hover}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{groningen.color.blue.hover}",
+              "type": "color"
             }
           },
           "active": {
@@ -4081,10 +4151,6 @@
             "color": {
               "value": "{groningen.color.white}",
               "type": "color"
-            },
-            "border-width": {
-              "value": "{groningen.form-control.active.border-width}",
-              "type": "borderWidth"
             }
           },
           "focus": {
@@ -4099,10 +4165,6 @@
             "color": {
               "value": "{groningen.form-control.focus.color}",
               "type": "color"
-            },
-            "border-width": {
-              "value": "{groningen.form-control.focus.border-width}",
-              "type": "borderWidth"
             }
           },
           "disabled": {
@@ -4118,39 +4180,27 @@
               "value": "{groningen.color.white}",
               "type": "color"
             }
-          },
-          "border-width": {
-            "value": "{groningen.form-control.border-width}",
-            "type": "borderWidth"
           }
         },
         "hover": {
           "background-color": {
-            "value": "{groningen.form-control.hover.background-color}",
+            "value": "{groningen.color.blue.hover}",
             "type": "color"
           },
           "border-color": {
-            "value": "{groningen.form-control.hover.border-color}",
+            "value": "transparent",
             "type": "color"
-          },
-          "border-width": {
-            "value": "{groningen.form-control.hover.border-width}",
-            "type": "borderWidth"
           }
         },
         "border-radius": {
           "type": "borderRadius",
           "value": "{groningen.border-radius.round}"
-        },
-        "border-width": {
-          "value": "{groningen.form-control.border-width}",
-          "type": "borderWidth"
         }
       }
     }
   },
   "components/radio-group": {
-    "utrecht": {
+    "groningen": {
       "radio-group": {
         "padding-block-end": {
           "value": "{groningen.space.block.8px}",
@@ -4168,7 +4218,7 @@
     }
   },
   "components/select": {
-    "utrecht": {
+    "groningen": {
       "select": {
         "icon": {
           "size": {
@@ -4330,7 +4380,7 @@
     }
   },
   "components/side-nav": {
-    "denhaag": {
+    "groningen": {
       "sidenav": {
         "link": {
           "line-height": {
@@ -4405,6 +4455,10 @@
             "text-decoration": {
               "value": "underline",
               "type": "textDecoration"
+            },
+            "text-color": {
+              "value": "{groningen.color.white}",
+              "type": "color"
             }
           },
           "padding-block-start": {
@@ -4424,7 +4478,7 @@
     }
   },
   "components/skip-link": {
-    "utrecht": {
+    "groningen": {
       "skip-link": {
         "font-weight": {
           "value": "{groningen.document.strong.font-weight}",
@@ -4512,7 +4566,7 @@
     }
   },
   "components/status-badge": {
-    "utrecht": {
+    "groningen": {
       "status-badge": {
         "font-size": {
           "value": "{groningen.typography.font-size.xs}",
@@ -4539,7 +4593,7 @@
           "value": "{groningen.border-radius.4px}"
         },
         "padding-inline": {
-          "value": "{groningen.space.inline.4px}",
+          "value": "{groningen.space.inline.8px}",
           "type": "spacing"
         },
         "padding-block": {
@@ -4549,7 +4603,7 @@
         "informative": {
           "background-color": {
             "type": "color",
-            "value": "{utrecht.alert.informative.background-color}"
+            "value": "{groningen.alert.informative.background-color}"
           },
           "border-color": {
             "type": "color",
@@ -4563,7 +4617,7 @@
         "positive": {
           "background-color": {
             "type": "color",
-            "value": "{utrecht.alert.positive.background-color}"
+            "value": "{groningen.alert.positive.background-color}"
           },
           "border-color": {
             "type": "color",
@@ -4604,7 +4658,7 @@
         },
         "background-color": {
           "type": "color",
-          "value": "{voorbeeld.color.violet.100}"
+          "value": "{groningen.color.grey.background}"
         },
         "border-color": {
           "type": "color",
@@ -4618,7 +4672,7 @@
     }
   },
   "components/table": {
-    "utrecht": {
+    "groningen": {
       "table": {
         "header-cell": {
           "line-height": {
@@ -4786,7 +4840,7 @@
     }
   },
   "components/textarea": {
-    "utrecht": {
+    "groningen": {
       "textarea": {
         "max-inline-size": {
           "value": "400px",
@@ -4910,7 +4964,7 @@
         },
         "border-radius": {
           "type": "borderRadius",
-          "value": "0px"
+          "value": "{groningen.border-radius.4px}"
         },
         "border-bottom-width": {
           "value": "auto",
@@ -4940,11 +4994,11 @@
     }
   },
   "components/text-input": {
-    "utrecht": {
+    "groningen": {
       "textbox": {
         "border-radius": {
           "type": "borderRadius",
-          "value": "0px"
+          "value": "{groningen.border-radius.4px}"
         },
         "font-family": {
           "value": "{groningen.document.font-family}",
@@ -5094,7 +5148,7 @@
     }
   },
   "components/toolbar-button": {
-    "todo": {
+    "groningen": {
       "toolbar-button": {
         "icon": {
           "margin-inline": {
@@ -5122,7 +5176,7 @@
     }
   },
   "components/unordered-list": {
-    "utrecht": {
+    "groningen": {
       "unordered-list": {
         "color": {
           "type": "color",
