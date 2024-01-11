@@ -1786,7 +1786,7 @@
     }
   },
   "components/breadcrumb": {
-    "utrecht": {
+    "todo": {
       "breadcrumb": {
         "line-height": {
           "value": "{utrecht.document.line-height}",
@@ -2556,7 +2556,7 @@
     }
   },
   "components/checkbox-group": {
-    "utrecht": {
+    "todo": {
       "checkbox-group": {
         "padding-block-end": {
           "value": "{voorbeeld.space.block.beetle}",
@@ -2632,7 +2632,7 @@
     }
   },
   "components/data-list": {
-    "utrecht": {
+    "todo": {
       "data-list": {
         "font-family": {
           "value": "{utrecht.document.font-family}",
@@ -2780,7 +2780,7 @@
     }
   },
   "components/drawer": {
-    "utrecht": {
+    "todo": {
       "drawer": {
         "header": {
           "border-width": {
@@ -2788,22 +2788,6 @@
             "value": "{voorbeeld.border-width.sm}"
           },
           "label": {
-            "font-family": {
-              "value": "{utrecht.document.font-family}",
-              "type": "fontFamilies"
-            },
-            "font-size": {
-              "value": "{utrecht.document.font-size}",
-              "type": "fontSizes"
-            },
-            "font-weight": {
-              "value": "{utrecht.document.strong.font-weight}",
-              "type": "fontWeights"
-            },
-            "line-height": {
-              "value": "{utrecht.document.line-height}",
-              "type": "lineHeights"
-            },
             "color": {
               "value": "{utrecht.document.color}",
               "type": "color"
@@ -2907,6 +2891,30 @@
           "type": "boxShadow"
         }
       }
+    },
+    "utrecht": {
+      "drawer": {
+        "header": {
+          "label": {
+            "font-family": {
+              "value": "{utrecht.document.font-family}",
+              "type": "fontFamilies"
+            },
+            "font-size": {
+              "value": "{utrecht.document.font-size}",
+              "type": "fontSizes"
+            },
+            "font-weight": {
+              "value": "{utrecht.document.strong.font-weight}",
+              "type": "fontWeights"
+            },
+            "line-height": {
+              "value": "{utrecht.document.line-height}",
+              "type": "lineHeights"
+            }
+          }
+        }
+      }
     }
   },
   "components/form-field": {
@@ -2929,8 +2937,18 @@
       }
     }
   },
+  "components/form-field-checkbox-option": {
+    "todo": {
+      "form-field-checkbox-option": {
+        "column-gap": {
+          "value": "{voorbeeld.space.column.snail}",
+          "type": "spacing"
+        }
+      }
+    }
+  },
   "components/form-field-description": {
-    "utrecht": {
+    "todo": {
       "form-field-description": {
         "color": {
           "type": "color",
@@ -2955,18 +2973,8 @@
       }
     }
   },
-  "components/form-field-checkbox-option": {
-    "utrecht": {
-      "form-field-checkbox-option": {
-        "column-gap": {
-          "value": "{voorbeeld.space.column.snail}",
-          "type": "spacing"
-        }
-      }
-    }
-  },
   "components/form-field-error-message": {
-    "utrecht": {
+    "todo": {
       "form-field-error-message": {
         "icon": {
           "size": {
@@ -3002,7 +3010,7 @@
     }
   },
   "components/form-field-label": {
-    "utrecht": {
+    "todo": {
       "form-field-label": {
         "color": {
           "type": "color",
@@ -3028,7 +3036,7 @@
     }
   },
   "components/form-field-option-label": {
-    "utrecht": {
+    "todo": {
       "form-field-option-label": {
         "color": {
           "value": "{utrecht.form-control.color}",
@@ -3060,7 +3068,7 @@
     }
   },
   "components/form-field-radio-option": {
-    "utrecht": {
+    "todo": {
       "form-field-radio-option": {
         "column-gap": {
           "value": "{voorbeeld.space.column.snail}",
@@ -3206,7 +3214,7 @@
     }
   },
   "components/icon-only-button": {
-    "utrecht": {
+    "todo": {
       "icon-only-button": {
         "padding-block-end": {
           "value": "{voorbeeld.space.block.snail}",
@@ -3498,7 +3506,7 @@
     }
   },
   "components/pagination": {
-    "utrecht": {
+    "todo": {
       "pagination": {
         "relative-link": {
           "border-width": {
@@ -3791,6 +3799,16 @@
             "value": "{utrecht.document.font-weight}",
             "type": "fontWeights"
           }
+        },
+        "description": {
+          "color": {
+            "value": "{utrecht.document.color}",
+            "type": "color"
+          },
+          "font-weight": {
+            "value": "{utrecht.document.font-weight}",
+            "type": "fontWeights"
+          }
         }
       }
     }
@@ -4050,7 +4068,7 @@
     }
   },
   "components/radio-group": {
-    "utrecht": {
+    "todo": {
       "radio-group": {
         "padding-block-end": {
           "value": "{voorbeeld.space.block.beetle}",
@@ -5090,8 +5108,8 @@
       "components/data-list",
       "components/drawer",
       "components/form-field",
-      "components/form-field-description",
       "components/form-field-checkbox-option",
+      "components/form-field-description",
       "components/form-field-error-message",
       "components/form-field-label",
       "components/form-field-option-label",
