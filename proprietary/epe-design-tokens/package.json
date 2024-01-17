@@ -19,10 +19,9 @@
   },
   "scripts": {
     "clean": "rimraf -rf dist/",
-    "prebuild": "npm run clean",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm run --ignore-scripts build' 'src/**/*.tokens.json'",
-    "build": "npm-run-all build:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
+    "build": "npm-run-all clean build:**",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
   },
