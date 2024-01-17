@@ -6,8 +6,8 @@
   "name": "@nl-design-system-unstable/themes",
   "private": true,
   "engines": {
-    "node": "^16.11.0 || ^18.0.0",
-    "npm": "^8 || ^9"
+    "node": "^20",
+    "pnpm": "^8"
   },
   "workspaces": [
     "./packages/*",
@@ -52,14 +52,13 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "prebuild": "npm run clean",
-    "build": "lerna run build",
+    "build": "pnpm run clean && lerna run build",
     "clean": "rimraf dist/ documentation/build/ packages/storybook/dist && lerna run clean",
     "deploy": "npm-run-all deploy:**",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces && prettier --check .",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --no-error-on-unmatched-pattern '**/*.{js,jsx,ts,tsx}'",
-    "lint:html": "find . -type d \\( -name node_modules \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
+    "lint:html": "find . -type d \\( -name node_modules \\) -prune -false -o -name '*.html' -print0 -exec pnpm exec html-validate {} \\;",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
     "lint-fix": "npm-run-all --continue-on-error lint-fix:** prettier",
@@ -78,9 +77,9 @@
     "test-build:scss": "find proprietary/*/dist -type d \\( -name node_modules \\) -prune -false -o -name '*.scss' -print0 -exec sass --no-source-map {} \\;",
     "test-update": "npm-run-all --sequential clean lint build test",
     "test-workspaces": "lerna run --no-bail test",
-    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps",
-    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
-    "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && pnpm install",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && pnpm install",
+    "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && pnpm install",
     "watch:playroom": "lerna run playroom:start",
     "watch:storybook": "lerna run storybook",
     "watch:style-dictionary": "lerna run watch:style-dictionary"

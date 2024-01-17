@@ -18,11 +18,10 @@
   },
   "scripts": {
     "clean": "rimraf dist/ src/generated/",
-    "prebuild": "npm run clean",
-    "build": "npm-run-all --sequential build:generated-stories build:storybook",
+    "build": "npm-run-all clean build:generated-stories build:storybook",
     "build:generated-stories": "ts-node --project ./tsconfig.commonjs.json src/generate-component-pages",
     "build:storybook": "build-storybook --config-dir config/ --output-dir dist/",
-    "storybook": "npm-run-all --sequential clean build:generated-stories dev:storybook",
+    "storybook": "npm-run-all clean build:generated-stories dev:storybook",
     "dev:storybook": "start-storybook --config-dir config/ --no-manager-cache --port 6006"
   },
   "dependencies": {
