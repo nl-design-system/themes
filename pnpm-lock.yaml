@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -548,8 +552,8 @@ importers:
   proprietary/buren-design-tokens:
     dependencies:
       '@fontsource/roboto':
-        specifier: 4.5.8
-        version: 4.5.8
+        specifier: 5.0.8
+        version: 5.0.8
     devDependencies:
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
@@ -729,8 +733,8 @@ importers:
   proprietary/groningen-design-tokens:
     devDependencies:
       '@fontsource/roboto':
-        specifier: 4.5.8
-        version: 4.5.8
+        specifier: 5.0.8
+        version: 5.0.8
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
@@ -909,8 +913,8 @@ importers:
   proprietary/noordoostpolder-design-tokens:
     devDependencies:
       '@fontsource/roboto':
-        specifier: 4.5.8
-        version: 4.5.8
+        specifier: 5.0.8
+        version: 5.0.8
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
@@ -2736,12 +2740,8 @@ packages:
     resolution: {integrity: sha512-p6rk+Xjn7cVO7jkTpJlKA5QSa7eflNruUQBida4pUr2vLcY6XRMvO/ESqhPSxKQwGMjd8Opz8erZp/hPcP/dBw==}
     dev: true
 
-  /@fontsource/roboto@4.5.8:
-    resolution: {integrity: sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA==}
-
   /@fontsource/roboto@5.0.8:
     resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
-    dev: true
 
   /@fontsource/source-sans-pro@4.5.11:
     resolution: {integrity: sha512-f7iw44q1EjBv3MNcHCGAgrW/QVyweaEouFsJzykPhTOGnZFSwFJRISToXornOmuAy7xUUGiVdqOLiykgZoYB8A==}
@@ -19167,7 +19167,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
