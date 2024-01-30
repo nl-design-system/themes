@@ -1,11 +1,14 @@
 version: 2
 
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
-    target-branch: "main"
+      interval: "monthly"
     versioning-strategy: "increase-if-necessary"
     ignore:
       # Storybook 6.4 causes issues with the code samples in our stories.
@@ -54,13 +57,11 @@ updates:
   - package-ecosystem: "npm"
     directory: "/documentation/"
     schedule:
-      interval: "weekly"
-    target-branch: "main"
+      interval: "monthly"
     versioning-strategy: "increase-if-necessary"
 
   - package-ecosystem: "npm"
     directory: "/components/"
     schedule:
-      interval: "weekly"
-    target-branch: "main"
+      interval: "monthly"
     versioning-strategy: "increase-if-necessary"
