@@ -57,14 +57,14 @@ jobs:
           storybookBuildDir: packages/storybook/dist/
 
       - name: Upload the Storybook artifact from the build step
-        uses: actions/upload-artifact@v4.1.0
+        uses: actions/upload-artifact@v4.3.0
         with:
           name: storybook
           path: packages/storybook/dist/
           retention-days: 1
 
       - name: Upload the Playroom artifact from the build step
-        uses: actions/upload-artifact@v4.1.0
+        uses: actions/upload-artifact@v4.3.0
         with:
           name: playroom
           path: packages/playroom/dist/
