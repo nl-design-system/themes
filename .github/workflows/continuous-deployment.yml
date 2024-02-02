@@ -80,13 +80,13 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: Download the Storybook artifact from the "Build" job
-        uses: actions/download-artifact@v4.1.0
+        uses: actions/download-artifact@v4.1.1
         with:
           name: storybook
           path: packages/storybook/dist/
 
       - name: Download the Playroom artifact from the "Build" job
-        uses: actions/download-artifact@v4.1.0
+        uses: actions/download-artifact@v4.1.1
         with:
           name: playroom
           path: packages/storybook/dist
