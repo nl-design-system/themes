@@ -1269,32 +1269,34 @@
       }
     },
     "voorbeeld": {
-      "space": {
-        "relation": {
-          "kind": {
-            "value": "0px",
-            "type": "spacing"
-          },
-          "besties": {
-            "value": "{voorbeeld.space.row.snail}",
-            "type": "spacing"
-          },
-          "vrienden": {
-            "value": "{voorbeeld.space.row.rat}",
-            "type": "spacing"
-          },
-          "kennisen": {
-            "value": "{voorbeeld.space.row.cat}",
-            "type": "spacing"
-          },
-          "onbekenden": {
-            "value": "{voorbeeld.space.row.pig}",
-            "type": "spacing"
-          },
-          "onbemind": {
-            "value": "{voorbeeld.space.row.horse}",
-            "type": "spacing"
-          }
+      "test": {
+        "value": "33px",
+        "type": "other"
+      },
+      "relation": {
+        "kind": {
+          "value": "0px",
+          "type": "dimension"
+        },
+        "besties": {
+          "value": "8px",
+          "type": "dimension"
+        },
+        "vrienden": {
+          "value": "16px",
+          "type": "dimension"
+        },
+        "bekenden": {
+          "value": "24px",
+          "type": "dimension"
+        },
+        "onbekenden": {
+          "value": "32px",
+          "type": "dimension"
+        },
+        "onbemind": {
+          "value": "64px",
+          "type": "dimension"
         }
       }
     }
