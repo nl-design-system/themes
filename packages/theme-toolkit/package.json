@@ -10,14 +10,21 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "rollup -c"
+  },
   "files": [
-    "src/**/*"
+    "dist"
   ],
+  "module": "dist/index.js",
+  "main": "dist/index.esm.js",
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/themes.git"
   },
   "dependencies": {
+    "@babel/runtime": "7.23.9",
     "@gemeente-denhaag/process-steps": "0.1.0-alpha.196",
     "color": "3.2.1",
     "d3-color": "3.1.0",
@@ -26,10 +33,21 @@
     "lodash.isplainobject": "4.0.6",
     "lodash.mapvalues": "4.6.0",
     "lodash.omitby": "4.6.0",
-    "prop-types": "15.8.1",
-    "react": "16.14.0"
+    "prop-types": "15.8.1"
   },
   "devDependencies": {
-    "@utrecht/component-library-react": "1.0.2-alpha.0"
+    "@babel/plugin-transform-runtime": "7.23.9",
+    "@babel/preset-react": "7.23.3",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-json": "6.1.0",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@utrecht/component-library-react": "1.0.2-alpha.0",
+    "react": "18.2.0",
+    "rimraf": "3.0.2",
+    "rollup": "4.12.0",
+    "rollup-plugin-peer-deps-external": "2.2.4"
+  },
+  "peerDependencies": {
+    "react": "18.2.0"
   }
 }
