@@ -1,6 +1,7 @@
 const minorConfig = require('./.ncurc.minor');
 
 module.exports = {
+  ...minorConfig,
   reject: [
     ...minorConfig.reject,
     // Percy needs a manual upgrade as it doesn't work without breaking
@@ -21,4 +22,5 @@ module.exports = {
     // Color package uses ES6 syntax from v4+ which is not compatible with our setup
     'color',
   ],
+  target: 'latest',
 };
