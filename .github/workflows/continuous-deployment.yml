@@ -57,7 +57,7 @@ jobs:
           storybookBuildDir: packages/storybook/dist/
 
       - name: Upload the Storybook artifact from the build step
-        uses: actions/upload-artifact@v4.3.0
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: storybook
           path: packages/storybook/dist/
