@@ -21,6 +21,11 @@ module.exports = {
     'webpack',
     // Color package uses ES6 syntax from v4+ which is not compatible with our setup
     'color',
+    'storybook',
+    '@storybook/*',
+    '@fontsource/*',
+    // Prettier 3 is async
+    'prettier',
   ],
   target: 'latest',
 };
