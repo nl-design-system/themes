@@ -1,6 +1,5 @@
 import isPlainObject from 'lodash.isplainobject';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { CopyButton } from './CopyButton';
 import { isHiddenDesignToken } from './design-tokens.js';
 

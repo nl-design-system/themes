@@ -1,6 +1,5 @@
 import { Canvas } from '@storybook/addon-docs';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { format as prettierFormat } from 'prettier/standalone';
 import prettierHtml from 'prettier/parser-html';

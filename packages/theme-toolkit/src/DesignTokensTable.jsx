@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 export const path2css = (path) => `var(--${path.join('-')})`;
 import { ColorExample } from './ColorExample';
 

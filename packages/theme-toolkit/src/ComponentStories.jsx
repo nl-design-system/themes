@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import { DENHAAG_COMPONENT_STORIES } from './component-stories-denhaag';
 import { UTRECHT_COMPONENT_STORIES } from './component-stories-utrecht';
 import { CustomStory } from './CustomStory';

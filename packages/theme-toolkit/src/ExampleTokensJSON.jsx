@@ -3,7 +3,6 @@ import isPlainObject from 'lodash.isplainobject';
 import mapValues from 'lodash.mapvalues';
 import omitBy from 'lodash.omitby';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { CopyButton } from './CopyButton';
 import { isHiddenDesignToken } from './design-tokens.js';
 

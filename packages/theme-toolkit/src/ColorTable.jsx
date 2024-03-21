@@ -4,7 +4,6 @@
  */
 
 import PropTypes from 'prop-types';
-import React from 'react';
 import { ColorPalette, ColorItem } from '@storybook/addon-docs';
 import { CopyCode } from './CopyCode';
 import { cssVariable, formatDeltaE, getColors, getColorName, getColorGroupName, styleDictionaryRef } from './util';
