@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import { ComponentTokensTable } from './ComponentTokensTable';
 import { ExampleTokensCSS } from './ExampleTokensCSS';
 import { ExampleTokensJSON } from './ExampleTokensJSON';

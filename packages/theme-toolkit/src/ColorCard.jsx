@@ -4,7 +4,6 @@
  */
 
 import PropTypes from 'prop-types';
-import React from 'react';
 import { parseColor } from './color-util';
 import { lab } from 'd3-color';
 import { CopyCode } from './CopyCode';

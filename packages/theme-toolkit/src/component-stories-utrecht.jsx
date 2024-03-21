@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 
 import { STORY_GROUPS } from './component-stories-util';
 

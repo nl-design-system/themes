@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { STORY_GROUPS } from './component-stories-util';
 // import { Button, ProcessSteps, Avatar, Alert, BadgeCounter, Divider } from '@gemeente-denhaag/components-react';
 import { Status } from '@gemeente-denhaag/process-steps';

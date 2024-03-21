@@ -4,7 +4,7 @@
  */
 
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ColorTable } from './ColorTable';
 import { ColorCard } from './ColorCard';
 import { flattenColorTokens } from './util';

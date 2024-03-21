@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import { DesignTokensTable } from './DesignTokensTable';
 import { isHiddenDesignToken } from './design-tokens.js';
 
