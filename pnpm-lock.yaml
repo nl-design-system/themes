@@ -253,8 +253,8 @@ importers:
         specifier: 6.5.16
         version: 6.5.16(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/design-tokens':
-        specifier: 1.0.0-alpha.499
-        version: 1.0.0-alpha.499
+        specifier: 1.0.0-alpha.640
+        version: 1.0.0-alpha.640
       '@utrecht/web-component-library-stencil':
         specifier: 1.0.0-alpha.505
         version: 1.0.0-alpha.505
@@ -3635,7 +3635,7 @@ packages:
       lru-cache: 7.18.3
       npm-pick-manifest: 8.0.1
       proc-log: 3.0.0
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1(bluebird@3.7.2)
       promise-retry: 2.0.1
       semver: 7.6.0
       which: 3.0.1
@@ -3651,7 +3651,7 @@ packages:
       lru-cache: 10.1.0
       npm-pick-manifest: 9.0.0
       proc-log: 3.0.0
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1(bluebird@3.7.2)
       promise-retry: 2.0.1
       semver: 7.6.0
       which: 4.0.0
@@ -6092,8 +6092,8 @@ packages:
     dependencies:
       clsx: 1.2.1
 
-  /@utrecht/design-tokens@1.0.0-alpha.499:
-    resolution: {integrity: sha512-IQ8YByhtR+6d7oTotDCFCxtjJX2rfsqF9J97vfosFmexJz6QvUa+UH7suI+If7XsnPD/iO+WwDD26DvIpruc7A==}
+  /@utrecht/design-tokens@1.0.0-alpha.640:
+    resolution: {integrity: sha512-YBpP7faSBeCVgn+oAdzDhiAJqzEFV29yTzqsTpyNrrMCjn0TxHqOCexUFr7vMLnqDVFbs7KiV2/lNJozRZK8xw==}
     dev: false
 
   /@utrecht/icon@1.0.0-alpha.530:
@@ -7363,7 +7363,6 @@ packages:
 
   /bluebird@3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
-    dev: false
 
   /bn.js@4.12.0:
     resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
@@ -7703,7 +7702,7 @@ packages:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1(bluebird@3.7.2)
       rimraf: 3.0.2
       ssri: 9.0.1
       tar: 6.2.0
@@ -15636,15 +15635,6 @@ packages:
     resolution: {integrity: sha512-utl+0x8gIDasV5X+PI5qWEPqH6fJS0pFtQ/4gZ95xfEFb/89dmh+/b895TbFDBLiafBvxD/PGTKfvxl4kH/pQg==}
     dev: true
 
-  /promise-inflight@1.0.1:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dev: true
-
   /promise-inflight@1.0.1(bluebird@3.7.2):
     resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
     peerDependencies:
@@ -15654,7 +15644,6 @@ packages:
         optional: true
     dependencies:
       bluebird: 3.7.2
-    dev: false
 
   /promise-retry@2.0.1:
     resolution: {integrity: sha512-y+WKFlBR8BGXnsNlIHFGPZmyDf3DFMoLhaflAnyZgV6rG6xu+JwesTo2Q9R6XwYmtmwAFCkAk3e35jEdoeh/3g==}
