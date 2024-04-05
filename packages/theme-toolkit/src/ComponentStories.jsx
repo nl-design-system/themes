@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { DENHAAG_COMPONENT_STORIES } from './component-stories-denhaag';
 import { UTRECHT_COMPONENT_STORIES } from './component-stories-utrecht';
 import { CustomStory } from './CustomStory';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 export const Heading = ({ level, children }) =>
   level === 1 ? (

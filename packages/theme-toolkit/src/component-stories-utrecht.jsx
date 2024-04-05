@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 import { STORY_GROUPS } from './component-stories-util';
 

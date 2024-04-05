@@ -9,6 +9,8 @@ import { ColorTable } from './ColorTable';
 import { ColorCard } from './ColorCard';
 import { flattenColorTokens } from './util';
 import { filterColorTokens, parseColor } from './color-util';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 export const ColorSearch = ({ tokens }) => {
   const [query, setQuery] = useState('');

@@ -7,6 +7,11 @@ const config: StorybookConfig = {
       directory: '../../voorbeeld-design-tokens/documentation',
       files: '*.stories.tsx',
     },
+    {
+      titlePrefix: 'Gemeente Voorbeeld',
+      directory: '../../voorbeeld-design-tokens/documentation',
+      files: '{readme,color,design-tokens}.mdx',
+    },
   ],
   framework: {
     name: '@storybook/react-vite',
