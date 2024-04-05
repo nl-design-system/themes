@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { ComponentTokensTable } from './ComponentTokensTable';
 import { ExampleTokensCSS } from './ExampleTokensCSS';
 import { ExampleTokensJSON } from './ExampleTokensJSON';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 export const ComponentTokensSection = ({ component, tokens, definition }) => (
   <>

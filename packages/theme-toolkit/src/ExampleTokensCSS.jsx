@@ -2,6 +2,8 @@ import isPlainObject from 'lodash.isplainobject';
 import PropTypes from 'prop-types';
 import { CopyButton } from './CopyButton';
 import { isHiddenDesignToken } from './design-tokens.js';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 const traverseDeep = (root, parents, current, valueTest, callback) => {
   if (valueTest(current)) {

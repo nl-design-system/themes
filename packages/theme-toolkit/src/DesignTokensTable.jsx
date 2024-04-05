@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 export const path2css = (path) => `var(--${path.join('-')})`;
 import { ColorExample } from './ColorExample';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 const visualizeToken = (token) => {
   if (token.css && token.css.syntax === '<color>') {

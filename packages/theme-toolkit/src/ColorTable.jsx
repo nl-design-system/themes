@@ -4,10 +4,12 @@
  */
 
 import PropTypes from 'prop-types';
-import { ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { ColorPalette, ColorItem } from '@storybook/blocks';
 import { CopyCode } from './CopyCode';
 import { cssVariable, formatDeltaE, getColors, getColorName, getColorGroupName, styleDictionaryRef } from './util';
 import { parseColor } from './color-util';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 // Figma Tokens assign `type` properties for tokens or groups
 // Utility to filter out non-color type tokens.

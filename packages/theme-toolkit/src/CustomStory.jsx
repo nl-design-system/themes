@@ -1,8 +1,10 @@
-import { Canvas } from '@storybook/addon-docs';
+import { Canvas } from '@storybook/blocks';
 import PropTypes from 'prop-types';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { format as prettierFormat } from 'prettier/standalone';
 import prettierHtml from 'prettier/parser-html';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 const Preview = ({ children }) => (
   <div
