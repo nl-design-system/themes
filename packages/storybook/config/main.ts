@@ -12,6 +12,7 @@ const config: StorybookConfig = {
       directory: '../../voorbeeld-design-tokens/documentation',
       files: '{readme,color,design-tokens}.mdx',
     },
+    '../../../proprietary/*/documentation/**/{color,design-tokens,readme,typography}.mdx',
   ],
   framework: {
     name: '@storybook/react-vite',

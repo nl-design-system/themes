@@ -1,0 +1,17 @@
+import { Meta } from "@storybook/blocks";
+import tokens from "../dist/tokens.json";
+import { ColorSearch } from "@nl-design-system-unstable/theme-toolkit/src/ColorSearch";
+import { ColorTable } from "@nl-design-system-unstable/theme-toolkit/src/ColorTable";
+import config from "../src/config.json";
+
+<Meta title="Enkhuizen/Color" />
+
+# Color
+
+## Find a color
+
+<ColorSearch tokens={tokens[config.prefix]["color"]}></ColorSearch>
+
+## Color palette
+
+<ColorTable tokens={tokens[config.prefix]["color"]}></ColorTable>
