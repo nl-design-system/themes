@@ -1,0 +1,24 @@
+import { Meta, Story, ArgsTable } from "@storybook/blocks";
+import { ComponentStories } from "@nl-design-system-unstable/theme-toolkit/src/ComponentStories";
+import config from "../src/config.json";
+
+<Meta
+  id="amsterdam"
+  title={`${config.name}`}
+  argTypes={{
+    showAll: {
+      description: "show components not in config",
+      control: "boolean",
+    },
+  }}
+/>
+
+export const Template = ({ ...args }) => <ComponentStories config={config} {...args} />;
+
+# Components
+
+<Story name="Components" args={{ showAll: false }}>
+  {Template.bind({})}
+</Story>
+
+<ArgsTable story="Components" />
