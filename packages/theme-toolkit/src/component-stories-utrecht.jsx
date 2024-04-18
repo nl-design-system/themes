@@ -251,14 +251,14 @@ export const UTRECHT_COMPONENT_STORIES = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS.CHECKBOX,
     name: 'Utrecht Checkbox Checked',
-    render: () => <Checkbox checked />,
+    render: () => <Checkbox defaultChecked />,
   },
   {
     storyId: 'react-utrecht-checkbox--disabled-checked',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS.CHECKBOX,
     name: 'Utrecht Checkbox Disabled Checked',
-    render: () => <Checkbox checked disabled />,
+    render: () => <Checkbox defaultChecked disabled />,
   },
   {
     storyId: 'react-utrecht-checkbox--disabled',
@@ -340,7 +340,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     storyId: 'react-utrecht-radio-button--checked',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Checked',
-    render: () => <RadioButton checked />,
+    render: () => <RadioButton defaultChecked />,
   },
   {
     storyId: 'react-utrecht-radio-button--disabled',
@@ -352,7 +352,7 @@ export const UTRECHT_COMPONENT_STORIES = [
     storyId: 'react-utrecht-radio-button--disabled-checked',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Disabled Checked',
-    render: () => <RadioButton checked disabled />,
+    render: () => <RadioButton defaultChecked disabled />,
   },
   {
     storyId: 'react-utrecht-radio-button--invalid',
@@ -449,13 +449,6 @@ export const UTRECHT_COMPONENT_STORIES = [
         <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
       </PageFooter>
     ),
-  },
-  {
-    storyId: 'react-utrecht-textbox--default',
-    component: 'utrecht-textbox',
-    group: STORY_GROUPS.TEXTBOX,
-    name: 'Utrecht Textbox',
-    render: () => <Textbox defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
   },
   {
     storyId: 'react-utrecht-textbox--default',

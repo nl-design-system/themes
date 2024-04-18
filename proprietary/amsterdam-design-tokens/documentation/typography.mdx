@@ -9,7 +9,7 @@ export const textContent = "Tweede Kamerverkiezingen gaan anders dan anders";
 export const renderScale = (scale) => (
   <div>
     {Object.entries(scale).map(([key, size]) => (
-      <div>
+      <div key={key}>
         <h3>{key}</h3>
         {size["description"] && <p>{size["description"]}</p>}
         <div
