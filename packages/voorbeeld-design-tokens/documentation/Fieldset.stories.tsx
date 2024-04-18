@@ -19,5 +19,5 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const GemeenteVoorbeeld: Story = {};
+export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
 export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
