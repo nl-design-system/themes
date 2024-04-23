@@ -1,0 +1,1 @@
+const e="Ridderkerk",n="Ridderkerk",r="ridderkerk",s="@nl-design-system-unstable/ridderkerk-design-tokens",t=["react-utrecht-link--default"],i={fullName:e,name:n,prefix:r,npm:s,stories:t};export{i as c};

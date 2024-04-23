@@ -1,0 +1,1 @@
+const e="Example Organisation",n="Example",s="example",t="@nl-design-system-unstable/example-design-tokens",a=["react-utrecht-link--default"],l={fullName:e,name:n,prefix:s,npm:t,stories:a};export{l as c};
