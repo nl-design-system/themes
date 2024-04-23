@@ -51,7 +51,7 @@ import {
   TableCell,
   TableCaption,
   RadioButton,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist/css-module';
 
 const Blockquote = ({ children }) => <div className="utrecht-blockquote">{children}</div>;
 
