@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { RadioButton } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'radio',
   component: RadioButton,
   args: { disabled: false, invalid: false, name: 'radio' },
   render: (args) => (

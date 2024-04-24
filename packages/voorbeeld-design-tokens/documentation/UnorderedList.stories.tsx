@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'unordered-list',
   component: UnorderedList,
   parameters: {
     controls: { disable: true },

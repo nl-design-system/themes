@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Fieldset, FieldsetLegend } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'fieldset',
   component: Fieldset,
   parameters: {
     controls: { disable: true },

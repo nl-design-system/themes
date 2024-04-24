@@ -12,6 +12,7 @@ const items = [
 ];
 
 const meta = {
+  id: 'breadcrumb',
   component: BreadcrumbNav,
   parameters: { actions: { disable: true } },
   args: { label: 'kruimelpad' },
