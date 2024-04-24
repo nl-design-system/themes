@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'ordered-list',
   component: OrderedList,
   parameters: { actions: { disable: true } },
   args: {

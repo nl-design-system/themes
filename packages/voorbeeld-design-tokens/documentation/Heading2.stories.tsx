@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Heading2 } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'heading-2',
   component: Heading2,
   parameters: { actions: { disable: true } },
   args: { children: "Pa's wijze lynx bezag vroom het fikse aquaduct", className: '' },

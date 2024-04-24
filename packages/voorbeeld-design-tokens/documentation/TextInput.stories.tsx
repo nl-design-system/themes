@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Textbox } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'text-input',
   component: Textbox,
   args: { disabled: false, readOnly: false, required: false },
   argTypes: {

@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'status-badge',
   component: StatusBadge,
   parameters: { actions: { disable: true } },
   args: {

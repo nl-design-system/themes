@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Checkbox, FormLabel } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'checkbox',
   component: Checkbox,
   args: { disabled: false },
   render: (args) => (

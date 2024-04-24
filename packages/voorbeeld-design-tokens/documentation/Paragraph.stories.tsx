@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'paragraph',
   component: Paragraph,
   parameters: { actions: { disable: true } },
   args: {
