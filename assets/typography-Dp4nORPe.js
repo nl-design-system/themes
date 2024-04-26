@@ -1,9 +1,0 @@
-import{j as e}from"./jsx-runtime-CKrituN3.js";import{useMDXComponents as s}from"./index-DSz_1G2r.js";import{M as d}from"./index-CTbRqdDQ.js";import{t as p}from"./tokens-CN9whwcH.js";import{c}from"./config-KcI_pViZ.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-D_O4PigZ.js";import"../sb-preview/runtime.js";import"./index-BtM5VmRH.js";import"./extends-CCbyfPlC.js";import"./index-DLle_QMf.js";import"./index-DrFu-skq.js";const r=p[c.prefix].typography,m="Tweede Kamerverkiezingen gaan anders dan anders",i=n=>{const t={div:"div",h3:"h3",p:"p",...s()};return e.jsx(t.div,{children:Object.entries(n).map(([l,o])=>e.jsxs(t.div,{children:[e.jsx(t.h3,{children:l}),o.description&&e.jsx(t.p,{children:o.description}),e.jsx(t.div,{style:{fontFamily:r["sans-serif"]["font-family"].value,fontSize:o["font-size"]?o["font-size"].value:null,fontWeight:o["font-weight"]?o["font-weight"].value:null,lineHeight:o["line-height"]?o["line-height"].value:null},children:m})]},l))})};function a(n){const t={h1:"h1",h2:"h2",...s(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(d,{title:"Amsterdam/Typography"}),`
-`,`
-`,e.jsx(t.h1,{id:"typography",children:"Typography"}),`
-`,e.jsx(t.h2,{id:"scale-for-large-viewport-desktop",children:"Scale for large viewport: desktop"}),`
-`,e.jsx("div",{children:i(r.scale.lg)}),`
-`,e.jsx(t.h2,{id:"scale-for-medium-viewport-desktop",children:"Scale for medium viewport: desktop"}),`
-`,e.jsx("div",{children:i(r.scale.md)}),`
-`,e.jsx(t.h2,{id:"scale-for-small-viewport-mobile",children:"Scale for small viewport: mobile"}),`
-`,e.jsx("div",{children:i(r.scale.sm)})]})}function b(n={}){const{wrapper:t}={...s(),...n.components};return t?e.jsx(t,{...n,children:e.jsx(a,{...n})}):a(n)}export{b as default,i as renderScale,m as textContent,r as typography};
