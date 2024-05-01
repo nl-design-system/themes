@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@v4.1.2
+        uses: actions/checkout@v4.1.4
         with:
           fetch-depth: 0
 
@@ -72,7 +72,7 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@v4.1.2
+        uses: actions/checkout@v4.1.4
 
       - name: Download the Storybook artifact from the "Build" job
         uses: actions/download-artifact@v4.1.4
@@ -93,7 +93,7 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@v4.1.2
+        uses: actions/checkout@v4.1.4
         with:
           token: ${{ secrets.GH_TOKEN }}
 
