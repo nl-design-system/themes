@@ -1,0 +1,3 @@
+import{j as t}from"./jsx-runtime-CKrituN3.js";import{useMDXComponents as n}from"./index-DSz_1G2r.js";import{M as m,d as i}from"./index-Q2An0l52.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-D0vEwSUr.js";import"../sb-preview/runtime.js";import"./index-BtM5VmRH.js";import"./extends-CCbyfPlC.js";import"./index-DLle_QMf.js";import"./index-DrFu-skq.js";const s=`# NL Design System voorbeeld thema
+`;function e(o){return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Voorbeeld Thema/README"}),`
+`,t.jsx(i,{children:s})]})}function D(o={}){const{wrapper:r}={...n(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(e,{...o})}):e()}export{D as default};
