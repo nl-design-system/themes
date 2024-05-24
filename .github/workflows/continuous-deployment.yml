@@ -13,17 +13,17 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@v4.1.2
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
         with:
           fetch-depth: 0
 
       - name: Install pnpm package manager
-        uses: pnpm/action-setup@v3.0.0
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
         with:
           version: 8.14
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -49,7 +49,7 @@ jobs:
           pnpm run --if-present test
 
       - name: Publish to Chromatic
-        uses: chromaui/action@v11
+        uses: chromaui/action@57a72947e9d7a6d213906cd506276c707e0c580f # v11.4.0
         if: |
           github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
@@ -59,7 +59,7 @@ jobs:
           storybookBuildDir: packages/storybook/dist/
 
       - name: Upload the Storybook artifact from the build step
-        uses: actions/upload-artifact@v4.3.1
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         with:
           name: storybook
           path: packages/storybook/dist/
@@ -72,16 +72,16 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@v4.1.2
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
 
       - name: Download the Storybook artifact from the "Build" job
-        uses: actions/download-artifact@v4.1.4
+        uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
         with:
           name: storybook
           path: packages/storybook/dist/
 
       - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        uses: JamesIves/github-pages-deploy-action@5c6e9e9f3672ce8fd37b9856193d2a537941e66c # v4.6.1
         with:
           branch: gh-pages
           folder: packages/storybook/dist/
@@ -93,17 +93,17 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@v4.1.2
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
         with:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Install pnpm package manager
-        uses: pnpm/action-setup@v3.0.0
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
         with:
           version: 8.14
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
           node-version-file: .nvmrc
 
