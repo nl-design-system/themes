@@ -9,6 +9,7 @@ module.exports = {
     // Prettier 3 is async
     'prettier',
     'eslint',
+    'eslint-plugin-json',
   ],
   target: 'latest',
 };
