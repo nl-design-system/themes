@@ -9,7 +9,6 @@ module.exports = {
     '@utrecht/components',
     '@utrecht/design-tokens',
     '@utrecht/web-component-library-stencil',
-    '@whitespace/storybook-addon-html',
   ],
   root: true,
   target: 'patch',
