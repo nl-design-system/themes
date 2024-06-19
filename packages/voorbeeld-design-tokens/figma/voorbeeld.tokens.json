@@ -1494,6 +1494,14 @@
           "value": "{voorbeeld.border-width.md}",
           "type": "borderWidth"
         },
+        "margin-block-end": {
+          "value": "{voorbeeld.space.block.snail}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{voorbeeld.space.block.snail}",
+          "type": "spacing"
+        },
         "padding-block-end": {
           "value": "{voorbeeld.space.block.snail}",
           "type": "spacing"
@@ -1510,6 +1518,18 @@
           "value": "{voorbeeld.space.inline.mouse}",
           "type": "spacing"
         },
+        "background-color": {
+          "value": "{utrecht.feedback.informative.background-color}",
+          "type": "color"
+        },
+        "border-color": {
+          "value": "{utrecht.feedback.informative.border-color}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{utrecht.document.color}",
+          "type": "color"
+        },
         "informative": {
           "background-color": {
             "value": "{utrecht.feedback.informative.background-color}",
@@ -1525,7 +1545,7 @@
           }
         },
         "icon": {
-          "informative": {
+          "info": {
             "color": {
               "value": "{utrecht.feedback.informative.color}",
               "type": "color"
@@ -1547,13 +1567,13 @@
             "value": "0px",
             "type": "spacing"
           },
-          "positive": {
+          "ok": {
             "color": {
               "value": "{utrecht.feedback.positive.color}",
               "type": "color"
             }
           },
-          "negative": {
+          "error": {
             "color": {
               "value": "{utrecht.feedback.negative.color}",
               "type": "color"
@@ -1570,7 +1590,7 @@
             "value": "{utrecht.icon.functional.size}"
           }
         },
-        "negative": {
+        "error": {
           "background-color": {
             "value": "{utrecht.feedback.negative.background-color}",
             "type": "color"
@@ -1584,7 +1604,7 @@
             "type": "color"
           }
         },
-        "positive": {
+        "ok": {
           "background-color": {
             "value": "{utrecht.feedback.positive.background-color}",
             "type": "color"
@@ -1631,6 +1651,10 @@
             "value": "{voorbeeld.space.row.snail}",
             "type": "spacing"
           }
+        },
+        "border-radius": {
+          "value": "0px",
+          "type": "borderRadius"
         }
       }
     }
@@ -4403,7 +4427,7 @@
         "positive": {
           "background-color": {
             "type": "color",
-            "value": "{utrecht.alert.positive.background-color}"
+            "value": "{utrecht.alert.ok.background-color}"
           },
           "border-color": {
             "type": "color",
