@@ -2000,6 +2000,14 @@
               "type": "color",
               "value": "{voorbeeld.color.white}"
             }
+          },
+          "font-size": {
+            "value": "{utrecht.document.font-size}",
+            "type": "fontSizes"
+          },
+          "line-height": {
+            "value": "{utrecht.document.line-height}",
+            "type": "lineHeights"
           }
         },
         "secondary-action": {
@@ -2074,6 +2082,14 @@
               "type": "color",
               "value": "{utrecht.interaction.active.color}"
             }
+          },
+          "font-size": {
+            "value": "{utrecht.document.font-size}",
+            "type": "fontSizes"
+          },
+          "line-height": {
+            "value": "{utrecht.document.line-height}",
+            "type": "lineHeights"
           }
         },
         "background-color": {
@@ -2100,10 +2116,6 @@
           "size": {
             "type": "sizing",
             "value": "{utrecht.icon.functional.size}"
-          },
-          "margin-inline": {
-            "value": "{voorbeeld.space.text.beetle}",
-            "type": "spacing"
           }
         },
         "font-family": {
@@ -2118,7 +2130,15 @@
           "value": "{utrecht.document.strong.font-weight}",
           "type": "fontWeights"
         },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
         "subtle": {
+          "font-size": {
+            "value": "{utrecht.document.font-size}",
+            "type": "fontSizes"
+          },
           "font-weight": {
             "value": "{utrecht.document.strong.font-weight}",
             "type": "fontWeights"
@@ -2190,11 +2210,11 @@
               "type": "color",
               "value": "{utrecht.interaction.active.color}"
             }
+          },
+          "line-height": {
+            "value": "{utrecht.document.line-height}",
+            "type": "lineHeights"
           }
-        },
-        "line-height": {
-          "value": "{utrecht.document.line-height}",
-          "type": "lineHeights"
         },
         "padding-block-end": {
           "value": "{voorbeeld.space.block.snail}",
@@ -2275,6 +2295,10 @@
         "min-inline-size": {
           "type": "sizing",
           "value": "{utrecht.pointer-target.min-size}"
+        },
+        "column-gap": {
+          "value": "{voorbeeld.space.text.beetle}",
+          "type": "spacing"
         }
       }
     }
