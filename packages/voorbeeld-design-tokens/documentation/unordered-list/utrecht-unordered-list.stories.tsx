@@ -2,7 +2,8 @@ import { Meta, StoryObj } from '@storybook/react';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'unordered-list',
+  id: 'utrecht-unordered-list',
+  title: 'Components/Unordered list/Utrecht',
   component: UnorderedList,
   parameters: {
     controls: { disable: true },
@@ -33,5 +34,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

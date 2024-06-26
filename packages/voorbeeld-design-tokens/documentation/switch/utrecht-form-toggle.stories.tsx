@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { FormToggle } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'switch',
+  id: 'utrecht-form-toggle',
+  title: 'Components/Switch/Utrecht',
   component: FormToggle,
   args: { disabled: false, checked: false, invalid: false },
 } satisfies Meta<typeof FormToggle>;
@@ -10,5 +11,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};
