@@ -23,6 +23,7 @@ import zwolle from "@nl-design-system-unstable/zwolle-design-tokens/src/config.j
 import utrecht from "../../storybook/src/utrecht/config.json" assert { type: "json" };
 import denhaag from "../../storybook/src/denhaag/config.json" assert { type: "json" };
 import openforms from "../../storybook/src/open-forms/config.json" assert { type: "json" };
+import { writeFile } from "node:fs/promises";
 
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
@@ -61,4 +62,4 @@ const themes = [
   }))
   .sort((a, b) => stringSort(a.className, b.className));
 
-console.log(JSON.stringify(themes, null, "  "));
+writeFile("dist/themes.json", JSON.stringify(themes, null, "  "));
