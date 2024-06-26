@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'button',
+  id: 'utrecht-button',
+  title: 'Components/Button/Utrecht',
   component: Button,
   argTypes: {
     disabled: { type: 'boolean' },
@@ -40,5 +41,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

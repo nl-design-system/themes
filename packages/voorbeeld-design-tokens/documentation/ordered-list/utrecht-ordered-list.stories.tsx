@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'ordered-list',
+  id: 'utrecht-ordered-list',
+  title: 'Components/Ordered list/Utrecht',
   component: OrderedList,
   parameters: { actions: { disable: true } },
   args: {
@@ -13,5 +14,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

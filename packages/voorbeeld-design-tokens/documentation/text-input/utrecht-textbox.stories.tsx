@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Textbox } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'text-input',
+  id: 'utrecht-textbox',
+  title: 'Components/Text input/Utrecht',
   component: Textbox,
   args: { disabled: false, readOnly: false, required: false },
   argTypes: {
@@ -29,5 +30,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

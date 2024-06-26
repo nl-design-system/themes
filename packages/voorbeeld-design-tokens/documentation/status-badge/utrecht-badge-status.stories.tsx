@@ -2,7 +2,8 @@ import { Meta, StoryObj } from '@storybook/react';
 import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'status-badge',
+  id: 'utrecht-badge-status',
+  title: 'Components/Status badge/Utrecht',
   component: StatusBadge,
   parameters: { actions: { disable: true } },
   args: {
@@ -20,5 +21,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

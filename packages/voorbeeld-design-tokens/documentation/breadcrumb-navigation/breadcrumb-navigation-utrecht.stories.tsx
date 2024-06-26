@@ -13,7 +13,7 @@ const items = [
 
 const meta = {
   id: 'utrecht-breadcrumb-nav',
-  title: 'Components/Breadcrumb Navigation/Utrecht',
+  title: 'Components/Breadcrumb navigation/Utrecht',
   component: BreadcrumbNav,
   parameters: { actions: { disable: true } },
   args: { label: 'kruimelpad' },
@@ -32,5 +32,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const VoorbeeldTheme: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const UtrechtTheme: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

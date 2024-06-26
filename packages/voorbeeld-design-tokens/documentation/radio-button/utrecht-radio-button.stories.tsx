@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { RadioButton } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'radio',
+  id: 'utrecht-radio-button',
+  title: 'Components/Radio button/Utrecht',
   component: RadioButton,
   args: { disabled: false, invalid: false, name: 'radio' },
   render: (args) => (
@@ -16,5 +17,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

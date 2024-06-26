@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Fieldset, FieldsetLegend } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'fieldset',
+  id: 'utrecht-form-fieldset',
+  title: 'Components/Fieldset/Utrecht',
   component: Fieldset,
   parameters: {
     controls: { disable: true },
@@ -20,5 +21,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};

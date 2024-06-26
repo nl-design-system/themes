@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Heading4 } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  id: 'heading-4',
+  id: 'utrecht-heading-4',
+  title: 'Components/Heading 4/Utrecht',
   component: Heading4,
   parameters: { actions: { disable: true } },
   args: { children: "Pa's wijze lynx bezag vroom het fikse aquaduct", className: '' },
@@ -24,5 +25,11 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const GemeenteVoorbeeld: Story = { parameters: { theme: 'voorbeeld-theme' } };
-export const Utrecht: Story = { parameters: { theme: 'utrecht-theme' } };
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
+export const UtrechtTheme: Story = {
+  name: 'Utrecht theme',
+  parameters: { theme: 'utrecht-theme' },
+};
