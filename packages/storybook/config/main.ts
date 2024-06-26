@@ -33,6 +33,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  staticDirs: ['../../voorbeeld-design-tokens/documentation/assets'],
 };
 
 export default config;
