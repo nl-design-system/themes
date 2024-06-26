@@ -2,13 +2,13 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: [
-    {
-      titlePrefix: 'Components',
-      directory: '../../voorbeeld-design-tokens/documentation',
-      files: '*.stories.tsx',
-    },
+    // {
+    //   titlePrefix: 'Components',
+    //   directory: '../../voorbeeld-design-tokens/documentation',
+    //   files: '*.stories.{ts,tsx}',
+    // },
     '../../voorbeeld-design-tokens/documentation/{readme,color,design-tokens,typography}.mdx',
-    '../../voorbeeld-design-tokens/documentation/*.stories.ts',
+    '../../voorbeeld-design-tokens/documentation/**/*.stories.{ts,tsx}',
     '../../../proprietary/*/documentation/{readme,color,design-tokens,typography}.mdx',
     '../../../proprietary/*/documentation/*.stories.ts',
   ],
