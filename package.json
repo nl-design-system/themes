@@ -14,12 +14,11 @@
     "./proprietary/*"
   ],
   "devDependencies": {
+    "@changesets/cli": "2.27.6",
     "@gemeente-denhaag/process-steps": "0.1.0-alpha.223",
     "@gemeente-denhaag/step-marker": "0.0.1-alpha.95",
     "@lerna-lite/cli": "3.5.1",
-    "@lerna-lite/publish": "3.5.2",
     "@lerna-lite/run": "3.5.1",
-    "@lerna-lite/version": "3.5.2",
     "@nl-design-system/component-index": "1.0.0-alpha.12",
     "@types/node": "20.14.2",
     "@typescript-eslint/eslint-plugin": "7.13.0",
@@ -65,8 +64,7 @@
     "lint-workspaces": "lerna run --no-bail lint",
     "prepare": "husky",
     "prettier": "prettier --write .",
-    "publish": "lerna publish from-package --no-verify-access --yes",
-    "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
+    "publish": "changeset publish",
     "start": "node_modules/http-server/bin/http-server dist/",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm-run-all test-workspaces test-build:**",
