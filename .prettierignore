@@ -28,3 +28,9 @@ packages/web-components-react/src/components.ts
 
 # Ignore files managed by Figma Token Studio
 figma/*.tokens.json
+
+# Ignore changeset files, because they are temporary and frequently contributed by non-developers
+.changeset/
+
+# Ignore this config file, because apparently it considers `.markdown*` a Markdown file
+.markdownlintignore
