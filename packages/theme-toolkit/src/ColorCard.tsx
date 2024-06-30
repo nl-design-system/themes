@@ -10,7 +10,11 @@ import { CopyCode } from './CopyCode';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-export const ColorCard = ({ color }) => {
+export interface ColorCardProps {
+  color: string;
+}
+
+export const ColorCard = ({ color }: ColorCardProps) => {
   const parsed = parseColor(color);
   if (!parsed) {
     return <></>;
@@ -34,7 +38,9 @@ export const ColorCard = ({ color }) => {
           <CopyCode code={d3color.formatHex()}></CopyCode>
         </li>
         <li>
-          <CopyCode code={d3color.formatHsl().replace(/(\d+\.\d+)/g, (str) => Math.round(parseFloat(str)))}></CopyCode>
+          <CopyCode
+            code={d3color.formatHsl().replace(/(\d+\.\d+)/g, (str) => String(Math.round(parseFloat(str))))}
+          ></CopyCode>
         </li>
         <li>
           <CopyCode code={d3color.formatRgb()}></CopyCode>

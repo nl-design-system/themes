@@ -1,12 +1,19 @@
 import Color from 'color';
-import { getDeltaE00 } from 'delta-e';
-import { lab } from 'd3-color';
+import { type LAB, getDeltaE00 } from 'delta-e';
+import { LabColor, lab } from 'd3-color';
+import { DesignToken } from './design-tokens';
+
+interface SimpleLabColor {
+  l: number;
+  a: number;
+  b: number;
+}
 
 // Convert from `d3-color` object to the `delta-e` object
-const labUppercase = ({ l, a, b }) => ({ L: l, A: a, B: b });
+const labUppercase = ({ l, a, b }: SimpleLabColor | LabColor): LAB => ({ L: l, A: a, B: b });
 
-export const parseColor = (color) => {
-  let colorLAB;
+export const parseColor = (color: string): LAB | null => {
+  let colorLAB: SimpleLabColor | null = null;
   let query = String(color || '')
     .trim()
     .toLowerCase();
@@ -37,7 +44,7 @@ export const parseColor = (color) => {
     if (!colorLAB) {
       // Parse colors such as `hsl(0deg 0% 20%)`
       try {
-        const [l, a, b] = Color(query).lab().color;
+        const [l, a, b] = (Color(query).lab() as any).color as [number, number, number];
         colorLAB = { l, a, b };
       } catch (e) {
         colorLAB = null;
@@ -47,17 +54,22 @@ export const parseColor = (color) => {
   return colorLAB && labUppercase(colorLAB);
 };
 
-export const filterColorTokens = (tokens, query, maxDeltaE) => {
+export interface ColorTokenMatch {
+  token: DesignToken;
+  deltaE: number;
+}
+
+export const filterColorTokens = (tokens: DesignToken[], query: string, maxDeltaE: number): ColorTokenMatch[] => {
   const queryLAB = parseColor(query);
 
   return queryLAB
     ? tokens
         .map((token) => {
-          const tokenLAB = parseColor(token.value);
+          const tokenLAB = typeof token.value === 'string' ? parseColor(token.value) : null;
           const deltaE = tokenLAB ? getDeltaE00(queryLAB, tokenLAB) : 100;
 
           return {
-            ...token,
+            token,
             deltaE,
           };
         })

@@ -1,26 +1,12 @@
-import cloneDeepWith from 'lodash.clonedeepwith';
-import isPlainObject from 'lodash.isplainobject';
-import mapValues from 'lodash.mapvalues';
-import omitBy from 'lodash.omitby';
 import PropTypes from 'prop-types';
 import { CopyButton } from './CopyButton';
-import { isHiddenDesignToken } from './design-tokens.js';
+import { DesignTokenTree, createEmptyDesignTokenTree } from './design-tokens.js';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-export const ExampleTokensJSON = ({ definition }) => {
-  const filter = (item) =>
-    isPlainObject(item['$extensions']) || isPlainObject(item['$value'])
-      ? {}
-      : isPlainObject(item)
-      ? mapValues(
-          omitBy(item, (item) => isHiddenDesignToken(item)),
-          (item) => cloneDeepWith(item, filter),
-        )
-      : undefined;
-  const tokens = cloneDeepWith(definition, filter);
-
-  const code = JSON.stringify(tokens, null, '  ');
+export const ExampleTokensJSON = ({ definition }: DesignTokenTree) => {
+  const emptyTree = createEmptyDesignTokenTree(definition);
+  const code = JSON.stringify(emptyTree, null, '  ');
   return (
     <section>
       <h2>
