@@ -5,16 +5,21 @@
 
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { ColorTable } from './ColorTable';
+import { ColorResults } from './ColorTable';
 import { ColorCard } from './ColorCard';
 import { flattenColorTokens } from './util';
-import { filterColorTokens, parseColor } from './color-util';
+import { ColorTokenMatch, filterColorTokens, parseColor } from './color-util';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import { DesignTokenMap } from './design-tokens';
 
-export const ColorSearch = ({ tokens }) => {
+export interface ColorSearchProps {
+  tokens: DesignTokenMap;
+}
+
+export const ColorSearch = ({ tokens }: ColorSearchProps) => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState<ColorTokenMatch[]>([]);
 
   useEffect(() => {
     setResults(filterColorTokens(flattenColorTokens(tokens), query, 25));
@@ -28,11 +33,11 @@ export const ColorSearch = ({ tokens }) => {
           id="color"
           aria-invalid={parseColor(query) === null}
           type="search"
-          onInput={(evt) => setQuery(evt.target.value)}
+          onInput={(evt) => setQuery((evt.target as HTMLInputElement).value)}
         />
       </p>
       {parseColor(query) === null ? <p>Unknown color.</p> : <ColorCard color={query} />}
-      {query ? results.length > 0 ? <ColorTable tokens={results}></ColorTable> : <p>No results.</p> : ''}
+      {query ? results.length > 0 ? <ColorResults matches={results}></ColorResults> : <p>No results.</p> : ''}
     </div>
   );
 };

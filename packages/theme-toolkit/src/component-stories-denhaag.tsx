@@ -8,7 +8,7 @@ export const DENHAAG_COMPONENT_STORIES = [
   {
     storyId: 'react-denhaag-status--default',
     component: 'denhaag-steps',
-    group: STORY_GROUPS.STEPS,
+    group: STORY_GROUPS['STEPS'],
     name: 'Den Haag Status',
     render: () => (
       <Status
@@ -19,6 +19,7 @@ export const DENHAAG_COMPONENT_STORIES = [
             status: 'checked',
             steps: [
               {
+                id: '04aabddd-5234-44d1-a6aa-753c5bd6f7c5',
                 status: 'checked',
                 title: 'Aanmelding ontvangen',
               },
@@ -31,13 +32,16 @@ export const DENHAAG_COMPONENT_STORIES = [
             status: 'current',
             steps: [
               {
+                id: '09c4568b-828c-4656-aae2-c14ba6d51a2d',
                 status: 'checked',
                 title: 'Afspraak meten geluidsoverlast gemaakt',
               },
               {
+                id: 'd73a140a-64c4-4414-b003-5bc4f6d3ee8c',
                 title: 'Geluidsoverlast gemeten',
               },
               {
+                id: 'f8444469-0b19-43fe-bb97-4e50764119c1',
                 title: 'Onderzoek resultaten verwerkt',
               },
             ],
