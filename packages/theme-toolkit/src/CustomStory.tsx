@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { type PropsWithChildren } from 'react';
 
-const Canvas = ({ children }) => {
+const Canvas = ({ children }: PropsWithChildren) => {
   return (
     <div
       style={{
@@ -25,7 +25,7 @@ Canvas.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export const CustomStory = ({ children }) => <Canvas>{children}</Canvas>;
+export const CustomStory = ({ children }: PropsWithChildren) => <Canvas>{children}</Canvas>;
 
 CustomStory.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),

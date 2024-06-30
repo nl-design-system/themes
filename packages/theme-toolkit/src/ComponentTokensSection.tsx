@@ -4,8 +4,15 @@ import { ExampleTokensCSS } from './ExampleTokensCSS';
 import { ExampleTokensJSON } from './ExampleTokensJSON';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import { DesignToken, DesignTokenTree } from './design-tokens';
 
-export const ComponentTokensSection = ({ component, tokens, definition }) => (
+export interface ComponentTokensSectionProps {
+  component: string;
+  tokens: DesignToken[];
+  definition: DesignTokenTree;
+}
+
+export const ComponentTokensSection = ({ component, tokens, definition }: ComponentTokensSectionProps) => (
   <>
     {definition ? <ExampleTokensJSON definition={definition}></ExampleTokensJSON> : ''}
     {definition ? <ExampleTokensCSS definition={definition}></ExampleTokensCSS> : ''}

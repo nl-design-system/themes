@@ -35,10 +35,10 @@ importers:
         version: 20.14.2
       '@typescript-eslint/eslint-plugin':
         specifier: 7.13.0
-        version: 7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.3.3))(eslint@8.57.0)(typescript@5.3.3)
+        version: 7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0)(typescript@5.5.2)
       '@typescript-eslint/parser':
         specifier: 7.13.0
-        version: 7.13.0(eslint@8.57.0)(typescript@5.3.3)
+        version: 7.13.0(eslint@8.57.0)(typescript@5.5.2)
       '@utrecht/component-library-css':
         specifier: 1.0.0-alpha.506
         version: 1.0.0-alpha.506
@@ -53,7 +53,7 @@ importers:
         version: 3.1.0
       eslint-plugin-mdx:
         specifier: 3.1.5
-        version: 3.1.5(eslint@8.57.0)(typescript@5.3.3)
+        version: 3.1.5(eslint@8.57.0)(typescript@5.5.2)
       eslint-plugin-react:
         specifier: 7.34.2
         version: 7.34.2(eslint@8.57.0)
@@ -62,7 +62,7 @@ importers:
         version: 9.0.11
       lint-staged:
         specifier: 15.2.7
-        version: 15.2.7(typescript@5.3.3)
+        version: 15.2.7(typescript@5.5.2)
       lodash.get:
         specifier: 4.4.2
         version: 4.4.2
@@ -74,7 +74,7 @@ importers:
         version: 16.14.20
       npm-package-json-lint:
         specifier: 8.0.0
-        version: 8.0.0(typescript@5.3.3)
+        version: 8.0.0(typescript@5.5.2)
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
@@ -95,10 +95,10 @@ importers:
         version: 3.9.2
       stylelint:
         specifier: 16.6.1
-        version: 16.6.1(typescript@5.3.3)
+        version: 16.6.1(typescript@5.5.2)
       stylelint-config-standard-scss:
         specifier: 13.1.0
-        version: 13.1.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.3.3))
+        version: 13.1.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.5.2))
 
   packages/storybook:
     dependencies:
@@ -248,10 +248,10 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       '@storybook/react-vite':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -374,6 +374,15 @@ importers:
       '@storybook/blocks':
         specifier: 8.1.9
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/color':
+        specifier: 3.0.6
+        version: 3.0.6
+      '@types/d3-color':
+        specifier: 3.1.3
+        version: 3.1.3
+      '@types/delta-e':
+        specifier: 0.0.2
+        version: 0.0.2
       color:
         specifier: 3.2.1
         version: 3.2.1
@@ -414,6 +423,24 @@ importers:
       '@rollup/plugin-node-resolve':
         specifier: 15.2.3
         version: 15.2.3(rollup@4.18.0)
+      '@types/lodash.clonedeepwith':
+        specifier: 4.5.9
+        version: 4.5.9
+      '@types/lodash.isplainobject':
+        specifier: 4.0.9
+        version: 4.0.9
+      '@types/lodash.mapvalues':
+        specifier: 4.6.9
+        version: 4.6.9
+      '@types/lodash.omitby':
+        specifier: 4.6.9
+        version: 4.6.9
+      '@types/prop-types':
+        specifier: 15.7.12
+        version: 15.7.12
+      '@types/react':
+        specifier: 18.3.3
+        version: 18.3.3
       '@utrecht/component-library-react':
         specifier: 3.1.0
         version: 3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -429,6 +456,9 @@ importers:
       rollup-plugin-peer-deps-external:
         specifier: 2.2.4
         version: 2.2.4(rollup@4.18.0)
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/voorbeeld-design-tokens:
     devDependencies:
@@ -440,7 +470,7 @@ importers:
         version: link:../theme-toolkit
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -485,7 +515,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -513,7 +543,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -537,7 +567,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -565,7 +595,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -592,7 +622,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -622,7 +652,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -646,7 +676,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -673,7 +703,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -697,7 +727,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -721,7 +751,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -748,7 +778,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -772,7 +802,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -799,7 +829,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -826,7 +856,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -850,7 +880,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -880,7 +910,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -904,7 +934,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -931,7 +961,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -955,7 +985,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -982,7 +1012,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1006,7 +1036,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1033,7 +1063,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1063,7 +1093,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1090,7 +1120,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1117,7 +1147,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1141,7 +1171,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1165,7 +1195,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1195,7 +1225,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1219,7 +1249,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1243,7 +1273,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1270,7 +1300,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1294,7 +1324,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1321,7 +1351,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1345,7 +1375,7 @@ importers:
         version: 8.1.9(@types/react@18.3.3)(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.9
-        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+        version: 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -3269,6 +3299,15 @@ packages:
   '@types/body-parser@1.19.5':
     resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
 
+  '@types/color-convert@2.0.3':
+    resolution: {integrity: sha512-2Q6wzrNiuEvYxVQqhh7sXM2mhIhvZR/Paq4FdsQkOMgWsCIkKvSGj8Le1/XalulrmgOzPMqNa0ix+ePY4hTrfg==}
+
+  '@types/color-name@1.1.4':
+    resolution: {integrity: sha512-hulKeREDdLFesGQjl96+4aoJSHY5b2GRjagzzcqCfIrWhe5vkCqIvrLbqzBaI1q94Vg8DNJZZqTR5ocdWmWclg==}
+
+  '@types/color@3.0.6':
+    resolution: {integrity: sha512-NMiNcZFRUAiUUCCf7zkAelY8eV3aKqfbzyFQlXpPIEeoNDbsEHGpb854V3gzTsGKYj830I5zPuOwU/TP5/cW6A==}
+
   '@types/concat-stream@2.0.0':
     resolution: {integrity: sha512-t3YCerNM7NTVjLuICZo5gYAXYoDvpuuTceCcFQWcDQz26kxUR5uIWolxbIR5jRNIXpMqhOpW/b8imCR1LEmuJw==}
 
@@ -3278,8 +3317,14 @@ packages:
   '@types/cross-spawn@6.0.6':
     resolution: {integrity: sha512-fXRhhUkG4H3TQk5dBhQ7m/JDdSNHKwR2BBia62lhwEIq9xGiQKLxd6LymNhn47SjXhsUEPmxi+PKw2OkW4LLjA==}
 
+  '@types/d3-color@3.1.3':
+    resolution: {integrity: sha512-iO90scth9WAbmgv7ogoq57O9YpKmFBbmoEoCHDB2xMBY0+/KVrqAaCDyCE16dUspeOvIxFFRI+0sEtqDqy2b4A==}
+
   '@types/debug@4.1.7':
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+
+  '@types/delta-e@0.0.2':
+    resolution: {integrity: sha512-DLvqCZ+ce6qVLp8HIxx8rrLjog1t0NlSLXOzz2FbYC31xHMSADMEz+MrJTvYTeuHez6Wtm0dDYgGtBY+7Dgf4Q==}
 
   '@types/detect-port@1.3.5':
     resolution: {integrity: sha512-Rf3/lB9WkDfIL9eEKaSYKc+1L/rNVYBjThk22JTqQw0YozXarX8YljFAz+HCoC6h4B4KwCMsBPZHaFezwT4BNA==}
@@ -3335,6 +3380,18 @@ packages:
   '@types/is-empty@1.2.1':
     resolution: {integrity: sha512-a3xgqnFTuNJDm1fjsTjHocYJ40Cz3t8utYpi5GNaxzrJC2HSD08ym+whIL7fNqiqBCdM9bcqD1H/tORWAFXoZw==}
 
+  '@types/lodash.clonedeepwith@4.5.9':
+    resolution: {integrity: sha512-bruhfxIJlj36oWYmYQ7KFbylCGgzyIi+TLypub+wcAd29mV4llKdvru8Pp9qwILX//I5vK3FIcJ0VzszElhLuA==}
+
+  '@types/lodash.isplainobject@4.0.9':
+    resolution: {integrity: sha512-QC8nKcap5hRrbtIaPRjUMlcXXnLeayqQZPSaWJDx3xeuN17+2PW5wkmEJ4+lZgNnQRlSPzxjTYKCfV1uTnPaEg==}
+
+  '@types/lodash.mapvalues@4.6.9':
+    resolution: {integrity: sha512-NyAIgUrI+nnr3VoJbiAlUfqBT2M/65mOCm+LerHgYE7lEyxXUAalZiMIL37GBnfg0QOMMBEPW4osdiMjsoEA4g==}
+
+  '@types/lodash.omitby@4.6.9':
+    resolution: {integrity: sha512-QPHwcQeWP/bQVwKV1+goohDgBtSZlHgM2KA/+QhjMYV2/7RTHF72KxLPzybvu8mO7O46NdugTH/yPs3/Jcavxw==}
+
   '@types/lodash@4.17.0':
     resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
 
@@ -3377,8 +3434,8 @@ packages:
   '@types/pretty-hrtime@1.0.3':
     resolution: {integrity: sha512-nj39q0wAIdhwn7DGUyT9irmsKK1tV0bd5WFEhgpqNTMFZ8cE+jieuTphCW0tfdm47S2zVT5mr09B28b1chmQMA==}
 
-  '@types/prop-types@15.7.11':
-    resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
+  '@types/prop-types@15.7.12':
+    resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
 
   '@types/qs@6.9.14':
     resolution: {integrity: sha512-5khscbd3SwWMhFqylJBLQ0zIu7c1K6Vz0uBIt915BI3zV0q1nfjRQD3RqSBcPaO6PHEF4ov/t9y89fSiyThlPA==}
@@ -7585,8 +7642,13 @@ packages:
   typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
-  typescript@5.3.3:
-    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+  typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  typescript@5.5.2:
+    resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -9401,15 +9463,15 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.3.3)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))':
     dependencies:
       glob: 7.2.3
       glob-promise: 4.2.2(glob@7.2.3)
       magic-string: 0.27.0
-      react-docgen-typescript: 2.2.2(typescript@5.3.3)
+      react-docgen-typescript: 2.2.2(typescript@5.5.2)
       vite: 5.3.1(@types/node@20.14.2)(sass@1.77.5)
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
 
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
@@ -9937,7 +9999,7 @@ snapshots:
       - prettier
       - supports-color
 
-  '@storybook/builder-vite@8.1.9(encoding@0.1.13)(prettier@3.2.5)(typescript@5.3.3)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))':
+  '@storybook/builder-vite@8.1.9(encoding@0.1.13)(prettier@3.2.5)(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))':
     dependencies:
       '@storybook/channels': 8.1.9
       '@storybook/client-logger': 8.1.9
@@ -9958,7 +10020,7 @@ snapshots:
       ts-dedent: 2.2.0
       vite: 5.3.1(@types/node@20.14.2)(sass@1.77.5)
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
     transitivePeerDependencies:
       - encoding
       - prettier
@@ -10257,13 +10319,13 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/react-vite@8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.3.3)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))':
+  '@storybook/react-vite@8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.3.3)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
-      '@storybook/builder-vite': 8.1.9(encoding@0.1.13)(prettier@3.2.5)(typescript@5.3.3)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))
+      '@storybook/builder-vite': 8.1.9(encoding@0.1.13)(prettier@3.2.5)(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.2)(sass@1.77.5))
       '@storybook/node-logger': 8.1.9
-      '@storybook/react': 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)
+      '@storybook/react': 8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       '@storybook/types': 8.1.9
       find-up: 5.0.0
       magic-string: 0.30.8
@@ -10282,7 +10344,7 @@ snapshots:
       - typescript
       - vite-plugin-glimmerx
 
-  '@storybook/react@8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.3.3)':
+  '@storybook/react@8.1.9(encoding@0.1.13)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)':
     dependencies:
       '@storybook/client-logger': 8.1.9
       '@storybook/docs-tools': 8.1.9(encoding@0.1.13)(prettier@3.2.5)
@@ -10308,7 +10370,7 @@ snapshots:
       type-fest: 2.19.0
       util-deprecate: 1.0.2
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
     transitivePeerDependencies:
       - encoding
       - prettier
@@ -10394,6 +10456,16 @@ snapshots:
       '@types/connect': 3.4.38
       '@types/node': 20.14.2
 
+  '@types/color-convert@2.0.3':
+    dependencies:
+      '@types/color-name': 1.1.4
+
+  '@types/color-name@1.1.4': {}
+
+  '@types/color@3.0.6':
+    dependencies:
+      '@types/color-convert': 2.0.3
+
   '@types/concat-stream@2.0.0':
     dependencies:
       '@types/node': 20.14.2
@@ -10406,9 +10478,13 @@ snapshots:
     dependencies:
       '@types/node': 20.14.2
 
+  '@types/d3-color@3.1.3': {}
+
   '@types/debug@4.1.7':
     dependencies:
       '@types/ms': 0.7.31
+
+  '@types/delta-e@0.0.2': {}
 
   '@types/detect-port@1.3.5': {}
 
@@ -10463,6 +10539,22 @@ snapshots:
 
   '@types/is-empty@1.2.1': {}
 
+  '@types/lodash.clonedeepwith@4.5.9':
+    dependencies:
+      '@types/lodash': 4.17.0
+
+  '@types/lodash.isplainobject@4.0.9':
+    dependencies:
+      '@types/lodash': 4.17.0
+
+  '@types/lodash.mapvalues@4.6.9':
+    dependencies:
+      '@types/lodash': 4.17.0
+
+  '@types/lodash.omitby@4.6.9':
+    dependencies:
+      '@types/lodash': 4.17.0
+
   '@types/lodash@4.17.0': {}
 
   '@types/mdast@3.0.11':
@@ -10499,7 +10591,7 @@ snapshots:
 
   '@types/pretty-hrtime@1.0.3': {}
 
-  '@types/prop-types@15.7.11': {}
+  '@types/prop-types@15.7.12': {}
 
   '@types/qs@6.9.14': {}
 
@@ -10507,7 +10599,7 @@ snapshots:
 
   '@types/react@18.3.3':
     dependencies:
-      '@types/prop-types': 15.7.11
+      '@types/prop-types': 15.7.12
       csstype: 3.1.3
 
   '@types/resolve@1.20.2': {}
@@ -10535,34 +10627,34 @@ snapshots:
 
   '@types/uuid@9.0.8': {}
 
-  '@typescript-eslint/eslint-plugin@7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.3.3))(eslint@8.57.0)(typescript@5.3.3)':
+  '@typescript-eslint/eslint-plugin@7.13.0(@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0)(typescript@5.5.2)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 7.13.0(eslint@8.57.0)(typescript@5.3.3)
+      '@typescript-eslint/parser': 7.13.0(eslint@8.57.0)(typescript@5.5.2)
       '@typescript-eslint/scope-manager': 7.13.0
-      '@typescript-eslint/type-utils': 7.13.0(eslint@8.57.0)(typescript@5.3.3)
-      '@typescript-eslint/utils': 7.13.0(eslint@8.57.0)(typescript@5.3.3)
+      '@typescript-eslint/type-utils': 7.13.0(eslint@8.57.0)(typescript@5.5.2)
+      '@typescript-eslint/utils': 7.13.0(eslint@8.57.0)(typescript@5.5.2)
       '@typescript-eslint/visitor-keys': 7.13.0
       eslint: 8.57.0
       graphemer: 1.4.0
       ignore: 5.3.1
       natural-compare: 1.4.0
-      ts-api-utils: 1.3.0(typescript@5.3.3)
+      ts-api-utils: 1.3.0(typescript@5.5.2)
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.3.3)':
+  '@typescript-eslint/parser@7.13.0(eslint@8.57.0)(typescript@5.5.2)':
     dependencies:
       '@typescript-eslint/scope-manager': 7.13.0
       '@typescript-eslint/types': 7.13.0
-      '@typescript-eslint/typescript-estree': 7.13.0(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 7.13.0(typescript@5.5.2)
       '@typescript-eslint/visitor-keys': 7.13.0
       debug: 4.3.4
       eslint: 8.57.0
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
     transitivePeerDependencies:
       - supports-color
 
@@ -10571,21 +10663,21 @@ snapshots:
       '@typescript-eslint/types': 7.13.0
       '@typescript-eslint/visitor-keys': 7.13.0
 
-  '@typescript-eslint/type-utils@7.13.0(eslint@8.57.0)(typescript@5.3.3)':
+  '@typescript-eslint/type-utils@7.13.0(eslint@8.57.0)(typescript@5.5.2)':
     dependencies:
-      '@typescript-eslint/typescript-estree': 7.13.0(typescript@5.3.3)
-      '@typescript-eslint/utils': 7.13.0(eslint@8.57.0)(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 7.13.0(typescript@5.5.2)
+      '@typescript-eslint/utils': 7.13.0(eslint@8.57.0)(typescript@5.5.2)
       debug: 4.3.4
       eslint: 8.57.0
-      ts-api-utils: 1.3.0(typescript@5.3.3)
+      ts-api-utils: 1.3.0(typescript@5.5.2)
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
     transitivePeerDependencies:
       - supports-color
 
   '@typescript-eslint/types@7.13.0': {}
 
-  '@typescript-eslint/typescript-estree@7.13.0(typescript@5.3.3)':
+  '@typescript-eslint/typescript-estree@7.13.0(typescript@5.5.2)':
     dependencies:
       '@typescript-eslint/types': 7.13.0
       '@typescript-eslint/visitor-keys': 7.13.0
@@ -10594,18 +10686,18 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.4
       semver: 7.6.2
-      ts-api-utils: 1.3.0(typescript@5.3.3)
+      ts-api-utils: 1.3.0(typescript@5.5.2)
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@7.13.0(eslint@8.57.0)(typescript@5.3.3)':
+  '@typescript-eslint/utils@7.13.0(eslint@8.57.0)(typescript@5.5.2)':
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
       '@typescript-eslint/scope-manager': 7.13.0
       '@typescript-eslint/types': 7.13.0
-      '@typescript-eslint/typescript-estree': 7.13.0(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 7.13.0(typescript@5.5.2)
       eslint: 8.57.0
     transitivePeerDependencies:
       - supports-color
@@ -10726,9 +10818,9 @@ snapshots:
 
   ansi-colors@4.1.3: {}
 
-  ansi-escapes@6.2.0(typescript@5.3.3):
+  ansi-escapes@6.2.0(typescript@5.5.2):
     dependencies:
-      type-fest: 3.10.0(typescript@5.3.3)
+      type-fest: 3.10.0(typescript@5.5.2)
     transitivePeerDependencies:
       - typescript
 
@@ -11336,23 +11428,23 @@ snapshots:
 
   corser@2.0.1: {}
 
-  cosmiconfig@8.3.6(typescript@5.3.3):
+  cosmiconfig@8.3.6(typescript@5.5.2):
     dependencies:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
 
-  cosmiconfig@9.0.0(typescript@5.3.3):
+  cosmiconfig@9.0.0(typescript@5.5.2):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
 
   cross-spawn@5.1.0:
     dependencies:
@@ -11867,7 +11959,7 @@ snapshots:
     dependencies:
       eslint: 8.57.0
 
-  eslint-mdx@3.1.5(eslint@8.57.0)(typescript@5.3.3):
+  eslint-mdx@3.1.5(eslint@8.57.0)(typescript@5.5.2):
     dependencies:
       acorn: 8.11.3
       acorn-jsx: 5.3.2(acorn@8.11.3)
@@ -11880,7 +11972,7 @@ snapshots:
       synckit: 0.9.0
       tslib: 2.6.2
       unified: 11.0.4
-      unified-engine: 11.2.0(typescript@5.3.3)
+      unified-engine: 11.2.0(typescript@5.5.2)
       unist-util-visit: 5.0.0
       uvu: 0.5.6
       vfile: 6.0.1
@@ -11900,10 +11992,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-mdx@3.1.5(eslint@8.57.0)(typescript@5.3.3):
+  eslint-plugin-mdx@3.1.5(eslint@8.57.0)(typescript@5.5.2):
     dependencies:
       eslint: 8.57.0
-      eslint-mdx: 3.1.5(eslint@8.57.0)(typescript@5.3.3)
+      eslint-mdx: 3.1.5(eslint@8.57.0)(typescript@5.5.2)
       eslint-plugin-markdown: 3.0.1(eslint@8.57.0)
       remark-mdx: 3.0.1
       remark-parse: 11.0.0
@@ -13149,14 +13241,14 @@ snapshots:
     dependencies:
       uc.micro: 2.1.0
 
-  lint-staged@15.2.7(typescript@5.3.3):
+  lint-staged@15.2.7(typescript@5.5.2):
     dependencies:
       chalk: 5.3.0
       commander: 12.1.0
       debug: 4.3.4
       execa: 8.0.1
       lilconfig: 3.1.2
-      listr2: 8.2.1(typescript@5.3.3)
+      listr2: 8.2.1(typescript@5.5.2)
       micromatch: 4.0.7
       pidtree: 0.6.0
       string-argv: 0.3.2
@@ -13165,12 +13257,12 @@ snapshots:
       - supports-color
       - typescript
 
-  listr2@8.2.1(typescript@5.3.3):
+  listr2@8.2.1(typescript@5.5.2):
     dependencies:
       cli-truncate: 4.0.0
       colorette: 2.0.20
       eventemitter3: 5.0.1
-      log-update: 6.0.0(typescript@5.3.3)
+      log-update: 6.0.0(typescript@5.5.2)
       rfdc: 1.4.1
       wrap-ansi: 9.0.0
     transitivePeerDependencies:
@@ -13237,9 +13329,9 @@ snapshots:
       chalk: 4.1.2
       is-unicode-supported: 0.1.0
 
-  log-update@6.0.0(typescript@5.3.3):
+  log-update@6.0.0(typescript@5.5.2):
     dependencies:
-      ansi-escapes: 6.2.0(typescript@5.3.3)
+      ansi-escapes: 6.2.0(typescript@5.5.2)
       cli-cursor: 4.0.0
       slice-ansi: 7.1.0
       strip-ansi: 7.1.0
@@ -13982,12 +14074,12 @@ snapshots:
       semver: 7.6.2
       validate-npm-package-name: 5.0.0
 
-  npm-package-json-lint@8.0.0(typescript@5.3.3):
+  npm-package-json-lint@8.0.0(typescript@5.5.2):
     dependencies:
       ajv: 6.12.6
       ajv-errors: 1.0.1(ajv@6.12.6)
       chalk: 4.1.2
-      cosmiconfig: 8.3.6(typescript@5.3.3)
+      cosmiconfig: 8.3.6(typescript@5.5.2)
       debug: 4.3.4
       globby: 11.1.0
       ignore: 5.3.1
@@ -14278,13 +14370,13 @@ snapshots:
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
 
-  parse-json@7.1.1(typescript@5.3.3):
+  parse-json@7.1.1(typescript@5.5.2):
     dependencies:
       '@babel/code-frame': 7.23.5
       error-ex: 1.3.2
       json-parse-even-better-errors: 3.0.0
       lines-and-columns: 2.0.3
-      type-fest: 3.10.0(typescript@5.3.3)
+      type-fest: 3.10.0(typescript@5.5.2)
     transitivePeerDependencies:
       - typescript
 
@@ -14545,9 +14637,9 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  react-docgen-typescript@2.2.2(typescript@5.3.3):
+  react-docgen-typescript@2.2.2(typescript@5.5.2):
     dependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
 
   react-docgen@7.0.3:
     dependencies:
@@ -15333,42 +15425,42 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.3
 
-  stylelint-config-recommended-scss@14.0.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.3.3)):
+  stylelint-config-recommended-scss@14.0.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.5.2)):
     dependencies:
       postcss-scss: 4.0.9(postcss@8.4.38)
-      stylelint: 16.6.1(typescript@5.3.3)
-      stylelint-config-recommended: 14.0.0(stylelint@16.6.1(typescript@5.3.3))
-      stylelint-scss: 6.2.1(stylelint@16.6.1(typescript@5.3.3))
+      stylelint: 16.6.1(typescript@5.5.2)
+      stylelint-config-recommended: 14.0.0(stylelint@16.6.1(typescript@5.5.2))
+      stylelint-scss: 6.2.1(stylelint@16.6.1(typescript@5.5.2))
     optionalDependencies:
       postcss: 8.4.38
 
-  stylelint-config-recommended@14.0.0(stylelint@16.6.1(typescript@5.3.3)):
+  stylelint-config-recommended@14.0.0(stylelint@16.6.1(typescript@5.5.2)):
     dependencies:
-      stylelint: 16.6.1(typescript@5.3.3)
+      stylelint: 16.6.1(typescript@5.5.2)
 
-  stylelint-config-standard-scss@13.1.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.3.3)):
+  stylelint-config-standard-scss@13.1.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.5.2)):
     dependencies:
-      stylelint: 16.6.1(typescript@5.3.3)
-      stylelint-config-recommended-scss: 14.0.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.3.3))
-      stylelint-config-standard: 36.0.0(stylelint@16.6.1(typescript@5.3.3))
+      stylelint: 16.6.1(typescript@5.5.2)
+      stylelint-config-recommended-scss: 14.0.0(postcss@8.4.38)(stylelint@16.6.1(typescript@5.5.2))
+      stylelint-config-standard: 36.0.0(stylelint@16.6.1(typescript@5.5.2))
     optionalDependencies:
       postcss: 8.4.38
 
-  stylelint-config-standard@36.0.0(stylelint@16.6.1(typescript@5.3.3)):
+  stylelint-config-standard@36.0.0(stylelint@16.6.1(typescript@5.5.2)):
     dependencies:
-      stylelint: 16.6.1(typescript@5.3.3)
-      stylelint-config-recommended: 14.0.0(stylelint@16.6.1(typescript@5.3.3))
+      stylelint: 16.6.1(typescript@5.5.2)
+      stylelint-config-recommended: 14.0.0(stylelint@16.6.1(typescript@5.5.2))
 
-  stylelint-scss@6.2.1(stylelint@16.6.1(typescript@5.3.3)):
+  stylelint-scss@6.2.1(stylelint@16.6.1(typescript@5.5.2)):
     dependencies:
       known-css-properties: 0.29.0
       postcss-media-query-parser: 0.2.3
       postcss-resolve-nested-selector: 0.1.1
       postcss-selector-parser: 6.0.16
       postcss-value-parser: 4.2.0
-      stylelint: 16.6.1(typescript@5.3.3)
+      stylelint: 16.6.1(typescript@5.5.2)
 
-  stylelint@16.6.1(typescript@5.3.3):
+  stylelint@16.6.1(typescript@5.5.2):
     dependencies:
       '@csstools/css-parser-algorithms': 2.6.3(@csstools/css-tokenizer@2.3.1)
       '@csstools/css-tokenizer': 2.3.1
@@ -15377,7 +15469,7 @@ snapshots:
       '@dual-bundle/import-meta-resolve': 4.1.0
       balanced-match: 2.0.0
       colord: 2.9.3
-      cosmiconfig: 9.0.0(typescript@5.3.3)
+      cosmiconfig: 9.0.0(typescript@5.5.2)
       css-functions-list: 3.2.2
       css-tree: 2.3.1
       debug: 4.3.4
@@ -15532,9 +15624,9 @@ snapshots:
 
   trough@2.1.0: {}
 
-  ts-api-utils@1.3.0(typescript@5.3.3):
+  ts-api-utils@1.3.0(typescript@5.5.2):
     dependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
 
   ts-dedent@2.2.0: {}
 
@@ -15574,9 +15666,9 @@ snapshots:
 
   type-fest@2.19.0: {}
 
-  type-fest@3.10.0(typescript@5.3.3):
+  type-fest@3.10.0(typescript@5.5.2):
     dependencies:
-      typescript: 5.3.3
+      typescript: 5.5.2
 
   type-fest@4.20.0: {}
 
@@ -15638,7 +15730,9 @@ snapshots:
 
   typedarray@0.0.6: {}
 
-  typescript@5.3.3: {}
+  typescript@5.4.5: {}
+
+  typescript@5.5.2: {}
 
   uc.micro@2.1.0: {}
 
@@ -15669,7 +15763,7 @@ snapshots:
 
   unicorn-magic@0.1.0: {}
 
-  unified-engine@11.2.0(typescript@5.3.3):
+  unified-engine@11.2.0(typescript@5.5.2):
     dependencies:
       '@types/concat-stream': 2.0.0
       '@types/debug': 4.1.7
@@ -15684,7 +15778,7 @@ snapshots:
       is-empty: 1.2.0
       is-plain-obj: 4.1.0
       load-plugin: 6.0.2
-      parse-json: 7.1.1(typescript@5.3.3)
+      parse-json: 7.1.1(typescript@5.5.2)
       trough: 2.1.0
       unist-util-inspect: 8.0.0
       vfile: 6.0.1

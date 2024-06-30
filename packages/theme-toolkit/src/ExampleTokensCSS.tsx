@@ -1,11 +1,25 @@
 import isPlainObject from 'lodash.isplainobject';
 import PropTypes from 'prop-types';
 import { CopyButton } from './CopyButton';
-import { isHiddenDesignToken } from './design-tokens.js';
+import {
+  DesignToken,
+  DesignTokenNode,
+  DesignTokenTree,
+  isDesignTokenDefinition,
+  isHiddenDesignToken,
+} from './design-tokens.js';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-const traverseDeep = (root, parents, current, valueTest, callback) => {
+type DesignTokenTraverseCallback = (_parents: any, _current: any) => void;
+
+const traverseDeep = (
+  root: DesignTokenTree,
+  parents: string[],
+  current: DesignTokenNode,
+  valueTest: (_current: any) => boolean,
+  callback: DesignTokenTraverseCallback,
+) => {
   if (valueTest(current)) {
     callback(parents, current);
   } else if (isPlainObject(current)) {
@@ -14,21 +28,13 @@ const traverseDeep = (root, parents, current, valueTest, callback) => {
     });
   }
 };
-const isDesignToken = (value) =>
-  Object.prototype.hasOwnProperty.call(value, 'value') || Object.prototype.hasOwnProperty.call(value, '$value');
 
-// Tests for both the `value` property we currently use,
-// and the `$value` from the Design Tokens Format specification.
-const isDesignTokenDefinition = (value) =>
-  isDesignToken(value) ||
-  Object.prototype.hasOwnProperty.call(value, 'css') ||
-  Object.prototype.hasOwnProperty.call(value, '$extensions');
+const findDesignTokens = (tokens: DesignTokenTree, callback: DesignTokenTraverseCallback) =>
+  traverseDeep(tokens, [], tokens, isDesignTokenDefinition, callback);
 
-const findDesignTokens = (tokens, callback) => traverseDeep(tokens, [], tokens, isDesignTokenDefinition, callback);
-
-const tokensToCSS = (tokens) => {
-  const lines = [];
-  findDesignTokens(tokens, (path, value) => {
+const tokensToCSS = (tokens: DesignTokenTree): string => {
+  const lines: string[] = [];
+  findDesignTokens(tokens, (path: DesignToken['path'], value: DesignToken) => {
     if (isHiddenDesignToken(value)) {
       return;
     }
@@ -46,7 +52,11 @@ const tokensToCSS = (tokens) => {
   return `.your-theme {\n  /* Uncomment each custom property you need */\n${lines.join('\n')}\n}`;
 };
 
-export const ExampleTokensCSS = ({ definition }) => {
+export interface ExampleTokensCSSProps {
+  definition: DesignTokenTree;
+}
+
+export const ExampleTokensCSS = ({ definition }: ExampleTokensCSSProps) => {
   const code = tokensToCSS(definition);
 
   return (

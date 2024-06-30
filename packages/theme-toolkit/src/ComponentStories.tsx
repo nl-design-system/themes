@@ -3,9 +3,14 @@ import { DENHAAG_COMPONENT_STORIES } from './component-stories-denhaag';
 import { UTRECHT_COMPONENT_STORIES } from './component-stories-utrecht';
 import { CustomStory } from './CustomStory';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { type PropsWithChildren } from 'react';
+import { ComponentStory } from './component-stories-util';
 
-export const Heading = ({ level, children }) =>
+interface HeadingProps {
+  level?: number;
+}
+
+export const Heading = ({ level, children }: PropsWithChildren<HeadingProps>) =>
   level === 1 ? (
     <h1>{children}</h1>
   ) : level === 2 ? (
@@ -27,7 +32,16 @@ Heading.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 };
 
-export const ComponentStories = ({ config, showAll = false }) => {
+interface ComponentStoriesProps {
+  config: {
+    name: string;
+    prefix: string;
+    stories: string[];
+  };
+  showAll?: boolean;
+}
+
+export const ComponentStories = ({ config, showAll = false }: ComponentStoriesProps) => {
   const availableComponents = [...UTRECHT_COMPONENT_STORIES, ...DENHAAG_COMPONENT_STORIES];
   if (Array.isArray(config.stories)) {
     // TODO: Add glob option for variants to config https://www.npmjs.com/package/glob
@@ -45,7 +59,11 @@ export const ComponentStories = ({ config, showAll = false }) => {
 
     const UNGROUPED = '_ungrouped';
 
-    const groupedStories = components.reduce((groups, story) => {
+    interface StoryGroups {
+      [index: string]: ComponentStory[];
+    }
+
+    const groupedStories: StoryGroups = components.reduce((groups: StoryGroups, story: ComponentStory) => {
       if (story.group) {
         const group = groups[story.group] || [];
         group.push(story);
@@ -81,9 +99,9 @@ export const ComponentStories = ({ config, showAll = false }) => {
                       wordt getest
                     </p>
                   ) : null}
-                  <CustomStory theme={`${config.prefix}-theme`} inline={story.inline}>
-                    {story.render()}
-                  </CustomStory>
+                  {/* TODO: Implement `theme` and `inline` properties again */}
+                  {/* <CustomStory theme={`${config.prefix}-theme`} inline={story.inline}> */}
+                  <CustomStory>{story.render()}</CustomStory>
                 </section>
               ))}
             </div>
