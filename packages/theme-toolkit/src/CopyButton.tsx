@@ -5,9 +5,14 @@
 
 import PropTypes from 'prop-types';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
-export const CopyButton = ({ value, textContent = 'Copy' }) => {
+export interface CopyButtonProps {
+  value: string;
+  textContent: ReactNode;
+}
+
+export const CopyButton = ({ value, textContent = 'Copy' }: CopyButtonProps) => {
   return (
     <button
       className="utrecht-button utrecht-button--secondary-action utrecht-button--html-button"

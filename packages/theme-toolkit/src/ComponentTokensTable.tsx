@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
 import { DesignTokensTable } from './DesignTokensTable';
-import { isHiddenDesignToken } from './design-tokens.js';
+import { DesignToken, isHiddenDesignToken } from './design-tokens.js';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-export const ComponentTokensTable = ({ component, tokens }) => {
+export interface ComponentTokensTableProps {
+  component: string;
+  tokens: DesignToken[];
+}
+
+export const ComponentTokensTable = ({ component, tokens }: ComponentTokensTableProps) => {
   const componentPath = ['utrecht', component.replace(/^(example|denhaag|utrecht)-/, '')];
 
   const subset = tokens

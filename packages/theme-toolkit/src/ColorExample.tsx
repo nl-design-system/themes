@@ -2,7 +2,11 @@ import PropTypes from 'prop-types';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-export const ColorExample = ({ color }) => (
+export interface ColorExampleProps {
+  color: string;
+}
+
+export const ColorExample = ({ color }: ColorExampleProps) => (
   <div
     style={{
       backgroundColor: color,

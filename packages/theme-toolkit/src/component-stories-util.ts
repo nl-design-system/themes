@@ -1,4 +1,6 @@
-export const STORY_GROUPS = {
+import { ReactNode } from 'react';
+
+export const STORY_GROUPS: { [index: string]: string } = {
   AVATAR: 'Avatars',
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
@@ -21,3 +23,13 @@ export const STORY_GROUPS = {
   FORM_FIELD_DESCRIPTION: 'Form Field Description',
   STEPS: 'Steps',
 };
+
+export interface ComponentStory {
+  storyId: string;
+  component?: string;
+  group?: string;
+  name: string;
+  state?: boolean;
+  inline?: boolean;
+  render: () => ReactNode;
+}
