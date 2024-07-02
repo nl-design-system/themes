@@ -1739,6 +1739,64 @@
       }
     }
   },
+  "components/badge-counter": {
+    "utrecht": {
+      "badge-counter": {
+        "font-size": {
+          "value": "{voorbeeld.typography.font-size.sm}",
+          "type": "fontSizes"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "min-block-size": {
+          "type": "sizing",
+          "value": "{voorbeeld.size.xs}"
+        },
+        "min-inline-size": {
+          "type": "sizing",
+          "value": "{voorbeeld.size.xs}"
+        },
+        "font-weight": {
+          "value": "{utrecht.document.strong.font-weight}",
+          "type": "fontWeights"
+        },
+        "border-width": {
+          "value": "{voorbeeld.border-width.sm}",
+          "type": "borderWidth"
+        },
+        "border-radius": {
+          "type": "borderRadius",
+          "value": "{voorbeeld.border-radius.round}"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "background-color": {
+          "type": "color",
+          "value": "{voorbeeld.color.violet.100}"
+        },
+        "border-color": {
+          "type": "color",
+          "value": "transparent"
+        },
+        "color": {
+          "type": "color",
+          "value": "{utrecht.document.color}"
+        },
+        "padding-inline": {
+          "value": "{voorbeeld.space.inline.ant}",
+          "type": "spacing"
+        },
+        "padding-block": {
+          "value": "{voorbeeld.space.block.ant}",
+          "type": "spacing"
+        }
+      }
+    }
+  },
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
@@ -2620,64 +2678,6 @@
         },
         "row-gap": {
           "value": "{voorbeeld.space.row.rat}",
-          "type": "spacing"
-        }
-      }
-    }
-  },
-  "components/counter-badge": {
-    "utrecht": {
-      "counter-badge": {
-        "font-size": {
-          "value": "{voorbeeld.typography.font-size.sm}",
-          "type": "fontSizes"
-        },
-        "line-height": {
-          "value": "{utrecht.document.line-height}",
-          "type": "lineHeights"
-        },
-        "min-block-size": {
-          "type": "sizing",
-          "value": "{voorbeeld.size.xs}"
-        },
-        "min-inline-size": {
-          "type": "sizing",
-          "value": "{voorbeeld.size.xs}"
-        },
-        "font-weight": {
-          "value": "{utrecht.document.strong.font-weight}",
-          "type": "fontWeights"
-        },
-        "border-width": {
-          "value": "{voorbeeld.border-width.sm}",
-          "type": "borderWidth"
-        },
-        "border-radius": {
-          "type": "borderRadius",
-          "value": "{voorbeeld.border-radius.round}"
-        },
-        "font-family": {
-          "value": "{utrecht.document.font-family}",
-          "type": "fontFamilies"
-        },
-        "background-color": {
-          "type": "color",
-          "value": "{voorbeeld.color.violet.100}"
-        },
-        "border-color": {
-          "type": "color",
-          "value": "transparent"
-        },
-        "color": {
-          "type": "color",
-          "value": "{utrecht.document.color}"
-        },
-        "padding-inline": {
-          "value": "{voorbeeld.space.inline.ant}",
-          "type": "spacing"
-        },
-        "padding-block": {
-          "value": "{voorbeeld.space.block.ant}",
           "type": "spacing"
         }
       }
@@ -5262,13 +5262,13 @@
       "components/alert",
       "components/avatar",
       "components/backdrop",
+      "components/badge-counter",
       "components/blockquote",
       "components/breadcrumb",
       "components/button",
       "components/button-group",
       "components/checkbox",
       "components/checkbox-group",
-      "components/counter-badge",
       "components/drawer",
       "components/form-field",
       "components/form-field-checkbox-option",
