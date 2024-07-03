@@ -8,7 +8,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/themes.git",
-    "directory": ""
+    "directory": "."
   },
   "engines": {
     "node": "^20",
@@ -22,8 +22,6 @@
     "@changesets/cli": "2.27.6",
     "@gemeente-denhaag/process-steps": "0.1.0-alpha.223",
     "@gemeente-denhaag/step-marker": "0.0.1-alpha.95",
-    "@lerna-lite/cli": "3.5.1",
-    "@lerna-lite/run": "3.5.1",
     "@nl-design-system/component-index": "1.0.0-alpha.12",
     "@types/node": "20.14.2",
     "@typescript-eslint/eslint-plugin": "7.13.0",
@@ -49,13 +47,9 @@
     "stylelint": "16.6.1",
     "stylelint-config-standard-scss": "13.1.0"
   },
-  "overrides": {
-    "react": "18.2.0"
-  },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "build": "pnpm run clean && lerna run build",
-    "clean": "rimraf dist/ documentation/build/ packages/storybook/dist && lerna run clean",
+    "build": "pnpm run clean && pnpm run --recursive build",
+    "clean": "rimraf dist/ documentation/build/ packages/storybook/dist && pnpm run --recursive clean",
     "deploy": "npm-run-all deploy:**",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces && prettier --check .",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
@@ -66,7 +60,7 @@
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
-    "lint-workspaces": "lerna run --no-bail lint",
+    "lint-workspaces": "pnpm run --if-present --aggregate-output lint",
     "prepare": "husky",
     "prettier": "prettier --write .",
     "publish": "changeset publish",
@@ -76,12 +70,12 @@
     "test-build:css": "find proprietary/*/dist -type d \\( -name node_modules \\) -prune -false -o -name '*.css' -print0 -exec sass --no-source-map {}:/dev/null \\;",
     "test-build:scss": "find proprietary/*/dist -type d \\( -name node_modules \\) -prune -false -o -name '*.scss' -print0 -exec sass --no-source-map {} \\;",
     "test-update": "npm-run-all --sequential clean lint build test",
-    "test-workspaces": "lerna run --no-bail test",
+    "test-workspaces": "pnpm run --recursive --aggregate-output test",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
-    "watch:storybook": "lerna run storybook",
-    "watch:style-dictionary": "lerna run watch:style-dictionary"
+    "watch:storybook": "pnpm --filter @nl-design-system-unstable/storybook run storybook",
+    "watch:style-dictionary": "pnpm run --recursive watch:style-dictionary"
   },
   "dependencies": {
     "http-server": "14.1.1"
