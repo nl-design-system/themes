@@ -42,6 +42,16 @@
         "react/no-unknown-property": "off",
         "react/react-in-jsx-scope": "off"
       }
+    },
+    {
+      "files": ["generate-json.mjs"],
+      "parser": "@babel/eslint-parser",
+      "parserOptions": {
+        "requireConfigFile": false,
+        "babelOptions": {
+          "plugins": ["@babel/plugin-syntax-import-assertions"]
+        }
+      }
     }
   ],
   "rules": {
