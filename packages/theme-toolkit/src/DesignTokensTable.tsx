@@ -1,6 +1,5 @@
 import { ColorExample } from './ColorExample';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 import { DesignToken, DesignTokenValue } from './design-tokens';
 
 export const path2css = (path: DesignToken['path']) => `var(--${path.join('-')})`;

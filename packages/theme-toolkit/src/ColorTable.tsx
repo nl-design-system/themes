@@ -16,7 +16,6 @@ import {
 } from './util';
 import { ColorTokenMatch, parseColor } from './color-util';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 import type { DesignToken, DesignTokenMap } from './design-tokens';
 
 export const ColorRow = ({

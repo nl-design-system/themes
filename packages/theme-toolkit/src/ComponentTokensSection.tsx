@@ -2,7 +2,6 @@ import { ComponentTokensTable } from './ComponentTokensTable';
 import { ExampleTokensCSS } from './ExampleTokensCSS';
 import { ExampleTokensJSON } from './ExampleTokensJSON';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 import { DesignToken, DesignTokenTree } from './design-tokens';
 
 export interface ComponentTokensSectionProps {

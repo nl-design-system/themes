@@ -7,7 +7,6 @@ import { parseColor } from './color-util';
 import { lab } from 'd3-color';
 import { CopyCode } from './CopyCode';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 
 export interface ColorCardProps {
   color: string;

@@ -9,7 +9,6 @@ import { ColorCard } from './ColorCard';
 import { flattenColorTokens } from './util';
 import { ColorTokenMatch, filterColorTokens, parseColor } from './color-util';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 import { DesignTokenMap } from './design-tokens';
 import { Code } from '@utrecht/component-library-react/dist/css-module';
 
