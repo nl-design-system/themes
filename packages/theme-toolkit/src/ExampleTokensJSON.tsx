@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { CopyButton } from './CopyButton';
 import { DesignTokenTree, createEmptyDesignTokenTree } from './design-tokens.js';
 // eslint-disable-next-line no-unused-vars
@@ -44,8 +43,4 @@ export const ExampleTokensJSON = ({ definition }: DesignTokenTree) => {
       <pre>{code}</pre>
     </section>
   );
-};
-
-ExampleTokensJSON.propTypes = {
-  definition: PropTypes.object.isRequired,
 };

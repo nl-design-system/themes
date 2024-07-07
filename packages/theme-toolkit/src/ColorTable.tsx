@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import PropTypes from 'prop-types';
 import { ColorPalette, ColorItem } from '@storybook/blocks';
 import { CopyCode } from './CopyCode';
 import {
@@ -45,12 +44,6 @@ export const ColorRow = ({
   />
 );
 
-ColorRow.propTypes = {
-  name: PropTypes.string.isRequired,
-  token: PropTypes.object.isRequired,
-  colorMatch: PropTypes.object,
-};
-
 export interface ColorGroupRowProps {
   name: string;
   tokens: DesignToken[];
@@ -59,11 +52,6 @@ export interface ColorGroupRowProps {
 export const ColorGroupRow = ({ name, tokens }: ColorGroupRowProps) => (
   <ColorItem key={name} title={name} subtitle="" colors={tokens.map(({ value }) => String(value))} />
 );
-
-ColorGroupRow.propTypes = {
-  name: PropTypes.string.isRequired,
-  tokens: PropTypes.array.isRequired,
-};
 
 export interface ColorTableProps {
   tokens: DesignTokenMap;
@@ -87,10 +75,6 @@ export const ColorTable = ({ tokens }: ColorTableProps) => {
       })}
     </ColorPalette>
   );
-};
-
-ColorTable.propTypes = {
-  tokens: PropTypes.object.isRequired,
 };
 
 export interface ColorResultsProps {
@@ -129,8 +113,4 @@ export const ColorCard = ({ color }: ColorCardProps) => {
   ) : (
     <></>
   );
-};
-
-ColorCard.propTypes = {
-  color: PropTypes.string.isRequired,
 };

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { DesignTokensTable } from './DesignTokensTable';
 import { DesignToken, isHiddenDesignToken } from './design-tokens.js';
 // eslint-disable-next-line no-unused-vars
@@ -25,16 +24,4 @@ export const ComponentTokensTable = ({ component, tokens }: ComponentTokensTable
   }
 
   return <DesignTokensTable tokens={subset}></DesignTokensTable>;
-};
-
-ComponentTokensTable.propTypes = {
-  component: PropTypes.string.isRequired,
-  tokens: PropTypes.arrayOf(
-    PropTypes.shape({
-      comment: PropTypes.string,
-      name: PropTypes.string,
-      path: PropTypes.arrayOf(PropTypes.string),
-      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    }),
-  ),
 };

@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { ColorResults } from './ColorTable';
 import { ColorCard } from './ColorCard';
@@ -47,8 +46,4 @@ export const ColorSearch = ({ tokens }: ColorSearchProps) => {
       {query ? results.length > 0 ? <ColorResults matches={results}></ColorResults> : <p>No results.</p> : ''}
     </div>
   );
-};
-
-ColorSearch.propTypes = {
-  tokens: PropTypes.object.isRequired,
 };

@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import PropTypes from 'prop-types';
 import { parseColor } from './color-util';
 import { lab } from 'd3-color';
 import { CopyCode } from './CopyCode';
@@ -48,8 +47,4 @@ export const ColorCard = ({ color }: ColorCardProps) => {
       </ul>
     </div>
   );
-};
-
-ColorCard.propTypes = {
-  color: PropTypes.string.isRequired,
 };

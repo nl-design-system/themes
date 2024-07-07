@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { DENHAAG_COMPONENT_STORIES } from './component-stories-denhaag';
 import { UTRECHT_COMPONENT_STORIES } from './component-stories-utrecht';
 import { CustomStory } from './CustomStory';
@@ -26,11 +25,6 @@ export const Heading = ({ level, children }: PropsWithChildren<HeadingProps>) =>
   ) : (
     <p>{children}</p>
   );
-
-Heading.propTypes = {
-  level: PropTypes.number,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-};
 
 interface ComponentStoriesProps {
   config: {
@@ -112,9 +106,4 @@ export const ComponentStories = ({ config, showAll = false }: ComponentStoriesPr
   }
 
   return null;
-};
-
-ComponentStories.propTypes = {
-  config: PropTypes.any,
-  showAll: PropTypes.bool,
 };
