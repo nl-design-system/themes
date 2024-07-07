@@ -1,7 +1,6 @@
 import { DesignTokensTable } from './DesignTokensTable';
 import { DesignToken, isHiddenDesignToken } from './design-tokens.js';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 
 export interface ComponentTokensTableProps {
   component: string;

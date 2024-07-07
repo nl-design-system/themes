@@ -8,7 +8,6 @@ import {
   isHiddenDesignToken,
 } from './design-tokens.js';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
 
 type DesignTokenTraverseCallback = (_parents: any, _current: any) => void;
 
