@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import PropTypes from 'prop-types';
 // eslint-disable-next-line no-unused-vars
 import React, { type ReactNode } from 'react';
 
@@ -23,9 +22,4 @@ export const CopyButton = ({ value, textContent = 'Copy' }: CopyButtonProps) => 
       {textContent}
     </button>
   );
-};
-
-CopyButton.propTypes = {
-  value: PropTypes.string.isRequired,
-  textContent: PropTypes.string,
 };

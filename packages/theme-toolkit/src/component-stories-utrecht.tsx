@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 // eslint-disable-next-line no-unused-vars
 import React, { PropsWithChildren } from 'react';
 
@@ -55,21 +54,9 @@ import {
 
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
 
-Blockquote.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-};
-
 const BadgeCounter = ({ children }: PropsWithChildren) => <div className="utrecht-badge-counter">{children}</div>;
 
-BadgeCounter.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-};
-
 const BadgeData = ({ children }: PropsWithChildren) => <div className="utrecht-badge-data">{children}</div>;
-
-BadgeData.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-};
 
 export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   {

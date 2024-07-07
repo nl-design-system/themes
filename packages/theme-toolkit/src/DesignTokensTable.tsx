@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { ColorExample } from './ColorExample';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
@@ -50,39 +49,3 @@ export const DesignTokensTable = ({ tokens }: DesignTokensTableProps) => (
     </tbody>
   </table>
 );
-
-const FigmaTokensCompositeFont = PropTypes.shape({
-  fontFamily: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  fontWeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  lineHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  fontSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  letterSpacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  paragraphSpacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  textCase: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  textDecoration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-});
-
-const FigmaTokensCompositeDropShadow = PropTypes.shape({
-  x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  blur: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  spread: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  color: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  type: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-});
-
-DesignTokensTable.propTypes = {
-  tokens: PropTypes.arrayOf(
-    PropTypes.shape({
-      comment: PropTypes.string,
-      name: PropTypes.string,
-      path: PropTypes.arrayOf(PropTypes.string),
-      value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-        FigmaTokensCompositeFont,
-        FigmaTokensCompositeDropShadow,
-      ]),
-    }),
-  ),
-};

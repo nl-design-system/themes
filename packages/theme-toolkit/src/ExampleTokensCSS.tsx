@@ -1,5 +1,4 @@
 import isPlainObject from 'lodash.isplainobject';
-import PropTypes from 'prop-types';
 import { CopyButton } from './CopyButton';
 import {
   DesignToken,
@@ -80,8 +79,4 @@ export const ExampleTokensCSS = ({ definition }: ExampleTokensCSSProps) => {
       <pre>{code}</pre>
     </section>
   );
-};
-
-ExampleTokensCSS.propTypes = {
-  definition: PropTypes.object.isRequired,
 };

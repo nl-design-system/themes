@@ -3,7 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import PropTypes from 'prop-types';
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
@@ -22,8 +21,4 @@ export const CopyCode = ({ code }: CopyCodeProps) => {
       {code}
     </code>
   );
-};
-
-CopyCode.propTypes = {
-  code: PropTypes.string.isRequired,
 };
