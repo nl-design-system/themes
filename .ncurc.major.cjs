@@ -10,6 +10,7 @@ module.exports = {
     'prettier',
     'eslint',
     'eslint-plugin-json',
+    'style-dictionary',
   ],
   target: 'latest',
 };
