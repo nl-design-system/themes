@@ -1,5 +1,0 @@
-import{C as a}from"./ComponentStories-Ldhm0kPy.js";import{c as s}from"./config-4bxh1xPN.js";import"./jsx-runtime-BlAj40OV.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-BWScFQI6.js";import"./extends-CF3RwP-h.js";const h={title:"Vught",component:a,parameters:{controls:{include:"showAll"},chromatic:{disableSnapshot:!1}},args:{config:s,showAll:!1}},e={parameters:{theme:`${s.prefix}-theme`}};var o,r,t;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  parameters: {
-    theme: \`\${config.prefix}-theme\`
-  }
-}`,...(t=(r=e.parameters)==null?void 0:r.docs)==null?void 0:t.source}}};const d=["Components"];export{e as Components,d as __namedExportsOrder,h as default};
