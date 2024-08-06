@@ -18,6 +18,7 @@ export interface KnownExtensions {
     inherits: boolean;
   };
   'nl.nldesignsystem.deprecated'?: boolean;
+  'nl.nldesignsystem.fallback'?: string[];
   'nl.nldesignsystem.figma-supported'?: boolean;
   'nl.nldesignsystem.hidden'?: boolean;
   'nl.nldesignsystem.redirect'?: string;
