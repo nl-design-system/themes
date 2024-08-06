@@ -10,7 +10,11 @@ const init = async () => {
 
   const tokensSchema = designTokenMapToList(JSON.parse(buttonTokensJson));
 
-  const tokens: DesignToken[] = JSON.parse(json);
+  let tokens: DesignToken[] = JSON.parse(json);
+
+  tokens = tokens.filter(
+    ({ path }) => !path.includes('danger') && !path.includes('warning') && !path.includes('ready'),
+  );
 
   const isEqualArray = <T>(a: T[], b: T[]) => a.length === b.length && a.every((value, index) => b[index] === value);
 
@@ -32,6 +36,10 @@ const init = async () => {
       tokenDefinition['$extensions'] &&
       Array.isArray(tokenDefinition['$extensions']['nl.nldesignsystem.fallback'])
     ) {
+      console.log(
+        `fallback for ${searchPath.join('.')} = `,
+        tokenDefinition['$extensions']['nl.nldesignsystem.fallback'],
+      );
       return tokenDefinition['$extensions']['nl.nldesignsystem.fallback'].reduce(
         (match: DesignToken | undefined, tokenRef) => {
           return match || findToken(tokens, tokenRef.split('.'));
@@ -52,13 +60,24 @@ const init = async () => {
   const colorResults = result.filter(filterColors('color'));
 
   const colorPairs = colorResults.map((token: DesignToken) => {
+    const backgroundToken = findTokenOrFallback(tokens, [
+      ...token.path.slice(0, token.path.length - 1),
+      'background-color',
+    ]);
+
+    // TODO: For `utrecht.button.foo.bar.quux.color` check:
+    // - `utrecht.button.foo.bar.quux.font-size`
+    // - `utrecht.button.foo.bar.font-size`
+    // - `utrecht.button.foo.font-size`
+    // - `utrecht.button.font-size`
+    const fontSizeToken = findTokenOrFallback(tokens, [...token.path.slice(0, 2), 'font-size']);
+
     return {
       foreground: token.path.join('.'),
-      background: findTokenOrFallback(tokens, [
-        ...token.path.slice(0, token.path.length - 1),
-        'background-color',
-      ])?.path.join('.'),
-      'font-size': 'todo',
+      foregroundColor: token.value,
+      background: backgroundToken?.path.join('.'),
+      backgroundColor: backgroundToken?.value,
+      'font-size': fontSizeToken?.value,
       type: 'functional', // todo: recognize non-functional
     };
   });
