@@ -1,5 +1,12 @@
 # @nl-design-system-unstable/storybook
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies [a34a768]
+  - @nl-design-system-unstable/voorbeeld-design-tokens@1.0.0
+
 ## 1.0.0
 
 ### Patch Changes
