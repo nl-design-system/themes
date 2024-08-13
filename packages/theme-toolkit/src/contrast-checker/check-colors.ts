@@ -1,67 +1,70 @@
-import { readFile } from 'node:fs/promises';
-import { DesignToken, DesignTokenMap, isDesignTokenDefinition } from '../design-tokens.js';
+import { isDesignTokenDefinition, StyleDictionaryDesignToken, StyleDictionaryTree } from '../design-tokens';
 import isPlainObject from 'lodash.isplainobject';
 import Color from 'color';
+import { createPath } from '../util';
+import type { ColorPair } from './ColorPair';
 
-const init = async () => {
-  // TODO dit is voor nu alleen nog maar utrecht
-  // TODO: consider switching to @utrecht/button-css/src/tokens.json and then convert the tree (DesignTokenMap) to an array (DesignToken[])
-  const json = await readFile('./node_modules/@utrecht/design-tokens/dist/index.json', 'utf-8');
-  const buttonTokensJson = await readFile('./node_modules/@utrecht/button-css/src/tokens.json', 'utf-8');
+export const isEqualArray = <T>(a: T[], b: T[]) =>
+  a.length === b.length && a.every((value, index) => b[index] === value);
 
-  const tokensSchema = designTokenMapToList(JSON.parse(buttonTokensJson));
+export const findToken = (tokens: StyleDictionaryDesignToken[], searchPath: string[]) => {
+  return tokens.find((token) => isEqualArray(token.path, searchPath));
+};
 
-  let tokens: DesignToken[] = JSON.parse(json);
+export const findTokenOrFallback = (
+  tokensSchema: StyleDictionaryDesignToken[],
+  tokens: StyleDictionaryDesignToken[],
+  searchPath: string[],
+): StyleDictionaryDesignToken | undefined => {
+  // find token with same path return its value OR its fallback if no value is present
+  const token = findToken(tokens, searchPath);
 
-  tokens = tokens.filter(
-    ({ path }) => !path.includes('danger') && !path.includes('warning') && !path.includes('ready'),
-  );
+  if (token) return token;
 
-  const isEqualArray = <T>(a: T[], b: T[]) => a.length === b.length && a.every((value, index) => b[index] === value);
+  const tokenDefinition = findToken(tokensSchema, searchPath);
+  // console.log(tokenDefinition)
+  //temp
+  if (
+    tokenDefinition &&
+    tokenDefinition['$extensions'] &&
+    Array.isArray(tokenDefinition['$extensions']['nl.nldesignsystem.fallback'])
+  ) {
+    console.log(
+      `fallback for ${searchPath.join('.')} = `,
+      tokenDefinition['$extensions']['nl.nldesignsystem.fallback'],
+    );
+    return tokenDefinition['$extensions']['nl.nldesignsystem.fallback'].reduce(
+      (match: StyleDictionaryDesignToken | undefined, tokenRef) => {
+        return match || findToken(tokens, tokenRef.split('.'));
+      },
+      undefined,
+    );
+  }
+  return tokenDefinition;
+};
 
-  const findToken = (tokens: DesignToken[], searchPath: string[]) => {
-    return tokens.find((token) => isEqualArray(token.path, searchPath));
-  };
+export const filterTokenStartsWith = (prefix: string) => {
+  const pathPrefix = createPath(prefix);
 
-  const findTokenOrFallback = (tokens: DesignToken[], searchPath: string[]): DesignToken | undefined => {
-    // find token with same path return its value OR its fallback if no value is present
-    const token = findToken(tokens, searchPath);
+  return ({ path }: StyleDictionaryDesignToken) => pathPrefix.every((name, index) => path[index] === name);
+};
 
-    if (token) return token;
+export const filterTokenEndsWith = (suffix: string) => {
+  const pathSuffix = createPath(suffix);
 
-    const tokenDefinition = findToken(tokensSchema, searchPath);
-    // console.log(tokenDefinition)
-    //temp
-    if (
-      tokenDefinition &&
-      tokenDefinition['$extensions'] &&
-      Array.isArray(tokenDefinition['$extensions']['nl.nldesignsystem.fallback'])
-    ) {
-      console.log(
-        `fallback for ${searchPath.join('.')} = `,
-        tokenDefinition['$extensions']['nl.nldesignsystem.fallback'],
-      );
-      return tokenDefinition['$extensions']['nl.nldesignsystem.fallback'].reduce(
-        (match: DesignToken | undefined, tokenRef) => {
-          return match || findToken(tokens, tokenRef.split('.'));
-        },
-        undefined,
-      );
-    }
-    return tokenDefinition;
-  };
-  // console.log(findTokenOrFallback(tokensSchema, 'utrecht.button.color'.split('.')));
+  return ({ path }: StyleDictionaryDesignToken) =>
+    pathSuffix.every((name, index, array) => path[path.length - (array.length - index)] === name);
+};
 
-  const filterTokenStartsWith = (prefix: string) => {
-    const pathPrefix = prefix.split('.');
-    return ({ path }: DesignToken) => pathPrefix.every((name, index) => path[index] === name);
-  };
+export const getColorPairs = (
+  tokensSchema: StyleDictionaryDesignToken[],
+  tokens: StyleDictionaryDesignToken[],
+): ColorPair[] => {
+  const colorResults = tokens.filter(filterTokenEndsWith('color'));
 
-  const result = tokens.filter(filterTokenStartsWith('utrecht.button'));
-  const colorResults = result.filter(filterColors('color'));
-
-  let colorPairs = colorResults.map((token: DesignToken) => {
-    const backgroundToken = findTokenOrFallback(tokens, [
+  let colorPairs = colorResults.map((token: StyleDictionaryDesignToken) => {
+    // Find a token with the partially the name name, but ending with `background-color` instead of `color`
+    const backgroundToken = findTokenOrFallback(tokensSchema, tokens, [
       ...token.path.slice(0, token.path.length - 1),
       'background-color',
     ]);
@@ -71,35 +74,59 @@ const init = async () => {
     // - `utrecht.button.foo.bar.font-size`
     // - `utrecht.button.foo.font-size`
     // - `utrecht.button.font-size`
-    const fontSizeToken = findTokenOrFallback(tokens, [...token.path.slice(0, 2), 'font-size']);
+
+    // Find a token with the partially the name name, but ending with `font-size` instead of `color`
+    const fontSizeToken = findTokenOrFallback(tokensSchema, tokens, [...token.path.slice(0, 2), 'font-size']);
 
     return {
       foreground: token.path.join('.'),
-      foregroundColor: token.value,
-      background: backgroundToken?.path.join('.'),
-      backgroundColor: backgroundToken?.value,
+      foregroundColor: token.value || '',
+      background: backgroundToken?.path.join('.') || '',
+      backgroundColor: backgroundToken?.value || '',
       'font-size': fontSizeToken?.value,
       type: 'functional', // todo: recognize non-functional
     };
   });
 
-  colorPairs = colorPairs.map((pair) => ({
-    contrast: Color(pair.foregroundColor).contrast(Color(pair.backgroundColor)),
-    ...pair,
-  }));
-
-  console.log(JSON.stringify(colorPairs, null, 2));
+  return colorPairs;
 };
 
-const filterColors = (filter: string) => {
-  return (token: DesignToken) => token.path[token.path.length - 1] === filter;
+export const getColorContrast = (pair: ColorPair): ColorPair & { contrast: number } => ({
+  contrast: Color(pair.foregroundColor).contrast(Color(pair.backgroundColor)),
+  ...pair,
+});
+
+export const calculateContrastRequirement = (
+  _foregroundColor: Color,
+  _backgroundColor: Color,
+  fontSize: number,
+  wcagLevel: 'AA' | 'AAA',
+  nonText: boolean,
+): number => {
+  if (nonText) return 3.1;
+
+  if (wcagLevel === 'AA') {
+    if (fontSize < 24) {
+      return 4.5;
+    } else {
+      return 3.1;
+    }
+  } else if (wcagLevel === 'AAA') {
+    if (fontSize < 24) {
+      return 7.1;
+    } else {
+      return 4.5;
+    }
+  } else {
+    return 0.0;
+  }
 };
 
 export const designTokenMapToList = (
-  map: DesignTokenMap,
-  list: DesignToken[] = [],
+  map: StyleDictionaryTree,
+  list: StyleDictionaryDesignToken[] = [],
   basePath: string[] = [],
-): DesignToken[] => {
+): StyleDictionaryDesignToken[] => {
   if (isPlainObject(map)) {
     Object.entries(map).forEach(([name, item]) => {
       const path = [...basePath, name];
@@ -115,5 +142,3 @@ export const designTokenMapToList = (
   }
   return list;
 };
-
-init();
