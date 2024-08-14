@@ -13,6 +13,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
   source,
   platforms: {
     js: {
+      transformGroups: 'tokens-studio',
       transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
@@ -23,6 +24,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     json: {
+      transformGroups: 'tokens-studio',
       transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
@@ -37,6 +39,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     css: {
+      transformGroups: 'tokens-studio',
       transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
@@ -51,6 +54,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     scss: {
+      transformGroups: 'tokens-studio',
       transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
@@ -64,6 +68,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     less: {
+      transformGroups: 'tokens-studio',
       transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
