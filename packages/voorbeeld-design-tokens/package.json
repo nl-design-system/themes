@@ -21,15 +21,15 @@
     "clean": "rimraf -rf dist/ src/generated/",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
-    "build": "npm-run-all clean build:figma-tokens build:style-dictionary build:scss",
-    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/generated/figma.tokens.json",
+    "build": "npm-run-all clean build:style-dictionary build:scss",
     "build:scss": "sass --no-source-map src/:dist/",
-    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
+    "build:style-dictionary": "node ./style-dictionary.mjs"
   },
   "devDependencies": {
     "@fontsource/open-sans": "4.5.14",
     "@nl-design-system-unstable/theme-toolkit": "workspace:*",
     "@storybook/react": "8.2.7",
+    "@tokens-studio/sd-transforms": "1.2.3",
     "@types/react": "18.3.3",
     "@utrecht/component-library-react": "5.0.0",
     "@utrecht/components": "6.2.0",
@@ -38,7 +38,6 @@
     "npm-run-all": "4.1.5",
     "react": "18.3.1",
     "rimraf": "6.0.1",
-    "style-dictionary": "4.0.1",
-    "token-transformer": "0.0.33"
+    "style-dictionary": "4.0.1"
   }
 }
