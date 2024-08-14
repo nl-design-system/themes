@@ -3,15 +3,17 @@ const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 const sortByName = (a, b) => stringSort(a.name, b.name);
 
 const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
-  format: {
-    'json/list': function ({ dictionary }) {
-      return JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ');
+  hooks: {
+    formats: {
+      'json/list': function ({ dictionary }) {
+        return JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ');
+      },
     },
   },
   source,
   platforms: {
     js: {
-      transforms: ['attribute/cti', 'name/cti/camel', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
         {
@@ -21,7 +23,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     json: {
-      transforms: ['attribute/cti', 'name/cti/camel', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
         {
@@ -35,7 +37,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     css: {
-      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
         {
@@ -49,7 +51,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     scss: {
-      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
         {
@@ -62,7 +64,7 @@ const createConfig = ({ selector, source = ['src/**/*.tokens.json'] }) => ({
       ],
     },
     less: {
-      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath: 'dist/',
       files: [
         {
