@@ -911,12 +911,6 @@
   },
   "common": {
     "utrecht": {
-      "root": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.gray.50}"
-        }
-      },
       "document": {
         "background-color": {
           "$type": "color",
@@ -953,26 +947,10 @@
           "$value": "{voorbeeld.typography.font-weight.bold}"
         }
       },
-      "container": {
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.sm}"
-        }
-      },
-      "line": {
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.sm}"
-        }
-      },
       "focus": {
         "background-color": {
           "$type": "color",
           "$value": "{voorbeeld.color.yellow.200}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.black}"
         },
         "outline-color": {
           "$type": "color",
@@ -1014,13 +992,15 @@
           "$type": "color",
           "$value": "{voorbeeld.color.gray.950}"
         },
-        "active": {
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.border-width.md}"
-          }
-        },
         "disabled": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.50}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.500}"
+          },
           "color": {
             "$type": "color",
             "$value": "{voorbeeld.color.gray.500}"
@@ -1035,29 +1015,27 @@
             "$type": "color",
             "$value": "{voorbeeld.color.black}"
           },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.border-width.md}"
-          },
           "color": {
             "$type": "color",
             "$value": "{voorbeeld.color.black}"
           }
         },
-        "hover": {
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.border-width.md}"
-          }
-        },
         "invalid": {
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.border-width.md}"
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.white}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.feedback.negative.border-color}"
           },
           "color": {
             "$type": "color",
             "$value": "{voorbeeld.feedback.negative.color}"
+          },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.md}"
           }
         },
         "read-only": {
@@ -1105,6 +1083,100 @@
       }
     },
     "voorbeeld": {
+      "root": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.gray.50}"
+        }
+      },
+      "container": {
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.gray.200}"
+        }
+      },
+      "line": {
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.gray.200}"
+        }
+      },
+      "focus": {
+        "color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.black}"
+        }
+      },
+      "form-control": {
+        "active": {
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.md}"
+          },
+          "accent-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.active.color}"
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.100}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.500}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.950}"
+          }
+        },
+        "focus": {
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.md}"
+          }
+        },
+        "hover": {
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.md}"
+          },
+          "accent-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.hover.color}"
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.50}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.500}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.950}"
+          }
+        },
+        "accent-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.interaction.color}"
+        },
+        "disabled": {
+          "accent-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.500}"
+          }
+        }
+      },
       "document": {
         "inverse": {
           "background-color": {
@@ -1135,18 +1207,6 @@
           "$value": "{voorbeeld.color.gray.900}"
         }
       },
-      "container": {
-        "border-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.gray.200}"
-        }
-      },
-      "line": {
-        "border-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.gray.200}"
-        }
-      },
       "interaction": {
         "color": {
           "$type": "color",
@@ -1162,72 +1222,6 @@
           "color": {
             "$type": "color",
             "$value": "{voorbeeld.color.violet.800}"
-          }
-        }
-      },
-      "form-control": {
-        "accent-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.interaction.color}"
-        },
-        "active": {
-          "accent-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.interaction.active.color}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.100}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.500}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.950}"
-          }
-        },
-        "disabled": {
-          "accent-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.500}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.50}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.500}"
-          }
-        },
-        "hover": {
-          "accent-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.interaction.hover.color}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.50}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.500}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.950}"
-          }
-        },
-        "invalid": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.white}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.feedback.negative.border-color}"
           }
         }
       },
