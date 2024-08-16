@@ -3307,6 +3307,44 @@
       }
     }
   },
+  "components/link-list": {
+    "utrecht": {
+      "link-list": {
+        "margin-block-start": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "row-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.row.snail}"
+        },
+        "margin-block-end": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "item": {
+          "column-gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.beetle}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
+          },
+          "inset-block-start": {
+            "$type": "spacing",
+            "$value": "0px"
+          }
+        }
+      }
+    }
+  },
   "components/modal-dialog": {
     "todo": {
       "modal-dialog": {
@@ -5482,6 +5520,7 @@
       "components/heading",
       "components/icon-only-button",
       "components/link",
+      "components/link-list",
       "components/modal-dialog",
       "components/ordered-list",
       "components/pagination",
