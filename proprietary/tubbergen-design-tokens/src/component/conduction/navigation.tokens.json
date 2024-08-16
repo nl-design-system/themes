@@ -2,19 +2,19 @@
   "conduction": {
     "primary": {
       "top-nav": {
-        "color": { "value": "{tubbergen.color.black.20}" },
-        "background-color": { "value": "{tubbergen.color.white.100}" },
+        "color": { "$value": "{tubbergen.color.black.20}" },
+        "background-color": { "$value": "{tubbergen.color.white.100}" },
         "hover": {
-          "color": { "value": "{tubbergen.color.primary}" },
-          "background-color": { "value": "{tubbergen.color.white.100}" },
+          "color": { "$value": "{tubbergen.color.primary}" },
+          "background-color": { "$value": "{tubbergen.color.white.100}" },
           "box-shadow": {}
         },
         "current": {
-          "color": { "value": "{tubbergen.color.primary}" },
-          "background-color": { "value": "unset" },
-          "box-shadow": { "value": "inset 0 -4px {tubbergen.color.primary}" },
+          "color": { "$value": "{tubbergen.color.primary}" },
+          "background-color": { "$value": "unset" },
+          "box-shadow": { "$value": "inset 0 -4px {tubbergen.color.primary}" },
           "mobile": {
-            "box-shadow": { "value": "inset 4px 0 {tubbergen.color.primary}" }
+            "box-shadow": { "$value": "inset 4px 0 {tubbergen.color.primary}" }
           }
         },
         "dropdown": {
@@ -30,37 +30,37 @@
           }
         },
         "item": {
-          "padding": { "value": "18px" },
+          "padding": { "$value": "18px" },
           "border-radius": {}
         },
-        "padding-inline-end": { "value": "16px" },
-        "padding-inline-start": { "value": "16px" },
-        "padding-block-end": { "value": "16px" },
-        "padding-block-start": { "value": "16px" }
+        "padding-inline-end": { "$value": "16px" },
+        "padding-inline-start": { "$value": "16px" },
+        "padding-block-end": { "$value": "16px" },
+        "padding-block-start": { "$value": "16px" }
       }
     },
     "secondary": {
       "top-nav": {
-        "color": { "value": "{tubbergen.color.black.20}" },
-        "background-color": { "value": "transparent" },
+        "color": { "$value": "{tubbergen.color.black.20}" },
+        "background-color": { "$value": "transparent" },
         "hover": {
-          "color": { "value": "{tubbergen.color.primary}" },
-          "background-color": { "value": "{tubbergen.color.white.100}" }
+          "color": { "$value": "{tubbergen.color.primary}" },
+          "background-color": { "$value": "{tubbergen.color.white.100}" }
         },
         "current": {
-          "color": { "value": "{tubbergen.color.primary}" },
-          "background-color": { "value": "unset" },
-          "box-shadow": { "value": "inset 0 -4px {tubbergen.color.primary}" }
+          "color": { "$value": "{tubbergen.color.primary}" },
+          "background-color": { "$value": "unset" },
+          "box-shadow": { "$value": "inset 0 -4px {tubbergen.color.primary}" }
         },
-        "font-size": { "value": "{tubbergen.font-size.md}" },
-        "font-weight": { "value": "400" },
+        "font-size": { "$value": "{tubbergen.font-size.md}" },
+        "font-weight": { "$value": "400" },
         "item": {
-          "padding": { "value": "18px" }
+          "padding": { "$value": "18px" }
         },
-        "padding-inline-end": { "value": "16px" },
-        "padding-inline-start": { "value": "16px" },
-        "padding-block-end": { "value": "16px" },
-        "padding-block-start": { "value": "16px" }
+        "padding-inline-end": { "$value": "16px" },
+        "padding-inline-start": { "$value": "16px" },
+        "padding-block-end": { "$value": "16px" },
+        "padding-block-start": { "$value": "16px" }
       }
     }
   }

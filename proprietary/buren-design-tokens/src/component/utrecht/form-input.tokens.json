@@ -2,29 +2,29 @@
   "utrecht": {
     "form-input": {
       "background-color": {},
-      "border-color": { "value": "{buren.color.grijs.80}" },
-      "border-radius": { "value": "4px" },
-      "border-width": { "value": "1px" },
-      "color": { "value": "{buren.color.grijs.20}" },
-      "font-family": { "value": "{buren.typography.sans-serif.font-family}" },
-      "font-size": { "value": "{buren.typography.scale.md.font-size}" },
+      "border-color": { "$value": "{buren.color.grijs.80}" },
+      "border-radius": { "$value": "4px" },
+      "border-width": { "$value": "1px" },
+      "color": { "$value": "{buren.color.grijs.20}" },
+      "font-family": { "$value": "{buren.typography.sans-serif.font-family}" },
+      "font-size": { "$value": "{buren.typography.scale.md.font-size}" },
       "font-style": {},
       "max-inline-size": {},
       "padding-block-end": {
-        "value": "11px",
+        "$value": "11px",
         "comment": "To temporary compensate for height of inputs in formulieren.buren.nl set by line-height of text"
       },
       "padding-block-start": {
-        "value": "11px",
+        "$value": "11px",
         "comment": "To temporary compensate for height of inputs in formulieren.buren.nl set by line-height of text"
       },
-      "padding-inline-end": { "value": "12px" },
-      "padding-inline-start": { "value": "12px" },
+      "padding-inline-end": { "$value": "12px" },
+      "padding-inline-start": { "$value": "12px" },
       "placeholder": {
-        "color": { "value": "{buren.color.grijs.50}" }
+        "color": { "$value": "{buren.color.grijs.50}" }
       },
       "disabled": {
-        "background-color": { "value": "{buren.color.grijs.90}" },
+        "background-color": { "$value": "{buren.color.grijs.90}" },
         "border-color": {},
         "color": {}
       },
@@ -35,11 +35,11 @@
       },
       "invalid": {
         "background-color": {},
-        "border-color": { "value": "{buren.color.feedback-danger.50}" },
+        "border-color": { "$value": "{buren.color.feedback-danger.50}" },
         "border-width": {}
       },
       "read-only": {
-        "background-color": { "value": "{buren.color.grijs.90}" },
+        "background-color": { "$value": "{buren.color.grijs.90}" },
         "border-color": {},
         "color": {}
       }

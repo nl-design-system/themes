@@ -1,11 +1,11 @@
 {
   "utrecht": {
     "link": {
-      "color": { "value": "{leiden.color.primary}" },
-      "text-decoration": { "value": "none" },
-      "text-decoration-color": { "value": "unset" },
-      "text-decoration-thickness": { "value": 0 },
-      "text-underline-offset": { "value": "{leiden.size.3xs}" },
+      "color": { "$value": "{leiden.color.primary}" },
+      "text-decoration": { "$value": "none" },
+      "text-decoration-color": { "$value": "unset" },
+      "text-decoration-thickness": { "$value": 0 },
+      "text-underline-offset": { "$value": "{leiden.size.3xs}" },
       "active": {
         "color": {}
       },
@@ -15,18 +15,18 @@
         "text-decoration-thickness": {}
       },
       "hover": {
-        "color": { "value": "{leiden.color.primary-hover}" },
-        "text-decoration": { "value": "underline" },
-        "text-decoration-thickness": { "value": "{leiden.size.4xs}" }
+        "color": { "$value": "{leiden.color.primary-hover}" },
+        "text-decoration": { "$value": "underline" },
+        "text-decoration-thickness": { "$value": "{leiden.size.4xs}" }
       },
       "placeholder": {
         "color": {}
       },
       "visited": {
-        "color": { "value": "{leiden.color.primary}" }
+        "color": { "$value": "{leiden.color.primary}" }
       },
       "icon": {
-        "size": { "value": "{leiden.size.md}" }
+        "size": { "$value": "{leiden.size.md}" }
       }
     }
   }

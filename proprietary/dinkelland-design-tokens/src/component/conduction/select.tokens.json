@@ -1,27 +1,27 @@
 {
   "conduction": {
     "input-select": {
-      "background-color": { "value": "{dinkelland.color.white.100}" },
-      "border": { "value": "{dinkelland.size.4xs} solid {dinkelland.color.grey.46}" },
-      "border-focus": { "value": "unset" },
-      "border-radius": { "value": "{utrecht.form-input.border-radius}" },
-      "invalid-border-color": { "value": "{dinkelland.color.error}" },
-      "padding-block-end": { "value": 0 },
-      "padding-block-start": { "value": 0 },
+      "background-color": { "$value": "{dinkelland.color.white.100}" },
+      "border": { "$value": "{dinkelland.size.4xs} solid {dinkelland.color.grey.46}" },
+      "border-focus": { "$value": "unset" },
+      "border-radius": { "$value": "{utrecht.form-input.border-radius}" },
+      "invalid-border-color": { "$value": "{dinkelland.color.error}" },
+      "padding-block-end": { "$value": 0 },
+      "padding-block-start": { "$value": 0 },
       "hover": {},
       "focus": {},
       "list-option": {
-        "font-family": { "value": "{dinkelland.typography.lato.font-family}" },
+        "font-family": { "$value": "{dinkelland.typography.lato.font-family}" },
         "background-color": {},
         "color": {},
         "hover": {
-          "font-family": { "value": "{dinkelland.typography.lato.font-family}" },
+          "font-family": { "$value": "{dinkelland.typography.lato.font-family}" },
           "background-color": {},
           "color": {}
         },
         "selected": {
-          "background-color": { "value": "var(--rotterdam-color-green-tint-01)" },
-          "color": { "value": "var(--rotterdam-color-base-white)" }
+          "background-color": { "$value": "var(--rotterdam-color-green-tint-01)" },
+          "color": { "$value": "var(--rotterdam-color-base-white)" }
         },
         "focus": {
           "background-color": {},
@@ -30,9 +30,9 @@
       },
       "placeholder": {
         "color": {
-          "value": "{utrecht.form-input.placeholder.color}"
+          "$value": "{utrecht.form-input.placeholder.color}"
         },
-        "font-family": { "value": "{dinkelland.typography.lato.font-family}" }
+        "font-family": { "$value": "{dinkelland.typography.lato.font-family}" }
       }
     }
   }
