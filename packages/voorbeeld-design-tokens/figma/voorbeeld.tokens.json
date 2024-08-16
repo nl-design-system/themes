@@ -1783,6 +1783,64 @@
       }
     }
   },
+  "components/badge-counter": {
+    "utrecht": {
+      "badge-counter": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{voorbeeld.typography.font-size.sm}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{voorbeeld.document.strong.font-weight}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "{voorbeeld.border-radius.round}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.violet.100}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "transparent"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
+        "padding-inline": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.ant}"
+        },
+        "padding-block": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.ant}"
+        }
+      }
+    }
+  },
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
@@ -2665,64 +2723,6 @@
         "row-gap": {
           "$type": "spacing",
           "$value": "{voorbeeld.space.row.rat}"
-        }
-      }
-    }
-  },
-  "components/counter-badge": {
-    "utrecht": {
-      "counter-badge": {
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.sm}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "min-block-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.xs}"
-        },
-        "min-inline-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.xs}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{voorbeeld.document.strong.font-weight}"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.sm}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{voorbeeld.border-radius.round}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.violet.100}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "padding-inline": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.ant}"
-        },
-        "padding-block": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.ant}"
         }
       }
     }
@@ -5502,13 +5502,13 @@
       "components/alert",
       "components/avatar",
       "components/backdrop",
+      "components/badge-counter",
       "components/blockquote",
       "components/breadcrumb-nav",
       "components/button",
       "components/button-group",
       "components/checkbox",
       "components/checkbox-group",
-      "components/counter-badge",
       "components/drawer",
       "components/form-field",
       "components/form-field-checkbox-option",
