@@ -4,7 +4,7 @@
  */
 
 // eslint-disable-next-line no-unused-vars
-import React, { type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 export interface CopyButtonProps {
   value: string;

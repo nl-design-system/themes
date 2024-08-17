@@ -1,8 +1,8 @@
 import { ColorExample } from './ColorExample';
 // eslint-disable-next-line no-unused-vars
-import { DesignToken, DesignTokenValue } from './design-tokens';
+import { DesignToken, DesignTokenValue, StyleDictionaryDesignToken } from './design-tokens';
 
-export const path2css = (path: DesignToken['path']) => `var(--${path.join('-')})`;
+export const path2css = (path: StyleDictionaryDesignToken['path']) => `var(--${path.join('-')})`;
 
 const visualizeToken = (token: DesignToken) => {
   if (
@@ -21,7 +21,7 @@ const serializeTokenValue = (value: DesignTokenValue) =>
   typeof value === 'string' ? value : typeof value === 'number' ? String(value) : JSON.stringify(value, null, 2);
 
 interface DesignTokensTableProps {
-  tokens: DesignToken[];
+  tokens: StyleDictionaryDesignToken[];
 }
 
 export const DesignTokensTable = ({ tokens }: DesignTokensTableProps) => (

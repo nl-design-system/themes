@@ -3,11 +3,53 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { DesignToken, DesignTokenMap, DesignTokenValue } from './design-tokens';
+import {
+  DesignToken,
+  DesignTokenMap,
+  DesignTokenTree,
+  DesignTokenValue,
+  StyleDictionaryCTIAttributes,
+  StyleDictionaryDesignToken,
+} from './design-tokens';
 
-export const cssVariable = (token: DesignToken) => `var(--${token.path.join('-')})`;
+export const createPath = (name: string): string[] => name.split('.');
 
-export const styleDictionaryRef = (token: DesignToken) => `{${token.path.join('.')}.value}`;
+/**
+ * Class, type, item (CTI) is a system Style Dictionary used. We don't use it, but we need this
+ * utility to create a full compatible object.
+ * @see https://v4.styledictionary.com/reference/hooks/transforms/predefined/#attributecti
+ */
+export const createCTI = (path: string[]): StyleDictionaryCTIAttributes => {
+  const [category = '', type, item, subitem, state] = path;
+  return {
+    category,
+    type,
+    item,
+    subitem,
+    state,
+  };
+};
+
+export const createDesignToken = (
+  token: Pick<StyleDictionaryDesignToken, 'name'> & Partial<DesignToken>,
+): StyleDictionaryDesignToken => {
+  const { name } = token;
+  const path = createPath(name);
+  return {
+    path,
+    filePath: '',
+    isSource: false,
+    original: {},
+    attributes: createCTI(path),
+    $extensions: {},
+    value: '',
+    ...token,
+  };
+};
+
+export const cssVariable = (token: StyleDictionaryDesignToken) => `var(--${token.path.join('-')})`;
+
+export const styleDictionaryRef = (token: StyleDictionaryDesignToken) => `{${token.path.join('.')}.value}`;
 
 export const isToken = (arg: any): arg is DesignToken =>
   !!arg && typeof arg === 'object' && typeof arg.value === 'string' && !!arg.value;
@@ -25,14 +67,16 @@ const isDesignTokenMap = (item: any): item is DesignTokenMap =>
 export const isColorOrUnknown = (arg: DesignToken): boolean =>
   arg && typeof arg.type === 'string' ? arg.type === 'color' : true;
 
-export const getColors = (
-  tokens: DesignTokenMap | DesignToken[],
-): { grouped: DesignToken[][]; nonGrouped: DesignToken[] } => {
-  const grouped = Object.values(tokens)
-    .filter(isDesignTokenMap)
-    .map((map) => Object.values(map));
+export const getColors = <T extends DesignToken = DesignToken>(
+  tokens: DesignTokenTree<T> | T[],
+): { grouped: T[][]; nonGrouped: T[] } => {
+  const grouped: T[][] = isDesignTokenMap(tokens)
+    ? Object.values(tokens)
+        .filter(isDesignTokenMap)
+        .map((map) => Object.values(map))
+    : [];
 
-  const nonGrouped = Object.values(tokens).filter(isToken);
+  const nonGrouped: T[] = Object.values(tokens).filter((value) => isToken(value));
 
   return {
     grouped,
@@ -40,14 +84,14 @@ export const getColors = (
   };
 };
 
-export const flattenColorTokens = (tokens: DesignTokenMap) => {
+export const flattenColorTokens = <T extends DesignToken = DesignToken>(tokens: DesignTokenTree<T>): T[] => {
   const { grouped, nonGrouped } = getColors(tokens);
   return [nonGrouped, ...grouped].reduce((a, b) => [...a, ...b], []);
 };
 
-export const getColorGroupName = (token: DesignToken) => token.path[token.path.length - 2];
+export const getColorGroupName = (token: StyleDictionaryDesignToken) => token.path[token.path.length - 2];
 
-export const getColorName = (token: DesignToken) => token.path[token.path.length - 1];
+export const getColorName = (token: StyleDictionaryDesignToken) => token.path[token.path.length - 1];
 
 export const formatDeltaE = (deltaE: number): string => {
   let description;

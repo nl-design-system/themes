@@ -1,8 +1,12 @@
 import { CopyButton } from './CopyButton';
-import { DesignTokenTree, createEmptyDesignTokenTree } from './design-tokens.js';
+import { DesignTokenTree, createEmptyDesignTokenTree } from './design-tokens';
 // eslint-disable-next-line no-unused-vars
 
-export const ExampleTokensJSON = ({ definition }: DesignTokenTree) => {
+export interface ExampleTokensJSONProps {
+  definition: DesignTokenTree;
+}
+
+export const ExampleTokensJSON = ({ definition }: ExampleTokensJSONProps) => {
   const emptyTree = createEmptyDesignTokenTree(definition);
   const code = JSON.stringify(emptyTree, null, '  ');
   return (

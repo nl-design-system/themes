@@ -25,50 +25,129 @@ export interface KnownExtensions {
 
 export type DesignTokenValue = string | number | BoxShadowValue;
 
+/**
+ * @see https://design-tokens.github.io/community-group/format/#extensions
+ */
+export interface DesignTokenExtensions {
+  [index: string]: any;
+}
+
 export interface DesignTokenMetadata {
-  $extensions?: KnownExtensions & { [index: string]: any };
+  $extensions: DesignTokenExtensions & KnownExtensions;
 }
 
 /**
  * Object used to define a design token in a Style Dictionary JSON file.
  */
 export interface LegacyDesignTokenDeclaration {
-  value?: DesignTokenValue;
+  value: DesignTokenValue;
 }
+
+/**
+ * https://design-tokens.github.io/community-group/format/#types
+ */
+export type DesignTokenType =
+  // https://design-tokens.github.io/community-group/format/#color
+  | 'color'
+  // https://design-tokens.github.io/community-group/format/#dimension
+  | 'dimension'
+  // https://design-tokens.github.io/community-group/format/#font-family
+  | 'fontFamily'
+  // https://design-tokens.github.io/community-group/format/#font-weight
+  | 'fontWeight'
+  // https://design-tokens.github.io/community-group/format/#duration
+  | 'duration'
+  // https://design-tokens.github.io/community-group/format/#cubic-bezier
+  | 'cubicBezier'
+  // https://design-tokens.github.io/community-group/format/#number
+  | 'number'
+  | string;
 
 /**
  * Object used to define a design token in a JSON file that folows the Design Tokens Format.
  * @see https://tr.designtokens.org/format/
  */
 export interface StandardDesignTokenDeclaration {
-  $value?: DesignTokenValue;
+  /**
+   * https://design-tokens.github.io/community-group/format/#name-and-value
+   */
+  $value: DesignTokenValue;
+
+  /**
+   * https://design-tokens.github.io/community-group/format/#type-0
+   */
+  $type?: string;
+
+  /**
+   * https://design-tokens.github.io/community-group/format/#description
+   */
+  $description?: string;
+
+  /**
+   * https://design-tokens.github.io/community-group/format/#extensions
+   */
+  $extensions?: DesignTokenExtensions;
 }
 
 export type DesignTokenDeclaration = StandardDesignTokenDeclaration | LegacyDesignTokenDeclaration;
 
-export interface DesignToken {
+export interface DesignToken extends Partial<DesignTokenMetadata> {
   type?: string;
   value: DesignTokenValue;
+}
+
+export interface StyleDictionaryCTIAttributes {
+  category: string;
+  type?: string;
+  item?: string;
+  subitem?: string;
+  state?: string;
+}
+
+export interface StyleDictionaryDesignToken extends DesignToken {
+  name: string;
   filePath: string;
   isSource: boolean;
   original: object;
-  name: string;
-  attributes: {
-    category: string;
-    type?: string;
-    item?: string;
-    subitem?: string;
-    state?: string;
-  };
+  // The `attributes` property is added by the `attribute/cti` transform
+  attributes?: StyleDictionaryCTIAttributes;
   path: string[];
-  $extensions?: KnownExtensions & { [index: string]: any };
 }
 
-export interface DesignTokenMap {
-  [index: string]: DesignToken;
+export interface DesignTokenMap<T = DesignToken> {
+  [index: string]: T;
 }
-export interface DesignTokenTree {
-  [index: string]: DesignToken | DesignTokenTree;
+
+/**
+ * https://design-tokens.github.io/community-group/format/#additional-group-properties
+ */
+export interface StandardDesignTokenGroup<T = DesignToken> {
+  [index: string]: T | string | DesignTokenExtensions | undefined;
+
+  /**
+   * https://design-tokens.github.io/community-group/format/#type-0
+   */
+  $type?: string;
+
+  /**
+   * https://design-tokens.github.io/community-group/format/#description
+   */
+  $description?: string;
+
+  /**
+   * https://design-tokens.github.io/community-group/format/#extensions
+   */
+  $extensions?: DesignTokenExtensions;
+}
+
+export interface DesignTokenTree<T extends DesignToken = DesignToken> {
+  [index: string]: T | DesignTokenTree<T>;
+}
+
+export type StyleDictionaryTree = DesignTokenTree<StyleDictionaryDesignToken>;
+
+export interface DesignTokenDefinitionTree {
+  [index: string]: DesignTokenMetadata | DesignToken | DesignTokenDefinitionTree;
 }
 
 export type DesignTokenNode = DesignToken | DesignTokenDeclaration | DesignTokenMetadata | DesignTokenTree;

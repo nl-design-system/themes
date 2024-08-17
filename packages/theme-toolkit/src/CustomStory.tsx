@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { type PropsWithChildren } from 'react';
+import { type PropsWithChildren } from 'react';
 
 const Canvas = ({ children }: PropsWithChildren) => {
   return (

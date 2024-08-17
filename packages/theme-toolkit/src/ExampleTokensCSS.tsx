@@ -2,17 +2,20 @@ import isPlainObject from 'lodash.isplainobject';
 import { CopyButton } from './CopyButton';
 import {
   DesignToken,
+  DesignTokenDefinitionTree,
   DesignTokenNode,
   DesignTokenTree,
   isDesignTokenDefinition,
   isHiddenDesignToken,
-} from './design-tokens.js';
+  StyleDictionaryDesignToken,
+  StyleDictionaryTree,
+} from './design-tokens';
 // eslint-disable-next-line no-unused-vars
 
 type DesignTokenTraverseCallback = (_parents: any, _current: any) => void;
 
-const traverseDeep = (
-  root: DesignTokenTree,
+export const traverseDeep = (
+  root: DesignTokenTree | DesignTokenDefinitionTree,
   parents: string[],
   current: DesignTokenNode,
   valueTest: (_current: any) => boolean,
@@ -27,12 +30,14 @@ const traverseDeep = (
   }
 };
 
-const findDesignTokens = (tokens: DesignTokenTree, callback: DesignTokenTraverseCallback) =>
-  traverseDeep(tokens, [], tokens, isDesignTokenDefinition, callback);
+export const findDesignTokenDefinitions = <T extends DesignToken = DesignToken>(
+  tokens: DesignTokenTree<T>,
+  callback: DesignTokenTraverseCallback,
+) => traverseDeep(tokens, [], tokens, isDesignTokenDefinition, callback);
 
-const tokensToCSS = (tokens: DesignTokenTree): string => {
+export const tokensToCSS = (tokens: StyleDictionaryTree): string => {
   const lines: string[] = [];
-  findDesignTokens(tokens, (path: DesignToken['path'], value: DesignToken) => {
+  findDesignTokenDefinitions(tokens, (path: StyleDictionaryDesignToken['path'], value: DesignToken) => {
     if (isHiddenDesignToken(value)) {
       return;
     }
@@ -51,7 +56,7 @@ const tokensToCSS = (tokens: DesignTokenTree): string => {
 };
 
 export interface ExampleTokensCSSProps {
-  definition: DesignTokenTree;
+  definition: StyleDictionaryTree;
 }
 
 export const ExampleTokensCSS = ({ definition }: ExampleTokensCSSProps) => {
