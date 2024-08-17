@@ -1,4 +1,5 @@
 /* eslint-env jest */
+import { describe, expect, it } from '@jest/globals';
 import {
   createDesignToken,
   cssVariable,
@@ -11,7 +12,7 @@ import {
 } from './util';
 
 describe('format design token as string with `cssVariable()`', () => {
-  it('should should create a valid CSS variable with one part`', () => {
+  it('should should create a valid CSS variable with one part', () => {
     expect(
       cssVariable(
         createDesignToken({
@@ -33,7 +34,7 @@ describe('format design token as string with `cssVariable()`', () => {
 });
 
 describe('format design token as string with `styleDictionaryRef()`', () => {
-  it('should should create a valid CSS variable with one part`', () => {
+  it('should should create a valid CSS variable with one part', () => {
     expect(
       styleDictionaryRef(
         createDesignToken({
