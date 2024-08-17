@@ -4,11 +4,12 @@
     "composite": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "outDir": "dist",
+    "lib": ["dom", "esnext"],
+    "outDir": "./dist/",
     "rootDir": "./src/",
-    "lib": ["dom", "esnext"]
+    "skipLibCheck": true
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["**/node_modules/*"]
 }
