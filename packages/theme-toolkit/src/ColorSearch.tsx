@@ -9,11 +9,11 @@ import { ColorCard } from './ColorCard';
 import { flattenColorTokens } from './util';
 import { ColorTokenMatch, filterColorTokens, parseColor } from './color-util';
 // eslint-disable-next-line no-unused-vars
-import { DesignTokenMap } from './design-tokens';
+import { StyleDictionaryDesignToken, StyleDictionaryTree } from './design-tokens';
 import { Code } from '@utrecht/component-library-react/dist/css-module';
 
 export interface ColorSearchProps {
-  tokens: DesignTokenMap;
+  tokens: StyleDictionaryTree;
 }
 
 export const ColorSearch = ({ tokens }: ColorSearchProps) => {
@@ -21,7 +21,7 @@ export const ColorSearch = ({ tokens }: ColorSearchProps) => {
   const [results, setResults] = useState<ColorTokenMatch[]>([]);
 
   useEffect(() => {
-    setResults(filterColorTokens(flattenColorTokens(tokens), query, 25));
+    setResults(filterColorTokens(flattenColorTokens<StyleDictionaryDesignToken>(tokens), query, 25));
   }, [query]);
 
   return (

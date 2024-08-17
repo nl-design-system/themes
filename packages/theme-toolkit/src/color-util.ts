@@ -1,7 +1,7 @@
 import Color from 'color';
 import { type LAB, getDeltaE00 } from 'delta-e';
 import { LabColor, lab } from 'd3-color';
-import { DesignToken } from './design-tokens';
+import { StyleDictionaryDesignToken } from './design-tokens';
 
 interface SimpleLabColor {
   l: number;
@@ -54,12 +54,16 @@ export const parseColor = (color: string): LAB | null => {
   return colorLAB && labUppercase(colorLAB);
 };
 
-export interface ColorTokenMatch {
-  token: DesignToken;
+export interface ColorTokenMatch<T extends StyleDictionaryDesignToken = StyleDictionaryDesignToken> {
+  token: T;
   deltaE: number;
 }
 
-export const filterColorTokens = (tokens: DesignToken[], query: string, maxDeltaE: number): ColorTokenMatch[] => {
+export const filterColorTokens = <T extends StyleDictionaryDesignToken = StyleDictionaryDesignToken>(
+  tokens: T[],
+  query: string,
+  maxDeltaE: number,
+): ColorTokenMatch<T>[] => {
   const queryLAB = parseColor(query);
 
   return queryLAB

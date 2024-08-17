@@ -1,14 +1,16 @@
 import { DesignTokensTable } from './DesignTokensTable';
-import { DesignToken, isHiddenDesignToken } from './design-tokens.js';
+import { isHiddenDesignToken, StyleDictionaryDesignToken } from './design-tokens';
 // eslint-disable-next-line no-unused-vars
 
 export interface ComponentTokensTableProps {
   component: string;
-  tokens: DesignToken[];
+  tokens: StyleDictionaryDesignToken[];
 }
 
 export const ComponentTokensTable = ({ component, tokens }: ComponentTokensTableProps) => {
-  const componentPath = ['utrecht', component.replace(/^(example|denhaag|utrecht)-/, '')];
+  const regexp = /^(example|denhaag|utrecht)-/;
+
+  const componentPath = regexp.test(component) ? component.split('-') : component.split('.');
 
   const subset = tokens
     .filter((token) => componentPath.every((name, index) => token.path[index] === name))

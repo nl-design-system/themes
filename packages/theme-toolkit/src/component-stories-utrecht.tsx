@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 

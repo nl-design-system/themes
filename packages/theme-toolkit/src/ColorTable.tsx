@@ -16,7 +16,7 @@ import {
 } from './util';
 import { ColorTokenMatch, parseColor } from './color-util';
 // eslint-disable-next-line no-unused-vars
-import type { DesignToken, DesignTokenMap } from './design-tokens';
+import type { StyleDictionaryDesignToken, DesignTokenMap, DesignToken } from './design-tokens';
 
 export const ColorRow = ({
   name,
@@ -24,7 +24,7 @@ export const ColorRow = ({
   colorMatch,
 }: {
   name: string;
-  token: DesignToken;
+  token: StyleDictionaryDesignToken;
   colorMatch?: ColorTokenMatch;
 }) => (
   <ColorItem
@@ -52,24 +52,30 @@ export const ColorGroupRow = ({ name, tokens }: ColorGroupRowProps) => (
   <ColorItem key={name} title={name} subtitle="" colors={tokens.map(({ value }) => String(value))} />
 );
 
-export interface ColorTableProps {
-  tokens: DesignTokenMap;
+export interface ColorTableProps<T extends StyleDictionaryDesignToken = StyleDictionaryDesignToken> {
+  tokens: DesignTokenMap<T>;
 }
 
-export const ColorTable = ({ tokens }: ColorTableProps) => {
-  const { grouped, nonGrouped } = getColors(tokens);
+export const ColorTable = <T extends StyleDictionaryDesignToken = StyleDictionaryDesignToken>({
+  tokens,
+}: ColorTableProps<T>) => {
+  const { grouped, nonGrouped } = getColors<StyleDictionaryDesignToken>(tokens);
 
   return (
     <ColorPalette>
       {grouped
         // .filter((group) => isColorOrUnknown(group))
-        .map((tokens) => {
-          const name = getColorGroupName(tokens[0]);
+        .map((tokens, index) => {
           const colorTokens = tokens.filter(isColorOrUnknown);
-          return colorTokens.length >= 1 ? <ColorGroupRow key={name} name={name} tokens={colorTokens} /> : null;
+          if (colorTokens.length >= 1 && colorTokens[0]) {
+            const name = getColorGroupName(colorTokens[0]) || '';
+            return <ColorGroupRow key={name || index} name={name} tokens={colorTokens} />;
+          } else {
+            return null;
+          }
         })}
       {nonGrouped.map((token) => {
-        const name = getColorName(token);
+        const name = getColorName(token) || '';
         return <ColorRow key={token.path.join('-')} name={name} token={token} />;
       })}
     </ColorPalette>
@@ -85,7 +91,7 @@ export const ColorResults = ({ matches }: ColorResultsProps) => {
     <ColorPalette>
       {matches.map((match) => {
         const { token } = match;
-        const name = getColorName(token);
+        const name = getColorName(token) || '';
         return <ColorRow key={token.path.join('-')} name={name} token={token} colorMatch={match} />;
       })}
     </ColorPalette>
