@@ -1314,60 +1314,6 @@
     }
   },
   "components/accordion": {
-    "todo": {
-      "accordion": {
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
-        "section": {
-          "border-block-end-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.border-width.sm}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "auto"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.line.border-color}"
-          }
-        },
-        "button": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{utrecht.document.font-size}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{utrecht.document.line-height}"
-          },
-          "expanded": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.color.gray.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{voorbeeld.interaction.color}"
-            }
-          },
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.document.font-family}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{voorbeeld.document.strong.font-weight}"
-          }
-        }
-      }
-    },
     "utrecht": {
       "accordion": {
         "panel": {
@@ -1377,7 +1323,7 @@
           },
           "border-width": {
             "$type": "borderWidth",
-            "$value": "{voorbeeld.border-width.lg}"
+            "$value": "{voorbeeld.border-width.sm}"
           },
           "padding-block-end": {
             "$type": "spacing",
@@ -1423,6 +1369,18 @@
             "$type": "spacing",
             "$value": "{voorbeeld.space.inline.mouse}"
           },
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.50}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.color}"
+          },
           "hover": {
             "background-color": {
               "$type": "color",
@@ -1436,18 +1394,6 @@
               "$type": "color",
               "$value": "{voorbeeld.interaction.hover.color}"
             }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.50}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "transparent"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.interaction.color}"
           },
           "focus": {
             "background-color": {
@@ -1484,6 +1430,56 @@
           "border-radius": {
             "$type": "borderRadius",
             "$value": "0px"
+          }
+        }
+      }
+    },
+    "todo": {
+      "accordion": {
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "0px"
+        },
+        "section": {
+          "border-block-end-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.sm}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.line.border-color}"
+          }
+        },
+        "button": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.document.font-size}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{utrecht.document.line-height}"
+          },
+          "expanded": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.color.gray.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.interaction.color}"
+            }
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{utrecht.document.font-family}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{voorbeeld.document.strong.font-weight}"
           }
         }
       }
