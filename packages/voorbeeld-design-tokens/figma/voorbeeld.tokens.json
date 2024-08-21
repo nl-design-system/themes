@@ -1510,7 +1510,7 @@
     }
   },
   "components/alert": {
-    "utrecht": {
+    "todo": {
       "alert": {
         "heading": {
           "font-family": {
@@ -1529,22 +1529,14 @@
             "$type": "fontSizes",
             "$value": "{voorbeeld.typography.font-size.xl}"
           }
-        },
+        }
+      }
+    },
+    "utrecht": {
+      "alert": {
         "column-gap": {
           "$type": "spacing",
           "$value": "{voorbeeld.space.column.snail}"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.md}"
-        },
-        "margin-block-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "margin-block-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
         },
         "padding-block-end": {
           "$type": "spacing",
@@ -1635,6 +1627,14 @@
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.flea}"
           },
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.feedback.informative.color}"
+          },
           "info": {
             "color": {
               "$type": "color",
@@ -1658,10 +1658,6 @@
               "$type": "color",
               "$value": "{utrecht.feedback.warning.color}"
             }
-          },
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.icon.functional.size}"
           }
         },
         "message": {
@@ -1670,9 +1666,19 @@
             "$value": "{voorbeeld.space.row.snail}"
           }
         },
+        "content": {
+          "row-gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.rat}"
+          }
+        },
         "border-radius": {
           "$type": "borderRadius",
           "$value": "0px"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.md}"
         }
       }
     }
