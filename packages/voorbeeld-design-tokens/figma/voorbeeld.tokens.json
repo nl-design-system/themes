@@ -1844,6 +1844,26 @@
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
+        "background-color": {
+          "$type": "color",
+          "$value": "transparent"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
         "attribution": {
           "font-size": {
             "$type": "fontSizes",
@@ -1863,35 +1883,15 @@
             "$type": "color",
             "$value": "{utrecht.document.color}"
           }
-        },
-        "padding-block-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "padding-block-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "padding-inline-end": {
-          "$type": "spacing",
-          "$value": "0px"
-        },
-        "padding-inline-start": {
-          "$type": "spacing",
-          "$value": "0px"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "transparent"
         }
       }
     },
     "todo": {
-      "row-gap": {
-        "$type": "spacing",
-        "$value": "{voorbeeld.space.row.snail}"
-      },
       "blockquote": {
+        "row-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.row.snail}"
+        },
         "attribution": {
           "font-family": {
             "$type": "fontFamilies",
