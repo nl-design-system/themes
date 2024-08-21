@@ -16,5 +16,4 @@ Changed prefix from `.utrecht` to `.todo` for tokens which do not (yet) exist in
 - `.accordion.button.expanded.border-color`
 - `.accordion.button.expanded.color`
 - `.accordion.section.border-color`
-- `.accordion.section.border-width`
 - `.accordion.section.border-block-end-width`
