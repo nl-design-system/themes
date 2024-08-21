@@ -1512,6 +1512,26 @@
   "components/alert": {
     "utrecht": {
       "alert": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.feedback.informative.background-color}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.feedback.informative.border-color}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "0px"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.md}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
         "column-gap": {
           "$type": "spacing",
           "$value": "{voorbeeld.space.column.snail}"
@@ -1532,17 +1552,17 @@
           "$type": "spacing",
           "$value": "{voorbeeld.space.inline.mouse}"
         },
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.feedback.informative.background-color}"
+        "content": {
+          "row-gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.rat}"
+          }
         },
-        "border-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.feedback.informative.border-color}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
+        "message": {
+          "row-gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.snail}"
+          }
         },
         "info": {
           "background-color": {
@@ -1637,26 +1657,6 @@
               "$value": "{utrecht.feedback.warning.color}"
             }
           }
-        },
-        "message": {
-          "row-gap": {
-            "$type": "spacing",
-            "$value": "{voorbeeld.space.row.snail}"
-          }
-        },
-        "content": {
-          "row-gap": {
-            "$type": "spacing",
-            "$value": "{voorbeeld.space.row.rat}"
-          }
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.md}"
         }
       }
     },
