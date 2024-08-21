@@ -16,3 +16,7 @@ Changed prefix from `.utrecht` to `.todo` for tokens that do not (yet) exist in 
 - `.alert.heading.font-size`
 - `.alert.heading.font-weight`
 - `.alert.heading.line-height`
+
+Removed tokens that are available in code, but have no use in Figma:
+- `.alert.margin-block-end`
+- `.alert.margin-block-start`
