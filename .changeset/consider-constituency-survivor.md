@@ -4,7 +4,8 @@
 
 New added form-control-tokens:
 
-- `form-control.border.width`
+- `form-control.border-width`
+- `form-control.border-radius`
 - `form-control.font-family`
 - `form-control.font-size`
 - `form-control.line-height`
