@@ -3230,18 +3230,36 @@
           "$type": "color",
           "$value": "{voorbeeld.interaction.color}"
         },
+        "column-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.text.beetle}"
+        },
+        "text-decoration": {
+          "$type": "textDecoration",
+          "$value": "underline"
+        },
         "text-decoration-color": {
           "$type": "color",
           "$value": "{voorbeeld.interaction.color}"
+        },
+        "text-decoration-thickness": {
+          "$type": "other",
+          "$value": "auto"
+        },
+        "text-underline-offset": {
+          "$type": "other",
+          "$value": "auto"
+        },
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
+          }
         },
         "active": {
           "color": {
             "$type": "color",
             "$value": "{voorbeeld.interaction.active.color}"
-          },
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
           }
         },
         "focus": {
@@ -3281,28 +3299,16 @@
             "$type": "color",
             "$value": "{voorbeeld.interaction.color}"
           }
-        },
-        "text-decoration": {
-          "$type": "textDecoration",
-          "$value": "underline"
-        },
-        "icon": {
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.icon.functional.size}"
+        }
+      }
+    },
+    "todo": {
+      "link": {
+        "active": {
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
           }
-        },
-        "column-gap": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.text.beetle}"
-        },
-        "text-decoration-thickness": {
-          "$type": "other",
-          "$value": "auto"
-        },
-        "text-underline-offset": {
-          "$type": "other",
-          "$value": "auto"
         }
       }
     }
