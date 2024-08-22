@@ -2920,15 +2920,9 @@
   "components/form-field-error-message": {
     "utrecht": {
       "form-field-error-message": {
-        "icon": {
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.icon.functional.size}"
-          },
-          "margin-inline-end": {
-            "$type": "spacing",
-            "$value": "{voorbeeld.space.text.mouse}"
-          }
+        "background-color": {
+          "$type": "color",
+          "$value": "transparent"
         },
         "color": {
           "$type": "color",
@@ -2945,6 +2939,36 @@
         "font-weight": {
           "$type": "fontWeights",
           "$value": "{utrecht.document.font-weight}"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "0px"
+        }
+      }
+    },
+    "todo": {
+      "form-field-error-message": {
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
+          }
+        },
+        "column-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.text.mouse}"
         }
       }
     }
