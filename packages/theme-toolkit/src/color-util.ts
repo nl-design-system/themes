@@ -1,7 +1,22 @@
 import Color from 'color';
-import { type LAB, getDeltaE00 } from 'delta-e';
 import { LabColor, lab } from 'd3-color';
+
+import { deltaECIE00Lab, type LAB as DynamyzeLAB } from '@dynamize/color-utilities';
 import { StyleDictionaryDesignToken } from './design-tokens';
+
+export interface LAB {
+  L: number;
+  A: number;
+  B: number;
+}
+
+const lab2dynamize = ({ L, A, B }: LAB): DynamyzeLAB => ({
+  luminance: L,
+  a: A,
+  b: B,
+});
+
+const getDeltaE00 = (lab1: LAB, lab2: LAB): number => deltaECIE00Lab(lab2dynamize(lab1), lab2dynamize(lab2));
 
 interface SimpleLabColor {
   l: number;
