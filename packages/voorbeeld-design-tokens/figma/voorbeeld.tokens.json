@@ -3893,33 +3893,9 @@
       }
     }
   },
-  "components/radio": {
+  "components/radio-button": {
     "utrecht": {
-      "radio": {
-        "active": {
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.form-control.active.border-width}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.form-control.active.background-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.form-control.active.border-color}"
-          }
-        },
-        "size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.xs}"
-        },
-        "dot": {
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.size.3xs}"
-          }
-        },
+      "radio-button": {
         "background-color": {
           "$type": "color",
           "$value": "{utrecht.form-control.background-color}"
@@ -3928,18 +3904,32 @@
           "$type": "color",
           "$value": "{utrecht.form-control.border-color}"
         },
-        "invalid": {
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{utrecht.form-control.border-width}"
+        },
+        "size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.size.3xs}"
+          }
+        },
+        "active": {
           "background-color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.invalid.background-color}"
+            "$value": "{voorbeeld.form-control.active.background-color}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.invalid.border-color}"
+            "$value": "{voorbeeld.form-control.active.border-color}"
           },
           "border-width": {
             "$type": "borderWidth",
-            "$value": "{utrecht.form-control.invalid.border-width}"
+            "$value": "{voorbeeld.form-control.active.border-width}"
           }
         },
         "focus": {
@@ -3954,6 +3944,34 @@
           "border-width": {
             "$type": "borderWidth",
             "$value": "{voorbeeld.form-control.focus.border-width}"
+          }
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.form-control.hover.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.form-control.hover.border-color}"
+          },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.form-control.hover.border-width}"
+          }
+        },
+        "invalid": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.invalid.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.invalid.border-color}"
+          },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{utrecht.form-control.invalid.border-width}"
           }
         },
         "disabled": {
@@ -3975,27 +3993,13 @@
             "$type": "color",
             "$value": "transparent"
           },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{utrecht.form-control.border-width}"
+          },
           "color": {
             "$type": "color",
             "$value": "{voorbeeld.color.white}"
-          },
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.form-control.hover.accent-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{voorbeeld.color.white}"
-            },
-            "border-width": {
-              "$type": "borderWidth",
-              "$value": "{voorbeeld.form-control.hover.border-width}"
-            }
           },
           "active": {
             "background-color": {
@@ -4006,13 +4010,13 @@
               "$type": "color",
               "$value": "transparent"
             },
-            "color": {
-              "$type": "color",
-              "$value": "{voorbeeld.color.white}"
-            },
             "border-width": {
               "$type": "borderWidth",
               "$value": "{voorbeeld.form-control.active.border-width}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.color.white}"
             }
           },
           "focus": {
@@ -4024,13 +4028,31 @@
               "$type": "color",
               "$value": "{utrecht.form-control.focus.border-color}"
             },
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.form-control.focus.color}"
-            },
             "border-width": {
               "$type": "borderWidth",
               "$value": "{voorbeeld.form-control.focus.border-width}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.focus.color}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.form-control.hover.accent-color}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "border-width": {
+              "$type": "borderWidth",
+              "$value": "{voorbeeld.form-control.hover.border-width}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.color.white}"
             }
           },
           "disabled": {
@@ -4046,33 +4068,7 @@
               "$type": "color",
               "$value": "{voorbeeld.color.white}"
             }
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{utrecht.form-control.border-width}"
           }
-        },
-        "hover": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.form-control.hover.background-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.form-control.hover.border-color}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.form-control.hover.border-width}"
-          }
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{voorbeeld.border-radius.round}"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{utrecht.form-control.border-width}"
         }
       }
     }
@@ -5525,7 +5521,7 @@
       "components/ordered-list",
       "components/pagination",
       "components/paragraph",
-      "components/radio",
+      "components/radio-button",
       "components/radio-group",
       "components/select",
       "components/separator",
