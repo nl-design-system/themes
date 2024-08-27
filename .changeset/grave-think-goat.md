@@ -2,4 +2,4 @@
 "@nl-design-system-unstable/voorbeeld-design-tokens": major
 ---
 
-Aligned paragraph tokens with code.
+Removed margin tokens from Paragraph to align with other component tokens within Figma.
