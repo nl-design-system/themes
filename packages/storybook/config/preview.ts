@@ -1,5 +1,6 @@
 import '@amsterdam/design-system-tokens/dist/index.theme.css';
 import '@amsterdam/design-system-assets/font/index.css';
+import '@amsterdam/design-system-css/dist/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@gemeente-rotterdam/design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
