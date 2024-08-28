@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { describe, expect, it } from '@jest/globals';
-import { isHiddenDesignToken } from './design-tokens';
+import { convertValueTreeToDesignTokenTree, isHiddenDesignToken } from './design-tokens';
 import { createDesignToken } from './util';
 
 describe('isHiddenDesignToken', () => {
@@ -26,5 +26,27 @@ describe('isHiddenDesignToken', () => {
         }),
       ),
     ).toBe(false);
+  });
+});
+
+describe('convertValueTreeToDesignTokenTree', () => {
+  it('should convert a value tree correctly', () => {
+    expect(
+      convertValueTreeToDesignTokenTree({
+        example: {
+          button: {
+            color: 'red',
+          },
+        },
+      }),
+    ).toEqual({
+      example: {
+        button: {
+          color: {
+            value: 'red',
+          },
+        },
+      },
+    });
   });
 });

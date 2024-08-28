@@ -101,7 +101,16 @@ importers:
         version: 13.1.0(postcss@8.4.40)(stylelint@16.8.1(typescript@5.5.4))
 
   packages/storybook:
-    dependencies:
+    devDependencies:
+      '@amsterdam/design-system-assets':
+        specifier: 0.2.1
+        version: 0.2.1
+      '@amsterdam/design-system-react':
+        specifier: 0.11.0
+        version: 0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@amsterdam/design-system-tokens':
+        specifier: 0.11.0
+        version: 0.11.0
       '@gemeente-denhaag/design-tokens-components':
         specifier: 0.2.3-alpha.403
         version: 0.2.3-alpha.403
@@ -525,9 +534,9 @@ importers:
 
   proprietary/amsterdam-design-tokens:
     devDependencies:
-      '@amsterdam/asc-assets':
-        specifier: 0.38.0
-        version: 0.38.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@amsterdam/design-system-tokens':
+        specifier: 0.11.0
+        version: 0.11.0
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
@@ -1423,11 +1432,30 @@ packages:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
 
-  '@amsterdam/asc-assets@0.38.0':
-    resolution: {integrity: sha512-uyeS7ufNndOCGFCQ9CkrzWAGCq221euw8u/g1NARxZXQ1cut7h2qR+kurO466mb7Hvgww9SNQ4X/FOaNZU2UAg==}
+  '@amsterdam/design-system-assets@0.2.1':
+    resolution: {integrity: sha512-byLLmmF1cv2niZMXETV30nprypZY8bAFpNKKuRlmYlIREA6blz9kVIJsQeH3IldmClW1mNa8ccJN4EKJglnuRw==}
+
+  '@amsterdam/design-system-css@0.11.0':
+    resolution: {integrity: sha512-f7HIkxmvkg6O75AaK1AnsPMsCMulCGHk847TrhRY3xFN+IXBaQUQyJiqLdFYa4GVhgA5vVXZO9WgNUSc7lnDQA==}
     peerDependencies:
-      react: ^17.0.2 || ^18.1.0
-      react-dom: ^17.0.2 || ^18.1.0
+      '@amsterdam/design-system-assets': 0.2.1
+      '@amsterdam/design-system-tokens': 0.11.0
+
+  '@amsterdam/design-system-react-icons@0.1.12':
+    resolution: {integrity: sha512-pBR7NnX2J8CsKaNbWSf+lxrPHvPqgSmgB2CYuIDD4RL472kUsNjzJNVOhR24QaKkUGCSUaskhVlUPqeJZIX/MA==}
+    peerDependencies:
+      react: 16 - 18
+      react-dom: 16 - 18
+
+  '@amsterdam/design-system-react@0.11.0':
+    resolution: {integrity: sha512-LXZMajnhScYqZ1f+Di4Ta9+xXESsBqjVscrw95X49W/SaMr+K8L2CzbhLhAVmTUeqhM7JACcB5Fz+iXe/S8Rbw==}
+    peerDependencies:
+      '@amsterdam/design-system-css': 0.11.0
+      react: 16 - 18
+      react-dom: 16 - 18
+
+  '@amsterdam/design-system-tokens@0.11.0':
+    resolution: {integrity: sha512-LgF8u5EDhNpjdhF4doaojoPV/cLJYWJR0ZPcJpJjjkkfKRsesEtO8cTZIQBCDMpXwvRUIuw7henmipdueLtsww==}
 
   '@babel/code-frame@7.21.4':
     resolution: {integrity: sha512-LYvhNKfwWSPpocw8GI7gpK2nq3HSDuEPC/uSYaALSJu9xjsalaaYFOq0Pwt5KmVqwEbZlDu81aLXwBOmD/Fv9g==}
@@ -2108,6 +2136,10 @@ packages:
 
   '@babel/regjsgen@0.8.0':
     resolution: {integrity: sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==}
+
+  '@babel/runtime@7.24.8':
+    resolution: {integrity: sha512-5F7SDGs1T72ZczbRwbGO9lQi0NLjQxzl6i4lJxLxfW9U5UluCSyEJeniWvnhl3/euNiqQVbo8zruhsDfid0esA==}
+    engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.25.0':
     resolution: {integrity: sha512-7dRy4DwXwtzBrPbZflqxnvfxLF8kdZXPkhymtDeFoFqE6ldzjQFgYTtYIFARcLEYDrqfBfYcZt1WqFxRoyC9Rw==}
@@ -7688,10 +7720,28 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@amsterdam/asc-assets@0.38.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@amsterdam/design-system-assets@0.2.1': {}
+
+  '@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0)':
+    dependencies:
+      '@amsterdam/design-system-assets': 0.2.1
+      '@amsterdam/design-system-tokens': 0.11.0
+
+  '@amsterdam/design-system-react-icons@0.1.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+
+  '@amsterdam/design-system-react@0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@amsterdam/design-system-css': 0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0)
+      '@amsterdam/design-system-react-icons': 0.1.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@babel/runtime': 7.24.8
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@amsterdam/design-system-tokens@0.11.0': {}
 
   '@babel/code-frame@7.21.4':
     dependencies:
@@ -8529,6 +8579,10 @@ snapshots:
       source-map-support: 0.5.21
 
   '@babel/regjsgen@0.8.0': {}
+
+  '@babel/runtime@7.24.8':
+    dependencies:
+      regenerator-runtime: 0.14.1
 
   '@babel/runtime@7.25.0':
     dependencies:

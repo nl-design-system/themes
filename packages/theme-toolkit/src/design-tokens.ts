@@ -144,6 +144,10 @@ export interface DesignTokenTree<T extends DesignToken = DesignToken> {
   [index: string]: T | DesignTokenTree<T>;
 }
 
+export interface ValueTree<T = string> {
+  [index: string]: T | ValueTree<T>;
+}
+
 export type StyleDictionaryTree = DesignTokenTree<StyleDictionaryDesignToken>;
 
 export interface DesignTokenDefinitionTree {
@@ -182,4 +186,17 @@ export const createEmptyDesignTokenTree = (definition: DesignTokenTree | DesignT
         )
       : undefined;
   return cloneDeepWith(definition, filter);
+};
+
+export const convertValueTreeToDesignTokenTree = (tree: ValueTree): ValueTree => {
+  const filter = (item: ValueTree | DesignTokenValue): EmptyDesignTokenTree | undefined =>
+    typeof item === 'string' || typeof item === 'number'
+      ? { value: item }
+      : isPlainObject(item)
+      ? mapValues(
+          omitBy(item, () => false),
+          (item) => cloneDeepWith(item, filter),
+        )
+      : undefined;
+  return cloneDeepWith(tree, filter);
 };

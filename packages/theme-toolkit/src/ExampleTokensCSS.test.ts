@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import { describe, expect, it, jest } from '@jest/globals';
 import { isDesignToken } from './design-tokens';
-import { findDesignTokenDefinitions, tokensToCSS, traverseDeep } from './ExampleTokensCSS';
+import { addPath, findDesignTokenDefinitions, tokensToCSS, traverseDeep } from './ExampleTokensCSS';
 import { createDesignToken } from './util';
 
 describe('traverseDeep', () => {
@@ -139,5 +139,30 @@ describe('design tokens to CSS', () => {
     const css = tokensToCSS(tokensTreeDefinition);
 
     expect(css).not.toContain('secret');
+  });
+});
+
+describe('addPath', () => {
+  it('should convert a value tree correctly', () => {
+    expect(
+      addPath({
+        example: {
+          button: {
+            color: {
+              value: 'red',
+            },
+          },
+        },
+      }),
+    ).toEqual({
+      example: {
+        button: {
+          color: {
+            value: 'red',
+            path: ['example', 'button', 'color'],
+          },
+        },
+      },
+    });
   });
 });

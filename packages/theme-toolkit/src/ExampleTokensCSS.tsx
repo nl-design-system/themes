@@ -5,11 +5,14 @@ import {
   DesignTokenDefinitionTree,
   DesignTokenNode,
   DesignTokenTree,
+  isDesignToken,
   isDesignTokenDefinition,
   isHiddenDesignToken,
   StyleDictionaryDesignToken,
   StyleDictionaryTree,
+  ValueTree,
 } from './design-tokens';
+import cloneDeepWith from 'lodash.clonedeepwith';
 // eslint-disable-next-line no-unused-vars
 
 type DesignTokenTraverseCallback = (_parents: any, _current: any) => void;
@@ -34,6 +37,22 @@ export const findDesignTokenDefinitions = <T extends DesignToken = DesignToken>(
   tokens: DesignTokenTree<T>,
   callback: DesignTokenTraverseCallback,
 ) => traverseDeep(tokens, [], tokens, isDesignTokenDefinition, callback);
+
+export const addPath = (tree: ValueTree): ValueTree => {
+  const newTree = cloneDeepWith(tree, () => undefined);
+  traverseDeep(newTree, [], newTree, isDesignToken, (path, token) => {
+    token.path = path;
+  });
+  return newTree;
+};
+
+export const treeToArray = (tree: DesignTokenTree): DesignToken[] => {
+  const array: DesignToken[] = [];
+  traverseDeep(tree, [], tree, isDesignToken, (_, token) => {
+    array.push(token);
+  });
+  return array;
+};
 
 export const tokensToCSS = (tokens: StyleDictionaryTree): string => {
   const lines: string[] = [];
