@@ -105,6 +105,9 @@ importers:
       '@amsterdam/design-system-assets':
         specifier: 0.2.1
         version: 0.2.1
+      '@amsterdam/design-system-css':
+        specifier: 0.11.0
+        version: 0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0)
       '@amsterdam/design-system-react':
         specifier: 0.11.0
         version: 0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -414,6 +417,9 @@ importers:
         specifier: 4.6.0
         version: 4.6.0
     devDependencies:
+      '@amsterdam/design-system-react':
+        specifier: 0.11.0
+        version: 0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@babel/plugin-transform-runtime':
         specifier: 7.24.7
         version: 7.24.7(@babel/core@7.24.5)
