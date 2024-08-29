@@ -3,7 +3,7 @@
 ---
 
 Prefix from `.utrecht` to `.todo`
-- `drawer.header.font-family`
-- `drawer.header.font-weight`
-- `drawer.header.font-size`
-- `drawer.header.line-height`
+- `drawer.header.label.font-family`
+- `drawer.header.label.font-weight`
+- `drawer.header.label.font-size`
+- `drawer.header.label.line-height`
