@@ -1830,53 +1830,9 @@
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
-        "attribution": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.sm}"
-          },
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.document.font-family}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.md}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.document.font-weight}"
-          },
-          "padding-block-start": {
-            "$type": "spacing",
-            "$value": "{voorbeeld.space.block.snail}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.document.subtle.color}"
-          }
-        },
-        "content": {
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.heading.font-family}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.document.font-weight}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.document.color}"
-          }
+        "background-color": {
+          "$type": "color",
+          "$value": "transparent"
         },
         "padding-block-end": {
           "$type": "spacing",
@@ -1894,9 +1850,61 @@
           "$type": "spacing",
           "$value": "0px"
         },
-        "background-color": {
-          "$type": "color",
-          "$value": "transparent"
+        "attribution": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.sm}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.document.subtle.color}"
+          }
+        },
+        "content": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.xl}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
+          }
+        }
+      }
+    },
+    "todo": {
+      "blockquote": {
+        "row-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.row.snail}"
+        },
+        "attribution": {
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{utrecht.document.font-family}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          }
+        },
+        "content": {
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{utrecht.heading.font-family}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          }
         }
       }
     }
