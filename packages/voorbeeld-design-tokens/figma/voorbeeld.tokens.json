@@ -1488,39 +1488,29 @@
   "components/alert": {
     "utrecht": {
       "alert": {
-        "heading": {
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.heading.font-family}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
-          }
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.feedback.informative.background-color}"
         },
-        "column-gap": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.column.snail}"
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.feedback.informative.border-color}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "0px"
         },
         "border-width": {
           "$type": "borderWidth",
           "$value": "{voorbeeld.border-width.md}"
         },
-        "margin-block-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
         },
-        "margin-block-start": {
+        "column-gap": {
           "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
+          "$value": "{voorbeeld.space.column.snail}"
         },
         "padding-block-end": {
           "$type": "spacing",
@@ -1538,17 +1528,17 @@
           "$type": "spacing",
           "$value": "{voorbeeld.space.inline.mouse}"
         },
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.feedback.informative.background-color}"
+        "content": {
+          "row-gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.rat}"
+          }
         },
-        "border-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.feedback.informative.border-color}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
+        "message": {
+          "row-gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.snail}"
+          }
         },
         "info": {
           "background-color": {
@@ -1611,6 +1601,14 @@
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.flea}"
           },
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.feedback.informative.color}"
+          },
           "info": {
             "color": {
               "$type": "color",
@@ -1634,21 +1632,29 @@
               "$type": "color",
               "$value": "{utrecht.feedback.warning.color}"
             }
+          }
+        }
+      }
+    },
+    "todo": {
+      "alert": {
+        "heading": {
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{utrecht.heading.font-family}"
           },
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.icon.functional.size}"
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.xl}"
           }
-        },
-        "message": {
-          "row-gap": {
-            "$type": "spacing",
-            "$value": "{voorbeeld.space.row.snail}"
-          }
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
         }
       }
     }
