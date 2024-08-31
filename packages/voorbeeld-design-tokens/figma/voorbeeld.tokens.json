@@ -4088,40 +4088,78 @@
   "components/select": {
     "utrecht": {
       "select": {
-        "icon": {
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.icon.functional.size}"
-          }
-        },
         "background-color": {
           "$type": "color",
           "$value": "{utrecht.form-control.background-color}"
+        },
+        "border-block-end-width": {
+          "$type": "borderWidth",
+          "$value": "auto"
         },
         "border-color": {
           "$type": "color",
           "$value": "{utrecht.form-control.border-color}"
         },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "0px"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{utrecht.form-control.border-width}"
+        },
         "color": {
           "$type": "color",
           "$value": "{utrecht.form-control.color}"
         },
-        "invalid": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.document.font-size}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{utrecht.document.font-weight}"
+        },
+        "max-inline-size": {
+          "$type": "sizing",
+          "$value": "400px"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.snail}"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.snail}"
+        },
+        "disabled": {
           "background-color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.invalid.background-color}"
+            "$value": "{utrecht.form-control.disabled.background-color}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.invalid.border-color}"
+            "$value": "{utrecht.form-control.disabled.border-color}"
           },
           "color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.color}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{utrecht.form-control.invalid.border-width}"
+            "$value": "{utrecht.form-control.disabled.color}"
           }
         },
         "focus": {
@@ -4136,24 +4174,40 @@
           "color": {
             "$type": "color",
             "$value": "{utrecht.form-control.focus.color}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.form-control.focus.border-width}"
           }
         },
-        "disabled": {
+        "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.disabled.background-color}"
+            "$value": "{utrecht.form-control.invalid.background-color}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.disabled.border-color}"
+            "$value": "{utrecht.form-control.invalid.border-color}"
           },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.disabled.color}"
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{utrecht.form-control.invalid.border-width}"
+          }
+        }
+      }
+    },
+    "todo": {
+      "select": {
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
+          }
+        },
+        "focus": {
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.form-control.focus.border-width}"
           }
         },
         "hover": {
@@ -4173,54 +4227,6 @@
             "$type": "borderWidth",
             "$value": "{voorbeeld.form-control.hover.border-width}"
           }
-        },
-        "padding-block-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "padding-block-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "padding-inline-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.snail}"
-        },
-        "padding-inline-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.snail}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
-        "border-bottom-width": {
-          "$type": "borderWidth",
-          "$value": "auto"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{utrecht.form-control.border-width}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{utrecht.document.font-weight}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{utrecht.document.font-size}"
-        },
-        "max-inline-size": {
-          "$type": "sizing",
-          "$value": "400px"
         }
       }
     }
