@@ -3424,22 +3424,6 @@
   "components/ordered-list": {
     "utrecht": {
       "ordered-list": {
-        "padding-inline-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.rabbit}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{utrecht.document.font-weight}"
-        },
         "font-size": {
           "$type": "fontSizes",
           "$value": "{utrecht.document.font-size}"
@@ -3448,7 +3432,15 @@
           "$type": "lineHeights",
           "$value": "{utrecht.document.line-height}"
         },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
         "item": {
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.rabbit}"
+          },
           "margin-block-end": {
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.ant}"
