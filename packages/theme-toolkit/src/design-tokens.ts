@@ -104,3 +104,24 @@ export const createEmptyDesignTokenTree = (definition: DesignTokenTree | DesignT
       : undefined;
   return cloneDeepWith(definition, filter);
 };
+
+export const designTokenMapToList = (
+  map: DesignTokenMap,
+  list: DesignToken[] = [],
+  basePath: string[] = [],
+): DesignToken[] => {
+  if (isPlainObject(map)) {
+    Object.entries(map).forEach(([name, item]) => {
+      const path = [...basePath, name];
+      if (isDesignTokenDefinition(item)) {
+        list.push({
+          ...item,
+          path,
+        });
+      } else if (isPlainObject(item)) {
+        designTokenMapToList(item, list, path);
+      }
+    });
+  }
+  return list;
+};
