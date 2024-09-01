@@ -16,8 +16,8 @@ importers:
         specifier: 7.25.1
         version: 7.25.1(@babel/core@7.24.5)(eslint@8.57.0)
       '@babel/plugin-syntax-import-assertions':
-        specifier: 7.24.7
-        version: 7.24.7(@babel/core@7.24.5)
+        specifier: 7.25.6
+        version: 7.25.6(@babel/core@7.24.5)
       '@changesets/cli':
         specifier: 2.27.7
         version: 2.27.7
@@ -1557,6 +1557,10 @@ packages:
     resolution: {integrity: sha512-Rq76wjt7yz9AAc1KnlRKNAi/dMSVWgDRx43FHoJEbcYU6xOWaE2dVPwcdTukJrjxS65GITyfbvEYHvkirZ6uEg==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/helper-plugin-utils@7.24.8':
+    resolution: {integrity: sha512-FFWx5142D8h2Mgr/iPVGH5G7w6jDn4jUSpZTyDnQO0Yn7Ks2Kuz6Pci8H6MPCoUJegd/UZQ3tAvfLCxQSnWWwg==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/helper-remap-async-to-generator@7.22.20':
     resolution: {integrity: sha512-pBGyV4uBqOns+0UvhsTO8qgl8hO89PmiDYv+/COyp1aeMcmfrfruz+/nCMFiYyFF/Knn0yfrC85ZzNFjembFTw==}
     engines: {node: '>=6.9.0'}
@@ -1695,6 +1699,12 @@ packages:
 
   '@babel/plugin-syntax-import-assertions@7.24.7':
     resolution: {integrity: sha512-Ec3NRUMoi8gskrkBe3fNmEQfxDvY8bgfQpz6jlk/41kX9eUjvpyqWU7PBP/pLAvMaSQjbMNKJmvX57jP+M6bPg==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
+  '@babel/plugin-syntax-import-assertions@7.25.6':
+    resolution: {integrity: sha512-aABl0jHw9bZ2karQ/uUD6XP4u0SG22SJrOHFoL6XB1R7dTovOP4TzTlsxOYC5yQ1pdscVK2JTUnF6QL3ARoAiQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -7887,6 +7897,8 @@ snapshots:
 
   '@babel/helper-plugin-utils@7.24.7': {}
 
+  '@babel/helper-plugin-utils@7.24.8': {}
+
   '@babel/helper-remap-async-to-generator@7.22.20(@babel/core@7.24.5)':
     dependencies:
       '@babel/core': 7.24.5
@@ -8023,6 +8035,11 @@ snapshots:
     dependencies:
       '@babel/core': 7.24.5
       '@babel/helper-plugin-utils': 7.24.7
+
+  '@babel/plugin-syntax-import-assertions@7.25.6(@babel/core@7.24.5)':
+    dependencies:
+      '@babel/core': 7.24.5
+      '@babel/helper-plugin-utils': 7.24.8
 
   '@babel/plugin-syntax-import-attributes@7.24.7(@babel/core@7.24.5)':
     dependencies:
