@@ -5398,31 +5398,9 @@
   "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "marker": {
-          "border-color": {
-            "$type": "color",
-            "$value": "{utrecht.document.color}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.document.color}"
-          }
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
         "font-size": {
           "$type": "fontSizes",
           "$value": "{utrecht.document.font-size}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{utrecht.document.font-weight}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -5430,9 +5408,13 @@
         },
         "padding-inline-start": {
           "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.rabbit}"
+          "$value": "0px"
         },
         "item": {
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.rabbit}"
+          },
           "margin-block-end": {
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.ant}"
@@ -5440,6 +5422,12 @@
           "margin-block-start": {
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.ant}"
+          }
+        },
+        "marker": {
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
           }
         }
       }
