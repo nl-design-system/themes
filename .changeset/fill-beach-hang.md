@@ -1,3 +1,7 @@
+---
+"@nl-design-system-unstable/voorbeeld-design-tokens": minor
+---
+
 New added form-control-tokens:
 
 - `form-control.border-width`
