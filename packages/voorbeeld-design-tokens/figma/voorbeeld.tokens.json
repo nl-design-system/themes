@@ -5213,12 +5213,32 @@
       }
     }
   },
-  "components/text-input": {
+  "components/textbox": {
     "utrecht": {
       "textbox": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{utrecht.form-control.background-color}"
+        },
+        "border-block-end-width": {
+          "$type": "borderWidth",
+          "$value": "auto"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{utrecht.form-control.border-color}"
+        },
         "border-radius": {
           "$type": "borderRadius",
           "$value": "0px"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{utrecht.form-control.border-width}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.form-control.color}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -5228,10 +5248,6 @@
           "$type": "fontSizes",
           "$value": "{utrecht.document.font-size}"
         },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{utrecht.document.font-weight}"
-        },
         "line-height": {
           "$type": "lineHeights",
           "$value": "{utrecht.document.line-height}"
@@ -5239,6 +5255,10 @@
         "max-inline-size": {
           "$type": "sizing",
           "$value": "400px"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
         },
         "padding-block-end": {
           "$type": "spacing",
@@ -5256,66 +5276,10 @@
           "$type": "spacing",
           "$value": "{voorbeeld.space.inline.snail}"
         },
-        "background-color": {
-          "$type": "color",
-          "$value": "{utrecht.form-control.background-color}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{utrecht.form-control.border-color}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.form-control.color}"
-        },
-        "invalid": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.invalid.background-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.invalid.border-color}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.color}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{utrecht.form-control.invalid.border-width}"
-          }
-        },
         "placeholder": {
           "color": {
             "$type": "color",
             "$value": "{utrecht.form-control.placeholder.color}"
-          }
-        },
-        "border-block-end-width": {
-          "$type": "borderWidth",
-          "$value": "auto"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{utrecht.form-control.border-width}"
-        },
-        "focus": {
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.form-control.focus.border-width}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.focus.background-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.focus.border-color}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.focus.color}"
           }
         },
         "disabled": {
@@ -5330,6 +5294,46 @@
           "color": {
             "$type": "color",
             "$value": "{utrecht.form-control.disabled.color}"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.focus.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.focus.border-color}"
+          },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.form-control.focus.border-width}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.focus.color}"
+          }
+        },
+        "invalid": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.invalid.background-color}"
+          },
+          "border-block-end-width": {
+            "$type": "borderWidth",
+            "$value": "auto"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.invalid.border-color}"
+          },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{utrecht.form-control.invalid.border-width}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.color}"
           }
         },
         "read-only": {
@@ -5347,10 +5351,6 @@
           }
         },
         "hover": {
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.form-control.hover.border-width}"
-          },
           "background-color": {
             "$type": "color",
             "$value": "{voorbeeld.form-control.hover.background-color}"
@@ -5358,6 +5358,10 @@
           "border-color": {
             "$type": "color",
             "$value": "{voorbeeld.form-control.hover.border-color}"
+          },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.form-control.hover.border-width}"
           },
           "color": {
             "$type": "color",
@@ -5489,7 +5493,7 @@
       "components/table",
       "components/task-list",
       "components/textarea",
-      "components/text-input",
+      "components/textbox",
       "components/toolbar-button",
       "components/unordered-list"
     ]
