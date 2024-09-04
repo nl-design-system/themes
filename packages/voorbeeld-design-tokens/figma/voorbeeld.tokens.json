@@ -1797,68 +1797,6 @@
       }
     }
   },
-  "components/badge-counter": {
-    "utrecht": {
-      "badge-counter": {
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.sm}"
-        },
-        "min-block-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.xs}"
-        },
-        "min-inline-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.xs}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{voorbeeld.document.strong.font-weight}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{voorbeeld.border-radius.round}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.violet.100}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "padding-inline": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.ant}"
-        },
-        "padding-block": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.ant}"
-        }
-      }
-    },
-    "todo": {
-      "badge-counter": {
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.sm}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "transparent"
-        }
-      }
-    }
-  },
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
@@ -3485,6 +3423,70 @@
         "border-width": {
           "$type": "borderWidth",
           "$value": "{voorbeeld.border-width.sm}"
+        }
+      }
+    }
+  },
+  "components/number-badge": {
+    "utrecht": {
+      "number-badge": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{voorbeeld.typography.font-size.sm}"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "{voorbeeld.border-radius.round}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.violet.100}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
+        "padding-inline": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.ant}"
+        },
+        "padding-block": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.ant}"
+        }
+      },
+      "badge-counter": {
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{voorbeeld.document.strong.font-weight}"
+        }
+      }
+    },
+    "todo": {
+      "number-badge": {
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "transparent"
         }
       }
     }
@@ -5490,7 +5492,6 @@
       "components/alert",
       "components/avatar",
       "components/backdrop",
-      "components/badge-counter",
       "components/blockquote",
       "components/breadcrumb-nav",
       "components/button",
@@ -5510,6 +5511,7 @@
       "components/link",
       "components/link-list",
       "components/modal-dialog",
+      "components/number-badge",
       "components/ordered-list",
       "components/pagination",
       "components/paragraph",
