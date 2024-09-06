@@ -11,9 +11,6 @@ Added token:
 - `textarea.min-block-size`
 - `textarea.invalid.border-block-end-width`
 
-Removed token:
-- `textarea.font-weight`
-
 Prefix from `.utrecht` to `.todo`
 - `textarea.focs.border-width`
 - `textarea.hover.*`
