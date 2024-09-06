@@ -2729,6 +2729,48 @@
       }
     }
   },
+  "components/code-block": {
+    "utrecht": {
+      "code-block": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.gray.100}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{voorbeeld.code.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.document.font-size}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.mouse}"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.mouse}"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.mouse}"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.mouse}"
+        }
+      }
+    }
+  },
   "components/drawer": {
     "todo": {
       "drawer": {
@@ -5499,6 +5541,7 @@
       "components/checkbox",
       "components/checkbox-group",
       "components/code",
+      "components/code-block",
       "components/drawer",
       "components/form-field",
       "components/form-field-checkbox-option",
