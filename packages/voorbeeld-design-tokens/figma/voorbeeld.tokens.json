@@ -951,39 +951,11 @@
           "$value": "{voorbeeld.color.gray.900}"
         }
       },
-      "focus": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.yellow.200}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.black}"
-        },
-        "outline-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.violet.700}"
-        },
-        "inverse": {
-          "outline-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.white}"
-          }
-        },
-        "outline-offset": {
-          "$type": "other",
-          "$value": "0"
-        },
-        "outline-style": {
-          "$type": "other",
-          "$value": "dotted"
-        },
-        "outline-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.md}"
-        }
-      },
       "form-control": {
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{voorbeeld.typography.font-weight.normal}"
+        },
         "background-color": {
           "$type": "color",
           "$value": "{voorbeeld.color.white}"
@@ -1065,6 +1037,38 @@
             "$type": "color",
             "$value": "{voorbeeld.color.gray.600}"
           }
+        }
+      },
+      "focus": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.yellow.200}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.black}"
+        },
+        "outline-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.violet.700}"
+        },
+        "inverse": {
+          "outline-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.white}"
+          }
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "0"
+        },
+        "outline-style": {
+          "$type": "other",
+          "$value": "dotted"
+        },
+        "outline-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.md}"
         }
       },
       "pointer-target": {
@@ -5191,6 +5195,10 @@
             "$type": "color",
             "$value": "{utrecht.form-control.read-only.color}"
           }
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{utrecht.form-control.font-weight}"
         }
       }
     },
