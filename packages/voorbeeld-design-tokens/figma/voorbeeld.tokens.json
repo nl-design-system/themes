@@ -951,39 +951,11 @@
           "$value": "{voorbeeld.color.gray.900}"
         }
       },
-      "focus": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.yellow.200}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.black}"
-        },
-        "outline-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.violet.700}"
-        },
-        "inverse": {
-          "outline-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.white}"
-          }
-        },
-        "outline-offset": {
-          "$type": "other",
-          "$value": "0"
-        },
-        "outline-style": {
-          "$type": "other",
-          "$value": "dotted"
-        },
-        "outline-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.md}"
-        }
-      },
       "form-control": {
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{voorbeeld.typography.font-weight.normal}"
+        },
         "background-color": {
           "$type": "color",
           "$value": "{voorbeeld.color.white}"
@@ -1101,6 +1073,38 @@
         "padding-inline-start": {
           "$type": "spacing",
           "$value": "{voorbeeld.space.inline.snail}"
+        }
+      },
+      "focus": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.yellow.200}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.black}"
+        },
+        "outline-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.violet.700}"
+        },
+        "inverse": {
+          "outline-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.white}"
+          }
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "0"
+        },
+        "outline-style": {
+          "$type": "other",
+          "$value": "dotted"
+        },
+        "outline-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.md}"
         }
       },
       "pointer-target": {
@@ -5064,55 +5068,65 @@
   "components/textarea": {
     "utrecht": {
       "textarea": {
-        "max-inline-size": {
-          "$type": "sizing",
-          "$value": "400px"
-        },
-        "padding-block-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "padding-block-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "padding-inline-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.snail}"
-        },
-        "padding-inline-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.snail}"
-        },
         "background-color": {
           "$type": "color",
           "$value": "{utrecht.form-control.background-color}"
+        },
+        "border-block-end-width": {
+          "$type": "borderWidth",
+          "$value": "{utrecht.textarea.border-width}"
         },
         "border-color": {
           "$type": "color",
           "$value": "{utrecht.form-control.border-color}"
         },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "{utrecht.form-control.border-radius}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{utrecht.form-control.border-width}"
+        },
         "color": {
           "$type": "color",
           "$value": "{utrecht.form-control.color}"
         },
-        "invalid": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.invalid.background-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.invalid.border-color}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.form-control.color}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{utrecht.form-control.invalid.border-width}"
-          }
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.form-control.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.form-control.font-size}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "max-inline-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.form-control.max-inline-size}"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "{utrecht.form-control.padding-block-end}"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "{utrecht.form-control.padding-block-start}"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "{utrecht.form-control.padding-inline-end}"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "{utrecht.form-control.padding-inline-start}"
         },
         "placeholder": {
           "color": {
@@ -5132,10 +5146,6 @@
           "color": {
             "$type": "color",
             "$value": "{utrecht.form-control.focus.color}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.form-control.focus.border-width}"
           }
         },
         "disabled": {
@@ -5152,6 +5162,28 @@
             "$value": "{utrecht.form-control.disabled.color}"
           }
         },
+        "invalid": {
+          "border-block-end-width": {
+            "$type": "borderWidth",
+            "$value": "{utrecht.textarea.invalid.border-width}"
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.invalid.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.invalid.border-color}"
+          },
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{utrecht.form-control.invalid.border-width}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.color}"
+          }
+        },
         "read-only": {
           "background-color": {
             "$type": "color",
@@ -5166,6 +5198,14 @@
             "$value": "{utrecht.form-control.read-only.color}"
           }
         },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{utrecht.form-control.font-weight}"
+        }
+      }
+    },
+    "todo": {
+      "textarea": {
         "hover": {
           "background-color": {
             "$type": "color",
@@ -5178,39 +5218,7 @@
           "color": {
             "$type": "color",
             "$value": "{voorbeeld.form-control.hover.color}"
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.form-control.hover.border-width}"
           }
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
-        "border-bottom-width": {
-          "$type": "borderWidth",
-          "$value": "auto"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{utrecht.form-control.border-width}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{utrecht.document.font-weight}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{utrecht.document.font-size}"
         }
       }
     }
