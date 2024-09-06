@@ -2771,6 +2771,48 @@
       }
     }
   },
+  "components/color-sample": {
+    "utrecht": {
+      "color-sample": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.violet.700}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.line.border-color}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "0px"
+        },
+        "dark": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.line.border-color}"
+          }
+        },
+        "light": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.line.border-color}"
+          }
+        },
+        "block-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.sm}"
+        },
+        "inline-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.sm}"
+        }
+      }
+    }
+  },
   "components/drawer": {
     "todo": {
       "drawer": {
@@ -5542,6 +5584,7 @@
       "components/checkbox-group",
       "components/code",
       "components/code-block",
+      "components/color-sample",
       "components/drawer",
       "components/form-field",
       "components/form-field-checkbox-option",
