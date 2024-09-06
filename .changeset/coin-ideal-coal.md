@@ -9,9 +9,6 @@ Added token:
 - `textbox.min-block-size`
 - `textbox.invalid.border-block-end-width`
 
-Removed token:
-- `textbox.font-weight`
-
 Prefix from `.utrecht` to `.todo`
 - `textbox.focus.border-width`
 - `textbox.hover.*`
