@@ -7,6 +7,10 @@ Aligned textarea tokens with code.
 Renamed token:
 - `textarea.border-bottom-width` to `textarea.border-block-end-width`
 
+Removed tokens:
+- `textarea.hover.border-width`
+- `textarea.focus.border-width`
+
 Added token:
 - `textarea.min-block-size`
 - `textarea.invalid.border-block-end-width`
