@@ -68,6 +68,10 @@
           "secondary": {
             "$type": "fontFamilies",
             "$value": "Fira Sans, Tahoma, Verdana, sans-serif"
+          },
+          "code": {
+            "$type": "fontFamilies",
+            "$value": "Fira Code, Tahoma, Verdana, sans-serif"
           }
         }
       },
@@ -1343,6 +1347,12 @@
             "$type": "dimension",
             "$value": "{voorbeeld.space.row.horse}"
           }
+        }
+      },
+      "code": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{voorbeeld.typography.font-family.code}"
         }
       }
     }
@@ -2689,6 +2699,32 @@
         "row-gap": {
           "$type": "spacing",
           "$value": "{voorbeeld.space.row.rat}"
+        }
+      }
+    }
+  },
+  "components/code": {
+    "utrecht": {
+      "code": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.gray.100}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{voorbeeld.code.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.document.font-size}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
         }
       }
     }
@@ -5462,6 +5498,7 @@
       "components/button-group",
       "components/checkbox",
       "components/checkbox-group",
+      "components/code",
       "components/drawer",
       "components/form-field",
       "components/form-field-checkbox-option",
