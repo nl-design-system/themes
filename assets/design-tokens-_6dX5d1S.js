@@ -1,5 +1,0 @@
-import{j as t}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as p}from"./index-BI1Biiay.js";import{ae as a}from"./index-BqmR832A.js";import{D as r}from"./DesignTokensTable-DAwOKLsf.js";import{c as i}from"./config-CyqCWqZz.js";import{a as s}from"./tokens-IiLk_txy.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-Cuj66aDE.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";function m(e){const n={h1:"h1",h2:"h2",...p(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(a,{title:"Amsterdam/Design Tokens"}),`
-`,t.jsx(n.h1,{id:"design-tokens",children:"Design Tokens"}),`
-`,t.jsx(r,{tokens:s.filter(o=>o.path[0]!==i.prefix)}),`
-`,t.jsx(n.h2,{id:"proprietary-design-tokens",children:"Proprietary Design Tokens"}),`
-`,t.jsx(r,{tokens:s.filter(o=>o.path[0]===i.prefix)})]})}function C(e={}){const{wrapper:n}={...p(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(m,{...e})}):m(e)}export{C as default};
