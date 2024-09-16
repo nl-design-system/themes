@@ -95,6 +95,7 @@ export type DesignTokenDeclaration = StandardDesignTokenDeclaration | LegacyDesi
 export interface DesignToken extends Partial<DesignTokenMetadata> {
   type?: string;
   value: DesignTokenValue;
+  $value?: DesignTokenValue;
 }
 
 export interface StyleDictionaryCTIAttributes {
@@ -201,3 +202,6 @@ export const convertValueTreeToDesignTokenTree = (tree: ValueTree): ValueTree =>
       : undefined;
   return cloneDeepWith(tree, filter);
 };
+
+export const getTokenValue = (token?: DesignToken): DesignTokenValue | undefined =>
+  token && typeof token['$value'] !== 'undefined' ? token['$value'] : token?.value;

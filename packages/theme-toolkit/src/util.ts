@@ -8,6 +8,7 @@ import {
   DesignTokenMap,
   DesignTokenTree,
   DesignTokenValue,
+  getTokenValue,
   StyleDictionaryCTIAttributes,
   StyleDictionaryDesignToken,
 } from './design-tokens';
@@ -52,11 +53,13 @@ export const cssVariable = (token: StyleDictionaryDesignToken) => `var(--${token
 export const styleDictionaryRef = (token: StyleDictionaryDesignToken) => `{${token.path.join('.')}.value}`;
 
 export const isToken = (arg: any): arg is DesignToken =>
-  !!arg && typeof arg === 'object' && typeof arg.value === 'string' && !!arg.value;
+  !!arg &&
+  typeof arg === 'object' &&
+  ((typeof arg.value === 'string' && !!arg.value) || (typeof arg['$value'] === 'string' && !!arg['$value']));
 
 export const listColors = (arg: DesignToken | DesignToken[]): DesignTokenValue[] => {
   let array = isToken(arg) ? [arg] : arg ? Object.values(arg) : [];
-  return array.map((color) => color.value);
+  return array.map((color) => getTokenValue(color) || '');
 };
 
 const isDesignTokenMap = (item: any): item is DesignTokenMap =>

@@ -1,4 +1,9 @@
-import { isDesignTokenDefinition, StyleDictionaryDesignToken, StyleDictionaryTree } from '../design-tokens';
+import {
+  getTokenValue,
+  isDesignTokenDefinition,
+  StyleDictionaryDesignToken,
+  StyleDictionaryTree,
+} from '../design-tokens';
 import isPlainObject from 'lodash.isplainobject';
 import Color from 'color';
 import { createPath } from '../util';
@@ -80,10 +85,10 @@ export const getColorPairs = (
 
     return {
       foreground: token.path.join('.'),
-      foregroundColor: token.value || '',
+      foregroundColor: getTokenValue(token) || '',
       background: backgroundToken?.path.join('.') || '',
-      backgroundColor: backgroundToken?.value || '',
-      'font-size': fontSizeToken?.value,
+      backgroundColor: getTokenValue(backgroundToken) || '',
+      'font-size': getTokenValue(fontSizeToken),
       type: 'functional', // todo: recognize non-functional
     };
   });

@@ -2,7 +2,7 @@ import Color from 'color';
 import { LabColor, lab } from 'd3-color';
 
 import { deltaECIE00Lab, type LAB as DynamyzeLAB } from '@dynamize/color-utilities';
-import { StyleDictionaryDesignToken } from './design-tokens';
+import { getTokenValue, StyleDictionaryDesignToken } from './design-tokens';
 
 export interface LAB {
   L: number;
@@ -84,7 +84,8 @@ export const filterColorTokens = <T extends StyleDictionaryDesignToken = StyleDi
   return queryLAB
     ? tokens
         .map((token) => {
-          const tokenLAB = typeof token.value === 'string' ? parseColor(token.value) : null;
+          const value = getTokenValue(token);
+          const tokenLAB = typeof value === 'string' ? parseColor(value) : null;
           const deltaE = tokenLAB ? getDeltaE00(queryLAB, tokenLAB) : 100;
 
           return {
