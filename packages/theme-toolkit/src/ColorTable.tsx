@@ -16,7 +16,7 @@ import {
 } from './util';
 import { ColorTokenMatch, parseColor } from './color-util';
 // eslint-disable-next-line no-unused-vars
-import type { StyleDictionaryDesignToken, DesignTokenMap, DesignToken } from './design-tokens';
+import { type StyleDictionaryDesignToken, type DesignTokenMap, type DesignToken, getTokenValue } from './design-tokens';
 
 export const ColorRow = ({
   name,
@@ -39,7 +39,7 @@ export const ColorRow = ({
         </>
       ) as unknown as string /* ColorItem['subtitle'] is typed as string, but it actually supports ReactNode */
     }
-    colors={[String(token.value)]}
+    colors={[String(getTokenValue(token))]}
   />
 );
 
@@ -49,7 +49,7 @@ export interface ColorGroupRowProps {
 }
 
 export const ColorGroupRow = ({ name, tokens }: ColorGroupRowProps) => (
-  <ColorItem key={name} title={name} subtitle="" colors={tokens.map(({ value }) => String(value))} />
+  <ColorItem key={name} title={name} subtitle="" colors={tokens.map((token) => String(getTokenValue(token)))} />
 );
 
 export interface ColorTableProps<T extends StyleDictionaryDesignToken = StyleDictionaryDesignToken> {

@@ -1,24 +1,31 @@
 import { ColorExample } from './ColorExample';
 // eslint-disable-next-line no-unused-vars
-import { DesignToken, DesignTokenValue, StyleDictionaryDesignToken } from './design-tokens';
+import { DesignToken, DesignTokenValue, getTokenValue, StyleDictionaryDesignToken } from './design-tokens';
 
 export const path2css = (path: StyleDictionaryDesignToken['path']) => `var(--${path.join('-')})`;
 
 const visualizeToken = (token: DesignToken) => {
+  const value = getTokenValue(token);
   if (
     token['$extensions'] &&
     token['$extensions']['nl.nldesignsystem.css.property'] &&
     token['$extensions']['nl.nldesignsystem.css.property'].syntax === '<color>' &&
-    typeof token.value === 'string'
+    typeof value === 'string'
   ) {
-    return <ColorExample color={token.value}></ColorExample>;
+    return <ColorExample color={value}></ColorExample>;
   } else {
     return '';
   }
 };
 
-const serializeTokenValue = (value: DesignTokenValue) =>
-  typeof value === 'string' ? value : typeof value === 'number' ? String(value) : JSON.stringify(value, null, 2);
+const serializeTokenValue = (value?: DesignTokenValue) =>
+  typeof value === 'undefined' || value === null
+    ? ''
+    : typeof value === 'string'
+    ? value
+    : typeof value === 'number'
+    ? String(value)
+    : JSON.stringify(value, null, 2);
 
 interface DesignTokensTableProps {
   tokens: StyleDictionaryDesignToken[];
@@ -34,7 +41,8 @@ export const DesignTokensTable = ({ tokens }: DesignTokensTableProps) => (
     </thead>
     <tbody>
       {tokens.map((token) => {
-        const { name, path, value } = token;
+        const { name, path } = token;
+        const value = getTokenValue(token);
         return (
           <tr key={name}>
             <td>
