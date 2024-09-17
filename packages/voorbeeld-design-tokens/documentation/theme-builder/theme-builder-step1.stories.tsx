@@ -1,5 +1,8 @@
 // import { cssVariable } from '@nl-design-system-unstable/theme-toolkit/src/util';
-import { fontFamilystep as voorbeeldfontfamilystep } from './voorbeeld-theme';
+import { commoncolorstep as voorbeeldcommoncolorstep } from './theme styling/voorbeeld-theme';
+import { commoncolorstep as hoekschewaardcommoncolorstep } from './theme styling/hoekschewaard-theme';
+import { commoncolorstep as rijkshuisstijlcommoncolorstep } from './theme styling/rijkshuisstijl-theme';
+
 import type { Meta, StoryObj } from '@storybook/react';
 import {
   Button,
@@ -25,19 +28,10 @@ const Wrapper = ({ children, cssVariables }: PropsWithChildren<WrapperProps>) =>
   </div>
 );
 
-interface BorderRadiusStoryProps {
+interface CommonColorStoryProps {
   cssVariables: { [index: string]: any };
 }
-const BorderRadiusStory = ({ ...restProps }: PropsWithChildren<BorderRadiusStoryProps>) => (
-  <Wrapper {...restProps}>
-    <Button appearance="primary-action">Default</Button>
-  </Wrapper>
-);
-
-interface FontFamilyStoryProps {
-  cssVariables: { [index: string]: any };
-}
-const FontFamilyStory = ({ ...restProps }: PropsWithChildren<FontFamilyStoryProps>) => (
+const CommonColorStory = ({ ...restProps }: PropsWithChildren<CommonColorStoryProps>) => (
   <Wrapper {...restProps}>
     <Heading1>The quick brown fox jumps over the lazy fox</Heading1>
     <Heading2>The quick brown fox jumps over the lazy fox</Heading2>
@@ -57,11 +51,11 @@ const FontFamilyStory = ({ ...restProps }: PropsWithChildren<FontFamilyStoryProp
 
 const meta = {
   id: 'theme-builder-step1',
-  title: 'Theme builder/Step #1 Font Familiy',
-  component: BorderRadiusStory,
+  title: 'Theme builder/Step 1 Colors ',
+  component: CommonColorStory,
   argTypes: {},
   args: {},
-} satisfies Meta<typeof BorderRadiusStory>;
+} satisfies Meta<typeof CommonColorStory>;
 
 type Story = StoryObj<typeof meta>;
 
@@ -69,59 +63,45 @@ export default meta;
 
 export const Step1: Story = {
   name: 'Thema 1: Rijkshuisstijl',
+  render: CommonColorStory,
   args: {
     cssVariables: {
-      '--utrecht-button-border-radius': '0',
-      // '--utrecht-button-border-radius)': '0',
-
-      // '--utrecht-button-background-color': 'lightgrey',
-      // '--utrecht-button-color': 'black',
-      // '--utrecht-button-hover-background-color': 'grey',
-      // '--utrecht-button-hover-color': 'black',
-      // '--utrecht-button-focus-color': 'white',
-      // '--utrecht-button-focus-background-color': 'black',
-      // '--utrecht-button-active-background-color': 'white',
-      // '--utrecht-button-active-color': 'black',
+      ...rijkshuisstijlcommoncolorstep,
     },
   },
   parameters: {
     docs: {
-      description: 'Stap 1: Pas de border radius aan',
+      description: 'Pas de kleuren aan volgens de Rijkshuisstijl thema',
     },
   },
 };
 
 export const Step2: Story = {
   name: 'Thema 2: Voorbeeld',
-  render: FontFamilyStory,
+  render: CommonColorStory,
   args: {
     cssVariables: {
-      ...voorbeeldfontfamilystep,
+      ...voorbeeldcommoncolorstep,
     },
   },
   parameters: {
     docs: {
-      description: `Stap 2: Pas de font family aan in de \`utrecht.document.font-family\` token.
-
-Interne documentatie: alleen de common token voor document.font-family is niet genoeg, ook alle heading tokens en paragraph tokens moeten aangepast worden. Kunnen we dit automatiseren?`,
+      description: `Pas de kleuren aan volgens de Voorbeeld thema`,
     },
   },
 };
 
 export const Step3: Story = {
   name: 'Thema 3: Hoeksche Waard',
-  render: FontFamilyStory,
+  render: CommonColorStory,
   args: {
     cssVariables: {
-      ...Step1.args.cssVariables,
-      '--utrecht-document-font-family': '"Comic Sans MS"',
+      ...hoekschewaardcommoncolorstep,
     },
   },
   parameters: {
     docs: {
-      description: `Stap 2: Pas de font family aan in de \`utrecht.document.font-family\` token.
-
-Interne documentatie: alleen de common token voor document.font-family is niet genoeg, ook alle heading tokens en paragraph tokens moeten aangepast worden. Kunnen we dit automatiseren?`,
+      description: `Pas de kleuren aan volgens de Hoeksche Waard thema`,
     },
   },
 };
