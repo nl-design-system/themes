@@ -1,19 +1,9 @@
 // import { cssVariable } from '@nl-design-system-unstable/theme-toolkit/src/util';
 import type { Meta, StoryObj } from '@storybook/react';
-import {
-  Button,
-  ButtonGroup,
-  Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-  Heading5,
-  Heading6,
-  Link,
-  Paragraph,
-  NavBar,
-} from '@utrecht/component-library-react/dist/css-module';
-import { fontFamilystep as voorbeeldfontfamilystep } from './rijkshuisstijl-theme';
+import { Button } from '@utrecht/component-library-react/dist/css-module';
+import { borderradiusstep as voorbeeldborderradiusstep } from './theme styling/voorbeeld-theme';
+import { borderradiusstep as hoekschewaardborderradiusstep } from './theme styling/hoekschewaard-theme';
+import { borderradiusstep as rijkshuisstijlborderradiusstep } from './theme styling/rijkshuisstijl-theme';
 import { PropsWithChildren } from 'react';
 
 interface WrapperProps {
@@ -34,30 +24,9 @@ const BorderRadiusStory = ({ ...restProps }: PropsWithChildren<BorderRadiusStory
   </Wrapper>
 );
 
-interface FontFamilyStoryProps {
-  cssVariables: { [index: string]: any };
-}
-const FontFamilyStory = ({ ...restProps }: PropsWithChildren<FontFamilyStoryProps>) => (
-  <Wrapper {...restProps}>
-    <Heading1>The quick brown fox jumps over the lazy fox</Heading1>
-    <Heading2>The quick brown fox jumps over the lazy fox</Heading2>
-    <Heading3>The quick brown fox jumps over the lazy fox</Heading3>
-    <Heading4>The quick brown fox jumps over the lazy fox</Heading4>
-    <Heading5>The quick brown fox jumps over the lazy fox</Heading5>
-    <Heading6>The quick brown fox jumps over the lazy fox</Heading6>
-    <Paragraph>The quick brown fox jumps over the lazy fox</Paragraph>
-    <ButtonGroup>
-      <Button appearance="primary-action">Default</Button>
-      <Button appearance="primary-action">Default</Button>
-    </ButtonGroup>
-    <Link href="https://www.example.com">Read more</Link>
-    <NavBar>Default</NavBar>
-  </Wrapper>
-);
-
 const meta = {
   id: 'theme-builder-step3',
-  title: 'Theme builder/Step #3 Border',
+  title: 'Theme builder/Step 3 Rounding',
   component: BorderRadiusStory,
   argTypes: {},
   args: {},
@@ -69,18 +38,14 @@ export default meta;
 
 export const Step1: Story = {
   name: 'Thema 1: Rijkshuisstijl',
-  render: FontFamilyStory,
   args: {
     cssVariables: {
-      ...voorbeeldfontfamilystep,
-      '--utrecht-document-font-family': '"Comic Sans MS"',
+      ...rijkshuisstijlborderradiusstep,
     },
   },
   parameters: {
     docs: {
-      description: `Stap 2: Pas de font family aan in de \`utrecht.document.font-family\` token.
-
-Interne documentatie: alleen de common token voor document.font-family is niet genoeg, ook alle heading tokens en paragraph tokens moeten aangepast worden. Kunnen we dit automatiseren?`,
+      description: `Pas de border radius aan volgens de Rijkshuisstijl thema`,
     },
   },
 };
@@ -89,22 +54,12 @@ export const Step2: Story = {
   name: 'Thema 2: Voorbeeld',
   args: {
     cssVariables: {
-      '--utrecht-button-border-radius': '0',
-      // '--utrecht-button-border-radius)': '0',
-
-      // '--utrecht-button-background-color': 'lightgrey',
-      // '--utrecht-button-color': 'black',
-      // '--utrecht-button-hover-background-color': 'grey',
-      // '--utrecht-button-hover-color': 'black',
-      // '--utrecht-button-focus-color': 'white',
-      // '--utrecht-button-focus-background-color': 'black',
-      // '--utrecht-button-active-background-color': 'white',
-      // '--utrecht-button-active-color': 'black',
+      ...voorbeeldborderradiusstep,
     },
   },
   parameters: {
     docs: {
-      description: 'Stap 1: Pas de border radius aan',
+      description: 'Pas de border radius aan volgens de Voorbeeld thema',
     },
   },
 };
@@ -113,22 +68,12 @@ export const Step3: Story = {
   name: 'Thema 3: Hoeksche Waard',
   args: {
     cssVariables: {
-      '--utrecht-button-border-radius': '0',
-      // '--utrecht-button-border-radius)': '0',
-
-      // '--utrecht-button-background-color': 'lightgrey',
-      // '--utrecht-button-color': 'black',
-      // '--utrecht-button-hover-background-color': 'grey',
-      // '--utrecht-button-hover-color': 'black',
-      // '--utrecht-button-focus-color': 'white',
-      // '--utrecht-button-focus-background-color': 'black',
-      // '--utrecht-button-active-background-color': 'white',
-      // '--utrecht-button-active-color': 'black',
+      ...hoekschewaardborderradiusstep,
     },
   },
   parameters: {
     docs: {
-      description: 'Stap 1: Pas de border radius aan',
+      description: 'Pas de border radius aan volgens de Hoeksche Waard thema',
     },
   },
 };
