@@ -1,5 +1,0 @@
-import{j as t}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as p}from"./index-BI1Biiay.js";import{ae as a}from"./index-BAVxY9TX.js";import{D as r}from"./DesignTokensTable-CjJ5dc8K.js";import{c as i}from"./config-CyqCWqZz.js";import{a as s}from"./tokens-D5bhYDvm.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-CSbCo8AB.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./design-tokens-Bd5iWdop.js";import"./index-Bxwjk3lc.js";function m(o){const e={h1:"h1",h2:"h2",...p(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(a,{title:"Amsterdam/Design Tokens"}),`
-`,t.jsx(e.h1,{id:"design-tokens",children:"Design Tokens"}),`
-`,t.jsx(r,{tokens:s.filter(n=>n.path[0]!==i.prefix)}),`
-`,t.jsx(e.h2,{id:"proprietary-design-tokens",children:"Proprietary Design Tokens"}),`
-`,t.jsx(r,{tokens:s.filter(n=>n.path[0]===i.prefix)})]})}function L(o={}){const{wrapper:e}={...p(),...o.components};return e?t.jsx(e,{...o,children:t.jsx(m,{...o})}):m(o)}export{L as default};
