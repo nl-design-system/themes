@@ -64,6 +64,18 @@ describe('design token duck typing with `isToken()`', () => {
     expect(isToken({ $extensions: {} })).toBe(false);
   });
 
+  it('should reject objects trees without a top-level `value` property', () => {
+    expect(
+      isToken({
+        example: {
+          'primary-color': {
+            value: 'cornflowerblue',
+          },
+        },
+      }),
+    ).toBe(false);
+  });
+
   it('should not break on falsy arguments', () => {
     [null, false, undefined].forEach((value) => {
       expect(isToken(value)).toBe(false);
