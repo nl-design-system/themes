@@ -56,6 +56,7 @@
     "clean": "rimraf dist/ documentation/build/ packages/storybook/dist && pnpm run --recursive clean",
     "deploy": "npm-run-all deploy:**",
     "lint": "npm-run-all --continue-on-error lint:** && prettier --check .",
+    "lint:changeset": "changeset status",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --no-error-on-unmatched-pattern --ext .js,.cjs,.mjs,.jsx,.ts,.tsx .",
     "lint:md": "markdownlint '**/*.md'",
