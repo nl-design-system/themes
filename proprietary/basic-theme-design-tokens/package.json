@@ -1,0 +1,33 @@
+{
+  "name": "@nl-design-system-unstable/basic-theme-design-tokens",
+  "version": "1.0.0-alpha.181",
+  "author": "Community for NL Design System",
+  "description": "Basic Theme Design System design tokens for NL Design System",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/themes.git",
+    "directory": "proprietary/basic-theme-design-tokens"
+  },
+  "scripts": {
+    "clean": "rimraf -rf dist/",
+    "watch": "npm-run-all watch:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
+    "build": "npm-run-all clean build:**",
+    "build:scss": "sass --no-source-map src/:dist/",
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
+  },
+  "devDependencies": {
+    "@nl-design-system-unstable/theme-toolkit": "workspace:*",
+    "@storybook/blocks": "8.2.7",
+    "@storybook/react": "8.2.7",
+    "chokidar-cli": "3.0.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "6.0.1",
+    "style-dictionary": "4.0.1"
+  }
+}

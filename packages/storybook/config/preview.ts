@@ -53,6 +53,7 @@ import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
 import type { Preview } from '@storybook/react';
 import '@utrecht/design-tokens/dist/index.css';
 import { ThemeDecorator } from './ThemeDecorator';
+import '@nl-design-system-unstable/basic-theme-design-tokens/dist/index.css';
 
 const preview: Preview = {
   parameters: {
