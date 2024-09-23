@@ -1,3 +1,7 @@
+---
+"@nl-design-system-unstable/voorbeeld-design-tokens": major
+---
+
 Changed prefix from `.utrecht` to `.todo` for tokens that do not (yet) exist in code:
 
 Additional states when checked:
