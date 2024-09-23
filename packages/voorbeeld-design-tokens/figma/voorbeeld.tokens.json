@@ -4432,6 +4432,24 @@
           "$type": "spacing",
           "$value": "{voorbeeld.space.row.cat}"
         },
+        "item": {
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{utrecht.document.font-family}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.document.font-size}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{utrecht.document.line-height}"
+          }
+        },
         "link": {
           "color": {
             "$type": "color",
@@ -4454,10 +4472,6 @@
             "$value": "None"
           },
           "current": {
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.document.color}"
-            },
             "font-weight": {
               "$type": "fontWeights",
               "$value": "{voorbeeld.document.strong.font-weight}"
@@ -4468,24 +4482,12 @@
               "$type": "color",
               "$value": "{voorbeeld.interaction.hover.color}"
             }
-          }
-        },
-        "item": {
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.document.font-family}"
           },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{utrecht.document.font-size}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.document.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{utrecht.document.line-height}"
+          "active": {
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.interaction.active.color}"
+            }
           }
         },
         "list": {
@@ -4507,11 +4509,13 @@
     "todo": {
       "sidenav": {
         "link": {
-          "active": {
+          "current": {
             "color": {
               "$type": "color",
-              "$value": "{voorbeeld.interaction.active.color}"
-            },
+              "$value": "{utrecht.document.color}"
+            }
+          },
+          "active": {
             "text-decoration": {
               "$type": "textDecoration",
               "$value": "underline"
