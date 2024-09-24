@@ -1,8 +1,3 @@
-// import { cssVariable } from '@nl-design-system-unstable/theme-toolkit/src/util';
-import { commoncolorstep as voorbeeldcommoncolorstep } from './theme-styling/voorbeeld-theme';
-import { commoncolorstep as hoekschewaardcommoncolorstep } from './theme-styling/hoekschewaard-theme';
-import { commoncolorstep as rijkshuisstijlcommoncolorstep } from './theme-styling/rijkshuisstijl-theme';
-
 import type { Meta, StoryObj } from '@storybook/react';
 import {
   Button,
@@ -19,19 +14,10 @@ import {
 } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 
-interface WrapperProps {
-  cssVariables: { [index: string]: any };
-}
 // Use basic theme for sane defaults
-const Wrapper = ({ children, cssVariables }: PropsWithChildren<WrapperProps>) => (
-  <div className="utrecht-document" style={cssVariables}>
-    {children}
-  </div>
-);
+const Wrapper = ({ children }: PropsWithChildren<{}>) => <div className="utrecht-document">{children}</div>;
 
-interface CommonColorStoryProps {
-  cssVariables: { [index: string]: any };
-}
+type CommonColorStoryProps = {};
 const CommonColorStory = ({ ...restProps }: PropsWithChildren<CommonColorStoryProps>) => (
   <Wrapper {...restProps}>
     <Heading1>The quick brown fox jumps over the lazy fox</Heading1>
@@ -51,8 +37,8 @@ const CommonColorStory = ({ ...restProps }: PropsWithChildren<CommonColorStoryPr
 );
 
 const meta = {
-  id: 'theme-builder-step1',
-  title: 'Theme builder/Step 1 Colors ',
+  id: 'theme-builder-step0',
+  title: 'Theme builder/Step 0 Default ',
   component: CommonColorStory,
   argTypes: {},
   args: {},
@@ -68,11 +54,6 @@ export default meta;
 export const Step1: Story = {
   name: 'Thema 1: Rijkshuisstijl',
   render: CommonColorStory,
-  args: {
-    cssVariables: {
-      ...rijkshuisstijlcommoncolorstep,
-    },
-  },
   parameters: {
     docs: {
       description: 'Pas de kleuren aan volgens de Rijkshuisstijl thema',
@@ -83,11 +64,6 @@ export const Step1: Story = {
 export const Step2: Story = {
   name: 'Thema 2: Voorbeeld',
   render: CommonColorStory,
-  args: {
-    cssVariables: {
-      ...voorbeeldcommoncolorstep,
-    },
-  },
   parameters: {
     docs: {
       description: `Pas de kleuren aan volgens de Voorbeeld thema`,
@@ -98,11 +74,6 @@ export const Step2: Story = {
 export const Step3: Story = {
   name: 'Thema 3: Hoeksche Waard',
   render: CommonColorStory,
-  args: {
-    cssVariables: {
-      ...hoekschewaardcommoncolorstep,
-    },
-  },
   parameters: {
     docs: {
       description: `Pas de kleuren aan volgens de Hoeksche Waard thema`,

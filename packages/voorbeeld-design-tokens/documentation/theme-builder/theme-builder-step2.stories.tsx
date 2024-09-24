@@ -1,7 +1,7 @@
 // import { cssVariable } from '@nl-design-system-unstable/theme-toolkit/src/util';
-import { fontFamilystep as voorbeeldfontfamilystep } from './theme styling/voorbeeld-theme';
-import { fontFamilystep as hoekschewaardfontfamilystep } from './theme styling/hoekschewaard-theme';
-import { fontFamilystep as rijkshuisstijlfontfamilystep } from './theme styling/rijkshuisstijl-theme';
+import { fontFamilystep as voorbeeldfontfamilystep } from './theme-styling/voorbeeld-theme';
+import { fontFamilystep as hoekschewaardfontfamilystep } from './theme-styling/hoekschewaard-theme';
+import { fontFamilystep as rijkshuisstijlfontfamilystep } from './theme-styling/rijkshuisstijl-theme';
 import type { Meta, StoryObj } from '@storybook/react';
 import {
   Button,
@@ -22,8 +22,8 @@ interface WrapperProps {
   cssVariables: { [index: string]: any };
 }
 const Wrapper = ({ children, cssVariables }: PropsWithChildren<WrapperProps>) => (
-  <div className="voorbeeld-theme">
-    <div style={cssVariables}>{children}</div>
+  <div className="utrecht-documents" style={cssVariables}>
+    {children}
   </div>
 );
 
@@ -54,6 +54,9 @@ const meta = {
   component: FontFamilyStory,
   argTypes: {},
   args: {},
+  parameters: {
+    theme: 'basic-theme',
+  },
 } satisfies Meta<typeof FontFamilyStory>;
 
 type Story = StoryObj<typeof meta>;

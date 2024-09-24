@@ -1,17 +1,17 @@
 // import { cssVariable } from '@nl-design-system-unstable/theme-toolkit/src/util';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@utrecht/component-library-react/dist/css-module';
-import { borderradiusstep as voorbeeldborderradiusstep } from './theme styling/voorbeeld-theme';
-import { borderradiusstep as hoekschewaardborderradiusstep } from './theme styling/hoekschewaard-theme';
-import { borderradiusstep as rijkshuisstijlborderradiusstep } from './theme styling/rijkshuisstijl-theme';
+import { borderradiusstep as voorbeeldborderradiusstep } from './theme-styling/voorbeeld-theme';
+import { borderradiusstep as hoekschewaardborderradiusstep } from './theme-styling/hoekschewaard-theme';
+import { borderradiusstep as rijkshuisstijlborderradiusstep } from './theme-styling/rijkshuisstijl-theme';
 import { PropsWithChildren } from 'react';
 
 interface WrapperProps {
   cssVariables: { [index: string]: any };
 }
 const Wrapper = ({ children, cssVariables }: PropsWithChildren<WrapperProps>) => (
-  <div className="voorbeeld-theme">
-    <div style={cssVariables}>{children}</div>
+  <div className="utrecht-document" style={cssVariables}>
+    {children}
   </div>
 );
 
@@ -30,6 +30,9 @@ const meta = {
   component: BorderRadiusStory,
   argTypes: {},
   args: {},
+  parameters: {
+    theme: 'basic-theme',
+  },
 } satisfies Meta<typeof BorderRadiusStory>;
 
 type Story = StoryObj<typeof meta>;
