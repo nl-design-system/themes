@@ -1,6 +1,6 @@
-# Design Tokens for Haarlem Design System
+# Design Tokens for Hoeksche Waard Design System
 
-Information for the tokens have been obtained from the [haarlem.nl website](https://haarlem.nl) and the [designs in Figma](https://www.figma.com/file/yNP20OJZKRG3dW5dmDtyM9/Online-Huisstijl---Gemeente-Haarlem-en-Gemeente-Zandvoort?node-id=50%3A765&t=IzsJHOwbUrmak4wS-1).
+Information for the tokens have been obtained from the [Gemeente Hoeksche Waard website](https://www.gemeentehw.nl/) and the [designs in Figma](https://www.figma.com/design/b8GQng7VNPiKedjdd6KDJs/MijnHW?node-id=646-436&node-type=canvas&t=jiGcNaGS0T9NXjgS-0).
 
 ## File format
 
