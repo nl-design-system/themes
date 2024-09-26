@@ -64,6 +64,10 @@
           "xl": {
             "$value": "2rem",
             "$type": "fontSizes"
+          },
+          "xxl": {
+            "$value": "2.5rem",
+            "$type": "fontSizes"
           }
         },
         "weight": {
@@ -633,9 +637,40 @@
             "$type": "sizing"
           }
         }
+      },
+      "font": {
+        "size": {
+          "heading": {
+            "level-1": {
+              "value": "{brand.font.size.xxl}",
+              "type": "fontSizes"
+            },
+            "level-2": {
+              "value": "{brand.font.size.xl}",
+              "type": "fontSizes"
+            },
+            "level-3": {
+              "value": "{brand.font.size.lg}",
+              "type": "fontSizes"
+            },
+            "level-4": {
+              "value": "{brand.font.size.md}",
+              "type": "fontSizes"
+            },
+            "level-5": {
+              "value": "{brand.font.size.sm}",
+              "type": "fontSizes"
+            },
+            "level-6": {
+              "value": "{brand.font.size.xs}",
+              "type": "fontSizes"
+            }
       }
     }
-  },
+  }
+}
+
+},
   "components/button": {
     "utrecht": {
       "button": {
@@ -1014,8 +1049,192 @@
       }
     }
   },
+  "components/heading": {
+    "utrecht": {
+      "heading-1": {
+        "color": {
+          "value": "{utrecht.heading.color}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{utrecht.heading.font-weight}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "font-size": {
+          "value": "{common.font.size.heading.level-1}",
+          "type": "fontSizes"
+        },
+        "margin-block-end": {
+          "value": "{}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{}",
+          "type": "spacing"
+        }
+      },
+      "heading-2": {
+        "color": {
+          "value": "{utrecht.heading.color}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{utrecht.heading.font-weight}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "font-size": {
+          "value": "{common.font.size.heading.level-2}",
+          "type": "fontSizes"
+        },
+        "margin-block-end": {
+          "value": "{}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{}",
+          "type": "spacing"
+        }
+      },
+      "heading-3": {
+        "color": {
+          "value": "{utrecht.heading.color}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{utrecht.heading.font-weight}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "font-size": {
+          "value": "{common.font.size.heading.level-3}",
+          "type": "fontSizes"
+        },
+        "margin-block-end": {
+          "value": "{}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{}",
+          "type": "spacing"
+        }
+      },
+      "heading-4": {
+        "color": {
+          "value": "{utrecht.heading.color}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{utrecht.heading.font-weight}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "font-size": {
+          "value": "{common.font.size.heading.level-4}",
+          "type": "fontSizes"
+        },
+        "margin-block-end": {
+          "value": "{}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{}",
+          "type": "spacing"
+        }
+      },
+      "heading-5": {
+        "color": {
+          "value": "{utrecht.heading.color}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{utrecht.heading.font-weight}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "font-size": {
+          "value": "{common.font.size.heading.level-5}",
+          "type": "fontSizes"
+        },
+        "margin-block-end": {
+          "value": "{}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{}",
+          "type": "spacing"
+        }
+      },
+      "heading-6": {
+        "color": {
+          "value": "{utrecht.heading.color}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{utrecht.heading.font-weight}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "font-size": {
+          "value": "{common.font.size.heading.level-6}",
+          "type": "fontSizes"
+        },
+        "margin-block-end": {
+          "value": "{}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{}",
+          "type": "spacing"
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": ["brand", "common", "components/button"]
+    "tokenSetOrder": ["brand", "common", "components/button","components/heading"]
   }
 }
