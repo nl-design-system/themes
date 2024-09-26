@@ -1,5 +1,169 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 2.0.0
+
+### Major Changes
+
+- 4c23b37: Renamed tokens:
+
+  - `link.focus.text-decoration` to `link.focus-visible.text-decoration`
+  - `link.focus.text-decoration-thickness` to `link.focus-visible.text-decoration-thickness`
+  - `skip-link.focus.text-decoration` to `skip-link.focus-visible.text-decoration`
+  - `skip-link.focus.background-color` to `skip-link.focus-visible.background-color`
+  - `skip-link.focus.color` to `skip-link.focus-visible.color`
+
+  Deleted tokens:
+  `todo.link.active.text-decoration`
+
+- 4a31d3a: Renamed
+
+  - tokenset from `text input` to `textbox`.
+
+  Removed tokens:
+
+  - `textbox.hover.border-width`
+  - `textbox.focus.border-width`
+
+  Added token:
+
+  - `textbox.min-block-size`
+  - `textbox.invalid.border-block-end-width`
+
+  Prefix from `.utrecht` to `.todo`
+
+  - `textbox.focus.border-width`
+  - `textbox.hover.*`
+
+  Referenced to common form-control tokens.
+
+- c1bad10: Changed name of tokens:
+
+  - `.breadcrumb.divider.color` to `.breadcrumb-nav.separator.color`.
+  - `.breadcrumb.divider.size` to `.breadcrumb-nav.separator.size`.
+  - `.breadcrumb.margin-inline` to `breadcrumb-nav.column-gap`.
+  - `.breadcrumb.link.icon.margin-inline` to `.breadcrumb-nav.link.icon.column-gap`.
+
+- 3df569b: Changed prefix from `.utrecht` to `.todo` for tokens that do not (yet) exist in code:
+
+  Additional states when checked:
+
+  - `.checkbox.checked.active.background-color`
+  - `.checkbox.checked.active.border-color`
+  - `.checkbox.checked.active.border-width`
+  - `.checkbox.checked.active.color`
+  - `.checkbox.checked.focus.background-color`
+  - `.checkbox.checked.focus.border-color`
+  - `.checkbox.checked.focus.border-width`
+  - `.checkbox.checked.focus.color`
+  - `.checkbox.checked.hover.background-color`
+  - `.checkbox.checked.hover.border-color`
+  - `.checkbox.checked.hover.border-width`
+  - `.checkbox.checked.hover.color`
+  - `.checkbox.checked.disabled.background-color`
+  - `.checkbox.checked.disabled.border-color`
+  - `.checkbox.checked.disabled.color`
+
+  Additional states when indeterminate:
+
+  - `.checkbox.indeterminate.active.background-color`
+  - `.checkbox.indeterminate.active.border-color`
+  - `.checkbox.indeterminate.active.border-width`
+  - `.checkbox.indeterminate.active.color`
+  - `.checkbox.indeterminate.focus.background-color`
+  - `.checkbox.indeterminate.focus.border-color`
+  - `.checkbox.indeterminate.focus.border-width`
+  - `.checkbox.indeterminate.focus.color`
+  - `.checkbox.indeterminate.hover.background-color`
+  - `.checkbox.indeterminate.hover.border-color`
+  - `.checkbox.indeterminate.hover.border-width`
+  - `.checkbox.indeterminate.hover.color`
+  - `.checkbox.indeterminate.disabled.background-color`
+  - `.checkbox.indeterminate.disabled.border-color`
+  - `.checkbox.indeterminate.disabled.color`
+
+- 2aea9be: Aligned textarea tokens with code.
+
+  Renamed token:
+
+  - `textarea.border-bottom-width` to `textarea.border-block-end-width`
+
+  Removed tokens:
+
+  - `textarea.hover.border-width`
+  - `textarea.focus.border-width`
+
+  Added token:
+
+  - `textarea.min-block-size`
+  - `textarea.invalid.border-block-end-width`
+
+  Prefix from `.utrecht` to `.todo`
+
+  - `textarea.focs.border-width`
+  - `textarea.hover.*`
+
+- 066e718: Aligned unordered-list tokens with code.
+
+  Added token `unordered-list.item.padding-inline-start`
+
+  Removed tokens:
+
+  - `unordered-list.color`
+  - `unordered-list.font-family`
+  - `unordered-list.font-weight`
+  - `unordered-list.marker.border-color`
+
+- 8f77795: Aligned table tokens with code.
+
+  Changed order in json for better scanning.
+
+  Renamed token:
+
+  - `table.header-cell.color` to `table.header.color`
+  - `table.footer-cell.color` to `table.footer.color`
+  - `table.data-cell.font-family` to `table.font-family`
+  - `table.data-cell.font-size` to `table.font-size`
+  - `table.data-cell.line-height` to `table.line-height`
+  - `table.footer.border-block-end-color` to `table.footer.border-block-start-color`
+  - `table.footer.border-block-end-width` to `table.footer.border-block-start-width`
+
+  Removed token:
+
+  - `table.data-cell.color`
+  - `table.data-cell.font-weight`
+  - `table.footer-cell.font-family`
+  - `table.header-cell.font-family`
+  - `table.footer-cell.font-size`
+  - `table.header-cell.font-size`
+  - `table.footer-cell.line-height`
+  - `table.header-cell.line-height`
+
+  Prefix from `.utrecht` to `.todo`
+
+  - `table.footer.border-block-start-width`
+  - `table.footer.border-block-start-color`
+  - `table.footer-cell.font-weight`
+
+### Minor Changes
+
+- d25afd3: Changed the value of `padding-inline-start` tokens.
+- 4b2c160: New added form-control-tokens:
+
+  - `form-control.border-width`
+  - `form-control.border-radius`
+  - `form-control.font-family`
+  - `form-control.font-size`
+  - `form-control.line-height`
+  - `form-control.max-inline-size`
+  - `form-control.padding-block-end`
+  - `form-control.padding-block-start`
+  - `form-control.padding-inline-end`
+  - `form-control.padding-inline-start`
+
+  Referenced in Select component.
+
+- 95b74c0: Add missing token for invalid border-block-end-width.
+
 ## 1.0.0
 
 ### Major Changes
