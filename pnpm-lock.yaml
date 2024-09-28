@@ -114,6 +114,9 @@ importers:
       '@amsterdam/design-system-tokens':
         specifier: 0.11.0
         version: 0.11.0
+      '@bundled-es-modules/memfs':
+        specifier: 4.9.4
+        version: 4.9.4
       '@gemeente-denhaag/design-tokens-components':
         specifier: 0.2.3-alpha.403
         version: 0.2.3-alpha.403
@@ -270,9 +273,15 @@ importers:
       '@storybook/react-vite':
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))
+      '@types/lodash':
+        specifier: 4.17.9
+        version: 4.17.9
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
+      '@utrecht/component-library-react':
+        specifier: 5.0.0
+        version: 5.0.0(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/components':
         specifier: 6.2.0
         version: 6.2.0
@@ -288,6 +297,9 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
@@ -303,6 +315,9 @@ importers:
       storybook:
         specifier: 8.2.7
         version: 8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5))
+      style-dictionary:
+        specifier: 4.0.1
+        version: 4.0.1
       vite:
         specifier: 5.3.5
         version: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
@@ -3701,6 +3716,9 @@ packages:
 
   '@types/lodash@4.17.0':
     resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
+
+  '@types/lodash@4.17.9':
+    resolution: {integrity: sha512-w9iWudx1XWOHW5lQRS9iKpK/XuRhnN+0T7HvdCCd802FYkT1AMTnxndJHGrNJwRoRHkslGr4S29tjm1cT7x/7w==}
 
   '@types/mdast@3.0.11':
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
@@ -10210,7 +10228,7 @@ snapshots:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/icons': 1.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/lodash': 4.17.0
+      '@types/lodash': 4.17.9
       color-convert: 2.0.1
       dequal: 2.0.3
       lodash: 4.17.21
@@ -10583,6 +10601,8 @@ snapshots:
       '@types/lodash': 4.17.0
 
   '@types/lodash@4.17.0': {}
+
+  '@types/lodash@4.17.9': {}
 
   '@types/mdast@3.0.11':
     dependencies:
