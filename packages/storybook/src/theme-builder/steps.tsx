@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { ButtonExample, FocusVisibleExample, HeadingsExample, LinkExample } from './examples';
 
 export interface ThemeBuilderStepObject {
   name: string;
   tokens: string[];
-  story: string;
+  example: () => ReactNode;
   commonTokens?: string[];
   description?: () => ReactNode;
 }
@@ -13,7 +14,7 @@ export const steps: ThemeBuilderStepObject[] = [
   {
     name: 'Brand colors',
     tokens: [],
-    story: 'link',
+    example: LinkExample,
     description: () => (
       <>
         <Paragraph>{'Kies je primaire kleuren.'}</Paragraph>
@@ -40,7 +41,7 @@ export const steps: ThemeBuilderStepObject[] = [
   {
     name: 'Font families',
     tokens: [],
-    story: 'link',
+    example: LinkExample,
     description: () => (
       <>
         <Paragraph>{'Decide your font families now.'}</Paragraph>
@@ -61,17 +62,17 @@ export const steps: ThemeBuilderStepObject[] = [
       'utrecht.link.hover.color',
       'utrecht.link.focus.color',
     ],
-    story: 'link',
+    example: LinkExample,
   },
   {
     name: 'Font size scale',
     tokens: ['utrecht.document.font-size', 'utrecht.document.line-height'],
-    story: 'headings',
+    example: HeadingsExample,
   },
   {
     name: 'Border radius',
     tokens: ['utrecht.form-control.border-radius', 'utrecht.button.border-radius'],
-    story: 'button',
+    example: ButtonExample,
   },
   {
     name: 'Focus visible',
@@ -83,12 +84,12 @@ export const steps: ThemeBuilderStepObject[] = [
       'utrecht.focus.background-color',
     ],
     tokens: [],
-    story: 'focus-visible',
+    example: FocusVisibleExample,
   },
   {
     name: 'Pointer target',
     tokens: ['utrecht.pointer-target.min-size'],
-    story: 'button',
+    example: ButtonExample,
     description: () => (
       <>
         <Paragraph>
@@ -107,11 +108,11 @@ export const steps: ThemeBuilderStepObject[] = [
   {
     name: 'Basis Thema',
     tokens: [],
-    story: 'headings',
+    example: HeadingsExample,
   },
   {
     name: 'Font family',
     tokens: ['utrecht.document.font-family', 'utrecht.heading.font-family'],
-    story: 'headings',
+    example: HeadingsExample,
   },
 ];
