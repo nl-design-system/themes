@@ -52,7 +52,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Publish to Chromatic
-        uses: chromaui/action@fdbe7756d4dbf493e2fbb822df73be7accd07e1c # v11.7.0
+        uses: chromaui/action@30b6228aa809059d46219e0f556752e8672a7e26 # v11.11.0
         if: |
           github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
