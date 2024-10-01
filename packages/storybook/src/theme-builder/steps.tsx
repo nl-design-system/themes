@@ -22,6 +22,18 @@ export const steps: ThemeBuilderStepObject[] = [
             'Je kunt in een latere stap kleuren kiezen die zijn afgeleid van de primaire kleuren, zoals lichtere en donkere varianten.'
           }
         </Paragraph>
+        <Paragraph>Nu moet ik nog met de hand: voeg brand tokens tool aan je Figma.tokens.json bestand</Paragraph>
+        <Paragraph>ProjectWallace gebruiken om DesignToken van een theme te bekijken</Paragraph>
+      </>
+    ),
+  },
+  {
+    name: 'Common colors/Signaal colors',
+    tokens: ['basis.color.green', 'basis.color.red', 'basis.color.yellow'],
+    story: 'alert',
+    description: () => (
+      <>
+        <Paragraph>{'Kies rood,groen of geel.'}</Paragraph>
       </>
     ),
   },
