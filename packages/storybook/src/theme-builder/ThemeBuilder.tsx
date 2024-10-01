@@ -1,10 +1,9 @@
 import StyleDictionary from 'style-dictionary';
 import memfs from '@bundled-es-modules/memfs';
-import type { PropsWithChildren } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
 import { useState, useEffect } from 'react';
 import { ThemeBuilderStepObject } from './steps';
 import { DesignTokenTree } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens';
-import { examples } from './examples';
 import { treeToArray } from '@nl-design-system-unstable/theme-toolkit/dist/ExampleTokensCSS';
 import './ThemeBuilder.css';
 import './property.css';
@@ -78,7 +77,7 @@ export interface ThemeBuilderProps {
   steps: ThemeBuilderStepObject[];
   theme: DesignTokenTree;
   basis: DesignTokenTree;
-  example?: keyof typeof examples;
+  example?: () => ReactNode;
   allTokens?: boolean;
 }
 
@@ -92,7 +91,7 @@ export const ThemeBuilder = ({
   allTokens,
 }: PropsWithChildren<ThemeBuilderProps>) => {
   const stepData = steps[step];
-  const Example = examples[example];
+  const Example = example || stepData?.example;
   const Description = stepData?.description;
 
   let relevantTokens = steps
