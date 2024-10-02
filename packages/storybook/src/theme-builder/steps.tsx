@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
-import { ButtonExample, FocusVisibleExample, HeadingsExample, LinkExample } from './examples';
+import { ButtonExample, FocusVisibleExample, HeadingsExample, LinkExample, AlertExample } from './examples';
 
 export interface ThemeBuilderStepObject {
   name: string;
@@ -31,7 +31,7 @@ export const steps: ThemeBuilderStepObject[] = [
   {
     name: 'Common colors/Signaal colors',
     tokens: ['basis.color.green', 'basis.color.red', 'basis.color.yellow'],
-    story: 'alert',
+    example: AlertExample,
     description: () => (
       <>
         <Paragraph>{'Kies rood,groen of geel.'}</Paragraph>

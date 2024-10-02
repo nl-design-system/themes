@@ -107,8 +107,8 @@ export const HeadingsExample = () => {
 export const AlertExample = () => {
   return (
     <>
-      <Alert type="danger">
-        <Heading2>Danger</Heading2>
+      <Alert type="error">
+        <Heading2>Error</Heading2>
       </Alert>
       <Alert type="warning">
         <Heading2>Warning</Heading2>
