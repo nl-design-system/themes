@@ -39,10 +39,10 @@ export const steps: ThemeBuilderStepObject[] = [
   {
     name: 'Font families',
     tokens: [
-      'basis.common.typography.font-family.default',
-      'basis.common.typography.font-family.sans-serif',
-      'basis.common.typography.font-family.serif',
-      'basis.common.typography.font-family.code',
+      'basis.typography.font-family.default',
+      'basis.typography.font-family.sans-serif',
+      'basis.typography.font-family.serif',
+      'basis.typography.font-family.code',
     ],
     example: LinkExample,
     description: () => (
@@ -59,14 +59,14 @@ export const steps: ThemeBuilderStepObject[] = [
   {
     name: 'Font size scale',
     tokens: [
-      'basis.common.typography.font-size.xx-small',
-      'basis.common.typography.font-size.x-small',
-      'basis.common.typography.font-size.small',
-      'basis.common.typography.font-size.medium',
-      'basis.common.typography.font-size.large',
-      'basis.common.typography.font-size.x-large',
-      'basis.common.typography.font-size.xx-large',
-      'basis.common.typography.font-size.xxx-large',
+      'basis.typography.font-size.xx-small',
+      'basis.typography.font-size.x-small',
+      'basis.typography.font-size.small',
+      'basis.typography.font-size.medium',
+      'basis.typography.font-size.large',
+      'basis.typography.font-size.x-large',
+      'basis.typography.font-size.xx-large',
+      'basis.typography.font-size.xxx-large',
     ],
     example: FontSizeScale,
     description: () => (

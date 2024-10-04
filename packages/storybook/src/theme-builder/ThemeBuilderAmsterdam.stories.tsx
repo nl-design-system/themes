@@ -20,7 +20,7 @@ export const amsterdamTheme = addPath(convertValueTreeToDesignTokenTree(amsterda
 
 const meta = {
   title: 'Theme Builder/Amsterdam',
-  id: 'theme-builder-amsterdam',
+  id: 'theme-builder-ams',
   component: ThemeBuilder,
   args: {
     step: 0,
@@ -29,13 +29,17 @@ const meta = {
     theme: amsterdamTheme,
     themeExtension: {
       basis: {
-        common: {
-          typography: {
-            'font-family': {
-              default: {
-                value: '{ams.text.font-family}',
-              },
-            },
+        typography: {
+          'font-family': {
+            default: { value: '{ams.text.font-family}' },
+          },
+          'font-size': {
+            small: { value: '{ams.text.level.6.font-size}' },
+            medium: { value: '{ams.text.level.5.font-size}' },
+            large: { value: '{ams.text.level.4.font-size}' },
+            'x-large': { value: '{ams.text.level.3.font-size}' },
+            'xx-large': { value: '{ams.text.level.2.font-size}' },
+            'xxx-large': { value: '{ams.text.level.1.font-size}' },
           },
         },
       },
