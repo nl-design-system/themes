@@ -33,7 +33,7 @@ const meta = {
           typography: {
             'font-family': {
               default: {
-                value: 'Comic Sans MS',
+                value: '{ams.text.font-family}',
               },
             },
           },

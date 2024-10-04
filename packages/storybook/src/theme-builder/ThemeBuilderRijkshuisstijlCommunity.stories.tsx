@@ -26,7 +26,13 @@ const meta = {
           typography: {
             'font-family': {
               default: {
-                value: 'Comic Sans MS',
+                value: '{rhc.font-family.primary}',
+              },
+              serif: {
+                value: '{rhc.font-family.secondary}',
+              },
+              'sans-serif': {
+                value: '{rhc.font-family.primary}',
               },
             },
           },
