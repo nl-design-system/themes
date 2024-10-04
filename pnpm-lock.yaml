@@ -31,8 +31,8 @@ importers:
         specifier: 1.0.0-alpha.30
         version: 1.0.0-alpha.30
       '@types/node':
-        specifier: 22.1.0
-        version: 22.1.0
+        specifier: 22.7.4
+        version: 22.7.4
       '@typescript-eslint/eslint-plugin':
         specifier: 8.0.0
         version: 8.0.0(@typescript-eslint/parser@8.0.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
@@ -272,7 +272,7 @@ importers:
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)
       '@storybook/react-vite':
         specifier: 8.2.7
-        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.7.4)(sass@1.77.8))
       '@types/lodash':
         specifier: 4.17.9
         version: 4.17.9
@@ -320,7 +320,7 @@ importers:
         version: 4.0.1
       vite:
         specifier: 5.3.5
-        version: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+        version: 5.3.5(@types/node@22.7.4)(sass@1.77.8)
 
   packages/theme-logo: {}
 
@@ -3755,6 +3755,9 @@ packages:
 
   '@types/node@22.1.0':
     resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
+
+  '@types/node@22.7.4':
+    resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -7989,6 +7992,9 @@ packages:
   undici-types@6.13.0:
     resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
 
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
   unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
     engines: {node: '>=4'}
@@ -9889,13 +9895,13 @@ snapshots:
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.7.4)(sass@1.77.8))':
     dependencies:
       glob: 7.2.3
       glob-promise: 4.2.2(glob@7.2.3)
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.5.4)
-      vite: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+      vite: 5.3.5(@types/node@22.7.4)(sass@1.77.8)
     optionalDependencies:
       typescript: 5.5.4
 
@@ -10244,7 +10250,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/builder-vite@8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))':
+  '@storybook/builder-vite@8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.7.4)(sass@1.77.8))':
     dependencies:
       '@storybook/csf-plugin': 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))
       '@types/find-cache-dir': 3.2.1
@@ -10256,7 +10262,7 @@ snapshots:
       magic-string: 0.30.8
       storybook: 8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5))
       ts-dedent: 2.2.0
-      vite: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+      vite: 5.3.5(@types/node@22.7.4)(sass@1.77.8)
     optionalDependencies:
       typescript: 5.5.4
     transitivePeerDependencies:
@@ -10334,11 +10340,11 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       storybook: 8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5))
 
-  '@storybook/react-vite@8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))':
+  '@storybook/react-vite@8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.7.4)(sass@1.77.8))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.7.4)(sass@1.77.8))
       '@rollup/pluginutils': 5.1.0(rollup@4.19.2)
-      '@storybook/builder-vite': 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))
+      '@storybook/builder-vite': 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.7.4)(sass@1.77.8))
       '@storybook/react': 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)
       find-up: 5.0.0
       magic-string: 0.30.8
@@ -10348,7 +10354,7 @@ snapshots:
       resolve: 1.22.8
       storybook: 8.2.7(@babel/preset-env@7.24.5(@babel/core@7.24.5))
       tsconfig-paths: 4.2.0
-      vite: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+      vite: 5.3.5(@types/node@22.7.4)(sass@1.77.8)
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - rollup
@@ -10495,7 +10501,7 @@ snapshots:
 
   '@types/concat-stream@2.0.0':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.7.4
 
   '@types/connect@3.4.38':
     dependencies:
@@ -10637,6 +10643,10 @@ snapshots:
   '@types/node@22.1.0':
     dependencies:
       undici-types: 6.13.0
+
+  '@types/node@22.7.4':
+    dependencies:
+      undici-types: 6.19.8
 
   '@types/normalize-package-data@2.4.1': {}
 
@@ -15659,6 +15669,8 @@ snapshots:
 
   undici-types@6.13.0: {}
 
+  undici-types@6.19.8: {}
+
   unicode-canonical-property-names-ecmascript@2.0.0: {}
 
   unicode-match-property-ecmascript@2.0.0:
@@ -15865,13 +15877,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.3.5(@types/node@22.1.0)(sass@1.77.8):
+  vite@5.3.5(@types/node@22.7.4)(sass@1.77.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
       rollup: 4.18.1
     optionalDependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.7.4
       fsevents: 2.3.3
       sass: 1.77.8
 
