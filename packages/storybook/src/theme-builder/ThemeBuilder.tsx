@@ -6,6 +6,7 @@ import { ThemeBuilderStepObject } from './steps';
 import { DesignTokenTree } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens';
 import { treeToArray } from '@nl-design-system-unstable/theme-toolkit/dist/ExampleTokensCSS';
 import { CustomStory } from '@nl-design-system-unstable/theme-toolkit/dist/CustomStory';
+import { merge } from 'lodash';
 import './ThemeBuilder.css';
 import './property.css';
 
@@ -77,6 +78,7 @@ export interface ThemeBuilderProps {
   step: number;
   steps: ThemeBuilderStepObject[];
   theme: DesignTokenTree;
+  themeExtension?: DesignTokenTree;
   basis: DesignTokenTree;
   example?: () => ReactNode;
   allTokens?: boolean;
@@ -85,6 +87,7 @@ export interface ThemeBuilderProps {
 export const ThemeBuilder = ({
   steps,
   theme,
+  themeExtension,
   basis,
   step,
   example,
@@ -95,7 +98,7 @@ export const ThemeBuilder = ({
   const Example = example || stepData?.example;
   const Description = stepData?.description;
 
-  const currentStepTokens = [...(stepData.tokens || []), ...(stepData.commonTokens || [])];
+  const currentStepTokens = [...(stepData?.tokens || []), ...(stepData?.commonTokens || [])];
 
   let previousTokens = steps
     .slice(0, step)
@@ -128,7 +131,20 @@ export const ThemeBuilder = ({
         ['voorbeeld', 'groningen', 'rods'].includes(token.path[0]) ||
         (token.path[0] === 'utrecht' && (token.path[1] === 'color' || token.path[1] === 'typography')) ||
         (token.path[0] === 'denhaag' &&
-          (token.path[1] === 'color' || token.path[1] === 'typography' || token.path[1] === 'size'))
+          (token.path[1] === 'color' || token.path[1] === 'typography' || token.path[1] === 'size')) ||
+        (token.path[0] === 'ams' && ['border', 'color', 'proportion', 'space', 'text'].includes(token.path[1])) ||
+        (token.path[0] === 'rhc' &&
+          [
+            'border-width',
+            'color',
+            'font-family',
+            'font-weight',
+            'space',
+            'size',
+            'line-height',
+            'font-size',
+            'border-radius',
+          ].includes(token.path[1]))
       );
     }).then(({ css }) => {
       setBrandCss(css);
@@ -136,13 +152,13 @@ export const ThemeBuilder = ({
   }, [theme]);
 
   useEffect(() => {
-    styleDictionaryConversion(theme, '.step-theme', (token) => {
+    styleDictionaryConversion(merge(theme, themeExtension), '.step-theme', (token) => {
       return relevantTokenSet.has((token.path || []).join('.'));
     }).then(({ css, json }) => {
       console.log(json);
       setCustomThemeCss(css);
     }, console.error);
-  }, [step, theme]);
+  }, [step, theme, themeExtension]);
 
   return (
     <div className="theme-builder">
