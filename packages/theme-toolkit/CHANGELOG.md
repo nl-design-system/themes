@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/theme-toolkit
 
+## 1.1.0
+
+### Minor Changes
+
+- 9ec5b3f: Add new utility functions to the theme-toolkit.
+
 ## 1.0.0
 
 ### Minor Changes
