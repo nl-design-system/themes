@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { ThemeBuilderStepObject } from './steps';
 import { DesignTokenTree } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens';
 import { treeToArray } from '@nl-design-system-unstable/theme-toolkit/dist/ExampleTokensCSS';
+import { CustomStory } from '@nl-design-system-unstable/theme-toolkit/dist/CustomStory';
 import './ThemeBuilder.css';
 import './property.css';
 
@@ -94,6 +95,12 @@ export const ThemeBuilder = ({
   const Example = example || stepData?.example;
   const Description = stepData?.description;
 
+  const currentStepTokens = [...(stepData.tokens || []), ...(stepData.commonTokens || [])];
+
+  let previousTokens = steps
+    .slice(0, step)
+    .reduce((arr, step) => [...arr, ...step.tokens, ...(step.commonTokens || [])], []);
+
   let relevantTokens = steps
     .slice(0, step + 1)
     .reduce((arr, step) => [...arr, ...step.tokens, ...(step.commonTokens || [])], []);
@@ -139,16 +146,28 @@ export const ThemeBuilder = ({
 
   return (
     <div className="theme-builder">
-      <div className="theme-builder__example basis-theme brand-tokens step-theme">{Example && <Example />}</div>
+      <CustomStory>
+        <div className="theme-builder__example basis-theme brand-tokens step-theme">{Example && <Example />}</div>
+      </CustomStory>
       <h2>{stepData?.name || `Stap ${step}`}</h2>
       {Description && <Description />}
       <style dangerouslySetInnerHTML={{ __html: basisThemeCss }}></style>
       <style dangerouslySetInnerHTML={{ __html: brandCss }}></style>
       <style dangerouslySetInnerHTML={{ __html: customThemeCss }}></style>
       <details>
-        <summary>{relevantTokens.length} tokens up until this step</summary>
+        <summary>{currentStepTokens.length} tokens for this step</summary>
         <ul>
-          {relevantTokens.map((token, index) => (
+          {currentStepTokens.map((token, index) => (
+            <li key={index}>
+              <code>{token}</code>
+            </li>
+          ))}
+        </ul>
+      </details>
+      <details>
+        <summary>{previousTokens.length} tokens before this step</summary>
+        <ul>
+          {previousTokens.map((token, index) => (
             <li key={index}>
               <code>{token}</code>
             </li>
