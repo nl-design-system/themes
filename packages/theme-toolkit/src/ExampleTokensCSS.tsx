@@ -36,19 +36,20 @@ export const traverseDeep = (
 export const findDesignTokenDefinitions = <T extends DesignToken = DesignToken>(
   tokens: DesignTokenTree<T>,
   callback: DesignTokenTraverseCallback,
-) => traverseDeep(tokens, [], tokens, isDesignTokenDefinition, callback);
+  testFn = isDesignTokenDefinition,
+) => traverseDeep(tokens, [], tokens, testFn, callback);
 
-export const addPath = (tree: ValueTree): ValueTree => {
+export const addPath = (tree: ValueTree, testFn = isDesignToken): ValueTree => {
   const newTree = cloneDeepWith(tree, () => undefined);
-  traverseDeep(newTree, [], newTree, isDesignToken, (path, token) => {
+  traverseDeep(newTree, [], newTree, testFn, (path, token) => {
     token.path = path;
   });
   return newTree;
 };
 
-export const treeToArray = (tree: DesignTokenTree): DesignToken[] => {
+export const treeToArray = (tree: DesignTokenTree, testFn = isDesignToken): DesignToken[] => {
   const array: DesignToken[] = [];
-  traverseDeep(tree, [], tree, isDesignToken, (_, token) => {
+  traverseDeep(tree, [], tree, testFn, (_, token) => {
     array.push(token);
   });
   return array;
