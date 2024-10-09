@@ -1,6 +1,17 @@
 import type { ReactNode } from 'react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
-import { ButtonExample, FocusVisibleExample, HeadingsExample, LinkExample } from './examples';
+import {
+  ButtonExample,
+  FocusVisibleExample,
+  FontSizeScale,
+  HeadingsExample,
+  LinkExample,
+  InlineSpaceExample,
+  BlockSpaceExample,
+  RowSpaceExample,
+  ColumnSpaceExample,
+  AlertExample,
+} from './examples';
 
 export interface ThemeBuilderStepObject {
   name: string;
@@ -27,8 +38,23 @@ export const steps: ThemeBuilderStepObject[] = [
     ),
   },
   {
+    name: 'Common colors/Signaal colors',
+    tokens: ['basis.color.green', 'basis.color.red', 'basis.color.yellow'],
+    example: AlertExample,
+    description: () => (
+      <>
+        <Paragraph>{'Kies rood,groen of geel.'}</Paragraph>
+      </>
+    ),
+  },
+  {
     name: 'Font families',
-    tokens: [],
+    tokens: [
+      'basis.typography.font-family.default',
+      'basis.typography.font-family.sans-serif',
+      'basis.typography.font-family.serif',
+      'basis.typography.font-family.code',
+    ],
     example: LinkExample,
     description: () => (
       <>
@@ -38,6 +64,84 @@ export const steps: ThemeBuilderStepObject[] = [
             'You need to choose least one font. You can choose up to three fonts: one for regular text, one for serif text, and one for code.'
           }
         </Paragraph>
+      </>
+    ),
+  },
+  {
+    name: 'Font size scale',
+    tokens: [
+      'basis.typography.font-size.xx-small',
+      'basis.typography.font-size.x-small',
+      'basis.typography.font-size.small',
+      'basis.typography.font-size.medium',
+      'basis.typography.font-size.large',
+      'basis.typography.font-size.x-large',
+      'basis.typography.font-size.xx-large',
+      'basis.typography.font-size.xxx-large',
+    ],
+    example: FontSizeScale,
+    description: () => (
+      <>
+        <Paragraph>{'Decide your font sizes now.'}</Paragraph>
+      </>
+    ),
+  },
+  {
+    name: 'Feedback colors: red',
+    tokens: [
+      'basis.common.feedback.light-color-scheme.red.shade-1',
+      'basis.common.feedback.light-color-scheme.red.shade-2',
+      'basis.common.feedback.light-color-scheme.red.shade-3',
+      'basis.common.feedback.light-color-scheme.red.shade-4',
+      'basis.common.feedback.light-color-scheme.red.shade-5',
+      'basis.common.feedback.light-color-scheme.red.shade-6',
+      'basis.common.feedback.light-color-scheme.red.shade-7',
+      'basis.common.feedback.light-color-scheme.red.shade-8',
+      'basis.common.feedback.light-color-scheme.red.shade-9',
+      'basis.common.feedback.light-color-scheme.red.shade-10',
+      'basis.common.feedback.light-color-scheme.red.shade-11',
+      'basis.common.feedback.light-color-scheme.red.shade-12',
+      'basis.common.feedback.light-color-scheme.red.inverse-1',
+      'basis.common.feedback.light-color-scheme.red.inverse-2',
+      'basis.common.feedback.light-color-scheme.red.inverse-3',
+      'basis.common.feedback.light-color-scheme.red.inverse-4',
+      'basis.common.feedback.light-color-scheme.red.inverse-5',
+      'basis.common.feedback.light-color-scheme.red.inverse-6',
+      'basis.common.feedback.light-color-scheme.red.inverse-7',
+      'basis.common.feedback.light-color-scheme.red.inverse-8',
+      'basis.common.feedback.light-color-scheme.red.inverse-9',
+      'basis.common.feedback.light-color-scheme.red.inverse-10',
+      'basis.common.feedback.light-color-scheme.red.inverse-11',
+      'basis.common.feedback.light-color-scheme.red.inverse-12',
+      'basis.common.feedback.dark-color-scheme.red.shade-1',
+      'basis.common.feedback.dark-color-scheme.red.shade-2',
+      'basis.common.feedback.dark-color-scheme.red.shade-3',
+      'basis.common.feedback.dark-color-scheme.red.shade-4',
+      'basis.common.feedback.dark-color-scheme.red.shade-5',
+      'basis.common.feedback.dark-color-scheme.red.shade-6',
+      'basis.common.feedback.dark-color-scheme.red.shade-7',
+      'basis.common.feedback.dark-color-scheme.red.shade-8',
+      'basis.common.feedback.dark-color-scheme.red.shade-9',
+      'basis.common.feedback.dark-color-scheme.red.shade-10',
+      'basis.common.feedback.dark-color-scheme.red.shade-11',
+      'basis.common.feedback.dark-color-scheme.red.shade-12',
+      'basis.common.feedback.dark-color-scheme.red.inverse-1',
+      'basis.common.feedback.dark-color-scheme.red.inverse-2',
+      'basis.common.feedback.dark-color-scheme.red.inverse-3',
+      'basis.common.feedback.dark-color-scheme.red.inverse-4',
+      'basis.common.feedback.dark-color-scheme.red.inverse-5',
+      'basis.common.feedback.dark-color-scheme.red.inverse-6',
+      'basis.common.feedback.dark-color-scheme.red.inverse-7',
+      'basis.common.feedback.dark-color-scheme.red.inverse-8',
+      'basis.common.feedback.dark-color-scheme.red.inverse-9',
+      'basis.common.feedback.dark-color-scheme.red.inverse-10',
+      'basis.common.feedback.dark-color-scheme.red.inverse-11',
+      'basis.common.feedback.dark-color-scheme.red.inverse-12',
+    ],
+    example: FontSizeScale,
+    description: () => (
+      <>
+        <Paragraph>{'Decide your font sizes now.'}</Paragraph>
       </>
     ),
   },
@@ -63,7 +167,67 @@ export const steps: ThemeBuilderStepObject[] = [
     example: ButtonExample,
   },
   {
-    name: 'Focus visible',
+    name: 'Focus visible: Basis',
+    commonTokens: [
+      'basis.common.focus.outline-color',
+      'basis.common.focus.outline-offset',
+      'basis.common.focus.outline-width',
+      'basis.common.focus.color',
+      'basis.common.focus.background-color',
+    ],
+    tokens: [],
+    example: FocusVisibleExample,
+  },
+  {
+    name: 'Inline space',
+    commonTokens: [
+      'basis.common.space.inline.x-small',
+      'basis.common.space.inline.small',
+      'basis.common.space.inline.medium',
+      'basis.common.space.inline.large',
+      'basis.common.space.inline.x-large',
+    ],
+    tokens: [],
+    example: InlineSpaceExample,
+  },
+  {
+    name: 'Block space',
+    commonTokens: [
+      'basis.common.space.inline.x-small',
+      'basis.common.space.inline.small',
+      'basis.common.space.inline.medium',
+      'basis.common.space.inline.large',
+      'basis.common.space.inline.x-large',
+    ],
+    tokens: [],
+    example: BlockSpaceExample,
+  },
+  {
+    name: 'Column space',
+    commonTokens: [
+      'basis.common.space.column.x-small',
+      'basis.common.space.column.small',
+      'basis.common.space.column.medium',
+      'basis.common.space.column.large',
+      'basis.common.space.column.x-large',
+    ],
+    tokens: [],
+    example: ColumnSpaceExample,
+  },
+  {
+    name: 'Row space',
+    commonTokens: [
+      'basis.common.space.row.x-small',
+      'basis.common.space.row.small',
+      'basis.common.space.row.medium',
+      'basis.common.space.row.large',
+      'basis.common.space.row.x-large',
+    ],
+    tokens: [],
+    example: RowSpaceExample,
+  },
+  {
+    name: 'Focus visible: Utrecht',
     commonTokens: [
       'utrecht.focus.outline-color',
       'utrecht.focus.outline-offset',
