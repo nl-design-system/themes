@@ -10,6 +10,7 @@ import {
   BlockSpaceExample,
   RowSpaceExample,
   ColumnSpaceExample,
+  AlertExample,
 } from './examples';
 
 export interface ThemeBuilderStepObject {
@@ -33,6 +34,16 @@ export const steps: ThemeBuilderStepObject[] = [
             'Je kunt in een latere stap kleuren kiezen die zijn afgeleid van de primaire kleuren, zoals lichtere en donkere varianten.'
           }
         </Paragraph>
+      </>
+    ),
+  },
+  {
+    name: 'Common colors/Signaal colors',
+    tokens: ['basis.color.green', 'basis.color.red', 'basis.color.yellow'],
+    example: AlertExample,
+    description: () => (
+      <>
+        <Paragraph>{'Kies rood,groen of geel.'}</Paragraph>
       </>
     ),
   },

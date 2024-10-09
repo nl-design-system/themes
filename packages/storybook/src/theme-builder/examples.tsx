@@ -113,6 +113,22 @@ export const LinkExample = () => {
   );
 };
 
+export const AlertExample = () => {
+  return (
+    <>
+      <Alert type="error">
+        <Heading2>Error</Heading2>
+      </Alert>
+      <Alert type="warning">
+        <Heading2>Warning</Heading2>
+      </Alert>
+      <Alert type="ok">
+        <Heading2>Ok</Heading2>
+      </Alert>
+    </>
+  );
+};
+
 export const Collage = () => (
   <main>
     {/*
@@ -413,6 +429,7 @@ export const RowSpaceExample = () => <Paragraph>TODO: Row space example</Paragra
 type RenderFn = () => ReactNode;
 
 export const examples: { [index: string]: RenderFn } = {
+  alert: AlertExample,
   button: ButtonExample,
   headings: HeadingsExample,
   link: LinkExample,
