@@ -36,6 +36,34 @@ const meta = {
               },
             },
           },
+          color: {
+            alert: {
+              error: {
+                default: {
+                  value: '{rhc.color.rood.500}',
+                },
+                subdued: {
+                  value: '{rhc.color.rood.50}',
+                },
+              },
+              warning: {
+                default: {
+                  value: '{rhc.color.donkergeel.500}',
+                },
+                subdued: {
+                  value: '{rhc.color.donkergeel.50}',
+                },
+              },
+              ok: {
+                default: {
+                  value: '{rhc.color.groen.500}',
+                },
+                subdued: {
+                  value: '{rhc.color.groen.50}',
+                },
+              },
+            },
+          },
         },
       },
     },
