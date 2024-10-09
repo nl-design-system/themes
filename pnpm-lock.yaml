@@ -462,6 +462,9 @@ importers:
       '@testing-library/react':
         specifier: 15.0.7
         version: 15.0.7(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/lodash':
+        specifier: 4.17.9
+        version: 4.17.9
       '@types/lodash.clonedeepwith':
         specifier: 4.5.9
         version: 4.5.9
@@ -543,6 +546,9 @@ importers:
       '@utrecht/combobox-css':
         specifier: 1.2.0
         version: 1.2.0
+      '@utrecht/component-library-design-tokens':
+        specifier: 1.0.0
+        version: 1.0.0
       '@utrecht/component-library-react':
         specifier: 7.1.0
         version: 7.1.0(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -723,6 +729,9 @@ importers:
       '@utrecht/url-data-css':
         specifier: 1.1.0
         version: 1.1.0
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -732,12 +741,18 @@ importers:
       jest-environment-jsdom:
         specifier: 29.7.0
         version: 29.7.0
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
       lodash.merge:
         specifier: 4.6.2
         version: 4.6.2
       react:
         specifier: 18.3.1
         version: 18.3.1
+      react-dropzone:
+        specifier: 14.2.9
+        version: 14.2.9(react@18.3.1)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -3717,9 +3732,6 @@ packages:
   '@types/lodash.omitby@4.6.9':
     resolution: {integrity: sha512-QPHwcQeWP/bQVwKV1+goohDgBtSZlHgM2KA/+QhjMYV2/7RTHF72KxLPzybvu8mO7O46NdugTH/yPs3/Jcavxw==}
 
-  '@types/lodash@4.17.0':
-    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
-
   '@types/lodash@4.17.9':
     resolution: {integrity: sha512-w9iWudx1XWOHW5lQRS9iKpK/XuRhnN+0T7HvdCCd802FYkT1AMTnxndJHGrNJwRoRHkslGr4S29tjm1cT7x/7w==}
 
@@ -3935,6 +3947,9 @@ packages:
 
   '@utrecht/component-library-css@4.2.0':
     resolution: {integrity: sha512-QvN0QEfVF9KJh8WD7gKJPhxMO1Eq8leB/x6h0JdkDrK7iRP+bceQtV74tn3JzkeP5LGZUsYulWXPhb6Hk6NKdw==}
+
+  '@utrecht/component-library-design-tokens@1.0.0':
+    resolution: {integrity: sha512-m9SlyD4Z3aMqPPJ6FR1q7zcnXejQMPa+qDh0roLcmiMLDzO4UNwSezjALdrfbxMaGBK41la244EvY7zryLsIwg==}
 
   '@utrecht/component-library-react@7.1.0':
     resolution: {integrity: sha512-TPYDkuGWKfvhkdFBPtVfUMEXjqqabSia++Ewf2FyRYuCSud/ZxWCkw53Pf7HXlEloAngQMc/BbrJB4f2Ok9B+Q==}
@@ -4321,6 +4336,10 @@ packages:
   at-least-node@1.0.0:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
+
+  attr-accept@2.2.4:
+    resolution: {integrity: sha512-2pA6xFIbdTUDCAwjN8nQwI+842VwzbDUXO2IYlpPXQIORgKnavorcr4Ce3rwh+zsNg9zK7QPsdvDj3Lum4WX4w==}
+    engines: {node: '>=4'}
 
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
@@ -5232,6 +5251,10 @@ packages:
   file-entry-cache@9.0.0:
     resolution: {integrity: sha512-6MgEugi8p2tiUhqO7GnPsmbCCzj0YRCwwaTbpGRyKZesjRSzkqkAE9fPp7V2yMs5hwfgbQLgdvSSkGNg1s5Uvw==}
     engines: {node: '>=18'}
+
+  file-selector@0.6.0:
+    resolution: {integrity: sha512-QlZ5yJC0VxHxQQsQhXvBaC7VRJ2uaxTf+Tfpu4Z/OcVQJVpZO+DGU0rkoVW5ce2SccxugvpBJoMvUs59iILYdw==}
+    engines: {node: '>= 12'}
 
   filelist@1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
@@ -7174,6 +7197,12 @@ packages:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
       react: ^18.3.1
+
+  react-dropzone@14.2.9:
+    resolution: {integrity: sha512-jRZsMC7h48WONsOLHcmhyn3cRWJoIPQjPApvt/sJVfnYaB3Qltn025AoRTTJaj4WdmmgmLl6tUQg1s0wOhpodQ==}
+    engines: {node: '>= 10.13'}
+    peerDependencies:
+      react: '>= 16.8 || 18.0.0'
 
   react-element-to-jsx-string@15.0.0:
     resolution: {integrity: sha512-UDg4lXB6BzlobN60P8fHWVPX3Kyw8ORrTeBtClmIlGdkOOE+GYQSFvmEU5iLLpwp/6v42DINwNcwOhOLfQ//FQ==}
@@ -10585,25 +10614,23 @@ snapshots:
 
   '@types/lodash.clonedeepwith@4.5.9':
     dependencies:
-      '@types/lodash': 4.17.0
+      '@types/lodash': 4.17.9
 
   '@types/lodash.isplainobject@4.0.9':
     dependencies:
-      '@types/lodash': 4.17.0
+      '@types/lodash': 4.17.9
 
   '@types/lodash.mapvalues@4.6.9':
     dependencies:
-      '@types/lodash': 4.17.0
+      '@types/lodash': 4.17.9
 
   '@types/lodash.merge@4.6.9':
     dependencies:
-      '@types/lodash': 4.17.0
+      '@types/lodash': 4.17.9
 
   '@types/lodash.omitby@4.6.9':
     dependencies:
-      '@types/lodash': 4.17.0
-
-  '@types/lodash@4.17.0': {}
+      '@types/lodash': 4.17.9
 
   '@types/lodash@4.17.9': {}
 
@@ -10815,6 +10842,8 @@ snapshots:
   '@utrecht/combobox-css@1.2.0': {}
 
   '@utrecht/component-library-css@4.2.0': {}
+
+  '@utrecht/component-library-design-tokens@1.0.0': {}
 
   '@utrecht/component-library-react@7.1.0(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -11150,6 +11179,8 @@ snapshots:
   asynckit@0.4.0: {}
 
   at-least-node@1.0.0: {}
+
+  attr-accept@2.2.4: {}
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -12263,6 +12294,10 @@ snapshots:
   file-entry-cache@9.0.0:
     dependencies:
       flat-cache: 5.0.0
+
+  file-selector@0.6.0:
+    dependencies:
+      tslib: 2.6.2
 
   filelist@1.0.4:
     dependencies:
@@ -14657,6 +14692,13 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+
+  react-dropzone@14.2.9(react@18.3.1):
+    dependencies:
+      attr-accept: 2.2.4
+      file-selector: 0.6.0
+      prop-types: 15.8.1
+      react: 18.3.1
 
   react-element-to-jsx-string@15.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

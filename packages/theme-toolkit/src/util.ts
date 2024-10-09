@@ -15,6 +15,9 @@ import {
 
 export const createPath = (name: string): string[] => name.split('.');
 
+export const kebabName = (path: string[]) => path.join('-');
+
+export const tokenRef = (path: string[]) => path.join('.');
 /**
  * Class, type, item (CTI) is a system Style Dictionary used. We don't use it, but we need this
  * utility to create a full compatible object.
