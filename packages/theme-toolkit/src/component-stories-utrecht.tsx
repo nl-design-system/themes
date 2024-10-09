@@ -8,6 +8,7 @@ import {
   Button,
   LinkButton,
   ButtonLink,
+  Heading,
   Heading1,
   Heading2,
   Heading3,
@@ -40,6 +41,8 @@ import {
   // Pagination ,
   Select,
   SelectOption,
+  Superscript,
+  Subscript,
   Textarea,
   Textbox,
   Table,
@@ -50,6 +53,10 @@ import {
   TableCell,
   TableCaption,
   RadioButton,
+  Mark,
+  CodeBlock,
+  Code,
+  ColorSample,
 } from '@utrecht/component-library-react/dist/css-module';
 
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
@@ -316,6 +323,48 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 6',
     render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
+  },
+  {
+    storyId: 'react-utrecht-heading--level-1',
+    component: 'utrecht-heading',
+    group: STORY_GROUPS['HEADINGS'],
+    name: 'Utrecht Heading - Level 1',
+    render: () => <Heading level={1}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+  },
+  {
+    storyId: 'react-utrecht-heading--level-2',
+    component: 'utrecht-heading',
+    group: STORY_GROUPS['HEADINGS'],
+    name: 'Utrecht Heading - Level 2',
+    render: () => <Heading level={2}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+  },
+  {
+    storyId: 'react-utrecht-heading--level-3',
+    component: 'utrecht-heading',
+    group: STORY_GROUPS['HEADINGS'],
+    name: 'Utrecht Heading - Level 3',
+    render: () => <Heading level={3}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+  },
+  {
+    storyId: 'react-utrecht-heading--level-4',
+    component: 'utrecht-heading',
+    group: STORY_GROUPS['HEADINGS'],
+    name: 'Utrecht Heading - Level 4',
+    render: () => <Heading level={4}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+  },
+  {
+    storyId: 'react-utrecht-heading--level-5',
+    component: 'utrecht-heading',
+    group: STORY_GROUPS['HEADINGS'],
+    name: 'Utrecht Heading - Level 5',
+    render: () => <Heading level={5}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+  },
+  {
+    storyId: 'react-utrecht-heading--level-6',
+    component: 'utrecht-heading',
+    group: STORY_GROUPS['HEADINGS'],
+    name: 'Utrecht Heading - Level 6',
+    render: () => <Heading level={6}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
   },
   {
     storyId: 'react-utrecht-radio-button--default',
@@ -856,6 +905,47 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Radio Button Form Label: Checked',
     state: true,
     render: () => <FormLabel checked>Label for selected radio button option</FormLabel>,
+  },
+  {
+    storyId: 'react-utrecht-mark',
+    name: 'Utrecht Subscript',
+    render: () => <Mark>Mark my words!</Mark>,
+  },
+  {
+    storyId: 'react-utrecht-subscript',
+    name: 'Utrecht Subscript',
+    render: () => <Subscript>Subscript tekst</Subscript>,
+  },
+  {
+    storyId: 'react-utrecht-superscript',
+    name: 'Utrecht Superscript',
+    render: () => <Superscript>Subscript tekst</Superscript>,
+  },
+  {
+    storyId: 'react-utrecht-code',
+    name: 'Utrecht Code',
+    render: () => <Code>{'<input type="url" value="https://example.fi/">'}</Code>,
+  },
+  {
+    storyId: 'react-utrecht-code',
+    name: 'Utrecht Code',
+    render: () => (
+      <CodeBlock>{`<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <title>NL Design System</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <h1>NL Design System</h1>
+  </body>
+</html>`}</CodeBlock>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-color-sample',
+    name: 'Utrecht Color Sample',
+    render: () => <ColorSample color="#007DAD" />,
   },
   // {
   //   storyId: 'react-utrecht-emphasis--stressed',
