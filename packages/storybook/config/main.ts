@@ -6,7 +6,7 @@ const config: StorybookConfig = {
     '../../voorbeeld-design-tokens/documentation/**/*.stories.{ts,tsx}',
     '../../../proprietary/*/documentation/{readme,color,design-tokens,typography}.mdx',
     '../../../proprietary/*/documentation/*.stories.ts',
-    '../src/theme-builder/**/*.stories.{ts,tsx}',
+    '../src/**/*.stories.{ts,tsx}',
   ],
   framework: {
     name: '@storybook/react-vite',
