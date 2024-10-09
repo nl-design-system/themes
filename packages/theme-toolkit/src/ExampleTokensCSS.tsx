@@ -17,11 +17,13 @@ import cloneDeepWith from 'lodash.clonedeepwith';
 
 type DesignTokenTraverseCallback = (_parents: any, _current: any) => void;
 
+export type ValueTestFn = (_: any) => boolean;
+
 export const traverseDeep = (
   root: DesignTokenTree | DesignTokenDefinitionTree,
   parents: string[],
   current: DesignTokenNode,
-  valueTest: (_current: any) => boolean,
+  valueTest: ValueTestFn,
   callback: DesignTokenTraverseCallback,
 ) => {
   if (valueTest(current)) {
@@ -36,25 +38,32 @@ export const traverseDeep = (
 export const findDesignTokenDefinitions = <T extends DesignToken = DesignToken>(
   tokens: DesignTokenTree<T>,
   callback: DesignTokenTraverseCallback,
-) => traverseDeep(tokens, [], tokens, isDesignTokenDefinition, callback);
+  testFn: ValueTestFn = isDesignTokenDefinition,
+) => traverseDeep(tokens, [], tokens, testFn, callback);
 
-export const addPath = (tree: ValueTree): ValueTree => {
+export const addPath = <T extends DesignToken = StyleDictionaryDesignToken>(
+  tree: ValueTree<T>,
+  testFn: ValueTestFn = isDesignToken,
+): ValueTree<T> => {
   const newTree = cloneDeepWith(tree, () => undefined);
-  traverseDeep(newTree, [], newTree, isDesignToken, (path, token) => {
+  traverseDeep(newTree, [], newTree, testFn, (path, token) => {
     token.path = path;
   });
   return newTree;
 };
 
-export const treeToArray = (tree: DesignTokenTree): DesignToken[] => {
-  const array: DesignToken[] = [];
-  traverseDeep(tree, [], tree, isDesignToken, (_, token) => {
+export const treeToArray = <T extends DesignToken>(
+  tree: DesignTokenTree<T>,
+  testFn: ValueTestFn = isDesignToken,
+): T[] => {
+  const array: T[] = [];
+  traverseDeep(tree, [], tree, testFn, (_, token) => {
     array.push(token);
   });
   return array;
 };
 
-export const tokensToCSS = (tokens: StyleDictionaryTree): string => {
+export const tokensToCSS = <T extends DesignToken = StyleDictionaryDesignToken>(tokens: DesignTokenTree<T>): string => {
   const lines: string[] = [];
   findDesignTokenDefinitions(tokens, (path: StyleDictionaryDesignToken['path'], value: DesignToken) => {
     if (isHiddenDesignToken(value)) {

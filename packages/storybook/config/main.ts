@@ -2,9 +2,9 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: [
-    '../../voorbeeld-design-tokens/documentation/{readme,color,design-tokens,typography}.mdx',
+    '../../voorbeeld-design-tokens/documentation/{readme,dashboard,color,design-tokens,typography}.mdx',
     '../../voorbeeld-design-tokens/documentation/**/*.stories.{ts,tsx}',
-    '../../../proprietary/*/documentation/{readme,color,design-tokens,typography}.mdx',
+    '../../../proprietary/*/documentation/{readme,color,dashboard,design-tokens,typography}.mdx',
     '../../../proprietary/*/documentation/*.stories.ts',
     '../src/**/*.stories.{ts,tsx}',
   ],
