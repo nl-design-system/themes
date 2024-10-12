@@ -3,11 +3,12 @@ import { clsx } from 'clsx';
 import './DropTarget.css';
 
 export interface DropTargetProps extends HTMLAttributes<HTMLDivElement> {
+  appearance?: string | 'subtle';
   dropEffect?: string | 'copy';
 }
 
 export const DropTarget = forwardRef(function DropTarget(
-  { children, className, dropEffect }: PropsWithChildren<DropTargetProps>,
+  { appearance, children, className, dropEffect }: PropsWithChildren<DropTargetProps>,
   ref: ForwardedRef<HTMLDivElement>,
 ) {
   //
@@ -17,6 +18,7 @@ export const DropTarget = forwardRef(function DropTarget(
       className={clsx(
         'kernteam-dropzone',
         {
+          'kernteam-dropzone--subtle': appearance === 'subtle',
           'kernteam-dropzone--drop-effect': !!dropEffect,
           'kernteam-dropzone--drop-effect-copy': dropEffect === 'copy',
         },
