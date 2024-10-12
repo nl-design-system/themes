@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/blocks";
+import { FontDropTarget } from "@nl-design-system-unstable/theme-toolkit/src/FontDropTarget";
 import tokens from "../dist/tokens.json";
 import config from "../src/config.json";
 
@@ -16,7 +17,7 @@ export const renderScale = (scale, fontFamily) => (
           {size["description"] && <p>{size["description"]}</p>}
           <div
             style={{
-              fontFamily,
+              fontFamily: `var(--${fontFamily.path.join("-")})`,
               fontSize: size["$value"],
               fontWeight: typography["font-weight"]["normal"]["$value"],
               lineHeight: typography["line-height"]["md"]["$value"],
@@ -34,8 +35,20 @@ export const renderScale = (scale, fontFamily) => (
 
 ## Primary font
 
-<div>{renderScale(typography["font-size"], typography["font-family"]["primary"]["$value"])}</div>
+<FontDropTarget
+  cssProperty="--voorbeeld-typography-font-family-primary"
+  defaultFontFamily={typography["font-family"]["primary"]["$value"]}
+  appearance="subtle"
+>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["primary"])}</div>
+</FontDropTarget>
 
 ## Secondary font
 
-<div>{renderScale(typography["font-size"], typography["font-family"]["secondary"]["$value"])}</div>
+<FontDropTarget
+  cssProperty="--voorbeeld-typography-font-family-secondary"
+  defaultFontFamily={typography["font-family"]["secondary"]["$value"]}
+  appearance="subtle"
+>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["secondary"])}</div>
+</FontDropTarget>
