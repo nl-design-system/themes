@@ -347,6 +347,69 @@ export const Collage = () => (
   </main>
 );
 
+export const FontSizeScale = () => (
+  <table>
+    <tbody>
+      <tr>
+        <th>Heading 1</th>
+        <td>
+          <Heading level={1}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
+        </td>
+      </tr>
+      <tr>
+        <th>Heading 2</th>
+        <td>
+          <Heading level={2}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
+        </td>
+      </tr>
+      <tr>
+        <th>Heading 3</th>
+        <td>
+          <Heading level={3}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
+        </td>
+      </tr>
+      <tr>
+        <th>Heading 4</th>
+        <td>
+          <Heading level={4}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
+        </td>
+      </tr>
+      <tr>
+        <th>Heading 5</th>
+        <td>
+          <Heading level={5}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
+        </td>
+      </tr>
+      <tr>
+        <th>Heading 6</th>
+        <td>
+          <Heading level={6}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
+        </td>
+      </tr>
+      <tr>
+        <th>Lead paragraph</th>
+        <td>
+          <Paragraph lead>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Paragraph>
+        </td>
+      </tr>
+      <tr>
+        <th>Paragraph</th>
+        <td>
+          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Paragraph>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+);
+
+export const InlineSpaceExample = () => <Paragraph>TODO: Inline space example</Paragraph>;
+
+export const BlockSpaceExample = () => <Paragraph>TODO: Block space example</Paragraph>;
+
+export const ColumnSpaceExample = () => <Paragraph>TODO: Column space example</Paragraph>;
+
+export const RowSpaceExample = () => <Paragraph>TODO: Row space example</Paragraph>;
+
 type RenderFn = () => ReactNode;
 
 export const examples: { [index: string]: RenderFn } = {
@@ -355,4 +418,5 @@ export const examples: { [index: string]: RenderFn } = {
   link: LinkExample,
   collage: Collage,
   'focus-visible': FocusVisibleExample,
+  'font-size-scale': FontSizeScale,
 };
