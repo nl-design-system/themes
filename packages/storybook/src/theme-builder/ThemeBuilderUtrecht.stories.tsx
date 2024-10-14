@@ -18,6 +18,40 @@ const meta = {
     steps,
     basis: basisTheme,
     theme: utrechtTheme,
+    themeExtension: {
+      basis: {
+        common: {
+          color: {
+            alert: {
+              error: {
+                default: {
+                  value: '{utrecht.color.red.95}',
+                },
+                subdued: {
+                  value: '{}',
+                },
+              },
+              warning: {
+                default: {
+                  value: '{utrecht.color.yellow.80}',
+                },
+                subdued: {
+                  value: '{}',
+                },
+              },
+              ok: {
+                default: {
+                  value: '{utrecht.color.green.40}',
+                },
+                subdued: {
+                  value: '{}',
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
   argTypes: {
     example: {

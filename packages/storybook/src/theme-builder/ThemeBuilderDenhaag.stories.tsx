@@ -18,6 +18,40 @@ const meta = {
     steps,
     basis: basisTheme,
     theme: denhaagTheme,
+    themeExtension: {
+      basis: {
+        common: {
+          color: {
+            alert: {
+              error: {
+                default: {
+                  value: '{denhaag.color.red.1}',
+                },
+                subdued: {
+                  value: '{}',
+                },
+              },
+              warning: {
+                default: {
+                  value: '{denhaag.color.orange.1}',
+                },
+                subdued: {
+                  value: '{}',
+                },
+              },
+              ok: {
+                default: {
+                  value: '{denhaag.color.green.3}',
+                },
+                subdued: {
+                  value: '{}',
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
   argTypes: {
     example: {
