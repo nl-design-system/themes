@@ -42,9 +42,38 @@ const meta = {
             'xxx-large': { value: '{ams.text.level.1.font-size}' },
           },
         },
+        color: {
+          alert: {
+            error: {
+              default: {
+                value: '{}',
+              },
+              subdued: {
+                value: '{}',
+              },
+            },
+            warning: {
+              default: {
+                value: '{}',
+              },
+              subdued: {
+                value: '{}',
+              },
+            },
+            ok: {
+              default: {
+                value: '{}',
+              },
+              subdued: {
+                value: '{}',
+              },
+            },
+          },
+        },
       },
     },
   },
+
   argTypes: {
     example: {
       control: 'select',
