@@ -5,7 +5,7 @@ module.exports = {
     'no-tilde-version-dependencies': 'error',
     'require-repository-directory': 'error',
     'valid-values-license': ['error', ['EUPL-1.2']],
-    'valid-values-name-scope': ['error', ['@nl-design-system-unstable']],
+    'valid-values-name-scope': ['error', ['@nl-design-system-unstable', '@nl-design-system-community']],
   },
   overrides: [
     {
