@@ -1,4 +1,2 @@
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/400-italic.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/500-italic.css';
+import 'firacode/distr/fira_code.css';
+import 'source-sans/source-sans-3.css';
