@@ -17,7 +17,7 @@ const build = async () => {
 
   const sd = new StyleDictionary({
     ...createConfig({
-      selector: `.${themeConfig.prefix}`,
+      selector: `.${themeConfig.prefix}-theme`,
     }),
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: ['figma/**/*.tokens.json'],
