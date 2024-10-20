@@ -3,6 +3,8 @@ import '@amsterdam/design-system-assets/font/index.css';
 import '@amsterdam/design-system-css/dist/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@gemeente-rotterdam/design-tokens/dist/index.css';
+import '@nl-design-system-community/nora-design-tokens/dist/theme.css';
+import '@nl-design-system-community/nora-design-tokens/src/font.js';
 import '@nl-design-system-unstable/basis-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/font';
