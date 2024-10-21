@@ -3,7 +3,7 @@ import { ColorSample } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
   id: 'utecht-color-sample',
-  title: 'Components/ColorSample/Utrecht',
+  title: 'Components/Color Sample/Utrecht',
   component: ColorSample,
 } satisfies Meta<typeof ColorSample>;
 
