@@ -5,10 +5,6 @@ const meta = {
   id: 'utecht-color-sample',
   title: 'Components/ColorSample/Utrecht',
   component: ColorSample,
-
-  args: {
-    children: <ColorSample />,
-  },
 } satisfies Meta<typeof ColorSample>;
 
 type Story = StoryObj<typeof meta>;
