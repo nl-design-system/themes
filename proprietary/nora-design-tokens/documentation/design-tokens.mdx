@@ -1,11 +1,17 @@
 import { Meta } from "@storybook/blocks";
 import { DesignTokensTable } from "@nl-design-system-unstable/theme-toolkit/src/DesignTokensTable";
+import { TokensDownloadLink } from "@nl-design-system-unstable/theme-toolkit/src/TokensDownloadLink";
 import tokens from "../dist/list.json";
+import tokensTree from "../dist/tokens.json";
 import config from "../src/config.json";
 
 <Meta title="NORA/Design Tokens" />
 
 # Design Tokens
+
+<TokensDownloadLink tokens={tokensTree} download="theme.css" selector={`.${config.prefix}-theme`}>
+  Download CSS theme
+</TokensDownloadLink>
 
 <DesignTokensTable tokens={tokens.filter((token) => token.path[0] !== config.prefix)}></DesignTokensTable>
 
