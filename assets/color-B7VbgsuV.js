@@ -1,6 +1,0 @@
-import{j as o}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as m}from"./index-BI1Biiay.js";import{ae as p}from"./index-BIC9pcYe.js";import{t as n}from"./tokens-DToDlgfv.js";import{C as s,a as c}from"./ColorSearch-boDx_6yV.js";import{c as i}from"./config-Dw1EUx9D.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-0tnEh5Bt.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./util-DF28Dkae.js";import"./index-BqQ5ME5e.js";import"./index-BQ5IbGbl.js";import"./design-tokens-CFARZggM.js";import"./index-DTBbmC6q.js";import"./clsx-B-dksMZM.js";function e(r){const t={h1:"h1",h2:"h2",...m(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(p,{title:"Hoorn/Color"}),`
-`,o.jsx(t.h1,{id:"color",children:"Color"}),`
-`,o.jsx(t.h2,{id:"find-a-color",children:"Find a color"}),`
-`,o.jsx(s,{tokens:n[i.prefix].color}),`
-`,o.jsx(t.h2,{id:"color-palette",children:"Color palette"}),`
-`,o.jsx(c,{tokens:n[i.prefix].color})]})}function H(r={}){const{wrapper:t}={...m(),...r.components};return t?o.jsx(t,{...r,children:o.jsx(e,{...r})}):e(r)}export{H as default};
