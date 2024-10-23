@@ -917,15 +917,15 @@
     "basis": {
       "typography": {
         "scale": {
-          "xx-small": { "font-size": { "value": "8px", "comment": "8px" } },
-          "x-small": { "font-size": { "value": "12px", "comment": "12px" } },
-          "small": { "font-size": { "value": "14px", "comment": "14px" } },
-          "medium": { "font-size": { "value": "16px", "comment": "16px" } },
-          "large": { "font-size": { "value": "20px", "comment": "20px" } },
-          "x-large": { "font-size": { "value": "24px", "comment": "24px" } },
-          "xx-large": { "font-size": { "value": "32px", "comment": "32px" } },
-          "xxx-large": { "font-size": { "value": "40px", "comment": "40px" } },
-          "xxxx-large": { "font-size": { "value": "48px", "comment": "48px" } }
+          "xx-small": { "font-size": { "$value": "8px", "comment": "8px" } },
+          "x-small": { "font-size": { "$value": "12px", "comment": "12px" } },
+          "small": { "font-size": { "$value": "14px", "comment": "14px" } },
+          "medium": { "font-size": { "$value": "16px", "comment": "16px" } },
+          "large": { "font-size": { "$value": "20px", "comment": "20px" } },
+          "x-large": { "font-size": { "$value": "24px", "comment": "24px" } },
+          "xx-large": { "font-size": { "$value": "32px", "comment": "32px" } },
+          "xxx-large": { "font-size": { "$value": "40px", "comment": "40px" } },
+          "xxxx-large": { "font-size": { "$value": "48px", "comment": "48px" } }
         }
       }
     },
@@ -945,7 +945,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.medium}"
+          "$value": "{basis.typography.scale.medium.font-size}"
         },
         "font-weight": {
           "$type": "fontWeights",
@@ -1712,7 +1712,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{basis.typography.scale.x-large}"
+            "$value": "{basis.typography.scale.x-large.font-size}"
           }
         }
       }
@@ -1833,7 +1833,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.small}"
+          "$value": "{basis.typography.scale.small.font-size}"
         },
         "min-block-size": {
           "$type": "sizing",
@@ -1956,7 +1956,7 @@
         "attribution": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{basis.typography.scale.small}"
+            "$value": "{basis.typography.scale.small.font-size}"
           },
           "color": {
             "$type": "color",
@@ -1966,7 +1966,7 @@
         "content": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{basis.typography.scale.x-large}"
+            "$value": "{basis.typography.scale.x-large.font-size}"
           },
           "color": {
             "$type": "color",
@@ -3629,7 +3629,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.xxx-large}"
+          "$value": "{basis.typography.scale.xxx-large.font-size}"
         }
       },
       "heading-2": {
@@ -3651,7 +3651,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.xx-large}"
+          "$value": "{basis.typography.scale.xx-large.font-size}"
         }
       },
       "heading-3": {
@@ -3673,7 +3673,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.x-large}"
+          "$value": "{basis.typography.scale.x-large.font-size}"
         }
       },
       "heading-4": {
@@ -3695,7 +3695,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.large}"
+          "$value": "{basis.typography.scale.large.font-size}"
         }
       },
       "heading-5": {
@@ -3717,7 +3717,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.medium}"
+          "$value": "{basis.typography.scale.medium.font-size}"
         }
       },
       "heading-6": {
@@ -3739,7 +3739,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.small}"
+          "$value": "{basis.typography.scale.small.font-size}"
         }
       }
     }
@@ -4560,7 +4560,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{basis.typography.scale.large}"
+            "$value": "{basis.typography.scale.large.font-size}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -4578,7 +4578,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{basis.typography.scale.small}"
+            "$value": "{basis.typography.scale.small.font-size}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -5249,7 +5249,7 @@
       "status-badge": {
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.typography.scale.small}"
+          "$value": "{basis.typography.scale.small.font-size}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -5686,7 +5686,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
+            "$value": "{basis.typography.scale.x-large.font-size}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -5695,10 +5695,6 @@
           "margin-block-end": {
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.rabbit}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{basis.typography.scale.x-large}"
           }
         },
         "cell": {
