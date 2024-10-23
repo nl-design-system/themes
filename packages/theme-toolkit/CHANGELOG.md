@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/theme-toolkit
 
+## 1.2.0
+
+### Minor Changes
+
+- a84ee6b: Add `<TokensDownloadLink>` component.
+
 ## 1.1.0
 
 ### Minor Changes
