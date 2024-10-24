@@ -1,5 +1,16 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- 9d9343f: Add tokens for candidate components:
+
+  - `nl.color-sample`
+  - `nl.link`
+  - `nl.mark`
+  - `nl.paragraph`
+
 ## 3.0.0
 
 ### Major Changes

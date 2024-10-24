@@ -1,5 +1,11 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.2.0
+
+### Minor Changes
+
+- 9288cb6: Remove small-vw from tokens
+
 ## 1.1.0
 
 ### Minor Changes
