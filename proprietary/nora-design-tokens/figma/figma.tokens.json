@@ -539,6 +539,18 @@
             "$type": "fontFamilies",
             "$value": "\"Fira Code\", Tahoma, Verdana, sans-serif"
           }
+        },
+        "heading": {
+          "scale": {
+            "$type": "number",
+            "$value": "1.15"
+          },
+          "large-vw": {
+            "scale": {
+              "$type": "number",
+              "$value": "1.2"
+            }
+          }
         }
       },
       "border-radius": {
@@ -605,6 +617,14 @@
             "spread": "0",
             "color": "{nora.color.dark.alpha.100}",
             "type": "dropShadow"
+          }
+        }
+      },
+      "breakpoint": {
+        "large-vw": {
+          "min-width": {
+            "$type": "dimension",
+            "$value": "64rem"
           }
         }
       }
@@ -677,7 +697,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{nora.color.black}"
+          "$value": "{nora.document.color}"
         }
       },
       "form-control": {
@@ -1069,6 +1089,10 @@
           "$type": "sizing",
           "$value": "45.25rem"
         }
+      },
+      "no-text-decoration": {
+        "$type": "textDecoration",
+        "$value": "none"
       }
     }
   },
@@ -1121,7 +1145,7 @@
             },
             "text-decoration": {
               "$type": "textDecoration",
-              "$value": "None"
+              "$value": "{nora.no-text-decoration}"
             }
           },
           "focus": {
@@ -1135,7 +1159,7 @@
             },
             "text-decoration": {
               "$type": "textDecoration",
-              "$value": "None"
+              "$value": "{nora.no-text-decoration}"
             }
           },
           "hover": {
@@ -1145,7 +1169,7 @@
             },
             "text-decoration": {
               "$type": "textDecoration",
-              "$value": "None"
+              "$value": "{nora.no-text-decoration}"
             }
           },
           "current": {
@@ -1156,7 +1180,7 @@
           },
           "text-decoration": {
             "$type": "textDecoration",
-            "$value": "none"
+            "$value": "{nora.no-text-decoration}"
           }
         },
         "separator": {
@@ -1441,12 +1465,12 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{nora.typography.font-size.2xl}"
+          "$value": "{utrecht.heading-2.font-size} * {nora.typography.heading.scale}"
         },
         "large-vw": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{nora.typography.font-size.3xl}"
+            "$value": "{utrecht.heading-2.large-vw.font-size} * {nora.typography.heading.large-vw.scale}"
           }
         }
       },
@@ -1469,12 +1493,12 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{nora.typography.font-size.xl}"
+          "$value": "{utrecht.heading-3.font-size} * {nora.typography.heading.scale}"
         },
         "large-vw": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{nora.typography.font-size.2xl}"
+            "$value": "{utrecht.heading-3.large-vw.font-size} * {nora.typography.heading.large-vw.scale}"
           }
         }
       },
@@ -1497,12 +1521,12 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{nora.typography.font-size.lg}"
+          "$value": "{utrecht.heading-4.font-size} * {nora.typography.heading.scale}"
         },
         "large-vw": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{nora.typography.font-size.xl}"
+            "$value": "{utrecht.heading-4.large-vw.font-size} * {nora.typography.heading.large-vw.scale}"
           }
         }
       },
@@ -1525,12 +1549,12 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{nora.typography.font-size.md}"
+          "$value": "{utrecht.heading-5.font-size} * {nora.typography.heading.scale}"
         },
         "large-vw": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{nora.typography.font-size.lg}"
+            "$value": "{utrecht.heading-5.large-vw.font-size} * {nora.typography.heading.large-vw.scale}"
           }
         }
       },
@@ -1553,12 +1577,12 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{nora.typography.font-size.sm}"
+          "$value": "{nora.document.font-size}"
         },
         "large-vw": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{nora.typography.font-size.md}"
+            "$value": "{nora.document.large-vw.font-size}"
           }
         }
       },
@@ -1581,12 +1605,12 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{nora.typography.font-size.sm}"
+          "$value": "{nora.document.font-size}"
         },
         "large-vw": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{nora.typography.font-size.md}"
+            "$value": "{nora.document.large-vw.font-size}"
           }
         }
       }
@@ -2166,6 +2190,105 @@
       }
     }
   },
+  "components/page-section": {
+    "nora": {
+      "page-section": {
+        "article": {
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{nora.space.300}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{nora.space.300}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{nora.space.200}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{nora.space.200}"
+          },
+          "container": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{nora.space.300}"
+            },
+            "large-vw": {
+              "gap": {
+                "$type": "dimension",
+                "$value": "4rem"
+              },
+              "min-width": {
+                "$type": "dimension",
+                "$value": "61.5rem"
+              },
+              "max-width": {
+                "$type": "dimension",
+                "$value": "72rem"
+              }
+            }
+          },
+          "large-vw": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{nora.space.600}"
+            },
+            "padding-block-end": {
+              "$type": "dimension",
+              "$value": "{nora.space.600}"
+            },
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{nora.space.250}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{nora.space.250}"
+            }
+          },
+          "content": {
+            "large-vw": {
+              "min-width": {
+                "$type": "dimension",
+                "$value": "40rem",
+                "$description": "640px"
+              },
+              "max-width": {
+                "$type": "dimension",
+                "$value": "46rem",
+                "$description": "736px"
+              }
+            }
+          },
+          "navigation": {
+            "large-vw": {
+              "max-width": {
+                "$type": "dimension",
+                "$value": "22rem",
+                "$description": "352px"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/page-layout": {
+    "nora": {
+      "page-layout": {
+        "scrolled": {
+          "header-container": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": "{nora.box-shadow.sm}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
@@ -2403,6 +2526,8 @@
       "components/navigation-bar",
       "components/ordered-list",
       "components/paragraph",
+      "components/page-section",
+      "components/page-layout",
       "components/unordered-list",
       "drafts/breadcrumbs-tools-bar",
       "drafts/link-overview",
