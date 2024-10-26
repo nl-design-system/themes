@@ -17,6 +17,7 @@ export const TOKEN_TYPES = [
   'margin',
   'gap',
   'size',
+  'cursor',
 ];
 
 type TypeToCSSProperty = {
@@ -129,6 +130,7 @@ export const mapping: TypeToCSSProperty = {
     'max-width',
     'size', // `size` not an official CSS property
   ],
+  ['cursor']: ['cursor'],
 };
 
 const entries = Object.entries(mapping);

@@ -1,6 +1,5 @@
 import {
   ColorSample,
-  DataBadge,
   PreserveData,
   Table,
   TableBody,
@@ -15,7 +14,9 @@ import { DesignTokenValue, getTokenValue, StyleDictionaryDesignToken } from './d
 import { tokenRef } from './util';
 import { getTokenType } from './token-type';
 import { TokenTypeIcon } from './TokenTypeIcon';
-import './DesignTokensTable.css';
+import { CursorSample } from './CursorSample';
+import { FontFamilySample } from './FontFamilySample';
+import { SubtleBadge } from './SubtleBadge';
 
 export const path2css = (path: StyleDictionaryDesignToken['path']) => `var(--${path.join('-')})`;
 
@@ -86,15 +87,19 @@ export const DesignTokensTable = ({ tokens }: DesignTokensTableProps) => {
               </TableCell>
               <TableCell>
                 {tokenType ? (
-                  <DataBadge className="subtle">
+                  <SubtleBadge>
                     <TokenTypeIcon type={tokenType} />
                     {` ${tokenType}`}
-                  </DataBadge>
+                  </SubtleBadge>
                 ) : null}
               </TableCell>
               <TableCell>
                 {tokenType === 'color' && isColorValue(value) ? (
                   <ColorSample style={{ '--utrecht-color-sample-background-color': 'currentColor' }} color={value} />
+                ) : tokenType === 'cursor' && typeof value === 'string' ? (
+                  <CursorSample cursor={value} />
+                ) : tokenType === 'font-family' && typeof value === 'string' ? (
+                  <FontFamilySample fontFamily={value} />
                 ) : (
                   ''
                 )}
