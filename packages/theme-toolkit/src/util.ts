@@ -73,6 +73,15 @@ const isDesignTokenMap = (item: any): item is DesignTokenMap =>
 export const isColorOrUnknown = (arg: DesignToken): boolean =>
   arg && typeof arg.type === 'string' ? arg.type === 'color' : true;
 
+export const getType = (arg: DesignToken): string | undefined =>
+  arg && typeof arg.type === 'string'
+    ? arg.type
+    : typeof (arg as any)['$type'] === 'string'
+    ? (arg as any)['$type']
+    : undefined;
+
+export const isColorToken = (arg: DesignToken): boolean => getType(arg) === 'color';
+
 export const getColors = <T extends DesignToken = DesignToken>(
   tokens: DesignTokenTree<T> | T[],
 ): { grouped: T[][]; nonGrouped: T[] } => {
