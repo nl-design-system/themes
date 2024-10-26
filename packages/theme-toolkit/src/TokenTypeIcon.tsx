@@ -11,6 +11,7 @@ import {
   IconLineHeight,
   IconPalette,
   IconSpace,
+  IconPointer,
   IconTextSize,
 } from '@tabler/icons-react';
 import { Icon } from '@utrecht/component-library-react/dist/css-module';
@@ -31,6 +32,7 @@ const mapping: { [index: string]: IconType } = {
   ['border-style']: IconBorderStyle2,
   ['gap']: IconSpace,
   ['size']: IconDimensions,
+  ['cursor']: IconPointer,
 };
 
 export interface TokenTypeIconProps {
