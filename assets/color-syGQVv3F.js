@@ -1,6 +1,0 @@
-import{j as o}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as m}from"./index-BI1Biiay.js";import{ae as p}from"./index-DHompTb_.js";import{t as n}from"./tokens-DKWY22hl.js";import{C as s,a}from"./ColorSearch-3G3JMxtI.js";import{c as i}from"./config-J8c96kmG.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-bIm1JQMR.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./util-DF28Dkae.js";import"./index-BqQ5ME5e.js";import"./index-BQ5IbGbl.js";import"./design-tokens-CFARZggM.js";import"./index-sTdB2yCP.js";import"./clsx-B-dksMZM.js";function e(r){const t={h1:"h1",h2:"h2",...m(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(p,{title:"Demodam/Color"}),`
-`,o.jsx(t.h1,{id:"color",children:"Color"}),`
-`,o.jsx(t.h2,{id:"find-a-color",children:"Find a color"}),`
-`,o.jsx(s,{tokens:n[i.prefix].color}),`
-`,o.jsx(t.h2,{id:"color-palette",children:"Color palette"}),`
-`,o.jsx(a,{tokens:n[i.prefix].color})]})}function L(r={}){const{wrapper:t}={...m(),...r.components};return t?o.jsx(t,{...r,children:o.jsx(e,{...r})}):e(r)}export{L as default};
