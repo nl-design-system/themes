@@ -2,7 +2,9 @@
 "@nl-design-system-community/nora-design-tokens": minor
 ---
 
-set underline tokens to none
-change utrecht-heading tokens
-add nora-page-layout tokens
-add nora-page-section tokens
+feat: set underline tokens to none
+feat: change utrecht-heading tokens
+feat: add nora-page-layout tokens
+feat: add nora-page-section tokens
+feat: add large-vw tokens to separate files
+fix: change link in index.scss
