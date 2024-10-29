@@ -3,15 +3,15 @@
     "basis": {
     "typography": {
       "scale": {
-        "xx-small": { "font-size": { "$value": "12px", "comment": "12px" } },
-        "x-small": { "font-size": { "$value": "15px", "comment": "15px" } },
-        "small": { "font-size": { "$value": "16px", "comment": "16px" } },
-        "medium": { "font-size": { "$value": "17px", "comment": "17px" } },
-        "large": { "font-size": { "$value": "19px", "comment": "19px" } },
-        "x-large": { "font-size": { "$value": "24px", "comment": "24px" } },
-        "xx-large": { "font-size": { "$value": "32px", "comment": "32px" } },
-        "xxx-large": { "font-size": { "$value": "42px", "comment": "42px" } },
-        "xxxx-large": { "font-size": { "$value": "48px", "comment": "48px" } }
+        "xx-small": { "font-size": { "$value": "12px" } },
+        "x-small": { "font-size": { "$value": "15px" } },
+        "small": { "font-size": { "$value": "16px" } },
+        "medium": { "font-size": { "$value": "17px" } },
+        "large": { "font-size": { "$value": "20px" } },
+        "x-large": { "font-size": { "$value": "25px" } },
+        "xx-large": { "font-size": { "$value": "28px" } },
+        "xxx-large": { "font-size": { "$value": "41.6px" } },
+        "xxxx-large": { "font-size": { "$value": "48px" } }
       }
     }
     }
@@ -673,19 +673,19 @@
       "$value": "0"
     },
     "font-size-1": {
-      "$value": "var(--font-size-primary)"
+      "$value": "{basis.typography.scale.large.font-size}"
     },
     "font-size-2": {
-      "$value": "var(--font-size-secondary)"
+      "$value": "{basis.typography.scale.x-large.font-size}"
     },
     "font-size-3": {
-      "$value": "var(--font-size-tertiary)"
+      "$value": "{basis.typography.scale.xxx-large.font-size}"
     },
     "font-size-4": {
       "$value": "var(--font-size-feedback-form)"
     },
     "font-size-5": {
-      "$value": "var(--font-size-date)"
+      "$value": "{basis.typography.scale.xx-large.font-size}"
     },
     "font-size-6": {
       "$value": "10em"
