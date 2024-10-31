@@ -1,1 +1,1 @@
-# NL Design System purmerend thema
+# NL Design System purmerend

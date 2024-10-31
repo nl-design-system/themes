@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import config from '../src/config.json';
 
 const meta = {
-  title: 'Purmerend Thema',
+  title: 'Purmerend',
   component: ComponentStories,
   parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: false } },
   args: { config, showAll: false },
