@@ -465,6 +465,14 @@
       },
       "typography": {
         "font-size": {
+          "xxxs": {
+            "$type": "fontSizes",
+            "$value": "0.75rem"
+          },
+          "xxs": {
+            "$type": "fontSizes",
+            "$value": "0.875rem"
+          },
           "xs": {
             "$type": "fontSizes",
             "$value": "0.9375rem"
@@ -476,6 +484,10 @@
           "md": {
             "$type": "fontSizes",
             "$value": "1.0625rem"
+          },
+          "md2": {
+            "$type": "fontSizes",
+            "$value": "1.125rem"
           },
           "lg": {
             "$type": "fontSizes",
@@ -550,6 +562,12 @@
               "$type": "number",
               "$value": "1.2"
             }
+          }
+        },
+        "letter-spacing": {
+          "20": {
+            "$type": "letterSpacing",
+            "$value": "20%"
           }
         }
       },
@@ -1093,6 +1111,32 @@
       "no-text-decoration": {
         "$type": "textDecoration",
         "$value": "none"
+      },
+      "eyebrow-header": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{nora.typography.font-size.xxxs}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{nora.typography.line-height.100}"
+        },
+        "letter-spacing": {
+          "$type": "letterSpacing",
+          "$value": "{nora.typography.letter-spacing.20}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{nora.document.subtle.color}"
+        },
+        "text-transform": {
+          "$type": "textCase",
+          "$value": "uppercase"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{nora.typography.font-weight.normal}"
+        }
       }
     }
   },
@@ -1611,6 +1655,184 @@
           "font-size": {
             "$type": "fontSizes",
             "$value": "{nora.document.large-vw.font-size}"
+          }
+        }
+      }
+    }
+  },
+  "components/link-overview": {
+    "nora": {
+      "link-overview": {
+        "item": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{nora.space.300}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{nora.space.100}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{nora.space.150}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{nora.space.150}"
+          },
+          "hover": {
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "0px"
+            },
+            "name": {
+              "color": {
+                "$type": "color",
+                "$value": "{nora.color.blue.800}"
+              },
+              "text-decoration": {
+                "$type": "textDecoration",
+                "$value": "underline"
+              }
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{nora.color.blue.800}"
+              }
+            }
+          },
+          "focus-visible": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{nora.space.200}"
+            },
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{nora.space.100}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{nora.space.100}"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{nora.focus.background-color}"
+            },
+            "description": {
+              "color": {
+                "$type": "color",
+                "$value": "{nora.focus.color}"
+              }
+            },
+            "name": {
+              "color": {
+                "$type": "color",
+                "$value": "{nora.focus.color}"
+              }
+            }
+          },
+          "content": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{nora.space.25}"
+            }
+          },
+          "border-bottom-width": {
+            "$type": "borderWidth",
+            "$value": "{nora.size.25}"
+          },
+          "name": {
+            "color": {
+              "$type": "color",
+              "$value": "{nora.color.link-blue.500}"
+            },
+            "large-vw": {
+              "font-size": {
+                "$type": "fontSizes",
+                "$value": "{nora.typography.font-size.lg2}"
+              }
+            },
+            "line-height": {
+              "$type": "lineHeights",
+              "$value": "{nora.typography.line-height.120}"
+            },
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{nora.typography.font-size.md2}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{nora.typography.font-weight.bold}"
+            }
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{nora.document.subtle.color}"
+            },
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{nora.typography.font-size.sm}"
+            },
+            "line-height": {
+              "$type": "lineHeights",
+              "$value": "{nora.typography.line-height.120}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{nora.color.link-blue.500}"
+            }
+          },
+          "border-bottom-color": {
+            "$type": "color",
+            "$value": "{nora.color.gray.50}"
+          }
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{nora.space.300}"
+        },
+        "items-container": {
+          "border-top-width": {
+            "$type": "borderWidth",
+            "$value": "{nora.size.25}"
+          },
+          "border-top-color": {
+            "$type": "color",
+            "$value": "{nora.color.gray.50}"
+          }
+        },
+        "header": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{nora.eyebrow-header.font-size}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{nora.eyebrow-header.line-height}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{nora.eyebrow-header.color}"
+          },
+          "text-transform": {
+            "$type": "textCase",
+            "$value": "{nora.eyebrow-header.text-transform}"
+          },
+          "letter-spacing": {
+            "$type": "letterSpacing",
+            "$value": "{nora.eyebrow-header.letter-spacing}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{nora.eyebrow-header.font-weight}"
           }
         }
       }
@@ -2648,126 +2870,6 @@
       }
     }
   },
-  "drafts/link-overview": {
-    "nora": {
-      "link-overview": {
-        "item": {
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{nora.space.150}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{nora.space.150}"
-          },
-          "gap": {
-            "$type": "dimension",
-            "$value": "{nora.space.300}"
-          },
-          "large-vw": {
-            "padding-inline-start": {
-              "$type": "dimension",
-              "$value": "0px"
-            },
-            "padding-inline-end": {
-              "$type": "dimension",
-              "$value": "0px"
-            },
-            "padding-block-start": {
-              "$type": "dimension",
-              "$value": "{nora.space.150}"
-            },
-            "padding-block-end": {
-              "$type": "dimension",
-              "$value": "{nora.space.150}"
-            },
-            "gap": {
-              "$type": "dimension",
-              "$value": "{nora.space.300}"
-            }
-          },
-          "name": {
-            "typography": {
-              "$type": "typography",
-              "$value": {
-                "fontFamily": "{nora.document.font-family}",
-                "fontWeight": "{nora.document.strong.font-weight}",
-                "fontSize": "{nora.typography.font-size.lg2}",
-                "lineHeight": "{nora.typography.line-height.120}",
-                "letterSpacing": "null",
-                "paragraphSpacing": "null",
-                "paragraphIndent": "null",
-                "textDecoration": "null",
-                "textCase": "null"
-              }
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{nora.interaction.color}"
-            }
-          },
-          "description": {
-            "typography": {
-              "$type": "typography",
-              "$value": {
-                "fontFamily": "{nora.document.font-family}",
-                "fontWeight": "{nora.document.font-weight}",
-                "fontSize": "{nora.typography.font-size.sm}",
-                "lineHeight": "{nora.typography.line-height.120}",
-                "letterSpacing": "null",
-                "paragraphSpacing": "null",
-                "paragraphIndent": "null",
-                "textDecoration": "null",
-                "textCase": "null"
-              }
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{nora.document.subtle.color}"
-            }
-          },
-          "icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{nora.interaction.color}"
-            },
-            "size": {
-              "$type": "dimension",
-              "$value": "1.5rem"
-            }
-          },
-          "border-bottom": {
-            "$type": "border",
-            "$value": {
-              "color": "{nora.color.gray.50}",
-              "width": "{nora.border-width.sm}",
-              "style": "solid"
-            }
-          },
-          "content": {
-            "gap": {
-              "$type": "dimension",
-              "$value": "{nora.space.25}"
-            },
-            "large-vw": {
-              "gap": {
-                "$type": "dimension",
-                "$value": "{nora.space.25}"
-              }
-            }
-          }
-        }
-      }
-    }
-  },
   "vw-test/vw-test": {
     "vw-test": {
       "font-family": {
@@ -2796,6 +2898,7 @@
       "components/breadcrumb-nav",
       "components/icon-only-button",
       "components/heading",
+      "components/link-overview",
       "components/navigation-bar",
       "components/ordered-list",
       "components/paragraph",
@@ -2804,7 +2907,6 @@
       "components/footer",
       "components/unordered-list",
       "components/breadcrumbs-tools-bar",
-      "drafts/link-overview",
       "vw-test/vw-test",
       "vw-test/vw-test--large"
     ]
