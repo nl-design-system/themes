@@ -48,4 +48,29 @@ describe('Tokens table', () => {
     const tableDataCell = screen.getByText('cornflowerblue', { selector: 'td, td > *' });
     expect(tableDataCell).toBeInTheDocument();
   });
+
+  it('renders just the font-family when no fallback fonts are specified', () => {
+    const tokens = [createDesignToken({ name: 'example.button.font-family', value: '"Fira Sans"' })];
+
+    const { container } = render(<DesignTokensTable tokens={tokens} />);
+
+    const details = container.querySelector('details');
+    expect(details).not.toBeInTheDocument();
+  });
+
+  it('renders a column with the a list of font families when fallback fonts are specified', () => {
+    const tokens = [createDesignToken({ name: 'example.button.font-family', value: '"Fira Sans", sans-serif' })];
+
+    render(<DesignTokensTable tokens={tokens} />);
+
+    const summary = screen.getByText('Fira Sans', { selector: 'td > details > summary > bdi' });
+
+    expect(summary).toBeInTheDocument();
+
+    const listItem = screen.getByText('Fira Sans', { selector: 'td > details > ol > li > bdi' });
+    expect(listItem).toBeInTheDocument();
+
+    const secondListItem = screen.getByText('sans-serif', { selector: 'td > details > ol > li > bdi' });
+    expect(secondListItem).toBeInTheDocument();
+  });
 });
