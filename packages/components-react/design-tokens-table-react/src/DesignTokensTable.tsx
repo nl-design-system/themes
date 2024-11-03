@@ -1,5 +1,6 @@
 import {
   ColorSample,
+  Icon,
   PreserveData,
   Table,
   TableBody,
@@ -22,6 +23,7 @@ import { CursorSample } from './CursorSample';
 import { FontFamilySample } from './FontFamilySample';
 import { SubtleBadge } from './SubtleBadge';
 import { FontFamilyDetails } from './FontFamilyDetails';
+import { IconCheck, IconFileUnknown } from '@tabler/icons-react';
 
 export const path2css = (path: StyleDictionaryDesignToken['path']) => `var(--${path.join('-')})`;
 
@@ -36,6 +38,7 @@ const serializeTokenValue = (value?: DesignTokenValue) =>
 
 interface DesignTokensTableProps {
   tokens: StyleDictionaryDesignToken[];
+  tokensMap?: Map<string, StyleDictionaryDesignToken>;
 }
 
 const getLastPathSegment = (token: StyleDictionaryDesignToken) =>
@@ -48,7 +51,9 @@ const stringSort = (a: string, b: string) => (a === b ? 0 : a > b ? 1 : -1);
 const sortByTokenRef = (a: StyleDictionaryDesignToken, b: StyleDictionaryDesignToken) =>
   stringSort(tokenRef(a.path), tokenRef(b.path));
 
-export const DesignTokensTable = ({ tokens }: DesignTokensTableProps) => {
+export const DesignTokensTable = ({ tokens, tokensMap }: DesignTokensTableProps) => {
+  const vendorPrefixes = ['ams', 'denhaag', 'nl', 'utrecht'];
+
   return (
     <Table
       className="sb-unstyled voorbeeld-theme"
@@ -72,13 +77,21 @@ export const DesignTokensTable = ({ tokens }: DesignTokensTableProps) => {
           const value = getTokenValue(token);
           const propertyName = getLastPathSegment(token);
           const tokenType = propertyName && getTokenType(propertyName);
+          const isVendorToken = vendorPrefixes.includes(path[0]);
+          const isVerified = tokensMap ? tokensMap.has(ref) : false;
 
-          if (propertyName === 'color' && !isColorValue(value)) {
-            console.log(value);
-          }
           return (
             <TableRow key={index}>
               <TableCell>
+                {isVerified ? (
+                  <Icon role="image" aria-label="status: verified token">
+                    <IconCheck />
+                  </Icon>
+                ) : isVendorToken ? (
+                  <Icon role="image" aria-label="status: unknown token">
+                    <IconFileUnknown />
+                  </Icon>
+                ) : null}
                 <PreserveData>{ref}</PreserveData>
               </TableCell>
               <TableCell>

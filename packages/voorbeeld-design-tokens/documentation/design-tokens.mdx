@@ -1,13 +1,19 @@
 import { Meta } from "@storybook/blocks";
 import { DesignTokensTable } from "@nl-design-system-unstable/design-tokens-table-react/css";
 import tokens from "../dist/list.json";
+import utrechtVendorTokens from "@utrecht/component-library-design-tokens/dist/tokens.json";
 import config from "../src/config.json";
+import { treeToMap, addPath } from "@nl-design-system-unstable/tokens-lib/dist/ExampleTokensCSS";
+import { isDesignTokenDefinition } from "@nl-design-system-unstable/tokens-lib/dist/design-tokens";
 
 <Meta title="Voorbeeld Thema/Design Tokens" />
 
 # Design Tokens
 
-<DesignTokensTable tokens={tokens.filter((token) => token.path[0] !== config.prefix)} />
+<DesignTokensTable
+  tokens={tokens.filter((token) => token.path[0] !== config.prefix)}
+  tokensMap={treeToMap(addPath(utrechtVendorTokens, isDesignTokenDefinition), isDesignTokenDefinition)}
+/>
 
 ## Proprietary Design Tokens
 
