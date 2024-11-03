@@ -21,6 +21,7 @@ import { TokenTypeIcon } from './TokenTypeIcon';
 import { CursorSample } from './CursorSample';
 import { FontFamilySample } from './FontFamilySample';
 import { SubtleBadge } from './SubtleBadge';
+import { FontFamilyDetails } from './FontFamilyDetails';
 
 export const path2css = (path: StyleDictionaryDesignToken['path']) => `var(--${path.join('-')})`;
 
@@ -81,13 +82,17 @@ export const DesignTokensTable = ({ tokens }: DesignTokensTableProps) => {
                 <PreserveData>{ref}</PreserveData>
               </TableCell>
               <TableCell>
-                <PreserveData
-                  style={{
-                    fontVariantNumeric: 'lining-nums tabular-nums',
-                  }}
-                >
-                  {serializeTokenValue(value)}
-                </PreserveData>
+                {tokenType === 'font-family' && typeof value === 'string' ? (
+                  <FontFamilyDetails value={value} />
+                ) : (
+                  <PreserveData
+                    style={{
+                      fontVariantNumeric: 'lining-nums tabular-nums',
+                    }}
+                  >
+                    {serializeTokenValue(value)}
+                  </PreserveData>
+                )}
               </TableCell>
               <TableCell>
                 {tokenType ? (
