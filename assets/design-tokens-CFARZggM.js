@@ -1,1 +1,0 @@
-import"./index-BqQ5ME5e.js";const s=e=>Object.prototype.hasOwnProperty.call(e,"value")||Object.prototype.hasOwnProperty.call(e,"$value"),o=e=>s(e)||Object.prototype.hasOwnProperty.call(e,"css")||Object.prototype.hasOwnProperty.call(e,"$extensions"),a=e=>e&&typeof e.$value<"u"?e.$value:e==null?void 0:e.value;export{o as a,a as g,s as i};
