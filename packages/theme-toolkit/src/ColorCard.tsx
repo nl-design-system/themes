@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { parseColor } from './color-util';
+import { parseColor } from '@nl-design-system-unstable/tokens-lib/src/color-util';
 import { lab } from 'd3-color';
 import { CopyCode } from './CopyCode';
 // eslint-disable-next-line no-unused-vars

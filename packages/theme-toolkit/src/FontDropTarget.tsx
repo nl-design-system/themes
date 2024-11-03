@@ -3,7 +3,7 @@ import { useDropzone, type FileWithPath } from 'react-dropzone';
 import { PropsWithChildren, useCallback, useId, useState } from 'react';
 import { DropTarget, DropTargetProps } from './DropTarget';
 import { wakamaiFondueFromDataBuffer } from './vendor/wakamai-fondue.js';
-import { uniq } from 'lodash';
+import uniq from 'lodash-es/uniq';
 
 export interface FontDropTargetProps extends Pick<DropTargetProps, 'appearance'> {
   cssProperty: string;

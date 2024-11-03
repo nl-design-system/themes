@@ -3,7 +3,7 @@
 import { describe, expect, it } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { DesignTokensTable } from './DesignTokensTable';
-import { createDesignToken } from './util';
+import { createDesignToken } from '@nl-design-system-unstable/tokens-lib/dist/util';
 
 describe('Tokens table', () => {
   it('renders a table with a row for each design token that matches the prefix', () => {
@@ -22,12 +22,12 @@ describe('Tokens table', () => {
     expect(tableBodyRows?.length).toBe(tokens.length);
   });
 
-  it('renders a column with the a CSS variable', () => {
+  it('renders a column with the a design token reference', () => {
     const tokens = [createDesignToken({ name: 'example.button.color', value: 'cornflowerblue' })];
 
     render(<DesignTokensTable tokens={tokens} />);
 
-    const tableDataCell = screen.getByText('var(--example-button-color)', { selector: 'td, td > *' });
+    const tableDataCell = screen.getByText('example.button.color', { selector: 'td, td > *' });
     expect(tableDataCell).toBeInTheDocument();
   });
 

@@ -1,4 +1,4 @@
-import isPlainObject from 'lodash.isplainobject';
+import isPlainObject from 'lodash-es/isPlainObject';
 import { CopyButton } from './CopyButton';
 import {
   DesignToken,
@@ -11,8 +11,8 @@ import {
   StyleDictionaryDesignToken,
   StyleDictionaryTree,
   ValueTree,
-} from './design-tokens';
-import cloneDeepWith from 'lodash.clonedeepwith';
+} from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
+import cloneDeepWith from 'lodash-es/cloneDeepWith';
 // eslint-disable-next-line no-unused-vars
 
 type DesignTokenTraverseCallback = (_parents: any, _current: any) => void;

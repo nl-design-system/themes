@@ -6,10 +6,13 @@
 import { useEffect, useState } from 'react';
 import { ColorResults } from './ColorTable';
 import { ColorCard } from './ColorCard';
-import { flattenColorTokens } from './util';
-import { ColorTokenMatch, filterColorTokens, parseColor } from './color-util';
+import { flattenColorTokens } from '@nl-design-system-unstable/tokens-lib/src/util';
+import { ColorTokenMatch, filterColorTokens, parseColor } from '@nl-design-system-unstable/tokens-lib/src/color-util';
 // eslint-disable-next-line no-unused-vars
-import { StyleDictionaryDesignToken, StyleDictionaryTree } from './design-tokens';
+import {
+  StyleDictionaryDesignToken,
+  StyleDictionaryTree,
+} from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 import { Code } from '@utrecht/component-library-react/dist/css-module';
 
 export interface ColorSearchProps {

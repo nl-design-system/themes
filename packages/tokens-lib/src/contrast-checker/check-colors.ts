@@ -4,7 +4,7 @@ import {
   StyleDictionaryDesignToken,
   StyleDictionaryTree,
 } from '../design-tokens';
-import isPlainObject from 'lodash.isplainobject';
+import isPlainObject from 'lodash-es/isPlainObject';
 import Color from 'color';
 import { createPath } from '../util';
 import type { ColorPair } from './ColorPair';

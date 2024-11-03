@@ -1,7 +1,7 @@
-import cloneDeepWith from 'lodash.clonedeepwith';
-import isPlainObject from 'lodash.isplainobject';
-import mapValues from 'lodash.mapvalues';
-import omitBy from 'lodash.omitby';
+import cloneDeepWith from 'lodash-es/cloneDeepWith';
+import isPlainObject from 'lodash-es/isPlainObject';
+import mapValues from 'lodash-es/mapValues';
+import omitBy from 'lodash-es/omitBy';
 
 export interface BoxShadowValue {
   x: number;
