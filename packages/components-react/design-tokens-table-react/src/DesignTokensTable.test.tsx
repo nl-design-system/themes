@@ -4,6 +4,8 @@ import { describe, expect, it } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { DesignTokensTable } from './DesignTokensTable';
 import { createDesignToken } from '@nl-design-system-unstable/tokens-lib/dist/util';
+import { addPath, treeToMap } from '@nl-design-system-unstable/tokens-lib/dist/ExampleTokensCSS';
+import { isDesignTokenDefinition, StyleDictionaryTree } from '@nl-design-system-unstable/tokens-lib/dist/design-tokens';
 
 describe('Tokens table', () => {
   it('renders a table with a row for each design token that matches the prefix', () => {
@@ -72,5 +74,30 @@ describe('Tokens table', () => {
 
     const secondListItem = screen.getByText('sans-serif', { selector: 'td > details > ol > li > bdi' });
     expect(secondListItem).toBeInTheDocument();
+  });
+
+  it('renders a column with a verified icon', () => {
+    const tokens = [createDesignToken({ name: 'utrecht.button.font-family', value: '"Fira Sans", sans-serif' })];
+    const vendorTree = {
+      utrecht: {
+        button: {
+          'font-family': {
+            $extensions: {
+              'com.example.this-token-exists': true,
+            },
+          },
+        },
+      },
+    };
+    const tokensMap = treeToMap(
+      addPath(vendorTree as any, isDesignTokenDefinition) as any as StyleDictionaryTree,
+      isDesignTokenDefinition,
+    );
+
+    render(<DesignTokensTable tokens={tokens} tokensMap={tokensMap as any} />);
+
+    const verifiedIcon = screen.getByRole('image', { name: 'status: verified token' });
+
+    expect(verifiedIcon).toBeInTheDocument();
   });
 });

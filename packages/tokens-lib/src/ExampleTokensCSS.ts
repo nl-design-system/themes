@@ -11,6 +11,7 @@ import {
   ValueTree,
 } from './design-tokens';
 import cloneDeepWith from 'lodash-es/cloneDeepWith';
+import { tokenRef } from './util';
 // eslint-disable-next-line no-unused-vars
 
 type DesignTokenTraverseCallback = (_parents: any, _current: any) => void;
@@ -60,6 +61,9 @@ export const treeToArray = <T extends DesignToken>(
   });
   return array;
 };
+
+export const treeToMap = <T extends DesignToken>(tokens: DesignTokenTree<T>, testFn: ValueTestFn = isDesignToken) =>
+  new Map(treeToArray(tokens, testFn).map((token) => [tokenRef((token as any).path), token]));
 
 export const tokensToCSS = <T extends DesignToken = StyleDictionaryDesignToken>(tokens: DesignTokenTree<T>): string => {
   const lines: string[] = [];
