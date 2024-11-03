@@ -13,10 +13,15 @@ import {
   getColorGroupName,
   styleDictionaryRef,
   isColorOrUnknown,
-} from './util';
-import { ColorTokenMatch, parseColor } from './color-util';
+} from '@nl-design-system-unstable/tokens-lib/src/util';
+import { ColorTokenMatch, parseColor } from '@nl-design-system-unstable/tokens-lib/src/color-util';
 // eslint-disable-next-line no-unused-vars
-import { type StyleDictionaryDesignToken, type DesignTokenMap, type DesignToken, getTokenValue } from './design-tokens';
+import {
+  type StyleDictionaryDesignToken,
+  type DesignTokenMap,
+  type DesignToken,
+  getTokenValue,
+} from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 
 export const ColorRow = ({
   name,

@@ -1,4 +1,8 @@
-import { isFigmaTokens, migrateTheme, migrateTokensFile } from '../migrate-theme';
+import {
+  isFigmaTokens,
+  migrateTheme,
+  migrateTokensFile,
+} from '@nl-design-system-unstable/tokens-lib/src/migrate-theme';
 import { readFile } from 'node:fs/promises';
 
 const init = async (inputFile: string, metadataFile: string) => {

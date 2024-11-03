@@ -1,5 +1,8 @@
-import { DesignTokensTable } from './DesignTokensTable';
-import { isHiddenDesignToken, StyleDictionaryDesignToken } from './design-tokens';
+import { DesignTokensTable } from '@nl-design-system-unstable/design-tokens-table-react/css';
+import {
+  isHiddenDesignToken,
+  StyleDictionaryDesignToken,
+} from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 // eslint-disable-next-line no-unused-vars
 
 export interface ComponentTokensTableProps {

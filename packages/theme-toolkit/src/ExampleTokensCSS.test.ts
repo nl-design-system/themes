@@ -1,8 +1,8 @@
 /* eslint-env jest */
 import { describe, expect, it, jest } from '@jest/globals';
-import { isDesignToken } from './design-tokens';
+import { isDesignToken } from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 import { addPath, findDesignTokenDefinitions, tokensToCSS, traverseDeep } from './ExampleTokensCSS';
-import { createDesignToken } from './util';
+import { createDesignToken } from '@nl-design-system-unstable/tokens-lib/src/util';
 
 describe('traverseDeep', () => {
   const tokensTree = {
