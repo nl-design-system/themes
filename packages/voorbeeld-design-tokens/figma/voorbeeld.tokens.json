@@ -916,17 +916,54 @@
   "common": {
     "basis": {
       "typography": {
+        "min": {
+          "small": { "font-size": { "$value": "0.9643rem" } },
+          "medium": { "font-size": { "$value": "1.125rem" } },
+          "large": { "font-size": { "$value": "1.3125rem" } },
+          "x-large": { "font-size": { "$value": "1.5313rem" } },
+          "xx-large": { "font-size": { "$value": "1.7865rem" } },
+          "xxx-large": { "font-size": { "$value": "2.0842rem" } },
+          "xxxx-large": { "font-size": { "$value": "2.4316rem" } }
+        },
         "scale": {
-          "xx-small": { "font-size": { "$value": "8px", "comment": "8px" } },
-          "x-small": { "font-size": { "$value": "12px", "comment": "12px" } },
-          "small": { "font-size": { "$value": "14px", "comment": "14px" } },
-          "medium": { "font-size": { "$value": "16px", "comment": "16px" } },
-          "large": { "font-size": { "$value": "20px", "comment": "20px" } },
-          "x-large": { "font-size": { "$value": "24px", "comment": "24px" } },
-          "xx-large": { "font-size": { "$value": "32px", "comment": "32px" } },
-          "xxx-large": { "font-size": { "$value": "40px", "comment": "40px" } },
-          "xxxx-large": { "font-size": { "$value": "48px", "comment": "48px" } }
-        }
+          "small": {
+            "font-size": { "$value": "14px" },
+            "line-height": { "$value": "1.6" }
+          },
+          "medium": {
+            "font-size": { "$value": "16px" },
+            "line-height": { "$value": "1.6" }
+          },
+          "large": {
+            "font-size": { "$value": "20px" },
+            "line-height": { "$value": "1.5" }
+          },
+          "x-large": {
+            "font-size": { "$value": "24px" },
+            "line-height": { "$value": "1.3" }
+          },
+          "xx-large": {
+            "font-size": { "$value": "32px" },
+            "line-height": { "$value": "1.25" }
+          },
+          "xxx-large": {
+            "font-size": { "$value": "40px" },
+            "line-height": { "$value": "1.2" }
+          },
+          "xxxx-large": {
+            "font-size": { "$value": "48px" },
+            "line-height": { "$value": "1.15" }
+          }
+        },
+        "max": {
+          "small": { "font-size": { "$value": "1.2rem" } },
+          "medium": { "font-size": { "$value": "1.5rem" } },
+          "large": { "font-size": { "$value": "1.875rem" } },
+          "x-large": { "font-size": { "$value": "2.3438rem" } },
+          "xx-large": { "font-size": { "$value": "2.9297rem" } },
+          "xxx-large": { "font-size": { "$value": "3.6621rem" } },
+          "xxxx-large": { "font-size": { "$value": "4.5776rem" } }
+        },
       }
     },
     "utrecht": {
