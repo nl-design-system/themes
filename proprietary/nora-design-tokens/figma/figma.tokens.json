@@ -527,6 +527,10 @@
             "$type": "lineHeights",
             "$value": "120%"
           },
+          "125": {
+            "$type": "lineHeights",
+            "$value": "125%"
+          },
           "150": {
             "$type": "lineHeights",
             "$value": "150%"
@@ -1140,7 +1144,138 @@
       }
     }
   },
-  "components/anchor-nav": {},
+  "components/anchor-nav": {
+    "nora": {
+      "anchor-nav": {
+        "item": {
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{nora.space.50}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{nora.space.50}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{nora.space.100}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{nora.space.100}"
+          },
+          "border-radius": {
+            "$type": "borderRadius",
+            "$value": "{nora.border-radius.sm}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{nora.typography.font-size.sm}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{nora.typography.line-height.125}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{nora.document.subtle.color}"
+          },
+          "current": {
+            "color": {
+              "$type": "color",
+              "$value": "{nora.document.color}"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{nora.color.blue.50}"
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{nora.color.blue.600}"
+              }
+            }
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{nora.document.color}"
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{nora.color.blue.600}"
+              }
+            }
+          },
+          "icon": {
+            "size": {
+              "$type": "dimension",
+              "$value": "{nora.size.500}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{nora.color.gray.200}"
+            }
+          },
+          "focus-visible": {
+            "color": {
+              "$type": "color",
+              "$value": "{nora.focus.color}"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{nora.focus.background-color}"
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{nora.anchor-nav.item.focus-visible.color}"
+              }
+            }
+          }
+        },
+        "header-wrapper": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{nora.anchor-nav.item.padding-inline-start}"
+          }
+        },
+        "header": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{nora.eyebrow-header.font-size}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{nora.eyebrow-header.line-height}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{nora.eyebrow-header.color}"
+          },
+          "letter-spacing": {
+            "$type": "letterSpacing",
+            "$value": "{nora.eyebrow-header.letter-spacing}"
+          },
+          "text-transform": {
+            "$type": "textCase",
+            "$value": "{nora.eyebrow-header.text-transform}"
+          }
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{nora.space.300}"
+        },
+        "items-wrapper": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{nora.space.50}"
+          }
+        }
+      }
+    }
+  },
   "components/breadcrumb-nav": {
     "todo": {
       "breadcrumb-nav": {
