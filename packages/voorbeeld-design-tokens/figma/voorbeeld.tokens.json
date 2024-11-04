@@ -914,6 +914,58 @@
     }
   },
   "common": {
+    "basis": {
+      "typography": {
+        "min": {
+          "small": { "font-size": { "$value": "0.9643rem" } },
+          "medium": { "font-size": { "$value": "1.125rem" } },
+          "large": { "font-size": { "$value": "1.3125rem" } },
+          "x-large": { "font-size": { "$value": "1.5313rem" } },
+          "xx-large": { "font-size": { "$value": "1.7865rem" } },
+          "xxx-large": { "font-size": { "$value": "2.0842rem" } },
+          "xxxx-large": { "font-size": { "$value": "2.4316rem" } }
+        },
+        "scale": {
+          "small": {
+            "font-size": { "$value": "14px" },
+            "line-height": { "$value": "1.6" }
+          },
+          "medium": {
+            "font-size": { "$value": "16px" },
+            "line-height": { "$value": "1.6" }
+          },
+          "large": {
+            "font-size": { "$value": "20px" },
+            "line-height": { "$value": "1.5" }
+          },
+          "x-large": {
+            "font-size": { "$value": "24px" },
+            "line-height": { "$value": "1.3" }
+          },
+          "xx-large": {
+            "font-size": { "$value": "32px" },
+            "line-height": { "$value": "1.25" }
+          },
+          "xxx-large": {
+            "font-size": { "$value": "40px" },
+            "line-height": { "$value": "1.2" }
+          },
+          "xxxx-large": {
+            "font-size": { "$value": "48px" },
+            "line-height": { "$value": "1.15" }
+          }
+        },
+        "max": {
+          "small": { "font-size": { "$value": "1.2rem" } },
+          "medium": { "font-size": { "$value": "1.5rem" } },
+          "large": { "font-size": { "$value": "1.875rem" } },
+          "x-large": { "font-size": { "$value": "2.3438rem" } },
+          "xx-large": { "font-size": { "$value": "2.9297rem" } },
+          "xxx-large": { "font-size": { "$value": "3.6621rem" } },
+          "xxxx-large": { "font-size": { "$value": "4.5776rem" } }
+        }
+      }
+    },
     "utrecht": {
       "document": {
         "background-color": {
@@ -930,7 +982,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.md}"
+          "$value": "{basis.typography.scale.medium.font-size}"
         },
         "font-weight": {
           "$type": "fontWeights",
@@ -1697,7 +1749,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
+            "$value": "{basis.typography.scale.x-large.font-size}"
           }
         }
       }
@@ -1816,6 +1868,30 @@
           "$type": "textCase",
           "$value": "None"
         },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.scale.small.font-size}"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{voorbeeld.document.strong.font-weight}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "{voorbeeld.border-radius.round}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        },
         "letter-spacing": {
           "$type": "letterSpacing",
           "$value": "None"
@@ -1917,7 +1993,7 @@
         "attribution": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.sm}"
+            "$value": "{basis.typography.scale.small.font-size}"
           },
           "color": {
             "$type": "color",
@@ -1927,7 +2003,7 @@
         "content": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
+            "$value": "{basis.typography.scale.x-large.font-size}"
           },
           "color": {
             "$type": "color",
@@ -3590,7 +3666,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.3xl}"
+          "$value": "{basis.typography.scale.xxx-large.font-size}"
         }
       },
       "heading-2": {
@@ -3612,7 +3688,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.2xl}"
+          "$value": "{basis.typography.scale.xx-large.font-size}"
         }
       },
       "heading-3": {
@@ -3634,7 +3710,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.xl}"
+          "$value": "{basis.typography.scale.x-large.font-size}"
         }
       },
       "heading-4": {
@@ -3656,7 +3732,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.lg}"
+          "$value": "{basis.typography.scale.large.font-size}"
         }
       },
       "heading-5": {
@@ -3678,7 +3754,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.md}"
+          "$value": "{basis.typography.scale.medium.font-size}"
         }
       },
       "heading-6": {
@@ -3700,7 +3776,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.sm}"
+          "$value": "{basis.typography.scale.small.font-size}"
         }
       }
     }
@@ -4521,7 +4597,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.lg}"
+            "$value": "{basis.typography.scale.large.font-size}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -4539,7 +4615,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.sm}"
+            "$value": "{basis.typography.scale.small.font-size}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -5210,7 +5286,7 @@
       "status-badge": {
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{voorbeeld.typography.font-size.sm}"
+          "$value": "{basis.typography.scale.small.font-size}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -5647,7 +5723,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
+            "$value": "{basis.typography.scale.x-large.font-size}"
           },
           "font-weight": {
             "$type": "fontWeights",

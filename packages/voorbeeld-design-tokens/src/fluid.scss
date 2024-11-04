@@ -1,0 +1,80 @@
+/*
+ * Prefer `vi` over `vw` when available.
+ * Like `inline-size` and other logical properties, `vi` is based on the `inline` axis,
+ * instead of making assumptions about the text direction.
+ * The `vi` unit is unfortunately not yet implemented by all evergreen browsers.
+ */
+
+@property --100vw {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: true;
+}
+
+@property --100vi {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: true;
+}
+
+.voorbeeld-theme {
+  --100vw: 100vw;
+  --100vi: 100vi;
+
+  --viewport-small-inline-size: 320;
+  --viewport-large-inline-size: 1600;
+  --viewport-size: tan(atan2(var(--100vi, var(--100vw)), 1px));
+  --font-size-scale: calc(
+    (
+        clamp(var(--viewport-small-inline-size), var(--viewport-size), var(--viewport-large-inline-size)) -
+          var(--viewport-small-inline-size)
+      ) / (var(--viewport-large-inline-size) - var(--viewport-small-inline-size))
+  );
+
+  /*
+  --basis-typography-min-xxxx-large-font-size: 2.4316rem;
+  --basis-typography-max-xxxx-large-font-size: 4.5776rem;
+  */
+
+  --basis-typography-scale-small-font-size: calc(
+    var(--basis-typography-min-small-font-size) +
+      (var(--basis-typography-max-small-font-size) - var(--basis-typography-min-small-font-size)) *
+      var(--font-size-scale)
+  );
+
+  --basis-typography-scale-medium-font-size: calc(
+    var(--basis-typography-min-medium-font-size) +
+      (var(--basis-typography-max-medium-font-size) - var(--basis-typography-min-medium-font-size)) *
+      var(--font-size-scale)
+  );
+
+  --basis-typography-scale-large-font-size: calc(
+    var(--basis-typography-min-large-font-size) +
+      (var(--basis-typography-max-large-font-size) - var(--basis-typography-min-large-font-size)) *
+      var(--font-size-scale)
+  );
+
+  --basis-typography-scale-x-large-font-size: calc(
+    var(--basis-typography-min-x-large-font-size) +
+      (var(--basis-typography-max-x-large-font-size) - var(--basis-typography-min-x-large-font-size)) *
+      var(--font-size-scale)
+  );
+
+  --basis-typography-scale-xx-large-font-size: calc(
+    var(--basis-typography-min-xx-large-font-size) +
+      (var(--basis-typography-max-xx-large-font-size) - var(--basis-typography-min-xx-large-font-size)) *
+      var(--font-size-scale)
+  );
+
+  --basis-typography-scale-xxx-large-font-size: calc(
+    var(--basis-typography-min-xxx-large-font-size) +
+      (var(--basis-typography-max-xxx-large-font-size) - var(--basis-typography-min-xxx-large-font-size)) *
+      var(--font-size-scale)
+  );
+
+  --basis-typography-scale-xxxx-large-font-size: calc(
+    var(--basis-typography-min-xxxx-large-font-size) +
+      (var(--basis-typography-max-xxxx-large-font-size) - var(--basis-typography-min-xxxx-large-font-size)) *
+      var(--font-size-scale)
+  );
+}
