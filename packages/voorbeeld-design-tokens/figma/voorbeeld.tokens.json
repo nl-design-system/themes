@@ -4189,102 +4189,6 @@
           }
         }
       }
-    },
-    "nl": {
-      "heading": {
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.heading.font-family}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.heading.color}"
-        },
-        "level-1": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.3xl}"
-          }
-        },
-        "level-2": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.2xl}"
-          }
-        },
-        "level-4": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.md}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.lg}"
-          }
-        },
-        "level-3": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
-          }
-        },
-        "level-5": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.md}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.md}"
-          }
-        },
-        "level-6": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.md}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.sm}"
-          }
-        }
-      }
     }
   },
   "components/icon-only-button": {
@@ -4508,6 +4412,116 @@
               "$type": "textDecoration",
               "$value": "underline"
             }
+          }
+        }
+      }
+    }
+  },
+  "components/login-link": {
+    "lux": {
+      "login-link": {
+        "active": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.100}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.active.color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.active.color}"
+          }
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.white}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.interaction.color}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{voorbeeld.interaction.color}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "{voorbeeld.border-radius.md}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.50}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.hover.color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.hover.color}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.toptask.size}"
+          }
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.beetle}"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.beetle}"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.beetle}"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.beetle}"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "column-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.snail}"
+        }
+      }
+    },
+    "todo": {
+      "login-link": {
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.focus.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.focus.color}"
           }
         }
       }
@@ -7502,6 +7516,7 @@
       "components/icon-only-button",
       "components/link",
       "components/link-list",
+      "components/login-link",
       "components/mark",
       "components/modal-dialog",
       "components/number-badge",
