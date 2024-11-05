@@ -1,5 +1,12 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.4.0
+
+### Minor Changes
+
+- bccc931: \* Add tokens for `nora-link-overview`
+  - Add tokens for `nora-anchor-navigation`
+
 ## 1.3.0
 
 ### Minor Changes
