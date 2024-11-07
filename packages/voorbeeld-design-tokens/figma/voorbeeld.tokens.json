@@ -3896,15 +3896,19 @@
     },
     "nl": {
       "link": {
-        "icon": {
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.icon.functional.size}"
+        "active": {
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "auto"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.active.color}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
           }
-        },
-        "column-gap": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.text.beetle}"
         },
         "color": {
           "$type": "color",
@@ -3914,13 +3918,7 @@
           "$type": "color",
           "$value": "{voorbeeld.interaction.color}"
         },
-        "active": {
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.interaction.active.color}"
-          }
-        },
-        "focus": {
+        "focus-visible": {
           "background-color": {
             "$type": "color",
             "$value": "{utrecht.focus.background-color}"
@@ -3928,6 +3926,14 @@
           "color": {
             "$type": "color",
             "$value": "{utrecht.focus.color}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "auto"
           }
         },
         "hover": {
@@ -3944,25 +3950,9 @@
             "$value": "auto"
           }
         },
-        "visited": {
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.interaction.color}"
-          }
-        },
         "text-decoration": {
           "$type": "textDecoration",
           "$value": "underline"
-        },
-        "focus-visible": {
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
-          },
-          "text-decoration-thickness": {
-            "$type": "other",
-            "$value": "auto"
-          }
         },
         "text-decoration-thickness": {
           "$type": "other",
