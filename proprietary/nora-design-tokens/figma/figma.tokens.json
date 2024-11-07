@@ -1141,6 +1141,12 @@
           "$type": "fontWeights",
           "$value": "{nora.typography.font-weight.normal}"
         }
+      },
+      "list-marker": {
+        "color": {
+          "$type": "color",
+          "$value": "{nora.color.purple.300}"
+        }
       }
     }
   },
@@ -2923,36 +2929,32 @@
   "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{nora.document.large-vw.font-size}"
-        },
         "line-height": {
           "$type": "lineHeights",
-          "$value": "{nora.typography.line-height.120}"
+          "$value": "{nora.typography.line-height.115}"
         },
         "padding-inline-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{nora.space.300}"
         },
         "item": {
           "padding-inline-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{nora.space.175}"
           },
           "margin-block-end": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{nora.space.50}"
           },
           "margin-block-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{nora.space.50}"
           }
         },
         "marker": {
           "color": {
             "$type": "color",
-            "$value": "{nora.color.purple.300}"
+            "$value": "{nora.list-marker.color}"
           }
         }
       }
