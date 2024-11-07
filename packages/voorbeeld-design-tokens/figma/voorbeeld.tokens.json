@@ -5186,18 +5186,6 @@
     },
     "todo": {
       "skip-link": {
-        "border-color": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.sm}"
-        },
-        "box-shadow": {
-          "$type": "boxShadow",
-          "$value": "{voorbeeld.box-shadow.lg}"
-        },
         "font-weight": {
           "$type": "fontWeights",
           "$value": "{voorbeeld.document.strong.font-weight}"
@@ -5206,13 +5194,13 @@
     },
     "nl": {
       "skip-link": {
-        "min-block-size": {
-          "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.document.inverse.background-color}"
         },
-        "min-inline-size": {
-          "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+        "color": {
+          "$type": "color",
+          "$value": "{voorbeeld.document.inverse.color}"
         },
         "padding-block": {
           "$type": "spacing",
@@ -5222,17 +5210,31 @@
           "$type": "spacing",
           "$value": "{voorbeeld.space.inline.mouse}"
         },
-        "background-color": {
-          "$type": "color",
-          "$value": "{utrecht.focus.background-color}"
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
         },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.focus.color}"
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
         },
         "text-decoration": {
           "$type": "textDecoration",
-          "$value": "None"
+          "$value": "underline"
+        },
+        "focus-visible": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.focus.background-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.focus.color}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          }
         }
       }
     }
