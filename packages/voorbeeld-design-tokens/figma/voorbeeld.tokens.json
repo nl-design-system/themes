@@ -1810,18 +1810,6 @@
     }
   },
   "components/badge-data": {
-    "utrecht": {
-      "badge-data": {
-        "text-transform": {
-          "$type": "textCase",
-          "$value": "None"
-        },
-        "letter-spacing": {
-          "$type": "letterSpacing",
-          "$value": "None"
-        }
-      }
-    },
     "todo": {
       "badge-data": {
         "background-color": {
@@ -1836,10 +1824,6 @@
           "$type": "color",
           "$value": "{utrecht.document.color}"
         },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
         "font-size": {
           "$type": "fontSizes",
           "$value": "{utrecht.document.font-size}"
@@ -1852,41 +1836,25 @@
           "$type": "fontWeights",
           "$value": "{voorbeeld.document.strong.font-weight}"
         },
-        "max-block-size": {
-          "$type": "sizing",
+        "padding-block": {
+          "$type": "spacing",
           "$value": "None"
         },
-        "max-inline-size": {
-          "$type": "sizing",
-          "$value": "None"
+        "padding-inline": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.ant}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
         },
         "min-inline-size": {
           "$type": "sizing",
-          "$value": "{voorbeeld.size.3xs}"
+          "$value": "{voorbeeld.size.sm}"
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{voorbeeld.size.2xs}"
-        },
-        "padding-block-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.flea}"
-        },
-        "padding-block-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.flea}"
-        },
-        "padding-inline-start": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.ant}"
-        },
-        "padding-inline-end": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.ant}"
-        },
-        "text-decoration": {
-          "$type": "textDecoration",
-          "$value": "None"
+          "$value": "{voorbeeld.size.xs}"
         }
       }
     }
