@@ -2534,21 +2534,15 @@
           }
         },
         "small": {
-          "color": {
-            "$type": "color",
-            "$value": "{nora.document.color}"
-          },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{nora.typography.font-size.sm}"
+            "$value": "{nora.typography.font-size.xs}"
           },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{nora.document.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{nora.document.line-height}"
+          "large-vw": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{nora.typography.font-size.sm}"
+            }
           }
         }
       }
