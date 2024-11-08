@@ -1048,13 +1048,13 @@
         "active": {
           "color": {
             "$type": "color",
-            "$value": "{nora.color.blue.900}"
+            "$value": "{nora.color.blue.800}"
           }
         },
         "hover": {
           "color": {
             "$type": "color",
-            "$value": "{nora.color.blue.800}"
+            "$value": "{nora.color.blue.700}"
           }
         }
       },
@@ -1063,6 +1063,12 @@
           "size": {
             "$type": "sizing",
             "$value": "{nora.size.500}"
+          },
+          "large-vw": {
+            "size": {
+              "$type": "sizing",
+              "$value": "{nora.size.600}"
+            }
           }
         },
         "toptask": {
@@ -1797,6 +1803,94 @@
           "font-size": {
             "$type": "fontSizes",
             "$value": "{nora.document.large-vw.font-size}"
+          }
+        }
+      }
+    }
+  },
+  "components/link": {
+    "utrecht": {
+      "link": {
+        "color": {
+          "$type": "color",
+          "$value": "{nora.interaction.color}"
+        },
+        "column-gap": {
+          "$type": "spacing",
+          "$value": "{nora.space.50}"
+        },
+        "text-decoration": {
+          "$type": "textDecoration",
+          "$value": "underline"
+        },
+        "text-decoration-color": {
+          "$type": "color",
+          "$value": "{nora.interaction.color}"
+        },
+        "text-decoration-thickness": {
+          "$type": "other",
+          "$value": "auto"
+        },
+        "text-underline-offset": {
+          "$type": "other",
+          "$value": ".1em"
+        },
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{nora.icon.functional.size}"
+          },
+          "large-vw": {
+            "size": {
+              "$type": "sizing",
+              "$value": "{nora.icon.functional.large-vw.size}"
+            }
+          }
+        },
+        "active": {
+          "color": {
+            "$type": "color",
+            "$value": "{nora.interaction.active.color}"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{nora.focus.background-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{nora.focus.color}"
+          }
+        },
+        "focus-visible": {
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "auto"
+          }
+        },
+        "hover": {
+          "color": {
+            "$type": "color",
+            "$value": "{nora.interaction.hover.color}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "auto"
+          }
+        },
+        "visited": {
+          "color": {
+            "$type": "color",
+            "$value": "{nora.interaction.color}"
           }
         }
       }
@@ -3011,6 +3105,7 @@
       "components/breadcrumb-nav",
       "components/icon-only-button",
       "components/heading",
+      "components/link",
       "components/link-overview",
       "components/navigation-bar",
       "components/ordered-list",
