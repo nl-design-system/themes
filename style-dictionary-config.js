@@ -136,7 +136,7 @@ const createConfig = ({
       },
       css: {
         transformGroups: 'tokens-studio',
-        transforms: ['name/kebab'],
+        transforms: ['boxShadow', 'shadow/css/shorthand', 'name/kebab'],
         buildPath: 'dist/',
         files: [
           {
