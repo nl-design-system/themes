@@ -1,5 +1,11 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.5.0
+
+### Minor Changes
+
+- 4d0efbd: Tokens toegevoegd en geupdate voor: `utrecht-unordered-list`, `utrecht-paragraph-small-print` en `utrecht-link`
+
 ## 1.4.0
 
 ### Minor Changes
