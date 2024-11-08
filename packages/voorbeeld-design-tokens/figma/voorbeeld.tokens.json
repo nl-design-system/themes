@@ -3705,6 +3705,52 @@
       }
     }
   },
+  "components/heading-group": {
+    "nl": {
+      "heading-group": {
+        "pre-heading": {
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{voorbeeld.document.strong.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{utrecht.document.line-height}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.sm}"
+          }
+        },
+        "subheading": {
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.700}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{utrecht.document.line-height}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.document.font-size}"
+          }
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        }
+      }
+    }
+  },
   "components/icon-only-button": {
     "todo": {
       "icon-only-button": {
@@ -5182,55 +5228,21 @@
     },
     "todo": {
       "skip-link": {
+        "border-color": {
+          "$type": "color",
+          "$value": "transparent"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "box-shadow": {
+          "$type": "boxShadow",
+          "$value": "{voorbeeld.box-shadow.lg}"
+        },
         "font-weight": {
           "$type": "fontWeights",
           "$value": "{voorbeeld.document.strong.font-weight}"
-        }
-      }
-    },
-    "nl": {
-      "skip-link": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.document.inverse.background-color}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{voorbeeld.document.inverse.color}"
-        },
-        "padding-block": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "padding-inline": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.mouse}"
-        },
-        "min-block-size": {
-          "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
-        },
-        "min-inline-size": {
-          "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
-        },
-        "text-decoration": {
-          "$type": "textDecoration",
-          "$value": "underline"
-        },
-        "focus-visible": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{utrecht.focus.background-color}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.focus.color}"
-          },
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
-          }
         }
       }
     }
@@ -6856,6 +6868,7 @@
       "components/form-field-option-label",
       "components/form-field-radio-option",
       "components/heading",
+      "components/heading-group",
       "components/icon-only-button",
       "components/link",
       "components/link-list",
