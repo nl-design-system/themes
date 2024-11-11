@@ -1,4 +1,4 @@
-import { register } from '@tokens-studio/sd-transforms';
+import { register, expandTypesMap } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
@@ -51,6 +51,9 @@ const build = async () => {
     }),
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: ['figma/**/*.tokens.json'],
+    expand: {
+      typesMap: expandTypesMap,
+    },
   });
 
   // sd.registerFilter({
@@ -67,39 +70,41 @@ const build = async () => {
   //   },
   // });
 
-  sd.registerTransform({
-    name: 'boxShadow',
-    type: 'value',
-    // transitive: false,
-    transform: (token) => {
-      console.log(token);
-      if (token['original']['$type'] === 'boxShadow') console.log(token);
-      return;
-      if (isBoxShadowToken(token)) {
-        return {
-          offsetX: token.x,
-          offsetY: token.y,
-          blur: token.blur,
-          spread: token.spread,
-          color: token.color,
-        };
-      } else {
-        return token.value;
-      }
-    },
-  });
+  // sd.registerTransform({
+  //   name: 'boxShadow',
+  //   type: 'value',
+  //   // transitive: false,
+  //   transform: (token) => {
+  //     console.log(token);
+  //     if (token['original']['$type'] === 'boxShadow') console.log(token);
+  //     return;
+  //     if (isBoxShadowToken(token)) {
+  //       return {
+  //         offsetX: token.x,
+  //         offsetY: token.y,
+  //         blur: token.blur,
+  //         spread: token.spread,
+  //         color: token.color,
+  //       };
+  //     } else {
+  //       return token.value;
+  //     }
+  //   },
+  // });
+
   // sd.registerTransform({
   //   name: 'boxShadow/css',
   //   type: 'value',
   //   transitive: false,
   //   transform: (token) => {
-  //     return token.value;
+  //     // return token.value;
   //     let value = token.value;
+  //     console.log(token);
 
-  //     if (isShadow(token)) {
+  //     if (isShadowToken(token)) {
   //       const { x, y, blur, spread, color } = token.value;
   //       value = `${x} ${y} ${blur} ${spread} ${color}`;
-  //     } else if (isBoxShadow(token)) {
+  //     } else if (isBoxShadowToken(token)) {  
   //       const { offsetX, offsetY, blur, spread, color } = token.value;
   //       value = `${offsetX} ${offsetY} ${blur} ${spread} ${color}`;
   //     }
