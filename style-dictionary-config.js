@@ -6,10 +6,11 @@ const createConfig = ({
   backwardsCompatible = false,
   selector,
   source = ['src/**/tokens.json', 'src/**/*.tokens.json'],
+  useTokensStudioTransformGroup = false,
 }) => {
   const prefix = selector.replace(/^\.(.+)-theme/, '$1');
   const themeName = `${prefix}-theme`;
-  const transformGroup = backwardsCompatible ? '' : 'tokens-studio';
+  const transformGroup = useTokensStudioTransformGroup ? 'tokens-studio' : '';
 
   const legacyPlatforms = {
     legacyJson: {
