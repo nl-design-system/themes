@@ -3043,30 +3043,6 @@
           "$value": "{utrecht.document.line-height}"
         }
       }
-    },
-    "nl": {
-      "code": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.gray.100}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{voorbeeld.code.font-family}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{utrecht.document.font-size}"
-        }
-      }
     }
   },
   "components/code-block": {
@@ -3107,42 +3083,6 @@
         "padding-inline-start": {
           "$type": "spacing",
           "$value": "{voorbeeld.space.inline.mouse}"
-        }
-      }
-    },
-    "nl": {
-      "code-block": {
-        "padding-block": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.mouse}"
-        },
-        "padding-inline": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.mouse}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.gray.100}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{voorbeeld.code.font-family}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{utrecht.document.font-size}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{voorbeeld.border-radius.sm}"
         }
       }
     }
@@ -3225,64 +3165,6 @@
             "$type": "color",
             "$value": "{voorbeeld.line.border-color}"
           }
-        }
-      }
-    }
-  },
-  "components/data-badge": {
-    "nl": {
-      "data-badge": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.violet.100}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{voorbeeld.border-radius.sm}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{utrecht.document.font-size}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{voorbeeld.document.strong.font-weight}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "min-block-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.xs}"
-        },
-        "min-inline-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.sm}"
-        },
-        "padding-block": {
-          "$type": "spacing",
-          "$value": "None"
-        },
-        "padding-inline": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.ant}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.sm}"
         }
       }
     }
@@ -3789,53 +3671,99 @@
           "$value": "{voorbeeld.typography.font-size.sm}"
         }
       }
-    }
-  },
-  "components/heading-group": {
+    },
     "nl": {
-      "heading-group": {
-        "pre-heading": {
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.document.color}"
+      "heading": {
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.heading.color}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.heading.font-family}"
+        },
+        "level-1": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.3xl}"
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{voorbeeld.document.strong.font-weight}"
+            "$value": "{utrecht.heading.font-weight}"
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "{utrecht.document.line-height}"
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          }
+        },
+        "level-2": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.2xl}"
           },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          }
+        },
+        "level-3": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.xl}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          }
+        },
+        "level-4": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.lg}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.md}"
+          }
+        },
+        "level-5": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.md}"
+          }
+        },
+        "level-6": {
           "font-size": {
             "$type": "fontSizes",
             "$value": "{voorbeeld.typography.font-size.sm}"
           },
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.document.font-family}"
-          }
-        },
-        "subheading": {
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.700}"
-          },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{utrecht.document.font-weight}"
+            "$value": "{utrecht.heading.font-weight}"
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "{utrecht.document.line-height}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{utrecht.document.font-size}"
-          },
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.document.font-family}"
+            "$value": "{voorbeeld.typography.line-height.md}"
           }
         }
       }
@@ -3946,19 +3874,15 @@
     },
     "nl": {
       "link": {
-        "active": {
-          "text-decoration-thickness": {
-            "$type": "other",
-            "$value": "auto"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.interaction.active.color}"
-          },
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
           }
+        },
+        "column-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.text.beetle}"
         },
         "color": {
           "$type": "color",
@@ -3968,7 +3892,13 @@
           "$type": "color",
           "$value": "{voorbeeld.interaction.color}"
         },
-        "focus-visible": {
+        "active": {
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.active.color}"
+          }
+        },
+        "focus": {
           "background-color": {
             "$type": "color",
             "$value": "{utrecht.focus.background-color}"
@@ -3976,14 +3906,6 @@
           "color": {
             "$type": "color",
             "$value": "{utrecht.focus.color}"
-          },
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
-          },
-          "text-decoration-thickness": {
-            "$type": "other",
-            "$value": "auto"
           }
         },
         "hover": {
@@ -4000,9 +3922,25 @@
             "$value": "auto"
           }
         },
+        "visited": {
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.color}"
+          }
+        },
         "text-decoration": {
           "$type": "textDecoration",
           "$value": "underline"
+        },
+        "focus-visible": {
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "auto"
+          }
         },
         "text-decoration-thickness": {
           "$type": "other",
@@ -5117,18 +5055,6 @@
           "$value": "{voorbeeld.space.block.snail}"
         }
       }
-    },
-    "nl": {
-      "separator": {
-        "block-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.4xs}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        }
-      }
     }
   },
   "components/side-nav": {
@@ -5320,21 +5246,55 @@
     },
     "todo": {
       "skip-link": {
-        "border-color": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.sm}"
-        },
-        "box-shadow": {
-          "$type": "boxShadow",
-          "$value": "{voorbeeld.box-shadow.lg}"
-        },
         "font-weight": {
           "$type": "fontWeights",
           "$value": "{voorbeeld.document.strong.font-weight}"
+        }
+      }
+    },
+    "nl": {
+      "skip-link": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.document.inverse.background-color}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{voorbeeld.document.inverse.color}"
+        },
+        "padding-block": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "padding-inline": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.mouse}"
+        },
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "text-decoration": {
+          "$type": "textDecoration",
+          "$value": "underline"
+        },
+        "focus-visible": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.focus.background-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.focus.color}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          }
         }
       }
     }
@@ -6951,7 +6911,6 @@
       "components/code",
       "components/code-block",
       "components/color-sample",
-      "components/data-badge",
       "components/drawer",
       "components/form-field",
       "components/form-field-checkbox-option",
@@ -6961,7 +6920,6 @@
       "components/form-field-option-label",
       "components/form-field-radio-option",
       "components/heading",
-      "components/heading-group",
       "components/icon-only-button",
       "components/link",
       "components/link-list",
