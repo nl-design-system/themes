@@ -24,6 +24,7 @@ const build = async () => {
   const sd = new StyleDictionary({
     ...createConfig({
       selector: themeSelector,
+      useTokensStudioTransformGroup: true,
     }),
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: ['figma/**/*.tokens.json'],
