@@ -9,10 +9,11 @@ const createConfig = ({
 }) => {
   const prefix = selector.replace(/^\.(.+)-theme/, '$1');
   const themeName = `${prefix}-theme`;
+  const transformGroup = backwardsCompatible ? '' : 'tokens-studio';
 
   const legacyPlatforms = {
     legacyJson: {
-      transformGroup: 'tokens-studio',
+      transformGroup: transformGroup,
       transforms: ['name/camel', 'attribute/cti'],
       buildPath: 'dist/',
       files: [
@@ -23,7 +24,7 @@ const createConfig = ({
       ],
     },
     legacyCss: {
-      transformGroup: 'tokens-studio',
+      transformGroup: transformGroup,
       transforms: ['name/kebab'],
       buildPath: 'dist/',
       files: [
@@ -38,7 +39,7 @@ const createConfig = ({
       ],
     },
     legacyLess: {
-      transformGroup: 'tokens-studio',
+      transformGroup: transformGroup,
       transforms: ['name/kebab'],
       buildPath: 'dist/',
       files: [
@@ -52,7 +53,7 @@ const createConfig = ({
       ],
     },
     legacyScss: {
-      transformGroup: 'tokens-studio',
+      transformGroup: transformGroup,
       transforms: ['name/kebab'],
       buildPath: 'dist/',
       files: [
@@ -66,7 +67,7 @@ const createConfig = ({
       ],
     },
     legacyJs: {
-      transformGroup: 'tokens-studio',
+      transformGroup: transformGroup,
       transforms: ['name/camel'],
       buildPath: 'dist/',
       files: [
@@ -90,7 +91,7 @@ const createConfig = ({
     platforms: {
       ...(backwardsCompatible ? legacyPlatforms : {}),
       js: {
-        transformGroup: 'tokens-studio',
+        transformGroup: transformGroup,
         transforms: ['name/camel'],
         buildPath: 'dist/',
         files: [
@@ -105,7 +106,7 @@ const createConfig = ({
         ],
       },
       tokenTree: {
-        transformGroup: 'tokens-studio',
+        transformGroup: transformGroup,
         transforms: ['name/camel'],
         buildPath: 'dist/',
         files: [
@@ -116,7 +117,7 @@ const createConfig = ({
         ],
       },
       json: {
-        transformGroup: 'tokens-studio',
+        transformGroup: transformGroup,
         transforms: ['name/camel'],
         buildPath: 'dist/',
         files: [
@@ -135,7 +136,7 @@ const createConfig = ({
         ],
       },
       css: {
-        transformGroup: 'tokens-studio',
+        transformGroup: transformGroup,
         transforms: ['name/kebab'],
         buildPath: 'dist/',
         files: [
@@ -158,7 +159,7 @@ const createConfig = ({
         ],
       },
       scss: {
-        transformGroup: 'tokens-studio',
+        transformGroup: transformGroup,
         transforms: ['name/kebab'],
         buildPath: 'dist/',
         files: [
@@ -187,7 +188,7 @@ const createConfig = ({
         ],
       },
       less: {
-        transformGroup: 'tokens-studio',
+        transformGroup: transformGroup,
         transforms: ['name/kebab'],
         buildPath: 'dist/',
         files: [
