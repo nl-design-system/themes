@@ -21,9 +21,9 @@ import {
   UnorderedListItem,
   OrderedList,
   OrderedListItem,
+  DataBadge,
   Document,
   // BadgeCounter,
-  // BadgeData,
   // Blockquote,
   Checkbox,
   // CustomCheckbox ,
@@ -62,8 +62,6 @@ import {
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
 
 const BadgeCounter = ({ children }: PropsWithChildren) => <div className="utrecht-badge-counter">{children}</div>;
-
-const BadgeData = ({ children }: PropsWithChildren) => <div className="utrecht-badge-data">{children}</div>;
 
 export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   {
@@ -793,10 +791,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => <BadgeCounter>42</BadgeCounter>,
   },
   {
-    storyId: 'react-utrecht-badge-data--default',
+    storyId: 'react-utrecht-data-badge--default',
     group: STORY_GROUPS['BADGES'],
     name: 'Utrecht Data Badge',
-    render: () => <BadgeData>Category 1</BadgeData>,
+    render: () => <DataBadge>Category 1</DataBadge>,
   },
   {
     storyId: 'react-utrecht-blockquote--default',
