@@ -1809,56 +1809,6 @@
       }
     }
   },
-  "components/badge-data": {
-    "todo": {
-      "badge-data": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.color.violet.100}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{voorbeeld.border-radius.sm}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.document.color}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{utrecht.document.font-size}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{utrecht.document.line-height}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{voorbeeld.document.strong.font-weight}"
-        },
-        "padding-block": {
-          "$type": "spacing",
-          "$value": "None"
-        },
-        "padding-inline": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.inline.ant}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "min-inline-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.sm}"
-        },
-        "min-block-size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.xs}"
-        }
-      }
-    }
-  },
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
@@ -3285,6 +3235,62 @@
           "$value": "{voorbeeld.border-width.sm}"
         }
       }
+    },
+    "utrecht": {
+      "data-badge": {
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.xs}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.sm}"
+        },
+        "padding-block": {
+          "$type": "spacing",
+          "$value": "None"
+        },
+        "padding-inline": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.ant}"
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.color.violet.100}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "transparent"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "{voorbeeld.border-radius.sm}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{voorbeeld.document.strong.font-weight}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.document.font-size}"
+        }
+      }
     }
   },
   "components/drawer": {
@@ -3656,102 +3662,6 @@
     }
   },
   "components/heading": {
-    "nl": {
-      "heading": {
-        "color": {
-          "$type": "color",
-          "$value": "{utrecht.heading.color}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.heading.font-family}"
-        },
-        "level-1": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.3xl}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          }
-        },
-        "level-2": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.2xl}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          }
-        },
-        "level-3": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.xl}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.sm}"
-          }
-        },
-        "level-4": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.lg}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.md}"
-          }
-        },
-        "level-5": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.md}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.md}"
-          }
-        },
-        "level-6": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{voorbeeld.typography.font-size.sm}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.heading.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{voorbeeld.typography.line-height.md}"
-          }
-        }
-      }
-    },
     "utrecht": {
       "heading-1": {
         "color": {
@@ -3886,84 +3796,98 @@
         }
       }
     },
-    "ams": {
+    "nl": {
       "heading": {
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{utrecht.heading.font-weight}"
-        },
         "color": {
           "$type": "color",
           "$value": "{utrecht.heading.color}"
-        },
-        "inverse-color": {
-          "$type": "color",
-          "$value": "{voorbeeld.document.inverse.color}"
         },
         "font-family": {
           "$type": "fontFamilies",
           "$value": "{utrecht.heading.font-family}"
         },
-        "level": {
-          "1": {
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{voorbeeld.typography.line-height.sm}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{voorbeeld.typography.font-size.3xl}"
-            }
+        "level-1": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.3xl}"
           },
-          "2": {
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{voorbeeld.typography.line-height.sm}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{voorbeeld.typography.font-size.2xl}"
-            }
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
           },
-          "3": {
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{voorbeeld.typography.line-height.sm}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{voorbeeld.typography.font-size.xl}"
-            }
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          }
+        },
+        "level-2": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.2xl}"
           },
-          "4": {
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{voorbeeld.typography.line-height.md}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{voorbeeld.typography.font-size.lg}"
-            }
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
           },
-          "5": {
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{voorbeeld.typography.line-height.md}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{voorbeeld.typography.font-size.md}"
-            }
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          }
+        },
+        "level-3": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.xl}"
           },
-          "6": {
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{voorbeeld.typography.line-height.md}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{voorbeeld.typography.font-size.sm}"
-            }
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.sm}"
+          }
+        },
+        "level-4": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.lg}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.md}"
+          }
+        },
+        "level-5": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.md}"
+          }
+        },
+        "level-6": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{voorbeeld.typography.font-size.sm}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{voorbeeld.typography.line-height.md}"
           }
         }
       }
@@ -7152,7 +7076,6 @@
       "components/alert",
       "components/avatar",
       "components/backdrop",
-      "components/badge-data",
       "components/blockquote",
       "components/breadcrumb-nav",
       "components/button",
