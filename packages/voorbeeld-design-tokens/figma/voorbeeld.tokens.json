@@ -1529,6 +1529,190 @@
       }
     }
   },
+  "components/action": {
+    "denhaag": {
+      "action": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{utrecht.document.background-color}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.line.border-color}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.line.border-width}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
+        "font-familiy": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.document.font-size}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{voorbeeld.document.strong.font-weight}"
+        },
+        "gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.row.snail}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.mouse}"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.inline.mouse}"
+        },
+        "lg": {
+          "gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.column.rat}"
+          },
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          }
+        },
+        "date": {
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          },
+          "gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.snail}"
+          },
+          "warning": {
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.feedback.negative.color}"
+            },
+            "gap": {
+              "$type": "spacing",
+              "$value": "{voorbeeld.space.row.snail}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{voorbeeld.document.strong.font-weight}"
+            }
+          }
+        },
+        "content": {
+          "bold": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{voorbeeld.document.strong.font-weight}"
+            }
+          }
+        },
+        "details": {
+          "gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.snail}"
+          },
+          "lg": {
+            "gap": {
+              "$type": "spacing",
+              "$value": "{voorbeeld.space.column.rat}"
+            }
+          }
+        },
+        "link": {
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.interaction.color}"
+            },
+            "width": {
+              "$type": "sizing",
+              "$value": "{voorbeeld.icon.functional.size}"
+            }
+          }
+        },
+        "single": {
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.color.gray.100}"
+            }
+          },
+          "details": {
+            "gap": {
+              "$type": "spacing",
+              "$value": "{voorbeeld.space.row.snail}"
+            },
+            "lg": {
+              "gap": {
+                "$type": "spacing",
+                "$value": "{voorbeeld.space.column.rat}"
+              }
+            }
+          }
+        },
+        "warning": {
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.feedback.negative.color}"
+            },
+            "width": {
+              "$type": "sizing",
+              "$value": "{voorbeeld.icon.functional.size}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/alert": {
     "utrecht": {
       "alert": {
@@ -7207,6 +7391,7 @@
       "brand",
       "common",
       "components/accordion",
+      "components/action",
       "components/alert",
       "components/avatar",
       "components/backdrop",
