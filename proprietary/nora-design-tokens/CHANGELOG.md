@@ -1,5 +1,12 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.6.0
+
+### Minor Changes
+
+- 48bc494: Tokens toegevoegd voor: `utrecht-ordered-list`, `nora-figure` en `utrecht-table`
+- 0c8c8ab: De `tokens-studio` transforms worden nu toegepast. Hiedoor worden composite tokens goed omgezet naar variabelen.
+
 ## 1.5.0
 
 ### Minor Changes
