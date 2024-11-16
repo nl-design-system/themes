@@ -32,4 +32,8 @@ export interface ComponentStory {
   state?: boolean;
   inline?: boolean;
   render: () => ReactNode;
+  detectTokens?: {
+    anyOf?: string[];
+    allOf?: string[];
+  };
 }
