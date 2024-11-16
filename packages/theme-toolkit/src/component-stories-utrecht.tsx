@@ -70,6 +70,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Default Button',
     render: () => <Button>Default</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.color', 'utrecht.button.background-color'],
+    },
   },
   {
     storyId: 'react-utrecht-button--active',
@@ -78,6 +81,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Default Button: Active',
     state: true,
     render: () => <Button className="utrecht-button--active">Default</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.active.color', 'utrecht.button.active.background-color'],
+    },
   },
   {
     storyId: 'react-utrecht-button--hover',
@@ -86,6 +92,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Default Button: Hover',
     state: true,
     render: () => <Button className="utrecht-button--hover">Default</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.hover.background-color', 'utrecht.button.hover.color'],
+    },
   },
   {
     storyId: 'react-utrecht-button--focus',
@@ -94,6 +103,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Default Button: Focus',
     state: true,
     render: () => <Button className="utrecht-button--focus">Default</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.focus.background-color', 'utrecht.button.focus.color'],
+    },
   },
   {
     storyId: 'react-utrecht-button--focus-visible',
@@ -126,6 +138,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Primary Action Button',
     state: true,
     render: () => <Button appearance="primary-action-button">Primary action</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.primary-action.color', 'utrecht.button.primary-action.background-color'],
+    },
   },
   {
     storyId: 'react-utrecht-button--primary-action-button-danger',
@@ -158,6 +173,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Secondary Action Button',
     state: true,
     render: () => <Button appearance="secondary-action-button">Secondary action</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.secondary-action.color', 'utrecht.button.secondary-action.background-color'],
+    },
   },
   {
     storyId: 'react-utrecht-button--secondary-action-button-danger',
@@ -190,6 +208,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Subtle Button',
     state: true,
     render: () => <Button appearance="subtle-button">Subtle button</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.subtle-action.color', 'utrecht.button.subtle-action.background-color'],
+    },
   },
   {
     storyId: 'react-utrecht-button--subtle-button-danger',
@@ -222,6 +243,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Button Disabled',
     state: true,
     render: () => <Button disabled>Read more...</Button>,
+    detectTokens: {
+      allOf: ['utrecht.button.disabled.background-color', 'utrecht.button.disabled.color'],
+    },
   },
   {
     storyId: 'react-utrecht-button-link--default',
@@ -272,6 +296,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['PARAGRAPH'],
     name: 'Utrecht Paragraph',
     render: () => <Paragraph>Default</Paragraph>,
+    detectTokens: {
+      allOf: ['utrecht.paragraph.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-paragraph--lead',
@@ -279,6 +306,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['PARAGRAPH'],
     name: 'Utrecht Lead Paragraph',
     render: () => <Paragraph lead>Lead</Paragraph>,
+    detectTokens: {
+      allOf: ['utrecht.paragraph.lead.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading-1--default',
@@ -286,6 +316,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 1',
     render: () => <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>,
+    detectTokens: {
+      allOf: ['utrecht.heading-1.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading-2--default',
@@ -293,6 +326,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 2',
     render: () => <Heading2>The Quick Brown Fox Jumps Over The Lazy Dog</Heading2>,
+    detectTokens: {
+      allOf: ['utrecht.heading-2.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading-3--default',
@@ -300,6 +336,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 3',
     render: () => <Heading3>The Quick Brown Fox Jumps Over The Lazy Dog</Heading3>,
+    detectTokens: {
+      allOf: ['utrecht.heading-3.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading-4--default',
@@ -307,6 +346,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 4',
     render: () => <Heading4>The Quick Brown Fox Jumps Over The Lazy Dog</Heading4>,
+    detectTokens: {
+      allOf: ['utrecht.heading-4.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading-5--default',
@@ -314,6 +356,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 5',
     render: () => <Heading5>The Quick Brown Fox Jumps Over The Lazy Dog</Heading5>,
+    detectTokens: {
+      allOf: ['utrecht.heading-5.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading-6--default',
@@ -321,6 +366,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 6',
     render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
+    detectTokens: {
+      allOf: ['utrecht.heading-6.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading--level-1',
@@ -328,6 +376,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 1',
     render: () => <Heading level={1}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    detectTokens: {
+      allOf: ['utrecht.heading-1.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading--level-2',
@@ -335,6 +386,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 2',
     render: () => <Heading level={2}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    detectTokens: {
+      allOf: ['utrecht.heading-2.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading--level-3',
@@ -342,6 +396,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 3',
     render: () => <Heading level={3}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    detectTokens: {
+      allOf: ['utrecht.heading-3.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading--level-4',
@@ -349,6 +406,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 4',
     render: () => <Heading level={4}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    detectTokens: {
+      allOf: ['utrecht.heading-4.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-heading--level-5',
@@ -490,6 +550,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Utrecht Textbox',
     render: () => <Textbox defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.textbox.color',
+        'utrecht.textbox.border-color',
+        'utrecht.textbox.border-width',
+        'utrecht.textbox.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--placeholder',
@@ -497,6 +565,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Textbox with placeholder',
     render: () => <Textbox placeholder="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: ['utrecht.textbox.placeholder.color'],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--disabled',
@@ -505,6 +576,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Textbox: Disabled',
     state: true,
     render: () => <Textbox disabled defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.textbox.disabled.color',
+        'utrecht.textbox.disabled.border-color',
+        'utrecht.textbox.disabled.border-width',
+        'utrecht.textbox.disabled.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--hover',
@@ -515,6 +594,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => (
       <Textbox className="utrecht-textbox--hover" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.textbox.hover.color',
+        'utrecht.textbox.hover.border-color',
+        'utrecht.textbox.hover.border-width',
+        'utrecht.textbox.hover.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--focus',
@@ -525,6 +612,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => (
       <Textbox className="utrecht-textbox--focus" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.textbox.focus.color',
+        'utrecht.textbox.focus.border-color',
+        'utrecht.textbox.focus.border-width',
+        'utrecht.textbox.focus.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--focus-visible',
@@ -535,6 +630,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => (
       <Textbox className="utrecht-textbox--focus-visible" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.textbox.focus-visible.color',
+        'utrecht.textbox.focus-visible.border-color',
+        'utrecht.textbox.focus-visible.border-width',
+        'utrecht.textbox.focus-visible.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--invalid',
@@ -550,6 +653,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Utrecht Textbox: Read Only',
     render: () => <Textbox readOnly defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.textbox.read-only.color',
+        'utrecht.textbox.read-only.border-color',
+        'utrecht.textbox.read-only.border-width',
+        'utrecht.textbox.read-only.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--required',
@@ -564,6 +675,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea',
     render: () => <Textarea defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.textarea.color',
+        'utrecht.textarea.border-color',
+        'utrecht.textarea.border-width',
+        'utrecht.textarea.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textarea--placeholder',
@@ -571,6 +690,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea with placeholder',
     render: () => <Textarea placeholder="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: ['utrecht.textarea.placeholder.color'],
+    },
   },
   {
     storyId: 'react-utrecht-textarea--disabled',
@@ -579,6 +701,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Textarea: Disabled',
     state: true,
     render: () => <Textarea disabled defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.textarea.disabled.color',
+        'utrecht.textarea.disabled.border-color',
+        'utrecht.textarea.disabled.border-width',
+        'utrecht.textarea.disabled.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textarea--hover',
@@ -589,6 +719,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => (
       <Textarea className="utrecht-textarea--hover" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.textarea.hover.color',
+        'utrecht.textarea.hover.border-color',
+        'utrecht.textarea.hover.border-width',
+        'utrecht.textarea.hover.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textarea--focus',
@@ -599,6 +737,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => (
       <Textarea className="utrecht-textarea--focus" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.textarea.focus.color',
+        'utrecht.textarea.focus.border-color',
+        'utrecht.textarea.focus.border-width',
+        'utrecht.textarea.focus.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textarea--focus-visible',
@@ -627,6 +773,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea: Read Only',
     render: () => <Textarea readOnly defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.textarea.read-only.color',
+        'utrecht.textarea.read-only.border-color',
+        'utrecht.textarea.read-only.border-width',
+        'utrecht.textarea.read-only.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textarea--required',
@@ -667,6 +821,21 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         </TableBody>
       </Table>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.table.cell.icon.size',
+        'utrecht.table.cell.line-height',
+        'utrecht.table.cell.padding-block-end',
+        'utrecht.table.cell.padding-block-start',
+        'utrecht.table.cell.padding-inline-end',
+        'utrecht.table.cell.padding-inline-start',
+        'utrecht.table.header.border-block-end-color',
+        'utrecht.table.header.border-block-end-width',
+        'utrecht.table.header.font-weight',
+        'utrecht.table.row.border-block-end-color',
+        'utrecht.table.row.border-block-end-width',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-table--caption',
@@ -701,6 +870,16 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         </TableBody>
       </Table>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.table.caption.font-family',
+        'utrecht.table.caption.font-size',
+        'utrecht.table.caption.color',
+        'utrecht.table.caption.line-height',
+        'utrecht.table.caption.text-align',
+        'utrecht.table.caption.margin-block-end',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-select--default',
@@ -811,6 +990,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
+    detectTokens: {
+      anyOf: ['utrecht.link.color', 'utrecht.link.text-decoration', 'utrecht.link.text-decoration-thickness'],
+    },
   },
   {
     storyId: 'react-utrecht-link--hover',
@@ -823,6 +1005,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.link.hover.color',
+        'utrecht.link.hover.text-decoration',
+        'utrecht.link.hover.text-decoration-thickness',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-link--focus',
@@ -835,6 +1024,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.link.focus.color',
+        'utrecht.link.focus.text-decoration',
+        'utrecht.link.focus.text-decoration-thickness',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-link--focus-visible',
@@ -864,6 +1060,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-document--default',
     name: 'Utrecht Document',
     render: () => <Document>The Quick Brown Fox Jumps Over The Lazy Dog</Document>,
+    detectTokens: {
+      anyOf: ['utrecht.document.color', 'utrecht.document.background-color', 'utrecht.document.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-form-label--default',
@@ -905,28 +1104,42 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => <FormLabel checked>Label for selected radio button option</FormLabel>,
   },
   {
-    storyId: 'react-utrecht-mark',
-    name: 'Utrecht Subscript',
+    storyId: 'react-utrecht-mark--default',
+    name: 'Utrecht Mark',
     render: () => <Mark>Mark my words!</Mark>,
+    detectTokens: {
+      anyOf: ['utrecht.mark.color', 'utrecht.mark.background-color'],
+    },
   },
   {
-    storyId: 'react-utrecht-subscript',
+    storyId: 'react-utrecht-subscript--default',
     name: 'Utrecht Subscript',
     render: () => <Subscript>Subscript tekst</Subscript>,
+    detectTokens: {
+      // subscript doesn't have any tokens of its own
+      anyOf: ['utrecht.paragraph.font-size'],
+    },
   },
   {
-    storyId: 'react-utrecht-superscript',
+    storyId: 'react-utrecht-superscript--default',
     name: 'Utrecht Superscript',
-    render: () => <Superscript>Subscript tekst</Superscript>,
+    render: () => <Superscript>Superscript tekst</Superscript>,
+    detectTokens: {
+      // superscript doesn't have any tokens of its own
+      anyOf: ['utrecht.paragraph.font-size'],
+    },
   },
   {
-    storyId: 'react-utrecht-code',
+    storyId: 'react-utrecht-code--default',
     name: 'Utrecht Code',
     render: () => <Code>{'<input type="url" value="https://example.fi/">'}</Code>,
+    detectTokens: {
+      allOf: ['utrecht.code.font-family'],
+    },
   },
   {
-    storyId: 'react-utrecht-code',
-    name: 'Utrecht Code',
+    storyId: 'react-utrecht-code-block--default',
+    name: 'Utrecht Code Block',
     render: () => (
       <CodeBlock>{`<!DOCTYPE html>
 <html lang="nl" dir="ltr">
@@ -939,11 +1152,17 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   </body>
 </html>`}</CodeBlock>
     ),
+    detectTokens: {
+      allOf: ['utrecht.code-block.font-family'],
+    },
   },
   {
     storyId: 'react-utrecht-color-sample',
     name: 'Utrecht Color Sample',
     render: () => <ColorSample color="#007DAD" />,
+    detectTokens: {
+      anyOf: ['utrecht.color-sample.border-color'],
+    },
   },
   // {
   //   storyId: 'react-utrecht-emphasis--stressed',
