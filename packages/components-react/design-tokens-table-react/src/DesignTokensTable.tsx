@@ -17,7 +17,7 @@ import {
   StyleDictionaryDesignToken,
 } from '@nl-design-system-unstable/tokens-lib/dist/design-tokens';
 import { tokenRef } from '@nl-design-system-unstable/tokens-lib/dist/util';
-import { getTokenType } from '@nl-design-system-unstable/tokens-lib/dist/token-type';
+import { getTokenType, getToken$Type } from '@nl-design-system-unstable/tokens-lib/dist/token-type';
 import { TokenTypeIcon } from './TokenTypeIcon';
 import { CursorSample } from './CursorSample';
 import { FontFamilySample } from './FontFamilySample';
@@ -76,9 +76,13 @@ export const DesignTokensTable = ({ tokens, tokensMap }: DesignTokensTableProps)
           const ref = tokenRef(path);
           const value = getTokenValue(token);
           const propertyName = getLastPathSegment(token);
-          const tokenType = propertyName && getTokenType(propertyName);
+          const tokenType = propertyName
+            ? getTokenType(propertyName) ||
+              (typeof (token as any)['$type'] === 'string' ? getToken$Type((token as any)['$type']) : undefined)
+            : undefined;
           const isVendorToken = vendorPrefixes.includes(path[0]);
           const isVerified = tokensMap ? tokensMap.has(ref) : false;
+          const isString = (arg: unknown): arg is string => typeof arg === 'string';
 
           return (
             <TableRow key={index}>
@@ -95,7 +99,8 @@ export const DesignTokensTable = ({ tokens, tokensMap }: DesignTokensTableProps)
                 <PreserveData>{ref}</PreserveData>
               </TableCell>
               <TableCell>
-                {tokenType === 'font-family' && typeof value === 'string' ? (
+                {tokenType === 'font-family' &&
+                (typeof value === 'string' || (Array.isArray(value) && value.every(isString))) ? (
                   <FontFamilyDetails value={value} />
                 ) : (
                   <PreserveData

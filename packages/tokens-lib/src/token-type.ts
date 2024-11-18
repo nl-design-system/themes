@@ -135,7 +135,30 @@ export const mapping: TypeToCSSProperty = {
 
 const entries = Object.entries(mapping);
 
+/**
+ * Map an CSS property name to an "NL Design System token type".
+ */
 export const getTokenType = (propertyName: string): string | undefined => {
   const group = entries.find(([, properties]) => properties.includes(propertyName));
   return group ? group[0] : undefined;
+};
+
+const $typeMapping: { [index: string]: string } = {
+  ['color']: 'color',
+  ['dimension']: 'length',
+  ['duration']: 'time',
+  ['fontFamily']: 'font-family',
+  ['fontWeight']: 'font-weight',
+  ['number']: 'number',
+};
+
+/**
+ * Map an Design Tokens JSON `"$type"` to an "NL Design System token type".
+ */
+export const getToken$Type = (propertyName: string): string | undefined => {
+  if (propertyName in $typeMapping) {
+    return $typeMapping[propertyName];
+  } else {
+    return undefined;
+  }
 };
