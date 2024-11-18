@@ -2,11 +2,11 @@ import { OrderedList, OrderedListItem, PreserveData } from '@utrecht/component-l
 import { parseFontFamily } from '@nl-design-system-unstable/tokens-lib/dist/font-family';
 
 export interface FontFamilyDetailsProps {
-  value: string;
+  value: string | string[];
 }
 
 export const FontFamilyDetails = ({ value }: FontFamilyDetailsProps) => {
-  const list = parseFontFamily(value);
+  const list = Array.isArray(value) ? value : parseFontFamily(value);
   return list.length > 1 ? (
     <details>
       <summary>
