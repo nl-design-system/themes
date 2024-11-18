@@ -3664,7 +3664,7 @@
         },
         "text-decoration-color": {
           "$type": "color",
-          "$value": "{basis.interaction.color}"
+          "$value": "{utrecht.link.color}"
         },
         "text-decoration-thickness": {
           "$type": "other",
@@ -3689,27 +3689,27 @@
         "focus": {
           "background-color": {
             "$type": "color",
-            "$value": "{utrecht.focus.background-color}"
+            "$value": "{basis.focus.background-color}"
           },
           "color": {
             "$type": "color",
-            "$value": "{utrecht.focus.color}"
+            "$value": "{basis.focus.color}"
           }
         },
         "focus-visible": {
           "text-decoration": {
             "$type": "textDecoration",
-            "$value": "None"
+            "$value": "{utrecht.link.text-decoration}"
           },
           "text-decoration-thickness": {
             "$type": "other",
-            "$value": "auto"
+            "$value": "{utrecht.link.text-decoration-thickness}"
           }
         },
         "hover": {
           "color": {
             "$type": "color",
-            "$value": "{basis.interaction.hover.color}"
+            "$value": "{utrecht.link.hover.color}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -3717,13 +3717,13 @@
           },
           "text-decoration-thickness": {
             "$type": "other",
-            "$value": "auto"
+            "$value": "{utrecht.link.text-decoration-thickness}"
           }
         },
         "visited": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.purple}"
+            "$value": "{utrecht.link.color}"
           }
         }
       }
