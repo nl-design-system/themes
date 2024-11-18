@@ -180,6 +180,9 @@ importers:
       '@nl-design-system-community/nora-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/nora-design-tokens
+      '@nl-design-system-community/purmerend-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/purmerend-design-tokens
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/amsterdam-design-tokens
@@ -1802,6 +1805,63 @@ importers:
         specifier: 4.0.1
         version: 4.0.1
 
+  proprietary/purmerend-design-tokens:
+    devDependencies:
+      '@amsterdam/design-system-react':
+        specifier: 0.11.0
+        version: 0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@fontsource/cantarell':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@fontsource/fira-sans':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@fontsource/source-serif-pro':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@nl-design-system-unstable/basis-design-tokens':
+        specifier: workspace:*
+        version: link:../basis-design-tokens
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: workspace:*
+        version: link:../../packages/components-react/design-tokens-table-react
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../../packages/theme-toolkit
+      '@storybook/react':
+        specifier: 8.2.7
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
+      '@tokens-studio/sd-transforms':
+        specifier: 1.2.3
+        version: 1.2.3(style-dictionary@4.0.1)
+      '@types/react':
+        specifier: 18.3.3
+        version: 18.3.3
+      '@utrecht/component-library-react':
+        specifier: 7.1.0
+        version: 7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/components':
+        specifier: 6.2.0
+        version: 6.2.0
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      html-react-parser:
+        specifier: 5.1.12
+        version: 5.1.12(@types/react@18.3.3)(react@18.3.1)
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      style-dictionary:
+        specifier: 4.0.1
+        version: 4.0.1
+
   proprietary/ridderkerk-design-tokens:
     devDependencies:
       '@fontsource/lato':
@@ -3277,6 +3337,9 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@fontsource/cantarell@5.1.0':
+    resolution: {integrity: sha512-0fMKwDHArqlfvmGwRFGv+xzkh6cP4X9otoXV0OvWUFx5r7IbYlcbH5x/L2N5r8DMwOlYbORuRvmqddRazhxAxg==}
 
   '@fontsource/clear-sans@4.5.3':
     resolution: {integrity: sha512-092h3D/WVUPVyGPFxdAqr4KwFsAxzxB1o01YY3qQGA3vB9zATYiCsXWGKXiztDzggIgJmC4TdUq+gEVZPZuXuA==}
@@ -10526,6 +10589,8 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
+  '@fontsource/cantarell@5.1.0': {}
+
   '@fontsource/clear-sans@4.5.3': {}
 
   '@fontsource/fira-sans@5.1.0': {}
@@ -11496,7 +11561,7 @@ snapshots:
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/hast@3.0.4':
     dependencies:
