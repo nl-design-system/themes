@@ -3485,6 +3485,82 @@
       }
     }
   },
+  "components/file": {
+    "denhaag": {
+      "file": {
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.sm}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{voorbeeld.container.border-color}"
+        },
+        "left": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.100}"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          }
+        },
+        "link": {
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.interaction.color}"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.interaction.hover.color}"
+            }
+          },
+          "gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.text.beetle}"
+          },
+          "icon": {
+            "width": {
+              "$type": "sizing",
+              "$value": "{voorbeeld.icon.functional.size}"
+            }
+          }
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid"
+        },
+        "right": {
+          "gap": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.row.snail}"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          },
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          }
+        }
+      }
+    }
+  },
   "components/form-field": {
     "utrecht": {
       "form-field": {
@@ -7222,6 +7298,7 @@
       "components/color-sample",
       "components/data-badge",
       "components/drawer",
+      "components/file",
       "components/form-field",
       "components/form-field-checkbox-option",
       "components/form-field-description",
