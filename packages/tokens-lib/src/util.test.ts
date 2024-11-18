@@ -41,7 +41,7 @@ describe('format design token as string with `styleDictionaryRef()`', () => {
           name: 'color',
         }),
       ),
-    ).toBe('{color.value}');
+    ).toBe('{color}');
   });
 
   it('should should create a valid CSS variable with many parts', () => {
@@ -51,7 +51,7 @@ describe('format design token as string with `styleDictionaryRef()`', () => {
           name: 'example.button.primary-action.hover.color',
         }),
       ),
-    ).toBe('{example.button.primary-action.hover.color.value}');
+    ).toBe('{example.button.primary-action.hover.color}');
   });
 });
 

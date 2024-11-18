@@ -53,7 +53,7 @@ export const createDesignToken = (
 
 export const cssVariable = (token: StyleDictionaryDesignToken) => `var(--${token.path.join('-')})`;
 
-export const styleDictionaryRef = (token: StyleDictionaryDesignToken) => `{${token.path.join('.')}.value}`;
+export const styleDictionaryRef = (token: StyleDictionaryDesignToken) => `{${token.path.join('.')}}`;
 
 export const isToken = (arg: any): arg is DesignToken =>
   !!arg &&
