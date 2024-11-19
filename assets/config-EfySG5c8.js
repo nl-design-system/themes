@@ -1,0 +1,1 @@
+const e="NL Design System Purmerend Thema",n="Purmerend Thema",s="purmerend",m="@nl-design-system-community/purmerend-design-tokens",r=[],t={fullName:e,name:n,prefix:s,npm:m,stories:r};export{t as c};
