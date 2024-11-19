@@ -1,5 +1,11 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.6.1
+
+### Patch Changes
+
+- dca7d23: Volgorde van Sass Variables is aangepast
+
 ## 1.6.0
 
 ### Minor Changes
