@@ -1482,6 +1482,7 @@
           "fill-2": { "$value": "{purmerend.color.blue-41}" },
           "text-1": { "$value": "{purmerend.color.blue-44}" },
           "text-2": { "$value": "{purmerend.color.blue-44}" }
+          
         },
         "primary-inverse": {
           "bg-1": { "$value": "{purmerend.color.cyan-6}" },
@@ -1495,7 +1496,8 @@
           "fill-1": { "$value": "{purmerend.color.white-1}" },
           "fill-2": { "$value": "{purmerend.color.white-1}" },
           "text-1": { "$value": "{purmerend.color.white-1}" },
-          "text-2": { "$value": "{purmerend.color.white-1}" }
+          "text-2": { "$value": "{purmerend.color.white-1}" },
+          "bg-alert": {"$value": "{purmerend.color.blue-41}"}
         },
         "primary": {
           "bg-1": { "$value": "{purmerend.color.white-1}" },
@@ -2540,7 +2542,7 @@
           "$comment": "FIXME: This value should be selected from actual purmerend.nl designs. Could not find a good example."
         },
         "background-color": {
-          "$value": "{purmerend.color.blue-41}"
+          "$value": "{basis.color.primary-inverse.bg-alert}"
         },
         "color": {
           "$value": "{basis.color.text.text-1}"
