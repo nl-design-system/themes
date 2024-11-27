@@ -1481,12 +1481,14 @@
           "fill-1": { "$value": "{purmerend.color.blue-41}" },
           "fill-2": { "$value": "{purmerend.color.blue-41}" },
           "text-1": { "$value": "{purmerend.color.blue-44}" },
-          "text-2": { "$value": "{purmerend.color.blue-44}" }
-          
+          "text-2": { "$value": "{purmerend.color.blue-44}" },
+          "text-3": { "$value": "{purmerend.color.blue-42}" }
         },
         "primary-inverse": {
           "bg-1": { "$value": "{purmerend.color.cyan-6}" },
           "bg-2": { "$value": "{purmerend.color.cyan-6}" },
+          "bg-alert": {"$value": "{purmerend.color.blue-41}"},
+          "bg-textarea": {"$value": "{purmerend.color.blue-41}"},
           "disabled-1": { "$value": "{purmerend.color.grey-49}" },
           "disabled-2": { "$value": "{purmerend.color.grey-49}" },
           "disabled-3": { "$value": "{purmerend.color.grey-49}" },
@@ -1497,7 +1499,7 @@
           "fill-2": { "$value": "{purmerend.color.white-1}" },
           "text-1": { "$value": "{purmerend.color.white-1}" },
           "text-2": { "$value": "{purmerend.color.white-1}" },
-          "bg-alert": {"$value": "{purmerend.color.blue-41}"}
+          "text-3": { "$value": "{purmerend.color.blue-44}" }
         },
         "primary": {
           "bg-1": { "$value": "{purmerend.color.white-1}" },
@@ -1516,6 +1518,7 @@
         "secondary-inverse": {
           "bg-1": { "$value": "{purmerend.color.blue-44}" },
           "bg-2": { "$value": "{purmerend.color.blue-44}" },
+          "bg-3": { "$value": "{purmerend.color.blue-47}" },
           "disabled-1": { "$value": "{purmerend.color.grey-49}" },
           "disabled-2": { "$value": "{purmerend.color.grey-49}" },
           "disabled-3": { "$value": "{purmerend.color.grey-49}" },
@@ -2061,7 +2064,7 @@
       "link": {
         "color": {
           "$type": "color",
-          "$value": "{basis.color.text.text-1}"
+          "$value": "{basis.color.primary-inverse.text-3}"
         },
         "text-decoration": {
           "$type": "textDecoration",
@@ -2139,7 +2142,7 @@
         "hover": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.secondary-inverse.bg-1}"
+            "$value": "{basis.color.secondary-inverse.bg-3}"
           },
           "border-color": {
             "$type": "color",
@@ -2308,6 +2311,9 @@
         },
         "max-block-size": {
           "$value": "{utrecht.logo.min-block-size}"
+        },
+        "color": {
+          "$value": "{basis.color.primary-inverse.text-1}"
         }
       }
     }
@@ -2507,11 +2513,23 @@
       }
     }
   },
+  "components/form-field-description": {
+    "utrecht": {
+      "form-field-description": {
+        "color": {
+          "$value": "{basis.color.text.text-3}"
+        }
+      }
+    }
+  },
   "components/checkbox": {
     "utrecht": {
       "checkbox": {
         "border-width": {
           "$value": "{basis.border-width.sm}"
+        },
+        "background-color": {
+          "value": "{basis.color.primary-inverse.bg-2}"
         }
       }
     }
@@ -2530,6 +2548,9 @@
       "textarea": {
         "max-inline-size": {
           "$value": "100%"
+        },
+        "background-color": {
+          "$value": "{basis.color.primary-inverse.bg-textarea}"
         }
       }
     }
