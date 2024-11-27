@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.2.0
+
+### Minor Changes
+
+- 7cd5afb: Add candidate code-component tokens
+
 ## 3.1.0
 
 ### Minor Changes
