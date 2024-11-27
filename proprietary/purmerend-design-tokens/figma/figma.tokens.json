@@ -1487,6 +1487,8 @@
         "primary-inverse": {
           "bg-1": { "$value": "{purmerend.color.cyan-6}" },
           "bg-2": { "$value": "{purmerend.color.cyan-6}" },
+          "bg-alert": {"$value": "{purmerend.color.blue-41}"},
+          "bg-textarea": {"$value": "{purmerend.color.blue-41}"},
           "disabled-1": { "$value": "{purmerend.color.grey-49}" },
           "disabled-2": { "$value": "{purmerend.color.grey-49}" },
           "disabled-3": { "$value": "{purmerend.color.grey-49}" },
@@ -2084,7 +2086,7 @@
       "link": {
         "color": {
           "$type": "color",
-          "$value": "{basis.color.text.text-1}"
+          "$value": "{basis.color.primary-inverse.text-3}"
         },
         "text-decoration": {
           "$type": "textDecoration",
@@ -2337,6 +2339,9 @@
         },
         "max-block-size": {
           "$value": "{utrecht.logo.min-block-size}"
+        },
+        "color": {
+          "$value": "{basis.color.primary-inverse.text-1}"
         }
       }
     }
