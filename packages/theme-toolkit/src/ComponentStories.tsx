@@ -5,7 +5,9 @@ import { CustomStory } from './CustomStory';
 // eslint-disable-next-line no-unused-vars
 import { type PropsWithChildren } from 'react';
 import { ComponentStory } from './component-stories-util';
-import { StyleDictionaryDesignToken } from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
+import { DesignToken, StyleDictionaryDesignToken } from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
+import { tokenRef } from '@nl-design-system-unstable/tokens-lib/src/util';
+import { DesignTokensTable } from '@nl-design-system-unstable/design-tokens-table-react/css';
 
 interface HeadingProps {
   level?: number;
@@ -38,6 +40,9 @@ interface ComponentStoriesProps {
   theme?: string;
   tokens?: StyleDictionaryDesignToken[];
 }
+
+const arrayToMap = <T extends DesignToken>(tokens: T[]) =>
+  new Map(tokens.map((token) => [tokenRef((token as any).path), token]));
 
 export const ComponentStories = ({ config, showAll = false, theme, tokens }: ComponentStoriesProps) => {
   const availableComponents = [...AMS_COMPONENT_STORIES, ...UTRECHT_COMPONENT_STORIES, ...DENHAAG_COMPONENT_STORIES];
@@ -75,7 +80,6 @@ export const ComponentStories = ({ config, showAll = false, theme, tokens }: Com
   interface StoryGroups {
     [index: string]: ComponentStory[];
   }
-
   const groupedStories: StoryGroups = components.reduce((groups: StoryGroups, story: ComponentStory) => {
     if (story.group) {
       const group = groups[story.group] || [];
@@ -88,6 +92,8 @@ export const ComponentStories = ({ config, showAll = false, theme, tokens }: Com
     }
     return groups;
   }, {});
+
+  const tokensMap = arrayToMap(tokens || []);
 
   return (
     <div>
@@ -115,6 +121,17 @@ export const ComponentStories = ({ config, showAll = false, theme, tokens }: Com
                 {/* TODO: Implement `theme` and `inline` properties again */}
                 {/* <CustomStory theme={`${config.prefix}-theme`} inline={story.inline}> */}
                 <CustomStory className={theme || `${config.prefix}-theme`}>{story.render()}</CustomStory>
+                {/* {tokens
+                  ? story.detectTokens?.anyOf?.map((ref, index) => (
+                      <li key={index}>{tokensMap.has(ref) ? `Zit er in: ${ref}` : `Deze token kan nog ${ref}`},</li>
+                    ))
+                  : null} */}
+                {/* <DesignTokensTable
+                  tokens={(tokens || []).filter((token) => story.detectTokens?.anyOf?.includes(tokenRef(token.path)))}
+                ></DesignTokensTable> */}
+                <DesignTokensTable
+                  tokens={story.detectTokens?.anyOf?.map((ref) => tokensMap.get(ref)).filter((x) => !!x) || []}
+                ></DesignTokensTable>
               </section>
             ))}
           </div>
