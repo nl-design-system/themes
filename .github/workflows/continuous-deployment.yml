@@ -84,7 +84,7 @@ jobs:
           path: packages/storybook/dist/
 
       - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@94f3c658273cf92fb48ef99e5fbc02bd2dc642b2 # v4.6.3
+        uses: JamesIves/github-pages-deploy-action@dc18a3c6b46d56484cb63f291becd7ed4f0269b9 # v4.7.1
         with:
           branch: gh-pages
           folder: packages/storybook/dist/
