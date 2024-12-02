@@ -1186,6 +1186,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.radio-button.hover.color',
         'utrecht.radio-button.hover.background-color',
         'utrecht.radio-button.hover.border-color',
+        'utrecht.radio-button.border-width',
       ],
     },
   },
@@ -1198,9 +1199,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
+        'utrecht.radio-button.focus.color',
+        'utrecht.radio-button.focus.background-color',
+        'utrecht.radio-button.focus.border-color',
+        'utrecht.radio-button.focus.border-width',
       ],
     },
   },
@@ -1216,9 +1218,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
+        'utrecht.radio-button.focus-visible.color',
+        'utrecht.radio-button.focus-visible.background-color',
+        'utrecht.radio-button.focus-visible.border-color',
+        'utrecht.radio-button.focus-visible.border-width',
       ],
     },
   },
@@ -1231,9 +1234,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
+        'utrecht.radio-button.active.color',
+        'utrecht.radio-button.active.background-color',
+        'utrecht.radio-button.active.border-color',
+        'utrecht.radio-button.active.border-width',
       ],
     },
   },
@@ -1244,9 +1248,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => <RadioButton aria-label="Example radio button that simulates disabled" disabled />,
     detectTokens: {
       anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
+        'utrecht.radio-button.disabled.color',
+        'utrecht.radio-button.disabled.background-color',
+        'utrecht.radio-button.disabled.border-color',
+        'utrecht.radio-button.disabled.border-width',
       ],
     },
   },
@@ -1263,11 +1268,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       />
     ),
     detectTokens: {
-      anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
-      ],
+      anyOf: [],
     },
   },
   /* disable + hover should not have any specific styling, skipped that one */
@@ -1279,9 +1280,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => <RadioButton aria-label="Example radio button that is checked initially" defaultChecked />,
     detectTokens: {
       anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
+        'utrecht.radio-button.checked.color',
+        'utrecht.radio-button.checked.background-color',
+        'utrecht.radio-button.checked.border-color',
+        'utrecht.radio-button.checked.border-width',
       ],
     },
   },
@@ -1297,11 +1299,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       />
     ),
     detectTokens: {
-      anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
-      ],
+      anyOf: [],
     },
   },
   {
@@ -1316,11 +1314,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       />
     ),
     detectTokens: {
-      anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
-      ],
+      anyOf: [],
     },
   },
   {
@@ -1335,11 +1329,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       />
     ),
     detectTokens: {
-      anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
-      ],
+      anyOf: [],
     },
   },
   {
@@ -1387,6 +1377,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => (
       <RadioButton aria-label="Example radio button that is checked initially and is invalid" defaultChecked invalid />
     ),
+    detectTokens: {
+      anyOf: [],
+    },
   },
   {
     storyId: 'react-utrecht-alert--default',
