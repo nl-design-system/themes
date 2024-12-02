@@ -4,7 +4,7 @@ import config from '../src/config.json';
 import tokens from '../dist/list.json';
 
 const meta = {
-  title: 'Purmerend',
+  title: 'Purmerend Lightmode',
   component: ComponentStories,
   parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: false } },
   args: { config, showAll: false, tokens },
@@ -15,6 +15,6 @@ type Story = StoryObj<typeof meta>;
 export default meta;
 export const Components: Story = {
   args: {
-    theme: 'purmerend-theme purmerend-theme--media-query',
+    theme: 'purmerend-theme',
   },
 };
