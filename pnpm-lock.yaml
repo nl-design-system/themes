@@ -154,6 +154,63 @@ importers:
         specifier: 4.19.2
         version: 4.19.2
 
+  packages/radix-design-tokens:
+    devDependencies:
+      '@fontsource/fira-sans':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@nl-design-system-unstable/basis-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/basis-design-tokens
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: workspace:*
+        version: link:../components-react/design-tokens-table-react
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../tokens-lib
+      '@radix-ui/colors':
+        specifier: 3.0.0
+        version: 3.0.0
+      '@storybook/react':
+        specifier: 8.2.7
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
+      '@tokens-studio/sd-transforms':
+        specifier: 1.2.3
+        version: 1.2.3(style-dictionary@4.0.1)
+      '@types/react':
+        specifier: 18.3.3
+        version: 18.3.3
+      '@utrecht/component-library-react':
+        specifier: 7.1.0
+        version: 7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/components':
+        specifier: 6.2.0
+        version: 6.2.0
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      html-react-parser:
+        specifier: 5.1.12
+        version: 5.1.12(@types/react@18.3.3)(react@18.3.1)
+      lodash-es:
+        specifier: 4.17.21
+        version: 4.17.21
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      style-dictionary:
+        specifier: 4.0.1
+        version: 4.0.1
+
   packages/storybook:
     devDependencies:
       '@amsterdam/design-system-assets':
@@ -183,6 +240,9 @@ importers:
       '@nl-design-system-community/purmerend-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/purmerend-design-tokens
+      '@nl-design-system-community/radix-design-tokens':
+        specifier: workspace:*
+        version: link:../radix-design-tokens
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/amsterdam-design-tokens
@@ -1828,6 +1888,9 @@ importers:
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../../packages/tokens-lib
       '@storybook/react':
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
@@ -3618,6 +3681,9 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@radix-ui/colors@3.0.0':
+    resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
+
   '@rollup/plugin-babel@6.0.4':
     resolution: {integrity: sha512-YF7Y52kFdFT/xVSuVdjkV5ZdX/3YtmX0QulG+x0taQOtJdHYzVU61aSSkAgVJ7NOv6qPkIYiJSgSWWN/DM5sGw==}
     engines: {node: '>=14.0.0'}
@@ -4654,10 +4720,6 @@ packages:
 
   acorn-walk@7.2.0:
     resolution: {integrity: sha512-OPdCF6GsMIP+Az+aWfAAOEt2/+iVDKE7oy6lJ098aoe59oAmK76qV6Gw60SbZ8jHuG2wH058GF4pLFbYamYrVA==}
-    engines: {node: '>=0.4.0'}
-
-  acorn-walk@8.3.3:
-    resolution: {integrity: sha512-MxXdReSRhGO7VlFe1bRG/oI7/mdLV9B9JJT0N8vZOhF7gFRR5l3M8W9G8JxmKV+JC5mGqJ0QvqfSOLsCPa4nUw==}
     engines: {node: '>=0.4.0'}
 
   acorn-walk@8.3.4:
@@ -10712,7 +10774,7 @@ snapshots:
   '@jest/console@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       jest-message-util: 29.7.0
       jest-util: 29.7.0
@@ -10797,7 +10859,7 @@ snapshots:
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
       exit: 0.1.2
@@ -10942,10 +11004,10 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
-  '@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1)':
+  '@mdx-js/react@3.0.1(@types/react@18.3.11)(react@18.3.1)':
     dependencies:
       '@types/mdx': 2.0.11
-      '@types/react': 18.3.3
+      '@types/react': 18.3.11
       react: 18.3.1
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
@@ -11012,6 +11074,8 @@ snapshots:
     optional: true
 
   '@pkgr/core@0.1.1': {}
+
+  '@radix-ui/colors@3.0.0': {}
 
   '@rollup/plugin-babel@6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.19.2)':
     dependencies:
@@ -11210,12 +11274,12 @@ snapshots:
   '@storybook/addon-docs@8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))':
     dependencies:
       '@babel/core': 7.24.5
-      '@mdx-js/react': 3.0.1(@types/react@18.3.3)(react@18.3.1)
+      '@mdx-js/react': 3.0.1(@types/react@18.3.11)(react@18.3.1)
       '@storybook/blocks': 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
       '@storybook/csf-plugin': 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
       '@storybook/global': 5.0.0
       '@storybook/react-dom-shim': 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
-      '@types/react': 18.3.3
+      '@types/react': 18.3.11
       fs-extra: 11.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11539,7 +11603,7 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/color-convert@2.0.3':
     dependencies:
@@ -11553,15 +11617,15 @@ snapshots:
 
   '@types/concat-stream@2.0.0':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/cross-spawn@6.0.6':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/d3-color@3.1.3': {}
 
@@ -11585,7 +11649,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.17.43':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       '@types/qs': 6.9.14
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -11602,7 +11666,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/graceful-fs@4.1.9':
     dependencies:
@@ -11707,13 +11771,13 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/serve-static@1.15.5':
     dependencies:
       '@types/http-errors': 2.0.4
       '@types/mime': 3.0.4
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/stack-utils@2.0.3': {}
 
@@ -12031,8 +12095,8 @@ snapshots:
 
   acorn-globals@7.0.1:
     dependencies:
-      acorn: 8.11.3
-      acorn-walk: 8.3.3
+      acorn: 8.14.0
+      acorn-walk: 8.3.4
 
   acorn-jsx@5.3.2(acorn@7.4.1):
     dependencies:
@@ -12042,23 +12106,21 @@ snapshots:
     dependencies:
       acorn: 8.11.3
 
-  acorn-walk@7.2.0: {}
-
-  acorn-walk@8.3.3:
+  acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.14.0
+
+  acorn-walk@7.2.0: {}
 
   acorn-walk@8.3.4:
     dependencies:
       acorn: 8.14.0
-    optional: true
 
   acorn@7.4.1: {}
 
   acorn@8.11.3: {}
 
-  acorn@8.14.0:
-    optional: true
+  acorn@8.14.0: {}
 
   agent-base@6.0.2:
     dependencies:
@@ -14214,7 +14276,7 @@ snapshots:
       '@jest/expect': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.5.3
@@ -14323,7 +14385,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -14333,7 +14395,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -14407,7 +14469,7 @@ snapshots:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       emittery: 0.13.1
       graceful-fs: 4.2.11
@@ -14435,7 +14497,7 @@ snapshots:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       cjs-module-lexer: 1.3.1
       collect-v8-coverage: 1.0.2
@@ -14500,7 +14562,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.13.1
@@ -14509,7 +14571,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -15086,8 +15148,8 @@ snapshots:
 
   micromark-extension-mdxjs@3.0.0:
     dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
+      acorn: 8.14.0
+      acorn-jsx: 5.3.2(acorn@8.14.0)
       micromark-extension-mdx-expression: 3.0.0
       micromark-extension-mdx-jsx: 3.0.0
       micromark-extension-mdx-md: 2.0.0
@@ -17234,7 +17296,7 @@ snapshots:
 
   unplugin@1.10.0:
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.14.0
       chokidar: 3.6.0
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.1

@@ -1,0 +1,28 @@
+.color-sample-list {
+  display: inline-flex;
+  padding: 0;
+  border: 1px solid silver;
+  flex-wrap: nowrap;
+}
+
+.color-sample-list__item {
+  margin: 0;
+  padding: 0;
+}
+.color-sample-list__button,
+.color-sample-button {
+  border-width: 0;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  min-block-size: 44px;
+  min-inline-size: 44px;
+  --utrecht-color-sample-inline-size: 100%;
+  --utrecht-color-sample-block-size: 44px;
+}
+
+.color-sample-list__button:hover,
+.color-sample-button:hover {
+  outline: 2px solid black;
+  z-index: 1;
+}

@@ -1,0 +1,18 @@
+import { Meta } from "@storybook/blocks";
+import tokens from "../dist/tokens.json";
+// import colorSchemeDark from "../dist/color-scheme-dark/tokens.json";
+// import tokens from "../src/radix-tokens.mjs";
+// import tokens from "../src/radix-tokens.mjs";
+import { ColorSamplePage } from "../../../proprietary/purmerend-design-tokens/documentation/ColorSampleList";
+
+<Meta title="Radix/Basis Tokens" />
+
+# Radix Color Tokens
+
+<ColorSamplePage
+  scales={Object.keys(tokens["radix"]).map((name) => ({
+    id: name,
+    label: name,
+    tokens: tokens["radix"][name],
+  }))}
+/>
