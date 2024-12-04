@@ -1489,6 +1489,7 @@
           "bg-2": { "$value": "{purmerend.color.cyan-6}" },
           "bg-alert": {"$value": "{purmerend.color.blue-41}"},
           "bg-textarea": {"$value": "{purmerend.color.blue-41}"},
+          "bg-hover": {"$value": "{purmerend.color.blue-44}"},
           "disabled-1": { "$value": "{purmerend.color.grey-49}" },
           "disabled-2": { "$value": "{purmerend.color.grey-49}" },
           "disabled-3": { "$value": "{purmerend.color.grey-49}" },
@@ -2581,6 +2582,60 @@
       "radio-button": {
         "border-width": {
           "$value": "{basis.border-width.sm}"
+        },
+        "checked": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary-inverse.bg-1}"
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.primary-inverse.bg-hover}"
+            },
+            "border-color": {
+               "$type": "color",
+              "$value": "{basis.color.primary-inverse.bg-hover}"
+            }
+            
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "maroon"
+            }
+          }
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary-inverse.bg-hover}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary-inverse.bg-hover}"
+          }
+          
+        },
+        "active": {
+          "background-color": {
+            "$type": "color",
+            "$value": "white"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary-inverse.bg-1}"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary-inverse.bg-1}"
+            },
+            "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary-inverse.bg-1}"
+            }
         }
       }
     }
