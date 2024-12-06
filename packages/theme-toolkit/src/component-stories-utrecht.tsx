@@ -403,15 +403,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-checkbox--disabled',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
-    name: 'Utrecht Checkbox disabled',
-    render: () => <Checkbox className="utrecht-checkbox--disabled" />,
+    name: 'Utrecht Checkbox active +hover',
+    render: () => <Checkbox className="utrecht-checkbox--active" />,
     detectTokens: {
-      anyOf: [
-        'utrecht.checkbox.disabled.focus.color',
-        'utrecht.checkbox.disabled.focus.background-color',
-        'utrecht.checkbox.disabled.focus.border-color',
-        'utrecht.checkbox.disabled.focus.border-width',
-      ],
+      anyOf: [],
     },
   },
   {
