@@ -1474,14 +1474,14 @@
           "bg-2": { "$value": "{purmerend.color.white-1}" },
           "disabled-1": { "$value": "{purmerend.color.grey-9}" },
           "disabled-2": { "$value": "{purmerend.color.grey-9}" },
-          "disabled-3": { "$value": "{purmerend.color.grey-9}" },
           "border-1": { "$value": "{purmerend.color.blue-41}" },
           "border-2": { "$value": "{purmerend.color.blue-41}" },
-          "border-3": { "$value": "{purmerend.color.blue-41}" },
+          "border-3": { "$value": "{purmerend.color.blue-44}" },
           "fill-1": { "$value": "{purmerend.color.blue-41}" },
           "fill-2": { "$value": "{purmerend.color.blue-41}" },
           "text-1": { "$value": "{purmerend.color.blue-44}" },
-          "text-2": { "$value": "{purmerend.color.blue-44}" }
+          "text-2": { "$value": "{purmerend.color.blue-42}" },
+          "text-3": {"$value": "{purmerend.color.blue-41}"}
         },
         "primary-inverse": {
           "bg-1": { "$value": "{purmerend.color.cyan-6}" },
@@ -1495,7 +1495,7 @@
           "fill-1": { "$value": "{purmerend.color.white-1}" },
           "fill-2": { "$value": "{purmerend.color.white-1}" },
           "text-1": { "$value": "{purmerend.color.white-1}" },
-          "text-2": { "$value": "{purmerend.color.white-1}" }
+          "text-2": { "$value": "{purmerend.color.blue-44}" }
         },
         "primary": {
           "bg-1": { "$value": "{purmerend.color.white-1}" },
@@ -1513,7 +1513,7 @@
         },
         "secondary-inverse": {
           "bg-1": { "$value": "{purmerend.color.blue-44}" },
-          "bg-2": { "$value": "{purmerend.color.blue-44}" },
+          "bg-2": { "$value": "{purmerend.color.blue-47}" },
           "disabled-1": { "$value": "{purmerend.color.grey-49}" },
           "disabled-2": { "$value": "{purmerend.color.grey-49}" },
           "disabled-3": { "$value": "{purmerend.color.grey-49}" },
@@ -1524,7 +1524,22 @@
           "fill-2": { "$value": "{purmerend.color.white-1}" },
           "text-1": { "$value": "{purmerend.color.white-1}" },
           "text-2": { "$value": "{purmerend.color.white-1}" }
+        },
+        "spotlight-section": {
+          "bg-1": { "$value": "{purmerend.color.blue-41}" },
+          "bg-2": { "$value": "{purmerend.color.red-19}" },
+          "bg-3": { "$value": "{purmerend.color.green-7}" },
+          "bg-4": { "$value": "{purmerend.color.orange-14}" },
+          "disabled-5": { "$value": "{purmerend.color.grey-9}" },
+          "disabled-6": { "$value": "{purmerend.color.grey-9}" },
+          "border-7": { "$value": "{purmerend.color.blue-41}" },
+          "border-8": { "$value": "{purmerend.color.blue-41}" },
+          "fill-9": { "$value": "{purmerend.color.white-1}" },
+          "fill-10": { "$value": "{purmerend.color.white-1}" },
+          "text-11": { "$value": "{purmerend.color.white-1}" },
+          "text-12": { "$value": "{purmerend.color.white-1}" }
         }
+
       },
       "root": {
         "background-color": {
@@ -1943,7 +1958,7 @@
         },
         "background-color": {
           "$type": "color",
-          "$value": "{purmerend.color.blue-41}"
+          "$value": "{basis.color.text.text-3}"
         },
         "border-radius": {
           "$value": "{basis.border-radius.md}"
@@ -1952,9 +1967,13 @@
           "$type": "borderWidth",
           "$value": "{basis.border-width.sm}"
         },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.border-3}"
+        },
         "color": {
           "$type": "color",
-          "$value": "{purmerend.color.blue-42}"
+          "$value": "{basis.color.text.text-1}"
         },
         "disabled": {
           "background-color": {
@@ -1973,7 +1992,7 @@
         "focus": {
           "background-color": {
             "$type": "color",
-            "$value": "{utrecht.form-control.background-color}"
+            "$value": "{basis.color.text.text-3}"
           },
           "border-color": {
             "$type": "color",
@@ -2050,6 +2069,10 @@
         "warning": {
           "$type": "color",
           "$value": "{basis.color.yellow}"
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{purmerend.color.red-17}"
         }
       }
     }
@@ -2067,7 +2090,13 @@
         },
         "text-decoration-color": {
           "$type": "color",
-          "$value": "{utrecht.link.color}"
+          "$value": ""
+        },
+        "focus": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.primary-inverse.text-2}"
+          }
         },
         "focus-visible": {
           "text-decoration": {
@@ -2137,7 +2166,7 @@
         "hover": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.secondary-inverse.bg-1}"
+            "$value": "{basis.color.secondary-inverse.bg-2}"
           },
           "border-color": {
             "$type": "color",
@@ -2505,11 +2534,30 @@
       }
     }
   },
+  "components/form-field-description": {
+    "utrecht": {
+      "form-field-description": {
+        "color": {
+          "$value": "{basis.color.text.text-1}"
+        }
+      }
+    }
+  },
+  "components/form-field-error-message": {
+    "utrecht": {
+        "color": {
+          "$value": "{purmerend.color.red-17}"
+        }
+     }
+  },
   "components/checkbox": {
     "utrecht": {
       "checkbox": {
         "border-width": {
           "$value": "{basis.border-width.sm}"
+        },
+        "background-color": {
+          "value": "{basis.color.primary-inverse.bg-2}"
         }
       }
     }
@@ -2528,6 +2576,9 @@
       "textarea": {
         "max-inline-size": {
           "$value": "100%"
+        },
+        "background-color": {
+          "$value": "{basis.color.text.text-3}"
         }
       }
     }
@@ -2540,7 +2591,7 @@
           "$comment": "FIXME: This value should be selected from actual purmerend.nl designs. Could not find a good example."
         },
         "background-color": {
-          "$value": "{purmerend.color.blue-41}"
+          "$value": "{basis.color.spotlight-section.bg-1}"
         },
         "color": {
           "$value": "{basis.color.text.text-1}"
@@ -2579,7 +2630,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.text.text-2}"
+          "$value": "{basis.color.text.text-1}"
         }
       }
     }
