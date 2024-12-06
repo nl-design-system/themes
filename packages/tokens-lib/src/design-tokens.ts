@@ -13,6 +13,8 @@ export interface BoxShadowValue {
 }
 
 export interface KnownExtensions {
+  'nl.nldesignsystem.css-property-syntax'?: string | string[];
+  'nl.nldesignsystem.figma-implementation'?: boolean;
   'nl.nldesignsystem.css.property'?: {
     syntax: string;
     inherits: boolean;
