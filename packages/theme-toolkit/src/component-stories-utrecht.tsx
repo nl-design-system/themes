@@ -695,7 +695,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-checkbox--default',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
-    name: 'Utrecht Checkbox Default',
+    name: 'Utrecht Checkbox default',
     render: () => <Checkbox />,
     detectTokens: {
       anyOf: [
@@ -704,8 +704,8 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.checkbox.border-radius',
         'utrecht.checkbox.border-width',
         'utrecht.checkbox.color',
-        'utrecht.checkbox.size',
         'utrecht.checkbox.icon.size',
+        'utrecht.checkbox.size',
       ],
     },
   },
@@ -725,21 +725,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
-    storyId: 'react-utrecht-checkbox--disabled-checked',
-    component: 'utrecht-checkbox',
-    group: STORY_GROUPS['CHECKBOX'],
-    name: 'Utrecht Checkbox Disabled Checked',
-    render: () => <Checkbox defaultChecked disabled />,
-    detectTokens: {
-      anyOf: [
-        'utrecht.checkbox.disabled.border-color',
-        'utrecht.checkbox.disabled.border-width',
-        'utrecht.checkbox.disabled.background-color',
-        'utrecht.checkbox.disabled.color',
-      ],
-    },
-  },
-  {
     storyId: 'react-utrecht-checkbox--disabled',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
@@ -751,6 +736,81 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.checkbox.disabled.border-width',
         'utrecht.checkbox.disabled.background-color',
         'utrecht.checkbox.disabled.color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--active',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox Active',
+    render: () => <Checkbox className="utrecht-checkbox--active" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.active.border-color',
+        'utrecht.checkbox.active.border-width',
+        'utrecht.checkbox.active.background-color',
+        'utrecht.checkbox.active.color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--hover',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox Hover',
+    render: () => <Checkbox className="utrecht-checkbox--hover" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.hover.border-color',
+        'utrecht.checkbox.hover.border-width',
+        'utrecht.checkbox.hover.background-color',
+        'utrecht.checkbox.hover.color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--focus',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox focus',
+    render: () => <Checkbox className="utrecht-checkbox--focus utrecht-checkbox--focus-visible" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.focus.border-color',
+        'utrecht.checkbox.focus.border-width',
+        'utrecht.checkbox.focus.background-color',
+        'utrecht.checkbox.focus.color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--indeterminate',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox indeterminate',
+    render: () => <Checkbox indeterminate />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.indeterminate.border-color',
+        'utrecht.checkbox.indeterminate.border-width',
+        'utrecht.checkbox.indeterminate.background-color',
+        'utrecht.checkbox.indeterminate.color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--invalid',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox invalid',
+    render: () => <Checkbox invalid />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.invalid.border-color',
+        'utrecht.checkbox.invalid.border-width',
+        'utrecht.checkbox.invalid.background-color',
+        'utrecht.checkbox.invalid.color',
       ],
     },
   },
