@@ -1,4 +1,16 @@
-import { Button, Code, ColorSample, Heading, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import {
+  Button,
+  Code,
+  Heading,
+  HeadingGroup,
+  Paragraph,
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+} from '@utrecht/component-library-react/dist/css-module';
 import {
   calculateContrastRequirement,
   getColorContrast,
@@ -7,10 +19,16 @@ import './ColorSampleList.css';
 import { DesignToken } from '@nl-design-system-unstable/tokens-lib/dist/design-tokens';
 import { Fragment } from 'react';
 import { ColorContrastCanvasElement } from './example-rendering.mjs';
+import { ColorSampleElement } from './color-sample.mjs';
 
 ColorContrastCanvasElement.define();
+ColorSampleElement.define();
+
+export const ColorSample = ({ color }) => <nldesignsystem-color-sample color={color}></nldesignsystem-color-sample>;
 
 export const StorybookIsolation = ({ children }) => <div className="sb-unstyled">{children}</div>;
+
+export const ComponentButton = ({ children }) => <button className="component-button">{children}</button>;
 
 interface ColorSampleListProps {
   tokens: DesignToken[];
@@ -27,9 +45,9 @@ export const ColorSampleList = ({ tokens, ordered }: ColorSampleListProps) => {
         display: 'inline-block',
       }}
     >
-      <button className="color-sample-list__button" onClick={() => console.log(123)}>
-        <ColorSample color={token['$value']} />
-      </button>
+      {/* <ComponentButton onClick={() => console.log(123)}> */}
+      <ColorSample color={token['$value']} />
+      {/* </ComponentButton> */}
     </li>
   ));
   const listProps = {
@@ -42,43 +60,43 @@ export const ColorSampleList = ({ tokens, ordered }: ColorSampleListProps) => {
 
 export const ColorSampleGrid = ({ children }) => {
   return (
-    <table className="color-sample-grid">
-      <thead>
-        <tr>
-          <th></th>
-          <th colSpan={2}>Background</th>
-          <th colSpan={3}>Interactive components</th>
-          <th colSpan={3}>Borders and separators</th>
-          <th colSpan={2}>Solid colors</th>
-          <th colSpan={2}>Accessible text</th>
-        </tr>
-        <tr>
-          <th></th>
-          <th>1</th>
-          <th>2</th>
-          <th>3</th>
-          <th>4</th>
-          <th>5</th>
-          <th>6</th>
-          <th>7</th>
-          <th>8</th>
-          <th>9</th>
-          <th>10</th>
-          <th>11</th>
-          <th>12</th>
-        </tr>
-      </thead>
-      <tbody>{children}</tbody>
-    </table>
+    <Table className="color-sample-grid">
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell></TableHeaderCell>
+          <TableHeaderCell colSpan={2}>Background</TableHeaderCell>
+          <TableHeaderCell colSpan={3}>Interactive components</TableHeaderCell>
+          <TableHeaderCell colSpan={3}>Borders and separators</TableHeaderCell>
+          <TableHeaderCell colSpan={2}>Solid colors</TableHeaderCell>
+          <TableHeaderCell colSpan={2}>Accessible text</TableHeaderCell>
+        </TableRow>
+        <TableRow>
+          <TableHeaderCell></TableHeaderCell>
+          <TableHeaderCell>1</TableHeaderCell>
+          <TableHeaderCell>2</TableHeaderCell>
+          <TableHeaderCell>3</TableHeaderCell>
+          <TableHeaderCell>4</TableHeaderCell>
+          <TableHeaderCell>5</TableHeaderCell>
+          <TableHeaderCell>6</TableHeaderCell>
+          <TableHeaderCell>7</TableHeaderCell>
+          <TableHeaderCell>8</TableHeaderCell>
+          <TableHeaderCell>9</TableHeaderCell>
+          <TableHeaderCell>10</TableHeaderCell>
+          <TableHeaderCell>11</TableHeaderCell>
+          <TableHeaderCell>12</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>{children}</TableBody>
+    </Table>
   );
 };
 
 export const ColorSampleGridRow = ({ name, tokens }) => {
   const items = Object.values(tokens).map((token, index) => (
     <td key={index} className="color-sample-grid_cell">
-      <button className="color-sample-button" onClick={() => console.log(123)}>
+      <ComponentButton>
         <ColorSample color={token['$value']} />
-      </button>
+      </ComponentButton>
     </td>
   ));
   const listProps = {
@@ -128,7 +146,7 @@ export const ColorContrastTable = ({ tokens }) => {
         fontSize: 16,
         foregroundColor: pair[1],
         backgroundColor: pair[0],
-        type: true ? 'functional' : 'non-functional',
+        type: ['border', 'inactive'].includes(data.type) ? 'non-functional' : 'functional',
       };
     })
     .map(getColorContrast)
@@ -141,62 +159,73 @@ export const ColorContrastTable = ({ tokens }) => {
     }));
   console.log(pairs);
   return (
-    <table className="color-contrast-table">
-      <thead>
-        <tr>
-          <th>name</th>
-          <th>color</th>
-          <th>contrast</th>
-          <th>result</th>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.values(tokens).map((token, index) => (
-          <tr key={index}>
-            <th>{token['name']}</th>
-            <td>
-              <button className="color-sample-button" onClick={() => console.log(123)}>
-                <ColorSample color={token['$value']} />
-              </button>
-            </td>
-            <td>{pairs[index].contrast.toPrecision(2)}</td>
-            <td>
-              <details>
-                <summary>{pairs[index].aaa ? '🥇 AAA' : pairs[index].aa ? '👍 AA' : '🔴 FAIL'}</summary>
-                <dl>
-                  <div>
-                    <dt>Voorgrond:</dt>
-                    <dd>
-                      <ColorSample color={pairs[index].foregroundColor} />
-                      <Code>{String(pairs[index].foregroundColor)}</Code>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>Achtergrond:</dt>
-                    <dd>
-                      <ColorSample color={pairs[index].backgroundColor} />
-                      <Code>{String(pairs[index].backgroundColor)}</Code>
-                    </dd>
-                  </div>
-                </dl>
-                <nldesignsystem-example-rendering
-                  label="voorbeeldtekst in verschillende font-sizes groter dan 18.5px, met vette tekst"
-                  style={{ '--utrecht-paragraph-font-size': '16px' }}
-                >
-                  <Paragraph>
-                    16px: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                  </Paragraph>
-                </nldesignsystem-example-rendering>
-              </details>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <>
+      <Table className="color-contrast-table">
+        <TableHeader>
+          <TableRow>
+            <TableHeader>name</TableHeader>
+            <TableHeader>color</TableHeader>
+            <TableHeader>contrast</TableHeader>
+            <TableHeader>result</TableHeader>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {Object.values(tokens).map((token, index) => (
+            <TableRow key={index}>
+              <TableHeader>{token['name']}</TableHeader>
+              <TableCell>
+                <ComponentButton onClick={() => console.log(123)}>
+                  <ColorSample color={token['$value']} />
+                </ComponentButton>
+              </TableCell>
+              <TableCell>{pairs[index].contrast.toPrecision(2)}</TableCell>
+              <TableCell>
+                <details>
+                  <summary>{pairs[index].aaa ? '🥇 AAA' : pairs[index].aa ? '👍 AA' : '🔴 FAIL'}</summary>
+                  <dl>
+                    <div>
+                      <dt>Voorgrond:</dt>
+                      <dd>
+                        <ColorSample color={pairs[index].foregroundColor} />
+                        <Code>{String(pairs[index].foregroundColor)}</Code>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Achtergrond:</dt>
+                      <dd>
+                        <ColorSample color={pairs[index].backgroundColor} />
+                        <Code>{String(pairs[index].backgroundColor)}</Code>
+                      </dd>
+                    </div>
+                  </dl>
+                  <nldesignsystem-example-rendering
+                    label="voorbeeldtekst in verschillende font-sizes groter dan 18.5px, met vette tekst"
+                    style={{ '--utrecht-paragraph-font-size': '16px' }}
+                  >
+                    <Paragraph>
+                      16px: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                      in culpa qui officia deserunt mollit anim id est laborum.
+                    </Paragraph>
+                  </nldesignsystem-example-rendering>
+                </details>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+      {Object.values(tokens).map((token, index) => (
+        <section key={index}>
+          <HeadingGroup>
+            <Heading level={3}>{token['name']}</Heading>
+            {index === 0 ? <Paragraph>Shade 1 is bedoeld als</Paragraph> : null}
+          </HeadingGroup>
+          {index === 0 ? <Paragraph>Shade 1 is bedoeld als</Paragraph> : null}
+        </section>
+      ))}
+    </>
   );
 };
 
