@@ -1483,98 +1483,10 @@
   "components/figure": {
     "nora": {
       "figure": {
-        "background-color": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "0"
-        },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "0"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "0"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "0"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{nora.border-radius.sm}"
-        },
-        "maximize-link": {
-          "icon": {
-            "border-radius": {
-              "$type": "borderRadius",
-              "$value": "{nora.border-radius.xs}"
-            },
-            "size": {
-              "$type": "dimension",
-              "$value": "{nora.size.500}"
-            }
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{nora.color.gray.600}"
-          },
-          "hover": {
-            "color": {
-              "$type": "color",
-              "$value": "{nora.document.color}"
-            },
-            "background-color": {
-              "$type": "color",
-              "$value": "{nora.color.gray.75}"
-            }
-          },
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{nora.document.color}"
-            },
-            "background-color": {
-              "$type": "color",
-              "$value": "{nora.color.gray.100}"
-            }
-          },
-          "focus-visible": {
-            "color": {
-              "$type": "color",
-              "$value": "{nora.focus.color}"
-            },
-            "background-color": {
-              "$type": "color",
-              "$value": "{nora.focus.background-color}"
-            }
-          }
-        },
-        "border": {
-          "$type": "border",
-          "$value": {
-            "color": "transparent",
-            "width": "0",
-            "style": "solid"
+        "media": {
+          "border-radius": {
+            "$type": "borderRadius",
+            "$value": "{nora.border-radius.sm}"
           }
         },
         "gap": {
@@ -1582,25 +1494,9 @@
           "$value": "{nora.space.100}"
         },
         "figcaption": {
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
           "gap": {
             "$type": "dimension",
-            "$value": "{nora.space.50}"
+            "$value": "{nora.space.150}"
           },
           "font-size": {
             "$type": "fontSizes",
