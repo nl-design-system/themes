@@ -175,8 +175,8 @@ importers:
         specifier: 0.2.3-alpha.403
         version: 0.2.3-alpha.403
       '@gemeente-rotterdam/design-tokens':
-        specifier: 1.0.0-alpha.34
-        version: 1.0.0-alpha.34
+        specifier: 1.0.0-alpha.49
+        version: 1.0.0-alpha.49
       '@nl-design-system-community/nora-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/nora-design-tokens
@@ -349,8 +349,8 @@ importers:
         specifier: 6.2.0
         version: 6.2.0
       '@utrecht/design-tokens':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.4.0
+        version: 2.4.0
       '@utrecht/icon':
         specifier: 1.1.0
         version: 1.1.0
@@ -931,6 +931,36 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.1.0
         version: 5.1.0
+      '@nl-design-system-candidate/code-block-react':
+        specifier: 1.2.0
+        version: 1.2.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/code-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/color-sample-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/data-badge-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/heading-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/mark-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/number-badge-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/paragraph-react':
+        specifier: 2.0.0
+        version: 2.0.0(@babel/runtime@7.25.7)(react@18.3.1)
+      '@nl-design-system-candidate/skip-link-css':
+        specifier: 1.0.0
+        version: 1.0.0
+      '@nl-design-system-candidate/skip-link-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.7)(react@18.3.1)
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../components-react/design-tokens-table-react
@@ -3417,6 +3447,9 @@ packages:
   '@gemeente-rotterdam/design-tokens@1.0.0-alpha.34':
     resolution: {integrity: sha512-CsAtHYIn3O10SJX3wOBJFcy9S/k7EePFw5enUjR9+yfIAY3XrbT9j7l/l2gweLDZYp+ksqxmOR3mdXkmPlCsfQ==}
 
+  '@gemeente-rotterdam/design-tokens@1.0.0-alpha.49':
+    resolution: {integrity: sha512-ub5dA7XAPbSp7AkypvOSwmie1FSaQ9CVVVDSMkhqors5IwOYqiljQ4tKG6GfAq6yY0mJp7XVGjD11kQVQESSvA==}
+
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -3577,6 +3610,63 @@ packages:
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
+
+  '@nl-design-system-candidate/code-block-react@1.2.0':
+    resolution: {integrity: sha512-3pGrxzCZOMiSc5SYlhQWhRjo5++poH3k97LeFGIDHn0lJWjF0ZAQ2t5kmZdke3ZwfX9Krd4Q4DuBsSHIHuCnEQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/code-react@1.1.0':
+    resolution: {integrity: sha512-TDYpZ7la149vGKuqgibkCKnuKDgmo1kNmL70du9gBWWTZ9TDihI5ETMXDXRJvZ+OCHAB7jdcCwolLrsuV9RcwQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/color-sample-react@1.0.0':
+    resolution: {integrity: sha512-Bsvmq8msDCA0t3MJzdX0yQ+RWdrWJfgfkT3wcad8ZC9xrxLzfqh6vUqsPNElDOV+6WrdQSellJ2n4MuZy60yuw==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/data-badge-react@1.0.0':
+    resolution: {integrity: sha512-RbQVXN6s4PbkFLmvKUIMrAGjqqa0+xYEFaNf9Tl78wBouQG1kSMpfXPhh0MhF13TcFDf/a2WJ517TDDQGz0XPQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/heading-react@1.0.0':
+    resolution: {integrity: sha512-tJ6JGokl7AY7tEZ0vYDhIUCAzL1Sz7TapTLJ/DOfAb4koVY5IUdbnNjII0OJn6a4fQON8m/Ngly2ezErG0ojsQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/mark-react@1.0.0':
+    resolution: {integrity: sha512-hbLBjFjwfHkjRNpp2jw5RUhNZLWvtElGNBnleYm9oXj5vq5/VyK0DPipRP3CyPXMH+RKjTXGodGJLFyK/D3+zA==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0':
+    resolution: {integrity: sha512-QZbcKnMGlILHEmvrl4wjNKMpnfA1H5+XtZltjm7piq3ceBdqSctS+F5acKFuMExXZzf9uBRfXTJNo76Cjf8d/g==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/paragraph-react@2.0.0':
+    resolution: {integrity: sha512-OLaJCNRrqxyTmZkso9kyOktlYXfJt0IgiChriANoBt6jOrnUCvOkuHi3wkUYlrP+T3xL0GxIqt9uI/Na8GRlEg==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/skip-link-css@1.0.0':
+    resolution: {integrity: sha512-lEfrIP2LrPjtGQQi3L9j+iI2Fe/DY/SRk69W6Bwal+OK0l45MiCfSnojrY1zj9DQz4D8MlFeXNHbz8eA+XmIYA==}
+
+  '@nl-design-system-candidate/skip-link-react@1.0.0':
+    resolution: {integrity: sha512-DR4tHkdW6efCyfzKT4pn2yKVTTaYPND1oxJ34QolziUNCF//sZOrQKJQvrbC7kBlpMJ2eO85vlzu2bcjorlCEg==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
 
   '@nl-design-system/component-index@1.0.0-alpha.30':
     resolution: {integrity: sha512-PA/xZSL6rUYfBJJp9OmEN0Q05QPT0Z5VFApcE/XyjJnjvkPdzNwYVHpPecXDs2J99YeO1iyOXnyFJBrI68r7Kw==}
@@ -4460,6 +4550,9 @@ packages:
 
   '@utrecht/design-tokens@1.1.0':
     resolution: {integrity: sha512-1P9aVSL5xlBx2sFEzm1v+obgAPvwiLj4dg0vAZnFxLF6ZLbPPu0kP+tQhW3Gj945DU3qkwL/tIuimObYulYVAg==}
+
+  '@utrecht/design-tokens@2.4.0':
+    resolution: {integrity: sha512-TPLbXIgNOmoNbl6eTibBGkJ8sIH/8C77Bgot0LyLBe95/CQMCy9t172uB8C2SrtTKBsrxJwQhIUkHZ3YCGPvyA==}
 
   '@utrecht/digid-button-css@1.1.0':
     resolution: {integrity: sha512-y/uSBIytr6+DfxG9FDhlmVLT3QXFxWKST7XyCQyH2XKQSbSA/Ljgn5W7DFcAGvR50bzK+KSiXHCLyKDFXZr16A==}
@@ -10687,6 +10780,8 @@ snapshots:
 
   '@gemeente-rotterdam/design-tokens@1.0.0-alpha.34': {}
 
+  '@gemeente-rotterdam/design-tokens@1.0.0-alpha.49': {}
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.2
@@ -10960,6 +11055,62 @@ snapshots:
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     dependencies:
       eslint-scope: 5.1.1
+
+  '@nl-design-system-candidate/code-block-react@1.2.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/code-react@1.1.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/color-sample-react@1.0.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/data-badge-react@1.0.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/heading-react@1.0.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/mark-react@1.0.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/paragraph-react@2.0.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/skip-link-css@1.0.0': {}
+
+  '@nl-design-system-candidate/skip-link-react@1.0.0(@babel/runtime@7.25.7)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
 
   '@nl-design-system/component-index@1.0.0-alpha.30': {}
 
@@ -11904,6 +12055,8 @@ snapshots:
   '@utrecht/data-placeholder-css@1.1.0': {}
 
   '@utrecht/design-tokens@1.1.0': {}
+
+  '@utrecht/design-tokens@2.4.0': {}
 
   '@utrecht/digid-button-css@1.1.0': {}
 
