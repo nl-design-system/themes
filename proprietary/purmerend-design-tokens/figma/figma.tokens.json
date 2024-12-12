@@ -1538,6 +1538,20 @@
           "fill-10": { "$value": "{purmerend.color.white-1}" },
           "text-11": { "$value": "{purmerend.color.white-1}" },
           "text-12": { "$value": "{purmerend.color.white-1}" }
+        },
+        "alert-error": {
+          "bg-1": { "$value": "{purmerend.color.blue-41}" },
+          "bg-2": { "$value": "{purmerend.color.red-19}" },
+          "bg-3": { "$value": "{purmerend.color.green-7}" },
+          "bg-4": { "$value": "{purmerend.color.orange-14}" },
+          "disabled-5": { "$value": "{purmerend.color.grey-9}" },
+          "disabled-6": { "$value": "{purmerend.color.grey-9}" },
+          "border-7": { "$value": "{purmerend.color.blue-41}" },
+          "border-8": { "$value": "{purmerend.color.blue-41}" },
+          "fill-9": { "$value": "{purmerend.color.white-1}" },
+          "fill-10": { "$value": "{purmerend.color.white-1}" },
+          "text-11": { "$value": "{purmerend.color.white-1}" },
+          "text-12": { "$value": "{purmerend.color.white-1}" }
         }
 
       },
@@ -2591,10 +2605,22 @@
           "$comment": "FIXME: This value should be selected from actual purmerend.nl designs. Could not find a good example."
         },
         "background-color": {
+          "$type":  "color",
           "$value": "{basis.color.spotlight-section.bg-1}"
         },
         "color": {
+          "$type":  "color",
           "$value": "{basis.color.text.text-1}"
+        },
+        "error": {
+          "background-color": {
+            "$type":  "color",
+            "$value": "{basis.color.alert-error.bg-2}"
+          },
+          "color": {
+            "$type":  "color",
+            "$value": "{basis.color.alert-error.text-11}"
+          }
         },
         "info": {
           "background-color": {
