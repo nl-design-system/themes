@@ -440,6 +440,10 @@
           "$type": "dimension",
           "$value": "4rem"
         },
+        "2000": {
+          "$type": "dimension",
+          "$value": "5rem"
+        },
         "2400": {
           "$type": "dimension",
           "$value": "6rem"
@@ -3031,7 +3035,44 @@
       }
     }
   },
-  "components/page-content": {},
+  "components/page-content": {
+    "nora": {
+      "page-content": {
+        "visual-banner": {
+          "height": {
+            "$type": "dimension",
+            "$value": "{nora.size.2000}"
+          },
+          "large-vw": {
+            "height": {
+              "$type": "dimension",
+              "$value": "14rem"
+            }
+          },
+          "overlay": {
+            "background-color": {
+              "$type": "color",
+              "$value": "linear-gradient(0deg, rgba( {nora.color.black}, 0.4), rgba( {nora.color.black}, 0) 100%)"
+            }
+          }
+        },
+        "with-visual-banner": {
+          "content-wrapper": {
+            "margin-block-start": {
+              "$type": "dimension",
+              "$value": "0px"
+            },
+            "large-vw": {
+              "margin-block-start": {
+                "$type": "dimension",
+                "$value": "-5rem"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components/page-section": {
     "nora": {
       "page-section": {
