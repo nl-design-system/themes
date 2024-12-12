@@ -3017,6 +3017,21 @@
       }
     }
   },
+  "components/page-body": {
+    "nora": {
+      "page-body": {
+        "scrolled": {
+          "header-container": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": "{nora.box-shadow.sm}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/page-content": {},
   "components/page-section": {
     "nora": {
       "page-section": {
@@ -3135,20 +3150,6 @@
             "border-radius": {
               "$type": "borderRadius",
               "$value": "{nora.border-radius.sm}"
-            }
-          }
-        }
-      }
-    }
-  },
-  "components/page-body": {
-    "nora": {
-      "page-body": {
-        "scrolled": {
-          "header-container": {
-            "box-shadow": {
-              "$type": "boxShadow",
-              "$value": "{nora.box-shadow.sm}"
             }
           }
         }
@@ -3353,7 +3354,6 @@
       }
     }
   },
-  "components/page-content": {},
   "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
@@ -3406,10 +3406,10 @@
       "components/navigation-bar",
       "components/ordered-list",
       "components/paragraph",
-      "components/page-section",
       "components/page-body",
-      "components/table",
       "components/page-content",
+      "components/page-section",
+      "components/table",
       "components/unordered-list"
     ]
   }
