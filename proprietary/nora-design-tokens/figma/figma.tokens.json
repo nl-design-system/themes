@@ -374,6 +374,10 @@
           "$type": "dimension",
           "$value": "3rem"
         },
+        "700": {
+          "$type": "dimension",
+          "$value": "3.5rem"
+        },
         "800": {
           "$type": "dimension",
           "$value": "4rem"
@@ -435,6 +439,10 @@
         "1600": {
           "$type": "dimension",
           "$value": "4rem"
+        },
+        "2000": {
+          "$type": "dimension",
+          "$value": "5rem"
         },
         "2400": {
           "$type": "dimension",
@@ -1483,124 +1491,20 @@
   "components/figure": {
     "nora": {
       "figure": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{nora.color.gray.25}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{nora.space.50}"
-        },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{nora.space.50}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{nora.space.50}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{nora.space.50}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{nora.border-radius.xs}"
-        },
-        "maximize-link": {
-          "icon": {
-            "border-radius": {
-              "$type": "borderRadius",
-              "$value": "{nora.border-radius.xs}"
-            },
-            "size": {
-              "$type": "dimension",
-              "$value": "{nora.size.500}"
-            }
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{nora.space.25}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{nora.color.gray.600}"
-          },
-          "hover": {
-            "color": {
-              "$type": "color",
-              "$value": "{nora.document.color}"
-            },
-            "background-color": {
-              "$type": "color",
-              "$value": "{nora.color.gray.75}"
-            }
-          },
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{nora.document.color}"
-            },
-            "background-color": {
-              "$type": "color",
-              "$value": "{nora.color.gray.100}"
-            }
-          },
-          "focus-visible": {
-            "color": {
-              "$type": "color",
-              "$value": "{nora.focus.color}"
-            },
-            "background-color": {
-              "$type": "color",
-              "$value": "{nora.focus.background-color}"
-            }
-          }
-        },
-        "border": {
-          "$type": "border",
-          "$value": {
-            "color": "{nora.color.gray.75}",
-            "width": "{nora.size.25}",
-            "style": "solid"
+        "media": {
+          "border-radius": {
+            "$type": "borderRadius",
+            "$value": "{nora.border-radius.sm}"
           }
         },
         "gap": {
           "$type": "dimension",
-          "$value": "{nora.space.50}"
+          "$value": "{nora.space.100}"
         },
         "figcaption": {
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{nora.space.50}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{nora.space.50}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{nora.space.50}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{nora.space.400}"
-          },
           "gap": {
             "$type": "dimension",
-            "$value": "{nora.space.50}"
+            "$value": "{nora.space.150}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -1608,7 +1512,7 @@
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "{nora.typography.line-height.105}"
+            "$value": "{nora.typography.line-height.120}"
           },
           "color": {
             "$type": "color",
@@ -2286,6 +2190,7 @@
       }
     }
   },
+  "components/information-panel": {},
   "components/link": {
     "utrecht": {
       "link": {
@@ -3116,6 +3021,58 @@
       }
     }
   },
+  "components/page-body": {
+    "nora": {
+      "page-body": {
+        "scrolled": {
+          "header-container": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": "{nora.box-shadow.sm}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/page-content": {
+    "nora": {
+      "page-content": {
+        "visual-banner": {
+          "height": {
+            "$type": "dimension",
+            "$value": "{nora.size.2000}"
+          },
+          "large-vw": {
+            "height": {
+              "$type": "dimension",
+              "$value": "14rem"
+            }
+          },
+          "overlay": {
+            "background-color": {
+              "$type": "color",
+              "$value": "linear-gradient(0deg, rgba( {nora.color.black}, 0.4), rgba( {nora.color.black}, 0) 100%)"
+            }
+          }
+        },
+        "with-visual-banner": {
+          "content-wrapper": {
+            "margin-block-start": {
+              "$type": "dimension",
+              "$value": "0px"
+            },
+            "large-vw": {
+              "margin-block-start": {
+                "$type": "dimension",
+                "$value": "-5rem"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components/page-section": {
     "nora": {
       "page-section": {
@@ -3209,19 +3166,31 @@
                 "$description": "280px"
               }
             }
-          }
-        }
-      }
-    }
-  },
-  "components/page-layout": {
-    "nora": {
-      "page-layout": {
-        "scrolled": {
-          "header-container": {
-            "box-shadow": {
-              "$type": "boxShadow",
-              "$value": "{nora.box-shadow.sm}"
+          },
+          "background-decorator": {
+            "top": {
+              "$type": "dimension",
+              "$value": "- {nora.space.600}"
+            },
+            "right": {
+              "$type": "dimension",
+              "$value": "- {nora.space.700}"
+            },
+            "bottom": {
+              "$type": "dimension",
+              "$value": "0px"
+            },
+            "left": {
+              "$type": "dimension",
+              "$value": "{nora.page-section.article.background-decorator.right}"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{nora.document.background-color}"
+            },
+            "border-radius": {
+              "$type": "borderRadius",
+              "$value": "{nora.border-radius.sm}"
             }
           }
         }
@@ -3472,13 +3441,15 @@
       "components/footer",
       "components/heading",
       "components/icon-only-button",
+      "components/information-panel",
       "components/link",
       "components/link-overview",
       "components/navigation-bar",
       "components/ordered-list",
       "components/paragraph",
+      "components/page-body",
+      "components/page-content",
       "components/page-section",
-      "components/page-layout",
       "components/table",
       "components/unordered-list"
     ]
