@@ -374,6 +374,10 @@
           "$type": "dimension",
           "$value": "3rem"
         },
+        "700": {
+          "$type": "dimension",
+          "$value": "3.5rem"
+        },
         "800": {
           "$type": "dimension",
           "$value": "4rem"
@@ -3106,6 +3110,32 @@
                 "$description": "280px"
               }
             }
+          },
+          "background-decorator": {
+            "top": {
+              "$type": "dimension",
+              "$value": "- {nora.space.600}"
+            },
+            "right": {
+              "$type": "dimension",
+              "$value": "- {nora.space.700}"
+            },
+            "bottom": {
+              "$type": "dimension",
+              "$value": "0px"
+            },
+            "left": {
+              "$type": "dimension",
+              "$value": "{nora.page-section.article.background-decorator.right}"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{nora.document.background-color}"
+            },
+            "border-radius": {
+              "$type": "borderRadius",
+              "$value": "{nora.border-radius.sm}"
+            }
           }
         }
       }
@@ -3323,6 +3353,7 @@
       }
     }
   },
+  "components/page-content": {},
   "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
@@ -3378,6 +3409,7 @@
       "components/page-section",
       "components/page-layout",
       "components/table",
+      "components/page-content",
       "components/unordered-list"
     ]
   }
