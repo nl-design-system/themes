@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 1.0.1
+
+### Patch Changes
+
+- 68180b6: Aanpassingen aan de `color`, `font-size` en `font-weight` van Heading componenten.
+
 ## 1.0.0
 
 ### Minor Changes
