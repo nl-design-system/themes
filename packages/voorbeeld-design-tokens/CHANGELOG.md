@@ -1,5 +1,16 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.3.0
+
+### Minor Changes
+
+- 1c72a35: - Removed margin tokens to align component with all other components within Figma.
+  - Changed color of Separator because of WCAG non-text-contrast.
+
+### Patch Changes
+
+- 9244bf4: Added missing line-height token for Form field Error Message.
+
 ## 3.2.0
 
 ### Minor Changes

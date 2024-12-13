@@ -1,5 +1,14 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.7.0
+
+### Minor Changes
+
+- 135f1fe: Tokens toegevoegd voor `nora-page-content`
+- e132c6d: Tokens toegevoegd voor `nora-avatar`, `nora-data-summary`, `nora-label-link` en `nora-information-panel`
+- a63d27f: `nora-figure` tokens update en refactoring
+- f0af991: `nora-page-layout` hernoemd naar `nora-page-body`
+
 ## 1.6.1
 
 ### Patch Changes
