@@ -1,5 +1,11 @@
 # @nl-design-system-community/purmerend-design-tokens
 
+## 1.1.2
+
+### Patch Changes
+
+- 58ea5ac: Improve styling for pressed link buttons, focus ring and form field labels.
+
 ## 1.1.1
 
 ### Patch Changes
