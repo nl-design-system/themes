@@ -1,0 +1,60 @@
+import { Meta } from "@storybook/blocks";
+import tokens from "../dist/tokens.json";
+import colorSchemeDark from "../dist/color-scheme-dark/tokens.json";
+import { ColorSamplePage } from "./ColorSampleList";
+
+<Meta title="Purmerend/Basis Tokens" />
+
+# Basis Tokens
+
+<ColorSamplePage
+  scales={[
+    {
+      id: "text",
+      label: "Text",
+      tokens: tokens["basis"]["color"]["text"],
+    },
+    {
+      id: "primary",
+      label: "Primary",
+      tokens: tokens["basis"]["color"]["primary"],
+    },
+    {
+      id: "primary-inverse",
+      label: "Primary (inverse)",
+      tokens: tokens["basis"]["color"]["primary-inverse"],
+    },
+    {
+      id: "secondary-inverse",
+      label: "Secondary (inverse)",
+      tokens: tokens["basis"]["color"]["secondary-inverse"],
+    },
+  ]}
+/>
+
+## Color scheme "dark"
+
+<ColorSamplePage
+  scales={[
+    {
+      id: "text",
+      label: "Text",
+      tokens: colorSchemeDark["basis"]["color"]["text"],
+    },
+    {
+      id: "primary",
+      label: "Primary",
+      tokens: colorSchemeDark["basis"]["color"]["primary"],
+    },
+    {
+      id: "primary-inverse",
+      label: "Primary (inverse)",
+      tokens: colorSchemeDark["basis"]["color"]["primary-inverse"],
+    },
+    {
+      id: "secondary-inverse",
+      label: "Secondary (inverse)",
+      tokens: colorSchemeDark["basis"]["color"]["secondary-inverse"],
+    },
+  ]}
+/>
