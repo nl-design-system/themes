@@ -117,6 +117,10 @@ jobs:
         run: |
           pnpm run --if-present build
 
+      - name: Check the release
+        run: |
+          pnpm run --if-present lint-release
+
       - name: Publish to GitHub repository
         uses: changesets/action@aba318e9165b45b7948c60273e0b72fce0a64eb9 # v1.4.7
         id: changeset
