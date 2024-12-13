@@ -1,5 +1,5 @@
 ---
-"@utrecht/separator-css": minor
+"@nl-design-system-unstable/voorbeeld-design-tokens": minor
 ---
 
 - Removed margin tokens to align component with all other components within Figma.
