@@ -817,15 +817,15 @@
       "border-width": {
         "sm": {
           "$type": "borderWidth",
-          "$value": "1px"
+          "$value": "0.0625rem"
         },
         "md": {
           "$type": "borderWidth",
-          "$value": "2px"
+          "$value": "0.125rem"
         },
         "lg": {
           "$type": "borderWidth",
-          "$value": "4px"
+          "$value": "0.25rem"
         }
       },
       "size": {
@@ -1135,7 +1135,7 @@
         "inverse": {
           "outline-color": {
             "$type": "color",
-            "$value": "{basis.color.white}"
+            "$value": "{basis.focus.background-color}"
           }
         },
         "outline-offset": {
@@ -1148,7 +1148,7 @@
         },
         "outline-width": {
           "$type": "borderWidth",
-          "$value": "{basis.border-width.md}"
+          "$value": "{basis.border-width.lg}"
         }
       },
       "pointer-target": {
