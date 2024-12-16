@@ -1130,6 +1130,27 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         </Paragraph>
       </Alert>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.alert.background-color',
+        'utrecht.alert.border-color',
+        'utrecht.alert.border-radius',
+        'utrecht.alert.border-width',
+        'utrecht.alert.color',
+        'utrecht.alert.column-gap',
+        'utrecht.alert.margin-block-end',
+        'utrecht.alert.margin-block-start',
+        'utrecht.alert.padding-block-end',
+        'utrecht.alert.padding-block-start',
+        'utrecht.alert.padding-inline-end',
+        'utrecht.alert.padding-inline-start',
+        'utrecht.alert.content.row-gap',
+        'utrecht.alert.icon.color',
+        'utrecht.alert.icon.inset-block-start',
+        'utrecht.alert.icon.size',
+        'utrecht.alert.message.row-gap',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-alert--error',
@@ -1147,6 +1168,67 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         </Paragraph>
       </Alert>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.alert.error.color',
+        'utrecht.alert.error.background-color',
+        'utrecht.alert.error.border-color',
+        'utrecht.alert.error.border-width',
+        'utrecht.alert.icon.error.color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-alert--warning',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert Warning',
+    render: () => (
+      <Alert type="warning">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Alert>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.alert.warning.color',
+        'utrecht.alert.warning.background-color',
+        'utrecht.alert.warning.border-color',
+        'utrecht.alert.warning.border-width',
+        'utrecht.alert.icon.warning.color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-alert--info',
+    component: 'utrecht-alert',
+    name: 'Utrecht Alert info',
+    render: () => (
+      <Alert type="info">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Alert>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.alert.info.color',
+        'utrecht.alert.info.background-color',
+        'utrecht.alert.info.border-color',
+        'utrecht.alert.info.border-width',
+        'utrecht.alert.icon.info.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-alert--ok',
@@ -1164,6 +1246,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         </Paragraph>
       </Alert>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.alert.ok.color',
+        'utrecht.alert.ok.background-color',
+        'utrecht.alert.ok.border-color',
+        'utrecht.alert.ok.border-width',
+        'utrecht.alert.icon.ok.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-unordered-list--default',
