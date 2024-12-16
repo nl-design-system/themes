@@ -8,11 +8,11 @@ const createConfig = ({
   source = ['src/**/tokens.json', 'src/**/*.tokens.json'],
   buildPath = 'dist/',
   className = '',
-  useTokensStudioTransformGroup = false,
+  useTokensStudioTransformGroup = true,
 }) => {
   const prefix = selector ? selector.replace(/^\.(.+)-theme/, '$1') : '';
   let themeName = className || (prefix ? `${prefix}-theme` : 'theme');
-  const transformGroup = useTokensStudioTransformGroup ? 'tokens-studio' : '';
+  const transformGroup = useTokensStudioTransformGroup && !backwardsCompatible ? 'tokens-studio' : '';
 
   const legacyPlatforms = {
     legacyJson: {
