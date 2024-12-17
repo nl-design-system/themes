@@ -516,6 +516,49 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
       </UnorderedList>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.unordered-list.font-size',
+        'utrecht.unordered-list.line-height',
+        'utrecht.unordered-list.margin-block-start',
+        'utrecht.unordered-list.margin-block-end',
+        'utrecht.unordered-list.padding-inline-start',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-unordered-list--item',
+    component: 'utrecht-unordered-list',
+    group: STORY_GROUPS['LISTS'],
+    name: 'Utrecht Unordered list: Item',
+    render: () => (
+      <UnorderedList>
+        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
+        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
+      </UnorderedList>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.unordered-list.item.margin-block-start',
+        'utrecht.unordered-list.item.margin-block-end',
+        'utrecht.unordered-list.item.padding-inline-start',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-unordered-list--marker',
+    component: 'utrecht-unordered-list',
+    group: STORY_GROUPS['LISTS'],
+    name: 'Utrecht Unordered list: Marker',
+    render: () => (
+      <UnorderedList>
+        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
+        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
+      </UnorderedList>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.unordered-list.marker.color'],
+    },
   },
   {
     storyId: 'react-utrecht-ordered-list--default',
