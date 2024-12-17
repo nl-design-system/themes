@@ -571,6 +571,34 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <OrderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</OrderedListItem>
       </OrderedList>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.ordered-list.font-size',
+        'utrecht.ordered-list.line-height',
+        'utrecht.ordered-list.margin-block-start',
+        'utrecht.ordered-list.margin-block-end',
+        'utrecht.ordered-list.padding-inline-start',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-ordered-list--item',
+    component: 'utrecht-ordered-list',
+    group: STORY_GROUPS['LISTS'],
+    name: 'Utrecht Ordered list: Item',
+    render: () => (
+      <UnorderedList>
+        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
+        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
+      </UnorderedList>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.ordered-list.item.margin-block-start',
+        'utrecht.ordered-list.item.margin-block-end',
+        'utrecht.ordered-list.item.padding-inline-start',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-separator--default',
