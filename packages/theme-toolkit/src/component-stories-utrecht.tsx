@@ -72,7 +72,38 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Default Button',
     render: () => <Button>Default</Button>,
     detectTokens: {
-      allOf: ['utrecht.button.color', 'utrecht.button.background-color'],
+      anyOf: [
+        'utrecht.button.color',
+        'utrecht.button.background-color',
+        'utrecht.button.border-color',
+        'utrecht.button.border-radius',
+        'utrecht.button.border-width',
+        'utrecht.button.column-gap',
+        'utrecht.button.font-family',
+        'utrecht.button.font-size',
+        'utrecht.button.font-weight',
+        'utrecht.button.inline-size',
+        'utrecht.button.line-height',
+        'utrecht.button.min-block-size',
+        'utrecht.button.min-inline-size',
+        'utrecht.button.padding-block-start',
+        'utrecht.button.padding-block-end',
+        'utrecht.button.padding-inline-start',
+        'utrecht.button.padding-inline-end',
+        'utrecht.button.text-transform',
+        'utrecht.button.text-transform',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--icon',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Default Button: Icon',
+    state: true,
+    render: () => <Button className="utrecht-button--icon">Default</Button>,
+    detectTokens: {
+      anyOf: ['utrecht.button.icon.size'],
     },
   },
   {
@@ -83,7 +114,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     render: () => <Button className="utrecht-button--active">Default</Button>,
     detectTokens: {
-      allOf: ['utrecht.button.active.color', 'utrecht.button.active.background-color'],
+      anyOf: [
+        'utrecht.button.active.color',
+        'utrecht.button.active.background-color',
+        'utrecht.button.active.border-color',
+      ],
     },
   },
   {
@@ -94,7 +129,12 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     render: () => <Button className="utrecht-button--hover">Default</Button>,
     detectTokens: {
-      allOf: ['utrecht.button.hover.background-color', 'utrecht.button.hover.color'],
+      anyOf: [
+        'utrecht.button.hover.background-color',
+        'utrecht.button.hover.color',
+        'utrecht.button.hover.border-color',
+        'utrecht.button.hover.scale',
+      ],
     },
   },
   {
@@ -105,7 +145,42 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     render: () => <Button className="utrecht-button--focus">Default</Button>,
     detectTokens: {
-      allOf: ['utrecht.button.focus.background-color', 'utrecht.button.focus.color'],
+      anyOf: [
+        'utrecht.button.focus.color',
+        'utrecht.button.focus.background-color',
+        'utrecht.button.focus.border-color',
+        'utrecht.button.focus.scale',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--disabled',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Default Button: Disabled',
+    state: true,
+    render: () => <Button className="utrecht-button--disabled">Default</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.disabled.color',
+        'utrecht.button.disabled.background-color',
+        'utrecht.button.disabled.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--pressed',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Default Button: Pressed',
+    state: true,
+    render: () => <Button className="utrecht-button--pressed">Default</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.pressed.color',
+        'utrecht.button.pressed.background-color',
+        'utrecht.button.pressed.border-color',
+      ],
     },
   },
   {
@@ -140,7 +215,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     render: () => <Button appearance="primary-action-button">Primary action</Button>,
     detectTokens: {
-      allOf: ['utrecht.button.primary-action.color', 'utrecht.button.primary-action.background-color'],
+      anyOf: [
+        'utrecht.button.primary-action.color',
+        'utrecht.button.primary-action.background-color',
+        'utrecht.button.primary-action.border-color',
+        'utrecht.button.primary-action.border-width',
+        'utrecht.button.primary-action.font-size',
+        'utrecht.button.primary-action.font-weight',
+        'utrecht.button.primary-action.line-height',
+      ],
     },
   },
   {
@@ -168,6 +251,82 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
   },
   {
+    storyId: 'react-utrecht-button--primary-action-active',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Primary Action Button: Active',
+    state: true,
+    render: () => <Button appearance="primary-action-button-active">Primary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.primary-action.active.color',
+        'utrecht.button.primary-action.active.background-color',
+        'utrecht.button.primary-action.active.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-disabled',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Primary Action Button: Disabled',
+    state: true,
+    render: () => <Button appearance="primary-action-button-disabled">Primary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.primary-action.disabled.color',
+        'utrecht.button.primary-action.disabled.background-color',
+        'utrecht.button.primary-action.disabled.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-hover',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Primary Action Button: Hover',
+    state: true,
+    render: () => <Button appearance="primary-action-button-hover">Primary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.primary-action.hover.color',
+        'utrecht.button.primary-action.hover.background-color',
+        'utrecht.button.primary-action.hover.border-color',
+        'utrecht.button.primary-action.hover.scale',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-focus',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Primary Action Button: Focus',
+    state: true,
+    render: () => <Button appearance="primary-action-button-focus">Primary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.primary-action.focus.color',
+        'utrecht.button.primary-action.focus.background-color',
+        'utrecht.button.primary-action.focus.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--primary-action-pressed',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Primary Action Button: Pressed',
+    state: true,
+    render: () => <Button appearance="primary-action-button-pressed">Primary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.primary-action.pressed.color',
+        'utrecht.button.primary-action.pressed.background-color',
+        'utrecht.button.primary-action.pressed.border-color',
+      ],
+    },
+  },
+  {
     storyId: 'react-utrecht-button--secondary-action-button',
     component: 'utrecht-button',
     group: STORY_GROUPS['BUTTON_DEFAULT'],
@@ -175,7 +334,90 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     render: () => <Button appearance="secondary-action-button">Secondary action</Button>,
     detectTokens: {
-      allOf: ['utrecht.button.secondary-action.color', 'utrecht.button.secondary-action.background-color'],
+      anyOf: [
+        'utrecht.button.secondary-action.color',
+        'utrecht.button.secondary-action.background-color',
+        'utrecht.button.secondary-action.border-color',
+        'utrecht.button.secondary-action.border-width',
+        'utrecht.button.secondary-action.font-size',
+        'utrecht.button.secondary-action.font-weight',
+        'utrecht.button.secondary-action.line-height',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-active',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Secondary Action Button: Active',
+    state: true,
+    render: () => <Button appearance="secondary-action-button-active">Secondary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.secondary-action.active.color',
+        'utrecht.button.secondary-action.active.background-color',
+        'utrecht.button.secondary-action.active.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-disabled',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Secondary Action Button: Disabled',
+    state: true,
+    render: () => <Button appearance="secondary-action-button-disabled">Secondary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.secondary-action.disabled.color',
+        'utrecht.button.secondary-action.disabled.background-color',
+        'utrecht.button.secondary-action.disabled.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-hover',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Secondary Action Button: Hover',
+    state: true,
+    render: () => <Button appearance="secondary-action-button-hover">Secondary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.secondary-action.hover.color',
+        'utrecht.button.secondary-action.hover.background-color',
+        'utrecht.button.secondary-action.hover.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-focus',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Secondary Action Button: Focus',
+    state: true,
+    render: () => <Button appearance="secondary-action-button-focus">Secondary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.secondary-action.focus.color',
+        'utrecht.button.secondary-action.focus.background-color',
+        'utrecht.button.secondary-action.focus.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--secondary-action-pressed',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Secondary Action Button: Pressed',
+    state: true,
+    render: () => <Button appearance="secondary-action-button-pressed">Secondary action</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.secondary-action.pressed.color',
+        'utrecht.button.secondary-action.pressed.background-color',
+        'utrecht.button.secondary-action.pressed.border-color',
+      ],
     },
   },
   {
@@ -210,9 +452,93 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     render: () => <Button appearance="subtle-button">Subtle button</Button>,
     detectTokens: {
-      allOf: ['utrecht.button.subtle-action.color', 'utrecht.button.subtle-action.background-color'],
+      anyOf: [
+        'utrecht.button.subtle.color',
+        'utrecht.button.subtle.background-color',
+        'utrecht.button.subtle.border-color',
+        'utrecht.button.subtle.border-width',
+        'utrecht.button.subtle.font-size',
+        'utrecht.button.subtle.font-weight',
+        'utrecht.button.subtle.line-height',
+      ],
     },
   },
+  {
+    storyId: 'react-utrecht-button--subtle-active',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Subtle Button: Active',
+    state: true,
+    render: () => <Button appearance="subtle-button-active">Subtle button</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.subtle.active.color',
+        'utrecht.button.subtle.active.background-color',
+        'utrecht.button.subtle.active.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--subtle-disabled',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Subtle Button: Disabled',
+    state: true,
+    render: () => <Button appearance="subtle-button-disabled">Subtle button</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.subtle.disabled.color',
+        'utrecht.button.subtle.disabled.background-color',
+        'utrecht.button.subtle.disabled.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--subtle-hover',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Subtle Button: Hover',
+    state: true,
+    render: () => <Button appearance="subtle-button-hover">Subtle button</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.subtle.hover.color',
+        'utrecht.button.subtle.hover.background-color',
+        'utrecht.button.subtle.hover.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--subtle-focus',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Subtle Button: Focus',
+    state: true,
+    render: () => <Button appearance="subtle-button-focus">Subtle button</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.subtle.focus.color',
+        'utrecht.button.subtle.focus.background-color',
+        'utrecht.button.subtle.focus.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-button--subtle-pressed',
+    component: 'utrecht-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Utrecht Subtle Button: Pressed',
+    state: true,
+    render: () => <Button appearance="subtle-button-pressed">Subtle button</Button>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.button.subtle.pressed.color',
+        'utrecht.button.subtle.pressed.background-color',
+        'utrecht.button.subtle.pressed.border-color',
+      ],
+    },
+  },
+
   {
     storyId: 'react-utrecht-button--subtle-button-danger',
     component: 'utrecht-button',
