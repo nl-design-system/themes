@@ -53,6 +53,7 @@ import {
   TableCell,
   TableCaption,
   RadioButton,
+  SpotlightSection,
   Mark,
   CodeBlock,
   Code,
@@ -423,6 +424,141 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 6',
     render: () => <Heading level={6}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+  },
+  {
+    storyId: 'react-utrecht-spotlight-section--default',
+    component: 'utrecht-spotlight-section',
+    name: 'Utrecht Spotlight Section',
+    render: () => (
+      <SpotlightSection>
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </SpotlightSection>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.spotlight-section.color',
+        'utrecht.spotlight-section.border-color',
+        'utrecht.spotlight-section.border-width',
+        'utrecht.spotlight-section.background-color',
+        'utrecht.spotlight-section.padding-block-start',
+        'utrecht.spotlight-section.padding-block-end',
+        'utrecht.spotlight-section.padding-inline-start',
+        'utrecht.spotlight-section.padding-inline-end',
+        'utrecht.spotlight-section.marging-block-start',
+        'utrecht.spotlight-section.marging-block-end',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-spotlight-section--info',
+    component: 'utrecht-spotlight-section',
+    name: 'Utrecht Spotlight Section: Info',
+    render: () => (
+      <SpotlightSection type="info">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </SpotlightSection>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.spotlight-section.info.color',
+        'utrecht.spotlight-section.info.border-color',
+        'utrecht.spotlight-section.info.border-width',
+        'utrecht.spotlight-section.info.background-color',
+        'utrecht.spotlight-section.info.icon-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-spotlight-section--warning',
+    component: 'utrecht-spotlight-section',
+    name: 'Utrecht Spotlight Section: Warning',
+    render: () => (
+      <SpotlightSection type="warning">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </SpotlightSection>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.spotlight-section.warning.color',
+        'utrecht.spotlight-section.warning.border-color',
+        'utrecht.spotlight-section.warning.border-width',
+        'utrecht.spotlight-section.warning.background-color',
+        'utrecht.spotlight-section.warning.icon-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-spotlight-section--error',
+    component: 'utrecht-spotlight-section',
+    name: 'Utrecht Spotlight Section: Error',
+    render: () => (
+      <SpotlightSection type="error">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </SpotlightSection>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.spotlight-section.error.color',
+        'utrecht.spotlight-section.error.border-color',
+        'utrecht.spotlight-section.error.border-width',
+        'utrecht.spotlight-section.error.background-color',
+        'utrecht.spotlight-section.error.icon-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-spotlight-section--ok',
+    component: 'utrecht-spotlight-section',
+    name: 'Utrecht Spotlight Section: Ok',
+    render: () => (
+      <SpotlightSection type="ok">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </SpotlightSection>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.spotlight-section.ok.color',
+        'utrecht.spotlight-section.ok.border-color',
+        'utrecht.spotlight-section.ok.border-width',
+        'utrecht.spotlight-section.ok.background-color',
+        'utrecht.spotlight-section.ok.icon-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-radio-button--default',
