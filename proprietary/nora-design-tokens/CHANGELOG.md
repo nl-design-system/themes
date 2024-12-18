@@ -1,5 +1,11 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.7.1
+
+### Patch Changes
+
+- 8e5c0c7: `navigation` hernoemd naar `side-column` in token set voor `nora-page-section`
+
 ## 1.7.0
 
 ### Minor Changes
