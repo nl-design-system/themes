@@ -1,0 +1,6 @@
+import{j as o}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as e}from"./index-BI1Biiay.js";import{ae as p}from"./index-BqSUE6u8.js";import{C as s,a}from"./ColorSearch-BoQ0Yi5H.js";import{c as i}from"./config-CyqCWqZz.js";import{t as n}from"./tokens-BBMUWj7_.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-CaGZsORh.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./util-AfaQczwz.js";import"./index-CVs1w2sG.js";import"./index-BQ5IbGbl.js";import"./index-NspZYKNv.js";import"./clsx-B-dksMZM.js";import"./ExampleTokensCSS-CfgSc4Ci.js";import"./_baseSet-DWBlGqXY.js";import"./_Set-B09sQViy.js";import"./_setToArray-fgp7Mjkt.js";function m(r){const t={h1:"h1",h2:"h2",...e(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(p,{title:"Amsterdam/Color"}),`
+`,o.jsx(t.h1,{id:"color",children:"Color"}),`
+`,o.jsx(t.h2,{id:"find-a-color",children:"Find a color"}),`
+`,o.jsx(s,{tokens:n[i.prefix].color}),`
+`,o.jsx(t.h2,{id:"color-palette",children:"Color palette"}),`
+`,o.jsx(a,{tokens:n[i.prefix].color})]})}function S(r={}){const{wrapper:t}={...e(),...r.components};return t?o.jsx(t,{...r,children:o.jsx(m,{...r})}):m(r)}export{S as default};
