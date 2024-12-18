@@ -1,5 +1,11 @@
 # @nl-design-system-community/purmerend-design-tokens
 
+## 1.1.3
+
+### Patch Changes
+
+- e57282b: Convert percentages to unitless line-height values in the theme output.
+
 ## 1.1.2
 
 ### Patch Changes

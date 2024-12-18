@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.3.1
+
+### Patch Changes
+
+- e57282b: Convert percentages to unitless line-height values in the theme output.
+
 ## 3.3.0
 
 ### Minor Changes
