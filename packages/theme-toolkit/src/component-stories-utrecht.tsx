@@ -91,19 +91,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.button.padding-inline-start',
         'utrecht.button.padding-inline-end',
         'utrecht.button.text-transform',
-        'utrecht.button.text-transform',
       ],
-    },
-  },
-  {
-    storyId: 'react-utrecht-button--icon',
-    component: 'utrecht-button',
-    group: STORY_GROUPS['BUTTON_DEFAULT'],
-    name: 'Utrecht Default Button: Icon',
-    state: true,
-    render: () => <Button className="utrecht-button--icon">Default</Button>,
-    detectTokens: {
-      anyOf: ['utrecht.button.icon.size'],
     },
   },
   {
@@ -159,7 +147,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Default Button: Disabled',
     state: true,
-    render: () => <Button className="utrecht-button--disabled">Default</Button>,
+    render: () => <Button disabled>Default</Button>,
     detectTokens: {
       anyOf: [
         'utrecht.button.disabled.color',
@@ -174,7 +162,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Default Button: Pressed',
     state: true,
-    render: () => <Button className="utrecht-button--pressed">Default</Button>,
+    render: () => <Button pressed>Default</Button>,
     detectTokens: {
       anyOf: [
         'utrecht.button.pressed.color',
@@ -256,7 +244,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Primary Action Button: Active',
     state: true,
-    render: () => <Button appearance="primary-action-button-active">Primary action</Button>,
+    render: () => (
+      <Button appearance="primary-action-button" className="utrecht-button--active">
+        Primary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.primary-action.active.color',
@@ -271,7 +263,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Primary Action Button: Disabled',
     state: true,
-    render: () => <Button appearance="primary-action-button-disabled">Primary action</Button>,
+    render: () => (
+      <Button appearance="primary-action-button" disabled>
+        Primary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.primary-action.disabled.color',
@@ -286,7 +282,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Primary Action Button: Hover',
     state: true,
-    render: () => <Button appearance="primary-action-button-hover">Primary action</Button>,
+    render: () => (
+      <Button appearance="primary-action-button" className="utrecht-button--hover">
+        Primary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.primary-action.hover.color',
@@ -302,7 +302,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Primary Action Button: Focus',
     state: true,
-    render: () => <Button appearance="primary-action-button-focus">Primary action</Button>,
+    render: () => (
+      <Button appearance="primary-action-button" className="utrecht-button--focus utrecht-button--focus-visible">
+        Primary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.primary-action.focus.color',
@@ -317,7 +321,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Primary Action Button: Pressed',
     state: true,
-    render: () => <Button appearance="primary-action-button-pressed">Primary action</Button>,
+    render: () => (
+      <Button appearance="primary-action-button" pressed>
+        Primary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.primary-action.pressed.color',
@@ -351,7 +359,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Secondary Action Button: Active',
     state: true,
-    render: () => <Button appearance="secondary-action-button-active">Secondary action</Button>,
+    render: () => (
+      <Button appearance="secondary-action-button" className="utrecht-button--active">
+        Secondary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.secondary-action.active.color',
@@ -366,7 +378,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Secondary Action Button: Disabled',
     state: true,
-    render: () => <Button appearance="secondary-action-button-disabled">Secondary action</Button>,
+    render: () => (
+      <Button appearance="secondary-action-button" disabled>
+        Secondary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.secondary-action.disabled.color',
@@ -381,7 +397,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Secondary Action Button: Hover',
     state: true,
-    render: () => <Button appearance="secondary-action-button-hover">Secondary action</Button>,
+    render: () => (
+      <Button appearance="secondary-action-button" className="utrecht-button--hover">
+        Secondary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.secondary-action.hover.color',
@@ -396,7 +416,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Secondary Action Button: Focus',
     state: true,
-    render: () => <Button appearance="secondary-action-button-focus">Secondary action</Button>,
+    render: () => (
+      <Button
+        appearance="secondary-action-button-focus"
+        className="utrecht-button--focus utrecht-button--focus-visible"
+      >
+        Secondary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.secondary-action.focus.color',
@@ -411,7 +438,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Secondary Action Button: Pressed',
     state: true,
-    render: () => <Button appearance="secondary-action-button-pressed">Secondary action</Button>,
+    render: () => (
+      <Button appearance="secondary-action-button" pressed>
+        Secondary action
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.secondary-action.pressed.color',
@@ -469,7 +500,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Subtle Button: Active',
     state: true,
-    render: () => <Button appearance="subtle-button-active">Subtle button</Button>,
+    render: () => (
+      <Button appearance="subtle-button" className="utrecht-button--active">
+        Subtle button
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.subtle.active.color',
@@ -484,7 +519,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Subtle Button: Disabled',
     state: true,
-    render: () => <Button appearance="subtle-button-disabled">Subtle button</Button>,
+    render: () => (
+      <Button appearance="subtle-button" disabled>
+        Subtle button
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.subtle.disabled.color',
@@ -499,7 +538,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Subtle Button: Hover',
     state: true,
-    render: () => <Button appearance="subtle-button-hover">Subtle button</Button>,
+    render: () => (
+      <Button appearance="subtle-button" className="utrecht-button--hover">
+        Subtle button
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.subtle.hover.color',
@@ -514,7 +557,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Subtle Button: Focus',
     state: true,
-    render: () => <Button appearance="subtle-button-focus">Subtle button</Button>,
+    render: () => (
+      <Button appearance="subtle-button" className="utrecht-button--focus utrecht-button--focus-visible">
+        Subtle button
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.subtle.focus.color',
@@ -529,7 +576,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BUTTON_DEFAULT'],
     name: 'Utrecht Subtle Button: Pressed',
     state: true,
-    render: () => <Button appearance="subtle-button-pressed">Subtle button</Button>,
+    render: () => (
+      <Button appearance="subtle-button" pressed>
+        Subtle button
+      </Button>
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.button.subtle.pressed.color',
