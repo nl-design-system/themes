@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.3.2
+
+### Patch Changes
+
+- 8dcd3a2: Improvements for Candidate components.
+
 ## 3.3.1
 
 ### Patch Changes
