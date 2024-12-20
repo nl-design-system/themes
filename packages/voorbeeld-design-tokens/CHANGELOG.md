@@ -1,5 +1,12 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.3.3
+
+### Patch Changes
+
+- 39fe849: Fix Color Sample checkerboard color to be grey instead of violet.
+- 474b8ae: Fix color contrast for the Color Sample border, to have enough contrast between both black and the border color, and white and the border-color.
+
 ## 3.3.2
 
 ### Patch Changes
