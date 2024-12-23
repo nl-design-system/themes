@@ -7,22 +7,27 @@ const meta = {
   title: 'Purmerend',
   component: ComponentStories,
   parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: false } },
-  args: { config, showAll: false, tokens, displayDesignTokens: false },
+  args: {
+    config,
+    showAll: false,
+    tokens,
+    displayDesignTokens: true,
+  },
 } satisfies Meta<typeof ComponentStories>;
 
 type Story = StoryObj<typeof meta>;
 
 export default meta;
 
-export const ComponentsLightMode: Story = {
-  name: 'Visual regression test (color-scheme: light)',
+export const ComponentTokensLightMode: Story = {
+  name: 'Component Tokens (color-scheme: light)',
   args: {
     theme: 'purmerend-theme purmerend-theme--color-scheme-light',
   },
 };
 
-export const ComponentsDarkMode: Story = {
-  name: 'Visual regression test (color-scheme: dark)',
+export const ComponentTokensDarkMode: Story = {
+  name: 'Component Tokens (color-scheme: dark)',
   args: {
     theme: 'purmerend-theme purmerend-theme--color-scheme-dark',
   },
