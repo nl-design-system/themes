@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 1.0.2
+
+### Patch Changes
+
+- 36e6472: Waardes van focus tokens aangepast.
+
 ## 1.0.1
 
 ### Patch Changes
