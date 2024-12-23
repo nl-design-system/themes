@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 
 import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 
@@ -59,10 +59,75 @@ import {
   Code,
   ColorSample,
 } from '@utrecht/component-library-react/dist/css-module';
+import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
+import { clsx } from 'clsx';
 
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
 
 const BadgeCounter = ({ children }: PropsWithChildren) => <div className="utrecht-badge-counter">{children}</div>;
+
+export interface ListboxOptionStoryProps {
+  active?: boolean;
+  disabled?: boolean;
+  focus?: boolean;
+  focusVisible?: boolean;
+  hover?: boolean;
+  label: ReactNode;
+  selected?: boolean;
+}
+
+export interface ListboxStoryProps {
+  disabled?: boolean;
+  invalid?: boolean;
+  focus?: boolean;
+  focusVisible?: boolean;
+  forcedColors?: boolean;
+  multiple?: boolean;
+  readOnly?: boolean;
+  required?: boolean;
+  options: ListboxOptionStoryProps[];
+}
+
+export const ListboxStory = ({
+  disabled,
+  focus,
+  focusVisible,
+  forcedColors,
+  invalid,
+  multiple,
+  options,
+  readOnly,
+  required,
+}: ListboxStoryProps) => (
+  <Listbox
+    className={clsx({
+      'utrecht-listbox--focus': focus,
+      'utrecht-listbox--focus-visible': focusVisible,
+      'utrecht-listbox--forced-colors': forcedColors,
+    })}
+    disabled={disabled}
+    invalid={invalid}
+    multiple={multiple}
+    required={required}
+    readOnly={readOnly}
+  >
+    {options.map(({ active, disabled, focus, focusVisible, hover, label, selected }, index) => (
+      <ListboxOption
+        className={clsx({
+          'utrecht-listbox__option--hover': hover,
+          'utrecht-listbox__option--focus': focus,
+          'utrecht-listbox__option--focus-visible': focusVisible,
+        })}
+        active={active}
+        disabled={disabled}
+        selected={selected}
+        key={index}
+      >
+        {label}
+      </ListboxOption>
+    ))}
+  </Listbox>
+);
 
 export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   {
@@ -1950,5 +2015,183 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <Paragraph>Page Footer Area</Paragraph>
       </PageFooter>
     ),
+  },
+  {
+    storyId: 'react-utrecht-listbox',
+    name: 'Utrecht Listbox',
+    render: () => (
+      <ListboxStory
+        options={[
+          { label: 'Option #1' },
+          {
+            hover: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.listbox.background-color',
+        'utrecht.listbox.border-color',
+        'utrecht.listbox.border-radius',
+        'utrecht.listbox.border-width',
+        'utrecht.listbox.color',
+        'utrecht.listbox.font-weight',
+        'utrecht.listbox.inline-size',
+        'utrecht.listbox.max-block-size',
+        'utrecht.listbox.padding-block-end',
+        'utrecht.listbox.padding-block-start',
+        'utrecht.listbox.padding-inline-end',
+        'utrecht.listbox.padding-inline-start',
+        'utrecht.listbox.option.background-color',
+        'utrecht.listbox.option.color',
+        'utrecht.listbox.option.min-block-size',
+        'utrecht.listbox.option.padding-block-end',
+        'utrecht.listbox.option.padding-block-start',
+        'utrecht.listbox.option.padding-inline-end',
+        'utrecht.listbox.option.padding-inline-start',
+        'utrecht.listbox.option.icon.size',
+        // TODO: Option group tokens
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-listbox--focus-visible',
+    name: 'Utrecht Listbox Focus-visible',
+    render: () => (
+      <ListboxStory
+        focus
+        focusVisible
+        options={[
+          { label: 'Option #1' },
+          {
+            hover: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+  },
+  {
+    storyId: 'react-utrecht-listbox--option-hover',
+    name: 'Utrecht Listbox Option Hover',
+    render: () => (
+      <ListboxStory
+        options={[
+          { label: 'Option #1' },
+          {
+            hover: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.listbox.option.hover.background-color', 'utrecht.listbox.option.hover.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-listbox--option-selected',
+    name: 'Utrecht Listbox Option Selected',
+    render: () => (
+      <ListboxStory
+        options={[
+          { label: 'Option #1' },
+          {
+            selected: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.listbox.option.selected.background-color', 'utrecht.listbox.option.selected.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-listbox--option-selected-hover',
+    name: 'Utrecht Listbox Option Selected + Hover',
+    render: () => (
+      <ListboxStory
+        options={[
+          { label: 'Option #1' },
+          {
+            hover: true,
+            selected: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.listbox.option.selected.hover.background-color', 'utrecht.listbox.option.selected.hover.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-listbox--option-active',
+    name: 'Utrecht Listbox Option Active',
+    render: () => (
+      <ListboxStory
+        options={[
+          { label: 'Option #1' },
+          {
+            active: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.listbox.option.active.background-color', 'utrecht.listbox.option.active.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-listbox--option-disabled',
+    name: 'Utrecht Listbox Option Disabled',
+    render: () => (
+      <ListboxStory
+        options={[
+          { label: 'Option #1' },
+          {
+            disabled: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.listbox.option.disabled.background-color', 'utrecht.listbox.option.disabled.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-listbox--option-disabled-selected',
+    name: 'Utrecht Listbox Option Disabled + Selected',
+    render: () => (
+      <ListboxStory
+        options={[
+          { label: 'Option #1' },
+          {
+            disabled: true,
+            selected: true,
+            label: 'Option #2',
+          },
+          { label: 'Option #3' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.listbox.option.selected.disabled.background-color',
+        'utrecht.listbox.option.selected.disabled.color',
+      ],
+    },
   },
 ];

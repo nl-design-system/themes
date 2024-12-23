@@ -693,6 +693,9 @@ importers:
       '@utrecht/listbox-css':
         specifier: 1.1.0
         version: 1.1.0
+      '@utrecht/listbox-react':
+        specifier: 1.0.5
+        version: 1.0.5(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/logo-button-css':
         specifier: 1.1.0
         version: 1.1.0
@@ -4532,6 +4535,13 @@ packages:
 
   '@utrecht/listbox-css@1.1.0':
     resolution: {integrity: sha512-mX/ECg7kgWc286vK7SxlEtbuBQiEMeJVgZ9mAWtexDv9LD6zdc2RH6JR2dJ4EEtnCAHrey+JOHY2yBtuVLpOag==}
+
+  '@utrecht/listbox-react@1.0.5':
+    resolution: {integrity: sha512-omFfRTWQ+sMDCggBImVtklg2Z/ro7s8/22mlKa4O/ldkcsEkyu5bK76sFyPgyUSTLwhLbSDphqP4TrrCyFKm2w==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
   '@utrecht/logo-button-css@1.1.0':
     resolution: {integrity: sha512-TukvjjrQv7J9/BzNgRmczdkRPjsBLkxoVEfQMCI5GtiU1+Ho+ZqSlEdBPqMQLzasBA21yLkqfVsLNdZHVQOPWQ==}
@@ -11948,6 +11958,13 @@ snapshots:
   '@utrecht/list-social-css@1.1.0': {}
 
   '@utrecht/listbox-css@1.1.0': {}
+
+  '@utrecht/listbox-react@1.0.5(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@utrecht/logo-button-css@1.1.0': {}
 
