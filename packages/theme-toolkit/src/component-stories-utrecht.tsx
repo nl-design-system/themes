@@ -260,30 +260,170 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-checkbox--default',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
-    name: 'Utrecht Checkbox Default',
+    name: 'Utrecht Checkbox default',
     render: () => <Checkbox />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.color',
+        'utrecht.checkbox.background-color',
+        'utrecht.checkbox.border-color',
+        'utrecht.checkbox.border-radius',
+        'utrecht.checkbox.border-width',
+        'utrecht.checkbox.icon.size',
+        'utrecht.checkbox.size',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-checkbox--checked',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
-    name: 'Utrecht Checkbox Checked',
-    render: () => <Checkbox defaultChecked />,
+    name: 'Utrecht Checkbox checked',
+    render: () => <Checkbox className="utrecht-checkbox--checked" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.checked.color',
+        'utrecht.checkbox.checked.border-width',
+        'utrecht.checkbox.checked.background-color',
+        'utrecht.checkbox.checked.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--hover',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox hover',
+    render: () => <Checkbox className="utrecht-checkbox--hover" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.hover.color',
+        'utrecht.checkbox.hover.border-width',
+        'utrecht.checkbox.hover.background-color',
+        'utrecht.checkbox.hover.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--active',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox active',
+    render: () => <Checkbox className="utrecht-checkbox--active" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.active.hover.color',
+        'utrecht.checkbox.active.hover.border-width',
+        'utrecht.checkbox.active.hover.background-color',
+        'utrecht.checkbox.active.hover.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--focus',
+    component: 'utrecht-checkbox',
+    name: 'Utrecht Checkbox focus',
+    render: () => <Checkbox className="utrecht-checkbox--focus" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.focus.color',
+        'utrecht.checkbox.focus.border-width',
+        'utrecht.checkbox.focus.background-color',
+        'utrecht.checkbox.focus.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--focus-visible',
+    component: 'utrecht-checkbox',
+    name: 'Utrecht Checkbox focus-visible',
+    render: () => <Checkbox className="utrecht-checkbox--focus-visible" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.focus.focus-visible.color',
+        'utrecht.checkbox.focus.focus-visible.border-width',
+        'utrecht.checkbox.focus.focus-visible.background-color',
+        'utrecht.checkbox.focus.focus-visible.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--indeterminate',
+    component: 'utrecht-checkbox',
+    name: 'Utrecht Checkbox indeterminate',
+    render: () => <Checkbox className="utrecht-checkbox--indeterminate" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.indeterminate.color',
+        'utrecht.checkbox.indeterminate.border-width',
+        'utrecht.checkbox.indeterminate.background-color',
+        'utrecht.checkbox.indeterminate.border-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--invalid',
+    component: 'utrecht-checkbox',
+    name: 'Utrecht Checkbox invalid',
+    render: () => <Checkbox className="utrecht-checkbox--invalid" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.invalid.color',
+        'utrecht.checkbox.invalid.border-width',
+        'utrecht.checkbox.invalid.background-color',
+        'utrecht.checkbox.invalid.border-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-checkbox--disabled-checked',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
-    name: 'Utrecht Checkbox Disabled Checked',
+    name: 'Utrecht Checkbox disabled Checked',
     render: () => <Checkbox defaultChecked disabled />,
+    detectTokens: {
+      anyOf: [],
+    },
   },
   {
     storyId: 'react-utrecht-checkbox--disabled',
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
-    name: 'Utrecht Checkbox Disabled',
-    render: () => <Checkbox disabled />,
+    name: 'Utrecht Checkbox disabled',
+    render: () => <Checkbox className="utrecht-checkbox--disabled" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.disabled.focus.color',
+        'utrecht.checkbox.disabled.focus.background-color',
+        'utrecht.checkbox.disabled.focus.border-color',
+        'utrecht.checkbox.disabled.focus.border-width',
+      ],
+    },
   },
+  {
+    storyId: 'react-utrecht-checkbox--disabled',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox active +hover',
+    render: () => <Checkbox className="utrecht-checkbox--active" />,
+    detectTokens: {
+      anyOf: [],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox--disabled',
+    component: 'utrecht-checkbox',
+    group: STORY_GROUPS['CHECKBOX'],
+    name: 'Utrecht Checkbox disabled + hover',
+    render: () => <Checkbox className="utrecht-checkbox--disabled" />,
+    detectTokens: {
+      anyOf: [],
+    },
+  },
+  /* disable + active in storybook heeft wel een hover */
+  /* disable + active should not have any specific styling, skipped that one */
+  /* disable + focus should not have any specific styling, skipped that one */
+
   {
     storyId: 'react-utrecht-link-button--default',
     component: 'utrecht-button',
@@ -565,30 +705,179 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Default',
     render: () => <RadioButton />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.form-control.color',
+        'utrecht.form-control.background-color',
+        'utrecht.form-control.border-color',
+        'utrecht.radio-button.color',
+        'utrecht.radio-button.background-color',
+        'utrecht.radio-button.border-color',
+        'utrecht.radio-button.border-width',
+        'utrecht.radio-button.margin-block-start',
+        'utrecht.radio-button.margin-inline-end',
+        'utrecht.radio-button.icon.size',
+        'utrecht.radio-button.size',
+      ],
+    },
   },
   {
-    storyId: 'react-utrecht-radio-button--checked',
+    storyId: 'react-utrecht-radio-button--hover',
     component: 'utrecht-radio-button',
-    name: 'Utrecht Radio Button Checked',
-    render: () => <RadioButton defaultChecked />,
+    name: 'Utrecht Radio Button Hover',
+    render: () => <RadioButton className="utrecht-radio-button--hover" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.form-control.hover.color',
+        'utrecht.form-control.hover.background-color',
+        'utrecht.form-control.hover.border-color',
+        'utrecht.radio-button.hover.color',
+        'utrecht.radio-button.hover.background-color',
+        'utrecht.radio-button.hover.border-color',
+        'utrecht.radio-button.border-width',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-radio-button--focus',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button focus',
+    render: () => <RadioButton className="utrecht-radio-button--focus" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.radio-button.focus.color',
+        'utrecht.radio-button.focus.background-color',
+        'utrecht.radio-button.focus.border-color',
+        'utrecht.radio-button.focus.border-width',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-radio-button--focus-visible',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button focus-visible',
+    render: () => <RadioButton className="utrecht-radio-button--focus-visible" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.radio-button.focus-visible.color',
+        'utrecht.radio-button.focus-visible.background-color',
+        'utrecht.radio-button.focus-visible.border-color',
+        'utrecht.radio-button.focus-visible.border-width',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-radio-button--active',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button active',
+    render: () => <RadioButton className="utrecht-radio-button--active" />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.radio-button.active.color',
+        'utrecht.radio-button.active.background-color',
+        'utrecht.radio-button.active.border-color',
+        'utrecht.radio-button.active.border-width',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-radio-button--disabled',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Disabled',
     render: () => <RadioButton disabled />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.radio-button.disabled.color',
+        'utrecht.radio-button.disabled.background-color',
+        'utrecht.radio-button.disabled.border-color',
+        'utrecht.radio-button.disabled.border-width',
+      ],
+    },
+  },
+  /* disable + focus should not have any specific styling, skipped that one */
+  {
+    storyId: 'react-utrecht-radio-button--disabled-focus-visible',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Disabled + focus-visible',
+    render: () => <RadioButton disabled className="utrecht-radio-button--focus-visible" />,
+    detectTokens: {
+      anyOf: [],
+    },
+  },
+  /* disable + hover should not have any specific styling, skipped that one */
+  /* disable + active should not have any specific styling, skipped that one */
+  {
+    storyId: 'react-utrecht-radio-button--checked',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Checked',
+    render: () => <RadioButton defaultChecked />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.radio-button.checked.color',
+        'utrecht.radio-button.checked.background-color',
+        'utrecht.radio-button.checked.border-color',
+        'utrecht.radio-button.checked.border-width',
+      ],
+    },
   },
   {
-    storyId: 'react-utrecht-radio-button--disabled-checked',
+    storyId: 'react-utrecht-radio-button--checked-focus-visible',
     component: 'utrecht-radio-button',
-    name: 'Utrecht Radio Button Disabled Checked',
+    name: 'Utrecht Radio Button Checked + focus-visible',
+    render: () => <RadioButton defaultChecked className="utrecht-radio-button--focus-visible" />,
+    detectTokens: {
+      anyOf: [],
+    },
+  },
+  {
+    storyId: 'react-utrecht-radio-button--checked-hover',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Checked + hover',
+    render: () => <RadioButton defaultChecked className="utrecht-radio-button--hover" />,
+    detectTokens: {
+      anyOf: [],
+    },
+  },
+  {
+    storyId: 'react-utrecht-radio-button--checked-active',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Checked + active',
+    render: () => <RadioButton defaultChecked className="utrecht-radio-button--active" />,
+    detectTokens: {
+      anyOf: [],
+    },
+  },
+  {
+    storyId: 'react-utrecht-radio-button--checked-disabled',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Checked + disabled',
     render: () => <RadioButton defaultChecked disabled />,
+    detectTokens: {
+      anyOf: [],
+    },
   },
   {
     storyId: 'react-utrecht-radio-button--invalid',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Invalid',
     render: () => <RadioButton invalid />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.radio-button.invalid.color',
+        'utrecht.radio-button.invalid.background-color',
+        'utrecht.radio-button.invalid.border-color',
+        'utrecht.radio-button.invalid.border-width',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-radio-button--checked-invalid',
+    component: 'utrecht-radio-button',
+    name: 'Utrecht Radio Button Checked + Invalid',
+    render: () => <RadioButton defaultChecked invalid />,
+    detectTokens: {
+      anyOf: [],
+    },
   },
   {
     storyId: 'react-utrecht-alert--default',
