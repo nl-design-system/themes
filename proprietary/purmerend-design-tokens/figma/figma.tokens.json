@@ -2697,6 +2697,136 @@
       }
     }
   },
+  "components/listbox": {
+    "utrecht": {
+      "listbox": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{utrecht.form-control.background-color}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{utrecht.form-control.border-color}"
+        },
+        "border-radius": {
+          "$type": "borderRadius",
+          "$value": "{utrecht.form-control.border-radius}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{utrecht.form-control.border-width}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.form-control.color}"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "0"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "0"
+        },
+        "padding-inline-end": {
+          "$type": "spacing",
+          "$value": "0"
+        },
+        "padding-inline-start": {
+          "$type": "spacing",
+          "$value": "0"
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.background-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.color}"
+          }
+        },
+        "option": {
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{basis.space.block.small}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{basis.space.block.small}"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "{basis.space.inline.small}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{basis.space.inline.small}"
+          },
+          "is-active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.background-color}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.background-color}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.disabled.background-color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.disabled.color}"
+            }
+          },
+          "selected": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.background-color}"
+            },
+            "disabled": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{utrecht.form-control.disabled.color}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{utrecht.form-control.disabled.background-color}"
+              }
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{utrecht.listbox.option.selected.color}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{utrecht.listbox.option.selected.background-color}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -2751,7 +2881,8 @@
       "components/textarea",
       "components/textbox",
       "components/toolbar-button",
-      "components/unordered-list"
+      "components/unordered-list",
+      "components/listbox"
     ]
   }
 }
