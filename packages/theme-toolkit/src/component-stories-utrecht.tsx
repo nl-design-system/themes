@@ -615,17 +615,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
   },
   {
-    storyId: 'react-utrecht-button--disabled',
-    component: 'utrecht-button',
-    group: STORY_GROUPS['BUTTON_DEFAULT'],
-    name: 'Utrecht Button Disabled',
-    state: true,
-    render: () => <Button disabled>Read more...</Button>,
-    detectTokens: {
-      allOf: ['utrecht.button.disabled.background-color', 'utrecht.button.disabled.color'],
-    },
-  },
-  {
     storyId: 'react-utrecht-button-link--default',
     component: 'utrecht-button',
     group: STORY_GROUPS['LINK_BUTTON_DEFAULT'],
