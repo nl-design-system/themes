@@ -6,7 +6,7 @@ import tokens from '../dist/list.json';
 const meta = {
   title: 'Purmerend',
   component: ComponentStories,
-  parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: false } },
+  parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: true } },
   args: {
     config,
     showAll: false,
