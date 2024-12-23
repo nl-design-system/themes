@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.3.4
+
+### Patch Changes
+
+- fe6ae00: Use `rem` font sizes in typography tokens for line-height and font-size, to support user preferences for increased line-heights and font-sizes.
+
 ## 3.3.3
 
 ### Patch Changes
