@@ -1,5 +1,12 @@
 # @nl-design-system-community/purmerend-design-tokens
 
+## 1.2.0
+
+### Minor Changes
+
+- ff46c89: Add Listbox tokens to Purmerend theme.
+- 9ac3795: Add new color scales for light mode and dark mode.
+
 ## 1.1.3
 
 ### Patch Changes
