@@ -83,6 +83,9 @@ const createConfig = ({
   };
 
   return {
+    log: {
+      verbosity: 'verbose',
+    },
     hooks: {
       formats: {
         'json/list': function ({ dictionary }) {

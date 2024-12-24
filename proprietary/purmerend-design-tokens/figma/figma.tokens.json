@@ -1472,37 +1472,37 @@
         "text": {
           "bg-1": { "$value": "{purmerend.color.white-1}" },
           "bg-2": { "$value": "{purmerend.color.white-1}" },
-          "disabled-1": { "$value": "{purmerend.color.grey-9}" },
-          "disabled-2": { "$value": "{purmerend.color.grey-9}" },
-          "border-1": { "$value": "{purmerend.color.blue-41}" },
-          "border-2": { "$value": "{purmerend.color.blue-41}" },
+          "interactive-1": { "$value": "{purmerend.color.blue-41}" },
+          "interactive-2": { "$value": "{purmerend.color.blue-41}" },
+          "interactive-3": { "$value": "{purmerend.color.blue-41}" },
+          "border-1": { "$value": "{purmerend.color.blue-44}" },
+          "border-2": { "$value": "{purmerend.color.blue-44}" },
           "border-3": { "$value": "{purmerend.color.blue-44}" },
-          "fill-1": { "$value": "{purmerend.color.blue-41}" },
-          "fill-2": { "$value": "{purmerend.color.blue-41}" },
+          "fill-1": { "$value": "{purmerend.color.blue-44}" },
+          "fill-2": { "$value": "{purmerend.color.blue-44}" },
           "text-1": { "$value": "{purmerend.color.blue-44}" },
-          "text-2": { "$value": "{purmerend.color.blue-42}" },
-          "text-3": {"$value": "{purmerend.color.blue-41}"}
-        },
-        "primary-inverse": {
-          "bg-1": { "$value": "{purmerend.color.cyan-6}" },
-          "bg-2": { "$value": "{purmerend.color.cyan-6}" },
-          "disabled-1": { "$value": "{purmerend.color.grey-49}" },
-          "disabled-2": { "$value": "{purmerend.color.grey-49}" },
-          "disabled-3": { "$value": "{purmerend.color.grey-49}" },
-          "border-1": { "$value": "{purmerend.color.cyan-6}" },
-          "border-2": { "$value": "{purmerend.color.cyan-6}" },
-          "border-3": { "$value": "{purmerend.color.cyan-6}" },
-          "fill-1": { "$value": "{purmerend.color.white-1}" },
-          "fill-2": { "$value": "{purmerend.color.white-1}" },
-          "text-1": { "$value": "{purmerend.color.white-1}" },
           "text-2": { "$value": "{purmerend.color.blue-44}" }
+        },
+        "disabled": {
+          "bg-1": { "$value": "{purmerend.color.white-1}" },
+          "bg-2": { "$value": "{purmerend.color.white-1}" },
+          "interactive-1": { "$value": "{purmerend.color.grey-13}" },
+          "interactive-2": { "$value": "{purmerend.color.grey-13}" },
+          "interactive-3": { "$value": "{purmerend.color.grey-13}" },
+          "border-1": { "$value": "{purmerend.color.grey-26}" },
+          "border-2": { "$value": "{purmerend.color.grey-26}" },
+          "border-3": { "$value": "{purmerend.color.grey-26}" },
+          "fill-1": { "$value": "{purmerend.color.grey-26}" },
+          "fill-2": { "$value": "{purmerend.color.grey-26}" },
+          "text-1": { "$value": "{purmerend.color.grey-26}" },
+          "text-2": { "$value": "{purmerend.color.grey-46}" }
         },
         "primary": {
           "bg-1": { "$value": "{purmerend.color.white-1}" },
           "bg-2": { "$value": "{purmerend.color.white-1}" },
-          "disabled-1": { "$value": "{purmerend.color.grey-9}" },
-          "disabled-2": { "$value": "{purmerend.color.grey-9}" },
-          "disabled-3": { "$value": "{purmerend.color.grey-9}" },
+          "interactive-1": { "$value": "{purmerend.color.white-1}" },
+          "interactive-2": { "$value": "{purmerend.color.white-1}" },
+          "interactive-3": { "$value": "{purmerend.color.white-1}" },
           "border-1": { "$value": "{purmerend.color.cyan-6}" },
           "border-2": { "$value": "{purmerend.color.cyan-6}" },
           "border-3": { "$value": "{purmerend.color.cyan-6}" },
@@ -1511,12 +1511,125 @@
           "text-1": { "$value": "{purmerend.color.cyan-6}" },
           "text-2": { "$value": "{purmerend.color.cyan-6}" }
         },
-        "secondary-inverse": {
+        "secondary": {
+          "bg-1": { "$value": "{purmerend.color.white-1}" },
+          "bg-2": { "$value": "{purmerend.color.blue-41}" },
+          "interactive-1": { "$value": "{purmerend.color.blue-41}" },
+          "interactive-2": { "$value": "{purmerend.color.blue-41}" },
+          "interactive-3": { "$value": "{purmerend.color.blue-41}" },
+          "border-1": { "$value": "{purmerend.color.blue-44}" },
+          "border-2": { "$value": "{purmerend.color.blue-44}" },
+          "border-3": { "$value": "{purmerend.color.blue-44}" },
+          "fill-1": { "$value": "{purmerend.color.blue-44}" },
+          "fill-2": { "$value": "{purmerend.color.blue-44}" },
+          "text-1": { "$value": "{purmerend.color.blue-44}" },
+          "text-2": { "$value": "{purmerend.color.blue-44}" }
+        },
+        "warning": {
+          "bg-1": { "$value": "{purmerend.color.orange-1}" },
+          "bg-2": { "$value": "{purmerend.color.orange-1}" },
+          "interactive-1": { "$value": "{purmerend.color.orange-1}" },
+          "interactive-2": { "$value": "{purmerend.color.orange-1}" },
+          "interactive-3": { "$value": "{purmerend.color.orange-1}" },
+          "border-1": { "$value": "{purmerend.color.orange-10}" },
+          "border-2": { "$value": "{purmerend.color.orange-10}" },
+          "border-3": { "$value": "{purmerend.color.orange-10}" },
+          "fill-1": { "$value": "{purmerend.color.orange-10}" },
+          "fill-2": { "$value": "{purmerend.color.orange-10}" },
+          "text-1": { "$value": "{purmerend.color.blue-44}" },
+          "text-2": { "$value": "{purmerend.color.blue-44}" }
+         
+        },
+        "error": {
+          "bg-1": { "$value": "{purmerend.color.red-5}"  },
+          "bg-2": { "$value": "{purmerend.color.red-5}"  },
+          "interactive-1": { "$value": "{purmerend.color.red-5}"  },
+          "interactive-2": { "$value": "{purmerend.color.red-5}"  },
+          "interactive-3": { "$value": "{purmerend.color.red-5}"  },
+          "border-1": { "$value": "{purmerend.color.red-17}" },
+          "border-2": { "$value": "{purmerend.color.red-17}" },
+          "border-3": { "$value": "{purmerend.color.red-17}" },
+          "fill-1": { "$value": "{purmerend.color.red-17}" },
+          "fill-2": { "$value": "{purmerend.color.red-17}" },
+          "text-1": { "$value": "{purmerend.color.blue-44}" },
+          "text-2": { "$value": "{purmerend.color.blue-44}" }
+        },
+        "info": {
+          "bg-1": { "$value": "{purmerend.color.blue-11}" },
+          "bg-2": { "$value": "{purmerend.color.blue-11}" },
+          "interactive-1": { "$value": "{purmerend.color.blue-11}" },
+          "interactive-2": { "$value": "{purmerend.color.blue-11}" },
+          "interactive-3": { "$value": "{purmerend.color.blue-11}" },
+          "border-1": { "$value": "{purmerend.color.blue-17}" },
+          "border-2": { "$value": "{purmerend.color.blue-17}" },
+          "border-3": { "$value": "{purmerend.color.blue-17}" },
+          "fill-1": { "$value": "{purmerend.color.blue-17}" },
+          "fill-2": { "$value": "{purmerend.color.blue-17}" },
+          "text-1": { "$value": "{purmerend.color.blue-44}" },
+          "text-2": { "$value": "{purmerend.color.blue-44}" }
+        },
+        "success": {
+          "bg-1": { "$value": "{purmerend.color.green-3}" },
+          "bg-2": { "$value": "{purmerend.color.green-3}" },
+          "interactive-1": { "$value": "{purmerend.color.green-3}" },
+          "interactive-2": { "$value": "{purmerend.color.green-3}" },
+          "interactive-3": { "$value": "{purmerend.color.green-3}" },
+          "border-1": { "$value": "{purmerend.color.green-13}" },
+          "border-2": { "$value": "{purmerend.color.green-13}" },
+          "border-3": { "$value": "{purmerend.color.green-13}" },
+          "fill-1": { "$value": "{purmerend.color.green-13}" },
+          "fill-2": { "$value": "{purmerend.color.green-13}" },
+          "text-1": { "$value": "{purmerend.color.blue-44}" },
+          "text-2": { "$value": "{purmerend.color.blue-44}" }
+        },
+        "highlight": {
+          "bg-1": { "$value": "{purmerend.color.yellow-7}" },
+          "bg-2": { "$value": "{purmerend.color.yellow-7}" },
+          "interactive-1": { "$value": "{purmerend.color.yellow-7}" },
+          "interactive-2": { "$value": "{purmerend.color.yellow-7}" },
+          "interactive-3": { "$value": "{purmerend.color.yellow-7}" },
+          "border-1": { "$value": "{purmerend.color.black-2}" },
+          "border-2": {"$value": "{purmerend.color.black-2}" },
+          "border-3": { "$value": "{purmerend.color.black-2}" },
+          "fill-1": { "$value": "{purmerend.color.black-2}" },
+          "fill-2": { "$value": "{purmerend.color.black-2}" },
+          "text-1": { "$value": "{purmerend.color.black-2}" },
+          "text-2": { "$value": "{purmerend.color.black-2}" }
+        },
+        "selected": {
+          "bg-1": { "$value": "{purmerend.color.blue-17}" },
+          "bg-2": { "$value": "{purmerend.color.blue-17}" },
+          "interactive-1": { "$value": "{purmerend.color.blue-17}" },
+          "interactive-2": { "$value": "{purmerend.color.blue-17}" },
+          "interactive-3": { "$value": "{purmerend.color.blue-17}" },
+          "border-1": { "$value": "{purmerend.color.blue-44}" },
+          "border-2": { "$value": "{purmerend.color.blue-44}" },
+          "border-3": { "$value": "{purmerend.color.blue-44}" },
+          "fill-1": { "$value": "{purmerend.color.blue-44}" },
+          "fill-2": { "$value": "{purmerend.color.blue-44}" },
+          "text-1": { "$value": "{purmerend.color.blue-44}" },
+          "text-2": { "$value": "{purmerend.color.blue-44}" }
+        },
+        "mark": {
+          "bg-1": { "$value": "{purmerend.color.orange-8}" },
+          "bg-2": { "$value": "{purmerend.color.orange-8}" },
+          "interactive-1": { "$value": "{purmerend.color.orange-8}" },
+          "interactive-2": { "$value": "{purmerend.color.orange-8}" },
+          "interactive-3": { "$value": "{purmerend.color.orange-8}" },
+          "border-1": { "$value": "{purmerend.color.black-2}" },
+          "border-2": {"$value": "{purmerend.color.black-2}" },
+          "border-3": { "$value": "{purmerend.color.black-2}" },
+          "fill-1": { "$value": "{purmerend.color.black-2}" },
+          "fill-2": { "$value": "{purmerend.color.black-2}" },
+          "text-1": { "$value": "{purmerend.color.black-2}" },
+          "text-2": { "$value": "{purmerend.color.black-2}" }
+        },
+        "text-inverse": {
           "bg-1": { "$value": "{purmerend.color.blue-44}" },
-          "bg-2": { "$value": "{purmerend.color.blue-47}" },
-          "disabled-1": { "$value": "{purmerend.color.grey-49}" },
-          "disabled-2": { "$value": "{purmerend.color.grey-49}" },
-          "disabled-3": { "$value": "{purmerend.color.grey-49}" },
+          "bg-2": { "$value": "{purmerend.color.blue-44}" },
+          "interactive-1": { "$value": "{purmerend.color.blue-44}" },
+          "interactive-2": { "$value": "{purmerend.color.blue-44}" },
+          "interactive-3": { "$value": "{purmerend.color.blue-44}" },
           "border-1": { "$value": "{purmerend.color.blue-44}" },
           "border-2": { "$value": "{purmerend.color.blue-44}" },
           "border-3": { "$value": "{purmerend.color.blue-44}" },
@@ -1525,35 +1638,104 @@
           "text-1": { "$value": "{purmerend.color.white-1}" },
           "text-2": { "$value": "{purmerend.color.white-1}" }
         },
-        "spotlight-section": {
-          "bg-1": { "$value": "{purmerend.color.blue-41}" },
-          "bg-2": { "$value": "{purmerend.color.red-19}" },
-          "bg-3": { "$value": "{purmerend.color.green-7}" },
-          "bg-4": { "$value": "{purmerend.color.orange-14}" },
-          "disabled-5": { "$value": "{purmerend.color.grey-9}" },
-          "disabled-6": { "$value": "{purmerend.color.grey-9}" },
-          "border-7": { "$value": "{purmerend.color.blue-41}" },
-          "border-8": { "$value": "{purmerend.color.blue-41}" },
-          "fill-9": { "$value": "{purmerend.color.white-1}" },
-          "fill-10": { "$value": "{purmerend.color.white-1}" },
-          "text-11": { "$value": "{purmerend.color.white-1}" },
-          "text-12": { "$value": "{purmerend.color.white-1}" }
+        "disabled-inverse": {
+          "bg-1": { "$value": "{purmerend.color.grey-26}" },
+          "bg-2": { "$value": "{purmerend.color.grey-26}" },
+          "interactive-1": { "$value": "{purmerend.color.grey-26}" },
+          "interactive-2": { "$value": "{purmerend.color.grey-26}" },
+          "interactive-3": { "$value": "{purmerend.color.grey-26}" },
+          "border-1": { "$value": "{purmerend.color.grey-26}" },
+          "border-2": { "$value": "{purmerend.color.grey-26}" },
+          "border-3": { "$value": "{purmerend.color.grey-26}" },
+          "fill-1": { "$value": "{purmerend.color.grey-13}" },
+          "fill-2": { "$value": "{purmerend.color.grey-13}" },
+          "text-1": { "$value": "{purmerend.color.grey-13}" },
+          "text-2": { "$value": "{purmerend.color.grey-13}" }
         },
-        "alert-error": {
-          "bg-1": { "$value": "{purmerend.color.blue-41}" },
-          "bg-2": { "$value": "{purmerend.color.red-19}" },
-          "bg-3": { "$value": "{purmerend.color.green-7}" },
-          "bg-4": { "$value": "{purmerend.color.orange-14}" },
-          "disabled-5": { "$value": "{purmerend.color.grey-9}" },
-          "disabled-6": { "$value": "{purmerend.color.grey-9}" },
-          "border-7": { "$value": "{purmerend.color.blue-41}" },
-          "border-8": { "$value": "{purmerend.color.blue-41}" },
-          "fill-9": { "$value": "{purmerend.color.white-1}" },
-          "fill-10": { "$value": "{purmerend.color.white-1}" },
-          "text-11": { "$value": "{purmerend.color.white-1}" },
-          "text-12": { "$value": "{purmerend.color.white-1}" }
+        "primary-inverse": {
+          "bg-1": { "$value": "{purmerend.color.cyan-6}" },
+          "bg-2": { "$value": "{purmerend.color.cyan-6}" },
+          "interactive-1": { "$value": "{purmerend.color.cyan-6}" },
+          "interactive-2": { "$value": "{purmerend.color.cyan-6}" },
+          "interactive-3": { "$value": "{purmerend.color.cyan-6}" },
+          "border-1": { "$value": "{purmerend.color.cyan-6}" },
+          "border-2": { "$value": "{purmerend.color.cyan-6}" },
+          "border-3": { "$value": "{purmerend.color.cyan-6}" },
+          "fill-1": { "$value": "{purmerend.color.white-1}" },
+          "fill-2": { "$value": "{purmerend.color.white-1}" },
+          "text-1": { "$value": "{purmerend.color.white-1}" },
+          "text-2": { "$value": "{purmerend.color.white-1}" }
+        },
+        "secondary-inverse": {
+          "bg-1": { "$value": "{purmerend.color.blue-44}" },
+          "bg-2": { "$value": "{purmerend.color.blue-44}" },
+          "interactive-1": { "$value": "{purmerend.color.blue-44}" },
+          "interactive-2": { "$value": "{purmerend.color.blue-44}" },
+          "interactive-3": { "$value": "{purmerend.color.blue-44}" },
+          "border-1": { "$value": "{purmerend.color.blue-44}" },
+          "border-2": { "$value": "{purmerend.color.blue-44}" },
+          "border-3": { "$value": "{purmerend.color.blue-44}" },
+          "fill-1": { "$value": "{purmerend.color.white-1}" },
+          "fill-2": { "$value": "{purmerend.color.white-1}" },
+          "text-1": { "$value": "{purmerend.color.white-1}" },
+          "text-2": { "$value": "{purmerend.color.white-1}" }
+        },
+        "warning-inverse": {
+          "bg-1": { "$value": "{purmerend.color.orange-10}" },
+          "bg-2": { "$value": "{purmerend.color.orange-10}" },
+          "interactive-1": { "$value": "{purmerend.color.orange-10}" },
+          "interactive-2": { "$value": "{purmerend.color.orange-10}" },
+          "interactive-3": { "$value": "{purmerend.color.orange-10}" },
+          "border-1": { "$value": "{purmerend.color.orange-10}" },
+          "border-2": { "$value": "{purmerend.color.orange-10}" },
+          "border-3": { "$value": "{purmerend.color.orange-10}" },
+          "fill-1": { "$value": "{purmerend.color.orange-1}" },
+          "fill-2": { "$value": "{purmerend.color.orange-1}" },
+          "text-1": { "$value": "{purmerend.color.orange-1}" },
+          "text-2": { "$value": "{purmerend.color.orange-1}" }
+        },
+        "error-inverse": {
+          "bg-1": { "$value": "{purmerend.color.red-17}" },
+          "bg-2": { "$value": "{purmerend.color.red-17}" },
+          "interactive-1": { "$value": "{purmerend.color.red-17}" },
+          "interactive-2": { "$value": "{purmerend.color.red-17}" },
+          "interactive-3": { "$value": "{purmerend.color.red-17}" },
+          "border-1": { "$value": "{purmerend.color.red-17}" },
+          "border-2": { "$value": "{purmerend.color.red-17}" },
+          "border-3": { "$value": "{purmerend.color.red-17}" },
+          "fill-1": { "$value": "{purmerend.color.red-5}" },
+          "fill-2": { "$value": "{purmerend.color.red-5}" },
+          "text-1": { "$value": "{purmerend.color.red-5}" },
+          "text-2": { "$value": "{purmerend.color.red-5}" }
+        },
+        "info-inverse": {
+          "bg-1": { "$value": "{purmerend.color.blue-17}" },
+          "bg-2": { "$value": "{purmerend.color.blue-17}" },
+          "interactive-1": { "$value": "{purmerend.color.blue-17}" },
+          "interactive-2": { "$value": "{purmerend.color.blue-17}" },
+          "interactive-3": { "$value": "{purmerend.color.blue-17}" },
+          "border-1": { "$value": "{purmerend.color.blue-17}" },
+          "border-2": { "$value": "{purmerend.color.blue-17}" },
+          "border-3": { "$value": "{purmerend.color.blue-17}" },
+          "fill-1": { "$value": "{purmerend.color.blue-11}" },
+          "fill-2": { "$value": "{purmerend.color.blue-11}" },
+          "text-1": { "$value": "{purmerend.color.blue-11}" },
+          "text-2": { "$value": "{purmerend.color.blue-11}" }
+        },
+        "success-inverse": {
+          "bg-1": { "$value": "{purmerend.color.green-13}" },
+          "bg-2": { "$value": "{purmerend.color.green-13}" },
+          "interactive-1": { "$value": "{purmerend.color.green-13}" },
+          "interactive-2": { "$value": "{purmerend.color.green-13}" },
+          "interactive-3": { "$value": "{purmerend.color.green-13}" },
+          "border-1": { "$value": "{purmerend.color.green-13}" },
+          "border-2": { "$value": "{purmerend.color.green-13}" },
+          "border-3": { "$value": "{purmerend.color.green-13}" },
+          "fill-1": { "$value": "{purmerend.color.green-3}" },
+          "fill-2": { "$value": "{purmerend.color.green-3}" },
+          "text-1": { "$value": "{purmerend.color.green-3}" },
+          "text-2": { "$value": "{purmerend.color.green-3}" }
         }
-
       },
       "root": {
         "background-color": {
@@ -1585,10 +1767,10 @@
       },
       "focus": {
         "background-color": {
-          "$value": "{purmerend.color.yellow-7}"
+          "$value": "{basis.color.highlight.bg-1}"
         },
         "color": {
-          "$value": "{purmerend.color.black-2}"
+          "$value": "{basis.color.highlight.text-1}"
         }
       },
       "container": {
@@ -1621,55 +1803,55 @@
         "active": {
           "border-width": {
             "$type": "borderWidth",
-            "$value": "{basis.border-width.md}"
+            "$value": "{utrecht.form-control.border-width}"
           },
           "accent-color": {
             "$type": "color",
-            "$value": "{basis.interaction.active.color}"
+            "$value": "{utrecht.form-control.accent-color}"
           },
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.100}"
+            "$value": "{utrecht.form-control.background-color}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.500}"
+            "$value": "{utrecht.form-control.border-color}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.gray.950}"
+            "$value": "{utrecht.form-control.color}"
           }
         },
         "hover": {
           "border-width": {
             "$type": "borderWidth",
-            "$value": "{basis.border-width.md}"
+            "$value": "{utrecht.form-control.border-width}"
           },
           "accent-color": {
             "$type": "color",
-            "$value": "{basis.interaction.hover.color}"
+            "$value": "{utrecht.form-control.accent-color}"
           },
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.50}"
+            "$value": "{utrecht.form-control.background-color}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.500}"
+            "$value": "{utrecht.form-control.border-color}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.gray.950}"
+            "$value": "{utrecht.form-control.color}"
           }
         },
         "accent-color": {
           "$type": "color",
-          "$value": "{basis.color.black}"
+          "$value": "{basis.color.text.text-1}"
         },
         "disabled": {
           "accent-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.500}"
+            "$value": "{basis.color.disabled.fill-1}"
           }
         }
       },
@@ -1970,9 +2152,13 @@
           "$type": "fontWeights",
           "$value": "{basis.typography.font-weight.normal}"
         },
+        "accent-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-1}"
+        },
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.text.text-3}"
+          "$value": "{basis.color.text.interactive-1}"
         },
         "border-radius": {
           "$value": "{basis.border-radius.md}"
@@ -1989,24 +2175,42 @@
           "$type": "color",
           "$value": "{basis.color.text.text-1}"
         },
-        "disabled": {
+        "active": {
+          "accent-color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.accent-color}"
+          },
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.50}"
+            "$value": "{utrecht.form-control.background-color}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.500}"
+            "$value": "{utrecht.form-control.border-color}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.gray.500}"
+            "$value": "{utrecht.form-control.color}"
+          }
+        },
+        "disabled": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.bg-1}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.fill-1}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.text-1}"
           }
         },
         "focus": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.text.text-3}"
+            "$value": "{utrecht.form-control.background-color}"
           },
           "border-color": {
             "$type": "color",
@@ -2028,11 +2232,11 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.feedback.negative}"
+            "$value": "{basis.color.error.fill-1}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.feedback.negative}"
+            "$value": "{basis.color.error.fill-1}"
           },
           "border-width": {
             "$type": "borderWidth",
@@ -2042,7 +2246,7 @@
         "read-only": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.gray.50}"
+            "$value": "{basis.color.disabled.bg-1}"
           },
           "border-color": {
             "$type": "color",
@@ -2050,13 +2254,16 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.black}"
+            "$value": "{basis.color.disabled.text-1}"
           }
         },
         "placeholder": {
           "color": {
             "$type": "color",
-            "$value": "{purmerend.color.grey-9}"
+            "$value": "{basis.color.disabled.text-2}"
+          },
+          "font-style": {
+            "$value": "italic"
           }
         },
         "font-size": {
@@ -2109,7 +2316,7 @@
         "focus": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.primary-inverse.text-2}"
+            "$value": "{basis.color.highlight.text-1}"
           }
         },
         "focus-visible": {
@@ -2586,8 +2793,27 @@
         "border-width": {
           "$value": "{basis.border-width.sm}"
         },
-        "background-color": {
-          "value": "{basis.color.primary-inverse.bg-2}"
+        "checked": {
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.form-control.color}"
+          },
+          "active": {
+            "color": {
+              "$value": "{utrecht.checkbox.checked.color}"
+            }
+          },
+          "hover": {
+            "color": {
+              "$value": "{utrecht.checkbox.checked.color}"
+            }
+          },
+          "indeterminate": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.form-control.color}"
+            }
+          }
         }
       }
     }
@@ -2597,6 +2823,33 @@
       "radio-button": {
         "border-width": {
           "$value": "{basis.border-width.sm}"
+        },
+        "checked": {
+          "background-color": {
+            "$value": "{basis.color.primary.text-1}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.bg-1}"
+          },
+          "active": {
+            "background-color": {
+              "$value": "{basis.color.primary.text-1}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.primary.bg-1}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$value": "{basis.color.primary.text-1}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.primary.bg-1}"
+            }
+          }
         }
       }
     }
@@ -2606,15 +2859,6 @@
       "textarea": {
         "max-inline-size": {
           "$value": "100%"
-        },
-        "background-color": {
-          "$value": "{basis.color.text.text-3}"
-        },
-        "invalid": {
-          "background-color": {
-            "$type":  "color",
-            "$value": "{basis.color.text.text-3}"
-          }
         }
       }
     }
@@ -2628,7 +2872,7 @@
         },
         "background-color": {
           "$type":  "color",
-          "$value": "{basis.color.spotlight-section.bg-1}"
+          "$value": "{basis.color.text.interactive-1}"
         },
         "color": {
           "$type":  "color",
@@ -2637,19 +2881,39 @@
         "error": {
           "background-color": {
             "$type":  "color",
-            "$value": "{basis.color.alert-error.bg-2}"
+            "$value": "{basis.color.error.bg-1}"
           },
           "color": {
             "$type":  "color",
-            "$value": "{basis.color.alert-error.text-11}"
+            "$value": "{basis.color.error.text-1}"
+          }
+        },
+        "ok": {
+          "background-color": {
+            "$type":  "color",
+            "$value": "{basis.color.success.bg-1}"
+          },
+          "color": {
+            "$type":  "color",
+            "$value": "{basis.color.success.text-1}"
+          }
+        },
+        "warning": {
+          "background-color": {
+            "$type":  "color",
+            "$value": "{basis.color.warning.bg-1}"
+          },
+          "color": {
+            "$type":  "color",
+            "$value": "{basis.color.warning.text-1}"
           }
         },
         "info": {
           "background-color": {
-            "$value": "{purmerend.color.blue-24}"
+            "$value": "{basis.color.info.bg-1}"
           },
           "color": {
-            "$value": "{basis.color.text.text-1}"
+            "$value": "{basis.color.info.text-1}"
           }
         }
       }
@@ -2827,6 +3091,80 @@
       }
     }
   },
+  "components/spotlight-section": {
+    "utrecht": {
+      "spotlight-section": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.interactive-1}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "transparent"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-1}"
+        },
+       "info": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.info.bg-1}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.info.text-1}"
+          }
+        },
+        "error": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.error.bg-1}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.error.text-1}"
+          }
+        },
+        "ok": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.success.bg-1}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.success.text-1}"
+          }
+        },
+        "warning": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.warning.bg-1}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.warning.text-1}"
+          }
+        }
+      }
+    },
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -2882,7 +3220,8 @@
       "components/textbox",
       "components/toolbar-button",
       "components/unordered-list",
-      "components/listbox"
+      "components/listbox",
+      "components/spotlight-section"
     ]
   }
 }
