@@ -1,5 +1,11 @@
 # @nl-design-system-community/purmerend-design-tokens
 
+## 1.2.1
+
+### Patch Changes
+
+- 2ff842e: Fix contrast issues for Purmerend theme.
+
 ## 1.2.0
 
 ### Minor Changes
