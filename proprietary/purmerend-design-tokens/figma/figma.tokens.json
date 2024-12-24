@@ -1541,11 +1541,11 @@
          
         },
         "error": {
-          "bg-1": { "$value": "{purmerend.color.red-5}"  },
-          "bg-2": { "$value": "{purmerend.color.red-5}"  },
-          "interactive-1": { "$value": "{purmerend.color.red-5}"  },
-          "interactive-2": { "$value": "{purmerend.color.red-5}"  },
-          "interactive-3": { "$value": "{purmerend.color.red-5}"  },
+          "bg-1": { "$value": "{purmerend.color.red-8}"  },
+          "bg-2": { "$value": "{purmerend.color.red-8}"  },
+          "interactive-1": { "$value": "{purmerend.color.red-8}"  },
+          "interactive-2": { "$value": "{purmerend.color.red-8}"  },
+          "interactive-3": { "$value": "{purmerend.color.red-8}"  },
           "border-1": { "$value": "{purmerend.color.red-17}" },
           "border-2": { "$value": "{purmerend.color.red-17}" },
           "border-3": { "$value": "{purmerend.color.red-17}" },
@@ -1703,10 +1703,10 @@
           "border-1": { "$value": "{purmerend.color.red-17}" },
           "border-2": { "$value": "{purmerend.color.red-17}" },
           "border-3": { "$value": "{purmerend.color.red-17}" },
-          "fill-1": { "$value": "{purmerend.color.red-5}" },
-          "fill-2": { "$value": "{purmerend.color.red-5}" },
-          "text-1": { "$value": "{purmerend.color.red-5}" },
-          "text-2": { "$value": "{purmerend.color.red-5}" }
+          "fill-1": { "$value": "{purmerend.color.red-8}" },
+          "fill-2": { "$value": "{purmerend.color.red-8}" },
+          "text-1": { "$value": "{purmerend.color.red-8}" },
+          "text-2": { "$value": "{purmerend.color.red-8}" }
         },
         "info-inverse": {
           "bg-1": { "$value": "{purmerend.color.blue-17}" },
@@ -2228,15 +2228,15 @@
         "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.white}"
+            "$value": "{utrecht.form-control.background-color}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.error.fill-1}"
+            "$value": "{basis.color.error.border-1}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.error.fill-1}"
+            "$value": "{utrecht.form-control.color}"
           },
           "border-width": {
             "$type": "borderWidth",
@@ -2254,7 +2254,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.disabled.text-1}"
+            "$value": "{basis.color.disabled.text-2}"
           }
         },
         "placeholder": {
@@ -2311,15 +2311,23 @@
         },
         "text-decoration-color": {
           "$type": "color",
-          "$value": ""
+          "$value": "{utrecht.link.color}"
         },
         "focus": {
           "color": {
             "$type": "color",
             "$value": "{basis.color.highlight.text-1}"
+          },
+          "text-decoration-color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight.text-1}"
           }
         },
         "focus-visible": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight.text-1}"
+          },
           "text-decoration": {
             "$type": "textDecoration",
             "$value": "{utrecht.link.text-decoration}"
@@ -2328,13 +2336,13 @@
         "active": {
           "color": {
             "$type": "color",
-            "$value": "{purmerend.color.cyan-6}"
+            "$value": "{utrecht.link.color}"
           }
         },
         "hover": {
           "color": {
             "$type": "color",
-            "$value": "{purmerend.color.cyan-6}"
+            "$value": "{utrecht.link.color}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -2771,6 +2779,18 @@
       }
     }
   },
+  "components/form-field": {
+    "utrecht": {
+      "form-field": {
+        "invalid": {
+          "border-inline-start-color": {
+            "$type": "color",
+            "$value": "{basis.color.error.border-1}"
+          },
+        }
+      }
+    }
+  },
   "components/form-field-description": {
     "utrecht": {
       "form-field-description": {
@@ -2782,9 +2802,11 @@
   },
   "components/form-field-error-message": {
     "utrecht": {
+      "form-field-error-message": {
         "color": {
-          "$value": "{purmerend.color.red-17}"
+          "$value": "{basis.color.error.text-1}"
         }
+      }
      }
   },
   "components/checkbox": {
