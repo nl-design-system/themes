@@ -58,6 +58,7 @@ import {
   CodeBlock,
   Code,
   ColorSample,
+  FormFieldErrorMessage,
 } from '@utrecht/component-library-react/dist/css-module';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { clsx } from 'clsx';
@@ -2086,17 +2087,27 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => <FormFieldDescription invalid>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
   },
   {
-    storyId: 'react-utrecht-form-field-description--valid',
-    group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
-    name: 'Utrecht Form field description: Valid',
-    state: true,
-    render: () => <FormFieldDescription valid>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
-  },
-  {
-    storyId: 'react-utrecht-form-field-description--warning',
-    group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
-    name: 'Utrecht Form field description: Warning',
-    render: () => <FormFieldDescription warning>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
+    storyId: 'react-utrecht-form-field-error-message--default',
+    group: STORY_GROUPS['FORM_FIELD_ERROR_MESSAGE'],
+    name: 'Utrecht Form field Error Message',
+    render: () => <FormFieldErrorMessage>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldErrorMessage>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.form-field-error-message.background-color',
+        'utrecht.form-field-error-message.color',
+        'utrecht.form-field-error-message.font-family',
+        'utrecht.form-field-error-message.font-size',
+        'utrecht.form-field-error-message.font-style',
+        'utrecht.form-field-error-message.font-weight',
+        'utrecht.form-field-error-message.line-height',
+        'utrecht.form-field-error-message.margin-block-start',
+        'utrecht.form-field-error-message.margin-block-end',
+        'utrecht.form-field-error-message.padding-block-start',
+        'utrecht.form-field-error-message.padding-block-end',
+        'utrecht.form-field-error-message.padding-inline-start',
+        'utrecht.form-field-error-message.padding-inline-end',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-page-footer',
