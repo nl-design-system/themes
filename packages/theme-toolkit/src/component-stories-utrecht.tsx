@@ -87,6 +87,7 @@ export interface ListboxStoryProps {
   readOnly?: boolean;
   required?: boolean;
   options: ListboxOptionStoryProps[];
+  label: string;
 }
 
 export const ListboxStory = ({
@@ -99,6 +100,7 @@ export const ListboxStory = ({
   options,
   readOnly,
   required,
+  label,
 }: ListboxStoryProps) => (
   <Listbox
     className={clsx({
@@ -111,6 +113,7 @@ export const ListboxStory = ({
     multiple={multiple}
     required={required}
     readOnly={readOnly}
+    aria-label={label}
   >
     {options.map(({ active, disabled, focus, focusVisible, hover, label, selected }, index) => (
       <ListboxOption
@@ -748,7 +751,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading-1',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 1',
-    render: () => <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>,
+    render: () => <Heading1 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>,
     detectTokens: {
       allOf: ['utrecht.heading-1.font-size'],
     },
@@ -758,7 +761,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading-2',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 2',
-    render: () => <Heading2>The Quick Brown Fox Jumps Over The Lazy Dog</Heading2>,
+    render: () => <Heading2 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading2>,
     detectTokens: {
       allOf: ['utrecht.heading-2.font-size'],
     },
@@ -768,7 +771,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading-3',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 3',
-    render: () => <Heading3>The Quick Brown Fox Jumps Over The Lazy Dog</Heading3>,
+    render: () => <Heading3 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading3>,
     detectTokens: {
       allOf: ['utrecht.heading-3.font-size'],
     },
@@ -778,7 +781,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading-4',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 4',
-    render: () => <Heading4>The Quick Brown Fox Jumps Over The Lazy Dog</Heading4>,
+    render: () => <Heading4 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading4>,
     detectTokens: {
       allOf: ['utrecht.heading-4.font-size'],
     },
@@ -788,7 +791,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading-5',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 5',
-    render: () => <Heading5>The Quick Brown Fox Jumps Over The Lazy Dog</Heading5>,
+    render: () => <Heading5 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading5>,
     detectTokens: {
       allOf: ['utrecht.heading-5.font-size'],
     },
@@ -798,7 +801,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading-6',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading 6',
-    render: () => <Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
+    render: () => <Heading6 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
     detectTokens: {
       allOf: ['utrecht.heading-6.font-size'],
     },
@@ -808,7 +811,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 1',
-    render: () => <Heading level={1}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    render: () => (
+      <Heading role="presentation" level={1}>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Heading>
+    ),
     detectTokens: {
       allOf: ['utrecht.heading-1.font-size'],
     },
@@ -818,7 +825,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 2',
-    render: () => <Heading level={2}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    render: () => (
+      <Heading role="presentation" level={2}>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Heading>
+    ),
     detectTokens: {
       allOf: ['utrecht.heading-2.font-size'],
     },
@@ -828,7 +839,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 3',
-    render: () => <Heading level={3}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    render: () => (
+      <Heading role="presentation" level={3}>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Heading>
+    ),
     detectTokens: {
       allOf: ['utrecht.heading-3.font-size'],
     },
@@ -838,7 +853,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 4',
-    render: () => <Heading level={4}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    render: () => (
+      <Heading role="presentation" level={4}>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Heading>
+    ),
     detectTokens: {
       allOf: ['utrecht.heading-4.font-size'],
     },
@@ -848,14 +867,22 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 5',
-    render: () => <Heading level={5}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    render: () => (
+      <Heading role="presentation" level={5}>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Heading>
+    ),
   },
   {
     storyId: 'react-utrecht-heading--level-6',
     component: 'utrecht-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Utrecht Heading - Level 6',
-    render: () => <Heading level={6}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    render: () => (
+      <Heading role="presentation" level={6}>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Heading>
+    ),
   },
   {
     storyId: 'react-utrecht-spotlight-section--default',
@@ -996,7 +1023,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--default',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Default',
-    render: () => <RadioButton />,
+    render: () => <RadioButton aria-label="Example radio button" />,
     detectTokens: {
       anyOf: [
         'utrecht.form-control.color',
@@ -1012,7 +1039,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--hover',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Hover',
-    render: () => <RadioButton className="utrecht-radio-button--hover" />,
+    render: () => (
+      <RadioButton aria-label="Example radio button that simulates hover" className="utrecht-radio-button--hover" />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.form-control.hover.color',
@@ -1028,7 +1057,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--focus',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button focus',
-    render: () => <RadioButton className="utrecht-radio-button--focus" />,
+    render: () => (
+      <RadioButton aria-label="Example radio button that simulates focus" className="utrecht-radio-button--focus" />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1041,7 +1072,12 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--focus-visible',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button focus-visible',
-    render: () => <RadioButton className="utrecht-radio-button--focus-visible" />,
+    render: () => (
+      <RadioButton
+        aria-label="Example radio that simulates focus-visible"
+        className="utrecht-radio-button--focus-visible"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1054,7 +1090,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--active',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button active',
-    render: () => <RadioButton className="utrecht-radio-button--active" />,
+    render: () => (
+      <RadioButton aria-label="Example radio button that simulates active" className="utrecht-radio-button--active" />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1067,7 +1105,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--disabled',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Disabled',
-    render: () => <RadioButton disabled />,
+    render: () => <RadioButton aria-label="Example radio button that simulates disabled" disabled />,
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1081,7 +1119,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--disabled-focus-visible',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Disabled + focus-visible',
-    render: () => <RadioButton disabled className="utrecht-radio-button--focus-visible" />,
+    render: () => (
+      <RadioButton
+        disabled
+        aria-label="Example radio button that is disabled and simulates focus-visible "
+        className="utrecht-radio-button--focus-visible"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1096,7 +1140,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--checked',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Checked',
-    render: () => <RadioButton defaultChecked />,
+    render: () => <RadioButton aria-label="Example radio button that is checked initially" defaultChecked />,
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1109,7 +1153,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--checked-focus-visible',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Checked + focus-visible',
-    render: () => <RadioButton defaultChecked className="utrecht-radio-button--focus-visible" />,
+    render: () => (
+      <RadioButton
+        defaultChecked
+        aria-label="Example radio button that is checked initially and simulates focus-visible"
+        className="utrecht-radio-button--focus-visible"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1122,7 +1172,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--checked-hover',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Checked + hover',
-    render: () => <RadioButton defaultChecked className="utrecht-radio-button--hover" />,
+    render: () => (
+      <RadioButton
+        defaultChecked
+        aria-label="Example radio button that is checked initially and simulates hover"
+        className="utrecht-radio-button--hover"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1135,7 +1191,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--checked-active',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Checked + active',
-    render: () => <RadioButton defaultChecked className="utrecht-radio-button--active" />,
+    render: () => (
+      <RadioButton
+        defaultChecked
+        className="utrecht-radio-button--active"
+        aria-label="Example radio button that is checked initially and simulates active"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1148,7 +1210,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--checked-disabled',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Checked + disabled',
-    render: () => <RadioButton defaultChecked disabled />,
+    render: () => (
+      <RadioButton
+        aria-label="Example radio button that is disabled and is checked initially"
+        defaultChecked
+        disabled
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.radio-button.color',
@@ -1161,13 +1229,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-radio-button--invalid',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Invalid',
-    render: () => <RadioButton invalid />,
+    render: () => <RadioButton aria-label="Example radio button that is invalid" invalid />,
   },
   {
     storyId: 'react-utrecht-radio-button--checked-invalid',
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Checked + Invalid',
-    render: () => <RadioButton defaultChecked invalid />,
+    render: () => (
+      <RadioButton aria-label="Example radio button that is checked initially and is invalid" defaultChecked invalid />
+    ),
   },
   {
     storyId: 'react-utrecht-alert--default',
@@ -1426,7 +1496,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-textbox',
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Utrecht Textbox',
-    render: () => <Textbox defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textbox aria-label="Example textbox" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
     detectTokens: {
       anyOf: [
         'utrecht.textbox.color',
@@ -1441,9 +1511,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-textbox',
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Textbox with placeholder',
-    render: () => <Textbox placeholder="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textbox
+        aria-label="Example textbox with a placeholder text"
+        placeholder="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
     detectTokens: {
-      anyOf: ['utrecht.textbox.placeholder.color'],
+      anyOf: ['utrecht.textbox.placeholder.color', 'utrecht.textbox.placeholder.font-style'],
     },
   },
   {
@@ -1452,7 +1527,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Utrecht Textbox: Disabled',
     state: true,
-    render: () => <Textbox disabled defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textbox
+        aria-label="Example textbox that is disabled"
+        disabled
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.textbox.disabled.color',
@@ -1469,7 +1550,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Textbox: Hover',
     state: true,
     render: () => (
-      <Textbox className="utrecht-textbox--hover" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+      <Textbox
+        aria-label="Example textbox that simulates hover"
+        className="utrecht-textbox--hover"
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
     ),
     detectTokens: {
       anyOf: [
@@ -1487,7 +1572,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Textbox: Focus',
     state: true,
     render: () => (
-      <Textbox className="utrecht-textbox--focus" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+      <Textbox
+        aria-label="Example textbox that simulates focus"
+        className="utrecht-textbox--focus"
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
     ),
     detectTokens: {
       anyOf: [
@@ -1505,7 +1594,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Textbox: Focus Visible',
     state: true,
     render: () => (
-      <Textbox className="utrecht-textbox--focus-visible" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+      <Textbox
+        aria-label="Example textbox that simulates focus-visible"
+        className="utrecht-textbox--focus-visible"
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
     ),
     detectTokens: {
       anyOf: [
@@ -1522,14 +1615,26 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Utrecht Textbox: Invalid',
     state: true,
-    render: () => <Textbox invalid defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textbox
+        aria-label="Example textbox that is invalid"
+        invalid
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
   },
   {
     storyId: 'react-utrecht-textbox--readonly',
     component: 'utrecht-textbox',
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Utrecht Textbox: Read Only',
-    render: () => <Textbox readOnly defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textbox
+        aria-label="Example textbox that is read-only"
+        readOnly
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.textbox.read-only.color',
@@ -1544,14 +1649,20 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-textbox',
     group: STORY_GROUPS['TEXTBOX'],
     name: 'Utrecht Textbox: Required',
-    render: () => <Textbox required defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textbox
+        required
+        aria-label="Example textbox that is required"
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
   },
   {
     storyId: 'react-utrecht-textarea--default',
     component: 'utrecht-textarea',
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea',
-    render: () => <Textarea defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => <Textarea aria-label="Example textarea" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
     detectTokens: {
       anyOf: [
         'utrecht.textarea.color',
@@ -1566,9 +1677,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-textarea',
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea with placeholder',
-    render: () => <Textarea placeholder="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textarea
+        aria-label="Example textarea with a placeholder text"
+        placeholder="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
     detectTokens: {
-      anyOf: ['utrecht.textarea.placeholder.color'],
+      anyOf: ['utrecht.textarea.placeholder.color', 'utrecht.textarea.placeholder.font-style'],
     },
   },
   {
@@ -1577,7 +1693,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea: Disabled',
     state: true,
-    render: () => <Textarea disabled defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textarea
+        aria-label="Example textarea that is disabled"
+        disabled
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.textarea.disabled.color',
@@ -1594,7 +1716,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Textarea: Hover',
     state: true,
     render: () => (
-      <Textarea className="utrecht-textarea--hover" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+      <Textarea
+        aria-label="Example textarea that simulates hover"
+        className="utrecht-textarea--hover"
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
     ),
     detectTokens: {
       anyOf: [
@@ -1612,7 +1738,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Textarea: Focus',
     state: true,
     render: () => (
-      <Textarea className="utrecht-textarea--focus" defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />
+      <Textarea
+        aria-label="Example textarea that simulates focus"
+        className="utrecht-textarea--focus"
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
     ),
     detectTokens: {
       anyOf: [
@@ -1631,6 +1761,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     render: () => (
       <Textarea
+        aria-label="Example textarea that simulates focus-visible"
         className="utrecht-textarea--focus-visible"
         defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
       />
@@ -1642,14 +1773,35 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea: Invalid',
     state: true,
-    render: () => <Textarea invalid defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textarea
+        aria-label="Example textarea that is invalid"
+        invalid
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.textarea.invalid.color',
+        'utrecht.textarea.invalid.border-color',
+        'utrecht.textarea.invalid.border-width',
+        'utrecht.textarea.invalid.border-block-end-width',
+        'utrecht.textarea.invalid.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textarea--readonly',
     component: 'utrecht-textarea',
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea: Read Only',
-    render: () => <Textarea readOnly defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textarea
+        aria-label="Example textarea that is read-only"
+        readOnly
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.textarea.read-only.color',
@@ -1664,7 +1816,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-textarea',
     group: STORY_GROUPS['TEXTAREA'],
     name: 'Utrecht Textarea: Required',
-    render: () => <Textarea required defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog" />,
+    render: () => (
+      <Textarea
+        aria-label="Example textarea that is required"
+        required
+        defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
+      />
+    ),
   },
   {
     storyId: 'react-utrecht-table--default',
@@ -2078,13 +2236,17 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
     name: 'Utrecht Form field description',
     render: () => <FormFieldDescription>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
-  },
-  {
-    storyId: 'react-utrecht-form-field-description--invalid',
-    group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
-    name: 'Utrecht Form field description: Invalid',
-    state: true,
-    render: () => <FormFieldDescription invalid>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.form-field-description.color',
+        'utrecht.form-field-description.font-family',
+        'utrecht.form-field-description.font-size',
+        'utrecht.form-field-description.font-style',
+        'utrecht.form-field-description.line-height',
+        'utrecht.form-field-description.margin-block-start',
+        'utrecht.form-field-description.margin-block-end',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-form-field-error-message--default',
@@ -2117,12 +2279,30 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <Paragraph>Page Footer Area</Paragraph>
       </PageFooter>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.page-footer.color',
+        'utrecht.page-footer.background-color',
+        'utrecht.page-footer.background-image',
+        'utrecht.page-footer.padding-inline-end',
+        'utrecht.page-footer.padding-inline-start',
+        'utrecht.page-footer.padding-block-end',
+        'utrecht.page-footer.padding-block-start',
+        'utrecht.page-footer.content.color',
+        'utrecht.page-footer.content.background-color',
+        'utrecht.page-footer.content.padding-inline-end',
+        'utrecht.page-footer.content.padding-inline-start',
+        'utrecht.page-footer.content.padding-block-end',
+        'utrecht.page-footer.content.padding-block-start',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-listbox',
     name: 'Utrecht Listbox',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items"
         options={[
           { label: 'Option #1' },
           {
@@ -2164,12 +2344,12 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Listbox Focus-visible',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items, simulating focus-visible"
         focus
         focusVisible
         options={[
           { label: 'Option #1' },
           {
-            hover: true,
             label: 'Option #2',
           },
           { label: 'Option #3' },
@@ -2182,6 +2362,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Listbox Option Hover',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items, one item simulates hover"
         options={[
           { label: 'Option #1' },
           {
@@ -2201,6 +2382,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Listbox Option Selected',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items, one item is selected"
         options={[
           { label: 'Option #1' },
           {
@@ -2220,6 +2402,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Listbox Option Selected + Hover',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items, one item is selected and simulates hover"
         options={[
           { label: 'Option #1' },
           {
@@ -2240,6 +2423,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Listbox Option Active',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items, one item is active"
         options={[
           { label: 'Option #1' },
           {
@@ -2259,6 +2443,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Listbox Option Disabled',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items, one item is disabled"
         options={[
           { label: 'Option #1' },
           {
@@ -2278,6 +2463,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Listbox Option Disabled + Selected',
     render: () => (
       <ListboxStory
+        label="Example listbox with 3 items, one item is disabled and selected"
         options={[
           { label: 'Option #1' },
           {
