@@ -1,6 +1,0 @@
-import{j as o}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as m}from"./index-BI1Biiay.js";import{ae as s}from"./index-ChqrE2zx.js";import{t as i}from"./tokens-D6Na0-EC.js";import{C as p,a}from"./ColorSearch-C5GxWMVe.js";import{c as n}from"./config-Y67l1f_v.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-DMUwxkPl.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./util-Dtr1Ejjm.js";import"./index-CVs1w2sG.js";import"./index-BQ5IbGbl.js";import"./design-tokens-DZ-ecn2W.js";import"./index-NspZYKNv.js";import"./clsx-B-dksMZM.js";function e(r){const t={h1:"h1",h2:"h2",...m(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(s,{title:"Basis Thema/Color"}),`
-`,o.jsx(t.h1,{id:"color",children:"Color"}),`
-`,o.jsx(t.h2,{id:"find-a-color",children:"Find a color"}),`
-`,o.jsx(p,{tokens:i[n.prefix].color}),`
-`,o.jsx(t.h2,{id:"color-palette",children:"Color palette"}),`
-`,o.jsx(a,{tokens:i[n.prefix].color})]})}function B(r={}){const{wrapper:t}={...m(),...r.components};return t?o.jsx(t,{...r,children:o.jsx(e,{...r})}):e(r)}export{B as default};

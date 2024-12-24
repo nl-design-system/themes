@@ -1,0 +1,3 @@
+import{j as t}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as e}from"./index-BI1Biiay.js";import{ae as i,ak as m}from"./index-DxEIGr-1.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-Do0YTy8s.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";const s=`# NL Design System design tokens voor NORA
+`;function n(o){return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"NORA/README"}),`
+`,t.jsx(m,{children:s})]})}function k(o={}){const{wrapper:r}={...e(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(n,{...o})}):n()}export{k as default};
