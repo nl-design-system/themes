@@ -1,5 +1,11 @@
 # @nl-design-system-community/purmerend-design-tokens
 
+## 1.2.2
+
+### Patch Changes
+
+- 6ab8879: Include font files for bold Cantarell in Purmerend theme.
+
 ## 1.2.1
 
 ### Patch Changes
