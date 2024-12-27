@@ -5,7 +5,7 @@ export interface FontFamilySampleProps {
 export const FontFamilySample = ({ fontFamily }: FontFamilySampleProps) => {
   return (
     <span
-      role="image"
+      role="img"
       aria-label={fontFamily}
       className="font-family-sample"
       style={{
