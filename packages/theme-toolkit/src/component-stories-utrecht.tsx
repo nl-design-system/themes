@@ -2075,7 +2075,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" placeholder>
+      <Link href="https://example.com" target="_new" placeholder className="utrecht-link--placeholder">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
