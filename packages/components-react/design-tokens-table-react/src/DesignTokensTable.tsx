@@ -88,11 +88,11 @@ export const DesignTokensTable = ({ tokens, tokensMap }: DesignTokensTableProps)
             <TableRow key={index}>
               <TableCell>
                 {isVerified ? (
-                  <Icon role="image" aria-label="status: verified token">
+                  <Icon role="img" aria-label="status: verified token">
                     <IconCheck />
                   </Icon>
                 ) : isVendorToken ? (
-                  <Icon role="image" aria-label="status: unknown token">
+                  <Icon role="img" aria-label="status: unknown token">
                     <IconFileUnknown />
                   </Icon>
                 ) : null}
