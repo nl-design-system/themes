@@ -2069,6 +2069,21 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
+    storyId: 'react-utrecht-link--placeholder',
+    group: STORY_GROUPS['LINK'],
+    name: 'Utrecht Link: Placeholder',
+    state: true,
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" target="_new" placeholder>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.link.placeholder.color', 'utrecht.link.placeholder.font-weight'],
+    },
+  },
+  {
     storyId: 'react-utrecht-link--focus',
     group: STORY_GROUPS['LINK'],
     name: 'Utrecht Link: Focus',
