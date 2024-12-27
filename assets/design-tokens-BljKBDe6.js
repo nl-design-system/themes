@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as p}from"./index-BI1Biiay.js";import{ae as a}from"./index-DPF4e9A8.js";import{D as r}from"./css-gqewejSn.js";import{t as i}from"./list-BKc9-O_u.js";import{c as s}from"./config-EfySG5c8.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-C3I6r1sZ.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./objectWithoutProperties-eofjzj2c.js";import"./clsx-B-dksMZM.js";function m(o){const e={h1:"h1",h2:"h2",...p(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(a,{title:"Purmerend/Design Tokens"}),`
+`,t.jsx(e.h1,{id:"design-tokens",children:"Design Tokens"}),`
+`,t.jsx(r,{tokens:i.filter(n=>n.path[0]!==s.prefix)}),`
+`,t.jsx(e.h2,{id:"proprietary-design-tokens",children:"Proprietary Design Tokens"}),`
+`,t.jsx(r,{tokens:i.filter(n=>n.path[0]===s.prefix)})]})}function P(o={}){const{wrapper:e}={...p(),...o.components};return e?t.jsx(e,{...o,children:t.jsx(m,{...o})}):m(o)}export{P as default};
