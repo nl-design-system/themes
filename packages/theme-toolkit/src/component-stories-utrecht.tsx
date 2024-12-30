@@ -2062,6 +2062,21 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BADGES'],
     name: 'Utrecht Data Badge',
     render: () => <DataBadge>Category 1</DataBadge>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.data-badge.color',
+        'utrecht.data-badge.border-radius',
+        'utrecht.data-badge.border-width',
+        'utrecht.data-badge.background-color',
+        'utrecht.data-badge.font-size',
+        'utrecht.data-badge.font-weight',
+        'utrecht.data-badge.line-height',
+        'utrecht.data-badge.min-block-size',
+        'utrecht.data-badge.min-inline-size',
+        'utrecht.data-badge.padding-block',
+        'utrecht.data-badge.padding-inline',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-blockquote--default',
