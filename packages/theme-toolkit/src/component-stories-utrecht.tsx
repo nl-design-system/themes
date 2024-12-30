@@ -1481,6 +1481,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-separator',
     name: 'Utrecht Separator',
     render: () => <Separator />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.separator.color',
+        'utrecht.separator.block-size',
+        'utrecht.separator.margin-block-end',
+        'utrecht.separator.margin-block-start',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-page-footer--default',
