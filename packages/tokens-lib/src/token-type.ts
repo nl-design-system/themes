@@ -18,6 +18,10 @@ export const TOKEN_TYPES = [
   'gap',
   'size',
   'cursor',
+  'text-decoration-line',
+  'text-decoration-thickness',
+  'text-underline-offset',
+  'text-underline-style',
 ];
 
 type TypeToCSSProperty = {
@@ -131,6 +135,10 @@ export const mapping: TypeToCSSProperty = {
     'size', // `size` not an official CSS property
   ],
   ['cursor']: ['cursor'],
+  ['text-decoration-line']: ['text-decoration', 'text-decoration-line'],
+  ['text-decoration-thickness']: ['text-decoration-thickness'],
+  ['text-underline-offset']: ['text-underline-offset'],
+  ['text-underline-style']: ['text-underline-style'],
 };
 
 const entries = Object.entries(mapping);
