@@ -2030,7 +2030,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.link.color',
         'utrecht.link.text-decoration',
         'utrecht.link.text-decoration-thickness',
-        'utrecht.link.underline-offset',
+        'utrecht.link.text-underline-offset',
         'utrecht.link.icon.size',
       ],
     },
