@@ -13,6 +13,8 @@ import {
   IconSpace,
   IconPointer,
   IconTextSize,
+  IconUnderline,
+  IconLineDashed,
 } from '@tabler/icons-react';
 import { Icon } from '@utrecht/component-library-react/dist/css-module';
 
@@ -33,6 +35,10 @@ const mapping: { [index: string]: IconType } = {
   ['gap']: IconSpace,
   ['size']: IconDimensions,
   ['cursor']: IconPointer,
+  ['text-decoration']: IconUnderline,
+  ['text-decoration-line']: IconUnderline,
+  ['text-decoration-thickness']: IconUnderline,
+  ['text-underline-style']: IconLineDashed,
 };
 
 export interface TokenTypeIconProps {
