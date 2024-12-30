@@ -753,7 +753,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Heading 1',
     render: () => <Heading1 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>,
     detectTokens: {
-      allOf: ['utrecht.heading-1.font-size'],
+      anyOf: [
+        'utrecht.heading-1.font-size',
+        'utrecht.heading-1.font-family',
+        'utrecht.heading-1.font-weight',
+        'utrecht.heading-1.color',
+        'utrecht.heading-1.line-height',
+        'utrecht.heading-1.margin-block-end',
+        'utrecht.heading-1.margin-block-start',
+      ],
     },
   },
   {
@@ -763,7 +771,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Heading 2',
     render: () => <Heading2 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading2>,
     detectTokens: {
-      allOf: ['utrecht.heading-2.font-size'],
+      anyOf: [
+        'utrecht.heading-2.font-size',
+        'utrecht.heading-2.font-family',
+        'utrecht.heading-2.font-weight',
+        'utrecht.heading-2.color',
+        'utrecht.heading-2.line-height',
+        'utrecht.heading-2.margin-block-end',
+        'utrecht.heading-2.margin-block-start',
+      ],
     },
   },
   {
@@ -773,7 +789,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Heading 3',
     render: () => <Heading3 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading3>,
     detectTokens: {
-      allOf: ['utrecht.heading-3.font-size'],
+      anyOf: [
+        'utrecht.heading-3.font-size',
+        'utrecht.heading-3.font-family',
+        'utrecht.heading-3.font-weight',
+        'utrecht.heading-3.color',
+        'utrecht.heading-3.line-height',
+        'utrecht.heading-3.margin-block-end',
+        'utrecht.heading-3.margin-block-start',
+      ],
     },
   },
   {
@@ -783,7 +807,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Heading 4',
     render: () => <Heading4 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading4>,
     detectTokens: {
-      allOf: ['utrecht.heading-4.font-size'],
+      anyOf: [
+        'utrecht.heading-4.font-size',
+        'utrecht.heading-4.font-family',
+        'utrecht.heading-4.font-weight',
+        'utrecht.heading-4.color',
+        'utrecht.heading-4.line-height',
+        'utrecht.heading-4.margin-block-end',
+        'utrecht.heading-4.margin-block-start',
+      ],
     },
   },
   {
@@ -793,7 +825,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Heading 5',
     render: () => <Heading5 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading5>,
     detectTokens: {
-      allOf: ['utrecht.heading-5.font-size'],
+      anyOf: [
+        'utrecht.heading-5.font-size',
+        'utrecht.heading-5.font-family',
+        'utrecht.heading-5.font-weight',
+        'utrecht.heading-5.color',
+        'utrecht.heading-5.line-height',
+        'utrecht.heading-5.margin-block-end',
+        'utrecht.heading-5.margin-block-start',
+      ],
     },
   },
   {
@@ -803,7 +843,15 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Heading 6',
     render: () => <Heading6 role="presentation">The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>,
     detectTokens: {
-      allOf: ['utrecht.heading-6.font-size'],
+      anyOf: [
+        'utrecht.heading-6.font-size',
+        'utrecht.heading-6.font-family',
+        'utrecht.heading-6.font-weight',
+        'utrecht.heading-6.color',
+        'utrecht.heading-6.line-height',
+        'utrecht.heading-6.margin-block-end',
+        'utrecht.heading-6.margin-block-start',
+      ],
     },
   },
   {
