@@ -731,9 +731,25 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-paragraph--default',
     group: STORY_GROUPS['PARAGRAPH'],
     name: 'Utrecht Paragraph',
-    render: () => <Paragraph>Default</Paragraph>,
+    render: () => (
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </Paragraph>
+    ),
     detectTokens: {
-      allOf: ['utrecht.paragraph.font-size'],
+      anyOf: [
+        'utrecht.paragraph.color',
+        'utrecht.paragraph.font-size',
+        'utrecht.paragraph.font-family',
+        'utrecht.paragraph.font-weight',
+        'utrecht.paragraph.line-height',
+        'utrecht.paragraph.margin-block-start',
+        'utrecht.paragraph.margin-block-end',
+      ],
     },
   },
   {
@@ -741,9 +757,45 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-paragraph',
     group: STORY_GROUPS['PARAGRAPH'],
     name: 'Utrecht Lead Paragraph',
-    render: () => <Paragraph lead>Lead</Paragraph>,
+    render: () => (
+      <Paragraph lead>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </Paragraph>
+    ),
     detectTokens: {
-      allOf: ['utrecht.paragraph.lead.font-size'],
+      anyOf: [
+        'utrecht.paragraph.lead.color',
+        'utrecht.paragraph.lead.font-size',
+        'utrecht.paragraph.lead.font-weight',
+        'utrecht.paragraph.lead.line-height',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-paragraph--small',
+    component: 'utrecht-paragraph',
+    group: STORY_GROUPS['PARAGRAPH'],
+    name: 'Utrecht Small Paragraph',
+    render: () => (
+      <Paragraph small>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </Paragraph>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.paragraph.small.color',
+        'utrecht.paragraph.small.font-size',
+        'utrecht.paragraph.small.font-weight',
+        'utrecht.paragraph.small.line-height',
+      ],
     },
   },
   {
