@@ -2139,7 +2139,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Document',
     render: () => <Document>The Quick Brown Fox Jumps Over The Lazy Dog</Document>,
     detectTokens: {
-      anyOf: ['utrecht.document.color', 'utrecht.document.background-color', 'utrecht.document.font-size'],
+      anyOf: [
+        'utrecht.document.color',
+        'utrecht.document.background-color',
+        'utrecht.document.font-size',
+        'utrecht.document.font-family',
+        'utrecht.document.font-weight',
+        'utrecht.document.line-height',
+      ],
     },
   },
   {
