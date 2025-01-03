@@ -1928,6 +1928,27 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <SelectOption value="3">Option 3</SelectOption>
       </Select>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.select.background-color',
+        'utrecht.select.image',
+        'utrecht.select.border-block-end-width',
+        'utrecht.select.border-bottom-width',
+        'utrecht.select.border-color',
+        'utrecht.select.border-radius',
+        'utrecht.select.color',
+        'utrecht.select.font-family',
+        'utrecht.select.font-size',
+        'utrecht.select.font-weight',
+        'utrecht.select.line-height',
+        'utrecht.select.min-block-size',
+        'utrecht.select.max-inline-size',
+        'utrecht.select.padding-block-end',
+        'utrecht.select.padding-block-start',
+        'utrecht.select.padding-inline-end',
+        'utrecht.select.padding-inline-start',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-select--disabled',
@@ -1942,6 +1963,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <SelectOption value="3">Option 3</SelectOption>
       </Select>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.select.disabled.background-color',
+        'utrecht.select.disabled.border-color',
+        'utrecht.select.disabled.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-select--invalid',
@@ -1956,6 +1984,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <SelectOption value="3">Option 3</SelectOption>
       </Select>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.select.invalid.background-color',
+        'utrecht.select.invalid.border-block-end-width',
+        'utrecht.select.invalid.color',
+        'utrecht.select.invalid.border-width',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-select--required',
@@ -1983,6 +2019,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <SelectOption value="3">Option 3</SelectOption>
       </Select>
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.select.focus.background-color',
+        'utrecht.select.focus.border-color',
+        'utrecht.select.focus.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-select--focus-visible',
