@@ -1500,9 +1500,21 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     detectTokens: {
       anyOf: [
         'utrecht.textbox.color',
+        'utrecht.textbox.background-color',
         'utrecht.textbox.border-color',
         'utrecht.textbox.border-width',
-        'utrecht.textbox.background-color',
+        'utrecht.textbox.border-radius',
+        'utrecht.textbox.border-block-end-width',
+        'utrecht.textbox.border-bottom-width',
+        'utrecht.textbox.font-family',
+        'utrecht.textbox.font-size',
+        'utrecht.textbox.font-weight',
+        'utrecht.textbox.line-height',
+        'utrecht.textbox.max-inline-size',
+        'utrecht.textbox.padding-block-end',
+        'utrecht.textbox.padding-block-start',
+        'utrecht.textbox.padding-inline-end',
+        'utrecht.textbox.padding-inline-start',
       ],
     },
   },
@@ -1518,7 +1530,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       />
     ),
     detectTokens: {
-      anyOf: ['utrecht.textbox.placeholder.color', 'utrecht.textbox.placeholder.font-style'],
+      anyOf: ['utrecht.textbox.placeholder.color'],
     },
   },
   {
@@ -1538,7 +1550,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'utrecht.textbox.disabled.color',
         'utrecht.textbox.disabled.border-color',
-        'utrecht.textbox.disabled.border-width',
         'utrecht.textbox.disabled.background-color',
       ],
     },
@@ -1582,7 +1593,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'utrecht.textbox.focus.color',
         'utrecht.textbox.focus.border-color',
-        'utrecht.textbox.focus.border-width',
         'utrecht.textbox.focus.background-color',
       ],
     },
@@ -1622,6 +1632,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         defaultValue="The Quick Brown Fox Jumps Over The Lazy Dog"
       />
     ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.textbox.invalid.color',
+        'utrecht.textbox.invalid.border-color',
+        'utrecht.textbox.invalid.border-width',
+        'utrecht.textbox.invalid.background-color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-textbox--readonly',
@@ -1639,7 +1657,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'utrecht.textbox.read-only.color',
         'utrecht.textbox.read-only.border-color',
-        'utrecht.textbox.read-only.border-width',
         'utrecht.textbox.read-only.background-color',
       ],
     },
