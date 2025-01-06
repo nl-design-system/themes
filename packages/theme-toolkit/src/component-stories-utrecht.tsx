@@ -1666,9 +1666,22 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     detectTokens: {
       anyOf: [
         'utrecht.textarea.color',
+        'utrecht.textarea.background-color',
         'utrecht.textarea.border-color',
         'utrecht.textarea.border-width',
-        'utrecht.textarea.background-color',
+        'utrecht.textarea.border-radius',
+        'utrecht.textarea.border-block-end-width',
+        'utrecht.textarea.border-bottom-width',
+        'utrecht.textarea.font-family',
+        'utrecht.textarea.font-size',
+        'utrecht.textarea.font-weight',
+        'utrecht.textarea.line-height',
+        'utrecht.textarea.max-inline-size',
+        'utrecht.textarea.min-block-size',
+        'utrecht.textarea.padding-block-end',
+        'utrecht.textarea.padding-block-start',
+        'utrecht.textarea.padding-inline-end',
+        'utrecht.textarea.padding-inline-start',
       ],
     },
   },
@@ -1704,7 +1717,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'utrecht.textarea.disabled.color',
         'utrecht.textarea.disabled.border-color',
-        'utrecht.textarea.disabled.border-width',
         'utrecht.textarea.disabled.background-color',
       ],
     },
@@ -1748,7 +1760,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'utrecht.textarea.focus.color',
         'utrecht.textarea.focus.border-color',
-        'utrecht.textarea.focus.border-width',
         'utrecht.textarea.focus.background-color',
       ],
     },
@@ -1806,7 +1817,6 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'utrecht.textarea.read-only.color',
         'utrecht.textarea.read-only.border-color',
-        'utrecht.textarea.read-only.border-width',
         'utrecht.textarea.read-only.background-color',
       ],
     },
