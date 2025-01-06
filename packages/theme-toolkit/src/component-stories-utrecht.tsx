@@ -1858,17 +1858,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.table.cell.icon.size',
-        'utrecht.table.cell.line-height',
-        'utrecht.table.cell.padding-block-end',
-        'utrecht.table.cell.padding-block-start',
-        'utrecht.table.cell.padding-inline-end',
-        'utrecht.table.cell.padding-inline-start',
-        'utrecht.table.header.border-block-end-color',
-        'utrecht.table.header.border-block-end-width',
-        'utrecht.table.header.font-weight',
-        'utrecht.table.row.border-block-end-color',
-        'utrecht.table.row.border-block-end-width',
+        'utrecht.table.border-color',
+        'utrecht.table.border-width',
+        'utrecht.table.font-family',
+        'utrecht.table.font-size',
+        'utrecht.table.line-height',
+        'utrecht.table.margin-block-end',
+        'utrecht.table.margin-block-start',
       ],
     },
   },
@@ -1907,12 +1903,238 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.table.caption.font-family',
         'utrecht.table.caption.font-size',
+        'utrecht.table.caption.font-weight',
+        'utrecht.table.caption.font-family',
         'utrecht.table.caption.color',
         'utrecht.table.caption.line-height',
         'utrecht.table.caption.text-align',
         'utrecht.table.caption.margin-block-end',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-table--header',
+    component: 'utrecht-table',
+    name: 'Utrecht Table with header',
+    render: () => (
+      <Table>
+        <TableCaption>Caption of the Table</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Column Heading Cell 1</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 2</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 3</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 1</TableHeaderCell>
+            <TableCell>Data Cell 1</TableCell>
+            <TableCell>Data Cell 2</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 2</TableHeaderCell>
+            <TableCell>Data Cell 3</TableCell>
+            <TableCell>Data Cell 4</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 3</TableHeaderCell>
+            <TableCell>Data Cell 5</TableCell>
+            <TableCell>Data Cell 6</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.table.header.background-color',
+        'utrecht.table.header.font-weight',
+        'utrecht.table.header.text-transform',
+        'utrecht.table.header.color',
+        'utrecht.table.header.border-block-end-color',
+        'utrecht.table.header.border-block-end-width',
+        'utrecht.table.header.sticky.background-color',
+        'utrecht.table.header.sticky.color',
+        'utrecht.table.header.sticky.border-block-end-color',
+        'utrecht.table.header.sticky.border-block-end-width',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-table--header-cell',
+    component: 'utrecht-table',
+    name: 'Utrecht Table with header-cell',
+    render: () => (
+      <Table>
+        <TableCaption>Caption of the Table</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Column Heading Cell 1</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 2</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 3</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 1</TableHeaderCell>
+            <TableCell>Data Cell 1</TableCell>
+            <TableCell>Data Cell 2</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 2</TableHeaderCell>
+            <TableCell>Data Cell 3</TableCell>
+            <TableCell>Data Cell 4</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 3</TableHeaderCell>
+            <TableCell>Data Cell 5</TableCell>
+            <TableCell>Data Cell 6</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.table.header-cell.color',
+        'utrecht.table.header-cell.font-weight',
+        'utrecht.table.header-cell.font-size',
+        'utrecht.table.header-cell.text-transform',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-table--footer',
+    component: 'utrecht-table',
+    name: 'Utrecht Table with footer',
+    render: () => (
+      <Table>
+        <TableCaption>Caption of the Table</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Column Heading Cell 1</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 2</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 3</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 1</TableHeaderCell>
+            <TableCell>Data Cell 1</TableCell>
+            <TableCell>Data Cell 2</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 2</TableHeaderCell>
+            <TableCell>Data Cell 3</TableCell>
+            <TableCell>Data Cell 4</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 3</TableHeaderCell>
+            <TableCell>Data Cell 5</TableCell>
+            <TableCell>Data Cell 6</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.table.footer.color',
+        'utrecht.table.footer.background-color',
+        'utrecht.table.footer.sticky.color',
+        'utrecht.table.footer.sticky.background-color',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-table--cell',
+    component: 'utrecht-table',
+    name: 'Utrecht Table with cell',
+    render: () => (
+      <Table>
+        <TableCaption>Caption of the Table</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Column Heading Cell 1</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 2</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 3</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 1</TableHeaderCell>
+            <TableCell>Data Cell 1</TableCell>
+            <TableCell>Data Cell 2</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 2</TableHeaderCell>
+            <TableCell>Data Cell 3</TableCell>
+            <TableCell>Data Cell 4</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 3</TableHeaderCell>
+            <TableCell>Data Cell 5</TableCell>
+            <TableCell>Data Cell 6</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.table.cell.line-height',
+        'utrecht.table.cell.padding-block-end',
+        'utrecht.table.cell.padding-block-start',
+        'utrecht.table.cell.padding-inline-end',
+        'utrecht.table.cell.padding-inline-start',
+        'utrecht.table.cell.selected.color',
+        'utrecht.table.cell.selected.background-color',
+        'utrecht.table.cell.icon.size',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-table--row',
+    component: 'utrecht-table',
+    name: 'Utrecht Table with row',
+    render: () => (
+      <Table>
+        <TableCaption>Caption of the Table</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Column Heading Cell 1</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 2</TableHeaderCell>
+            <TableHeaderCell scope="col">Column Heading Cell 3</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 1</TableHeaderCell>
+            <TableCell>Data Cell 1</TableCell>
+            <TableCell>Data Cell 2</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 2</TableHeaderCell>
+            <TableCell>Data Cell 3</TableCell>
+            <TableCell>Data Cell 4</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableHeaderCell scope="row">Row Heading Cell 3</TableHeaderCell>
+            <TableCell>Data Cell 5</TableCell>
+            <TableCell>Data Cell 6</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.table.row.border-block-end-color',
+        'utrecht.table.row.border-block-end-width',
+        'utrecht.table.row.padding-block-start',
+        'utrecht.table.row.padding-inline-end',
+        'utrecht.table.row.padding-inline-start',
+        'utrecht.table.row.alternate-odd.color',
+        'utrecht.table.row.alternate-odd.background-color',
+        'utrecht.table.row.alternate-even.color',
+        'utrecht.table.row.alternate-even.background-color',
       ],
     },
   },
