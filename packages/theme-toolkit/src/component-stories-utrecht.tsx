@@ -2188,7 +2188,20 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
 </html>`}</CodeBlock>
     ),
     detectTokens: {
-      allOf: ['utrecht.code-block.font-family'],
+      anyOf: [
+        'utrecht.code-block.font-family',
+        'utrecht.code-block.background-color',
+        'utrecht.code-block.font-size',
+        'utrecht.code-block.line-height',
+        'utrecht.code-block.margin-block-start',
+        'utrecht.code-block.margin-block-end',
+        'utrecht.code-block.margin-inline-start',
+        'utrecht.code-block.margin-inline-end',
+        'utrecht.code-block.padding-block-start',
+        'utrecht.code-block.padding-block-end',
+        'utrecht.code-block.padding-inline-start',
+        'utrecht.code-block.padding-inline-end',
+      ],
     },
   },
   {
