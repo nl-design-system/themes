@@ -2169,7 +2169,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Code',
     render: () => <Code>{'<input type="url" value="https://example.fi/">'}</Code>,
     detectTokens: {
-      allOf: ['utrecht.code.font-family'],
+      anyOf: [
+        'utrecht.code.color',
+        'utrecht.code.background-color',
+        'utrecht.code.font-size',
+        'utrecht.code.font-family',
+        'utrecht.code.line-height',
+      ],
     },
   },
   {
