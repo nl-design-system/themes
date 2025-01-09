@@ -151,6 +151,24 @@ importers:
         specifier: 4.19.2
         version: 4.19.2
 
+  packages/design-tokens-definition:
+    devDependencies:
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../tokens-lib
+      '@types/lodash-es':
+        specifier: 4.17.12
+        version: 4.17.12
+      '@utrecht/component-library-design-tokens':
+        specifier: 1.0.0
+        version: 1.0.0
+      lodash-es:
+        specifier: 4.17.21
+        version: 4.17.21
+      tsx:
+        specifier: 4.17.0
+        version: 4.17.0
+
   packages/storybook:
     devDependencies:
       '@amsterdam/design-system-assets':
@@ -931,6 +949,9 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.1.0
         version: 5.1.0
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../design-tokens-definition
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../components-react/design-tokens-table-react
@@ -1819,6 +1840,9 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.1.0
         version: 5.1.0
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens-definition
       '@nl-design-system-unstable/basis-design-tokens':
         specifier: workspace:*
         version: link:../basis-design-tokens
