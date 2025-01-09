@@ -39,6 +39,7 @@ interface ComponentStoriesProps {
   showAll?: boolean;
   theme?: string;
   tokens?: StyleDictionaryDesignToken[];
+  tokensDefinition?: StyleDictionaryDesignToken[];
   displayDesignTokens?: boolean;
 }
 
@@ -51,6 +52,7 @@ export const ComponentStories = ({
   theme,
   tokens = [],
   displayDesignTokens = false,
+  tokensDefinition,
 }: ComponentStoriesProps) => {
   const availableComponents = [...AMS_COMPONENT_STORIES, ...UTRECHT_COMPONENT_STORIES, ...DENHAAG_COMPONENT_STORIES];
 
@@ -133,7 +135,7 @@ export const ComponentStories = ({
                   {/* <CustomStory theme={`${config.prefix}-theme`} inline={story.inline}> */}
                   <CustomStory className={theme || `${config.prefix}-theme`}>{story.render()}</CustomStory>
                   {displayDesignTokens && relatedTokens.length >= 1 ? (
-                    <DesignTokensTable tokens={relatedTokens}></DesignTokensTable>
+                    <DesignTokensTable tokens={relatedTokens} tokensDefinition={tokensDefinition}></DesignTokensTable>
                   ) : null}
                 </section>
               );
