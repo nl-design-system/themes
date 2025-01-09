@@ -2216,7 +2216,30 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Color Sample',
     render: () => <ColorSample color="#007DAD" />,
     detectTokens: {
-      anyOf: ['utrecht.color-sample.border-color'],
+      anyOf: [
+        'utrecht.color-sample.background-color',
+        'utrecht.color-sample.border-color',
+        'utrecht.color-sample.border-width',
+        'utrecht.color-sample.border-radius',
+        'utrecht.color-sample.block-size',
+        'utrecht.color-sample.inline-size',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-color-sample-dark',
+    name: 'Utrecht Color Sample Dark',
+    render: () => <ColorSample color="#007DAD" />,
+    detectTokens: {
+      anyOf: ['utrecht.color-sample.dark.border-color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-color-sample-light',
+    name: 'Utrecht Color Sample Light',
+    render: () => <ColorSample color="#007DAD" />,
+    detectTokens: {
+      anyOf: ['utrecht.color-sample.light.border-color'],
     },
   },
   // {
