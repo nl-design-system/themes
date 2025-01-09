@@ -2191,6 +2191,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'utrecht.code-block.font-family',
         'utrecht.code-block.background-color',
+        'utrecht.code-block.color',
         'utrecht.code-block.font-size',
         'utrecht.code-block.line-height',
         'utrecht.code-block.margin-block-start',
