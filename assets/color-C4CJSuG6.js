@@ -1,6 +1,0 @@
-import{j as o}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as m}from"./index-BI1Biiay.js";import{ae as p}from"./index-CHP_kGf7.js";import{t as n}from"./tokens-DPuSr_GO.js";import{C as s,a as c}from"./ColorSearch-BDePAZjR.js";import{c as e}from"./config-EfySG5c8.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-DEGiETEq.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./util-Dtr1Ejjm.js";import"./index-CVs1w2sG.js";import"./index-BQ5IbGbl.js";import"./design-tokens-DZ-ecn2W.js";import"./index-BJR50M2h.js";import"./clsx-B-dksMZM.js";function i(r){const t={h1:"h1",h2:"h2",...m(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(p,{title:"Purmerend/Color"}),`
-`,o.jsx(t.h1,{id:"color-xxx",children:"Color xxx"}),`
-`,o.jsx(t.h2,{id:"find-a-color",children:"Find a color"}),`
-`,o.jsx(s,{tokens:n[e.prefix].color}),`
-`,o.jsx(t.h2,{id:"color-palette",children:"Color palette"}),`
-`,o.jsx(c,{tokens:n[e.prefix].color})]})}function L(r={}){const{wrapper:t}={...m(),...r.components};return t?o.jsx(t,{...r,children:o.jsx(i,{...r})}):i(r)}export{L as default};
