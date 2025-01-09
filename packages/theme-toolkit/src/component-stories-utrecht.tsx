@@ -1931,7 +1931,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     detectTokens: {
       anyOf: [
         'utrecht.select.background-color',
-        'utrecht.select.image',
+        'utrecht.select.background-image',
         'utrecht.select.border-block-end-width',
         'utrecht.select.border-bottom-width',
         'utrecht.select.border-color',
