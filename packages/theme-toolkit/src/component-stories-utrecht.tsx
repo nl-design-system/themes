@@ -2110,7 +2110,12 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" external className="utrecht-link--focus-visible">
+      <Link
+        href="https://example.com"
+        target="_new"
+        external
+        className="utrecht-link--focus utrecht-link--focus-visible"
+      >
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
