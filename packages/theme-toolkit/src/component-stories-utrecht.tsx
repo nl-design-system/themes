@@ -697,6 +697,17 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Default',
     render: () => <Checkbox />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.background-color',
+        'utrecht.checkbox.border-color',
+        'utrecht.checkbox.border-radius',
+        'utrecht.checkbox.border-width',
+        'utrecht.checkbox.color',
+        'utrecht.checkbox.size',
+        'utrecht.checkbox.icon.size',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-checkbox--checked',
@@ -704,6 +715,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Checked',
     render: () => <Checkbox defaultChecked />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.checked.border-color',
+        'utrecht.checkbox.checked.border-width',
+        'utrecht.checkbox.checked.background-color',
+        'utrecht.checkbox.checked.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-checkbox--disabled-checked',
@@ -711,6 +730,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Disabled Checked',
     render: () => <Checkbox defaultChecked disabled />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.disabled.border-color',
+        'utrecht.checkbox.disabled.border-width',
+        'utrecht.checkbox.disabled.background-color',
+        'utrecht.checkbox.disabled.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-checkbox--disabled',
@@ -718,6 +745,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Disabled',
     render: () => <Checkbox disabled />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.checkbox.disabled.border-color',
+        'utrecht.checkbox.disabled.border-width',
+        'utrecht.checkbox.disabled.background-color',
+        'utrecht.checkbox.disabled.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-link-button--default',
@@ -1126,12 +1161,13 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     render: () => <RadioButton aria-label="Example radio button" />,
     detectTokens: {
       anyOf: [
-        'utrecht.form-control.color',
-        'utrecht.form-control.background-color',
-        'utrecht.form-control.border-color',
-        'utrecht.radio-button.color',
         'utrecht.radio-button.background-color',
         'utrecht.radio-button.border-color',
+        'utrecht.radio-button.border-width',
+        'utrecht.radio-button.size',
+        'utrecht.radio-button.margin-block-start',
+        'utrecht.radio-button.margin-inline-end',
+        'utrecht.radio-button.icon.size',
       ],
     },
   },
@@ -1319,9 +1355,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.radio-button.color',
-        'utrecht.radio-button.background-color',
-        'utrecht.radio-button.border-color',
+        'utrecht.radio-button.disabled.background-color',
+        'utrecht.radio-button.disabled.border-color',
+        'utrecht.radio-button.disabled.border-width',
+        'utrecht.radio-button.disabled.color',
+        'utrecht.radio-button.checked.background-color',
+        'utrecht.radio-button.checked.border-color',
+        'utrecht.radio-button.checked.border-width',
+        'utrecht.radio-button.checked.color',
       ],
     },
   },
@@ -1330,6 +1371,14 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-radio-button',
     name: 'Utrecht Radio Button Invalid',
     render: () => <RadioButton aria-label="Example radio button that is invalid" invalid />,
+    detectTokens: {
+      anyOf: [
+        'utrecht.radio-button.invalid.background-color',
+        'utrecht.radio-button.invalid.border-color',
+        'utrecht.radio-button.invalid.border-width',
+        'utrecht.radio-button.invalid.color',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-radio-button--checked-invalid',
