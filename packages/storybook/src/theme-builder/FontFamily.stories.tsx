@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Meta, StoryObj } from '@storybook/react';
 import purmerendScrapedTokens from './project-wallace-purmerend.tokens.json';
-import { getTokenValue, isDesignToken } from '@nl-design-system-unstable/theme-toolkit/src/design-tokens';
+import { getTokenValue, isDesignToken } from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 // import {} from '@utrecht/component-library-react/dist/css-module';
 import { ComboboxStory } from './Combobox';
 import { useId } from 'react';
-import { Heading } from '@utrecht/component-library-react';
-import { text } from 'stream/consumers';
 
 const projectWallaceWorkaround = (projectWallaceValue) => {
   let value = projectWallaceValue;
@@ -25,18 +23,18 @@ const sortByName = ([, a], [, b]) =>
   stringSort(unquote(projectWallaceWorkaround(getTokenValue(a))), unquote(projectWallaceWorkaround(getTokenValue(b))));
 
 const FontFamilyPickerCombobox = ({ tokens, ...restProps }) => {
-  console.log(Object.entries(tokens).map(unquote(projectWallaceWorkaround(getTokenValue(a))));
+  // console.log(Object.entries(tokens).map(unquote(projectWallaceWorkaround(getTokenValue(a)))));
   const props = {
     defaultValue: '',
     expanded: false,
     options: Object.entries(tokens['FontFamily'])
       .filter(([_, value]) => isDesignToken(value))
       // Filter out any values that are not CSS font-family values.
-      .filter(([_, token]) => !/var\(/.test(getTokenValue(token)))
+      .filter(([_, token]) => !/var\(/.test(String(getTokenValue(token))))
 
       // Filter out any values that are CSS font family `generic-name` values.
       .filter(([_, token]) => {
-        const value = projectWallaceWorkaround(getTokenValue(token));
+        const value = projectWallaceWorkaround(String(getTokenValue(token)));
 
         const isGenericName = ['monospace', 'sans-serif', 'serif'].includes(value);
 
