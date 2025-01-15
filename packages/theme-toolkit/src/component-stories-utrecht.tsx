@@ -2423,7 +2423,26 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       </Link>
     ),
     detectTokens: {
-      anyOf: ['utrecht.link.color', 'utrecht.link.text-decoration', 'utrecht.link.text-decoration-thickness'],
+      anyOf: [
+        'utrecht.link.color',
+        'utrecht.link.text-decoration',
+        'utrecht.link.text-decoration-thickness',
+        'utrecht.link.text-underline-offset',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-link--active',
+    group: STORY_GROUPS['LINK'],
+    name: 'Utrecht Link: Active',
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" target="_new" external className="utrecht-link--active">
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.link.active.color'],
     },
   },
   {
@@ -2446,6 +2465,21 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
+    storyId: 'react-utrecht-link--placeholder',
+    group: STORY_GROUPS['LINK'],
+    name: 'Utrecht Link: Placeholder',
+    state: true,
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" target="_new" placeholder>
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.link.placeholder.color', 'utrecht.link.placeholder.font-weight'],
+    },
+  },
+  {
     storyId: 'react-utrecht-link--focus',
     group: STORY_GROUPS['LINK'],
     name: 'Utrecht Link: Focus',
@@ -2459,6 +2493,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     detectTokens: {
       anyOf: [
         'utrecht.link.focus.color',
+        'utrecht.link.focus.background-color',
         'utrecht.link.focus.text-decoration',
         'utrecht.link.focus.text-decoration-thickness',
       ],
@@ -2471,10 +2506,18 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" external className="utrecht-link--focus-visible">
+      <Link
+        href="https://example.com"
+        target="_new"
+        external
+        className="utrecht-link--focus utrecht-link--focus-visible"
+      >
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
+    detectTokens: {
+      anyOf: ['utrecht.link.focus-visible.text-decoration', 'utrecht.link.focus-visible.text-decoration-thickness'],
+    },
   },
   {
     storyId: 'react-utrecht-link--visited',
@@ -2487,6 +2530,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
+    detectTokens: {
+      anyOf: ['utrecht.link.visited.color'],
+    },
   },
   {
     storyId: 'react-utrecht-document--default',
