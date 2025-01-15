@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Meta, StoryObj } from '@storybook/react';
 import purmerendScrapedTokens from './project-wallace-purmerend.tokens.json';
-import { getTokenValue, isDesignToken } from '@nl-design-system-unstable/theme-toolkit/src/design-tokens';
+import { getTokenValue, isDesignToken } from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 import { ColorSample } from '@utrecht/component-library-react/dist/css-module';
 import { ComboboxStory } from './Combobox';
 import { useId } from 'react';
