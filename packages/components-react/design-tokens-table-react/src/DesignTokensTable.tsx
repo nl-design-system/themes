@@ -1,6 +1,8 @@
 import {
+  Code,
   ColorSample,
   Icon,
+  Link,
   PreserveData,
   Table,
   TableBody,
@@ -61,6 +63,10 @@ const stringSort = (a: string, b: string) => (a === b ? 0 : a > b ? 1 : -1);
 const sortByTokenRef = (a: StyleDictionaryDesignToken, b: StyleDictionaryDesignToken) =>
   stringSort(tokenRef(a.path), tokenRef(b.path));
 
+const slugify = (str: string) => str.replace(/[^\W]+/g, '-');
+const isTokenRef = (str: string) => /^{.+}$/.test(str);
+const getTokenRef = (str: string) => (isTokenRef(str) ? str.replace(/^{(.+)}$/, '$1') : null);
+
 export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: DesignTokensTableProps) => {
   const vendorPrefixes = ['ams', 'denhaag', 'nl', 'utrecht'];
 
@@ -83,6 +89,7 @@ export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: Desig
         <TableRow>
           <TableHeaderCell>name</TableHeaderCell>
           <TableHeaderCell>value</TableHeaderCell>
+          <TableHeaderCell>reference</TableHeaderCell>
           <TableHeaderCell>detected type</TableHeaderCell>
           <TableHeaderCell>sample</TableHeaderCell>
         </TableRow>
@@ -100,9 +107,15 @@ export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: Desig
           const isVendorToken = vendorPrefixes.includes(path[0]);
           const isVerified = definitionMap ? definitionMap.has(ref) : false;
           const isString = (arg: unknown): arg is string => typeof arg === 'string';
+          const originalRef =
+            token.original &&
+            typeof (token.original as any)['$value'] === 'string' &&
+            isTokenRef((token.original as any)['$value'])
+              ? getTokenRef((token.original as any)['$value'])
+              : null;
 
           return (
-            <TableRow key={index}>
+            <TableRow key={index} id={slugify(ref)}>
               <TableCell>
                 {isVerified ? (
                   <Icon role="img" aria-label="status: verified token">
@@ -113,7 +126,9 @@ export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: Desig
                     <IconFileUnknown />
                   </Icon>
                 ) : null}
-                <PreserveData>{ref}</PreserveData>
+                <Code>
+                  <PreserveData>{ref}</PreserveData>
+                </Code>
               </TableCell>
               <TableCell>
                 {tokenType === 'font-family' &&
@@ -128,6 +143,15 @@ export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: Desig
                     {serializeTokenValue(value)}
                   </PreserveData>
                 )}
+              </TableCell>
+              <TableCell>
+                {originalRef ? (
+                  <Link href={`#${slugify(originalRef)}`}>
+                    <SubtleBadge>
+                      <Code>{originalRef}</Code>
+                    </SubtleBadge>
+                  </Link>
+                ) : null}
               </TableCell>
               <TableCell>
                 {tokenType ? (
