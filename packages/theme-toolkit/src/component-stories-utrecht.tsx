@@ -696,7 +696,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox default',
-    render: () => <Checkbox />,
+    render: () => <Checkbox aria-label="Example Checkbox component" />,
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.background-color',
@@ -714,7 +714,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Checked',
-    render: () => <Checkbox defaultChecked />,
+    render: () => <Checkbox defaultChecked aria-label="Example Checkbox component that is checked" />,
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.checked.border-color',
@@ -729,7 +729,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Disabled',
-    render: () => <Checkbox disabled />,
+    render: () => <Checkbox disabled aria-label="Example Checkbox component that is disabled" />,
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.disabled.border-color',
@@ -744,7 +744,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Active',
-    render: () => <Checkbox className="utrecht-checkbox--active" />,
+    render: () => (
+      <Checkbox className="utrecht-checkbox--active" aria-label="Example Checkbox component, simulating active state" />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.active.border-color',
@@ -759,7 +761,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox Hover',
-    render: () => <Checkbox className="utrecht-checkbox--hover" />,
+    render: () => (
+      <Checkbox className="utrecht-checkbox--hover" aria-label="Example Checkbox component, simulating hover" />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.hover.border-color',
@@ -774,7 +778,12 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox focus',
-    render: () => <Checkbox className="utrecht-checkbox--focus utrecht-checkbox--focus-visible" />,
+    render: () => (
+      <Checkbox
+        className="utrecht-checkbox--focus utrecht-checkbox--focus-visible"
+        aria-label="Example Checkbox component, simulating focus-visible"
+      />
+    ),
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.focus.border-color',
@@ -789,7 +798,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox indeterminate',
-    render: () => <Checkbox indeterminate />,
+    render: () => <Checkbox indeterminate aria-label="Example Checkbox component that is indeterminate" />,
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.indeterminate.border-color',
@@ -804,7 +813,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-checkbox',
     group: STORY_GROUPS['CHECKBOX'],
     name: 'Utrecht Checkbox invalid',
-    render: () => <Checkbox invalid />,
+    render: () => <Checkbox invalid aria-label="Example Checkbox component that is invalid" />,
     detectTokens: {
       anyOf: [
         'utrecht.checkbox.invalid.border-color',
@@ -2363,7 +2372,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['SELECT'],
     name: 'Utrecht Select',
     render: () => (
-      <Select defaultValue="2">
+      <Select defaultValue="2" aria-label="Example Select component with 3 options">
         <SelectOption value="1">Option 1</SelectOption>
         <SelectOption value="2">Option 2</SelectOption>
         <SelectOption value="3">Option 3</SelectOption>
@@ -2398,7 +2407,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Select: Disabled',
     state: true,
     render: () => (
-      <Select disabled defaultValue="2">
+      <Select disabled defaultValue="2" aria-label="Example disabled Select component">
         <SelectOption value="1">Option 1</SelectOption>
         <SelectOption value="2">Option 2</SelectOption>
         <SelectOption value="3">Option 3</SelectOption>
@@ -2419,7 +2428,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Select: Invalid',
     state: true,
     render: () => (
-      <Select invalid defaultValue="2">
+      <Select invalid defaultValue="2" aria-label="Example Select component with 3 options that is invalid">
         <SelectOption value="1">Option 1</SelectOption>
         <SelectOption value="2">Option 2</SelectOption>
         <SelectOption value="3">Option 3</SelectOption>
@@ -2440,7 +2449,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['SELECT'],
     name: 'Utrecht Select: Required',
     render: () => (
-      <Select required defaultValue="2">
+      <Select required defaultValue="2" aria-label="Example Select component with 3 options that is required">
         <SelectOption value="1">Option 1</SelectOption>
         <SelectOption value="2">Option 2</SelectOption>
         <SelectOption value="3">Option 3</SelectOption>
@@ -2454,7 +2463,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Select: Focus',
     state: true,
     render: () => (
-      <Select className="utrecht-select--focus" defaultValue="2">
+      <Select
+        className="utrecht-select--focus"
+        defaultValue="2"
+        aria-label="Example Select component with 3 options, simulating focus"
+      >
         <SelectOption value="1">Option 1</SelectOption>
         <SelectOption value="2">Option 2</SelectOption>
         <SelectOption value="3">Option 3</SelectOption>
@@ -2475,7 +2488,11 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Select: Focus Visible',
     state: true,
     render: () => (
-      <Select className="utrecht-select--focus-visible" defaultValue="2">
+      <Select
+        className="utrecht-select--focus utrecht-select--focus-visible"
+        defaultValue="2"
+        aria-label="Example Select component with 3 options, simulating focus-visible"
+      >
         <SelectOption value="1">Option 1</SelectOption>
         <SelectOption value="2">Option 2</SelectOption>
         <SelectOption value="3">Option 3</SelectOption>
@@ -2656,6 +2673,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['FORM_LABEL_DEFAULT'],
     name: 'Utrecht Form Label',
     render: () => <FormLabel>Label for form control</FormLabel>,
+    detectTokens: {
+      anyOf: ['utrecht.form-label.color', 'utrecht.form-label.font-weight', 'utrecht.form-label.font-size'],
+    },
   },
   {
     storyId: 'react-utrecht-form-label--disabled',
@@ -2663,12 +2683,18 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Form Label: Disabled',
     state: true,
     render: () => <FormLabel disabled>Label for disabled form control</FormLabel>,
+    detectTokens: {
+      anyOf: ['utrecht.form-label.disabled.color'],
+    },
   },
   {
     storyId: 'react-utrecht-form-label--checkbox',
     group: STORY_GROUPS['FORM_LABEL_CHECKBOX'],
     name: ' Utrecht Checkbox Form Label',
     render: () => <FormLabel type="checkbox">Label for checkbox option</FormLabel>,
+    detectTokens: {
+      anyOf: ['utrecht.form-label.checkbox.font-weight'],
+    },
   },
   {
     storyId: 'react-utrecht-form-label--checkbox-checked',
@@ -2676,12 +2702,18 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Checkbox Form Label: Checked',
     state: true,
     render: () => <FormLabel checked>Label for checked checkbox option</FormLabel>,
+    detectTokens: {
+      anyOf: ['utrecht.form-label.checked.color', 'utrecht.form-label.checked.font-weight'],
+    },
   },
   {
     storyId: 'react-utrecht-form-label--radio',
     group: STORY_GROUPS['FORM_LABEL_RADIO'],
     name: 'Utrecht Radio Button Form Label',
     render: () => <FormLabel type="radio">Label for radio button option</FormLabel>,
+    detectTokens: {
+      anyOf: ['utrecht.form-label.radio.color', 'utrecht.form-label.radio.font-weight'],
+    },
   },
   {
     storyId: 'react-utrecht-form-label--radio-checked',
