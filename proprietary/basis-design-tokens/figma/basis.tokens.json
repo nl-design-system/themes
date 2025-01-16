@@ -2018,6 +2018,16 @@
           "$value": "{basis.color.text.text-2}"
         }
       },
+      "pointer-target": {
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{basis.size.md}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{basis.size.md}"
+        }
+      },
       "focus": {
         "background-color": {
           "$value": "{basis.color.yellow}"
@@ -2993,7 +3003,7 @@
       "pointer-target": {
         "min-size": {
           "$type": "sizing",
-          "$value": "{basis.size.md}"
+          "$value": "{basis.pointer-target.min-inline-size}"
         }
       },
       "feedback": {
@@ -3551,7 +3561,7 @@
         },
         "size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "icon": {
           "icon-size": {
@@ -3927,7 +3937,7 @@
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -4145,11 +4155,11 @@
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "min-inline-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-inline-size}"
         },
         "column-gap": {
           "$type": "spacing",
@@ -5169,7 +5179,7 @@
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "padding-block-start": {
           "$type": "spacing",
@@ -5182,7 +5192,7 @@
         "backdrop": {
           "min-size": {
             "$type": "sizing",
-            "$value": "{utrecht.pointer-target.min-size}"
+            "$value": "{basis.pointer-target.min-block-size}"
           }
         }
       }
@@ -6008,11 +6018,11 @@
           },
           "min-block-size": {
             "$type": "sizing",
-            "$value": "{utrecht.pointer-target.min-size}"
+            "$value": "{basis.pointer-target.min-block-size}"
           },
           "min-inline-size": {
             "$type": "sizing",
-            "$value": "{utrecht.pointer-target.min-size}"
+            "$value": "{basis.pointer-target.min-inline-size}"
           },
           "disabled": {
             "background-color": {
@@ -6148,11 +6158,11 @@
           },
           "min-block-size": {
             "$type": "sizing",
-            "$value": "{utrecht.pointer-target.min-size}"
+            "$value": "{basis.pointer-target.min-block-size}"
           },
           "min-inline-size": {
             "$type": "sizing",
-            "$value": "{utrecht.pointer-target.min-size}"
+            "$value": "{basis.pointer-target.min-inline-size}"
           }
         },
         "font-family": {
@@ -6616,11 +6626,11 @@
           },
           "min-inline-size": {
             "$type": "sizing",
-            "$value": "{utrecht.pointer-target.min-size}"
+            "$value": "{basis.pointer-target.min-inline-size}"
           },
           "min-block-size": {
             "$type": "sizing",
-            "$value": "{utrecht.pointer-target.min-size}"
+            "$value": "{basis.pointer-target.min-block-size}"
           },
           "checked": {
             "active": {
@@ -7121,7 +7131,7 @@
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "padding-block-end": {
           "$type": "spacing",
@@ -7391,11 +7401,11 @@
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "min-inline-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-inline-size}"
         },
         "padding-block-end": {
           "$type": "spacing",
@@ -8251,7 +8261,7 @@
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "padding-block-end": {
           "$type": "spacing",
@@ -8409,7 +8419,7 @@
         },
         "min-block-size": {
           "$type": "sizing",
-          "$value": "{utrecht.pointer-target.min-size}"
+          "$value": "{basis.pointer-target.min-block-size}"
         },
         "padding-block-end": {
           "$type": "spacing",
