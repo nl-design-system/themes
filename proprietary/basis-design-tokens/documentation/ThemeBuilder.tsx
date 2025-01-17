@@ -36,8 +36,24 @@ export const ThemeBuilder = () => {
     <div>
       <h1>Design Tokens</h1>
       <h2>Imported tokens</h2>
-      <p>Paste your Project Wallace tokens here:</p>
+      <p>
+        Baseer je keuzes op een bestaande website door gebruik te maken van{' '}
+        <a href="https://www.projectwallace.com/design-tokens">Project Wallace</a>
+      </p>
+      <ol>
+        <li>Voer de url in van de organisatie waarvan je het thema wil instellen.</li>
+        <li>Klik op: Analyse URL.</li>
+        <li>Kies in de toolbar onderaan de pagina: 🖌️ Design Tokens.</li>
+        <li>Kies: Copy tokens.</li>
+        <li>Plak de tokens in de Text Area hier onder.</li>
+        <li>
+          Nu zullen deze waardes beschikbaar zijn in de verschillende invoer elementen om je design tokens in te
+          stellen.
+        </li>
+      </ol>
       <textarea
+        cols={42}
+        rows={21}
         onInput={(evt) => {
           try {
             const json = JSON.parse(evt.target.value);
