@@ -47,7 +47,22 @@ export const ThemeBuilder = () => {
           }
         }}
       ></textarea>
-      <h2>Colors</h2>
+      <h2>Maak nu je thema met de volgende stappen</h2>
+      <ol>
+        <li>
+          <a href="#colors">Kies de kleuren</a>
+        </li>
+        <li>
+          <a href="#fonts">Kies de lettertypes</a>
+        </li>
+        <li>
+          <a href="#typography-scale">Zet de typografie schaal</a>
+        </li>
+        <li>
+          <a href="#download">Download het thema</a>
+        </li>
+      </ol>
+      <h2 id="colors">Colors</h2>
       <datalist id="color">
         {projectWallaceJson?.Color
           ? Object.values(projectWallaceJson?.Color).map((token, index) => (
@@ -185,7 +200,7 @@ export const ThemeBuilder = () => {
           </div>
         ))}
       </div>
-      <h2>Fonts</h2>
+      <h2 id="fonts">Fonts</h2>
       <div>
         {[
           {
@@ -211,7 +226,7 @@ export const ThemeBuilder = () => {
           </div>
         ))}
       </div>
-      <h2>Typography scale</h2>
+      <h2 id="typography-scale">Typography scale</h2>
       <p>Vul een font-size in pixels in.</p>
       <div>
         {[
@@ -251,7 +266,7 @@ export const ThemeBuilder = () => {
           </div>
         ))}
       </div>
-      <h2>Finish making the theme</h2>
+      <h2 id="download">Finish making the theme</h2>
       <button
         onClick={(evt) => {
           evt.preventDefault();
