@@ -1370,22 +1370,35 @@ importers:
         version: 4.0.1
 
   proprietary/epe-design-tokens:
+    dependencies:
+      '@nl-design-system-unstable/basis-design-tokens':
+        specifier: workspace:*
+        version: link:../basis-design-tokens
     devDependencies:
       '@fontsource/source-sans-pro':
         specifier: 5.0.8
         version: 5.0.8
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens-definition
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../../packages/components-react/design-tokens-table-react
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../../packages/tokens-lib
       '@storybook/blocks':
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
       '@storybook/react':
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
+      '@tokens-studio/sd-transforms':
+        specifier: 1.2.3
+        version: 1.2.3(style-dictionary@4.0.1)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1401,12 +1414,18 @@ importers:
 
   proprietary/example-design-tokens:
     devDependencies:
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens-definition
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../../packages/components-react/design-tokens-table-react
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../../packages/tokens-lib
       '@storybook/blocks':
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
