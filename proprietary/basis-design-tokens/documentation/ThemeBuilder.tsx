@@ -66,19 +66,22 @@ export const ThemeBuilder = () => {
       <h2>Maak nu je thema met de volgende stappen</h2>
       <ol>
         <li>
-          <a href="#colors">Kies de kleuren</a>
+          <a href="#pick-colors">Kies de kleuren</a>
         </li>
         <li>
-          <a href="#fonts">Kies de lettertypes</a>
+          <a href="#pick-fonts">Kies de lettertypes</a>
         </li>
         <li>
-          <a href="#typography-scale">Zet de typografie schaal</a>
+          <a href="#pick-typography-scale">Zet de typografie schaal</a>
         </li>
         <li>
-          <a href="#download">Download het thema</a>
+          <a href="#pick-border-radius">Kies hoe rond de hoeken zijn</a>
+        </li>
+        <li>
+          <a href="#pick-download">Download het thema</a>
         </li>
       </ol>
-      <h2 id="colors">Colors</h2>
+      <h2 id="pick-colors">Colors</h2>
       <datalist id="color">
         {projectWallaceJson?.Color
           ? Object.values(projectWallaceJson?.Color).map((token, index) => (
@@ -282,6 +285,60 @@ export const ThemeBuilder = () => {
           </div>
         ))}
       </div>
+
+      {/* 
+      <h2 id="pick-line-height">Line Height</h2>
+      <datalist id="line-height">
+        {projectWallaceJson?.LineHeight
+          ? Object.values(projectWallaceJson?.LineHeight).map((token, index) => (
+              <option key={index}>{token['$value']}</option>
+            ))
+          : null}
+      </datalist> */}
+
+      <h2 id="pick-border-radius">Border Radius</h2>
+      <datalist id="border-radius">
+        {projectWallaceJson?.Radius
+          ? Object.values(projectWallaceJson?.Radius).map((token, index) => (
+              <option key={index}>{token['$value']}</option>
+            ))
+          : null}
+      </datalist>
+      <p>Vul border-radius in pixels in.</p>
+
+      <div>
+        {[
+          {
+            name: 'Small',
+            description:
+              'Wordt gebruikt voor de componenten die een achtergrondkleur of border hebben en iets afgeronde hoeken hebben. Bijvoorbeeld Badges en Cards',
+            tokenRef: 'basis.border-radius.sm',
+          },
+          {
+            name: 'Medium',
+            description:
+              'Wordt incidenteel gebruikt voor componenten die iets ronder zijn dan de sm standaard. Bijvoorbeeld voor Button.',
+            tokenRef: 'basis.border-radius.md',
+          },
+          // {
+          //   name: 'Large',
+          //   description: 'Wordt nog niet gebruikt in een geimplementeerd component ',
+          //   tokenRef: 'basis.border-radius.lg',
+          // },
+          {
+            name: 'Form Control',
+            description: 'Wordt gebruikt voor formulier elementen zoals Text Input, Text Area en Select',
+            tokenRef: 'basis.form-control.border-radius',
+          },
+        ].map((tokenData, index) => (
+          <div key={index}>
+            <h3>{tokenData.name}</h3>
+            {tokenData.description ? <p>{tokenData.description}</p> : null}
+            <input type="text" list="border-radius" onInput={handleSetToken(tokenData)} />
+          </div>
+        ))}
+      </div>
+
       <h2 id="download">Finish making the theme</h2>
       <button
         onClick={(evt) => {
