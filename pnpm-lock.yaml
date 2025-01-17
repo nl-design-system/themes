@@ -1033,18 +1033,30 @@ importers:
 
   proprietary/basis-design-tokens:
     devDependencies:
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens-definition
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../../packages/components-react/design-tokens-table-react
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../../packages/tokens-lib
+      '@radix-ui/colors':
+        specifier: 3.0.0
+        version: 3.0.0
       '@storybook/react':
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
       '@tokens-studio/sd-transforms':
         specifier: 1.2.3
         version: 1.2.3(style-dictionary@4.0.1)
+      '@types/lodash-es':
+        specifier: 4.17.12
+        version: 4.17.12
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -1054,12 +1066,21 @@ importers:
       '@utrecht/components':
         specifier: 7.4.0
         version: 7.4.0
+      bezier-easing:
+        specifier: 2.1.0
+        version: 2.1.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
+      colorjs.io:
+        specifier: 0.5.2
+        version: 0.5.2
       html-react-parser:
         specifier: 5.1.12
         version: 5.1.12(@types/react@18.3.3)(react@18.3.1)
+      lodash-es:
+        specifier: 4.17.21
+        version: 4.17.21
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
@@ -3648,6 +3669,9 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@radix-ui/colors@3.0.0':
+    resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
+
   '@rollup/plugin-babel@6.0.4':
     resolution: {integrity: sha512-YF7Y52kFdFT/xVSuVdjkV5ZdX/3YtmX0QulG+x0taQOtJdHYzVU61aSSkAgVJ7NOv6qPkIYiJSgSWWN/DM5sGw==}
     engines: {node: '>=14.0.0'}
@@ -5011,6 +5035,9 @@ packages:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
     engines: {node: '>=4'}
 
+  bezier-easing@2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
+
   binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
@@ -5247,6 +5274,9 @@ packages:
 
   colorjs.io@0.4.5:
     resolution: {integrity: sha512-yCtUNCmge7llyfd/Wou19PMAcf5yC3XXhgFoAh6zsO2pGswhUPBaaUh8jzgHnXtXuZyFKzXZNAnyF5i+apICow==}
+
+  colorjs.io@0.5.2:
+    resolution: {integrity: sha512-twmVoizEW7ylZSN32OgKdXRmo1qg+wT5/6C3xu5b9QsWzSFAhHLn2xd8ro0diCsKfCj1RdaTP/nrcW+vAoQPIw==}
 
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
@@ -11142,6 +11172,8 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
+  '@radix-ui/colors@3.0.0': {}
+
   '@rollup/plugin-babel@6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.19.2)':
     dependencies:
       '@babel/core': 7.26.0
@@ -12691,6 +12723,8 @@ snapshots:
     dependencies:
       is-windows: 1.0.2
 
+  bezier-easing@2.1.0: {}
+
   binary-extensions@2.2.0: {}
 
   bl@4.1.0:
@@ -12941,6 +12975,8 @@ snapshots:
   colorette@2.0.20: {}
 
   colorjs.io@0.4.5: {}
+
+  colorjs.io@0.5.2: {}
 
   combined-stream@1.0.8:
     dependencies:
