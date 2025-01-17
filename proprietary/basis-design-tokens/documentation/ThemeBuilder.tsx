@@ -1,4 +1,5 @@
-import { ChangeEvent, ReactNode, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { ChangeEvent, ReactNode, useState } from 'react';
 import { generateRadixColors } from './generateRadixColors';
 import { CodeBlock } from '@utrecht/component-library-react/dist/css-module';
 import set from 'lodash-es/set';
