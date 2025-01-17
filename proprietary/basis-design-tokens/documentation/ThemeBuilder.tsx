@@ -89,35 +89,7 @@ export const ThemeBuilder = () => {
             ))
           : null}
       </datalist>
-      <datalist id="font-family">
-        {projectWallaceJson?.FontFamily
-          ? Object.values(projectWallaceJson?.FontFamily).map((token, index) => (
-              <option key={index}>{token['$value']}</option>
-            ))
-          : null}
-      </datalist>
-      <datalist id="font-size">
-        {projectWallaceJson?.FontSize
-          ? Object.values(projectWallaceJson?.FontSize).map((token, index) => (
-              <option key={index}>{token['$value']}</option>
-            ))
-          : null}
-      </datalist>
-      <datalist id="line-height">
-        {projectWallaceJson?.LineHeight
-          ? Object.values(projectWallaceJson?.LineHeight).map((token, index) => (
-              <option key={index}>{token['$value']}</option>
-            ))
-          : null}
-      </datalist>
 
-      <datalist id="border-radius">
-        {projectWallaceJson?.Radius
-          ? Object.values(projectWallaceJson?.Radius).map((token, index) => (
-              <option key={index}>{token['$value']}</option>
-            ))
-          : null}
-      </datalist>
       <div>
         {[
           {
@@ -220,6 +192,13 @@ export const ThemeBuilder = () => {
         ))}
       </div>
       <h2 id="fonts">Fonts</h2>
+      <datalist id="font-family">
+        {projectWallaceJson?.FontFamily
+          ? Object.values(projectWallaceJson?.FontFamily).map((token, index) => (
+              <option key={index}>{token['$value']}</option>
+            ))
+          : null}
+      </datalist>
       <div>
         {[
           {
@@ -247,6 +226,13 @@ export const ThemeBuilder = () => {
       </div>
       <h2 id="typography-scale">Typography scale</h2>
       <p>Vul een font-size in pixels in.</p>
+      <datalist id="font-size">
+        {projectWallaceJson?.FontSize
+          ? Object.values(projectWallaceJson?.FontSize).map((token, index) => (
+              <option key={index}>{token['$value']}</option>
+            ))
+          : null}
+      </datalist>
       <div>
         {[
           {
