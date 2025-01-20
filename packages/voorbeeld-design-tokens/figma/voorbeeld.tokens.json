@@ -5459,7 +5459,7 @@
       }
     }
   },
-  "components/pagination": {
+  "components/page-number-navigation": {
     "todo": {
       "pagination": {
         "relative-link": {
@@ -6862,206 +6862,6 @@
             }
           }
         }
-      },
-      "step-marker": {
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{voorbeeld.border-width.md}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{utrecht.document.font-family}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{utrecht.document.font-size}"
-        },
-        "padding": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.block.snail}"
-        },
-        "margin": {
-          "$type": "spacing",
-          "$value": "0"
-        },
-        "size": {
-          "$type": "sizing",
-          "$value": "{voorbeeld.size.sm}"
-        },
-        "icon": {
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.icon.functional.size}"
-          }
-        },
-        "current": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.violet.600}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "transparent"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.document.inverse.color}"
-          },
-          "nested": {
-            "color": {
-              "$type": "color",
-              "$value": "{voorbeeld.document.inverse.color}"
-            }
-          }
-        },
-        "checked": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.feedback.positive.color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "transparent"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.document.inverse.color}"
-          }
-        },
-        "default": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{denhaag.step-marker.default.border-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.line.border-color}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.document.color}"
-          },
-          "nested": {
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.document.color}"
-            }
-          }
-        },
-        "disabled": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.50}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "transparent"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.color.gray.500}"
-          }
-        },
-        "error": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.feedback.negative.color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "transparent"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.document.inverse.color}"
-          }
-        },
-        "not-checked": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{utrecht.document.background-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{voorbeeld.line.border-color}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.document.color}"
-          }
-        },
-        "warning": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{utrecht.feedback.warning.color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "transparent"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{voorbeeld.document.inverse.color}"
-          },
-          "nested": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{denhaag.step-marker.warning.background-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{denhaag.step-marker.warning.border-color}"
-            }
-          }
-        },
-        "nested": {
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.size.2xs}"
-          },
-          "icon": {
-            "size": {
-              "$type": "sizing",
-              "$value": "12px"
-            }
-          }
-        },
-        "connector": {
-          "outline-width": {
-            "$type": "borderWidth",
-            "$value": "{voorbeeld.border-width.sm}"
-          },
-          "checked": {
-            "outline-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.feedback.positive.border-color}"
-            }
-          },
-          "default": {
-            "outline-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.line.border-color}"
-            }
-          },
-          "error": {
-            "outline-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.feedback.negative.border-color}"
-            }
-          },
-          "not-checked": {
-            "outline-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.line.border-color}"
-            }
-          },
-          "warning": {
-            "outline-color": {
-              "$type": "color",
-              "$value": "{utrecht.feedback.warning.border-color}"
-            }
-          }
-        }
       }
     }
   },
@@ -7805,6 +7605,210 @@
       }
     }
   },
+  "components/step-marker": {
+    "denhaag": {
+      "step-marker": {
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{voorbeeld.border-width.md}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{utrecht.document.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.document.font-size}"
+        },
+        "padding": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.block.snail}"
+        },
+        "margin": {
+          "$type": "spacing",
+          "$value": "0"
+        },
+        "size": {
+          "$type": "sizing",
+          "$value": "{voorbeeld.size.sm}"
+        },
+        "icon": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.icon.functional.size}"
+          }
+        },
+        "current": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.violet.600}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.document.inverse.color}"
+          },
+          "nested": {
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.document.inverse.color}"
+            }
+          }
+        },
+        "checked": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.feedback.positive.color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.document.inverse.color}"
+          }
+        },
+        "default": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{denhaag.step-marker.default.border-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.line.border-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
+          },
+          "nested": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.document.color}"
+            }
+          }
+        },
+        "disabled": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.50}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.color.gray.500}"
+          }
+        },
+        "error": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.feedback.negative.color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.document.inverse.color}"
+          }
+        },
+        "not-checked": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.document.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{voorbeeld.line.border-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
+          }
+        },
+        "warning": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.feedback.warning.color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.document.inverse.color}"
+          },
+          "nested": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{denhaag.step-marker.warning.background-color}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{denhaag.step-marker.warning.border-color}"
+            }
+          }
+        },
+        "nested": {
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.size.2xs}"
+          },
+          "icon": {
+            "size": {
+              "$type": "sizing",
+              "$value": "12px"
+            }
+          }
+        },
+        "connector": {
+          "outline-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.sm}"
+          },
+          "checked": {
+            "outline-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.feedback.positive.border-color}"
+            }
+          },
+          "default": {
+            "outline-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.line.border-color}"
+            }
+          },
+          "error": {
+            "outline-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.feedback.negative.border-color}"
+            }
+          },
+          "not-checked": {
+            "outline-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.line.border-color}"
+            }
+          },
+          "warning": {
+            "outline-color": {
+              "$type": "color",
+              "$value": "{utrecht.feedback.warning.border-color}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/switch": {
     "todo": {
       "switch": {
@@ -8343,7 +8347,7 @@
       }
     }
   },
-  "components/textbox": {
+  "components/text-input": {
     "utrecht": {
       "textbox": {
         "background-color": {
@@ -8598,6 +8602,12 @@
       "components/form-field-radio-option",
       "components/form-summary",
       "components/heading",
+      "components/heading-1",
+      "components/heading-2",
+      "components/heading-3",
+      "components/heading-4",
+      "components/heading-5",
+      "components/heading-6",
       "components/heading-group",
       "components/icon",
       "components/icon-only-button",
@@ -8608,7 +8618,7 @@
       "components/modal-dialog",
       "components/number-badge",
       "components/ordered-list",
-      "components/pagination",
+      "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
       "components/progress-list",
@@ -8619,11 +8629,12 @@
       "components/side-nav",
       "components/skip-link",
       "components/status-badge",
+      "components/step-marker",
       "components/switch",
       "components/table",
       "components/task-list",
       "components/textarea",
-      "components/textbox",
+      "components/text-input",
       "components/toolbar-button",
       "components/unordered-list"
     ]
