@@ -187,8 +187,8 @@ importers:
         specifier: 4.9.4
         version: 4.9.4
       '@gemeente-denhaag/design-tokens-components':
-        specifier: 0.2.3-alpha.403
-        version: 0.2.3-alpha.403
+        specifier: 1.0.1
+        version: 1.0.1
       '@gemeente-rotterdam/design-tokens':
         specifier: 1.0.0-alpha.34
         version: 1.0.0-alpha.34
@@ -3417,6 +3417,9 @@ packages:
 
   '@gemeente-denhaag/design-tokens-components@0.2.3-alpha.403':
     resolution: {integrity: sha512-FtvJYhNKhSkT/NQXRopBT4w0zKA3fRAyJqAD6y9ArYnteYXGmgQN1SVxfc1WXiUnvnEtcww0T0iVedNrJgybPA==}
+
+  '@gemeente-denhaag/design-tokens-components@1.0.1':
+    resolution: {integrity: sha512-APJsPW/ZZRv642/ZfyjMiC8trWzcwCFKHZzC8Ig5WgbCCJ5UZOvOe14ywvbXsLCj0BrdW2t6LquJNoyl8IoHig==}
 
   '@gemeente-denhaag/icons@0.2.3-alpha.401':
     resolution: {integrity: sha512-Myugm9st8TVJD3K7mhVvcok9xsMaXz7QoW8Hw9jI2kn36w2sHfxRFx6i2npba1a5rWymCrl3yjhjXkpkCVMirA==}
@@ -7018,6 +7021,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -10781,6 +10785,8 @@ snapshots:
   '@gemeente-denhaag/design-tokens-common@0.2.3-alpha.403': {}
 
   '@gemeente-denhaag/design-tokens-components@0.2.3-alpha.403': {}
+
+  '@gemeente-denhaag/design-tokens-components@1.0.1': {}
 
   '@gemeente-denhaag/icons@0.2.3-alpha.401(react@18.3.1)':
     dependencies:
