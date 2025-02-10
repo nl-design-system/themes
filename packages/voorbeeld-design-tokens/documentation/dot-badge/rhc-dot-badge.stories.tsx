@@ -7,7 +7,7 @@ const meta = {
   component: DotBadge,
   parameters: { actions: { disable: true } },
   args: {
-    'aria-label': 'Nieuw Bericht',
+    label: 'Nieuw Bericht',
   },
 } satisfies Meta<typeof DotBadge>;
 
