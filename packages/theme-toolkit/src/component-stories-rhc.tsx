@@ -7,6 +7,6 @@ export const RHC_COMPONENT_STORIES = [
     component: 'rhc-dot-badge',
     group: STORY_GROUPS['BADGES'],
     name: 'Rijkshuisstijl Dot Badge',
-    render: () => <DotBadge aria-label={'Nieuw bericht'} />,
+    render: () => <DotBadge label={'Nieuw bericht'} />,
   },
 ];
