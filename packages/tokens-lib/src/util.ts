@@ -77,8 +77,8 @@ export const getType = (arg: DesignToken): string | undefined =>
   arg && typeof arg.type === 'string'
     ? arg.type
     : typeof (arg as any)['$type'] === 'string'
-    ? (arg as any)['$type']
-    : undefined;
+      ? (arg as any)['$type']
+      : undefined;
 
 export const isColorToken = (arg: DesignToken): boolean => getType(arg) === 'color';
 

@@ -32,10 +32,10 @@ const serializeTokenValue = (value?: DesignTokenValue) =>
   typeof value === 'undefined' || value === null
     ? ''
     : typeof value === 'string'
-    ? value
-    : typeof value === 'number'
-    ? String(value)
-    : 'JSON';
+      ? value
+      : typeof value === 'number'
+        ? String(value)
+        : 'JSON';
 
 interface DesignTokensTableProps {
   tokens: StyleDictionaryDesignToken[];
@@ -69,8 +69,8 @@ export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: Desig
     (tokensDefinition instanceof Map
       ? (tokensDefinition as Map<string, StyleDictionaryDesignToken>)
       : Array.isArray(tokensDefinition)
-      ? arrayToMap(tokensDefinition)
-      : new Map<string, StyleDictionaryDesignToken>());
+        ? arrayToMap(tokensDefinition)
+        : new Map<string, StyleDictionaryDesignToken>());
   return (
     <Table
       className="sb-unstyled voorbeeld-theme"

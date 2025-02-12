@@ -8,8 +8,6 @@ module.exports = {
     '@types/node',
     'color',
     '@fontsource/*',
-    // Prettier 3 is async
-    'prettier',
     'eslint',
     'eslint-plugin-json',
     'style-dictionary',
