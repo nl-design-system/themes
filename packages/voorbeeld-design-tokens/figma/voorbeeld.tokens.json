@@ -1480,12 +1480,8 @@
     },
     "todo": {
       "accordion": {
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
         "section": {
-          "border-block-end-width": {
+          "border-width": {
             "$type": "borderWidth",
             "$value": "{voorbeeld.border-width.sm}"
           },
@@ -1503,20 +1499,6 @@
             "$type": "lineHeights",
             "$value": "{utrecht.document.line-height}"
           },
-          "expanded": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.color.gray.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{voorbeeld.interaction.color}"
-            }
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{utrecht.document.font-family}"
@@ -1525,6 +1507,10 @@
             "$type": "fontWeights",
             "$value": "{voorbeeld.document.strong.font-weight}"
           }
+        },
+        "row-gap": {
+          "$type": "spacing",
+          "$value": "0"
         }
       }
     }
