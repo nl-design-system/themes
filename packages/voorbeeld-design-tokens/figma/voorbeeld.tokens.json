@@ -5037,12 +5037,8 @@
             "$type": "sizing",
             "$value": "{voorbeeld.icon.functional.size}"
           }
-        }
-      }
-    },
-    "todo": {
-      "link-list": {
-        "item": {
+        },
+        "link": {
           "column-gap": {
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.beetle}"
@@ -5050,19 +5046,17 @@
           "text-decoration": {
             "$type": "textDecoration",
             "$value": "None"
-          },
-          "active": {
-            "text-decoration": {
-              "$type": "textDecoration",
-              "$value": "underline"
-            }
-          },
-          "focus": {
-            "text-decoration": {
-              "$type": "textDecoration",
-              "$value": "none"
-            }
-          },
+          }
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{utrecht.document.font-weight}"
+        }
+      }
+    },
+    "todo": {
+      "link-list": {
+        "link": {
           "hover": {
             "text-decoration": {
               "$type": "textDecoration",
