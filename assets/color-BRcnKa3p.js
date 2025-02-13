@@ -1,6 +1,0 @@
-import{j as o}from"./jsx-runtime-BlAj40OV.js";import{useMDXComponents as m}from"./index-BI1Biiay.js";import{ae as p}from"./index-DbrCauX2.js";import{t as n}from"./tokens--jZtbr5b.js";import{C as s,a as l}from"./ColorSearch-DsDbBGT-.js";import{c as i}from"./config-ESjlItmb.js";import"./index-Cs7sjTYM.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-_8Pxf7ED.js";import"../sb-preview/runtime.js";import"./index-BU4L-DQy.js";import"./extends-CF3RwP-h.js";import"./index-nrpnv_Jx.js";import"./index-DrFu-skq.js";import"./util-Dtr1Ejjm.js";import"./index-CVs1w2sG.js";import"./index-BQ5IbGbl.js";import"./design-tokens-DZ-ecn2W.js";import"./index-BJR50M2h.js";import"./clsx-B-dksMZM.js";function e(r){const t={h1:"h1",h2:"h2",...m(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(p,{title:"Zuid-Holland/Color"}),`
-`,o.jsx(t.h1,{id:"color",children:"Color"}),`
-`,o.jsx(t.h2,{id:"find-a-color",children:"Find a color"}),`
-`,o.jsx(s,{tokens:n[i.prefix].color}),`
-`,o.jsx(t.h2,{id:"color-palette",children:"Color palette"}),`
-`,o.jsx(l,{tokens:n[i.prefix].color})]})}function H(r={}){const{wrapper:t}={...m(),...r.components};return t?o.jsx(t,{...r,children:o.jsx(e,{...r})}):e(r)}export{H as default};
