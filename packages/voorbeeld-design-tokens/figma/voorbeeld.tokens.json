@@ -7279,18 +7279,26 @@
             "font-weight": {
               "$type": "fontWeights",
               "$value": "{voorbeeld.document.strong.font-weight}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.document.color}"
+            }
+          },
+          "active": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{voorbeeld.document.strong.font-weight}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.interaction.active.color}"
             }
           },
           "hover": {
             "color": {
               "$type": "color",
               "$value": "{voorbeeld.interaction.hover.color}"
-            }
-          },
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{voorbeeld.interaction.active.color}"
             }
           }
         },
@@ -7313,21 +7321,7 @@
     "todo": {
       "sidenav": {
         "link": {
-          "current": {
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.document.color}"
-            }
-          },
           "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{utrecht.focus.background-color}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.focus.color}"
-            },
             "text-decoration": {
               "$type": "textDecoration",
               "$value": "None"
