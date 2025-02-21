@@ -119,7 +119,7 @@ importers:
         version: link:../../tokens-lib
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.2
-        version: 1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)
+        version: 1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)
       '@nl-design-system/tsconfig':
         specifier: 1.0.0
         version: 1.0.0
@@ -128,7 +128,7 @@ importers:
         version: 3.20.0(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))
       '@testing-library/react':
         specifier: 15.0.7
         version: 15.0.7(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -138,12 +138,9 @@ importers:
       '@utrecht/component-library-react':
         specifier: 8.0.3
         version: 8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
       jest:
         specifier: 29.7.0
-        version: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+        version: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -801,9 +798,6 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
-      cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
@@ -900,7 +894,7 @@ importers:
         version: 3.20.0(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))
       '@types/prop-types':
         specifier: 15.7.12
         version: 15.7.12
@@ -913,12 +907,9 @@ importers:
       '@utrecht/icon':
         specifier: 1.3.0
         version: 1.3.0
-      cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
       jest:
         specifier: 29.7.0
-        version: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
+        version: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
       jest-environment-jsdom:
         specifier: 29.7.0
         version: 29.7.0
@@ -930,7 +921,7 @@ importers:
         version: 4.0.1
       ts-jest:
         specifier: 29.2.4
-        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))(typescript@5.5.4)
+        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))(typescript@5.5.4)
       tsx:
         specifier: 4.17.0
         version: 4.17.0
@@ -5340,11 +5331,6 @@ packages:
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
-  cross-env@7.0.3:
-    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
-    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
-    hasBin: true
-
   cross-spawn@5.1.0:
     resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
 
@@ -7018,6 +7004,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -11123,7 +11110,7 @@ snapshots:
 
   '@nl-design-system/component-index@1.0.0-alpha.30': {}
 
-  '@nl-design-system/rollup-config-react-component@1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)':
+  '@nl-design-system/rollup-config-react-component@1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)':
     dependencies:
       '@babel/core': 7.26.0
       '@rollup/plugin-babel': 6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.19.2)
@@ -11132,7 +11119,7 @@ snapshots:
       rollup: 4.19.2
       rollup-plugin-node-externals: 7.1.3(rollup@4.19.2)
       rollup-plugin-peer-deps-external: 2.2.4(rollup@4.19.2)
-      rollup-plugin-postcss: 4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+      rollup-plugin-postcss: 4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
     transitivePeerDependencies:
       - '@types/babel__core'
       - postcss
@@ -13096,10 +13083,6 @@ snapshots:
 
   create-require@1.1.1:
     optional: true
-
-  cross-env@7.0.3:
-    dependencies:
-      cross-spawn: 7.0.3
 
   cross-spawn@5.1.0:
     dependencies:
@@ -16285,13 +16268,13 @@ snapshots:
     dependencies:
       postcss: 8.4.40
 
-  postcss-load-config@3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
+  postcss-load-config@3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)):
     dependencies:
       lilconfig: 2.1.0
       yaml: 1.10.2
     optionalDependencies:
       postcss: 8.4.40
-      ts-node: 10.9.2(@types/node@22.10.9)(typescript@5.5.4)
+      ts-node: 10.9.2(@types/node@20.14.14)(typescript@5.5.4)
 
   postcss-media-query-parser@0.2.3: {}
 
@@ -16826,7 +16809,7 @@ snapshots:
     dependencies:
       rollup: 4.19.2
 
-  rollup-plugin-postcss@4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
+  rollup-plugin-postcss@4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)):
     dependencies:
       chalk: 4.1.2
       concat-with-sourcemaps: 1.1.0
@@ -16835,7 +16818,7 @@ snapshots:
       p-queue: 6.6.2
       pify: 5.0.0
       postcss: 8.4.40
-      postcss-load-config: 3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+      postcss-load-config: 3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       postcss-modules: 4.3.1(postcss@8.4.40)
       promise.series: 0.2.0
       resolve: 1.22.8
@@ -17534,25 +17517,6 @@ snapshots:
       typescript: 5.5.4
 
   ts-dedent@2.2.0: {}
-
-  ts-jest@29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))(typescript@5.5.4):
-    dependencies:
-      bs-logger: 0.2.6
-      ejs: 3.1.10
-      fast-json-stable-stringify: 2.1.0
-      jest: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
-      jest-util: 29.7.0
-      json5: 2.2.3
-      lodash.memoize: 4.1.2
-      make-error: 1.3.6
-      semver: 7.6.2
-      typescript: 5.5.4
-      yargs-parser: 21.1.1
-    optionalDependencies:
-      '@babel/core': 7.26.0
-      '@jest/transform': 29.7.0
-      '@jest/types': 29.6.3
-      babel-jest: 29.7.0(@babel/core@7.26.0)
 
   ts-jest@29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))(typescript@5.5.4):
     dependencies:
