@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import config from '../src/config.json';
 
 const meta = {
-  title: 'Basis',
+  title: 'Basis Thema',
   component: ComponentStories,
   parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: false } },
   args: { config, showAll: false },
@@ -12,4 +12,4 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const Components: Story = { parameters: { theme: `${config.prefix}` } };
+export const Components: Story = { parameters: { theme: `${config.prefix}-theme` } };

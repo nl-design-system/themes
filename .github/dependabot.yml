@@ -5,12 +5,25 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    reviewers:
+      - "nl-design-system/kernteam-dependabot"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
-    versioning-strategy: "increase-if-necessary"
+    groups:
+      patch-and-minor-dependencies:
+        applies-to: "version-updates"
+        update-types:
+          - "patch"
+          - "minor"
     ignore:
       # Color package uses ES6 syntax from v4+ which is not compatible with our setup
       - dependency-name: "color"
-        update-types: ["version-update:semver-major"]
+        update-types:
+          - "version-update:semver-major"
+      # Keep @types/node in line with the version of node in the repository
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
+    versioning-strategy: "increase-if-necessary"

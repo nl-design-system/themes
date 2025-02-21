@@ -1,0 +1,12 @@
+{
+  "extends": "@nl-design-system/tsconfig",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["DOM", "ESNext"],
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "outDir": "./dist/",
+    "rootDir": "./src/"
+  },
+  "include": ["src/**/*"]
+}

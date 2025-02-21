@@ -1,0 +1,19 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 NL Design System Community
+ * All rights reserved
+ */
+
+@import "../dist/mixin";
+@import "../dist/color-scheme-dark/mixin";
+
+.purmerend-theme {
+  @include purmerend-theme;
+}
+
+@media (prefers-color-scheme: dark) {
+  .purmerend-theme--media-query,
+  .purmerend-theme--media-query-color-scheme {
+    @include purmerend-theme--color-scheme-dark;
+  }
+}

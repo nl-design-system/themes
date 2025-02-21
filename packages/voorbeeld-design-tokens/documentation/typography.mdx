@@ -1,0 +1,54 @@
+import { Meta } from "@storybook/blocks";
+import { FontDropTarget } from "@nl-design-system-unstable/theme-toolkit/src/FontDropTarget";
+import tokens from "../dist/tokens.json";
+import config from "../src/config.json";
+
+<Meta title="Voorbeeld Thema/Typography" />
+
+export const typography = tokens[config.prefix]["typography"];
+
+export const textContent = "Tweede Kamerverkiezingen gaan anders dan anders";
+export const renderScale = (scale, fontFamily) => (
+  <div>
+    {Object.entries(scale).map(([key, size]) => {
+      return (
+        <div key={key}>
+          <h3>{key}</h3>
+          {size["description"] && <p>{size["description"]}</p>}
+          <div
+            style={{
+              fontFamily: `var(--${fontFamily.path.join("-")})`,
+              fontSize: size["$value"],
+              fontWeight: typography["font-weight"]["normal"]["$value"],
+              lineHeight: typography["line-height"]["md"]["$value"],
+            }}
+          >
+            {textContent}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+);
+
+# Typography
+
+## Primary font
+
+<FontDropTarget
+  cssProperty="--voorbeeld-typography-font-family-primary"
+  defaultFontFamily={typography["font-family"]["primary"]["$value"]}
+  appearance="subtle"
+>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["primary"])}</div>
+</FontDropTarget>
+
+## Secondary font
+
+<FontDropTarget
+  cssProperty="--voorbeeld-typography-font-family-secondary"
+  defaultFontFamily={typography["font-family"]["secondary"]["$value"]}
+  appearance="subtle"
+>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["secondary"])}</div>
+</FontDropTarget>

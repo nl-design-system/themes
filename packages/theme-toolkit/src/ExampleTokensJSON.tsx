@@ -1,5 +1,5 @@
 import { CopyButton } from './CopyButton';
-import { DesignTokenTree, createEmptyDesignTokenTree } from './design-tokens';
+import { DesignTokenTree, createEmptyDesignTokenTree } from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 // eslint-disable-next-line no-unused-vars
 
 export interface ExampleTokensJSONProps {

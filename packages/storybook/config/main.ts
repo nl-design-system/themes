@@ -2,11 +2,11 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: [
-    '../../voorbeeld-design-tokens/documentation/{readme,color,design-tokens,typography}.mdx',
+    '../../voorbeeld-design-tokens/documentation/*.mdx',
     '../../voorbeeld-design-tokens/documentation/**/*.stories.{ts,tsx}',
-    '../../../proprietary/*/documentation/{readme,color,design-tokens,typography}.mdx',
+    '../../../proprietary/*/documentation/*.mdx',
     '../../../proprietary/*/documentation/*.stories.ts',
-    '../src/theme-builder/**/*.stories.{ts,tsx}',
+    '../src/**/*.stories.{ts,tsx}',
   ],
   framework: {
     name: '@storybook/react-vite',

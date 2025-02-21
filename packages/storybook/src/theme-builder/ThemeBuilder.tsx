@@ -3,8 +3,8 @@ import memfs from '@bundled-es-modules/memfs';
 import type { PropsWithChildren, ReactNode } from 'react';
 import { useState, useEffect } from 'react';
 import { ThemeBuilderStepObject } from './steps';
-import { DesignTokenTree } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens';
-import { treeToArray } from '@nl-design-system-unstable/theme-toolkit/dist/ExampleTokensCSS';
+import { DesignTokenTree } from '@nl-design-system-unstable/tokens-lib/dist/design-tokens';
+import { treeToArray } from '@nl-design-system-unstable/tokens-lib/dist/ExampleTokensCSS';
 import './ThemeBuilder.css';
 import './property.css';
 

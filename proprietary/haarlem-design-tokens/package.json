@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-unstable/haarlem-design-tokens",
-  "version": "1.0.0-alpha.181",
+  "version": "1.0.0",
   "author": "Community for NL Design System",
   "description": "Haarlem Design System design tokens for NL Design System",
   "website": "https://www.haarlem.nl/",
@@ -26,6 +26,7 @@
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
   },
   "devDependencies": {
+    "@nl-design-system-unstable/design-tokens-table-react": "workspace:*",
     "@nl-design-system-unstable/theme-toolkit": "workspace:*",
     "@storybook/blocks": "8.2.7",
     "@storybook/react": "8.2.7",

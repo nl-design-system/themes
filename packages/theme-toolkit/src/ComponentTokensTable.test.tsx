@@ -3,7 +3,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from '@jest/globals';
 import { ComponentTokensTable } from './ComponentTokensTable';
-import { createDesignToken } from './util';
+import { createDesignToken } from '@nl-design-system-unstable/tokens-lib/src/util';
 
 describe('Tokens table', () => {
   it('renders a simple text message when no tokens are found, instead of a table', () => {

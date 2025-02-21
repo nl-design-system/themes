@@ -21,6 +21,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   FORM_LABEL_RADIO: 'Form Label for Radio Button',
   EMPHASIS: 'Emphasis',
   FORM_FIELD_DESCRIPTION: 'Form Field Description',
+  FORM_FIELD_ERROR_MESSAGE: 'Form Field Error Message',
   STEPS: 'Steps',
 };
 
@@ -32,4 +33,8 @@ export interface ComponentStory {
   state?: boolean;
   inline?: boolean;
   render: () => ReactNode;
+  detectTokens?: {
+    anyOf?: string[];
+    allOf?: string[];
+  };
 }

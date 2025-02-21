@@ -1,9 +1,9 @@
-import { STORY_GROUPS } from './component-stories-util';
+import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 // import { Button, ProcessSteps, Avatar, Alert, BadgeCounter, Divider } from '@gemeente-denhaag/components-react';
 import { Status } from '@gemeente-denhaag/process-steps';
 // eslint-disable-next-line no-unused-vars
 
-export const DENHAAG_COMPONENT_STORIES = [
+export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-denhaag-status--default',
     component: 'denhaag-steps',
@@ -60,6 +60,12 @@ export const DENHAAG_COMPONENT_STORIES = [
       ></Status>
     ),
   },
+  // {
+  //   storyId: 'denhaag-process-steps--default',
+  //   detectTokens: {
+  //     anyOf: ['denhaag.process-steps.step-marker.background-color', 'denhaag.process-steps.step-marker.color'],
+  //   }
+  // },
   // {
   //   storyId: 'react-denhaag-avatar--default',
   //   component: 'denhaag-avatar',

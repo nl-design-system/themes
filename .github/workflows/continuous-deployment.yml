@@ -6,6 +6,10 @@ on:
       - main
   pull_request:
 
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
 jobs:
   continuous-integration:
     name: Continuous integration
@@ -13,46 +17,41 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+
       - name: Install pnpm package manager
-        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
+        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
         with:
           node-version-file: .nvmrc
           cache: pnpm
 
       - name: Install dependencies specified in package.json
-        run: |
-          pnpm install
-          pnpm ls --recursive
+        run: pnpm install
 
       - name: Run the lint script in package.json scripts
-        run: |
-          pnpm run --if-present lint
-
-      # - name: "Continuous Integration: public code validator"
-      #   uses: nl-design-system/publiccode-parser-action@latest
+        run: pnpm run --if-present lint
 
       - name: Run the build script in package.json scripts
-        run: |
-          pnpm run --if-present build
+        run: pnpm run --if-present build
 
       - name: Run the test script in package.json scripts
-        run: |
-          pnpm run --if-present test
+        run: pnpm run --if-present test
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@e28ff129e5465c2c0dcc6f003fc735cb6ae0c673 # v4.0.1
+        uses: codecov/codecov-action@13ce06bfc6bbe3ecf90edbbf1bc32fe5978ca1d3 # v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Publish to Chromatic
-        uses: chromaui/action@fdbe7756d4dbf493e2fbb822df73be7accd07e1c # v11.7.0
+        uses: chromaui/action@1fc59b137c52d2f7571c8cf0b40daad2794fd551 # v11.25.2
         if: |
           github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
@@ -62,32 +61,27 @@ jobs:
           storybookBuildDir: packages/storybook/dist/
 
       - name: Upload the Storybook artifact from the build step
-        uses: actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b # v4.3.4
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
-          name: storybook
           path: packages/storybook/dist/
-          retention-days: 1
 
   publish-storybook:
     runs-on: ubuntu-latest
     needs: continuous-integration
     if: github.ref == 'refs/heads/main'
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
     steps:
-      - name: Download code from GitHub
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-
-      - name: Download the Storybook artifact from the "Build" job
-        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
-        with:
-          name: storybook
-          path: packages/storybook/dist/
-
-      - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@94f3c658273cf92fb48ef99e5fbc02bd2dc642b2 # v4.6.3
-        with:
-          branch: gh-pages
-          folder: packages/storybook/dist/
+      - name: Deploy to GitHub Pages
+        id: deploy-pages
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
 
   publish-npm:
     runs-on: ubuntu-latest
@@ -96,29 +90,29 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Install pnpm package manager
-        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
+        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
         with:
           node-version-file: .nvmrc
 
       - name: Install dependencies specified in package.json
-        run: |
-          pnpm install
-          pnpm ls --recursive
+        run: pnpm install
 
       - name: Run the build script in package.json
-        run: |
-          pnpm run --if-present build
+        run: pnpm run --if-present build
+
+      - name: Check the release
+        run: pnpm run lint-release
 
       - name: Publish to GitHub repository
-        uses: changesets/action@aba318e9165b45b7948c60273e0b72fce0a64eb9 # v1.4.7
+        uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
         id: changeset
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

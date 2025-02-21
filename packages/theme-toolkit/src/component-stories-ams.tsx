@@ -1,4 +1,4 @@
-import { STORY_GROUPS } from './component-stories-util';
+import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 import {
   Accordion,
   Blockquote,
@@ -12,7 +12,7 @@ import {
   UnorderedList,
 } from '@amsterdam/design-system-react';
 
-export const AMS_COMPONENT_STORIES = [
+export const AMS_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-ams-button--default',
     component: 'ams-button',

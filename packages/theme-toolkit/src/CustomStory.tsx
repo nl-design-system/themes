@@ -1,11 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import { type PropsWithChildren } from 'react';
+import { Document } from '@utrecht/component-library-react';
+import { clsx } from 'clsx';
 
-const Canvas = ({ children }: PropsWithChildren) => {
+const Canvas = ({ className, children }: PropsWithChildren<{ className?: string }>) => {
   return (
-    <div
+    <Document
+      className={clsx(className, 'utrecht-document--surface')}
       style={{
-        backgroundColor: 'white',
         borderRadius: '4px',
         border: '1px solid rgba(0, 0, 0, 0.1)',
         boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px',
@@ -16,8 +18,8 @@ const Canvas = ({ children }: PropsWithChildren) => {
       }}
     >
       {children}
-    </div>
+    </Document>
   );
 };
 
-export const CustomStory = ({ children }: PropsWithChildren) => <Canvas>{children}</Canvas>;
+export const CustomStory = Canvas;

@@ -1,0 +1,43 @@
+{
+  "name": "@nl-design-system-community/nora-design-tokens",
+  "version": "1.7.1",
+  "author": "Community for NL Design System",
+  "description": "NL Design System design tokens for NORA",
+  "website": "https://noraonline.nl",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/themes.git",
+    "directory": "proprietary/nora-design-tokens"
+  },
+  "scripts": {
+    "clean": "rimraf -rf dist/",
+    "watch": "npm-run-all watch:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'figma/**/*.tokens.json'",
+    "build": "npm-run-all clean build:style-dictionary build:scss",
+    "build:scss": "sass --no-source-map src/:dist/",
+    "build:style-dictionary": "node ./style-dictionary.config.mjs"
+  },
+  "devDependencies": {
+    "@nl-design-system-unstable/design-tokens-table-react": "workspace:*",
+    "@nl-design-system-unstable/theme-toolkit": "workspace:*",
+    "@storybook/blocks": "8.2.7",
+    "@storybook/react": "8.2.7",
+    "@tokens-studio/sd-transforms": "1.2.8",
+    "chokidar-cli": "3.0.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "6.0.1",
+    "style-dictionary": "4.2.0"
+  },
+  "dependencies": {
+    "firacode": "6.2.0",
+    "source-sans": "3.46.0"
+  }
+}
