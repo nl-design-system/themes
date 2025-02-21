@@ -1,5 +1,19 @@
 # @nl-design-system-unstable/theme-toolkit
 
+## 1.3.0
+
+### Minor Changes
+
+- 9728475: Automatically detect stories for which design tokens are set
+- 2fed3ee: Allow configuring a `theme` on `CustomStory`
+  - automatically detect stories for which design tokens are set
+
+## 1.2.0
+
+### Minor Changes
+
+- a84ee6b: Add `<TokensDownloadLink>` component.
+
 ## 1.1.0
 
 ### Minor Changes

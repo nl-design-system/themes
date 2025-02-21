@@ -1,8 +1,17 @@
 // eslint-disable-next-line no-unused-vars
-import { StyleDictionaryDesignToken, StyleDictionaryTree } from './design-tokens';
+import {
+  StyleDictionaryDesignToken,
+  StyleDictionaryTree,
+} from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 import { useDropzone, type FileWithPath } from 'react-dropzone';
-import { isFigmaTokens, MigratableToken, migrateTheme, migrateTokensFile, prepareMigration } from './migrate-theme';
-import { kebabName, tokenRef } from './util';
+import {
+  isFigmaTokens,
+  MigratableToken,
+  migrateTheme,
+  migrateTokensFile,
+  prepareMigration,
+} from '@nl-design-system-unstable/tokens-lib/src/migrate-theme';
+import { kebabName, tokenRef } from '@nl-design-system-unstable/tokens-lib/src/util';
 import { useCallback, useEffect, useState } from 'react';
 import utrechtTokens from '@utrecht/component-library-design-tokens/dist/tokens.json';
 import { DropTarget } from './DropTarget';

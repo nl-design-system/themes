@@ -1,6 +1,6 @@
 import { forwardRef, HTMLAttributes, PropsWithChildren, ForwardedRef } from 'react';
 import { clsx } from 'clsx';
-import './DropTarget.css';
+// import './DropTarget.css';
 
 export interface DropTargetProps extends HTMLAttributes<HTMLDivElement> {
   appearance?: string | 'subtle';

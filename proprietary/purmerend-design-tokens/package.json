@@ -1,0 +1,51 @@
+{
+  "name": "@nl-design-system-community/purmerend-design-tokens",
+  "version": "1.2.2",
+  "author": "Community for NL Design System",
+  "description": "NL Design System design tokens voor Purmerend thema",
+  "website": "https://www.nldesignsystem.nl/",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/themes.git",
+    "directory": "packages/purmerend-design-tokens"
+  },
+  "scripts": {
+    "clean": "rimraf -rf dist/ src/generated/",
+    "watch": "npm-run-all watch:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
+    "build": "npm-run-all clean build:style-dictionary build:scss",
+    "build:scss": "sass --no-source-map src/:dist/",
+    "build:style-dictionary": "node ./style-dictionary.mjs"
+  },
+  "devDependencies": {
+    "@amsterdam/design-system-react": "0.11.0",
+    "@fontsource/cantarell": "5.1.0",
+    "@fontsource/fira-sans": "5.1.0",
+    "@fontsource/source-serif-pro": "5.1.0",
+    "@nl-design-system-community/design-tokens-definition": "workspace:*",
+    "@nl-design-system-unstable/basis-design-tokens": "workspace:*",
+    "@nl-design-system-unstable/design-tokens-table-react": "workspace:*",
+    "@nl-design-system-unstable/theme-toolkit": "workspace:*",
+    "@nl-design-system-unstable/tokens-lib": "workspace:*",
+    "@storybook/react": "8.2.7",
+    "@tokens-studio/sd-transforms": "1.2.3",
+    "@types/react": "18.3.3",
+    "@utrecht/color-sample-css": "1.4.0",
+    "@utrecht/component-library-react": "8.0.3",
+    "@utrecht/components": "7.4.0",
+    "chokidar-cli": "3.0.0",
+    "html-react-parser": "5.1.12",
+    "npm-run-all": "4.1.5",
+    "react": "18.3.1",
+    "rimraf": "6.0.1",
+    "style-dictionary": "4.0.1"
+  }
+}

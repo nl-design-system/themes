@@ -53,7 +53,7 @@ export const createDesignToken = (
 
 export const cssVariable = (token: StyleDictionaryDesignToken) => `var(--${token.path.join('-')})`;
 
-export const styleDictionaryRef = (token: StyleDictionaryDesignToken) => `{${token.path.join('.')}.value}`;
+export const styleDictionaryRef = (token: StyleDictionaryDesignToken) => `{${token.path.join('.')}}`;
 
 export const isToken = (arg: any): arg is DesignToken =>
   !!arg &&
@@ -72,6 +72,15 @@ const isDesignTokenMap = (item: any): item is DesignTokenMap =>
 // Utility to filter out non-color type tokens.
 export const isColorOrUnknown = (arg: DesignToken): boolean =>
   arg && typeof arg.type === 'string' ? arg.type === 'color' : true;
+
+export const getType = (arg: DesignToken): string | undefined =>
+  arg && typeof arg.type === 'string'
+    ? arg.type
+    : typeof (arg as any)['$type'] === 'string'
+      ? (arg as any)['$type']
+      : undefined;
+
+export const isColorToken = (arg: DesignToken): boolean => getType(arg) === 'color';
 
 export const getColors = <T extends DesignToken = DesignToken>(
   tokens: DesignTokenTree<T> | T[],

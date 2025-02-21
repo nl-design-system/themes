@@ -2,7 +2,10 @@ import { ComponentTokensTable } from './ComponentTokensTable';
 import { ExampleTokensCSS } from './ExampleTokensCSS';
 import { ExampleTokensJSON } from './ExampleTokensJSON';
 // eslint-disable-next-line no-unused-vars
-import { StyleDictionaryDesignToken, StyleDictionaryTree } from './design-tokens';
+import {
+  StyleDictionaryDesignToken,
+  StyleDictionaryTree,
+} from '@nl-design-system-unstable/tokens-lib/src/design-tokens';
 
 export interface ComponentTokensSectionProps {
   component: string;

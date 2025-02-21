@@ -1,4 +1,7 @@
-import * as xxx from 'lodash';
+import get from 'lodash-es/get';
+import set from 'lodash-es/set';
+import unset from 'lodash-es/unset';
+import cloneDeepWith from 'lodash-es/cloneDeepWith';
 import { DesignToken, DesignTokenTree, isDesignTokenDefinition, StyleDictionaryDesignToken } from './design-tokens';
 import { addPath, treeToArray } from './ExampleTokensCSS';
 import { createPath, kebabName } from './util';
@@ -24,8 +27,6 @@ export interface MigratableToken {
   newPath: string[];
 }
 
-const lodash = xxx.default;
-
 export const getRedirect = (token: DesignToken): string | undefined =>
   !!token && !!token['$extensions'] && !!token['$extensions']['nl.nldesignsystem.redirect']
     ? token['$extensions']['nl.nldesignsystem.redirect']
@@ -43,7 +44,7 @@ export const isFigmaTokens = (obj: any): obj is FigmaTokensFile =>
   Array.isArray(obj['$metadata']['tokenSetOrder']);
 
 export const migrateTokensFile = (file: FigmaTokensFile, metadata: DesignTokenTree): FigmaTokensFile => {
-  const newFile = lodash.cloneDeepWith(file, (arg: any) => arg);
+  const newFile = cloneDeepWith(file, (arg: any) => arg);
 
   const isPartialDesignTokenTree = (arg: [string, unknown]): arg is [string, DesignTokenTree] =>
     arg[0].charAt(0) !== '$' && !!arg[1] && typeof arg[1] === 'object';
@@ -77,8 +78,8 @@ export const prepareMigration = (
       const oldPath = (token as any).path as string[];
       return {
         metadataToken: token,
-        oldToken: lodash.get(tree, oldPath),
-        originalToken: lodash.get(theme, oldPath),
+        oldToken: get(tree, oldPath),
+        originalToken: get(theme, oldPath),
         oldPath,
         newPath: createPath(getRedirect(token) || ''),
       };
@@ -108,25 +109,25 @@ export const migrateTheme = (
     );
   }
 
-  let newTheme = lodash.cloneDeepWith(theme, (arg: any) => arg);
+  let newTheme = cloneDeepWith(theme, (arg: any) => arg);
 
   newTheme = migratableTokens.reduce((newTheme, { oldToken, originalToken, oldPath, newPath }) => {
     if (oldToken) {
       if (LOG) {
         console.log(`Migrate token: ${kebabName(newPath)}`);
       }
-      lodash.set(newTheme, newPath, originalToken);
+      set(newTheme, newPath, originalToken);
     }
 
     if (oldPath) {
-      lodash.unset(newTheme, oldPath);
+      unset(newTheme, oldPath);
 
       return oldPath.reduceRight((theme, _, index, arr) => {
         const partialPath = arr.slice(0, index);
-        const branch = lodash.get(theme, partialPath);
+        const branch = get(theme, partialPath);
 
         if (isEmptyObject(branch)) {
-          lodash.unset(theme, partialPath);
+          unset(theme, partialPath);
         }
         return theme;
       }, newTheme);

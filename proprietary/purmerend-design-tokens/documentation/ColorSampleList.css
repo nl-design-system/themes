@@ -1,0 +1,55 @@
+.color-sample-list {
+  display: inline-flex;
+  padding-block: 0;
+  padding-inline: 0;
+  border: 1px solid silver;
+  flex-wrap: nowrap;
+}
+
+.color-sample-list__item {
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.component-button,
+.color-sample-list__button,
+.color-sample-button {
+  /* `inline-size: min-intrinsic` size makes sense, but it is specifically neccessary for WebKit.
+   * The button should be no larger than its content, but WebKit uses a larger default width than other engines.
+   */
+  border-width: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  line-height: 1;
+  display: flex;
+  inline-size: min-intrinsic;
+  block-size: min-intrinsic;
+  min-block-size: 44px;
+  min-inline-size: 44px;
+
+  --utrecht-color-sample-inline-size: 100%;
+  --utrecht-color-sample-block-size: 44px;
+}
+
+.component-button,
+.component-button:hover,
+.color-sample-list__button:hover,
+.color-sample-button:hover {
+  outline: 2px solid black;
+  z-index: 1;
+}
+
+.component-button:focus {
+  outline: 4px solid blue;
+  z-index: 1;
+}
+
+.color-sample-grid {
+  --utrecht-color-sample-inline-size: 66px;
+}
+.color-sample-grid,
+.color-contrast-table {
+  inline-size: fit-content;
+}
