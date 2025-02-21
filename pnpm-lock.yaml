@@ -312,6 +312,9 @@ importers:
       '@open-formulieren/design-tokens':
         specifier: 0.52.1
         version: 0.52.1
+      '@rijkshuisstijl-community/design-tokens':
+        specifier: 1.0.0-alpha.161
+        version: 1.0.0-alpha.161
       '@storybook/addon-a11y':
         specifier: 8.2.7
         version: 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
@@ -531,6 +534,9 @@ importers:
       '@nl-design-system-unstable/tokens-lib':
         specifier: workspace:*
         version: link:../tokens-lib
+      '@rijkshuisstijl-community/components-react':
+        specifier: 1.0.0-alpha.136
+        version: 1.0.0-alpha.136(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.19.2)
@@ -961,6 +967,12 @@ importers:
       '@nl-design-system-unstable/tokens-lib':
         specifier: workspace:*
         version: link:../tokens-lib
+      '@rijkshuisstijl-community/components-react':
+        specifier: 1.0.0-alpha.136
+        version: 1.0.0-alpha.136(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@rijkshuisstijl-community/design-tokens':
+        specifier: 1.0.0-alpha.161
+        version: 1.0.0-alpha.161
       '@storybook/react':
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
@@ -3647,6 +3659,15 @@ packages:
   '@pkgr/core@0.1.1':
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@rijkshuisstijl-community/components-react@1.0.0-alpha.136':
+    resolution: {integrity: sha512-H/mRRE9XhKi0YPEjjLS9D/3Ywg3TPQB7rH5RiDc5XRvYecmIZl0sWLfhzjV5L2rfDOu02a160Mnk3u/dqWnksw==}
+    peerDependencies:
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
+
+  '@rijkshuisstijl-community/design-tokens@1.0.0-alpha.161':
+    resolution: {integrity: sha512-AabToaSFUf2Vt05DDXJqg8yE+04ZKL3kTS9KhlkhOeBcDLEY3L+9pnykZwvlM3D7wd9/CW+rvgLc+2AcitjMkg==}
 
   '@rollup/plugin-babel@6.0.4':
     resolution: {integrity: sha512-YF7Y52kFdFT/xVSuVdjkV5ZdX/3YtmX0QulG+x0taQOtJdHYzVU61aSSkAgVJ7NOv6qPkIYiJSgSWWN/DM5sGw==}
@@ -7018,6 +7039,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -11181,6 +11203,13 @@ snapshots:
     optional: true
 
   '@pkgr/core@0.1.1': {}
+
+  '@rijkshuisstijl-community/components-react@1.0.0-alpha.136(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@rijkshuisstijl-community/design-tokens@1.0.0-alpha.161': {}
 
   '@rollup/plugin-babel@6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.19.2)':
     dependencies:
