@@ -196,7 +196,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a variable assignment', () => {
-            expect(content).toContain('"utrechtButtonColor": "#0A2750"');
+            expect(content).toContain('"utrechtButtonColor": "#0a2750"');
           });
         });
       });
@@ -264,7 +264,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a property assignment', () => {
-            expect(content).toContain('"utrechtButtonColor": "#0A2750"');
+            expect(content).toContain('"utrechtButtonColor": "#0a2750"');
           });
         });
       });
@@ -296,7 +296,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it.skip('contains a property assignment', () => {
-            expect(content).toContain('"value": "#0A2750"');
+            expect(content).toContain('"value": "#0a2750"');
           });
         });
       });

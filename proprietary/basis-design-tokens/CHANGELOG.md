@@ -1,5 +1,24 @@
 # @nl-design-system-unstable/basis-design-tokens
 
+## 2.1.1
+
+### Patch Changes
+
+- e57282b: Convert percentages to unitless line-height values in the theme output.
+
+## 2.1.0
+
+### Minor Changes
+
+- 6a6099f: Add tokens to basis-theme:
+
+  - configure default activate and submit cursor values
+  - `utrecht.link` tokens for colors and text-decoration now fallback to component tokens, not common tokens
+  - replace `utrecht.document.color` with `basis.body.color`
+  - replace `utrecht.focus.color` with `basis.focus.color`
+  - replace `utrecht.focus.background-color` with `basis.focus.background-color`
+  - add `basis.color.focus.*` and `basis.color.selected.*` tokens
+
 ## 2.0.0
 
 ### Major Changes

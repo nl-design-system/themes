@@ -36,17 +36,14 @@ importers:
         specifier: 1.0.0-alpha.30
         version: 1.0.0-alpha.30
       '@types/node':
-        specifier: 20.14.14
-        version: 20.14.14
+        specifier: 22.10.9
+        version: 22.10.9
       '@typescript-eslint/eslint-plugin':
         specifier: 8.0.0
         version: 8.0.0(@typescript-eslint/parser@8.0.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       '@typescript-eslint/parser':
         specifier: 8.0.0
         version: 8.0.0(eslint@8.57.0)(typescript@5.5.4)
-      '@utrecht/component-library-css':
-        specifier: 4.2.0
-        version: 4.2.0
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -84,8 +81,8 @@ importers:
         specifier: 4.1.5
         version: 4.1.5
       prettier:
-        specifier: 2.8.8
-        version: 2.8.8
+        specifier: 3.4.2
+        version: 3.4.2
       pure-color:
         specifier: 1.3.0
         version: 1.3.0
@@ -122,7 +119,7 @@ importers:
         version: link:../../tokens-lib
       '@nl-design-system/rollup-config-react-component':
         specifier: 1.0.2
-        version: 1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)
+        version: 1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)
       '@nl-design-system/tsconfig':
         specifier: 1.0.0
         version: 1.0.0
@@ -131,7 +128,7 @@ importers:
         version: 3.20.0(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))
       '@testing-library/react':
         specifier: 15.0.7
         version: 15.0.7(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -139,20 +136,38 @@ importers:
         specifier: 18.3.11
         version: 18.3.11
       '@utrecht/component-library-react':
-        specifier: 7.1.0
-        version: 7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.0.3
+        version: 8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
       jest:
         specifier: 29.7.0
-        version: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+        version: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
       react:
         specifier: 18.3.1
         version: 18.3.1
       rollup:
         specifier: 4.19.2
         version: 4.19.2
+
+  packages/design-tokens-definition:
+    devDependencies:
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../tokens-lib
+      '@types/lodash-es':
+        specifier: 4.17.12
+        version: 4.17.12
+      '@utrecht/component-library-design-tokens':
+        specifier: 1.0.0
+        version: 1.0.0
+      lodash-es:
+        specifier: 4.17.21
+        version: 4.17.21
+      tsx:
+        specifier: 4.17.0
+        version: 4.17.0
 
   packages/storybook:
     devDependencies:
@@ -180,6 +195,9 @@ importers:
       '@nl-design-system-community/nora-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/nora-design-tokens
+      '@nl-design-system-community/purmerend-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/purmerend-design-tokens
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/amsterdam-design-tokens
@@ -332,7 +350,7 @@ importers:
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
       '@storybook/react-vite':
         specifier: 8.2.7
-        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.10.9)(sass@1.77.8))
       '@types/lodash':
         specifier: 4.17.9
         version: 4.17.9
@@ -340,20 +358,20 @@ importers:
         specifier: 18.3.3
         version: 18.3.3
       '@utrecht/component-library-react':
-        specifier: 7.1.0
-        version: 7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.0.3
+        version: 8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/components':
-        specifier: 6.2.0
-        version: 6.2.0
+        specifier: 7.4.0
+        version: 7.4.0
       '@utrecht/design-tokens':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.4.0
+        version: 2.4.0
       '@utrecht/icon':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/web-component-library-stencil':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 3.0.1
+        version: 3.0.1
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -380,7 +398,7 @@ importers:
         version: 4.0.1
       vite:
         specifier: 5.3.5
-        version: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+        version: 5.3.5(@types/node@22.10.9)(sass@1.77.8)
 
   packages/theme-logo: {}
 
@@ -524,7 +542,7 @@ importers:
         version: 15.2.3(rollup@4.19.2)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))
       '@testing-library/react':
         specifier: 15.0.7
         version: 15.0.7(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -535,248 +553,251 @@ importers:
         specifier: 18.3.3
         version: 18.3.3
       '@utrecht/accordion-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.6.0
+        version: 1.6.0
       '@utrecht/alert-dialog-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/alternate-lang-nav-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/article-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/backdrop-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/badge-counter-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/badge-data-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/badge-list-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.2.0
+        version: 2.2.0
       '@utrecht/badge-status-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/blockquote-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/breadcrumb-nav-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/button-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 2.2.0
+        version: 2.2.0
       '@utrecht/button-group-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/button-link-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/calendar-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/checkbox-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/code-block-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/color-sample-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/column-layout-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/combobox-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/component-library-design-tokens':
         specifier: 1.0.0
         version: 1.0.0
       '@utrecht/component-library-react':
-        specifier: 7.1.0
-        version: 7.1.0(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.0.3
+        version: 8.0.3(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/currency-data-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/custom-checkbox-css':
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 1.3.1
+        version: 1.3.1
       '@utrecht/data-list-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/data-placeholder-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/design-tokens':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.4.0
+        version: 2.4.0
       '@utrecht/digid-button-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/document-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/drawer-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/emphasis-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/form-field-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/form-field-description-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/form-field-error-message-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/form-fieldset-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/form-label-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/form-toggle-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/heading-1-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/heading-2-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/heading-3-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/heading-4-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/heading-5-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/heading-6-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/heading-group-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/html-content-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/iban-data-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/icon':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/index-char-nav-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/link-button-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/link-list-css':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.3.0
+        version: 2.3.0
       '@utrecht/link-social-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/list-social-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/listbox-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
+      '@utrecht/listbox-react':
+        specifier: 1.0.6
+        version: 1.0.6(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/logo-button-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/logo-image-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/map-control-button-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.2.0
+        version: 2.2.0
       '@utrecht/map-marker-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/multiline-data-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/nav-bar-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/nav-list-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/number-data-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/ordered-list-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/page-content-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/page-footer-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.1.0
+        version: 2.1.0
       '@utrecht/page-header-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/pagination-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/paragraph-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.2.0
+        version: 2.2.0
       '@utrecht/pre-heading-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/preserve-data-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/radio-button-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/search-bar-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.2.0
+        version: 2.2.0
       '@utrecht/separator-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/skip-link-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/spotlight-section-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/surface-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/textarea-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 2.2.0
+        version: 2.2.0
       '@utrecht/textbox-css':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.5.0
+        version: 1.5.0
       '@utrecht/top-task-link-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/top-task-nav-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       '@utrecht/unordered-list-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.4.0
+        version: 1.4.0
       '@utrecht/url-data-css':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -785,7 +806,7 @@ importers:
         version: 7.0.3
       jest:
         specifier: 29.7.0
-        version: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+        version: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
       jest-environment-jsdom:
         specifier: 29.7.0
         version: 29.7.0
@@ -806,7 +827,7 @@ importers:
         version: 4.0.1
       ts-jest:
         specifier: 29.2.4
-        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)))(typescript@5.5.4)
+        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))(typescript@5.5.4)
       tsx:
         specifier: 4.17.0
         version: 4.17.0
@@ -879,7 +900,7 @@ importers:
         version: 3.20.0(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))
       '@types/prop-types':
         specifier: 15.7.12
         version: 15.7.12
@@ -887,17 +908,17 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       '@utrecht/design-tokens':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.4.0
+        version: 2.4.0
       '@utrecht/icon':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.3.0
+        version: 1.3.0
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
       jest:
         specifier: 29.7.0
-        version: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+        version: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       jest-environment-jsdom:
         specifier: 29.7.0
         version: 29.7.0
@@ -909,7 +930,7 @@ importers:
         version: 4.0.1
       ts-jest:
         specifier: 29.2.4
-        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)))(typescript@5.5.4)
+        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))(typescript@5.5.4)
       tsx:
         specifier: 4.17.0
         version: 4.17.0
@@ -928,6 +949,9 @@ importers:
       '@fontsource/source-serif-pro':
         specifier: 5.1.0
         version: 5.1.0
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../design-tokens-definition
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../components-react/design-tokens-table-react
@@ -950,11 +974,11 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       '@utrecht/component-library-react':
-        specifier: 7.1.0
-        version: 7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.0.3
+        version: 8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/components':
-        specifier: 6.2.0
-        version: 6.2.0
+        specifier: 7.4.0
+        version: 7.4.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1025,11 +1049,11 @@ importers:
         specifier: 18.3.3
         version: 18.3.3
       '@utrecht/component-library-react':
-        specifier: 7.1.0
-        version: 7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.0.3
+        version: 8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/components':
-        specifier: 6.2.0
-        version: 6.2.0
+        specifier: 7.4.0
+        version: 7.4.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1474,11 +1498,11 @@ importers:
         specifier: 18.3.3
         version: 18.3.3
       '@utrecht/component-library-react':
-        specifier: 7.1.0
-        version: 7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.0.3
+        version: 8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/components':
-        specifier: 6.2.0
-        version: 6.2.0
+        specifier: 7.4.0
+        version: 7.4.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1757,8 +1781,8 @@ importers:
         specifier: 8.2.7
         version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
       '@tokens-studio/sd-transforms':
-        specifier: 1.2.3
-        version: 1.2.3(style-dictionary@4.0.1)
+        specifier: 1.2.8
+        version: 1.2.8(style-dictionary@4.2.0(prettier@3.4.2))
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1769,8 +1793,8 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
       style-dictionary:
-        specifier: 4.0.1
-        version: 4.0.1
+        specifier: 4.2.0
+        version: 4.2.0(prettier@3.4.2)
 
   proprietary/provincie-zuid-holland-design-tokens:
     devDependencies:
@@ -1795,6 +1819,72 @@ importers:
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      style-dictionary:
+        specifier: 4.0.1
+        version: 4.0.1
+
+  proprietary/purmerend-design-tokens:
+    devDependencies:
+      '@amsterdam/design-system-react':
+        specifier: 0.11.0
+        version: 0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@fontsource/cantarell':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@fontsource/fira-sans':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@fontsource/source-serif-pro':
+        specifier: 5.1.0
+        version: 5.1.0
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens-definition
+      '@nl-design-system-unstable/basis-design-tokens':
+        specifier: workspace:*
+        version: link:../basis-design-tokens
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: workspace:*
+        version: link:../../packages/components-react/design-tokens-table-react
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../../packages/theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../../packages/tokens-lib
+      '@storybook/react':
+        specifier: 8.2.7
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
+      '@tokens-studio/sd-transforms':
+        specifier: 1.2.3
+        version: 1.2.3(style-dictionary@4.0.1)
+      '@types/react':
+        specifier: 18.3.3
+        version: 18.3.3
+      '@utrecht/color-sample-css':
+        specifier: 1.4.0
+        version: 1.4.0
+      '@utrecht/component-library-react':
+        specifier: 8.0.3
+        version: 8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/components':
+        specifier: 7.4.0
+        version: 7.4.0
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      html-react-parser:
+        specifier: 5.1.12
+        version: 5.1.12(@types/react@18.3.3)(react@18.3.1)
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -3278,6 +3368,9 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@fontsource/cantarell@5.1.0':
+    resolution: {integrity: sha512-0fMKwDHArqlfvmGwRFGv+xzkh6cP4X9otoXV0OvWUFx5r7IbYlcbH5x/L2N5r8DMwOlYbORuRvmqddRazhxAxg==}
+
   '@fontsource/clear-sans@4.5.3':
     resolution: {integrity: sha512-092h3D/WVUPVyGPFxdAqr4KwFsAxzxB1o01YY3qQGA3vB9zATYiCsXWGKXiztDzggIgJmC4TdUq+gEVZPZuXuA==}
 
@@ -3456,12 +3549,19 @@ packages:
     resolution: {integrity: sha512-dSYZh7HhCDtCKm4QakX0xFpsRDqjjtZf/kjI/v3T3Nwt5r8/qz/M19F9ySyOqU94SXBmeG9ttTul+YnR4LOxFA==}
     engines: {node: '>=6.0.0'}
 
+  '@jridgewell/resolve-uri@3.1.2':
+    resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
+    engines: {node: '>=6.0.0'}
+
   '@jridgewell/set-array@1.2.1':
     resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
     engines: {node: '>=6.0.0'}
 
   '@jridgewell/sourcemap-codec@1.4.15':
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
+
+  '@jridgewell/sourcemap-codec@1.5.0':
+    resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
@@ -3988,6 +4088,12 @@ packages:
     peerDependencies:
       style-dictionary: ^4.0.1
 
+  '@tokens-studio/sd-transforms@1.2.8':
+    resolution: {integrity: sha512-fEWiTjldXbWzkjZEE5uYqKZ35X2bOGRWBcOBrD9kUftNYfM3KNau+JEIyXZhaDIdJa/u/TKyrAqHH0b9r4iegA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      style-dictionary: ^4.1.4
+
   '@tokens-studio/types@0.5.1':
     resolution: {integrity: sha512-LdCF9ZH5ej4Gb6n58x5fTkhstxjXDZc1SWteMWY6EiddLQJVONMIgYOrWrf1extlkSLjagX8WS0B63bAqeltnA==}
 
@@ -4152,8 +4258,8 @@ packages:
   '@types/node@20.14.14':
     resolution: {integrity: sha512-d64f00982fS9YoOgJkAMolK7MN8Iq3TDdVjchbYHdEmjth/DHowx82GnoA+tVUAN+7vxfYUgAzi+JXbKNd2SDQ==}
 
-  '@types/node@22.1.0':
-    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
+  '@types/node@22.10.9':
+    resolution: {integrity: sha512-Ir6hwgsKyNESl/gLOcEz3krR4CBGgliDqBQ2ma4wIhEx0w+xnoeTq3tdrNw15kU3SxogDjOgv9sqdtLW8mIHaw==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -4272,74 +4378,99 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@utrecht/accordion-css@1.2.0':
-    resolution: {integrity: sha512-sQDGDizqbOWfwANNBTaPxsk7w/Awth5NlzIykoJhcZwAXTuX/WCk/85jTVlYYvELIpRJEN1Bm9TeHKVATq9+hg==}
+  '@utrecht/accordion-css@1.6.0':
+    resolution: {integrity: sha512-0PLGWCgRvFyR8kINBE4v8dsQxxdfKbmC5oEolOF2jGJ7NlmeTE29ODAzlcqwiocWOjM45jgXDK8aRVAle2DObg==}
 
-  '@utrecht/alert-dialog-css@1.1.0':
-    resolution: {integrity: sha512-DdHukkHzgQsw8gVcJdSwsH3htWdMHc35FJzdj2sgqmL9BMumNtq56RYxIPsEOBkWYQyAKXjnjRKLRa+IF6ATTw==}
+  '@utrecht/alert-dialog-css@1.4.0':
+    resolution: {integrity: sha512-lBCBtPVpDJXw8NnR1RaCc4GhCQJiLVgOGBNt5bZF3iuKoucNfDO3BP5MOxNNXPtfWOKJmGnFyBgyeNBtlI76Lg==}
 
-  '@utrecht/alternate-lang-nav-css@1.1.0':
-    resolution: {integrity: sha512-zXQuJcSAi9zMFL4WCx7JMtPq5vVjV4sWHzVwQY7oUkq6RmMVl5kQx4LMhKZjP85RfDvWm+aTcF5l1ORKcHZvYA==}
+  '@utrecht/alternate-lang-nav-css@1.3.0':
+    resolution: {integrity: sha512-SgIcDv+f/62SYFC7otbF4K4MIzhQYX6FIJBH69xJpDGEYrVpBnDDOQD7OkH9XVeCmFYvZ8pfx/RGYvVQeBtlug==}
 
-  '@utrecht/article-css@1.1.0':
-    resolution: {integrity: sha512-C4gbfTLAyxUbXoa4yWdStMkfgVacctazz+tVdmW1OGqAvfnEGtAxqEaTD/9IoNfEXYhyREPlYnuKOjPgU3lmqw==}
+  '@utrecht/article-css@1.4.0':
+    resolution: {integrity: sha512-kPj3CaOviuaDvCvEwmK4baq8WeBAKr0pVuLymK+P8Ddv8g5v5z6kfUEa49BqqFm5MgMQaATwlris/of1LG/LKQ==}
 
-  '@utrecht/backdrop-css@1.1.0':
-    resolution: {integrity: sha512-oTGdo7OdFH4FJRqcwJp1DpxZQAR5LQWITYe1IJ7X+px9Wuu+9zSabYGn2dfIZgWaPYUAvAboiUtMpn21Z9yE3g==}
+  '@utrecht/backdrop-css@1.4.0':
+    resolution: {integrity: sha512-94btKKs3V4aihN/KGFr0DY+UwpA+55KSzAHT2PIRiLFxoxCqgNXeUyH2ev0abmypMZ6Du2BrbWxreWA12yIJRg==}
 
-  '@utrecht/badge-counter-css@1.2.0':
-    resolution: {integrity: sha512-JWuoj2068z3YW0z3mLXOIMzGl31heRrz5Vy/92w8Mx+diwGnt8UGX0jeYSonE/5brGfyBhg3Vu9hAuxtGmzYiA==}
+  '@utrecht/badge-counter-css@1.4.0':
+    resolution: {integrity: sha512-cq90//8FLRw++OJxDZat0yu2thkgX8MdGCgKO2h1YOM/IE9Q4w+zVaDE+ImvXVMSyI5dJyUYIZBIVGFsAsjbpg==}
 
-  '@utrecht/badge-data-css@1.1.0':
-    resolution: {integrity: sha512-tvFcO/4pncIKICYG8ti5hORg9W+kQFKstr0mmnmJ5QtrydFvxZs1GG/tEniHn1ayT8CbX2Ym2EUDaC5B+5l3oA==}
+  '@utrecht/badge-data-css@1.4.0':
+    resolution: {integrity: sha512-ewxf14Orm5RVxrxQ4PS0T4+iG3HmbLfZDabJ4VC1yD1BTTD4lpMbUo1/t7BMenEYWlvodUoEIyj+k6E3NzsXtA==}
 
-  '@utrecht/badge-list-css@1.1.0':
-    resolution: {integrity: sha512-MwmOQrUNnr3u2hdHDfE/afxGujDUqn3mhznJfmxs8Q/OItpRK6tFee2rRy5+4DrBmqAWiJnGQ9DSD6ikO3rUwg==}
+  '@utrecht/badge-list-css@2.2.0':
+    resolution: {integrity: sha512-k/9icmEgPQUhZrzupIKtTl9tAUZkFZnaNpEHZp8kYJp9qAc9FY3ZGNBOr4XasqbdL/EZ4bg9oZrIb53jnzcRuQ==}
 
-  '@utrecht/badge-status-css@1.1.0':
-    resolution: {integrity: sha512-NlgFusz2zb8ULhlGSWJ7qVts7+9MsNRteMWP5isqi+XbJtC/7yECPwvzNnuUFfb8EcQUofZnWds+gCwywB8N6g==}
+  '@utrecht/badge-status-css@1.4.0':
+    resolution: {integrity: sha512-81g/nRq7OdIZY9P/VsQ3fZqsGkGNLKOJxWiszGSUw5x6N5AnaYbxqXziaIJNTQTHbBHBh47yc/1zcSJCkXoRDA==}
 
-  '@utrecht/blockquote-css@1.1.0':
-    resolution: {integrity: sha512-7KSf8zkyTslVqfeVhsn8jDt4/bgGT80VKH9XlbdXCVzc2dCw6C4ZgglkIgX6MR8z+WdDRjK6LhhvkSOOnxBK4g==}
+  '@utrecht/blockquote-css@1.5.0':
+    resolution: {integrity: sha512-KYfM8quxSa+tFBFxc8rTZ5EE0rhcCRbT+hWspa0/wcUWK+ACdZFzJwRg1H0z4tnJZz5WNHSisuIyl/uWbP6rwA==}
 
-  '@utrecht/breadcrumb-nav-css@1.1.0':
-    resolution: {integrity: sha512-n7D1X/QJSU3pzJ/HvjUqxgZ4XHFPmdVLJ5RYZnlm6ygFcVQMblz35rI4Rz2iK5foddkehAFiNmXzQPDOrUb9VQ==}
+  '@utrecht/breadcrumb-nav-css@1.4.0':
+    resolution: {integrity: sha512-mBe/Xczr2ekfT9sxl9svOtZJWrW0klbnWBDyhf4it4zOk5BKeeKxUYEjbOQghOQ5jqVRPdnRbIVZoKX0Vrq3sQ==}
 
-  '@utrecht/button-css@1.2.0':
-    resolution: {integrity: sha512-aYqnmuT5HOshv8Kr9IvBsJef+2KNKRNwLPQHxNC2fSGXWDFzROAeChUr0A1Ylt45aAApAD/bxxIHHBAeS1PwEA==}
+  '@utrecht/button-css@2.2.0':
+    resolution: {integrity: sha512-Fooo1EN8Dla4XKdqAnvSI3yCqnh4XkwX0jmMWgm9czcyj4ahVYayEIz7zEg34J8Gd5bMbFmeakyaIU9/A9YAvQ==}
 
-  '@utrecht/button-group-css@1.1.0':
-    resolution: {integrity: sha512-6E7DWPW6uyZ2ifS3xaCedTFLPItrjPsoDikDi4PvCl2QmUlAO/N3+SoXhqVSg4Hy9GMexabiFzf3b/wu4eFxsg==}
+  '@utrecht/button-group-css@1.4.0':
+    resolution: {integrity: sha512-NV12LA6wh0IaBuqjVVD+dZUzl4Sk0aKKiO3qL0BT7XQJvygDRjJq3M5d2pI9BDMMOb9jgT6VuIARST0Qk6JuxQ==}
 
-  '@utrecht/button-link-css@1.1.0':
-    resolution: {integrity: sha512-XW0llqu7Tin9lGuXWHpylGHmthVYAXLkae460G34sKqlPYh7FI9ilzq9KXnuBCJjccQP0AnJNjJtyGJKaOxyBQ==}
+  '@utrecht/button-link-css@1.3.0':
+    resolution: {integrity: sha512-zA86MZD4rEF2X1S9jYU4NuliEZ2zVvhkwTjYV5AT78+uQdC8qy+VjSvzc2je6bdSpq4OeB1lpytl/M57KDBhOg==}
 
-  '@utrecht/calendar-css@1.1.0':
-    resolution: {integrity: sha512-ZPJEWFCC0ObKHppK2f79Vuo6hnc+KcS6qRjAxUYOzjYwtYJp5lw+yjqsBLUgdcqOEMogj9cez6xGF+2gT2kkVw==}
+  '@utrecht/button-react@2.0.4':
+    resolution: {integrity: sha512-dU5V6eMrdymvV8IJWh6PbrPFKz/pWHAUtRvPAKRGMoOGcFlyJAp2ZPYDHYSc7NdKH2KGehvX29c8gZLd1plm4g==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/checkbox-css@1.2.0':
-    resolution: {integrity: sha512-vt+OhZEDn/wEayf+BYR37OMh4Dkh+WBx/huZjqDAkrFH869WGqIB4v0n3uj2j3lnvB3+O1tTr4aW7Ymkm7fqzg==}
+  '@utrecht/calendar-css@1.4.0':
+    resolution: {integrity: sha512-2ovq4ppuLPc3BIq7LPB8K+QpRORAQuBbwR8hyqx6VcdSg2v3EvLsMAEzBxHy/LHVfeY8K5/3SBZ29UjPuf7Ggw==}
 
-  '@utrecht/code-block-css@1.1.0':
-    resolution: {integrity: sha512-lH6pv5adSnxfnr032nfJRZxq5VKylTcvbdFDVoqPdFNqvJPBgV64ZXVrRMPHsOhJnvOO3im8Ytr2Wr9dedUaaQ==}
+  '@utrecht/calendar-react@1.0.8':
+    resolution: {integrity: sha512-5HbFn1kcRobjqIfBpx/nITsEKJnnrW9U241Sj+jcxjNc13W4HiVyyjgTArCOa1K7yU2FFvYh3bSem0jNQuvhDw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/color-sample-css@1.1.0':
-    resolution: {integrity: sha512-BdRKfVlx+CJppLmVev9qQ2C2nyOA0qhDdQTn0KI+Q68OeGz44Vlc8007JjHXNwd8tMWqLMeWeuexNxKpFhw5PQ==}
+  '@utrecht/checkbox-css@1.5.0':
+    resolution: {integrity: sha512-b+2BFQ/H2scrk5XyKcz13ZsTWDjdmWi00jydagfJ6aH4p6pMZLa7IU3msXkmL4tkZheGUzIDu0w9u4DDl0g1VA==}
 
-  '@utrecht/column-layout-css@1.1.0':
-    resolution: {integrity: sha512-/umRVD5Mq3o7MLetTp164yqsNa6iLVzLsnq3XoBRYNF8uF2sVZJ/r4ZI19MuAtk9q2s87KpYfh/3qZNDqJU4sw==}
+  '@utrecht/checkbox-react@1.0.5':
+    resolution: {integrity: sha512-LfQw2mGUvS7qH1aohHYKsndcwiH9JyxygvS9A1iA+I9VIDZQRO6G1gC9yOd9j8wdl6A5/I+XfJGx3usN5EnDOQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/combobox-css@1.2.0':
-    resolution: {integrity: sha512-qlsLpYq1Q0k7QD2MHh1QZxjvKjgCIdDxMQ18YLfScpx9nxUzyj8CEgkPXMk2MIfBHKY5QYIf1LR8otqechg+RA==}
+  '@utrecht/code-block-css@1.4.0':
+    resolution: {integrity: sha512-jZF2CeGvNQfaTAgh8r0tZPQsMrzqcyUFkmWg0pz9Gt66R8y3d3Le3UgfIp5KKN0yFm35kuZvXsjRIUwvPQly/A==}
 
-  '@utrecht/component-library-css@4.2.0':
-    resolution: {integrity: sha512-QvN0QEfVF9KJh8WD7gKJPhxMO1Eq8leB/x6h0JdkDrK7iRP+bceQtV74tn3JzkeP5LGZUsYulWXPhb6Hk6NKdw==}
+  '@utrecht/color-sample-css@1.4.0':
+    resolution: {integrity: sha512-AMVUEyg+7CkEh8xuI/hHt0QJ9p27wUi3BQOIsEvrl5Ah3Pfphomarg4uP99iS+goPjTsM0H+3hiJ6VxG0K6KaQ==}
+
+  '@utrecht/column-layout-css@1.5.0':
+    resolution: {integrity: sha512-XnhA/CscHCwy5i35dOORgagmi0Ajhu/56Zr6ghRP42D8r2pcTL5YCYRAJ3qXozeQ+2QbDqzoGsVkYtmcuaJAFg==}
+
+  '@utrecht/combobox-css@1.4.0':
+    resolution: {integrity: sha512-cY+gBxxL6DOlImsTSz0BPeoB9yhRCGLnK6TblArzlhB48IysfWoX+SlJQp/EfY7EJpJSqH041ExLcxhUvYVDEQ==}
+
+  '@utrecht/combobox-react@0.0.5':
+    resolution: {integrity: sha512-g3k3Vhj1uF8TtuKiqCalG8RKOFM38jow+T82FUVXoHoXDMtW2tWEFH6JpQY/BCk1KsBz18+dvRckrfwNCz+uEw==}
+    peerDependencies:
+      '@babel/runtime': ^7.23.6
+      react: '18'
+      react-dom: '18'
 
   '@utrecht/component-library-design-tokens@1.0.0':
     resolution: {integrity: sha512-m9SlyD4Z3aMqPPJ6FR1q7zcnXejQMPa+qDh0roLcmiMLDzO4UNwSezjALdrfbxMaGBK41la244EvY7zryLsIwg==}
 
-  '@utrecht/component-library-react@7.1.0':
-    resolution: {integrity: sha512-TPYDkuGWKfvhkdFBPtVfUMEXjqqabSia++Ewf2FyRYuCSud/ZxWCkw53Pf7HXlEloAngQMc/BbrJB4f2Ok9B+Q==}
+  '@utrecht/component-library-react@8.0.3':
+    resolution: {integrity: sha512-TmV3wdrnYJFwWjgofhChSK4BuOWf8YyhpfbJ7a5L6XlKRrJ8tn1I5Jx9UcqNWAwhD0Yq4rzllmrSIEq6O2dumA==}
     peerDependencies:
       '@babel/runtime': ^7.23.6
       date-fns: ^2.30.0
@@ -4358,188 +4489,258 @@ packages:
   '@utrecht/components@6.1.0':
     resolution: {integrity: sha512-4EXubBfxuRgO7jNiI5/E4Tk2BZGiWS3JwuYCDZf7QPMQ0fMtrHDh9SEm0UErJd+CxVVG7Bcy/fQvYXh1ormCNA==}
 
-  '@utrecht/components@6.2.0':
-    resolution: {integrity: sha512-psEKA9yJenaq1KgvSwITjwI5D+PEmphGuW9HOpSEyjfydqfOyDWwbSzEWmaesWnU0uhfdnnVeRZveQ1H84Mx5Q==}
+  '@utrecht/components@7.4.0':
+    resolution: {integrity: sha512-LWFJjJ7TF0eaoWq5TGrg7rNYnG+G5yIEJhuiwFlbICwSx2n+gZVbAE1dAW8YG2mGqveXZk38hBC2FWNE1tj1BQ==}
 
-  '@utrecht/currency-data-css@1.1.0':
-    resolution: {integrity: sha512-iFJFux7Yu3KqcrL2Tur5bYPRF+ty3tCvE+ZepBDqjRIlnGZnZ6jzhBSXtg9bUx13C9QqbRYNxpqoCzz6pWT+dA==}
+  '@utrecht/currency-data-css@1.3.0':
+    resolution: {integrity: sha512-9PrVvMLIy1YBd+IK8XsnJHCshKvGHUQVbX53hnkVvR76vaIrSMMUqmzu/GK6SXVlA9hb/ZjKkKPMBPfsJ3YLvA==}
 
-  '@utrecht/custom-checkbox-css@1.1.1':
-    resolution: {integrity: sha512-nU6T1eDEFSWBXmJ3eUuAlKy/0gPygXrGZhVmk7HUwyP+H0J6kAZd75t7d/ZlIjwzz5cWPF7uUbGD5637Z7KgHg==}
+  '@utrecht/custom-checkbox-css@1.3.1':
+    resolution: {integrity: sha512-iChJIVwvWIgc4j3cP+0fcGHnOmN4cIevg4X27TxEADsVyJvTgjYfsudjAt4OlzYD/Vx6nvnY+ElDQhmge0jc/g==}
 
-  '@utrecht/data-list-css@1.1.0':
-    resolution: {integrity: sha512-VuS/4JgomaMMJ98/0BknMtNbkFxEielULLAKXVrjnV5oFGgb1s3b43R7GfYmn3jzZ1bLVpEYUSEY7ZTNrfPTsw==}
+  '@utrecht/data-list-css@1.4.0':
+    resolution: {integrity: sha512-MdXOpWY1RJAZiyffGiZ9WtAJEUX76BcVHuen090rHWXHmqGZZ5coECFewcJmpGldV4Knex1Wc6EUUWa6RVJgeA==}
 
-  '@utrecht/data-placeholder-css@1.1.0':
-    resolution: {integrity: sha512-RlEbGzn7Y6NcZesI7tEeeikXhbbJ7fgelx7Kalm5Z5zuBHh2ioAsa2mVbSJiXJQZy9pcg7WtppZpGIowzZzvfg==}
+  '@utrecht/data-placeholder-css@1.4.0':
+    resolution: {integrity: sha512-gsyIHd7BlsbTc0iKIipDTYyZys89T7yDjgimbQxLAUhLBk/C/CAUTuAS4+bjQbXba6GfuGOr9TnvammAID+SXA==}
 
-  '@utrecht/design-tokens@1.1.0':
-    resolution: {integrity: sha512-1P9aVSL5xlBx2sFEzm1v+obgAPvwiLj4dg0vAZnFxLF6ZLbPPu0kP+tQhW3Gj945DU3qkwL/tIuimObYulYVAg==}
+  '@utrecht/design-tokens@2.4.0':
+    resolution: {integrity: sha512-TPLbXIgNOmoNbl6eTibBGkJ8sIH/8C77Bgot0LyLBe95/CQMCy9t172uB8C2SrtTKBsrxJwQhIUkHZ3YCGPvyA==}
 
-  '@utrecht/digid-button-css@1.1.0':
-    resolution: {integrity: sha512-y/uSBIytr6+DfxG9FDhlmVLT3QXFxWKST7XyCQyH2XKQSbSA/Ljgn5W7DFcAGvR50bzK+KSiXHCLyKDFXZr16A==}
+  '@utrecht/digid-button-css@1.4.0':
+    resolution: {integrity: sha512-1CEcZogvoKJHs5FKYav215/RdA3grBPWa4REK1JpXRoF91LkMD6ugESXkKq9jkX55jjYyo5/OabI0+zXsE0Sng==}
 
-  '@utrecht/document-css@1.1.0':
-    resolution: {integrity: sha512-navpa20l9U2c/gMDNzZ83MF2/VfXJBXVIGw6CoZ7s3uNbR92H6MAvvSn29C/Kg9QGjDAhDd7P5dIyjQ1KrwJfg==}
+  '@utrecht/document-css@1.4.0':
+    resolution: {integrity: sha512-qfRhPmv2d7Vq03J+HHTz/5Vi/i9CleifQtDjlbEq54pZxighDE4vfj8cqjlMDJVFtBd7iBWtO6jXmdZwrbm9Zw==}
 
-  '@utrecht/drawer-css@1.1.0':
-    resolution: {integrity: sha512-spOfqcBNCy9xv4YwaYjV6hY9wQLtYBZY2T+6ZeXwfdM+c7KrUbnI8pAyLJYoZR6/3N9QlmDFWsRnd2pIlzzm/g==}
+  '@utrecht/drawer-css@1.4.0':
+    resolution: {integrity: sha512-QwrtXGZosbkg1e6XiAwmz0bTP/dOIJtDasZx3qu1M2p+NAQKUH+J/p1ea0bwYhiqpF1Pds8CLa0MUmGFycsTig==}
 
-  '@utrecht/emphasis-css@1.1.0':
-    resolution: {integrity: sha512-j7yJ2HrLpHFquzE5wwW7qieIBjzDlVxn6NzgyPa+6a14AnKFYEXZWLZLCa+geWN8WC6wEg2bQ+iMhpw67JK8tA==}
+  '@utrecht/emphasis-css@1.4.0':
+    resolution: {integrity: sha512-SfJXLOq3LtkiNQNkW3cQq82Dr2XMOVNeSGHcITejm3u5SdcGLS20jHmpTNbhtuXDnEiUO73m3MP7b98D0E2WoA==}
 
-  '@utrecht/form-field-css@1.1.0':
-    resolution: {integrity: sha512-hrKz2vANKoO51/YgSItezODHsH2o5rdKPJgdQIWRBxqhAv/GNsNrwS9VC6Pg5veXyo/mWYJrU+ayojmDJ8nVnA==}
+  '@utrecht/fieldset-react@1.0.4':
+    resolution: {integrity: sha512-mgLV7fPTTWXb+8HatYqOOtHpnce4fACKNfo26OkHKw38nI9BV+VsDkALcHhgPDjfdhvnEXvJRRNx1YxBm+kDBw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/form-field-description-css@1.2.0':
-    resolution: {integrity: sha512-4Kgyzr7hgVWroZELiBznGA7K2PRa0oq7lbKXwQ1ZMq5yhyDKpUknLfoFTMpc+/PgBil3VqL0J43C3e1z9WDnFg==}
+  '@utrecht/form-field-checkbox-react@1.0.7':
+    resolution: {integrity: sha512-MAvd2GV8kwuN1b8Up72LrKI7b/wG5ueNjMFw0bLCgX6tfgWy9TCKCymupfzSgs5W2VSZRoqFD1FB10BBFHwZOg==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/form-field-error-message-css@1.2.0':
-    resolution: {integrity: sha512-ajQw4A8IHBSpz2TSZtBGkQir5w0K3Sh1bS0Yuabqb/gz4XLIgC2aENNz+DBEYzWp4akmujWXLuBGMpbnvA+86A==}
+  '@utrecht/form-field-css@1.5.0':
+    resolution: {integrity: sha512-PGqIYHYlqQKuADgIIQF4niS6XO1VeUv6OWrWDrLbFw0JkKtNwU9Y3ALtb5mSmgXAKOUHEtI7scwFqOxYgKztsw==}
 
-  '@utrecht/form-fieldset-css@1.1.0':
-    resolution: {integrity: sha512-OhPzQK65LqVoE0MFHJhmeMoiVO61zICAvQIDFtrRsErnddZL9gEhFGO10raCp16pAxUgo3UghpGcXMbh5rXVDQ==}
+  '@utrecht/form-field-description-css@1.5.0':
+    resolution: {integrity: sha512-LGImfd2xFuNPvycIQzwtTg2UIAo9T06MI/KoTbchB56lPzXLmictzfn2rGDzZuaemWTwkxqKUzorLXqdonZ22Q==}
 
-  '@utrecht/form-label-css@1.1.0':
-    resolution: {integrity: sha512-6DeD2tLgSm8PiflP4jCk5D70H4RptEP6aJnHmXJCc0mbhHz0obONkrcl9pf4urRLQ+DuYa8x9fiHQHvjNCTeRg==}
+  '@utrecht/form-field-description-react@1.0.4':
+    resolution: {integrity: sha512-fpD0Ccq66Q4MpfETtBzBCeaIamrJbOC7SBox5QrnAbVvjqCTwbEjbCQY+PWxC334JEevXguskWPE+UVlWkvnBg==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/form-toggle-css@1.1.0':
-    resolution: {integrity: sha512-UgdmtVLqnkJ8UpvAwQr2FUU1Z0LtSGdB8l888hNok6ScWsKPevu+sJXkmInrALNRycPow0pnPAS16hy+WI21nw==}
+  '@utrecht/form-field-error-message-css@1.5.0':
+    resolution: {integrity: sha512-VYkC40vinjvT764QBDh5kBdPVPfK4V02K99OnX9mGKPZvWaCL9UVH+DC8VPLIMWHKEHTaJLaqYGi2EwLybRcnA==}
 
-  '@utrecht/heading-1-css@1.1.0':
-    resolution: {integrity: sha512-ASpkzRzYifDlgvfvquj6hzPtIayxdPpJWN11oD1469HK2JtmBusT/P3Iz3H8YutBua7Nzm0lsHHzTfId51Cafg==}
+  '@utrecht/form-field-error-message-react@1.0.4':
+    resolution: {integrity: sha512-7azbLctPHHeEgBuWeqBDyMD9Y3XSSQTPyrUUvx97Mn1DU49tf7tHJzcLnHySTYkVR7Nu6m/Bv+ImRhrTLpt2Rw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/heading-2-css@1.1.0':
-    resolution: {integrity: sha512-pLD7DFl/rifLPb/Q2Xu7ARufTU3dLHde3bCOVnpZzNWq9hg7xkJbCcSoSSuxrlsZvIfwbRrOcRX6ES0+tejS8Q==}
+  '@utrecht/form-field-react@1.0.4':
+    resolution: {integrity: sha512-4lAqKqGyuUdvVGD8YetxC7+zG6APUVrCFX4RaHV0DX+J9/S+Wjq+5CSvbSlO+GBK1xYX+SzaOezGKy14akyYJw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/heading-3-css@1.1.0':
-    resolution: {integrity: sha512-9s8wtWR+TcQIPDSM2fsUDXXhL8ZmBGf0nZiQDlR2bvuLY0WOuFCpHWaV4JZQFkR9VOfJPIastoE9i2q5Jv7xCQ==}
+  '@utrecht/form-fieldset-css@1.4.0':
+    resolution: {integrity: sha512-TFwHrfd81BiIGzGMFiB2q2QJeyfWn6N77mirgmqR3K0waCUDMLw8IjdCl9/+HhigSM87rUSn//Zq/zBzfC2zXw==}
 
-  '@utrecht/heading-4-css@1.1.0':
-    resolution: {integrity: sha512-aHTzGGGt7zAEPg7n8oxkPT1xivWQM6sZZHVrNzLgLRf6fXddp5RDFnCa9f00YR/d35OLrOxDJMgkh/BuuqZeYQ==}
+  '@utrecht/form-label-css@1.5.0':
+    resolution: {integrity: sha512-IH5x0zeb4jk6TRROaigV6YVATuogpBwk0imvVXOia3nfvKWzFgxrg3bSrlMFC8YMc0qmJcSh7TkRP5q44qLNdw==}
 
-  '@utrecht/heading-5-css@1.1.0':
-    resolution: {integrity: sha512-hO8Ko16yDC7zrEoey67zQeQ0Y/gH/QTgoAOZq6E/jjymqEleO5j1xkALIrWlRXyrjh5dWk6hXCamWqIBGGLVDg==}
+  '@utrecht/form-label-react@1.0.4':
+    resolution: {integrity: sha512-spp1zos3rIcB8B8do78FQEF6uQmX38XxPFYUyaiN1JJ0YNXkOPoSceh4cqEL7964wWN8alufit6weAd1S2NRmA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/heading-6-css@1.1.0':
-    resolution: {integrity: sha512-Ufzz8vrt0Jb2CnxEj1ZgweIbHXvwQqixVm8IKvO8Sl3XNnZlXJkqOWvQrczcIrUkqj7qpBY5wp4ZA/f0ytljBg==}
+  '@utrecht/form-toggle-css@1.4.0':
+    resolution: {integrity: sha512-VgdCXOtZVmIiQipDMLl0xtORFJFkEQiLA/jmdaokSHgRw3y5F54dM3w/wJ8xhDIaWMwGNR27qLJqrpRqcnlFqw==}
 
-  '@utrecht/heading-group-css@1.1.0':
-    resolution: {integrity: sha512-FPS2zw+vl1m6+VWuRhN7N6KBOXPEYMLx+Cpxny2DGp7j39/BEMniwjfh3IlVywkFbYhuuoEXlWtlkpGqUCNEiQ==}
+  '@utrecht/heading-1-css@1.4.0':
+    resolution: {integrity: sha512-YNBWZKdRfR1xuvg+QZy7MM5dwRpnNc78Rcz4u1Opmeocuhm2QwocJuSCI3BjS/AUNaS8s6DC8S6a3HIA3jGAQw==}
 
-  '@utrecht/html-content-css@1.1.0':
-    resolution: {integrity: sha512-QMPLdd+NlH1i1MLNwYg8XxHpr6f0yAa12W2LEpWQQ2dLKwvNLVJAcPUuHJ6XwYfqYjupwvPwhHi5WXijjY24yw==}
+  '@utrecht/heading-2-css@1.4.0':
+    resolution: {integrity: sha512-4hLk0FcRE0asB0ZXmK2/JVId/3ywFSljwybuW1c2W/sa+rEfEZZE+l8+vtuG6JiY30omJpxQ+RjxltRi+pH8UQ==}
 
-  '@utrecht/iban-data-css@1.1.0':
-    resolution: {integrity: sha512-aqnTIUkVde1l735cLAM6e9T4pGUTIh94f8PIWB4U5K558i6hCrfja3+vX6+8YNdPFREf8gfSDqhzKf6zt5QutA==}
+  '@utrecht/heading-3-css@1.4.0':
+    resolution: {integrity: sha512-XzEqXT+IciQgoYG2NKpQo0hAfdlNjfbfti5rxr81EX30YqaHDB+qbLnhh2OR/9urBy+tXEb0TyUvTD4ER3GvQw==}
 
-  '@utrecht/icon@1.1.0':
-    resolution: {integrity: sha512-qG9Z4axYxKkGpE5EM4tFylUhqpjFqh0hU89Rq1wFubl98/XUxPH042qsxuBmcyhN5AWyJwlBdAw+sveoxD2dJg==}
+  '@utrecht/heading-4-css@1.4.0':
+    resolution: {integrity: sha512-NaQ0Xhzjijv94PwsYkaPwjOxsRz1U/69Yf7Sa0fRE12Dh37BCx+kfad+0zvG2gsuuRBmylYePg0GcGnk99lbPw==}
 
-  '@utrecht/index-char-nav-css@1.1.0':
-    resolution: {integrity: sha512-lDTlFLZ7M3BaWPAmIX0TEsNq2tisJnPn0yGkCQUprPb6JZ0JzKb7TXMZtHVjOsiXcRPD585Bh6ldic1zN2KhXg==}
+  '@utrecht/heading-5-css@1.4.0':
+    resolution: {integrity: sha512-HBqlgcEpYOzikOlpuCEB0N7jz9RvTKSEoeWT1dIAm5Mcgo80KpoJL6dPcdC3OmKtJQM+oABMnHYGyfQpueXXqg==}
 
-  '@utrecht/link-button-css@1.1.0':
-    resolution: {integrity: sha512-qGXFl0VlGhmM9qcnzMJQDBnj4tvBIkDgvojp7tsW5fOfjIWPCodvNaTlPOAx/lzwUG33rcONrT9MKRL0w60m2Q==}
+  '@utrecht/heading-6-css@1.4.0':
+    resolution: {integrity: sha512-GrcoRF3cHAWEILSDRYB1fsgEiKD67r6WJIR7EOfmHriRLCObQaVILrk1MVfpLYTch6+zwLP9RLey2XKMYAiNvA==}
 
-  '@utrecht/link-list-css@2.0.0':
-    resolution: {integrity: sha512-yXLnb3Q6ylXzFnjQ5qPSBiwiyKntiq71sgNUhqemUzBapE0W5opuurffkantNG2j5TFvaZ66eRVfVYHMscDTIQ==}
+  '@utrecht/heading-group-css@1.4.0':
+    resolution: {integrity: sha512-x4iiWC3YNSQ8t8muRtP9yBoQM9gigBlESZzvEGmyhsz9hRsbYGG8RhI3jXvI8L3PXWYxGuyTd7J5h2/4k63CKg==}
 
-  '@utrecht/link-social-css@1.1.0':
-    resolution: {integrity: sha512-l3Svj3QFC7FADIB597KqvXySTtA76Jf+StFrpK7jg9toGlW1+CiKQ3ncXWQFT33rHZK2D9hu1sCLCVKYS8kmLQ==}
+  '@utrecht/html-content-css@1.3.0':
+    resolution: {integrity: sha512-/IjlfcdOcQBqOGwYMOWTSbH5Dk1I2p3A9kg7HJgOL/oSXZUDFQpJrrF41cHxZ+qUSCDtdjGOeEiXv7Bw9o4s5Q==}
 
-  '@utrecht/list-social-css@1.1.0':
-    resolution: {integrity: sha512-MsMC5YU/2Y+XeMHBIqTIQ2BKV6yrWAAZ5md7HXXNUQFv2NLCDbkJ3/85JguEtJZwOQ5aB2Kx2QkoQbc9vmWm/Q==}
+  '@utrecht/iban-data-css@1.3.0':
+    resolution: {integrity: sha512-mey//OHtmp/UglR1ujozw+38+sTG0qXeBZCpQ11Ah9nEYsveGloVCY+q36TOE3CfgqxMsdPgVM70/aowfIfVMw==}
 
-  '@utrecht/listbox-css@1.1.0':
-    resolution: {integrity: sha512-mX/ECg7kgWc286vK7SxlEtbuBQiEMeJVgZ9mAWtexDv9LD6zdc2RH6JR2dJ4EEtnCAHrey+JOHY2yBtuVLpOag==}
+  '@utrecht/icon@1.3.0':
+    resolution: {integrity: sha512-UkjRq7sR9Lsj6T9Ap6zi3YEWLbJNxau4RBSblDGM8E4irHW5AjiUERfVp4v6ZwSvgEqyeNIwwep69FJhw2je4A==}
 
-  '@utrecht/logo-button-css@1.1.0':
-    resolution: {integrity: sha512-TukvjjrQv7J9/BzNgRmczdkRPjsBLkxoVEfQMCI5GtiU1+Ho+ZqSlEdBPqMQLzasBA21yLkqfVsLNdZHVQOPWQ==}
+  '@utrecht/index-char-nav-css@1.4.0':
+    resolution: {integrity: sha512-0ZNg9jBWY1hEbdJd9N8Bt/LvXV/PUHKrmb9008lO5vOJ2yI6OajTSBG8OyhLAah+JhcUEjYWST1QoK768qR7WA==}
 
-  '@utrecht/logo-image-css@1.1.0':
-    resolution: {integrity: sha512-sPLnY+oCgQuT3lEy3Gj2njUjuB+vCmDGPtcTgBiKBSx5kf8qhHnAMFkCvi7vNFq96TlmdASnXgYwYOGgc6xtDg==}
+  '@utrecht/link-button-css@1.3.0':
+    resolution: {integrity: sha512-EDieQBX1y3ZtoK7JNO/pP1HvsEgruSgtfvFsCrhG1NSdkDq1OvtcxXso0NeAFEREgJO2vhbWqzuMKxDu8vF6lQ==}
 
-  '@utrecht/map-control-button-css@1.1.0':
-    resolution: {integrity: sha512-KUAQnjaTYrt17ufEfSa2cmbWMS2PeKz48xZ9+WS512AiGZOdWeta4tqP4y52NYZgYoVSe/EPs5bOconkUP0xUg==}
+  '@utrecht/link-list-css@2.3.0':
+    resolution: {integrity: sha512-rpPJ6MJhnMscO6B5YdufXg9ERteiDsWZ4b3PlLxyWXQkIeKS+/By+b7ER7VJhYSKP+J9TIjuRFxGF3LTNhO8WA==}
 
-  '@utrecht/map-marker-css@1.1.0':
-    resolution: {integrity: sha512-xV7IZ9+xn3AVwRXH6cq7Z3rviqdfgUycV8QBZaC2qLTt9pjG+Alx7KVHL0SrP5axI0n84MDPMYxIoUqEtH4gYA==}
+  '@utrecht/link-react@1.0.4':
+    resolution: {integrity: sha512-0tOmJuQGL2oorw7oZCPZEsdyl2exanOH7X6L3lL4b89I3PHSrzBkLpTlvBXPTbIuZKDCKcdGXzDykmIhK/wlOw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/multiline-data-css@1.1.0':
-    resolution: {integrity: sha512-9ZqOZ6TVzA4TTAp64UWND99+8Bb6tVmO6GUrLHibs69hVT6sCMXpI0H9a0LtHHkFg5KURqGonISzzKcWXzvxIg==}
+  '@utrecht/link-social-css@1.4.0':
+    resolution: {integrity: sha512-cT7TTkCoj2p7h+b7tnGu8JbpLgZYkftg/3KBWrq5EIQvjdrX0w2yuRODy8o+Ns7EydNEEeYsNTiKuAbrxRO9lQ==}
 
-  '@utrecht/nav-bar-css@1.1.0':
-    resolution: {integrity: sha512-hdKxR3ZJW5yhs44OMAzuPtqaAV1IVlkt3RqyCMl5oTbhI6bLrucpueVPePA5AKLcxP7a0WeT3FSznsEzJq3nNg==}
+  '@utrecht/list-social-css@1.4.0':
+    resolution: {integrity: sha512-hDWsZb3vPe4lzKmc8OpFGz0fPdM3f8SUdCos9pQHjwvhyj6mjBrCoVDqUaBIkxpf9vHkae8lt/FPX5duhQCVCg==}
 
-  '@utrecht/nav-list-css@1.1.0':
-    resolution: {integrity: sha512-oYkGk2x5MHDi0YYz5MwL2tHwEBhV/h6HVLT5rRL9WYIsL5TSGwm9Q+zm+useOYH3/recv76irF5wozbj6osQlw==}
+  '@utrecht/listbox-css@1.5.0':
+    resolution: {integrity: sha512-LOwj0StrwBo5seZdqBU45L4x4AsJpfv9O/06y5Rrcvalc4YFBPTdx1D8bAiga74oaEMwWYPFY5AfgfEYjNpyZA==}
 
-  '@utrecht/number-data-css@1.1.0':
-    resolution: {integrity: sha512-xoXaDatsw2oTmxcOdBIfaqgNGtrsnshkYMnuLOYzv56lsiONIRhcFwV/I7uDhG+ku+HFX1IGVeIvfU6Ch4Llgg==}
+  '@utrecht/listbox-react@1.0.6':
+    resolution: {integrity: sha512-6zouydp1RGHhvpZ0+k+FdfB2zKuiD4G8VaVTSQahwqLz0ZMd7o6GvbCifvQysjogFRJpkHjek9jG/n09kOgvLQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/ordered-list-css@1.1.0':
-    resolution: {integrity: sha512-21Xde8zeMa/U97I/EOUjPlgxaSmdGVR65ysk4FN9pWS6sfMw9KVAJ0TBCIFl5rfSc7YB36f3Gmi/abZ7oeBkIA==}
+  '@utrecht/logo-button-css@1.4.0':
+    resolution: {integrity: sha512-7fUlSHNqBoGzeBfeE0c3c/9daEMuNwRJJmHf6bntb3YmRY9bcw8mZGbi5jZQwcsN3OjpVFpj88ufjX+WHOEFsw==}
 
-  '@utrecht/page-content-css@1.1.0':
-    resolution: {integrity: sha512-chGEXWuJBde1aA8T+P281s26jLbPvnmu7mKeTCMxPRArO8boRIHIzR5PDVj30Xn2DHOST2rxAJguZhY2ql3FlQ==}
+  '@utrecht/logo-image-css@1.4.0':
+    resolution: {integrity: sha512-aycM+jLFGLlwHzfnIC8HuKls2ZbWTvsAaOedin3+hyrLBEz1Cvo7r/aSi4y+8u2T+gANXga6+5c70KnD5trCVA==}
 
-  '@utrecht/page-footer-css@1.1.0':
-    resolution: {integrity: sha512-F0xilNR7dwugEj/BVivfPq9QuSi2C8FdSkUc6GNuh8RefR0dlhj7jApMUyCwa1657hGNmCAdOGroDj9lHFx4aw==}
+  '@utrecht/map-control-button-css@2.2.0':
+    resolution: {integrity: sha512-ZMaB1RLCVC5PERwtQ/6l7SeNuCYqbN0edbtpvHtn2448iPDFz15NauQpQv5N6dym+Yrws1KggSvPVKBG+OGMvQ==}
 
-  '@utrecht/page-header-css@1.1.0':
-    resolution: {integrity: sha512-rjxQKDsBhQ/9IprQ42tyANbwSoSacRs7HRhitJomngIP8tpDeSLlX0aQpMYDv0VypGvAM54W5I0+Dr8yxBlOWw==}
+  '@utrecht/map-marker-css@1.4.0':
+    resolution: {integrity: sha512-0UC5Oe2h2FAuVVsYzwzS8tFWpcrWJeohTC2u7tNSx0Q2J7FmUUDz0i2IkfPOcg1DlGS/WeZKq0dgGJRGR8MOsQ==}
 
-  '@utrecht/pagination-css@1.1.0':
-    resolution: {integrity: sha512-S7iSch+VoQu/gI+4+RDFLZw3CaIF83KIZjX2spVkpPvUnUiHee9TSxfmMto76GSN0K8f+2AQJVkC/DubGsQ6aQ==}
+  '@utrecht/multiline-data-css@1.3.0':
+    resolution: {integrity: sha512-6HribYZFBLbON5gYDsoBKHR3zB7b8mmsfZVE5zMcE62P32nPmw1SHoDkVzTEe3Sxc1o0NAqNOLZUk0U0b13sIg==}
 
-  '@utrecht/paragraph-css@1.1.0':
-    resolution: {integrity: sha512-HxkYL/W0tkHngucdBFHOK8t7OmUmlnz4uIXP4GBXdA299Hp+RGb/1vaH5A2RaIN0P7/4v6EkuV4lquOcHx0K0Q==}
+  '@utrecht/nav-bar-css@1.4.0':
+    resolution: {integrity: sha512-q2gC9Ks7+fktmTyDrulcxhyFa9yKLPYIsDZZxR52PPKCp5wFiCKSicwKcIcNwibwn77FM37HXVsMkgy4IzzDTw==}
 
-  '@utrecht/pre-heading-css@1.1.0':
-    resolution: {integrity: sha512-iDx0mSqU1d2SIJdEJCarNLecBY88+RJJlC6ruPlPSdtjZxsaOcOWFg6RWsE8e9xYA9oExxi1MWcZQynKIu4+hA==}
+  '@utrecht/nav-list-css@1.3.0':
+    resolution: {integrity: sha512-sLHPU39jjKTzO7pqh977VUC63vovDNHG7NsKzNZfWppvQfHCBzfCg5qi0hSdFxXOafDyVMx0+5eQGfbI+Zv6pQ==}
 
-  '@utrecht/preserve-data-css@1.1.0':
-    resolution: {integrity: sha512-SYdKQ28t2AEXsPohpMo5JAPvzg+4QGDVhkGPyRHMzI3EkmzZWZYqd6ufzATiEHf0bUgKSVU17iB2gN9VbKjipw==}
+  '@utrecht/number-data-css@1.4.0':
+    resolution: {integrity: sha512-ahIVb7fAMbLighpqx11tZ/xP5JWcw+PJRJRVv4wRn2xPSnMEbZLoDFyObSobBXfLUbLP+9VN06iQKClvrVt4FA==}
 
-  '@utrecht/radio-button-css@1.2.0':
-    resolution: {integrity: sha512-DpXttVtEA6BwjgoX2mNHZuQc8lYDsrg7k0QTp+6CDSEjhO6MRO4GAqKTOs56pEDKBghdn+3r7326Nr0VqZqsLQ==}
+  '@utrecht/ordered-list-css@1.4.0':
+    resolution: {integrity: sha512-rRgqDu1v4o0WEmefsz2PC3aaP3aVMk75mrFaJax4YiMSQe8Co1GpjVrDPykHxgOUvdOPBimFfh1ZKXRyZuKLwg==}
 
-  '@utrecht/search-bar-css@1.1.0':
-    resolution: {integrity: sha512-cIq0Gca8DpjlGoBUzF0Lq73tOwzhpNQhTHvUPv/+a9DHqt864A/nBG9F9juiMOqlXa+PmomLzLvAdndz4nTXAg==}
+  '@utrecht/page-content-css@1.4.0':
+    resolution: {integrity: sha512-/1DewTJea97h9d+eqCTKZy6/fZVIQCRsBVlh338SQG4YGnfS4A5hZBBAadAJMAOiy5KWbAcP/tTYNkmiSGLDQw==}
 
-  '@utrecht/separator-css@1.1.0':
-    resolution: {integrity: sha512-nszlcy9AlUaF1rZ7m7TfXwkB7TOuTrlOVQ2eZhSONe67y6uI+5Uushc81/pODfYDPUiqmKXpr5ifE/Lfvvirsg==}
+  '@utrecht/page-footer-css@2.1.0':
+    resolution: {integrity: sha512-wwYJEDGtwy3a2xxSHCLCiNXfsNc7xzp8d+G23uRKLoN2EHt+tE5TP0Qdm+bXFmltbDEsX+Q7bRnPN4wAkMP/fg==}
 
-  '@utrecht/skip-link-css@1.1.0':
-    resolution: {integrity: sha512-hJO0me7xhK0gSFNAE1gO1mJJsfekfccay4+RtxXO+MkCj7P3hhOa7/tAt4yRfoUpLU/uIhLXRr8Stq4AaIXtKA==}
+  '@utrecht/page-header-css@1.5.0':
+    resolution: {integrity: sha512-QB2l/cWhYZTcs9HVJG+/kf6cOCclNkqRGmVQ3hpc4pG0DC7w/GIzFquuVi0U62hqA0sqJ8TjPW5CqHesxrxLsQ==}
 
-  '@utrecht/spotlight-section-css@1.1.0':
-    resolution: {integrity: sha512-1qaG+hCwRDGWK5BZomJdhSfKtmVoGlGLFCA2wchrlPDylW6zOsPmlfPNpMyZbQShg97HPofxKdpzARLf1DwyFw==}
+  '@utrecht/pagination-css@1.4.0':
+    resolution: {integrity: sha512-I0vnGRHAc1sYcu5ZbJWj55MCT6attM8Eoc8BDnB8qQgY94GIB24heEmDPTrzs7sISdjgjQKcBMc76CEQH6PFFQ==}
 
-  '@utrecht/surface-css@1.1.0':
-    resolution: {integrity: sha512-EA4udTSHf/0xCR/uYbRSc744Q6bu/A+KBCisBK2zBBhcLzQPc0TT5x1MO43HiJwg8ZcY3mXinyRdlavGEdXjdA==}
+  '@utrecht/paragraph-css@2.2.0':
+    resolution: {integrity: sha512-jgFsFdz7xcqO14IhYEFx37dh4n1GjCfJM9iQsvo/Yr4zrknQHpGBWQcXMb548W19/4yHMnQnsSnivQGDbPdSug==}
 
-  '@utrecht/textarea-css@1.2.0':
-    resolution: {integrity: sha512-zDb/fs/4T+nyaakSjaXZ3l5gsJvyyLxFsxTy6k6HKx+i6hq5lRqguNBZ89CAojUO5PtfWL4y1vSgrg+4SlDyXA==}
+  '@utrecht/pre-heading-css@1.4.0':
+    resolution: {integrity: sha512-Jy3KL19n6omYMggb+OEQV7ebetn//GFkZZCJJaeFVnCoDdHFIIYPDLLBLikBx10Q9eH3YovdJcKaD/HeIsH2Pg==}
 
-  '@utrecht/textbox-css@1.2.0':
-    resolution: {integrity: sha512-b7bfn3Vo/iSepcglS1+jGyoUMpSfL0N7Dc0J8HKpAZSm8452I5s3SUHJyCiB/fsbM2F4ZFafwYT5n0rKucKZLQ==}
+  '@utrecht/preserve-data-css@1.3.0':
+    resolution: {integrity: sha512-Kg0NLsia0xbT+VxJx2BeEayKNUOq/n6WQOlrEVkt4d2ytdgXlrUIhq4w92pMjyUhykeHHCJWPSPVZUviEyF2Og==}
 
-  '@utrecht/top-task-link-css@1.1.0':
-    resolution: {integrity: sha512-oBzYDd5syw6sQmPlLElx0yq1dPx+4WRP4Xu6I5barqL+B36vcnUgZ2Sb5iBnceCuo8YISFzrrp4BW1cu39aSzA==}
+  '@utrecht/radio-button-css@1.5.0':
+    resolution: {integrity: sha512-N99LvKxLMl5l/fc++rAUohmNJ4FR6zJrQnA4aFN0GXRcOrL2/MDgoUnvfyo3AMoEQWjA/NNGfL32Whqk3ec2fg==}
 
-  '@utrecht/top-task-nav-css@1.1.0':
-    resolution: {integrity: sha512-T9AQD1W0z7JYYVDjqKqFpO90j5km6iF212TGv1L51SM3uLIqrhcxfaWjU8MqEA+SO1MZAJe53cHJ/SwyCU3KHg==}
+  '@utrecht/radio-button-react@1.0.4':
+    resolution: {integrity: sha512-pUcep0QygWwWAmdc44A3xI46ohZxIS7THjCQrJaO7EshTXfUOG8gqRkOaKmfTFLUjIENBCIIxVWWFI+hGAxRFA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
 
-  '@utrecht/unordered-list-css@1.1.0':
-    resolution: {integrity: sha512-eEYgyDwhsvod7xroprjGODijErpgyVOgr09u1K0OCmosJkUNFH0HiQRfqHVWkct9wGnyZqZlanX/NpFKdrixVg==}
+  '@utrecht/search-bar-css@2.2.0':
+    resolution: {integrity: sha512-9povIG5VECn6aVxpc1ENH03WZr5dkHK+zUObc4l4NbpO7fdz54LYS0qQLoRVzruJb+YlmOsnftEA4sBvyFD0sQ==}
 
-  '@utrecht/url-data-css@1.1.0':
-    resolution: {integrity: sha512-YsFVcj5H9oTOuqtAZt2r17H9fhVEfoIWXXSIirTqHNxd/JvTv57iHnAuiRc661e0OHmWQbP1tBLLnQJiR8m82w==}
+  '@utrecht/separator-css@1.4.0':
+    resolution: {integrity: sha512-KyBdIuGFk+JvLiURpn72N/1IMk9zXcTRYoCCI9DbBkzOgSYuR215suhVfM99lDLiinoUoXbQ6EbgGLcZ8wthEA==}
 
-  '@utrecht/web-component-library-stencil@1.4.0':
-    resolution: {integrity: sha512-1yoTlgjVo8LQpB5pq5T+aRgSjYgLi0lVB2OtHVPXiLN/xBi7JJSzwZBfFZuKwWUPJZCgJxxnL72GxfP+K/0uaA==}
+  '@utrecht/skip-link-css@1.5.0':
+    resolution: {integrity: sha512-lhn/mOcRtTuPKVow3G6unuctDHnTDEGFIS2nyT76Ri3KDGOyv5QvTlEp/blOXPMhUPnQV1eH6y13TmkSCCKyIA==}
+
+  '@utrecht/spotlight-section-css@1.5.0':
+    resolution: {integrity: sha512-K7RGcGorscg0v+xU987FkED4fDF8ovxAOjRodslH9dYtxNefBR5kW8HC9Kk+fPgzUfPPuM1BnFmQ2jOe11dezQ==}
+
+  '@utrecht/surface-css@1.4.0':
+    resolution: {integrity: sha512-QCehlqXIuvlbCV5yMoq8wbXNn6/VADOmwcqR5XA1nyQyZ82RBMKZkmNkMbDaITlJSIna8386AR4xHpzIXtltqg==}
+
+  '@utrecht/textarea-css@2.2.0':
+    resolution: {integrity: sha512-OFqAtwMpkRd+ME8Z9IIQiDd0rgrog88yOTgkQTTjWnKFzxDaq64CvY4SF78vzfco3cxMb4JqBPy4F7VOq55Kqw==}
+
+  '@utrecht/textbox-css@1.5.0':
+    resolution: {integrity: sha512-30VUpY1FsJVveas9vxBLb/dEeTE2bWIdZ6TSGgMmfFF/Nyp1phUIxqN4jZBsAjw1pstbfYrMpLlcSSSDJTdtRQ==}
+
+  '@utrecht/textbox-react@1.0.4':
+    resolution: {integrity: sha512-uquWQu33bJrWS/z/nQzZA/Tkk6wzI2Oae/eVMZEx2nRtzR14YCHYB26LMDQGe0gsK5t59kNtZHcwhWkR0Nnt1w==}
+    peerDependencies:
+      '@babel/runtime': ^7.23.6
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/top-task-link-css@1.4.0':
+    resolution: {integrity: sha512-JLE9TUqDQnwN+yw550xDDhuFx8F4AtslmeLP3O9r0eQbRYNeUzoLBvHNXwFi4tlt5ZaNnUV5qMrpD/kHxiZgqw==}
+
+  '@utrecht/top-task-nav-css@1.3.0':
+    resolution: {integrity: sha512-6dRgbRJ2mx2gyRY+jGgT+5qaEMABtFVx2blqPTxuELfsv4dDMru9infF5JOdYsQvP7M6d2QoYRxdR2OUj9dzOw==}
+
+  '@utrecht/unordered-list-css@1.4.0':
+    resolution: {integrity: sha512-G/jogE2aM6CM6T924XnzYWKRGrtRouwuBEgKc2Z0KKmkd+bY2ve8AGhSGqGe+7E7qwxRh1AYHxzXu31MlVd1Fg==}
+
+  '@utrecht/url-data-css@1.3.0':
+    resolution: {integrity: sha512-ByvAbbJvsWaU9nitser/f+JYAjYtk2Cv8P6CydqlQu6evd4c+odkZcn0UnalaNZO0A+hOLmEAMd+EK2mzgmMLg==}
+
+  '@utrecht/web-component-library-stencil@3.0.1':
+    resolution: {integrity: sha512-LRviT6RAV7ULxbuF3yxpO41XAlgL6UmPnDWL+ltj9lZm6FmKbprQ03u3mt02RN3Zk9Fr/sTwiJ9ydrHn+aagpQ==}
 
   '@yarnpkg/fslib@2.10.3':
     resolution: {integrity: sha512-41H+Ga78xT9sHvWLlFOZLIhtU6mTGZ20pZ29EiZa97vnxdohJD2AF42rCoAoWfqUz486xY6fhjMH+DYEM9r14A==}
@@ -4584,6 +4785,10 @@ packages:
     resolution: {integrity: sha512-MxXdReSRhGO7VlFe1bRG/oI7/mdLV9B9JJT0N8vZOhF7gFRR5l3M8W9G8JxmKV+JC5mGqJ0QvqfSOLsCPa4nUw==}
     engines: {node: '>=0.4.0'}
 
+  acorn-walk@8.3.4:
+    resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
+    engines: {node: '>=0.4.0'}
+
   acorn@7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
     engines: {node: '>=0.4.0'}
@@ -4591,6 +4796,11 @@ packages:
 
   acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.14.0:
+    resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -5237,6 +5447,10 @@ packages:
   data-view-byte-offset@1.0.0:
     resolution: {integrity: sha512-t/Ygsytq+R995EJ5PZlD4Cu56sWa8InXySaViRzw9apusqsOO2bQP+SbYzAhR0pFKoB+43lYy8rWban9JSuXnA==}
     engines: {node: '>= 0.4'}
+
+  date-fns@2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
+    engines: {node: '>=0.11'}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -7816,6 +8030,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -8442,6 +8661,13 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
+  style-dictionary@4.2.0:
+    resolution: {integrity: sha512-bjynavc9g80Zl9GpR3cw+ibqtbMbak9YXpuZteTsRTzoacUTjh7GLu1nlT1ukf264Nw5Vhu/ICQpY5xxOquvtA==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    peerDependencies:
+      prettier: 3.x
+
   style-inject@0.3.0:
     resolution: {integrity: sha512-IezA2qp+vcdlhJaVm5SOdPPTUu0FCEqfNSli2vRuSIBbu5Nq5UvygTk/VzeCqfLz2Atj3dVII5QBKGZRZ0edzw==}
 
@@ -8778,8 +9004,8 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
-  undici-types@6.13.0:
-    resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -10526,6 +10752,8 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
+  '@fontsource/cantarell@5.1.0': {}
+
   '@fontsource/clear-sans@4.5.3': {}
 
   '@fontsource/fira-sans@5.1.0': {}
@@ -10618,27 +10846,62 @@ snapshots:
   '@jest/console@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       jest-message-util: 29.7.0
       jest-util: 29.7.0
       slash: 3.0.0
 
-  '@jest/core@29.7.0(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))':
+  '@jest/core@29.7.0(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))':
     dependencies:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       ci-info: 3.8.0
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.7.0
-      jest-config: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      jest-config: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
+      jest-haste-map: 29.7.0
+      jest-message-util: 29.7.0
+      jest-regex-util: 29.6.3
+      jest-resolve: 29.7.0
+      jest-resolve-dependencies: 29.7.0
+      jest-runner: 29.7.0
+      jest-runtime: 29.7.0
+      jest-snapshot: 29.7.0
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      jest-watcher: 29.7.0
+      micromatch: 4.0.7
+      pretty-format: 29.7.0
+      slash: 3.0.0
+      strip-ansi: 6.0.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
+  '@jest/core@29.7.0(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))':
+    dependencies:
+      '@jest/console': 29.7.0
+      '@jest/reporters': 29.7.0
+      '@jest/test-result': 29.7.0
+      '@jest/transform': 29.7.0
+      '@jest/types': 29.6.3
+      '@types/node': 20.14.14
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      ci-info: 3.8.0
+      exit: 0.1.2
+      graceful-fs: 4.2.11
+      jest-changed-files: 29.7.0
+      jest-config: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
@@ -10663,7 +10926,7 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-mock: 29.7.0
 
   '@jest/expect-utils@29.7.0':
@@ -10681,7 +10944,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -10703,7 +10966,7 @@ snapshots:
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.25
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
       exit: 0.1.2
@@ -10773,17 +11036,17 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.10.9)(sass@1.77.8))':
     dependencies:
       glob: 7.2.3
       glob-promise: 4.2.2(glob@7.2.3)
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.5.4)
-      vite: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+      vite: 5.3.5(@types/node@22.10.9)(sass@1.77.8)
     optionalDependencies:
       typescript: 5.5.4
 
@@ -10795,9 +11058,15 @@ snapshots:
 
   '@jridgewell/resolve-uri@3.1.1': {}
 
+  '@jridgewell/resolve-uri@3.1.2':
+    optional: true
+
   '@jridgewell/set-array@1.2.1': {}
 
   '@jridgewell/sourcemap-codec@1.4.15': {}
+
+  '@jridgewell/sourcemap-codec@1.5.0':
+    optional: true
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
@@ -10806,8 +11075,8 @@ snapshots:
 
   '@jridgewell/trace-mapping@0.3.9':
     dependencies:
-      '@jridgewell/resolve-uri': 3.1.1
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/resolve-uri': 3.1.2
+      '@jridgewell/sourcemap-codec': 1.5.0
     optional: true
 
   '@jsonjoy.com/base64@1.1.2(tslib@2.6.2)':
@@ -10854,7 +11123,7 @@ snapshots:
 
   '@nl-design-system/component-index@1.0.0-alpha.30': {}
 
-  '@nl-design-system/rollup-config-react-component@1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)':
+  '@nl-design-system/rollup-config-react-component@1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)':
     dependencies:
       '@babel/core': 7.26.0
       '@rollup/plugin-babel': 6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.19.2)
@@ -10863,7 +11132,7 @@ snapshots:
       rollup: 4.19.2
       rollup-plugin-node-externals: 7.1.3(rollup@4.19.2)
       rollup-plugin-peer-deps-external: 2.2.4(rollup@4.19.2)
-      rollup-plugin-postcss: 4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      rollup-plugin-postcss: 4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
     transitivePeerDependencies:
       - '@types/babel__core'
       - postcss
@@ -11173,7 +11442,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/builder-vite@8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))':
+  '@storybook/builder-vite@8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.10.9)(sass@1.77.8))':
     dependencies:
       '@storybook/csf-plugin': 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
       '@types/find-cache-dir': 3.2.1
@@ -11185,7 +11454,7 @@ snapshots:
       magic-string: 0.30.8
       storybook: 8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0))
       ts-dedent: 2.2.0
-      vite: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+      vite: 5.3.5(@types/node@22.10.9)(sass@1.77.8)
     optionalDependencies:
       typescript: 5.5.4
     transitivePeerDependencies:
@@ -11263,11 +11532,11 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       storybook: 8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0))
 
-  '@storybook/react-vite@8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))':
+  '@storybook/react-vite@8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.19.2)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.10.9)(sass@1.77.8))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.3.5(@types/node@22.10.9)(sass@1.77.8))
       '@rollup/pluginutils': 5.1.0(rollup@4.19.2)
-      '@storybook/builder-vite': 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0)(sass@1.77.8))
+      '@storybook/builder-vite': 8.2.7(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)(vite@5.3.5(@types/node@22.10.9)(sass@1.77.8))
       '@storybook/react': 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
       find-up: 5.0.0
       magic-string: 0.30.8
@@ -11277,7 +11546,7 @@ snapshots:
       resolve: 1.22.8
       storybook: 8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0))
       tsconfig-paths: 4.2.0
-      vite: 5.3.5(@types/node@22.1.0)(sass@1.77.8)
+      vite: 5.3.5(@types/node@22.10.9)(sass@1.77.8)
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - rollup
@@ -11336,7 +11605,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)))':
+  '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.25.7
@@ -11349,7 +11618,22 @@ snapshots:
     optionalDependencies:
       '@jest/globals': 29.7.0
       '@types/jest': 29.5.12
-      jest: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      jest: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
+
+  '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))':
+    dependencies:
+      '@adobe/css-tools': 4.4.0
+      '@babel/runtime': 7.25.7
+      aria-query: 5.3.0
+      chalk: 3.0.0
+      css.escape: 1.5.1
+      dom-accessibility-api: 0.6.3
+      lodash: 4.17.21
+      redent: 3.0.0
+    optionalDependencies:
+      '@jest/globals': 29.7.0
+      '@types/jest': 29.5.12
+      jest: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
 
   '@testing-library/react@15.0.7(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -11380,6 +11664,16 @@ snapshots:
       expr-eval-fork: 2.0.2
       is-mergeable-object: 1.1.1
       style-dictionary: 4.0.1
+
+  '@tokens-studio/sd-transforms@1.2.8(style-dictionary@4.2.0(prettier@3.4.2))':
+    dependencies:
+      '@bundled-es-modules/deepmerge': 4.3.1
+      '@bundled-es-modules/postcss-calc-ast-parser': 0.1.6
+      '@tokens-studio/types': 0.5.1
+      colorjs.io: 0.4.5
+      expr-eval-fork: 2.0.2
+      is-mergeable-object: 1.1.1
+      style-dictionary: 4.2.0(prettier@3.4.2)
 
   '@tokens-studio/types@0.5.1': {}
 
@@ -11429,7 +11723,7 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/color-convert@2.0.3':
     dependencies:
@@ -11443,15 +11737,15 @@ snapshots:
 
   '@types/concat-stream@2.0.0':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.10.9
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/cross-spawn@6.0.6':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/d3-color@3.1.3': {}
 
@@ -11475,7 +11769,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.17.43':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       '@types/qs': 6.9.14
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -11492,11 +11786,11 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/hast@3.0.4':
     dependencies:
@@ -11524,7 +11818,7 @@ snapshots:
 
   '@types/jsdom@20.0.1':
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       '@types/tough-cookie': 4.0.5
       parse5: 7.1.2
 
@@ -11564,9 +11858,9 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@22.1.0':
+  '@types/node@22.10.9':
     dependencies:
-      undici-types: 6.13.0
+      undici-types: 6.20.0
 
   '@types/normalize-package-data@2.4.1': {}
 
@@ -11597,13 +11891,13 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/serve-static@1.15.5':
     dependencies:
       '@types/http-errors': 2.0.4
       '@types/mime': 3.0.4
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
 
   '@types/stack-utils@2.0.3': {}
 
@@ -11706,193 +12000,437 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@utrecht/accordion-css@1.2.0': {}
+  '@utrecht/accordion-css@1.6.0': {}
 
-  '@utrecht/alert-dialog-css@1.1.0': {}
+  '@utrecht/alert-dialog-css@1.4.0': {}
 
-  '@utrecht/alternate-lang-nav-css@1.1.0': {}
+  '@utrecht/alternate-lang-nav-css@1.3.0': {}
 
-  '@utrecht/article-css@1.1.0': {}
+  '@utrecht/article-css@1.4.0': {}
 
-  '@utrecht/backdrop-css@1.1.0': {}
+  '@utrecht/backdrop-css@1.4.0': {}
 
-  '@utrecht/badge-counter-css@1.2.0': {}
+  '@utrecht/badge-counter-css@1.4.0': {}
 
-  '@utrecht/badge-data-css@1.1.0': {}
+  '@utrecht/badge-data-css@1.4.0': {}
 
-  '@utrecht/badge-list-css@1.1.0': {}
+  '@utrecht/badge-list-css@2.2.0': {}
 
-  '@utrecht/badge-status-css@1.1.0': {}
+  '@utrecht/badge-status-css@1.4.0': {}
 
-  '@utrecht/blockquote-css@1.1.0': {}
+  '@utrecht/blockquote-css@1.5.0': {}
 
-  '@utrecht/breadcrumb-nav-css@1.1.0': {}
+  '@utrecht/breadcrumb-nav-css@1.4.0': {}
 
-  '@utrecht/button-css@1.2.0': {}
+  '@utrecht/button-css@2.2.0': {}
 
-  '@utrecht/button-group-css@1.1.0': {}
+  '@utrecht/button-group-css@1.4.0': {}
 
-  '@utrecht/button-link-css@1.1.0': {}
+  '@utrecht/button-link-css@1.3.0': {}
 
-  '@utrecht/calendar-css@1.1.0': {}
-
-  '@utrecht/checkbox-css@1.2.0': {}
-
-  '@utrecht/code-block-css@1.1.0': {}
-
-  '@utrecht/color-sample-css@1.1.0': {}
-
-  '@utrecht/column-layout-css@1.1.0': {}
-
-  '@utrecht/combobox-css@1.2.0': {}
-
-  '@utrecht/component-library-css@4.2.0': {}
-
-  '@utrecht/component-library-design-tokens@1.0.0': {}
-
-  '@utrecht/component-library-react@7.1.0(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/button-react@2.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.25.0
       clsx: 2.1.1
-      lodash.chunk: 4.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/component-library-react@7.1.0(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/button-react@2.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/calendar-css@1.4.0': {}
+
+  '@utrecht/calendar-react@1.0.8(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/button-react': 2.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/calendar-css': 1.4.0
+      clsx: 2.1.1
+      date-fns: 2.30.0
+      lodash-es: 4.17.21
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/calendar-react@1.0.8(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      '@utrecht/button-react': 2.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/calendar-css': 1.4.0
+      clsx: 2.1.1
+      date-fns: 2.30.0
+      lodash-es: 4.17.21
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/checkbox-css@1.5.0': {}
+
+  '@utrecht/checkbox-react@1.0.5(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/checkbox-react@1.0.5(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/code-block-css@1.4.0': {}
+
+  '@utrecht/color-sample-css@1.4.0': {}
+
+  '@utrecht/column-layout-css@1.5.0': {}
+
+  '@utrecht/combobox-css@1.4.0': {}
+
+  '@utrecht/combobox-react@0.0.5(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/combobox-react@0.0.5(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/component-library-design-tokens@1.0.0': {}
+
+  '@utrecht/component-library-react@8.0.3(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/button-react': 2.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/calendar-react': 1.0.8(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/checkbox-react': 1.0.5(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/combobox-react': 0.0.5(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/fieldset-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-checkbox-react': 1.0.7(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-description-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-error-message-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-label-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/link-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/listbox-react': 1.0.6(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/radio-button-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/textbox-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx: 2.1.1
       lodash.chunk: 4.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+    optionalDependencies:
+      date-fns: 2.30.0
+
+  '@utrecht/component-library-react@8.0.3(@babel/runtime@7.25.7)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      '@utrecht/button-react': 2.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/calendar-react': 1.0.8(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/checkbox-react': 1.0.5(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/combobox-react': 0.0.5(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/fieldset-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-checkbox-react': 1.0.7(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-description-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-error-message-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-label-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/link-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/listbox-react': 1.0.6(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/radio-button-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/textbox-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      clsx: 2.1.1
+      lodash.chunk: 4.2.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    optionalDependencies:
+      date-fns: 2.30.0
 
   '@utrecht/components@6.1.0':
     dependencies:
       clsx: 2.1.1
 
-  '@utrecht/components@6.2.0':
+  '@utrecht/components@7.4.0':
     dependencies:
       clsx: 2.1.1
 
-  '@utrecht/currency-data-css@1.1.0': {}
+  '@utrecht/currency-data-css@1.3.0': {}
 
-  '@utrecht/custom-checkbox-css@1.1.1': {}
+  '@utrecht/custom-checkbox-css@1.3.1': {}
 
-  '@utrecht/data-list-css@1.1.0': {}
+  '@utrecht/data-list-css@1.4.0': {}
 
-  '@utrecht/data-placeholder-css@1.1.0': {}
+  '@utrecht/data-placeholder-css@1.4.0': {}
 
-  '@utrecht/design-tokens@1.1.0': {}
+  '@utrecht/design-tokens@2.4.0': {}
 
-  '@utrecht/digid-button-css@1.1.0': {}
+  '@utrecht/digid-button-css@1.4.0': {}
 
-  '@utrecht/document-css@1.1.0': {}
+  '@utrecht/document-css@1.4.0': {}
 
-  '@utrecht/drawer-css@1.1.0': {}
+  '@utrecht/drawer-css@1.4.0': {}
 
-  '@utrecht/emphasis-css@1.1.0': {}
+  '@utrecht/emphasis-css@1.4.0': {}
 
-  '@utrecht/form-field-css@1.1.0': {}
+  '@utrecht/fieldset-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/form-field-description-css@1.2.0': {}
+  '@utrecht/fieldset-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/form-field-error-message-css@1.2.0': {}
+  '@utrecht/form-field-checkbox-react@1.0.7(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/checkbox-react': 1.0.5(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-description-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-error-message-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-label-react': 1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/form-fieldset-css@1.1.0': {}
+  '@utrecht/form-field-checkbox-react@1.0.7(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      '@utrecht/checkbox-react': 1.0.5(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-description-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-error-message-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-field-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@utrecht/form-label-react': 1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/form-label-css@1.1.0': {}
+  '@utrecht/form-field-css@1.5.0': {}
 
-  '@utrecht/form-toggle-css@1.1.0': {}
+  '@utrecht/form-field-description-css@1.5.0': {}
 
-  '@utrecht/heading-1-css@1.1.0': {}
+  '@utrecht/form-field-description-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/heading-2-css@1.1.0': {}
+  '@utrecht/form-field-description-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/heading-3-css@1.1.0': {}
+  '@utrecht/form-field-error-message-css@1.5.0': {}
 
-  '@utrecht/heading-4-css@1.1.0': {}
+  '@utrecht/form-field-error-message-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/heading-5-css@1.1.0': {}
+  '@utrecht/form-field-error-message-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/heading-6-css@1.1.0': {}
+  '@utrecht/form-field-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/heading-group-css@1.1.0': {}
+  '@utrecht/form-field-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/html-content-css@1.1.0': {}
+  '@utrecht/form-fieldset-css@1.4.0': {}
 
-  '@utrecht/iban-data-css@1.1.0': {}
+  '@utrecht/form-label-css@1.5.0': {}
 
-  '@utrecht/icon@1.1.0': {}
+  '@utrecht/form-label-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/index-char-nav-css@1.1.0': {}
+  '@utrecht/form-label-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/link-button-css@1.1.0': {}
+  '@utrecht/form-toggle-css@1.4.0': {}
 
-  '@utrecht/link-list-css@2.0.0': {}
+  '@utrecht/heading-1-css@1.4.0': {}
 
-  '@utrecht/link-social-css@1.1.0': {}
+  '@utrecht/heading-2-css@1.4.0': {}
 
-  '@utrecht/list-social-css@1.1.0': {}
+  '@utrecht/heading-3-css@1.4.0': {}
 
-  '@utrecht/listbox-css@1.1.0': {}
+  '@utrecht/heading-4-css@1.4.0': {}
 
-  '@utrecht/logo-button-css@1.1.0': {}
+  '@utrecht/heading-5-css@1.4.0': {}
 
-  '@utrecht/logo-image-css@1.1.0': {}
+  '@utrecht/heading-6-css@1.4.0': {}
 
-  '@utrecht/map-control-button-css@1.1.0': {}
+  '@utrecht/heading-group-css@1.4.0': {}
 
-  '@utrecht/map-marker-css@1.1.0': {}
+  '@utrecht/html-content-css@1.3.0': {}
 
-  '@utrecht/multiline-data-css@1.1.0': {}
+  '@utrecht/iban-data-css@1.3.0': {}
 
-  '@utrecht/nav-bar-css@1.1.0': {}
+  '@utrecht/icon@1.3.0': {}
 
-  '@utrecht/nav-list-css@1.1.0': {}
+  '@utrecht/index-char-nav-css@1.4.0': {}
 
-  '@utrecht/number-data-css@1.1.0': {}
+  '@utrecht/link-button-css@1.3.0': {}
 
-  '@utrecht/ordered-list-css@1.1.0': {}
+  '@utrecht/link-list-css@2.3.0': {}
 
-  '@utrecht/page-content-css@1.1.0': {}
+  '@utrecht/link-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/page-footer-css@1.1.0': {}
+  '@utrecht/link-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/page-header-css@1.1.0': {}
+  '@utrecht/link-social-css@1.4.0': {}
 
-  '@utrecht/pagination-css@1.1.0': {}
+  '@utrecht/list-social-css@1.4.0': {}
 
-  '@utrecht/paragraph-css@1.1.0': {}
+  '@utrecht/listbox-css@1.5.0': {}
 
-  '@utrecht/pre-heading-css@1.1.0': {}
+  '@utrecht/listbox-react@1.0.6(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/preserve-data-css@1.1.0': {}
+  '@utrecht/listbox-react@1.0.6(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/radio-button-css@1.2.0': {}
+  '@utrecht/logo-button-css@1.4.0': {}
 
-  '@utrecht/search-bar-css@1.1.0': {}
+  '@utrecht/logo-image-css@1.4.0': {}
 
-  '@utrecht/separator-css@1.1.0': {}
+  '@utrecht/map-control-button-css@2.2.0': {}
 
-  '@utrecht/skip-link-css@1.1.0': {}
+  '@utrecht/map-marker-css@1.4.0': {}
 
-  '@utrecht/spotlight-section-css@1.1.0': {}
+  '@utrecht/multiline-data-css@1.3.0': {}
 
-  '@utrecht/surface-css@1.1.0': {}
+  '@utrecht/nav-bar-css@1.4.0': {}
 
-  '@utrecht/textarea-css@1.2.0': {}
+  '@utrecht/nav-list-css@1.3.0': {}
 
-  '@utrecht/textbox-css@1.2.0': {}
+  '@utrecht/number-data-css@1.4.0': {}
 
-  '@utrecht/top-task-link-css@1.1.0': {}
+  '@utrecht/ordered-list-css@1.4.0': {}
 
-  '@utrecht/top-task-nav-css@1.1.0': {}
+  '@utrecht/page-content-css@1.4.0': {}
 
-  '@utrecht/unordered-list-css@1.1.0': {}
+  '@utrecht/page-footer-css@2.1.0': {}
 
-  '@utrecht/url-data-css@1.1.0': {}
+  '@utrecht/page-header-css@1.5.0': {}
 
-  '@utrecht/web-component-library-stencil@1.4.0':
+  '@utrecht/pagination-css@1.4.0': {}
+
+  '@utrecht/paragraph-css@2.2.0': {}
+
+  '@utrecht/pre-heading-css@1.4.0': {}
+
+  '@utrecht/preserve-data-css@1.3.0': {}
+
+  '@utrecht/radio-button-css@1.5.0': {}
+
+  '@utrecht/radio-button-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/radio-button-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/search-bar-css@2.2.0': {}
+
+  '@utrecht/separator-css@1.4.0': {}
+
+  '@utrecht/skip-link-css@1.5.0': {}
+
+  '@utrecht/spotlight-section-css@1.5.0': {}
+
+  '@utrecht/surface-css@1.4.0': {}
+
+  '@utrecht/textarea-css@2.2.0': {}
+
+  '@utrecht/textbox-css@1.5.0': {}
+
+  '@utrecht/textbox-react@1.0.4(@babel/runtime@7.25.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/textbox-react@1.0.4(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.7
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@utrecht/top-task-link-css@1.4.0': {}
+
+  '@utrecht/top-task-nav-css@1.3.0': {}
+
+  '@utrecht/unordered-list-css@1.4.0': {}
+
+  '@utrecht/url-data-css@1.3.0': {}
+
+  '@utrecht/web-component-library-stencil@3.0.1':
     dependencies:
       '@stencil/core': 4.18.3
 
@@ -11938,9 +12476,17 @@ snapshots:
     dependencies:
       acorn: 8.11.3
 
+  acorn-walk@8.3.4:
+    dependencies:
+      acorn: 8.14.0
+    optional: true
+
   acorn@7.4.1: {}
 
   acorn@8.11.3: {}
+
+  acorn@8.14.0:
+    optional: true
 
   agent-base@6.0.2:
     dependencies:
@@ -12518,13 +13064,28 @@ snapshots:
     optionalDependencies:
       typescript: 5.5.4
 
-  create-jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)):
+  create-jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)):
     dependencies:
       '@jest/types': 29.6.3
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      jest-config: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
+      jest-util: 29.7.0
+      prompts: 2.4.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
+  create-jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
+    dependencies:
+      '@jest/types': 29.6.3
+      chalk: 4.1.2
+      exit: 0.1.2
+      graceful-fs: 4.2.11
+      jest-config: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -12677,6 +13238,10 @@ snapshots:
       call-bind: 1.0.7
       es-errors: 1.3.0
       is-data-view: 1.0.1
+
+  date-fns@2.30.0:
+    dependencies:
+      '@babel/runtime': 7.25.7
 
   debug@2.6.9:
     dependencies:
@@ -14096,7 +14661,7 @@ snapshots:
       '@jest/expect': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.5.3
@@ -14116,16 +14681,16 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  jest-cli@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)):
+  jest-cli@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)):
     dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
       chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      create-jest: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       exit: 0.1.2
       import-local: 3.2.0
-      jest-config: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      jest-config: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -14135,7 +14700,26 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-config@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)):
+  jest-cli@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
+    dependencies:
+      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+      '@jest/test-result': 29.7.0
+      '@jest/types': 29.6.3
+      chalk: 4.1.2
+      create-jest: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+      exit: 0.1.2
+      import-local: 3.2.0
+      jest-config: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
+  jest-config@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)):
     dependencies:
       '@babel/core': 7.26.0
       '@jest/test-sequencer': 29.7.0
@@ -14160,8 +14744,70 @@ snapshots:
       slash: 3.0.0
       strip-json-comments: 3.1.1
     optionalDependencies:
-      '@types/node': 22.1.0
-      ts-node: 10.9.2(@types/node@22.1.0)(typescript@5.5.4)
+      '@types/node': 20.14.14
+      ts-node: 10.9.2(@types/node@20.14.14)(typescript@5.5.4)
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+
+  jest-config@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
+    dependencies:
+      '@babel/core': 7.26.0
+      '@jest/test-sequencer': 29.7.0
+      '@jest/types': 29.6.3
+      babel-jest: 29.7.0(@babel/core@7.26.0)
+      chalk: 4.1.2
+      ci-info: 3.8.0
+      deepmerge: 4.3.1
+      glob: 7.2.3
+      graceful-fs: 4.2.11
+      jest-circus: 29.7.0
+      jest-environment-node: 29.7.0
+      jest-get-type: 29.6.3
+      jest-regex-util: 29.6.3
+      jest-resolve: 29.7.0
+      jest-runner: 29.7.0
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      micromatch: 4.0.7
+      parse-json: 5.2.0
+      pretty-format: 29.7.0
+      slash: 3.0.0
+      strip-json-comments: 3.1.1
+    optionalDependencies:
+      '@types/node': 20.14.14
+      ts-node: 10.9.2(@types/node@22.10.9)(typescript@5.5.4)
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+
+  jest-config@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
+    dependencies:
+      '@babel/core': 7.26.0
+      '@jest/test-sequencer': 29.7.0
+      '@jest/types': 29.6.3
+      babel-jest: 29.7.0(@babel/core@7.26.0)
+      chalk: 4.1.2
+      ci-info: 3.8.0
+      deepmerge: 4.3.1
+      glob: 7.2.3
+      graceful-fs: 4.2.11
+      jest-circus: 29.7.0
+      jest-environment-node: 29.7.0
+      jest-get-type: 29.6.3
+      jest-regex-util: 29.6.3
+      jest-resolve: 29.7.0
+      jest-runner: 29.7.0
+      jest-util: 29.7.0
+      jest-validate: 29.7.0
+      micromatch: 4.0.7
+      parse-json: 5.2.0
+      pretty-format: 29.7.0
+      slash: 3.0.0
+      strip-json-comments: 3.1.1
+    optionalDependencies:
+      '@types/node': 22.10.9
+      ts-node: 10.9.2(@types/node@22.10.9)(typescript@5.5.4)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -14191,7 +14837,7 @@ snapshots:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
       '@types/jsdom': 20.0.1
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-mock: 29.7.0
       jest-util: 29.7.0
       jsdom: 20.0.3
@@ -14205,7 +14851,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -14215,7 +14861,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -14254,7 +14900,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-util: 29.7.0
 
   jest-pnp-resolver@1.2.3(jest-resolve@29.7.0):
@@ -14289,7 +14935,7 @@ snapshots:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       emittery: 0.13.1
       graceful-fs: 4.2.11
@@ -14317,7 +14963,7 @@ snapshots:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       cjs-module-lexer: 1.3.1
       collect-v8-coverage: 1.0.2
@@ -14363,7 +15009,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11
@@ -14382,7 +15028,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.13.1
@@ -14391,17 +15037,29 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 20.14.14
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
-  jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)):
+  jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)):
     dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       '@jest/types': 29.6.3
       import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      jest-cli: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
+    transitivePeerDependencies:
+      - '@types/node'
+      - babel-plugin-macros
+      - supports-color
+      - ts-node
+
+  jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
+    dependencies:
+      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+      '@jest/types': 29.6.3
+      import-local: 3.2.0
+      jest-cli: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -15627,13 +16285,13 @@ snapshots:
     dependencies:
       postcss: 8.4.40
 
-  postcss-load-config@3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)):
+  postcss-load-config@3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
     dependencies:
       lilconfig: 2.1.0
       yaml: 1.10.2
     optionalDependencies:
       postcss: 8.4.40
-      ts-node: 10.9.2(@types/node@22.1.0)(typescript@5.5.4)
+      ts-node: 10.9.2(@types/node@22.10.9)(typescript@5.5.4)
 
   postcss-media-query-parser@0.2.3: {}
 
@@ -15832,6 +16490,8 @@ snapshots:
   prettier@2.8.8: {}
 
   prettier@3.2.5: {}
+
+  prettier@3.4.2: {}
 
   pretty-format@27.5.1:
     dependencies:
@@ -16166,7 +16826,7 @@ snapshots:
     dependencies:
       rollup: 4.19.2
 
-  rollup-plugin-postcss@4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)):
+  rollup-plugin-postcss@4.0.2(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)):
     dependencies:
       chalk: 4.1.2
       concat-with-sourcemaps: 1.1.0
@@ -16175,7 +16835,7 @@ snapshots:
       p-queue: 6.6.2
       pify: 5.0.0
       postcss: 8.4.40
-      postcss-load-config: 3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      postcss-load-config: 3.1.4(postcss@8.4.40)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
       postcss-modules: 4.3.1(postcss@8.4.40)
       promise.series: 0.2.0
       resolve: 1.22.8
@@ -16628,6 +17288,22 @@ snapshots:
       path-unified: 0.1.0
       tinycolor2: 1.6.0
 
+  style-dictionary@4.2.0(prettier@3.4.2):
+    dependencies:
+      '@bundled-es-modules/deepmerge': 4.3.1
+      '@bundled-es-modules/glob': 10.4.2
+      '@bundled-es-modules/memfs': 4.9.4
+      '@zip.js/zip.js': 2.7.48
+      chalk: 5.3.0
+      change-case: 5.4.4
+      commander: 8.3.0
+      is-plain-obj: 4.1.0
+      json5: 2.2.3
+      patch-package: 8.0.0
+      path-unified: 0.1.0
+      prettier: 3.4.2
+      tinycolor2: 1.6.0
+
   style-inject@0.3.0: {}
 
   style-to-js@1.1.12:
@@ -16859,12 +17535,12 @@ snapshots:
 
   ts-dedent@2.2.0: {}
 
-  ts-jest@29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4)))(typescript@5.5.4):
+  ts-jest@29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))(typescript@5.5.4):
     dependencies:
       bs-logger: 0.2.6
       ejs: 3.1.10
       fast-json-stable-stringify: 2.1.0
-      jest: 29.7.0(@types/node@22.1.0)(ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4))
+      jest: 29.7.0(@types/node@20.14.14)(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4))
       jest-util: 29.7.0
       json5: 2.2.3
       lodash.memoize: 4.1.2
@@ -16878,16 +17554,54 @@ snapshots:
       '@jest/types': 29.6.3
       babel-jest: 29.7.0(@babel/core@7.26.0)
 
-  ts-node@10.9.2(@types/node@22.1.0)(typescript@5.5.4):
+  ts-jest@29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))(typescript@5.5.4):
+    dependencies:
+      bs-logger: 0.2.6
+      ejs: 3.1.10
+      fast-json-stable-stringify: 2.1.0
+      jest: 29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))
+      jest-util: 29.7.0
+      json5: 2.2.3
+      lodash.memoize: 4.1.2
+      make-error: 1.3.6
+      semver: 7.6.2
+      typescript: 5.5.4
+      yargs-parser: 21.1.1
+    optionalDependencies:
+      '@babel/core': 7.26.0
+      '@jest/transform': 29.7.0
+      '@jest/types': 29.6.3
+      babel-jest: 29.7.0(@babel/core@7.26.0)
+
+  ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.1.0
-      acorn: 8.11.3
-      acorn-walk: 8.3.3
+      '@types/node': 20.14.14
+      acorn: 8.14.0
+      acorn-walk: 8.3.4
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.5.4
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    optional: true
+
+  ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 22.10.9
+      acorn: 8.14.0
+      acorn-walk: 8.3.4
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
@@ -16994,7 +17708,7 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  undici-types@6.13.0: {}
+  undici-types@6.20.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.0: {}
 
@@ -17208,13 +17922,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.3.5(@types/node@22.1.0)(sass@1.77.8):
+  vite@5.3.5(@types/node@22.10.9)(sass@1.77.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
       rollup: 4.18.1
     optionalDependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.10.9
       fsevents: 2.3.3
       sass: 1.77.8
 

@@ -9,7 +9,7 @@ module.exports = {
   },
   overrides: [
     {
-      patterns: ['proprietary/**/package.json'],
+      patterns: ['proprietary/*/package.json'],
       rules: {
         'valid-values-license': ['error', ['SEE LICENSE IN LICENSE.md']],
       },

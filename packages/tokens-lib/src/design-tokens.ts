@@ -13,6 +13,8 @@ export interface BoxShadowValue {
 }
 
 export interface KnownExtensions {
+  'nl.nldesignsystem.css-property-syntax'?: string | string[];
+  'nl.nldesignsystem.figma-implementation'?: boolean;
   'nl.nldesignsystem.css.property'?: {
     syntax: string;
     inherits: boolean;
@@ -182,11 +184,11 @@ export const createEmptyDesignTokenTree = (definition: DesignTokenTree | DesignT
     isDesignTokenDefinition(item) || isDesignToken(item)
       ? {}
       : isPlainObject(item)
-      ? mapValues(
-          omitBy(item, (item) => isHiddenDesignToken(item)),
-          (item) => cloneDeepWith(item, filter),
-        )
-      : undefined;
+        ? mapValues(
+            omitBy(item, (item) => isHiddenDesignToken(item)),
+            (item) => cloneDeepWith(item, filter),
+          )
+        : undefined;
   return cloneDeepWith(definition, filter);
 };
 
@@ -195,11 +197,11 @@ export const convertValueTreeToDesignTokenTree = (tree: ValueTree): ValueTree =>
     typeof item === 'string' || typeof item === 'number'
       ? { value: item }
       : isPlainObject(item)
-      ? mapValues(
-          omitBy(item, () => false),
-          (item) => cloneDeepWith(item, filter),
-        )
-      : undefined;
+        ? mapValues(
+            omitBy(item, () => false),
+            (item) => cloneDeepWith(item, filter),
+          )
+        : undefined;
   return cloneDeepWith(tree, filter);
 };
 

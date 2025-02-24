@@ -1,5 +1,33 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.7.1
+
+### Patch Changes
+
+- 8e5c0c7: `navigation` hernoemd naar `side-column` in token set voor `nora-page-section`
+
+## 1.7.0
+
+### Minor Changes
+
+- 135f1fe: Tokens toegevoegd voor `nora-page-content`
+- e132c6d: Tokens toegevoegd voor `nora-avatar`, `nora-data-summary`, `nora-label-link` en `nora-information-panel`
+- a63d27f: `nora-figure` tokens update en refactoring
+- f0af991: `nora-page-layout` hernoemd naar `nora-page-body`
+
+## 1.6.1
+
+### Patch Changes
+
+- dca7d23: Volgorde van Sass Variables is aangepast
+
+## 1.6.0
+
+### Minor Changes
+
+- 48bc494: Tokens toegevoegd voor: `utrecht-ordered-list`, `nora-figure` en `utrecht-table`
+- 0c8c8ab: De `tokens-studio` transforms worden nu toegepast. Hiedoor worden composite tokens goed omgezet naar variabelen.
+
 ## 1.5.0
 
 ### Minor Changes

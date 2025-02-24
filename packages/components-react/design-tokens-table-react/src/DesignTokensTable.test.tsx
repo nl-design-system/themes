@@ -96,7 +96,7 @@ describe('Tokens table', () => {
 
     render(<DesignTokensTable tokens={tokens} tokensMap={tokensMap as any} />);
 
-    const verifiedIcon = screen.getByRole('image', { name: 'status: verified token' });
+    const verifiedIcon = screen.getByRole('img', { name: 'status: verified token' });
 
     expect(verifiedIcon).toBeInTheDocument();
   });

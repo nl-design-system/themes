@@ -18,6 +18,10 @@ export const TOKEN_TYPES = [
   'gap',
   'size',
   'cursor',
+  'text-decoration-line',
+  'text-decoration-thickness',
+  'text-underline-offset',
+  'text-underline-style',
 ];
 
 type TypeToCSSProperty = {
@@ -131,11 +135,38 @@ export const mapping: TypeToCSSProperty = {
     'size', // `size` not an official CSS property
   ],
   ['cursor']: ['cursor'],
+  ['text-decoration-line']: ['text-decoration', 'text-decoration-line'],
+  ['text-decoration-thickness']: ['text-decoration-thickness'],
+  ['text-underline-offset']: ['text-underline-offset'],
+  ['text-underline-style']: ['text-underline-style'],
 };
 
 const entries = Object.entries(mapping);
 
+/**
+ * Map an CSS property name to an "NL Design System token type".
+ */
 export const getTokenType = (propertyName: string): string | undefined => {
   const group = entries.find(([, properties]) => properties.includes(propertyName));
   return group ? group[0] : undefined;
+};
+
+const $typeMapping: { [index: string]: string } = {
+  ['color']: 'color',
+  ['dimension']: 'length',
+  ['duration']: 'time',
+  ['fontFamily']: 'font-family',
+  ['fontWeight']: 'font-weight',
+  ['number']: 'number',
+};
+
+/**
+ * Map an Design Tokens JSON `"$type"` to an "NL Design System token type".
+ */
+export const getToken$Type = (propertyName: string): string | undefined => {
+  if (propertyName in $typeMapping) {
+    return $typeMapping[propertyName];
+  } else {
+    return undefined;
+  }
 };

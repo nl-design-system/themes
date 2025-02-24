@@ -10,9 +10,10 @@
     "url": "git@github.com:nl-design-system/themes.git",
     "directory": "."
   },
-  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
   "engines": {
-    "node": "^20",
+    "//": "Update @types/node to match the highest node version here",
+    "node": ">=20 <=22",
     "pnpm": "^9"
   },
   "workspaces": [
@@ -27,10 +28,9 @@
     "@gemeente-denhaag/process-steps": "0.1.0-alpha.230",
     "@gemeente-denhaag/step-marker": "0.0.1-alpha.102",
     "@nl-design-system/component-index": "1.0.0-alpha.30",
-    "@types/node": "20.14.14",
+    "@types/node": "22.10.9",
     "@typescript-eslint/eslint-plugin": "8.0.0",
     "@typescript-eslint/parser": "8.0.0",
-    "@utrecht/component-library-css": "4.2.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-json": "3.1.0",
@@ -43,7 +43,7 @@
     "npm-check-updates": "17.0.0",
     "npm-package-json-lint": "8.0.0",
     "npm-run-all": "4.1.5",
-    "prettier": "2.8.8",
+    "prettier": "3.4.2",
     "pure-color": "1.3.0",
     "rimraf": "6.0.1",
     "sass": "1.77.8",
@@ -64,6 +64,7 @@
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
     "lint-fix:js": "eslint --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
+    "lint-release": "changeset status",
     "prepare": "husky",
     "prettier": "prettier --write .",
     "publish": "changeset publish",

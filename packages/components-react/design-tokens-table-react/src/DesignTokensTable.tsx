@@ -17,13 +17,14 @@ import {
   StyleDictionaryDesignToken,
 } from '@nl-design-system-unstable/tokens-lib/dist/design-tokens';
 import { tokenRef } from '@nl-design-system-unstable/tokens-lib/dist/util';
-import { getTokenType } from '@nl-design-system-unstable/tokens-lib/dist/token-type';
+import { getTokenType, getToken$Type } from '@nl-design-system-unstable/tokens-lib/dist/token-type';
 import { TokenTypeIcon } from './TokenTypeIcon';
 import { CursorSample } from './CursorSample';
 import { FontFamilySample } from './FontFamilySample';
 import { SubtleBadge } from './SubtleBadge';
 import { FontFamilyDetails } from './FontFamilyDetails';
 import { IconCheck, IconFileUnknown } from '@tabler/icons-react';
+import { arrayToMap } from '@nl-design-system-unstable/tokens-lib/dist/ExampleTokensCSS';
 
 export const path2css = (path: StyleDictionaryDesignToken['path']) => `var(--${path.join('-')})`;
 
@@ -31,14 +32,23 @@ const serializeTokenValue = (value?: DesignTokenValue) =>
   typeof value === 'undefined' || value === null
     ? ''
     : typeof value === 'string'
-    ? value
-    : typeof value === 'number'
-    ? String(value)
-    : 'JSON';
+      ? value
+      : typeof value === 'number'
+        ? String(value)
+        : 'JSON';
 
 interface DesignTokensTableProps {
   tokens: StyleDictionaryDesignToken[];
+
+  /**
+   * @deprecated Switch from `tokensMap` to `tokensDefinitions`
+   */
   tokensMap?: Map<string, StyleDictionaryDesignToken>;
+
+  /**
+   * Array of tokens definitions.
+   */
+  tokensDefinition?: StyleDictionaryDesignToken[] | Map<string, StyleDictionaryDesignToken>;
 }
 
 const getLastPathSegment = (token: StyleDictionaryDesignToken) =>
@@ -51,9 +61,16 @@ const stringSort = (a: string, b: string) => (a === b ? 0 : a > b ? 1 : -1);
 const sortByTokenRef = (a: StyleDictionaryDesignToken, b: StyleDictionaryDesignToken) =>
   stringSort(tokenRef(a.path), tokenRef(b.path));
 
-export const DesignTokensTable = ({ tokens, tokensMap }: DesignTokensTableProps) => {
+export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: DesignTokensTableProps) => {
   const vendorPrefixes = ['ams', 'denhaag', 'nl', 'utrecht'];
 
+  const definitionMap: Map<string, StyleDictionaryDesignToken> =
+    tokensMap ||
+    (tokensDefinition instanceof Map
+      ? (tokensDefinition as Map<string, StyleDictionaryDesignToken>)
+      : Array.isArray(tokensDefinition)
+        ? arrayToMap(tokensDefinition)
+        : new Map<string, StyleDictionaryDesignToken>());
   return (
     <Table
       className="sb-unstyled voorbeeld-theme"
@@ -76,26 +93,31 @@ export const DesignTokensTable = ({ tokens, tokensMap }: DesignTokensTableProps)
           const ref = tokenRef(path);
           const value = getTokenValue(token);
           const propertyName = getLastPathSegment(token);
-          const tokenType = propertyName && getTokenType(propertyName);
+          const tokenType = propertyName
+            ? getTokenType(propertyName) ||
+              (typeof (token as any)['$type'] === 'string' ? getToken$Type((token as any)['$type']) : undefined)
+            : undefined;
           const isVendorToken = vendorPrefixes.includes(path[0]);
-          const isVerified = tokensMap ? tokensMap.has(ref) : false;
+          const isVerified = definitionMap ? definitionMap.has(ref) : false;
+          const isString = (arg: unknown): arg is string => typeof arg === 'string';
 
           return (
             <TableRow key={index}>
               <TableCell>
                 {isVerified ? (
-                  <Icon role="image" aria-label="status: verified token">
+                  <Icon role="img" aria-label="status: verified token">
                     <IconCheck />
                   </Icon>
                 ) : isVendorToken ? (
-                  <Icon role="image" aria-label="status: unknown token">
+                  <Icon role="img" aria-label="status: unknown token">
                     <IconFileUnknown />
                   </Icon>
                 ) : null}
                 <PreserveData>{ref}</PreserveData>
               </TableCell>
               <TableCell>
-                {tokenType === 'font-family' && typeof value === 'string' ? (
+                {tokenType === 'font-family' &&
+                (typeof value === 'string' || (Array.isArray(value) && value.every(isString))) ? (
                   <FontFamilyDetails value={value} />
                 ) : (
                   <PreserveData

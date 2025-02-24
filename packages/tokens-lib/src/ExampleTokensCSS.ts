@@ -62,6 +62,9 @@ export const treeToArray = <T extends DesignToken>(
   return array;
 };
 
+export const arrayToMap = <T extends DesignToken>(array: T[]) =>
+  new Map(array.map((token) => [tokenRef((token as any).path), token]));
+
 export const treeToMap = <T extends DesignToken>(tokens: DesignTokenTree<T>, testFn: ValueTestFn = isDesignToken) =>
   new Map(treeToArray(tokens, testFn).map((token) => [tokenRef((token as any).path), token]));
 
