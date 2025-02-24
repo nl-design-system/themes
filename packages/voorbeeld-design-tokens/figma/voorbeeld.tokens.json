@@ -3795,6 +3795,34 @@
       }
     }
   },
+  "components/figure": {
+    "utrecht": {
+      "figure": {
+        "caption": {
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.document.font-size}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{utrecht.document.line-height}"
+          }
+        }
+      }
+    },
+    "todo": {
+      "figure": {
+        "row-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.row.snail}"
+        }
+      }
+    }
+  },
   "components/file": {
     "denhaag": {
       "file": {
@@ -8608,6 +8636,7 @@
       "components/contact-timeline",
       "components/data-badge",
       "components/drawer",
+      "components/figure",
       "components/file",
       "components/form-field",
       "components/form-field-checkbox-option",
