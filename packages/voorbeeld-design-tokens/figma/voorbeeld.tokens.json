@@ -4085,16 +4085,20 @@
         "line-height": {
           "$type": "lineHeights",
           "$value": "{utrecht.document.line-height}"
+        }
+      }
+    }
+  },
+  "components/form-field-label-suffix": {
+    "todo": {
+      "form-field-label-suffix": {
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
         },
-        "suffix": {
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.document.color}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.document.font-weight}"
-          }
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{utrecht.document.font-weight}"
         }
       }
     }
@@ -7365,10 +7369,6 @@
             "$type": "spacing",
             "$value": "{voorbeeld.space.block.snail}"
           },
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
-          },
           "current": {
             "font-weight": {
               "$type": "fontWeights",
@@ -8647,6 +8647,7 @@
       "components/form-field-description",
       "components/form-field-error-message",
       "components/form-field-label",
+      "components/form-field-label-suffix",
       "components/form-field-option-label",
       "components/form-field-radio-option",
       "components/form-summary",
