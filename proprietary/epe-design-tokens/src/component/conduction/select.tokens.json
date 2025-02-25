@@ -1,38 +1,40 @@
 {
-  "conduction": {
-    "input-select": {
-      "background-color": { "value": "{epe.color.white.100}" },
-      "border": { "value": "{epe.size.4xs} solid {epe.color.lightgrey.41}" },
-      "border-focus": { "value": "unset" },
-      "border-radius": { "value": "{utrecht.form-input.border-radius}" },
-      "invalid-border-color": { "value": "{epe.color.error}" },
-      "padding-block-end": { "value": 0 },
-      "padding-block-start": { "value": 0 },
-      "hover": {},
-      "focus": {},
-      "list-option": {
-        "font-family": { "value": "{epe.typography.source-sans.font-family}" },
-        "background-color": {},
-        "color": {},
-        "hover": {
+  "component": {
+    "conduction": {
+      "input-select": {
+        "background-color": { "value": "{epe.color.white.100}" },
+        "border": { "value": "{epe.size.4xs} solid {epe.color.lightgrey.41}" },
+        "border-focus": { "value": "unset" },
+        "border-radius": { "value": "{utrecht.form-input.border-radius}" },
+        "invalid-border-color": { "value": "{epe.color.error}" },
+        "padding-block-end": { "value": 0 },
+        "padding-block-start": { "value": 0 },
+        "hover": {},
+        "focus": {},
+        "list-option": {
           "font-family": { "value": "{epe.typography.source-sans.font-family}" },
-          "background-color": { "value": "{epe.color.blue.83}" },
-          "color": { "value": "{epe.color.black.0}" }
-        },
-        "selected": {
-          "background-color": { "value": "{epe.color.blue.83}" },
-          "color": { "value": "{epe.color.black.0}" }
-        },
-        "focus": {
           "background-color": {},
-          "color": {}
-        }
-      },
-      "placeholder": {
-        "color": {
-          "value": "{utrecht.form-input.placeholder.color}"
+          "color": {},
+          "hover": {
+            "font-family": { "value": "{epe.typography.source-sans.font-family}" },
+            "background-color": { "value": "{epe.color.blue.83}" },
+            "color": { "value": "{epe.color.black.0}" }
+          },
+          "selected": {
+            "background-color": { "value": "{epe.color.blue.83}" },
+            "color": { "value": "{epe.color.black.0}" }
+          },
+          "focus": {
+            "background-color": {},
+            "color": {}
+          }
         },
-        "font-family": { "value": "{epe.typography.source-sans.font-family}" }
+        "placeholder": {
+          "color": {
+            "value": "{utrecht.form-input.placeholder.color}"
+          },
+          "font-family": { "value": "{epe.typography.source-sans.font-family}" }
+        }
       }
     }
   }
