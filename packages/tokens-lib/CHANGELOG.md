@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/tokens-lib
 
+## 0.3.0
+
+### Minor Changes
+
+- 28be97d: Add `arrayToMap` utility function.
+
 ## 0.2.0
 
 ### Minor Changes

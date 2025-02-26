@@ -1,5 +1,13 @@
 # @nl-design-system-unstable/basis-design-tokens
 
+## 2.1.2
+
+### Patch Changes
+
+- 85440d4: Use thicker underline for links on hover, and move underline slightly away from text.
+- 1f57b39: Make Fieldset legends bold for Purmerend and Basis thema.
+- 0bb561e: Use `dashed` instead of `dotted` focus ring, because it adheres to WCAG more reliable. Some browsers render circular dots, in that case the 4px outline-width is not sufficient to achieve the minimum focus ring area.
+
 ## 2.1.1
 
 ### Patch Changes
