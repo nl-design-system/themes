@@ -5427,6 +5427,44 @@
       }
     }
   },
+  "components/navigation-bar": {
+    "utrecht": {
+      "nav-bar": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{utrecht.document.background-color}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{utrecht.document.color}"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "sizing",
+            "$value": "1184px"
+          }
+        },
+        "link": {
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.beetle}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.beetle}"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.mouse}"
+          }
+        }
+      }
+    }
+  },
   "components/number-badge": {
     "nl": {
       "number-badge": {
@@ -8691,6 +8729,7 @@
       "components/logo",
       "components/mark",
       "components/modal-dialog",
+      "components/navigation-bar",
       "components/number-badge",
       "components/ordered-list",
       "components/page-number-navigation",
