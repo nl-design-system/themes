@@ -5249,6 +5249,28 @@
       }
     }
   },
+  "components/logo": {
+    "utrecht": {
+      "logo": {
+        "min-block-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "min-inline-size": {
+          "$type": "sizing",
+          "$value": "{utrecht.pointer-target.min-size}"
+        },
+        "max-block-size": {
+          "$type": "sizing",
+          "$value": "120px"
+        },
+        "max-inline-size": {
+          "$type": "sizing",
+          "$value": "200px"
+        }
+      }
+    }
+  },
   "components/mark": {
     "nl": {
       "mark": {
@@ -8666,6 +8688,7 @@
       "components/link",
       "components/link-list",
       "components/login-link",
+      "components/logo",
       "components/mark",
       "components/modal-dialog",
       "components/number-badge",
