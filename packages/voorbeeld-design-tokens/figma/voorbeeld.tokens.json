@@ -8180,50 +8180,6 @@
           "$type": "color",
           "$value": "{utrecht.document.color}"
         },
-        "marker": {
-          "checked": {
-            "color": {
-              "$type": "color",
-              "$value": "{voorbeeld.color.white}"
-            },
-            "background-color": {
-              "$type": "color",
-              "$value": "{voorbeeld.color.green.600}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            }
-          },
-          "size": {
-            "$type": "sizing",
-            "$value": "{voorbeeld.size.xs}"
-          },
-          "icon": {
-            "size": {
-              "$type": "sizing",
-              "$value": "{voorbeeld.size.icon.sm}"
-            }
-          },
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{utrecht.form-control.border-width}"
-          },
-          "not-checked": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{utrecht.form-control.read-only.background-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{utrecht.form-control.read-only.border-color}"
-            }
-          },
-          "border-radius": {
-            "$type": "borderRadius",
-            "$value": "0px"
-          }
-        },
         "font-family": {
           "$type": "fontFamilies",
           "$value": "{utrecht.document.font-family}"
@@ -8240,6 +8196,10 @@
           "$type": "lineHeights",
           "$value": "{utrecht.document.line-height}"
         },
+        "row-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.row.rat}"
+        },
         "item": {
           "column-gap": {
             "$type": "spacing",
@@ -8254,9 +8214,15 @@
             "$value": "{voorbeeld.space.block.ant}"
           }
         },
-        "row-gap": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.row.rat}"
+        "icon": {
+          "color": {
+            "$type": "color",
+            "$value": "{voorbeeld.feedback.positive.color}"
+          },
+          "size": {
+            "$type": "sizing",
+            "$value": "{voorbeeld.size.icon.sm}"
+          }
         }
       }
     }
