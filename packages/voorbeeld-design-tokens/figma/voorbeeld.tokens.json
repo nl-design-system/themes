@@ -1699,6 +1699,32 @@
       }
     }
   },
+  "components/action-group": {
+    "utrecht": {
+      "button-group": {
+        "background-color": {
+          "$type": "color",
+          "$value": "transparent"
+        },
+        "column-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.column.snail}"
+        },
+        "padding-block-end": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "padding-block-start": {
+          "$type": "spacing",
+          "$value": "0px"
+        },
+        "row-gap": {
+          "$type": "spacing",
+          "$value": "{voorbeeld.space.row.snail}"
+        }
+      }
+    }
+  },
   "components/alert": {
     "utrecht": {
       "alert": {
@@ -2649,32 +2675,6 @@
             "$type": "lineHeights",
             "$value": "{utrecht.document.line-height}"
           }
-        }
-      }
-    }
-  },
-  "components/button-group": {
-    "utrecht": {
-      "button-group": {
-        "background-color": {
-          "$type": "color",
-          "$value": "transparent"
-        },
-        "column-gap": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.column.snail}"
-        },
-        "padding-block-end": {
-          "$type": "spacing",
-          "$value": "0px"
-        },
-        "padding-block-start": {
-          "$type": "spacing",
-          "$value": "0px"
-        },
-        "row-gap": {
-          "$type": "spacing",
-          "$value": "{voorbeeld.space.row.snail}"
         }
       }
     }
@@ -8652,13 +8652,13 @@
       "common",
       "components/accordion",
       "components/action",
+      "components/action-group",
       "components/alert",
       "components/avatar",
       "components/backdrop",
       "components/blockquote",
       "components/breadcrumb-nav",
       "components/button",
-      "components/button-group",
       "components/case-card",
       "components/checkbox",
       "components/checkbox-group",
