@@ -1,5 +1,12 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.3.5
+
+### Patch Changes
+
+- b87ebef: - Split up component tokensets per organisation, making it easier to copy and paste a token set of a specific component from an organisation.
+  - Changed the order of tokens, making them easier to scan.
+
 ## 3.3.4
 
 ### Patch Changes
