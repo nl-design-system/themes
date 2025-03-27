@@ -1466,7 +1466,9 @@
           "$value": "var(--fa-animation-duration, 2s)"
         }
       }
-    },
+    }
+  },
+  "common": {
     "basis": {
       "color": {
         "text": {
@@ -1538,14 +1540,13 @@
           "fill-2": { "$value": "{purmerend.color.orange-10}" },
           "text-1": { "$value": "{purmerend.color.blue-44}" },
           "text-2": { "$value": "{purmerend.color.blue-44}" }
-         
         },
         "error": {
-          "bg-1": { "$value": "{purmerend.color.red-8}"  },
-          "bg-2": { "$value": "{purmerend.color.red-8}"  },
-          "interactive-1": { "$value": "{purmerend.color.red-8}"  },
-          "interactive-2": { "$value": "{purmerend.color.red-8}"  },
-          "interactive-3": { "$value": "{purmerend.color.red-8}"  },
+          "bg-1": { "$value": "{purmerend.color.red-8}" },
+          "bg-2": { "$value": "{purmerend.color.red-8}" },
+          "interactive-1": { "$value": "{purmerend.color.red-8}" },
+          "interactive-2": { "$value": "{purmerend.color.red-8}" },
+          "interactive-3": { "$value": "{purmerend.color.red-8}" },
           "border-1": { "$value": "{purmerend.color.red-17}" },
           "border-2": { "$value": "{purmerend.color.red-17}" },
           "border-3": { "$value": "{purmerend.color.red-17}" },
@@ -1589,7 +1590,7 @@
           "interactive-2": { "$value": "{purmerend.color.yellow-7}" },
           "interactive-3": { "$value": "{purmerend.color.yellow-7}" },
           "border-1": { "$value": "{purmerend.color.black-2}" },
-          "border-2": {"$value": "{purmerend.color.grey-26}" },
+          "border-2": { "$value": "{purmerend.color.grey-26}" },
           "border-3": { "$value": "{purmerend.color.black-2}" },
           "fill-1": { "$value": "{purmerend.color.black-2}" },
           "fill-2": { "$value": "{purmerend.color.black-2}" },
@@ -1617,7 +1618,7 @@
           "interactive-2": { "$value": "{purmerend.color.orange-8}" },
           "interactive-3": { "$value": "{purmerend.color.orange-8}" },
           "border-1": { "$value": "{purmerend.color.black-2}" },
-          "border-2": {"$value": "{purmerend.color.black-2}" },
+          "border-2": { "$value": "{purmerend.color.black-2}" },
           "border-3": { "$value": "{purmerend.color.black-2}" },
           "fill-1": { "$value": "{purmerend.color.black-2}" },
           "fill-2": { "$value": "{purmerend.color.black-2}" },
@@ -1757,7 +1758,7 @@
           "interactive-2": { "$value": "{purmerend.color.black-2}" },
           "interactive-3": { "$value": "{purmerend.color.black-2}" },
           "border-1": { "$value": "{purmerend.color.black-2}" },
-          "border-2": {"$value": "{purmerend.color.black-2}" },
+          "border-2": { "$value": "{purmerend.color.black-2}" },
           "border-3": { "$value": "{purmerend.color.black-2}" },
           "fill-1": { "$value": "{purmerend.color.orange-8}" },
           "fill-2": { "$value": "{purmerend.color.orange-8}" },
@@ -1771,16 +1772,6 @@
         },
         "color": {
           "$value": "{basis.color.highlight.text-1}"
-        }
-      },
-      "container": {
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{basis.border-width.sm}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.black}"
         }
       },
       "interaction": {
@@ -2190,7 +2181,7 @@
           "$value": "1140px"
         }
       }
-    },
+    }
   },
   "components/page-footer": {
     "utrecht": {
@@ -2282,7 +2273,7 @@
           "border-color": {
             "$type": "color",
             "$value": "{basis.color.highlight.border-2}"
-          }        
+          }
         },
         "hover": {
           "background-color": {
@@ -2365,40 +2356,40 @@
           "$comment": "FIXME: This value should be selected from actual purmerend.nl designs. Could not find a good example."
         },
         "background-color": {
-          "$type":  "color",
+          "$type": "color",
           "$value": "{basis.color.text.interactive-1}"
         },
         "color": {
-          "$type":  "color",
+          "$type": "color",
           "$value": "{basis.color.text.text-1}"
         },
         "error": {
           "background-color": {
-            "$type":  "color",
+            "$type": "color",
             "$value": "{basis.color.error.bg-1}"
           },
           "color": {
-            "$type":  "color",
+            "$type": "color",
             "$value": "{basis.color.error.text-1}"
           }
         },
         "ok": {
           "background-color": {
-            "$type":  "color",
+            "$type": "color",
             "$value": "{basis.color.success.bg-1}"
           },
           "color": {
-            "$type":  "color",
+            "$type": "color",
             "$value": "{basis.color.success.text-1}"
           }
         },
         "warning": {
           "background-color": {
-            "$type":  "color",
+            "$type": "color",
             "$value": "{basis.color.warning.bg-1}"
           },
           "color": {
-            "$type":  "color",
+            "$type": "color",
             "$value": "{basis.color.warning.text-1}"
           }
         },
@@ -2493,7 +2484,7 @@
           "$type": "color",
           "$value": "{basis.color.text.text-1}"
         },
-       "info": {
+        "info": {
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.info.bg-1}"
