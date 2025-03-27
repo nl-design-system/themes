@@ -25,13 +25,15 @@
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "node ./style-dictionary.mjs"
   },
+  "dependencies": {
+    "@nl-design-system-unstable/basis-design-tokens": "workspace:*"
+  },
   "devDependencies": {
     "@amsterdam/design-system-react": "0.11.0",
     "@fontsource/cantarell": "5.1.0",
     "@fontsource/fira-sans": "5.1.0",
     "@fontsource/source-serif-pro": "5.1.0",
     "@nl-design-system-community/design-tokens-definition": "workspace:*",
-    "@nl-design-system-unstable/basis-design-tokens": "workspace:*",
     "@nl-design-system-unstable/design-tokens-table-react": "workspace:*",
     "@nl-design-system-unstable/theme-toolkit": "workspace:*",
     "@nl-design-system-unstable/tokens-lib": "workspace:*",
