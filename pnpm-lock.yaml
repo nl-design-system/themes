@@ -255,6 +255,9 @@ importers:
       '@nl-design-system-unstable/leidschendam-voorburg-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/leidschendam-voorburg-design-tokens
+      '@nl-design-system-unstable/menno-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/menno-design-tokens
       '@nl-design-system-unstable/nijmegen-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/nijmegen-design-tokens
@@ -1694,6 +1697,42 @@ importers:
         specifier: 4.0.1
         version: 4.0.1
 
+  proprietary/menno-design-tokens:
+    devDependencies:
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens-definition
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: workspace:*
+        version: link:../../packages/components-react/design-tokens-table-react
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../../packages/theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../../packages/tokens-lib
+      '@storybook/blocks':
+        specifier: 8.2.7
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))
+      '@storybook/react':
+        specifier: 8.2.7
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
+      '@tokens-studio/sd-transforms':
+        specifier: 1.2.3
+        version: 1.2.3(style-dictionary@4.0.1)
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      style-dictionary:
+        specifier: 4.0.1
+        version: 4.0.1
+
   proprietary/nijmegen-design-tokens:
     devDependencies:
       '@fontsource/source-sans-pro':
@@ -1882,6 +1921,10 @@ importers:
         version: 4.0.1
 
   proprietary/purmerend-design-tokens:
+    dependencies:
+      '@nl-design-system-unstable/basis-design-tokens':
+        specifier: workspace:*
+        version: link:../basis-design-tokens
     devDependencies:
       '@amsterdam/design-system-react':
         specifier: 0.11.0
@@ -1898,9 +1941,6 @@ importers:
       '@nl-design-system-community/design-tokens-definition':
         specifier: workspace:*
         version: link:../../packages/design-tokens-definition
-      '@nl-design-system-unstable/basis-design-tokens':
-        specifier: workspace:*
-        version: link:../basis-design-tokens
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../../packages/components-react/design-tokens-table-react
