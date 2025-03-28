@@ -41,6 +41,8 @@ interface ComponentStoriesProps {
   tokens?: StyleDictionaryDesignToken[];
   tokensDefinition?: StyleDictionaryDesignToken[];
   displayDesignTokens?: boolean;
+  start?: number;
+  end?: number;
 }
 
 const arrayToMap = <T extends DesignToken>(tokens: T[]) =>
@@ -53,6 +55,8 @@ export const ComponentStories = ({
   tokens = [],
   displayDesignTokens = false,
   tokensDefinition,
+  start = 0,
+  end = undefined,
 }: ComponentStoriesProps) => {
   const availableComponents = [...AMS_COMPONENT_STORIES, ...UTRECHT_COMPONENT_STORIES, ...DENHAAG_COMPONENT_STORIES];
 
@@ -68,7 +72,7 @@ export const ComponentStories = ({
     }
   };
 
-  const components = showAll
+  let components = showAll
     ? availableComponents
     : availableComponents.filter(
         (storyObj) => config.stories.includes(storyObj.storyId) || (!!tokens && hasDetectedTokens(storyObj, tokens)),
@@ -89,6 +93,9 @@ export const ComponentStories = ({
   interface StoryGroups {
     [index: string]: ComponentStory[];
   }
+
+  components = components.slice(start, end);
+
   const groupedStories: StoryGroups = components.reduce((groups: StoryGroups, story: ComponentStory) => {
     if (story.group) {
       const group = groups[story.group] || [];
