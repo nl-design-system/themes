@@ -800,6 +800,9 @@
         },
         "fontSize-48": {
           "$value": ".625em"
+        },
+        "fontSize-49": {
+          "$value": "1.625em"
         }
       },
       "FontFamily": {
@@ -1860,6 +1863,16 @@
       }
     }
   },
+  "components/document": {
+    "utrecht": {
+      "document": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      }
+    }
+  },
   "components/link": {
     "utrecht": {
       "link": {
@@ -1933,7 +1946,8 @@
           "$value": "{basis.color.primary-inverse.text-1}"
         },
         "font-size": {
-          "$value": "{purmerend.FontSize.fontSize-27}"
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
         },
         "font-weight": {
           "$value": "{basis.typography.font-weight.bold}"
@@ -2003,6 +2017,10 @@
             "$type": "color",
             "$value": "{utrecht.button.color}"
           },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.lg}"
+          },
           "active": {
             "background-color": {
               "$type": "color",
@@ -2063,6 +2081,10 @@
             "$type": "color",
             "$value": "{basis.color.primary.text-1}"
           },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.lg}"
+          },
           "active": {
             "background-color": {
               "$type": "color",
@@ -2122,6 +2144,10 @@
           "color": {
             "$type": "color",
             "$value": "{basis.color.primary.text-1}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.lg}"
           },
           "active": {
             "background-color": {
@@ -2237,6 +2263,10 @@
         "color": {
           "$value": "{basis.color.text.text-1}"
         },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        },
         "font-weight": {
           "$value": "{basis.typography.font-weight.bold}"
         },
@@ -2261,6 +2291,26 @@
             "$type": "color",
             "$value": "{basis.color.error.border-1}"
           }
+        }
+      }
+    }
+  },
+  "components/form-field-description": {
+    "utrecht": {
+      "form-field-description": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      }
+    }
+  },
+  "components/form-field-error-message": {
+    "utrecht": {
+      "form-field-error-message": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
         }
       }
     }
@@ -2499,6 +2549,28 @@
       }
     }
   },
+  "components/paragraph": {
+    "utrecht": {
+      "paragraph": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        },
+        "lead": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.lg}"
+          }
+        },
+        "small": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.md}"
+          }
+        }
+      }
+    }
+  },
   "components/separator": {
     "utrecht": {
       "separator": {
@@ -2630,6 +2702,10 @@
           "$type": "dimension",
           "$value": "{basis.border-radius.md}"
         },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        },
         "focus": {
           "background-color": {
             "$type": "color",
@@ -2651,6 +2727,10 @@
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.text.interactive-1}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -2702,6 +2782,10 @@
           "$type": "color",
           "$value": "{basis.color.text.interactive-1}"
         },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        },
         "border-radius": {
           "$type": "dimension",
           "$value": "{basis.border-radius.md}"
@@ -2745,12 +2829,66 @@
       }
     }
   },
+  "components/code": {
+    "utrecht": {
+      "code": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      }
+    }
+  },
   "components/code-block": {
     "utrecht": {
       "code-block": {
         "background-color": {
           "$type": "color",
           "$value": "{purmerend.color.white-1}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      }
+    }
+  },
+  "components/heading": {
+    "utrecht": {
+      "heading-1": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{purmerend.FontSize.fontSize-49}"
+        }
+      },
+      "heading-2": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      },
+      "heading-3": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      },
+      "heading-4": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      },
+      "heading-5": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      },
+      "heading-6": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
         }
       }
     }
@@ -2758,6 +2896,10 @@
   "components/table": {
     "utrecht": {
       "table": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        },
         "header": {
           "border-block-end-color": {
             "$type": "color",
@@ -2769,6 +2911,26 @@
             "$type": "color",
             "$value": "{purmerend.color.black-2}"
           }
+        }
+      }
+    }
+  },
+  "components/unordered-list": {
+    "utrecht": {
+      "unordered-list": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
+        }
+      }
+    }
+  },
+  "components/ordered-list": {
+    "utrecht": {
+      "ordered-list": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.lg}"
         }
       }
     }

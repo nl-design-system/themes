@@ -2,7 +2,8 @@ import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/C
 import type { Meta, StoryObj } from '@storybook/react';
 import tokensDefinition from '@nl-design-system-community/design-tokens-definition/dist/list.json';
 import config from '../src/config.json';
-import tokens from '../dist/list.json';
+import lightTokens from '../dist/list.json';
+import darkTokens from '../dist/color-scheme-dark/list.json';
 
 const meta = {
   title: 'Purmerend',
@@ -11,7 +12,6 @@ const meta = {
   args: {
     config,
     showAll: false,
-    tokens,
     tokensDefinition,
     displayDesignTokens: true,
   },
@@ -25,6 +25,7 @@ export const ComponentTokensLightMode: Story = {
   name: 'Component Tokens (color-scheme: light)',
   args: {
     theme: 'purmerend-theme purmerend-theme--color-scheme-light',
+    tokens: lightTokens,
   },
 };
 
@@ -32,5 +33,6 @@ export const ComponentTokensDarkMode: Story = {
   name: 'Component Tokens (color-scheme: dark)',
   args: {
     theme: 'purmerend-theme purmerend-theme--color-scheme-dark',
+    tokens: darkTokens,
   },
 };
