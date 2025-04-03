@@ -4027,116 +4027,116 @@
         "panel": {
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
+            "$value": "transparent"
           },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{basis.border-width.sm}"
           },
           "padding-block-end": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.block.3xl}"
           },
           "padding-block-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.block.3xl}"
           },
           "padding-inline-end": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           },
           "padding-inline-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           }
         },
         "button": {
           "gap": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.text.md}"
           },
           "icon": {
             "size": {
-              "$type": "sizing",
-              "$value": "{basis.icon.functional.size}"
+              "$type": "dimension",
+              "$value": "{basis.size.icon.md}"
             }
           },
           "padding-block-end": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.block.lg}"
           },
           "padding-block-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.block.lg}"
           },
           "padding-inline-end": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           },
           "padding-inline-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           },
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.text.bg-2}"
+            "$value": "{basis.color.primary.interactive-1}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
+            "$value": "transparent"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.interaction.color}"
+            "$value": "{basis.color.primary.text-1}"
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.text.interactive-2}"
+              "$value": "{basis.color.primary.interactive-2}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "transparent"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.interaction.hover.color}"
+              "$value": "{basis.color.primary.text-2}"
             }
           },
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.focus.background-color}"
+              "$value": "{basis.color.highlight.interactive-3}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "transparent"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.focus.color}"
+              "$value": "{basis.color.highlight.text-2}"
             }
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.text.interactive-3}"
+              "$value": "{basis.color.primary.interactive-3}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "transparent"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.interaction.active.color}"
+              "$value": "{basis.color.primary.text-2}"
             }
           },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{basis.border-width.sm}"
           },
           "border-radius": {
-            "$type": "borderRadius",
+            "$type": "dimension",
             "$value": "0px"
           }
         }
@@ -4144,18 +4144,14 @@
     },
     "todo": {
       "accordion": {
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
         "section": {
-          "border-block-end-width": {
-            "$type": "borderWidth",
+          "border-width": {
+            "$type": "dimension",
             "$value": "{basis.border-width.sm}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.text.border-1}"
+            "$value": "{basis.color.primary.border-1}"
           }
         },
         "button": {
@@ -4167,20 +4163,6 @@
             "$type": "lineHeights",
             "$value": "{basis.typography.line-height.md}"
           },
-          "expanded": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.text.bg-2}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.interaction.color}"
-            }
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{basis.typography.font-family.default}"
@@ -4189,6 +4171,10 @@
             "$type": "fontWeights",
             "$value": "{basis.typography.font-weight.bold}"
           }
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "0"
         }
       }
     }
