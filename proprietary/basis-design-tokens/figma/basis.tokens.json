@@ -1600,20 +1600,20 @@
       "focus": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.focus.background-color}"
+          "$value": "{basis.color.highlight.interactive-3}"
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.focus.color}"
+          "$value": "{basis.color.highlight.text-2}"
         },
         "outline-color": {
           "$type": "color",
-          "$value": "{basis.color.text.border-1}"
+          "$value": "{basis.color.text.bg-1}"
         },
         "inverse": {
           "outline-color": {
             "$type": "color",
-            "$value": "{basis.focus.background-color}"
+            "$value": "{basis.color.text-inverse.bg-1}"
           }
         },
         "outline-offset": {
@@ -1626,7 +1626,7 @@
         },
         "outline-width": {
           "$type": "dimension",
-          "$value": "{basis.border-width.lg}"
+          "$value": "{basis.border-width.md}"
         }
       },
       "form-control": {
@@ -1709,7 +1709,7 @@
         "focus": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.focus.background-color}"
+            "$value": "{basis.color.text.bg-1}"
           },
           "border-color": {
             "$type": "color",
