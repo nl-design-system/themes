@@ -21,7 +21,7 @@ import '@nl-design-system-unstable/drechterland-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duiven-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/duiven-design-tokens/src/font';
 import '@nl-design-system-unstable/enkhuizen-design-tokens/dist/index.css';
-import '@nl-design-system-unstable/epe-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/epe-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/epe-design-tokens/src/font';
 import '@nl-design-system-unstable/groningen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/groningen-design-tokens/src/font';

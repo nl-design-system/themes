@@ -1,12 +1,13 @@
 import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/ComponentStories';
 import type { Meta, StoryObj } from '@storybook/react';
 import config from '../src/config.json';
+import tokens from '../dist/list.json';
 
 const meta = {
   title: 'Basis Thema',
   component: ComponentStories,
   parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: false } },
-  args: { config, showAll: false },
+  args: { config, showAll: false, tokens, displayDesignTokens: false },
 } satisfies Meta<typeof ComponentStories>;
 
 type Story = StoryObj<typeof meta>;
