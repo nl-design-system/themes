@@ -29,7 +29,7 @@ describe('Tokens table', () => {
 
     render(<DesignTokensTable tokens={tokens} />);
 
-    const tableDataCell = screen.getByText('example.button.color', { selector: 'td, td > *' });
+    const tableDataCell = screen.getByText('example.button.color', { selector: 'td, td *' });
     expect(tableDataCell).toBeInTheDocument();
   });
 
