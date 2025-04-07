@@ -262,7 +262,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.secondary-inverse.bg-1}"
+              "$value": "{basis.color.info.interactive-1}"
             },
             "border-color": {
               "$type": "color",
@@ -281,6 +281,12 @@
             "$type": "color",
             "$value": "{purmerend.color.black-2}"
           }
+        },
+        "indeterminate": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{purmerend.color.black-2}"
+          }
         }
       }
     }
@@ -291,7 +297,7 @@
         "disabled": {
           "background-color": {
             "$type": "color",
-            "$value": "{purmerend.color.black-2}"
+            "$value": "{basis.color.disabled.bg-1}"
           }
         }
       }
@@ -344,7 +350,7 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.text.bg-1}"
+              "$value": "{basis.color.disabled.bg-1}"
             },
             "color": {
               "$type": "color",
@@ -368,6 +374,18 @@
                 "$value": "{utrecht.listbox.option.selected.color}"
               }
             }
+          }
+        }
+      }
+    }
+  },
+  "components/select": {
+    "utrecht": {
+      "select": {
+        "disabled": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.bg-1}"
           }
         }
       }
