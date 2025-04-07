@@ -5505,6 +5505,176 @@
       }
     }
   },
+  "components/case-card_new": {
+    "todo": {
+      "case-card": {
+        "heading": {
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.typography.line-height.sm}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.xl}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.text.text-2}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.typography.font-family.heading}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.typography.font-weight.heading}"
+          },
+          "read-only": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.text.text-2}"
+            }
+          }
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.lg}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.2xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.3xl}"
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.text.text-2}"
+          }
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.primary.interactive-1}"
+        },
+        "read-only": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.text.interactive-1}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.text.text-2}"
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.text.interactive-2}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.text.interactive-3}"
+            }
+          }
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.interactive-2}"
+          }
+        },
+        "active": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.interactive-3}"
+          }
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "192px"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "328px"
+        },
+        "decoration": {
+          "paper": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.text.bg-1}"
+            }
+          },
+          "folder": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.primary.interactive-3}"
+            },
+            "read-only": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.text.interactive-3}"
+              },
+              "hover": {
+                "background-color": {
+                  "$type": "color",
+                  "$value": "{basis.color.text.interactive-3}"
+                }
+              },
+              "active": {
+                "background-color": {
+                  "$type": "color",
+                  "$value": "{basis.color.text.interactive-3}"
+                }
+              }
+            },
+            "active": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.primary.interactive-3}"
+              }
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.primary.interactive-3}"
+              }
+            },
+            "focus-visible": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.highlight.interactive-3}"
+              }
+            }
+          }
+        },
+        "focus-visible": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight.interactive-3}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight.text-2}"
+          }
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        }
+      }
+    }
+  },
   "components/checkbox": {
     "utrecht": {
       "checkbox": {
@@ -9885,6 +10055,7 @@
       "components/breadcrumb-nav/todo",
       "components/button",
       "components/case-card",
+      "components/case-card_new",
       "components/checkbox",
       "components/checkbox-group",
       "components/code",
