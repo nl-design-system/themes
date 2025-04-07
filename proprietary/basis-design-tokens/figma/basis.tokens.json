@@ -4568,34 +4568,42 @@
       "avatar": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.primary-inverse.bg-1}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{basis.border-radius.round}"
-        },
-        "size": {
-          "$type": "sizing",
-          "$value": "{basis.pointer-target.min-block-size}"
-        },
-        "icon": {
-          "icon-size": {
-            "$type": "sizing",
-            "$value": "{basis.icon.functional.size}"
-          }
+          "$value": "{basis.color.primary.fill-1}"
         },
         "border-color": {
           "$type": "color",
           "$value": "{basis.color.transparent}"
         },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.round}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.primary-inverse.text-1}"
+          "$value": "{basis.color.primary-inverse.text-2}"
+        },
+        "size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "icon": {
+          "icon-size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
+          }
         },
         "text": {
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{basis.typography.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.md}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -4608,20 +4616,12 @@
           "text-transform": {
             "$type": "textCase",
             "$value": "uppercase"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{basis.typography.font-size.md}"
           }
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{basis.border-width.sm}"
         },
         "hover": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.primary-inverse.bg-1}"
+            "$value": "{basis.color.primary.fill-2}"
           },
           "border-color": {
             "$type": "color",
