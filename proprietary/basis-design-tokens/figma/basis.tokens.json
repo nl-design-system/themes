@@ -4394,53 +4394,91 @@
       "alert": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.text.bg-2}"
+          "$value": "{basis.color.info.bg-2}"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.transparent}"
+          "$value": "{basis.color.info.border-1}"
         },
         "border-radius": {
-          "$type": "borderRadius",
+          "$type": "dimension",
           "$value": "0px"
         },
         "border-width": {
-          "$type": "borderWidth",
+          "$type": "dimension",
           "$value": "{basis.border-width.md}"
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.text.text-2}"
+          "$value": "{basis.color.info.text-2}"
         },
         "column-gap": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.column.md}"
         },
         "padding-block-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.block.2xl}"
         },
         "padding-block-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.block.xl}"
         },
         "padding-inline-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.inline.xl}"
         },
         "padding-inline-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.inline.xl}"
         },
         "content": {
           "row-gap": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.row.xl}"
+          }
+        },
+        "icon": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xs}"
+          },
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.info.text-2}"
+          },
+          "info": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.info.text-2}"
+            }
+          },
+          "error": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.error.text-2}"
+            }
+          },
+          "ok": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.success.text-2}"
+            }
+          },
+          "warning": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.warning.text-2}"
+            }
           }
         },
         "message": {
           "row-gap": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.row.md}"
           }
         },
@@ -4451,7 +4489,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
+            "$value": "{basis.color.info.border-1}"
           },
           "color": {
             "$type": "color",
@@ -4465,7 +4503,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
+            "$value": "{basis.color.error.border-1}"
           },
           "color": {
             "$type": "color",
@@ -4479,7 +4517,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
+            "$value": "{basis.color.success.border-1}"
           },
           "color": {
             "$type": "color",
@@ -4493,49 +4531,11 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
+            "$value": "{basis.color.warning.border-1}"
           },
           "color": {
             "$type": "color",
             "$value": "{basis.color.warning.text-2}"
-          }
-        },
-        "icon": {
-          "inset-block-start": {
-            "$type": "spacing",
-            "$value": "{basis.space.block.xs}"
-          },
-          "size": {
-            "$type": "sizing",
-            "$value": "{basis.icon.functional.size}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{utrecht.alert.color}"
-          },
-          "info": {
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.alert.info.color}"
-            }
-          },
-          "error": {
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.alert.error.color}"
-            }
-          },
-          "ok": {
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.alert.ok.color}"
-            }
-          },
-          "warning": {
-            "color": {
-              "$type": "color",
-              "$value": "{utrecht.alert.warning.color}"
-            }
           }
         }
       }
@@ -4547,6 +4547,10 @@
             "$type": "fontFamilies",
             "$value": "{basis.typography.font-family.heading}"
           },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.xl}"
+          },
           "font-weight": {
             "$type": "fontWeights",
             "$value": "{basis.typography.font-weight.heading}"
@@ -4554,10 +4558,6 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.typography.line-height.sm}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{basis.typography.font-size.xl}"
           }
         }
       }
