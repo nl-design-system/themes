@@ -4640,7 +4640,7 @@
       "backdrop": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.text-inverse.bg-2}"
+          "$value": "{basis.color.text-inverse.bg-1}"
         },
         "color": {
           "$type": "color",
@@ -4650,12 +4650,6 @@
           "$type": "opacity",
           "$value": "0.2"
         },
-        "reduced-transparency": {
-          "opacity": {
-            "$type": "opacity",
-            "$value": "0.98"
-          }
-        },
         "z-index": {
           "$type": "other",
           "$value": "auto"
@@ -4664,6 +4658,12 @@
           "animation-duration": {
             "$type": "other",
             "$value": "0.4s"
+          }
+        },
+        "reduced-transparency": {
+          "opacity": {
+            "$type": "opacity",
+            "$value": "0.98"
           }
         }
       }
