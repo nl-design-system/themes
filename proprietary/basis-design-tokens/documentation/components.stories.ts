@@ -13,4 +13,17 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const Components: Story = { parameters: { theme: `${config.prefix}-theme` } };
+export const Components: Story = {
+  parameters: { theme: `${config.prefix}-theme` },
+  args: {
+    start: 0,
+    end: 50,
+  },
+};
+
+export const ComponentsContinued: Story = {
+  parameters: { theme: `${config.prefix}-theme` },
+  args: {
+    start: 51,
+  },
+};
