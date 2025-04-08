@@ -1867,6 +1867,18 @@
           "$type": "borderRadius",
           "$value": "{purmerend.Radius.radius-10}"
         }
+      },
+      "form-control": {
+        "disabled": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.bg-1}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.text-1}"
+          }
+        }
       }
     }
   },
@@ -2861,10 +2873,6 @@
   "components/code-block": {
     "utrecht": {
       "code-block": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{purmerend.color.white-1}"
-        },
         "font-size": {
           "$type": "fontSizes",
           "$value": "{basis.typography.font-size.lg}"

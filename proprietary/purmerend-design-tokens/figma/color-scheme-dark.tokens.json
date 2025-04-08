@@ -123,10 +123,7 @@
           "text-2": { "$value": "{purmerend.color.green-3}" }
         },
         "text-inverse": {
-          "bg-1": {
-            "$type": "color",
-            "$value": "{radix.color.gray.gray12}"
-          },
+          "bg-1": { "$value": "{purmerend.color.cyan-6}" },
           "bg-2": { "$value": "{purmerend.color.cyan-6}" },
           "interactive-1": { "$value": "{purmerend.color.grey-49}" },
           "interactive-2": { "$value": "{purmerend.color.grey-49}" },
@@ -244,20 +241,6 @@
   "components/button": {
     "utrecht": {
       "button": {
-        "disabled": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.interactive-1}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.text-1}"
-          }
-        },
         "primary-action": {
           "hover": {
             "background-color": {
@@ -273,45 +256,9 @@
       }
     }
   },
-  "components/checkbox": {
-    "utrecht": {
-      "checkbox": {
-        "checked": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{purmerend.color.black-2}"
-          }
-        },
-        "indeterminate": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{purmerend.color.black-2}"
-          }
-        }
-      }
-    }
-  },
-  "components/radio-button": {
-    "utrecht": {
-      "radio-button": {
-        "disabled": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.bg-1}"
-          }
-        }
-      }
-    }
-  },
   "components/textarea": {
     "utrecht": {
       "textarea": {
-        "disabled": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.bg-1}"
-          }
-        },
         "read-only": {
           "background-color": {
             "$type": "color",
@@ -324,12 +271,6 @@
   "components/textbox": {
     "utrecht": {
       "textbox": {
-        "disabled": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.bg-1}"
-          }
-        },
         "read-only": {
           "background-color": {
             "$type": "color",
@@ -346,16 +287,6 @@
           "color": {
             "$type": "color",
             "$value": "{basis.color.text-inverse.text-1}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.bg-1}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.text-1}"
-            }
           },
           "active": {
             "background-color": {
@@ -382,22 +313,6 @@
   "components/select": {
     "utrecht": {
       "select": {
-        "disabled": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.bg-1}"
-          }
-        }
-      }
-    }
-  },
-  "components/code-block": {
-    "utrecht": {
-      "code-block": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.text.bg-2}"
-        }
       }
     }
   },
