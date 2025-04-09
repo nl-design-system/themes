@@ -5859,12 +5859,50 @@
       }
     }
   },
-  "components/code-block": {
+  "components/code-block/nl": {
+    "nl": {
+      "code-block": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.bg-2}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.typography.font-family.code}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.typography.line-height.md}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        }
+      }
+    }
+  },
+  "components/code-block/utrecht": {
     "utrecht": {
       "code-block": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.text.interactive-1}"
+          "$value": "{basis.color.text.bg-2}"
         },
         "color": {
           "$type": "color",
@@ -9921,7 +9959,8 @@
       "components/checkbox-group",
       "components/code/nl",
       "components/code/utrecht",
-      "components/code-block",
+      "components/code-block/nl",
+      "components/code-block/utrecht",
       "components/color-sample",
       "components/drawer",
       "components/form-field",
