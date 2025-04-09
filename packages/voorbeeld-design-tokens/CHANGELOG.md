@@ -1,5 +1,31 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 3.4.0
+
+### Minor Changes
+
+- 14505df: De volgende tokens zijn toegevoegd aan de Heading component.
+
+  - `nl.heading.level-1.margin-block-start`
+  - `nl.heading.level-1.margin-block-end`
+  - `nl.heading.level-2.margin-block-start`
+  - `nl.heading.level-2.margin-block-end`
+  - `nl.heading.level-3.margin-block-start`
+  - `nl.heading.level-3.margin-block-end`
+  - `nl.heading.level-4.margin-block-start`
+  - `nl.heading.level-4.margin-block-end`
+  - `nl.heading.level-5.margin-block-start`
+  - `nl.heading.level-5.margin-block-end`
+  - `nl.heading.level-6.margin-block-start`
+  - `nl.heading.level-6.margin-block-end`
+
+- 42a7949: De volgende tokens zijn toegevoegd aan de Paragraph component.
+
+  - `nl.paragraph.margin-block-start`
+  - `nl.paragraph.margin-block-end`
+  - `nl.paragraph.lead.margin-block-start`
+  - `nl.paragraph.lead.margin-block-end`
+
 ## 3.3.5
 
 ### Patch Changes
