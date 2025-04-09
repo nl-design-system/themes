@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/basis-design-tokens
 
+## 3.0.0
+
+### Major Changes
+
+- ba45268: Basis Theme V3: MVP Theme Builder edition.
+
 ## 2.1.2
 
 ### Patch Changes
