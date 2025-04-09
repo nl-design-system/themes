@@ -5939,40 +5939,74 @@
       }
     }
   },
-  "components/color-sample": {
-    "utrecht": {
+  "components/color-sample/nl": {
+    "nl": {
       "color-sample": {
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{basis.border-width.sm}"
+        "background-color": {
+          "$type": "color",
+          "$value": "#cccccc"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.text.border-1}"
+          "$value": "#787878"
         },
         "border-radius": {
-          "$type": "borderRadius",
-          "$value": "{basis.border-radius.sm}"
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "block-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.sm}"
+        },
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.sm}"
+        }
+      }
+    }
+  },
+  "components/color-sample/utrecht": {
+    "utrecht": {
+      "color-sample": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{nl.color-sample.background-color}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{nl.color-sample.border-width}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{nl.color-sample.border-color}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{nl.color-sample.border-radius}"
         },
         "dark": {
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.text.border-1}"
+            "$value": "{nl.color-sample.border-color}"
           }
         },
         "light": {
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.text-inverse.border-1}"
+            "$value": "{nl.color-sample.border-color}"
           }
         },
         "block-size": {
-          "$type": "sizing",
-          "$value": "{basis.size.sm}"
+          "$type": "dimension",
+          "$value": "{nl.color-sample.block-size}"
         },
         "inline-size": {
-          "$type": "sizing",
-          "$value": "{basis.size.sm}"
+          "$type": "dimension",
+          "$value": "{nl.color-sample.inline-size}"
         }
       }
     }
@@ -9961,7 +9995,8 @@
       "components/code/utrecht",
       "components/code-block/nl",
       "components/code-block/utrecht",
-      "components/color-sample",
+      "components/color-sample/nl",
+      "components/color-sample/utrecht",
       "components/drawer",
       "components/form-field",
       "components/form-field-checkbox-option",
