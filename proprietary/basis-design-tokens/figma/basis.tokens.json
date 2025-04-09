@@ -5811,7 +5811,29 @@
       }
     }
   },
-  "components/code": {
+  "components/code/nl": {
+    "nl": {
+      "code": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.bg-2}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.typography.font-family.code}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        }
+      }
+    }
+  },
+  "components/code/utrecht": {
     "utrecht": {
       "code": {
         "background-color": {
@@ -9897,7 +9919,8 @@
       "components/case-card",
       "components/checkbox",
       "components/checkbox-group",
-      "components/code",
+      "components/code/nl",
+      "components/code/utrecht",
       "components/code-block",
       "components/color-sample",
       "components/drawer",
