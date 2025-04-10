@@ -21,7 +21,7 @@ const build = async () => {
     }),
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: [
-      // '../basis-design-tokens/figma/**/*.tokens.json',
+      // '../../packages/basis-design-tokens/figma/**/*.tokens.json',
       'src/tokens.json',
       'src/*.tokens.json',
       'src/*/*/tokens.json',
@@ -41,7 +41,7 @@ const build = async () => {
     }),
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: [
-      // '../basis-design-tokens/figma/**/*.tokens.json',
+      // '../../packages/basis-design-tokens/figma/**/*.tokens.json',
       'src/color-scheme-dark/tokens.json',
       'src/color-scheme-dark/*.tokens.json',
       'src/color-scheme-dark/*/*/tokens.json',
