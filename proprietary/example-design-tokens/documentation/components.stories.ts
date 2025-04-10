@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import config from '../src/config.json';
 
 const meta = {
-  title: 'Example',
+  title: 'Example Organisation',
   component: ComponentStories,
   parameters: { controls: { include: 'showAll' }, chromatic: { disableSnapshot: false } },
   args: { config, showAll: false },
