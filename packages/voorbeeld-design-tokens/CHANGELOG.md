@@ -1,5 +1,21 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 4.0.0
+
+### Major Changes
+
+- a96c47d: De volgende tokens zijn verwijderd uit Link component:
+  - `nl.link.active.text-decoration-line`
+  - `nl.link.active.text-decoration-thickness`
+  - `nl.link.focus-visible.background-color`
+  - `nl.link.focus-visible.color`
+  - `nl.link.focus-visible.text-decoration-line`
+  - `nl.link.focus-visible.text-decoration-thickness`
+
+### Patch Changes
+
+- 64ad6b3: "[code-only]" aan description van margin tokens toegevoegd.
+
 ## 3.4.0
 
 ### Minor Changes
