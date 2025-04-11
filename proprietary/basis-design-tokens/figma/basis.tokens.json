@@ -7842,6 +7842,14 @@
             "$value": "{basis.pointer-target.min-inline-size}"
           },
           "icon": {
+            "margin-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.text.xs}"
+            },
+            "size": {
+              "$type": "dimension",
+              "$value": "{basis.size.icon.md}"
+            },
             "checked": {
               "color": {
                 "$type": "color",
@@ -7853,7 +7861,7 @@
                   "$value": "{basis.color.primary.text-2}"
                 }
               },
-              "focus": {
+              "focus-visible": {
                 "color": {
                   "$type": "color",
                   "$value": "{basis.color.highlight.text-2}"
@@ -7877,7 +7885,7 @@
                   "$value": "{basis.color.primary.text-2}"
                 }
               },
-              "focus": {
+              "focus-visible": {
                 "color": {
                   "$type": "color",
                   "$value": "{basis.color.highlight.text-2}"
@@ -7895,21 +7903,13 @@
                 "$type": "color",
                 "$value": "{basis.color.error.text-1}"
               },
-              "margin-inline": {
-                "$type": "dimension",
-                "$value": "{basis.space.text.xs}"
-              },
-              "size": {
-                "$type": "dimension",
-                "$value": "{basis.size.icon.md}"
-              },
               "active": {
                 "color": {
                   "$type": "color",
                   "$value": "{basis.color.primary.text-2}"
                 }
               },
-              "focus": {
+              "focus-visible": {
                 "color": {
                   "$type": "color",
                   "$value": "{basis.color.highlight.text-2}"
@@ -7933,7 +7933,7 @@
                   "$value": "{basis.color.primary.text-2}"
                 }
               },
-              "focus": {
+              "focus-visible": {
                 "color": {
                   "$type": "color",
                   "$value": "{basis.color.highlight.text-2}"
@@ -7970,7 +7970,7 @@
                 "$value": "{basis.color.primary.text-2}"
               }
             },
-            "focus": {
+            "focus-visible": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.color.highlight.interactive-3}"
@@ -8022,7 +8022,7 @@
                 "$value": "{basis.color.primary.text-2}"
               }
             },
-            "focus": {
+            "focus-visible": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.color.highlight.interactive-3}"
@@ -8074,7 +8074,7 @@
                 "$value": "{basis.color.primary.text-2}"
               }
             },
-            "focus": {
+            "focus-visible": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.color.highlight.interactive-3}"
@@ -8126,7 +8126,7 @@
                 "$value": "{basis.color.primary.text-2}"
               }
             },
-            "focus": {
+            "focus-visible": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.color.highlight.interactive-3}"
@@ -8292,11 +8292,10 @@
             "$value": "{basis.size.sm}"
           },
           "nested": {
-            "figma": {
-              "inset-block-start": {
-                "$type": "dimension",
-                "$value": "{basis.space.block.sm}"
-              }
+            "inset-block-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.sm}",
+              "$description": "[design-only]"
             },
             "padding-inline-start": {
               "$type": "dimension",
