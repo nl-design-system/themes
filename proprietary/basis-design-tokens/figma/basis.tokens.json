@@ -6509,6 +6509,82 @@
       }
     }
   },
+  "components/file": {
+    "denhaag": {
+      "file": {
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.border-1}"
+        },
+        "left": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.text.bg-2}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          }
+        },
+        "link": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.text-1}"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.primary.text-2}"
+            }
+          },
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
+          "icon": {
+            "width": {
+              "$type": "dimension",
+              "$value": "{basis.size.icon.md}"
+            }
+          }
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid"
+        },
+        "right": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          }
+        }
+      }
+    }
+  },
   "components/form-field": {
     "utrecht": {
       "form-field": {
@@ -10748,6 +10824,7 @@
       "components/drawer/utrecht",
       "components/drawer/todo",
       "components/figure",
+      "components/file",
       "components/form-field",
       "components/form-field-checkbox-option",
       "components/form-field-description",
