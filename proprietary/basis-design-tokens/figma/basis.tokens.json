@@ -6287,13 +6287,129 @@
       }
     }
   },
-  "components/drawer": {
+  "components/drawer/utrecht": {
+    "utrecht": {
+      "drawer": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.bg-1}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.border-1}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        },
+        "max-block-size": {
+          "$type": "dimension",
+          "$value": "800px"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "1440px"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "312px"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.3xl}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.3xl}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "backdrop": {
+          "min-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          }
+        }
+      }
+    }
+  },
+  "components/drawer/todo": {
     "todo": {
       "drawer": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.bg-1}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.border-1}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "box-shadow": {
+          "$type": "boxShadow",
+          "$value": "{basis.box-shadow.lg}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        },
         "header": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.text.border-1}"
+          },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{basis.border-width.sm}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.md}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           },
           "label": {
             "color": {
@@ -6302,7 +6418,7 @@
             },
             "font-family": {
               "$type": "fontFamilies",
-              "$value": "{basis.typography.font-family.default}"
+              "$value": "{utrecht.document.font-family}"
             },
             "font-size": {
               "$type": "fontSizes",
@@ -6316,164 +6432,50 @@
               "$type": "lineHeights",
               "$value": "{basis.typography.line-height.md}"
             }
-          },
-          "padding-block-end": {
-            "$type": "spacing",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-block-start": {
-            "$type": "spacing",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-inline-start": {
-            "$type": "spacing",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "spacing",
-            "$value": "{basis.space.inline.md}"
-          },
-          "column-gap": {
-            "$type": "spacing",
-            "$value": "{basis.space.column.md}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.text.border-1}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
           }
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
-        "footer": {
-          "border-width": {
-            "$type": "borderWidth",
-            "$value": "{basis.border-width.sm}"
-          },
-          "padding-block-end": {
-            "$type": "spacing",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-block-start": {
-            "$type": "spacing",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-inline-start": {
-            "$type": "spacing",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "spacing",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.text.border-1}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          }
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{basis.border-width.sm}"
         },
         "content": {
           "padding-block-end": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.block.3xl}"
           },
           "padding-block-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.block.3xl}"
           },
           "padding-inline": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           }
         },
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.text.bg-1}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.container.border-color}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.text.text-2}"
-        },
-        "box-shadow": {
-          "$type": "boxShadow",
-          "$value": "{basis.box-shadow.lg}"
-        }
-      }
-    },
-    "utrecht": {
-      "drawer": {
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{basis.border-width.sm}"
-        },
-        "padding-inline-start": {
-          "$type": "spacing",
-          "$value": "{basis.space.inline.xl}"
-        },
-        "padding-inline-end": {
-          "$type": "spacing",
-          "$value": "{basis.space.inline.xl}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.text.bg-1}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.container.border-color}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.text.text-2}"
-        },
-        "border-radius": {
-          "$type": "borderRadius",
-          "$value": "0px"
-        },
-        "max-block-size": {
-          "$type": "sizing",
-          "$value": "800px"
-        },
-        "max-inline-size": {
-          "$type": "sizing",
-          "$value": "1440px"
-        },
-        "min-inline-size": {
-          "$type": "sizing",
-          "$value": "312px"
-        },
-        "min-block-size": {
-          "$type": "sizing",
-          "$value": "{basis.pointer-target.min-block-size}"
-        },
-        "padding-block-start": {
-          "$type": "spacing",
-          "$value": "{basis.space.block.3xl}"
-        },
-        "padding-block-end": {
-          "$type": "spacing",
-          "$value": "{basis.space.block.3xl}"
-        },
-        "backdrop": {
-          "min-size": {
-            "$type": "sizing",
-            "$value": "{basis.pointer-target.min-block-size}"
+        "footer": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.text.border-1}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.sm}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           }
         }
       }
@@ -10715,7 +10717,8 @@
       "components/contact-timeline",
       "components/data-badge/nl",
       "components/data-badge/utrecht",
-      "components/drawer",
+      "components/drawer/utrecht",
+      "components/drawer/todo",
       "components/form-field",
       "components/form-field-checkbox-option",
       "components/form-field-description",
