@@ -6481,6 +6481,34 @@
       }
     }
   },
+  "components/figure": {
+    "utrecht": {
+      "figure": {
+        "caption": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.text.text-2}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.md}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.typography.line-height.md}"
+          }
+        }
+      }
+    },
+    "todo": {
+      "figure": {
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.md}"
+        }
+      }
+    }
+  },
   "components/form-field": {
     "utrecht": {
       "form-field": {
@@ -10719,6 +10747,7 @@
       "components/data-badge/utrecht",
       "components/drawer/utrecht",
       "components/drawer/todo",
+      "components/figure",
       "components/form-field",
       "components/form-field-checkbox-option",
       "components/form-field-description",
