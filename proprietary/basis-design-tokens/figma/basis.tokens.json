@@ -6697,12 +6697,66 @@
       }
     }
   },
-  "components/form-field-label": {
+  "components/form-field-label/utrecht": {
+    "utrecht": {
+      "form-label": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.typography.font-weight.bold}"
+        },
+        "checkbox": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.text.text-2}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.typography.font-weight.normal}"
+          }
+        },
+        "checked": {
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.typography.font-weight.normal}"
+          }
+        },
+        "disabled": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.text.text-1}"
+          }
+        },
+        "radio": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.text.text-2}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.typography.font-weight.normal}"
+          }
+        }
+      }
+    }
+  },
+  "components/form-field-label/todo": {
     "todo": {
       "form-field-label": {
         "color": {
           "$type": "color",
           "$value": "{basis.color.text.text-2}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.md}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -10833,7 +10887,8 @@
       "components/form-field-checkbox-option",
       "components/form-field-description",
       "components/form-field-error-message",
-      "components/form-field-label",
+      "components/form-field-label/utrecht",
+      "components/form-field-label/todo",
       "components/form-fieldset",
       "components/form-field-option-label",
       "components/form-field-radio-option",
