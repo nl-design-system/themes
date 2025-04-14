@@ -6646,7 +6646,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.error.text-2}"
+          "$value": "{basis.color.error.text-1}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -6658,23 +6658,27 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{basis.typography.font-family.default}"
+          "$value": "{basis.typography.font-weight.normal}"
         },
         "padding-block-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "0px"
         },
         "padding-block-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "0px"
         },
         "padding-inline-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "0px"
         },
         "padding-inline-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "0px"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.typography.line-height.md}"
         }
       }
     },
@@ -6682,12 +6686,12 @@
       "form-field-error-message": {
         "icon": {
           "size": {
-            "$type": "sizing",
-            "$value": "{basis.icon.functional.size}"
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
           }
         },
         "column-gap": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.text.md}"
         }
       }
