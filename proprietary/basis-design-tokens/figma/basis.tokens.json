@@ -7981,7 +7981,7 @@
       }
     }
   },
-  "components/number-badge": {
+  "components/number-badge/org": {
     "utrecht": {
       "number-badge": {
         "font-size": {
@@ -8031,6 +8031,114 @@
         "border-color": {
           "$type": "color",
           "$value": "{basis.color.transparent}"
+        }
+      }
+    }
+  },
+  "components/number-badge/nl": {
+    "nl": {
+      "number-badge": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.primary.bg-2}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.transparent}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.round}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.primary.text-2}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.typography.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.typography.font-weight.bold}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.xs}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.xs}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.sm}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.sm}"
+        }
+      }
+    }
+  },
+  "components/number-badge/utrecht": {
+    "utrecht": {
+      "number-badge": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.primary.bg-2}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.transparent}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.round}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.primary.text-2}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.typography.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.typography.font-weight.bold}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.xs}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.xs}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.sm}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.sm}"
         }
       }
     }
@@ -11574,7 +11682,9 @@
       "components/mark/utrecht",
       "components/modal-dialog",
       "components/navigation-bar",
-      "components/number-badge",
+      "components/number-badge/org",
+      "components/number-badge/nl",
+      "components/number-badge/utrecht",
       "components/ordered-list",
       "components/pagination",
       "components/paragraph",
