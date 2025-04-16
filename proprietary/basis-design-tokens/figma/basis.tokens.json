@@ -7785,16 +7785,30 @@
       }
     }
   },
-  "components/mark": {
+  "components/mark/nl": {
+    "nl": {
+      "mark": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.highlight-inverse.bg-1}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.highlight-inverse.text-2}"
+        }
+      }
+    }
+  },
+  "components/mark/utrecht": {
     "utrecht": {
       "mark": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.mark-inverse.bg-1}"
+          "$value": "{basis.color.highlight-inverse.bg-1}"
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.mark-inverse.text-1}"
+          "$value": "{basis.color.highlight-inverse.text-2}"
         }
       }
     }
@@ -11518,7 +11532,8 @@
       "components/link-list",
       "components/login-link",
       "components/logo",
-      "components/mark",
+      "components/mark/nl",
+      "components/mark/utrecht",
       "components/modal-dialog",
       "components/number-badge",
       "components/ordered-list",
