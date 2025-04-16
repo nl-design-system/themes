@@ -7599,44 +7599,38 @@
     "utrecht": {
       "link-list": {
         "row-gap": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.row.md}"
         },
         "icon": {
           "inset-block-start": {
-            "$type": "spacing",
+            "$type": "dimension",
             "$value": "0px"
           },
           "size": {
-            "$type": "sizing",
-            "$value": "{basis.icon.functional.size}"
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
           }
+        },
+        "link": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          }
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.typography.font-weight.normal}"
         }
       }
     },
     "todo": {
       "link-list": {
-        "item": {
-          "column-gap": {
-            "$type": "spacing",
-            "$value": "{basis.space.block.md}"
-          },
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
-          },
-          "active": {
-            "text-decoration": {
-              "$type": "textDecoration",
-              "$value": "underline"
-            }
-          },
-          "focus": {
-            "text-decoration": {
-              "$type": "textDecoration",
-              "$value": "none"
-            }
-          },
+        "link": {
           "hover": {
             "text-decoration": {
               "$type": "textDecoration",
