@@ -7641,6 +7641,128 @@
       }
     }
   },
+  "components/login-link": {
+    "lux": {
+      "login-link": {
+        "active": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.interactive-2}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.border-3}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.text-2}"
+          }
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.transparent}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.primary.border-2}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.primary.text-1}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.md}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.interactive-1}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.border-3}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.primary.text-2}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.4xl}"
+          }
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.md}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.md}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-inline-size}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.typography.line-height.md}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.lg}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.typography.font-family.default}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.typography.font-weight.bold}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        }
+      }
+    },
+    "todo": {
+      "login-link": {
+        "focus-visible": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.focus.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.focus.color}"
+          }
+        }
+      }
+    }
+  },
   "components/mark": {
     "utrecht": {
       "mark": {
@@ -11394,6 +11516,7 @@
       "components/link/nl",
       "components/link/utrecht",
       "components/link-list",
+      "components/login-link",
       "components/mark",
       "components/modal-dialog",
       "components/number-badge",
