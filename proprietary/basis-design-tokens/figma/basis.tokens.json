@@ -7763,6 +7763,28 @@
       }
     }
   },
+  "components/logo": {
+    "utrecht": {
+      "logo": {
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-inline-size}"
+        },
+        "max-block-size": {
+          "$type": "dimension",
+          "$value": "120px"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "200px"
+        }
+      }
+    }
+  },
   "components/mark": {
     "utrecht": {
       "mark": {
@@ -11292,28 +11314,6 @@
       }
     }
   },
-  "components/logo": {
-    "utrecht": {
-      "logo": {
-        "min-inline-size": {
-          "$type": "other",
-          "$value": "150px"
-        },
-        "min-block-size": {
-          "$type": "other",
-          "$value": "70px"
-        },
-        "max-inline-size": {
-          "$type": "other",
-          "$value": "{utrecht.logo.min-inline-size}"
-        },
-        "max-block-size": {
-          "$type": "other",
-          "$value": "{utrecht.logo.min-block-size}"
-        }
-      }
-    }
-  },
   "components/page-body": {
     "utrecht": {
       "page-body": {
@@ -11517,6 +11517,7 @@
       "components/link/utrecht",
       "components/link-list",
       "components/login-link",
+      "components/logo",
       "components/mark",
       "components/modal-dialog",
       "components/number-badge",
@@ -11549,7 +11550,6 @@
       "components/article",
       "components/body",
       "components/listbox",
-      "components/logo",
       "components/page-body",
       "components/spotlight-section"
     ]
