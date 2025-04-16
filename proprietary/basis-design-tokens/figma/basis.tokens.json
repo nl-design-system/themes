@@ -7943,6 +7943,44 @@
       }
     }
   },
+  "components/navigation-bar": {
+    "utrecht": {
+      "nav-bar": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.text.bg-1}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "1184px"
+          }
+        },
+        "link": {
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          }
+        }
+      }
+    }
+  },
   "components/number-badge": {
     "utrecht": {
       "number-badge": {
@@ -11535,6 +11573,7 @@
       "components/mark/nl",
       "components/mark/utrecht",
       "components/modal-dialog",
+      "components/navigation-bar",
       "components/number-badge",
       "components/ordered-list",
       "components/pagination",
