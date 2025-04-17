@@ -30,7 +30,9 @@ packages/web-components-react/src/components.ts
 figma/*.tokens.json
 
 # Ignore changeset files, because they are temporary and frequently contributed by non-developers
-.changeset/
+.changeset/*
+# Do not ignore .changeset/README.md
+!.changeset/README.md
 
 # Ignore this config file, because apparently it considers `.markdown*` a Markdown file
 .markdownlintignore
