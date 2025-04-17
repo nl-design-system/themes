@@ -25,5 +25,11 @@ module.exports = {
         singleQuote: false,
       },
     },
+    {
+      files: '.changeset/README.md',
+      options: {
+        proseWrap: 'always',
+      },
+    },
   ],
 };
