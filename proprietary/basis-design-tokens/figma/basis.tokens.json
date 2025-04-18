@@ -8595,7 +8595,67 @@
       }
     }
   },
-  "components/paragraph": {
+  "components/paragraph/nl": {
+    "nl": {
+      "paragraph": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.text.text-2}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.typography.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.typography.font-weight.normal}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.typography.line-height.md}"
+        },
+        "margin-block-end": {
+          "$type": "spacing",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "margin-block-start": {
+          "$type": "spacing",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "lead": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.typography.font-size.lg}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.typography.font-weight.normal}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.typography.line-height.md}"
+          },
+          "margin-block-end": {
+            "$type": "spacing",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "margin-block-start": {
+            "$type": "spacing",
+            "$value": "0px",
+            "$description": "[code-only]"
+          }
+        }
+      }
+    }
+  },
+  "components/paragraph/utrecht": {
     "utrecht": {
       "paragraph": {
         "color": {
@@ -11799,7 +11859,8 @@
       "components/ordered-list",
       "components/page-number-navigation/utrecht",
       "components/page-number-navigation/todo",
-      "components/paragraph",
+      "components/paragraph/nl",
+      "components/paragraph/utrecht",
       "components/pre-heading",
       "components/progress-list/den-haag",
       "components/progress-list/todo",
