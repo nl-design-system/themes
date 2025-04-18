@@ -10036,39 +10036,85 @@
       }
     }
   },
-  "components/skip-link": {
+  "components/skip-link/nl": {
+    "nl": {
+      "skip-link": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.focus.background-color}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.focus.color}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.typography.font-size.md}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.typography.line-height.md}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.lg}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-inline-size}"
+        },
+        "text-decoration-thickness": {
+          "$type": "other",
+          "$value": "1px"
+        },
+        "text-underline-offset": {
+          "$type": "other",
+          "$value": "1px"
+        }
+      }
+    }
+  },
+  "components/skip-link/utrecht": {
     "utrecht": {
       "skip-link": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.primary-inverse.bg-1}"
+          "$value": "{basis.color.text-inverse.bg-1}"
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.primary-inverse.text-1}"
+          "$value": "{basis.color.text-inverse.text-2}"
         },
         "min-block-size": {
-          "$type": "sizing",
+          "$type": "dimension",
           "$value": "{basis.pointer-target.min-block-size}"
         },
         "min-inline-size": {
-          "$type": "sizing",
+          "$type": "dimension",
           "$value": "{basis.pointer-target.min-inline-size}"
         },
         "padding-block-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.block.lg}"
         },
         "padding-block-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.block.lg}"
         },
         "padding-inline-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.inline.xl}"
         },
         "padding-inline-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.space.inline.xl}"
         },
         "text-decoration": {
@@ -10078,11 +10124,11 @@
         "focus": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.highlight.bg-1}"
+            "$value": "{basis.focus.background-color}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.highlight.text-1}"
+            "$value": "{basis.focus.color}"
           }
         },
         "focus-visible": {
@@ -10095,18 +10141,6 @@
     },
     "todo": {
       "skip-link": {
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.transparent}"
-        },
-        "border-width": {
-          "$type": "borderWidth",
-          "$value": "{basis.border-width.sm}"
-        },
-        "box-shadow": {
-          "$type": "boxShadow",
-          "$value": "{basis.box-shadow.lg}"
-        },
         "font-weight": {
           "$type": "fontWeights",
           "$value": "{basis.typography.font-weight.bold}"
@@ -11843,7 +11877,8 @@
       "components/select",
       "components/separator",
       "components/side-nav",
-      "components/skip-link",
+      "components/skip-link/nl",
+      "components/skip-link/utrecht",
       "components/status-badge",
       "components/step-marker",
       "components/summary-list",
