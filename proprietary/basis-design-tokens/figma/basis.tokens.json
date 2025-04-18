@@ -10962,7 +10962,7 @@
       }
     }
   },
-  "components/textbox": {
+  "components/text-input": {
     "utrecht": {
       "textbox": {
         "background-color": {
@@ -10970,7 +10970,7 @@
           "$value": "{basis.form-control.background-color}"
         },
         "border-block-end-width": {
-          "$type": "borderWidth",
+          "$type": "dimension",
           "$value": "{utrecht.textbox.border-width}"
         },
         "border-color": {
@@ -10978,11 +10978,11 @@
           "$value": "{basis.form-control.border-color}"
         },
         "border-radius": {
-          "$type": "borderRadius",
+          "$type": "dimension",
           "$value": "{basis.form-control.border-radius}"
         },
         "border-width": {
-          "$type": "borderWidth",
+          "$type": "dimension",
           "$value": "{basis.form-control.border-width}"
         },
         "color": {
@@ -11002,27 +11002,27 @@
           "$value": "{basis.form-control.line-height}"
         },
         "max-inline-size": {
-          "$type": "sizing",
+          "$type": "dimension",
           "$value": "{basis.form-control.max-inline-size}"
         },
         "min-block-size": {
-          "$type": "sizing",
+          "$type": "dimension",
           "$value": "{basis.pointer-target.min-block-size}"
         },
         "padding-block-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.form-control.padding-block-end}"
         },
         "padding-block-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.form-control.padding-block-start}"
         },
         "padding-inline-end": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.form-control.padding-inline-end}"
         },
         "padding-inline-start": {
-          "$type": "spacing",
+          "$type": "dimension",
           "$value": "{basis.form-control.padding-inline-start}"
         },
         "placeholder": {
@@ -11065,7 +11065,7 @@
             "$value": "{basis.form-control.invalid.background-color}"
           },
           "border-block-end-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{utrecht.textbox.invalid.border-width}"
           },
           "border-color": {
@@ -11073,7 +11073,7 @@
             "$value": "{basis.form-control.invalid.border-color}"
           },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{basis.form-control.invalid.border-width}"
           },
           "color": {
@@ -11703,7 +11703,7 @@
       "components/table",
       "components/task-list",
       "components/textarea",
-      "components/textbox",
+      "components/text-input",
       "components/toolbar-button",
       "components/unordered-list",
       "components/nav-bar",
