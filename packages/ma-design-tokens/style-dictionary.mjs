@@ -20,7 +20,7 @@ const build = async () => {
       className: `${themeConfig.prefix}-theme`,
     }),
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: ['../../packages/basis-design-tokens/figma/**/*.tokens.json', 'src/tokens.json', 'src/*.tokens.json'],
+    source: ['src/tokens.json', 'src/*.tokens.json'],
   });
 
   await sd.cleanAllPlatforms();
@@ -32,11 +32,7 @@ const build = async () => {
       buildPath: 'dist/color-scheme-dark/',
     }),
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: [
-      '../../packages/basis-design-tokens/figma/**/*.tokens.json',
-      'src/color-scheme-dark/tokens.json',
-      'src/color-scheme-dark/*.tokens.json',
-    ],
+    source: ['src/color-scheme-dark/tokens.json', 'src/color-scheme-dark/*.tokens.json'],
   });
 
   await sd.cleanAllPlatforms();

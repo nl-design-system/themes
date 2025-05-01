@@ -20,6 +20,8 @@ import { DesignToken } from '@nl-design-system-unstable/tokens-lib/dist/design-t
 import { Fragment, PropsWithChildren } from 'react';
 import { ColorContrastCanvasElement } from './example-rendering.mjs';
 import { ColorSampleElement } from './color-sample.mjs';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 
 ColorContrastCanvasElement.define();
 ColorSampleElement.define();
@@ -40,7 +42,6 @@ interface ColorSampleListProps {
 }
 
 export const ColorSampleList = ({ tokens, ordered }: ColorSampleListProps) => {
-  console.log(tokens);
   const items = Object.values(tokens).map((token, index) => (
     <li
       key={index}
@@ -161,7 +162,6 @@ export const ColorContrastTable = ({ tokens }: DesignToken[]) => {
       aaa: x.contrast >= calculateContrastRequirement('', '', x.fontSize, 'AAA', false),
       aa: x.contrast >= calculateContrastRequirement('', '', x.fontSize, 'AA', false),
     }));
-  console.log(pairs);
   return (
     <>
       <Table className="color-contrast-table">

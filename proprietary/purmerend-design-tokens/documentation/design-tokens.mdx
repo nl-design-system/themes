@@ -1,21 +1,39 @@
 import { Meta } from "@storybook/blocks";
 import { DesignTokensTable } from "@nl-design-system-unstable/design-tokens-table-react/css";
-import tokens from "../dist/list.json";
 import tokensDefinition from "@nl-design-system-community/design-tokens-definition/dist/list.json";
+import tokens from "../dist/list.json";
 import config from "../src/config.json";
 
 <Meta title="Purmerend/Design Tokens" />
 
 # Design Tokens
 
-<DesignTokensTable
-  tokens={tokens.filter((token) => token.path[0] !== config.prefix)}
-  tokensDefinition={tokensDefinition}
-></DesignTokensTable>
-
-## Proprietary Design Tokens
+## Brand Design Tokens (proprietary)
 
 <DesignTokensTable
   tokens={tokens.filter((token) => token.path[0] === config.prefix)}
+  tokensDefinition={tokensDefinition}
+></DesignTokensTable>
+
+## Common design tokens (basis)
+
+<DesignTokensTable
+  tokens={tokens.filter((token) => token.path[0] === "basis")}
+  tokensDefinition={tokensDefinition}
+></DesignTokensTable>
+
+## Component Design Tokens
+
+<DesignTokensTable
+  tokens={tokens.filter(
+    (token) => token.path[0] !== "basis" && token.path[0] !== config.prefix && token.path[0] !== "todo",
+  )}
+  tokensDefinition={tokensDefinition}
+></DesignTokensTable>
+
+## Figma only Design Tokens
+
+<DesignTokensTable
+  tokens={tokens.filter((token) => token.path[0] === "todo")}
   tokensDefinition={tokensDefinition}
 ></DesignTokensTable>
