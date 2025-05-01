@@ -1,5 +1,24 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 4.0.0
+
+### Major Changes
+
+- a96c47d: De volgende tokens zijn verwijderd uit Link component:
+  - `nl.link.active.text-decoration-line`
+  - `nl.link.active.text-decoration-thickness`
+  - `nl.link.focus-visible.background-color`
+  - `nl.link.focus-visible.color`
+  - `nl.link.focus-visible.text-decoration-line`
+  - `nl.link.focus-visible.text-decoration-thickness`
+
+### Patch Changes
+
+- 94743fb: Waarde van token `utrecht.link-list.link.column-gap` is gewijzigd naar brand token `voorbeeld.space.text.beetle`.
+- a365ee9: Added the $ to the "type" metadata to align with the W3C DTCG format.
+- c1e255d: Waarde van token `todo.task-list.icon.size` is gewijzigd naar common token `{voorbeeld.icon.functional.size}`.
+- 64ad6b3: "[code-only]" aan description van margin tokens toegevoegd.
+
 ## 3.4.0
 
 ### Minor Changes
