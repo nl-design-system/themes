@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 4.0.1
+
+### Patch Changes
+
+- 54aa5c3: Tokenset 'side-nav' hernoemd naar 'side-navigation'.
+
 ## 4.0.0
 
 ### Major Changes
