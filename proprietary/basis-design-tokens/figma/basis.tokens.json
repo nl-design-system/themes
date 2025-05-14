@@ -1568,6 +1568,12 @@
             "$value": "Regular"
           }
         },
+        "bold": {
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "Bold"
+          }
+        },
         "code": {
           "font-family": {
             "$type": "fontFamilies",
@@ -1582,12 +1588,6 @@
           "font-weight": {
             "$type": "fontWeights",
             "$value": "{basis.text.bold.font-weight}"
-          }
-        },
-        "bold": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "Bold"
           }
         },
         "sm": {
@@ -3522,6 +3522,14 @@
         }
       },
       "focus": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.highlight.interactive-3}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.highlight.text-2}"
+        },
         "outline-color": {
           "$type": "color",
           "$value": "{basis.color.text.bg-1}"
@@ -3532,18 +3540,6 @@
             "$value": "{basis.color.text-inverse.bg-1}"
           }
         },
-        "outline-width": {
-          "$type": "dimension",
-          "$value": "{basis.border-width.md}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.highlight.interactive-3}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.highlight.text-2}"
-        },
         "outline-offset": {
           "$type": "other",
           "$value": "0"
@@ -3551,6 +3547,10 @@
         "outline-style": {
           "$type": "other",
           "$value": "dashed"
+        },
+        "outline-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.md}"
         }
       },
       "form-control": {
