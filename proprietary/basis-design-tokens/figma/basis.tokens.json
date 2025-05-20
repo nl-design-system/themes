@@ -3485,76 +3485,6 @@
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
         },
-        "min-block-size": {
-          "$type": "dimension",
-          "$value": "192px"
-        },
-        "min-inline-size": {
-          "$type": "dimension",
-          "$value": "328px"
-        },
-        "padding-block": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.2xl}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.3xl}"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.lg}"
-        },
-        "decoration": {
-          "folder": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.bg-active}"
-            },
-            "active": {
-              "background-color": {
-                "$type": "color",
-                "$value": "{basis.color.action-1.bg-active}"
-              }
-            },
-            "focus-visible": {
-              "background-color": {
-                "$type": "color",
-                "$value": "{basis.focus.background-color}"
-              }
-            },
-            "hover": {
-              "background-color": {
-                "$type": "color",
-                "$value": "{basis.color.action-1.bg-active}"
-              }
-            },
-            "read-only": {
-              "background-color": {
-                "$type": "color",
-                "$value": "{basis.color.default.bg-active}"
-              },
-              "active": {
-                "background-color": {
-                  "$type": "color",
-                  "$value": "{basis.color.default.bg-active}"
-                }
-              },
-              "hover": {
-                "background-color": {
-                  "$type": "color",
-                  "$value": "{basis.color.default.bg-active}"
-                }
-              }
-            }
-          },
-          "paper": {
-            "background-color": {
-              "$type": "color",
-              "$value": "#ffffff"
-            }
-          }
-        },
         "heading": {
           "color": {
             "$type": "color",
@@ -3593,6 +3523,26 @@
             "$value": "{basis.size.icon.md}"
           }
         },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "192px"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "328px"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.2xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.3xl}"
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.lg}"
+        },
         "active": {
           "background-color": {
             "$type": "color",
@@ -3616,12 +3566,6 @@
           }
         },
         "read-only": {
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.bg-active}"
-            }
-          },
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.default.bg-default}"
@@ -3630,10 +3574,66 @@
             "$type": "color",
             "$value": "{basis.color.default.color-document}"
           },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.default.bg-active}"
+            }
+          },
           "hover": {
             "background-color": {
               "$type": "color",
               "$value": "{basis.color.default.bg-hover}"
+            }
+          }
+        },
+        "decoration": {
+          "folder": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.bg-active}"
+            },
+            "active": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.action-1.bg-active}"
+              }
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.action-1.bg-active}"
+              }
+            },
+            "focus-visible": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.focus.background-color}"
+              }
+            },
+            "read-only": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.default.bg-active}"
+              },
+              "active": {
+                "background-color": {
+                  "$type": "color",
+                  "$value": "{basis.color.default.bg-active}"
+                }
+              },
+              "hover": {
+                "background-color": {
+                  "$type": "color",
+                  "$value": "{basis.color.default.bg-active}"
+                }
+              }
+            }
+          },
+          "paper": {
+            "background-color": {
+              "$type": "color",
+              "$value": "#ffffff"
             }
           }
         }
