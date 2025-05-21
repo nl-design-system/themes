@@ -8,7 +8,7 @@
             "$type": "fontFamilies",
             "$value": "Arial, sans-serif"
           },
-          "code": {
+          "monospace": {
             "$type": "fontFamilies",
             "$value": "Courier New, monospace"
           }
@@ -263,7 +263,7 @@
             "$value": "{basis.color.accent-1.color-document}"
           }
         },
-        "error": {
+        "negative": {
           "bg-document": {
             "$type": "color",
             "$value": "#FFFBFB"
@@ -379,7 +379,7 @@
             "$value": "#001B3C"
           }
         },
-        "success": {
+        "positive": {
           "bg-document": {
             "$type": "color",
             "$value": "#FAFDFB"
@@ -785,7 +785,7 @@
             "$value": "{basis.color.accent-1-inverse.color-document}"
           }
         },
-        "error-inverse": {
+        "negative-inverse": {
           "bg-document": {
             "$type": "color",
             "$value": "#510000"
@@ -901,7 +901,7 @@
             "$value": "#FFFFFF"
           }
         },
-        "success-inverse": {
+        "positive-inverse": {
           "bg-document": {
             "$type": "color",
             "$value": "#002B10"
@@ -2070,11 +2070,11 @@
         "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.error.bg-default}"
+            "$value": "{basis.color.negative.bg-default}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.error.border-default}"
+            "$value": "{basis.color.negative.border-default}"
           },
           "border-width": {
             "$type": "dimension",
@@ -2082,7 +2082,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.error.color-default}"
+            "$value": "{basis.color.negative.color-default}"
           }
         },
         "read-only": {
@@ -2393,7 +2393,7 @@
           "warning": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.error.color-default}"
+              "$value": "{basis.color.negative.color-default}"
             },
             "font-weight": {
               "$type": "fontWeights",
@@ -2477,7 +2477,7 @@
           "icon": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.error.color-default}"
+              "$value": "{basis.color.negative.color-default}"
             },
             "width": {
               "$type": "dimension",
@@ -2585,13 +2585,13 @@
           "error": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.error.color-default}"
+              "$value": "{basis.color.negative.color-default}"
             }
           },
           "ok": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.success.color-default}"
+              "$value": "{basis.color.positive.color-default}"
             }
           },
           "warning": {
@@ -2624,29 +2624,29 @@
         "error": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.error.bg-default}"
+            "$value": "{basis.color.negative.bg-default}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.error.border-default}"
+            "$value": "{basis.color.negative.border-default}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.error.color-document}"
+            "$value": "{basis.color.negative.color-document}"
           }
         },
         "ok": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.success.bg-default}"
+            "$value": "{basis.color.positive.bg-default}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.success.border-default}"
+            "$value": "{basis.color.positive.border-default}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.success.color-document}"
+            "$value": "{basis.color.positive.color-document}"
           }
         },
         "warning": {
@@ -3949,7 +3949,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.code}"
+          "$value": "{basis.text.font-family.monospace}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -3971,7 +3971,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.code}"
+          "$value": "{basis.text.font-family.monospace}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -4001,7 +4001,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.code}"
+          "$value": "{basis.text.font-family.monospace}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -4035,7 +4035,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.code}"
+          "$value": "{basis.text.font-family.monospace}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -4716,7 +4716,7 @@
         "invalid": {
           "border-inline-start-color": {
             "$type": "color",
-            "$value": "{basis.color.error.border-default}"
+            "$value": "{basis.color.negative.border-default}"
           },
           "border-inline-start-width": {
             "$type": "dimension",
@@ -4771,7 +4771,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.error.color-default}"
+          "$value": "{basis.color.negative.color-default}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -6957,7 +6957,7 @@
           "checked": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.success.border-default}"
+              "$value": "{basis.color.positive.border-default}"
             }
           },
           "warning": {
@@ -6995,7 +6995,7 @@
           "checked": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.success-inverse.bg-default}"
+              "$value": "{basis.color.positive-inverse.bg-default}"
             },
             "border-color": {
               "$type": "color",
@@ -7007,7 +7007,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.success-inverse.color-default}"
+              "$value": "{basis.color.positive-inverse.color-default}"
             }
           },
           "current": {
@@ -7079,7 +7079,7 @@
           "checked": {
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.success.border-default}"
+              "$value": "{basis.color.positive.border-default}"
             }
           },
           "current": {
@@ -7184,7 +7184,7 @@
             "error": {
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.error.color-default}"
+                "$value": "{basis.color.negative.color-default}"
               },
               "active": {
                 "color": {
@@ -7451,13 +7451,13 @@
           "checked": {
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.success.border-default}"
+              "$value": "{basis.color.positive.border-default}"
             }
           },
           "error": {
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.error.border-default}"
+              "$value": "{basis.color.negative.border-default}"
             }
           },
           "not-checked": {
@@ -7525,7 +7525,7 @@
           "error": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.error.color-default}"
+              "$value": "{basis.color.negative.color-default}"
             }
           },
           "not-checked": {
@@ -7592,7 +7592,7 @@
           "checked": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.success-inverse.bg-default}"
+              "$value": "{basis.color.positive-inverse.bg-default}"
             },
             "border-color": {
               "$type": "color",
@@ -7600,7 +7600,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.success-inverse.color-default}"
+              "$value": "{basis.color.positive-inverse.color-default}"
             }
           },
           "current": {
@@ -7620,7 +7620,7 @@
           "error": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.error-inverse.bg-default}"
+              "$value": "{basis.color.negative-inverse.bg-default}"
             },
             "border-color": {
               "$type": "color",
@@ -7628,7 +7628,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.error-inverse.color-default}"
+              "$value": "{basis.color.negative-inverse.color-default}"
             }
           },
           "not-checked": {
@@ -8325,7 +8325,7 @@
         "positive": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.success.bg-default}"
+            "$value": "{basis.color.positive.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -8333,13 +8333,13 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.success.color-default}"
+            "$value": "{basis.color.positive.color-default}"
           }
         },
         "negative": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.error.bg-default}"
+            "$value": "{basis.color.negative.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -8347,7 +8347,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.error.color-default}"
+            "$value": "{basis.color.negative.color-default}"
           }
         },
         "warning": {
@@ -8435,7 +8435,7 @@
         "checked": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.success-inverse.bg-default}"
+            "$value": "{basis.color.positive-inverse.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -8443,7 +8443,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.success-inverse.color-default}"
+            "$value": "{basis.color.positive-inverse.color-default}"
           }
         },
         "default": {
@@ -8483,7 +8483,7 @@
         "error": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.error-inverse.bg-default}"
+            "$value": "{basis.color.negative-inverse.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -8491,7 +8491,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.error-inverse.color-default}"
+            "$value": "{basis.color.negative-inverse.color-default}"
           }
         },
         "not-checked": {
@@ -8552,7 +8552,7 @@
           "checked": {
             "outline-color": {
               "$type": "color",
-              "$value": "{basis.color.success.border-default}"
+              "$value": "{basis.color.positive.border-default}"
             }
           },
           "default": {
@@ -8564,7 +8564,7 @@
           "error": {
             "outline-color": {
               "$type": "color",
-              "$value": "{basis.color.error.border-default}"
+              "$value": "{basis.color.negative.border-default}"
             }
           },
           "not-checked": {
@@ -8618,18 +8618,18 @@
           "checked": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.success-inverse.bg-default}"
+              "$value": "{basis.color.positive-inverse.bg-default}"
             },
             "hover": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.success-inverse.bg-hover}"
+                "$value": "{basis.color.positive-inverse.bg-hover}"
               }
             },
             "active": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.success-inverse.bg-active}"
+                "$value": "{basis.color.positive-inverse.bg-active}"
               }
             },
             "focus-visible": {
@@ -8919,7 +8919,7 @@
         "icon": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.success.border-active}"
+            "$value": "{basis.color.positive.border-active}"
           },
           "size": {
             "$type": "dimension",
@@ -9649,7 +9649,7 @@
         "error": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.error.bg-default}"
+            "$value": "{basis.color.negative.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -9657,13 +9657,13 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.error.color-document}"
+            "$value": "{basis.color.negative.color-document}"
           }
         },
         "ok": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.success.bg-default}"
+            "$value": "{basis.color.positive.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -9671,7 +9671,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.success.color-document}"
+            "$value": "{basis.color.positive.color-document}"
           }
         },
         "warning": {
