@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 4.0.2
+
+### Patch Changes
+
+- b19460e: Tokenset `textarea` is hernoemd naar `text-area` zodat de schrijfwijze van deze tokenset overeenkomt met de gekozen naamgeving voor dit component.
+
 ## 4.0.1
 
 ### Patch Changes
