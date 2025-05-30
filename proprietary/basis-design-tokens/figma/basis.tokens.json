@@ -6602,13 +6602,17 @@
   "components/file": {
     "denhaag": {
       "file": {
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.border-subtle}"
+        },
         "border-width": {
           "$type": "dimension",
           "$value": "{basis.border-width.sm}"
         },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.border-subtle}"
+        "border-style": {
+          "$type": "other",
+          "$value": "solid"
         },
         "left": {
           "background-color": {
@@ -6629,12 +6633,6 @@
             "$type": "color",
             "$value": "{basis.color.action-2.color-default}"
           },
-          "hover": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-2.color-hover}"
-            }
-          },
           "gap": {
             "$type": "dimension",
             "$value": "{basis.space.text.xs}"
@@ -6644,24 +6642,18 @@
               "$type": "dimension",
               "$value": "{basis.size.icon.md}"
             }
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            }
           }
-        },
-        "border-style": {
-          "$type": "other",
-          "$value": "solid"
         },
         "right": {
           "gap": {
             "$type": "dimension",
             "$value": "{basis.space.row.md}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
           },
           "padding-block-end": {
             "$type": "dimension",
@@ -6670,6 +6662,14 @@
           "padding-block-start": {
             "$type": "dimension",
             "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           }
         }
       }
