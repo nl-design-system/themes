@@ -4453,190 +4453,6 @@
       }
     }
   },
-  "components/action": {
-    "denhaag": {
-      "action": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.transparent}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.border-subtle}"
-        },
-        "border-style": {
-          "$type": "other",
-          "$value": "solid"
-        },
-        "border-width": {
-          "$type": "dimension",
-          "$value": "{basis.border-width.sm}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "font-familiy": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
-        },
-        "gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.md}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
-        },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.xl}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.xl}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.xl}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.xl}"
-        },
-        "lg": {
-          "gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.xl}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          }
-        },
-        "date": {
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.default.color-document}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.default}"
-          },
-          "gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.row.md}"
-          },
-          "warning": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.negative.color-default}"
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            },
-            "gap": {
-              "$type": "dimension",
-              "$value": "{basis.space.row.md}"
-            }
-          }
-        },
-        "content": {
-          "bold": {
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            }
-          }
-        },
-        "details": {
-          "gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.row.md}"
-          },
-          "lg": {
-            "gap": {
-              "$type": "dimension",
-              "$value": "{basis.space.column.xl}"
-            }
-          }
-        },
-        "link": {
-          "icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-2.color-default}"
-            },
-            "width": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
-          }
-        },
-        "single": {
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.lg}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.lg}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.bg-hover}"
-            }
-          },
-          "details": {
-            "gap": {
-              "$type": "dimension",
-              "$value": "{basis.space.row.md}"
-            },
-            "lg": {
-              "gap": {
-                "$type": "dimension",
-                "$value": "{basis.space.row.md}"
-              }
-            }
-          }
-        },
-        "warning": {
-          "icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.negative.color-default}"
-            },
-            "width": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
-          }
-        }
-      }
-    }
-  },
   "components/action-group": {
     "utrecht": {
       "button-group": {
@@ -11024,6 +10840,154 @@
       }
     }
   },
+  "components/task-card": {
+    "denhaag": {
+      "action": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.transparent}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.border-subtle}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-familiy": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.bold}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.md}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.xl}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.xl}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "lg": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          }
+        },
+        "date": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          },
+          "warning": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.negative.color-default}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            },
+            "gap": {
+              "$type": "dimension",
+              "$value": "{basis.space.row.md}"
+            }
+          }
+        },
+        "content": {
+          "bold": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          }
+        },
+        "details": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          },
+          "lg": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{basis.space.column.xl}"
+            }
+          }
+        },
+        "link": {
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-default}"
+            },
+            "width": {
+              "$type": "dimension",
+              "$value": "{basis.size.icon.md}"
+            }
+          }
+        },
+        "warning": {
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.negative.color-default}"
+            },
+            "width": {
+              "$type": "dimension",
+              "$value": "{basis.size.icon.md}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/task-list": {
     "todo": {
       "task-list": {
@@ -11073,6 +11037,48 @@
           "size": {
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
+          }
+        }
+      }
+    }
+  },
+  "components/task-navigation": {
+    "denhaag": {
+      "action": {
+        "single": {
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.default.bg-hover}"
+            }
+          },
+          "details": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{basis.space.row.md}"
+            },
+            "lg": {
+              "gap": {
+                "$type": "dimension",
+                "$value": "{basis.space.row.md}"
+              }
+            }
           }
         }
       }
@@ -11869,7 +11875,6 @@
       "common",
       "dark-mode",
       "components/accordion",
-      "components/action",
       "components/action-group",
       "components/alert",
       "components/avatar",
@@ -11944,7 +11949,9 @@
       "components/step-marker",
       "components/switch",
       "components/table",
+      "components/task-card",
       "components/task-list",
+      "components/task-navigation",
       "components/text-area",
       "components/text-input",
       "components/toolbar-button",
