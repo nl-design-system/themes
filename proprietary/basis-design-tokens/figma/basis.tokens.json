@@ -7906,34 +7906,106 @@
   "components/modal-dialog": {
     "todo": {
       "modal-dialog": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.border-subtle}"
+        },
         "border-radius": {
           "$type": "dimension",
           "$value": "{basis.border-radius.lg}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
         },
         "box-shadow": {
           "$type": "boxShadow",
           "$value": "{basis.box-shadow.lg}"
         },
-        "header": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "content": {
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.3xl}"
+          },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": "{basis.space.block.md}"
+            "$value": "{basis.space.block.3xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          }
+        },
+        "footer": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.sm}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           },
           "padding-inline-start": {
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
+          }
+        },
+        "header": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
           },
-          "padding-inline-end": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-subtle}"
+          },
+          "border-width": {
             "$type": "dimension",
-            "$value": "{basis.space.inline.md}"
+            "$value": "{basis.border-width.sm}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.md}"
           },
           "padding-block-end": {
             "$type": "dimension",
             "$value": "{basis.space.block.md}"
           },
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           },
           "label": {
             "color": {
@@ -7944,91 +8016,19 @@
               "$type": "fontFamilies",
               "$value": "{basis.text.font-family.default}"
             },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            },
             "font-size": {
               "$type": "fontSizes",
               "$value": "{basis.text.font-size.md}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
             },
             "line-height": {
               "$type": "lineHeights",
               "$value": "{basis.text.line-height.md}"
             }
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-subtle}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.md}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
           }
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.border-subtle}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "footer": {
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          }
-        },
-        "content": {
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.3xl}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.3xl}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          }
-        },
-        "border-width": {
-          "$type": "dimension",
-          "$value": "{basis.border-width.sm}"
         }
       }
     }
