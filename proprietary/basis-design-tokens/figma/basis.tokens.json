@@ -9913,6 +9913,10 @@
           "$type": "fontWeights",
           "$value": "{basis.form-control.font-weight}"
         },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.form-control.line-height}"
+        },
         "max-inline-size": {
           "$type": "dimension",
           "$value": "{basis.form-control.max-inline-size}"
@@ -9966,13 +9970,13 @@
           }
         },
         "invalid": {
-          "border-block-end-width": {
-            "$type": "dimension",
-            "$value": "{utrecht.select.invalid.border-width}"
-          },
           "background-color": {
             "$type": "color",
             "$value": "{basis.form-control.invalid.background-color}"
+          },
+          "border-block-end-width": {
+            "$type": "dimension",
+            "$value": "{utrecht.select.invalid.border-width}"
           },
           "border-color": {
             "$type": "color",
@@ -9982,10 +9986,6 @@
             "$type": "dimension",
             "$value": "{basis.form-control.invalid.border-width}"
           }
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.form-control.line-height}"
         },
         "hover": {
           "background-color": {
@@ -10007,13 +10007,13 @@
   "components/separator": {
     "utrecht": {
       "separator": {
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.border-default}"
-        },
         "block-size": {
           "$type": "dimension",
           "$value": "{basis.size.4xs}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.border-default}"
         }
       }
     }
