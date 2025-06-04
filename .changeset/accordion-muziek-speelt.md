@@ -13,8 +13,8 @@ De volgende tokens zijn verwijderd uit Accordion component:
 - `utrecht.accordion.button.focus.color`
 
 De volgende tokens zijn toegevoegd aan Accordion component:
-- `utrecht.margin-block-end`
-- `utrecht.margin-block-start`
+- `utrecht.accordion.margin-block-end`
+- `utrecht.accordion.margin-block-start`
 - `utrecht.accordion.button.border-radius`
 - `utrecht.accordion.button.focus-visible.background-color`
 - `utrecht.accordion.button.focus-visible.border-color`
