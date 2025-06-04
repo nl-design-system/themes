@@ -21,5 +21,5 @@ De volgende tokens zijn toegevoegd aan Accordion component:
 - `utrecht.accordion.button.focus-visible.border-width`
 - `utrecht.accordion.button.focus-visible.color`
 - `utrecht.accordion.section.hover.border-color`
-- `utrecht.section.margin-block-end
-- `utrecht.section.margin-block-start`
+- `utrecht.accordion.section.margin-block-end`
+- `utrecht.accordion.section.margin-block-start`
