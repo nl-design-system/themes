@@ -1,4 +1,8 @@
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Changes to any file require approval from @nl-design-system/kernteam-maintainer
 * @nl-design-system/kernteam-maintainer
+
 /proprietary/amsterdam-design-tokens/src/ @nl-design-system/gemeente-amsterdam
 /proprietary/amsterdam-design-tokens/documentation/ @nl-design-system/gemeente-amsterdam
 /proprietary/amsterdam-design-tokens/figma/ @nl-design-system/gemeente-amsterdam
@@ -46,3 +50,9 @@
 /proprietary/zevenaar-design-tokens/documentation/ @nl-design-system/gemeente-zevenaar
 /proprietary/zwolle-design-tokens/src/ @nl-design-system/gemeente-zwolle
 /proprietary/zwolle-design-tokens/documentation/ @nl-design-system/gemeente-zwolle
+
+# Changes to tokens managed by Tokens Studio in Figma can be approved by @nl-design-system/kernteam-design
+/packages/**/figma/*.tokens.json @nl-design-system/kernteam-design
+
+# Changes to this file (.github/CODEOWNERS) require approval from @nl-design-system/kernteam-admin
+.github/CODEOWNERS @nl-design-system/kernteam-admin
