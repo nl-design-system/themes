@@ -4298,20 +4298,6 @@
   "components/accordion": {
     "utrecht": {
       "accordion": {
-        "margin-block-end": {
-          "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
-        },
-        "margin-block-start": {
-          "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "0"
-        },
         "button": {
           "background-color": {
             "$type": "color",
@@ -4373,7 +4359,7 @@
               "$value": "{basis.color.action-2.color-active}"
             }
           },
-          "focus-visible": {
+          "focus": {
             "background-color": {
               "$type": "color",
               "$value": "{basis.focus.background-color}"
@@ -4381,10 +4367,6 @@
             "border-color": {
               "$type": "color",
               "$value": "{basis.color.transparent}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{basis.border-width.sm}"
             },
             "color": {
               "$type": "color",
@@ -4431,37 +4413,15 @@
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           }
-        },
-        "section": {
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-subtle}"
-          },
-          "hover": {
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.border-subtle}"
-            }
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          },
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "0px",
-            "$description": "[code-only]"
-          },
-          "margin-block-start": {
-            "$type": "dimension",
-            "$value": "0px",
-            "$description": "[code-only]"
-          }
         }
       }
     },
     "todo": {
       "accordion": {
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "0"
+        },
         "button": {
           "font-family": {
             "$type": "fontFamilies",
@@ -4478,6 +4438,16 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
+          }
+        },
+        "section": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-subtle}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.sm}"
           }
         }
       }
@@ -5483,6 +5453,26 @@
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
         },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "192px"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "328px"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.2xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.3xl}"
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.lg}"
+        },
         "heading": {
           "color": {
             "$type": "color",
@@ -5520,26 +5510,6 @@
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
           }
-        },
-        "min-block-size": {
-          "$type": "dimension",
-          "$value": "192px"
-        },
-        "min-inline-size": {
-          "$type": "dimension",
-          "$value": "328px"
-        },
-        "padding-block": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.2xl}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.3xl}"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.lg}"
         },
         "active": {
           "background-color": {
