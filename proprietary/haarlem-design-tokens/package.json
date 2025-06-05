@@ -20,7 +20,7 @@
   "scripts": {
     "clean": "rimraf -rf dist/",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run build' 'src/**/*.tokens.json'",
     "build": "pnpm run clean && pnpm run build:style-dictionary && cp dist/index.scss dist/_variables.scss && cp dist/design-tokens.css dist/design-tokens.scss && pnpm run build:scss",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
