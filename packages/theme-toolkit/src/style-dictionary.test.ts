@@ -27,7 +27,7 @@ const testDirectory = (distPath: string) => {
         });
 
         it('has variable declaration in Less syntax', () => {
-          expect(content).toContain('@utrecht-button-color: @voorbeeld-color-gray-900;');
+          expect(content).toContain('@utrecht-button-color: @basis-color-default-color-default;');
         });
 
         it.todo('the file `dist/variables.less` has valid Less syntax');
@@ -58,7 +58,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a variable declaration with a variable reference', () => {
-            expect(content).toContain('--utrecht-button-color: var(--voorbeeld-color-gray-900);');
+            expect(content).toContain('--utrecht-button-color: var(--basis-color-default-color-default);');
           });
         });
       });
@@ -86,7 +86,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a variable declaration with a variable reference', () => {
-            expect(content).toContain('--utrecht-button-color: var(--voorbeeld-color-gray-900);');
+            expect(content).toContain('--utrecht-button-color: var(--basis-color-default-color-default);');
           });
         });
       });
@@ -112,7 +112,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a variable declaration with a variable reference', () => {
-            expect(content).toContain('$utrecht-button-color: $voorbeeld-color-gray-900 !default;');
+            expect(content).toContain('$utrecht-button-color: $basis-color-default-color-default !default;');
           });
 
           it('contains no "$token-set-order" artefacts from Token Studio', () => {
@@ -153,7 +153,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a variable declaration with a variable reference', () => {
-            expect(content).toContain('--utrecht-button-color: var(--voorbeeld-color-gray-900);');
+            expect(content).toContain('--utrecht-button-color: var(--basis-color-default-color-default);');
           });
         });
       });
@@ -196,7 +196,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a variable assignment', () => {
-            expect(content).toContain('"utrechtButtonColor": "#0a2750"');
+            expect(content).toContain('"utrechtButtonColor": "#ababab"');
           });
         });
       });
@@ -264,7 +264,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a property assignment', () => {
-            expect(content).toContain('"utrechtButtonColor": "#0a2750"');
+            expect(content).toContain('"utrechtButtonColor": "#ababab"');
           });
         });
       });
