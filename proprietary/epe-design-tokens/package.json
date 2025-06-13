@@ -21,7 +21,7 @@
   "scripts": {
     "clean": "rimraf -rf dist/ src/generated/",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run build' 'src/**/*.tokens.json'",
     "build": "npm-run-all clean build:style-dictionary build:scss",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "node ./style-dictionary.mjs"

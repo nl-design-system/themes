@@ -20,7 +20,7 @@
   "scripts": {
     "clean": "rimraf -rf dist/",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run build' 'src/**/*.tokens.json'",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary build:scss",
     "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/generated/figma.tokens.json",
     "build:scss": "sass --no-source-map src/:dist/",
