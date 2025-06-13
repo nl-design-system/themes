@@ -1,8 +1,10 @@
 {
   "brand": {
-    "name": {
-      "$type": "text",
-      "$value": "Start"
+    "example": {
+      "name": {
+        "$type": "text",
+        "$value": "Start"
+      }
     }
   },
   "common": {
@@ -4872,6 +4874,12 @@
           "padding-inline-start": {
             "$type": "dimension",
             "$value": "{basis.space.inline.md}"
+          },
+          "first": {
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "0px"
+            }
           }
         },
         "link": {
