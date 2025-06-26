@@ -26,17 +26,18 @@ const build = async () => {
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
 
-  sd = new StyleDictionary({
-    ...createConfig({
-      className: `${themeConfig.prefix}-theme--color-scheme-dark`,
-      buildPath: 'dist/color-scheme-dark/',
-    }),
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: ['src/color-scheme-dark/tokens.json', 'src/color-scheme-dark/*.tokens.json'],
-  });
+  // TODO: Update with new format in tokens.json
+  // sd = new StyleDictionary({
+  //   ...createConfig({
+  //     className: `${themeConfig.prefix}-theme--color-scheme-dark`,
+  //     buildPath: 'dist/color-scheme-dark/',
+  //   }),
+  //   preprocessors: ['tokens-studio', 'dtcg-delegate'],
+  //   source: ['src/color-scheme-dark/tokens.json', 'src/color-scheme-dark/*.tokens.json'],
+  // });
 
-  await sd.cleanAllPlatforms();
-  await sd.buildAllPlatforms();
+  // await sd.cleanAllPlatforms();
+  // await sd.buildAllPlatforms();
 };
 
 build();
