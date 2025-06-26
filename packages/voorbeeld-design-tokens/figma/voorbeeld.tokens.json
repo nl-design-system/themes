@@ -5222,6 +5222,28 @@
             "$value": "{basis.color.disabled.color-subtle}"
           }
         },
+        "item": {
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "0px"
+          }
+        },
         "link": {
           "color": {
             "$type": "color",
@@ -5233,7 +5255,7 @@
           },
           "column-gap": {
             "$type": "dimension",
-            "$value": "{basis.space.column.sm}"
+            "$value": "{basis.space.text.xs}"
           },
           "icon": {
             "size": {
@@ -5274,28 +5296,6 @@
               "$type": "textDecoration",
               "$value": "None"
             }
-          }
-        },
-        "item": {
-          "min-block-size": {
-            "$type": "dimension",
-            "$value": "{basis.pointer-target.min-block-size}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.lg}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.lg}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "0px"
           }
         },
         "separator": {
@@ -8870,6 +8870,10 @@
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.default}"
           },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
           "padding-block-end": {
             "$type": "dimension",
             "$value": "{basis.space.block.lg}"
@@ -8899,10 +8903,6 @@
             "$value": "underline"
           },
           "icon": {
-            "margin-inline": {
-              "$type": "dimension",
-              "$value": "{basis.space.text.xs}"
-            },
             "size": {
               "$type": "dimension",
               "$value": "{basis.size.icon.md}"
