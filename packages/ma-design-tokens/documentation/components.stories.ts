@@ -27,3 +27,18 @@ export const ComponentsContinued: Story = {
     start: 51,
   },
 };
+
+export const ComponentsDarkMode: Story = {
+  parameters: { theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark}` },
+  args: {
+    start: 0,
+    end: 50,
+  },
+};
+
+export const ComponentsDarkModeContinued: Story = {
+  parameters: { theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark}` },
+  args: {
+    start: 51,
+  },
+};
