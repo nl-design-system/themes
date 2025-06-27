@@ -21,16 +21,9 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 
-export const ComponentTokensLightMode: Story = {
-  name: 'Component Tokens (color-scheme: light)',
+export const ComponentTokens: Story = {
+  name: 'Component Tokens',
   args: {
-    theme: 'epe-theme epe-theme--color-scheme-light',
-  },
-};
-
-export const ComponentTokensDarkMode: Story = {
-  name: 'Component Tokens (color-scheme: dark)',
-  args: {
-    theme: 'epe-theme epe-theme--color-scheme-dark',
+    theme: 'epe-theme',
   },
 };

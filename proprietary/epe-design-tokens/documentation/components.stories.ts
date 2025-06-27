@@ -14,16 +14,8 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 
-export const ComponentsLightMode: Story = {
-  name: 'Visual regression test (color-scheme: light)',
+export const Components: Story = {
   args: {
-    theme: 'epe-theme epe-theme--color-scheme-light',
-  },
-};
-
-export const ComponentsDarkMode: Story = {
-  name: 'Visual regression test (color-scheme: dark)',
-  args: {
-    theme: 'epe-theme epe-theme--color-scheme-dark',
+    theme: 'epe-theme',
   },
 };
