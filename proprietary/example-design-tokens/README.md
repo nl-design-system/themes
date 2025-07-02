@@ -4,7 +4,7 @@ These tokens have been obtained by analysing the [website of Gemeente Example](h
 
 ---
 
-✂ In your own directory: **remove the "Getting started" section below!**
+✂ In je eigen directory: **verwijder de "Aan de slag" sectie hieronder!**
 
 ---
 
@@ -48,6 +48,6 @@ Als je wilt dan kun je een open source font installeren. Bijvoorbeeld, voor "Fir
 
 ---
 
-✂ In your own directory: **remove the "Getting started" section above!**
+✂ In je eigen directory: **verwijder de "Aan de slag" sectie hierboven!**
 
 ---
