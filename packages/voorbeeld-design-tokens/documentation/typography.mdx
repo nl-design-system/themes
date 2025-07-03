@@ -5,7 +5,7 @@ import config from "../src/config.json";
 
 <Meta title="Voorbeeld Thema/Typography" />
 
-export const typography = tokens[config.prefix]["typography"];
+export const typography = tokens["basis"]["text"];
 
 export const textContent = "Tweede Kamerverkiezingen gaan anders dan anders";
 export const renderScale = (scale, fontFamily) => (
@@ -19,7 +19,7 @@ export const renderScale = (scale, fontFamily) => (
             style={{
               fontFamily: `var(--${fontFamily.path.join("-")})`,
               fontSize: size["$value"],
-              fontWeight: typography["font-weight"]["normal"]["$value"],
+              fontWeight: typography["font-weight"]["default"]["$value"],
               lineHeight: typography["line-height"]["md"]["$value"],
             }}
           >
@@ -33,22 +33,22 @@ export const renderScale = (scale, fontFamily) => (
 
 # Typography
 
-## Primary font
+## Default font
 
 <FontDropTarget
-  cssProperty="--voorbeeld-typography-font-family-primary"
-  defaultFontFamily={typography["font-family"]["primary"]["$value"]}
+  cssProperty="--basis-text-font-family-default"
+  defaultFontFamily={typography["font-family"]["default"]["$value"]}
   appearance="subtle"
 >
-  <div>{renderScale(typography["font-size"], typography["font-family"]["primary"])}</div>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["default"])}</div>
 </FontDropTarget>
 
-## Secondary font
+## Monospace font
 
 <FontDropTarget
-  cssProperty="--voorbeeld-typography-font-family-secondary"
-  defaultFontFamily={typography["font-family"]["secondary"]["$value"]}
+  cssProperty="--basis-text-font-family-monospace"
+  defaultFontFamily={typography["font-family"]["monospace"]["$value"]}
   appearance="subtle"
 >
-  <div>{renderScale(typography["font-size"], typography["font-family"]["secondary"])}</div>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["monospace"])}</div>
 </FontDropTarget>
