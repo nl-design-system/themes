@@ -7,7 +7,7 @@ import '@nl-design-system-community/nora-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@nl-design-system-community/ma-design-tokens/src/font.js';
 import '@nl-design-system-community/ma-design-tokens/dist/theme.css';
-// import '@nl-design-system-community/ma-design-tokens/dist/color-scheme-dark/theme.css';
+import '@nl-design-system-community/ma-design-tokens/dist/color-scheme-dark/theme.css';
 import '@nl-design-system-community/nora-design-tokens/src/font.js';
 import '@nl-design-system-community/purmerend-design-tokens/dist/theme.css';
 import '@nl-design-system-community/purmerend-design-tokens/dist/color-scheme-dark/theme.css';

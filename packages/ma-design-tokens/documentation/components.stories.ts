@@ -14,6 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 export const Components: Story = {
+  name: 'Components (color-scheme: light, component 1 - 50)',
   args: {
     theme: `${config.prefix}-theme`,
     start: 0,
@@ -22,6 +23,7 @@ export const Components: Story = {
 };
 
 export const ComponentsContinued: Story = {
+  name: 'Visual regression test (color-scheme: light, component 51 - ∞)',
   args: {
     theme: `${config.prefix}-theme`,
     start: 51,
@@ -29,6 +31,7 @@ export const ComponentsContinued: Story = {
 };
 
 export const ComponentsDarkMode: Story = {
+  name: 'Components (color-scheme: dark, component 1 - 50)',
   args: {
     theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
     start: 0,
@@ -37,6 +40,7 @@ export const ComponentsDarkMode: Story = {
 };
 
 export const ComponentsDarkModeContinued: Story = {
+  name: 'Visual regression test (color-scheme: dark, component 51 - ∞)',
   args: {
     theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
     start: 51,

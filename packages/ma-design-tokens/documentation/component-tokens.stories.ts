@@ -2,7 +2,8 @@ import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/C
 import type { Meta, StoryObj } from '@storybook/react';
 import tokensDefinition from '@nl-design-system-community/design-tokens-definition/dist/list.json';
 import config from '../src/config.json';
-import tokens from '../dist/list.json';
+import lightTokens from '../dist/list.json';
+import darkTokens from '../dist/color-scheme-dark/list.json';
 
 const meta = {
   title: 'Mooi & Anders',
@@ -11,7 +12,6 @@ const meta = {
   args: {
     config,
     showAll: false,
-    tokens,
     tokensDefinition,
     displayDesignTokens: true,
   },
@@ -22,8 +22,17 @@ type Story = StoryObj<typeof meta>;
 export default meta;
 
 export const ComponentTokensLightMode: Story = {
-  name: 'Component Tokens',
+  name: 'Component Tokens (color-scheme: light)',
   args: {
     theme: `${config.prefix}-theme`,
+    tokens: lightTokens,
+  },
+};
+
+export const ComponentTokensDarkMode: Story = {
+  name: 'Component Tokens (color-scheme: dark)',
+  args: {
+    theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
+    tokens: darkTokens,
   },
 };

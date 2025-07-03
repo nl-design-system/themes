@@ -6,9 +6,36 @@ import { createConfig } from '../../style-dictionary-config.js';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
+
   StyleDictionary.registerPreprocessor({
     name: 'dtcg-delegate',
     preprocessor: typeDtcgDelegate,
+  });
+
+  StyleDictionary.registerPreprocessor({
+    name: 'color-scheme-default',
+    preprocessor: (dictionary) => {
+      // Delete all keys that start with "color-scheme-"
+      Object.keys(dictionary).forEach((key) => {
+        if (key.startsWith('color-scheme-')) {
+          delete dictionary[key];
+        }
+      });
+      return dictionary;
+    },
+  });
+
+  StyleDictionary.registerPreprocessor({
+    name: 'color-scheme-dark',
+    preprocessor: (dictionary) => {
+      // Only include tokens for that start with "color-scheme-dark/"
+      Object.keys(dictionary).forEach((key) => {
+        if (!key.startsWith('color-scheme-dark/')) {
+          delete dictionary[key];
+        }
+      });
+      return dictionary;
+    },
   });
 
   register(StyleDictionary, {
@@ -19,25 +46,25 @@ const build = async () => {
     ...createConfig({
       className: `${themeConfig.prefix}-theme`,
     }),
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
+    preprocessors: ['color-scheme-default', 'tokens-studio', 'dtcg-delegate'],
     source: ['src/tokens.json', 'src/*.tokens.json'],
   });
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
 
-  // TODO: Update with new format in tokens.json
-  // sd = new StyleDictionary({
-  //   ...createConfig({
-  //     className: `${themeConfig.prefix}-theme--color-scheme-dark`,
-  //     buildPath: 'dist/color-scheme-dark/',
-  //   }),
-  //   preprocessors: ['tokens-studio', 'dtcg-delegate'],
-  //   source: ['src/color-scheme-dark/tokens.json', 'src/color-scheme-dark/*.tokens.json'],
-  // });
+  // color scheme dark
+  let sdDark = new StyleDictionary({
+    ...createConfig({
+      className: `${themeConfig.prefix}-theme--color-scheme-dark`,
+      buildPath: 'dist/color-scheme-dark/',
+    }),
+    preprocessors: ['color-scheme-dark', 'tokens-studio', 'dtcg-delegate'],
+    source: ['src/tokens.json', 'src/*.tokens.json'],
+  });
 
-  // await sd.cleanAllPlatforms();
-  // await sd.buildAllPlatforms();
+  await sdDark.cleanAllPlatforms();
+  await sdDark.buildAllPlatforms();
 };
 
 build();
