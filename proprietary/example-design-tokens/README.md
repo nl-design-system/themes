@@ -1,18 +1,8 @@
-# NL Design System design tokens Gemeente Example
+# Aan de slag met je eigen NL Design System thema
 
-These tokens have been obtained by analysing the [website of Gemeente Example](https://www.example.com/).
+## Een nieuw thema opzetten
 
----
-
-✂ In je eigen directory: **verwijder de "Aan de slag" sectie hieronder!**
-
----
-
-## Aan de slag met je eigen NL Design System thema
-
-### Een nieuw thema opzetten
-
-- [ ] Kies een unieke prefixvoor jouw organisatie, die je gebruikt voor je npm package, BEM class names, CSS variabelen, etcetera. Wij gebruiken `nl`, jij kiest iets anders. Gebruik alleen letters en cijfers in de prefix, geen andere tekens zoals het koppelstreepje. Bijvoorbeeld: gemeente Den Haag gebruikt `denhaag`.
+- [ ] Kies een unieke prefix voor jouw organisatie, die je gebruikt voor je npm package, BEM class names, CSS variabelen, etcetera. Wij gebruiken `nl`, jij kiest iets anders. Gebruik alleen letters en cijfers in de prefix, geen andere tekens zoals het koppelstreepje. Bijvoorbeeld: gemeente Den Haag gebruikt `denhaag`.
 - [ ] Kopieer `proprietary/example-design-tokens/` naar `proprietary/prefix-design-tokens`, waarbij je `prefix` vervangt door de prefix die je kiest.
 - [ ] Gebruik "_Find and replace_" in `proprietary/prefix-design-tokens` en vervang _case-sensitive_ `example-` door jouw `prefix-` (inclusief het koppelstreepje).
 - [ ] Open ook `src/config.json` in de nieuwe directory en full je prefix in bij `"prefix"`
@@ -41,13 +31,7 @@ Als je wilt dan kun je een open source font installeren. Bijvoorbeeld, voor "Fir
 - `pnpm add --save-dev @fontsource/fira-sans --dir proprietary/prefix-design-tokens`
 - Create `properietary/prefix-design-tokens/src/font.js`, and import the font there: `import '@fontsource/fira-sans';`
 
-### Je nieuwe thema publiceren op npm
+## Je nieuwe thema publiceren op npm
 
 - [ ] Maak een Pull Request op GitHub om jouw code toe te voegen aan de [NL Design System themes repository](http://github.com/nl-design-system/themes).
 - [ ] Als de code is gemerged in de themes repository, dan zal je eigen thema als npm pakketje na een paar minuten beschikbaar worden via [npmjs.com](http://npmjs.com). Daarna kun je het thema installeren in jouw project met `npm install --save-dev @nl-design-system-community/prefix-design-tokens`.
-
----
-
-✂ In je eigen directory: **verwijder de "Aan de slag" sectie hierboven!**
-
----
