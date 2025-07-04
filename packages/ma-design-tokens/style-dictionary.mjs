@@ -2,7 +2,11 @@ import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
-import { createConfig } from '../../style-dictionary-config.js';
+import {
+  createConfig,
+  colorSchemeDarkPreprocessor,
+  colorSchemeDefaultPreprocessor,
+} from '../../style-dictionary-config.js';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
@@ -14,28 +18,12 @@ const build = async () => {
 
   StyleDictionary.registerPreprocessor({
     name: 'color-scheme-default',
-    preprocessor: (dictionary) => {
-      // Delete all keys that start with "color-scheme-"
-      Object.keys(dictionary).forEach((key) => {
-        if (key.startsWith('color-scheme-')) {
-          delete dictionary[key];
-        }
-      });
-      return dictionary;
-    },
+    preprocessor: colorSchemeDefaultPreprocessor,
   });
 
   StyleDictionary.registerPreprocessor({
     name: 'color-scheme-dark',
-    preprocessor: (dictionary) => {
-      // Only include tokens for that start with "color-scheme-dark/"
-      Object.keys(dictionary).forEach((key) => {
-        if (!key.startsWith('color-scheme-dark/')) {
-          delete dictionary[key];
-        }
-      });
-      return dictionary;
-    },
+    preprocessor: colorSchemeDarkPreprocessor,
   });
 
   register(StyleDictionary, {

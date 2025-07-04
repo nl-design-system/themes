@@ -226,4 +226,50 @@ const createConfig = ({
   };
 };
 
-module.exports = { createConfig };
+/**
+ * Style Dictionary preprocessor to remove all tokens that start with "color-scheme-".
+ * This is used to create a default color scheme configuration.
+ *
+ * Register with:
+    StyleDictionary.registerPreprocessor({
+     name: 'color-scheme-default',
+     preprocessor: colorSchemeDefaultPreprocessor,
+   });
+ *
+ * @param {DesignTokens} dictionary
+ * @returns {DesignTokens} dictionary
+ */
+const colorSchemeDefaultPreprocessor = (dictionary) => {
+  // Delete all keys that start with "color-scheme-"
+  Object.keys(dictionary).forEach((key) => {
+    if (key.startsWith('color-scheme-')) {
+      delete dictionary[key];
+    }
+  });
+  return dictionary;
+};
+
+/**
+ * Style Dictionary preprocessor to include only tokens that belong to the "color-scheme-dark" tokenset.
+ * This is used to create a dark color scheme configuration.
+ *
+ * Register with:
+    StyleDictionary.registerPreprocessor({
+     name: 'color-scheme-dark',
+     preprocessor: colorSchemeDarkPreprocessor,
+   });
+ *
+ * @param {DesignTokens} dictionary
+ * @returns {DesignTokens} dictionary
+ */
+const colorSchemeDarkPreprocessor = (dictionary) => {
+  // Include only tokens that belong to the "color-scheme-dark" tokenset
+  Object.keys(dictionary).forEach((key) => {
+    if (!key.startsWith('color-scheme-dark/')) {
+      delete dictionary[key];
+    }
+  });
+  return dictionary;
+};
+
+module.exports = { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor };
