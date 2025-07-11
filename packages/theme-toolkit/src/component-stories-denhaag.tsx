@@ -1,5 +1,8 @@
 import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 // import { Button, ProcessSteps, Avatar, Alert, BadgeCounter, Divider } from '@gemeente-denhaag/components-react';
+import { ArchiveIcon, CheckCircleIcon, GridIcon, InboxIcon, UserIcon } from '@gemeente-denhaag/icons';
+import { SideNavigation } from '@gemeente-denhaag/side-navigation';
+import '@gemeente-denhaag/side-navigation/index.css';
 import { Status } from '@gemeente-denhaag/process-steps';
 // eslint-disable-next-line no-unused-vars
 
@@ -58,6 +61,51 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
           },
         ]}
       ></Status>
+    ),
+  },
+  {
+    storyId: 'react-denhaag-side-navigation--default',
+    component: 'denhaag-side-navigation',
+    group: STORY_GROUPS['SIDE_NAVIGATION'],
+    name: 'Den Haag Side Navigation',
+    render: () => (
+      <SideNavigation
+        items={[
+          [
+            {
+              href: '#',
+              label: 'Overzicht',
+              icon: <GridIcon />,
+              current: true,
+            },
+          ],
+          [
+            {
+              href: '#',
+              label: 'Mijn taken',
+              icon: <CheckCircleIcon />,
+            },
+            {
+              href: '#',
+              label: 'Mijn berichten',
+              icon: <InboxIcon />,
+              counter: 2,
+            },
+            {
+              href: '#',
+              label: 'Mijn zaken',
+              icon: <ArchiveIcon />,
+            },
+          ],
+          [
+            {
+              href: '#',
+              label: 'Mijn gegevens',
+              icon: <UserIcon />,
+            },
+          ],
+        ]}
+      />
     ),
   },
   // {
