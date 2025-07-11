@@ -26,6 +26,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   LINK_LIST: 'Link List',
   SIDE_NAVIGATION: 'Side Navigation',
   ICON: 'Icons',
+  CASE_CARD: 'Case Card',
 };
 
 export interface ComponentStory {
