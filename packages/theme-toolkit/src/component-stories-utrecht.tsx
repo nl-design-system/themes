@@ -3121,9 +3121,9 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       <LinkList
         icon={() => <UtrechtIconChevronRight />}
         links={[
-          { href: '#', children: 'Link 1 with so much content wow look how long!' },
-          { href: '#', children: 'Link 2' },
-          { href: '#', children: 'Link 3' },
+          { href: '#', children: 'Bekijk alle beschikbare documenten en aanvullende informatie over dit onderwerp' },
+          { href: '#', children: 'Contact' },
+          { href: '#', children: 'Veelgestelde vragen' },
         ]}
       />
     ),
