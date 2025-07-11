@@ -59,7 +59,9 @@ import {
   Code,
   ColorSample,
   FormFieldErrorMessage,
+  LinkList,
 } from '@utrecht/component-library-react/dist/css-module';
+import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { clsx } from 'clsx';
 
@@ -3108,5 +3110,21 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.listbox.option.selected.disabled.color',
       ],
     },
+  },
+  {
+    storyId: 'react-utrecht-link-list--default',
+    component: 'utrecht-link-list',
+    group: STORY_GROUPS['LINK_LIST'],
+    name: 'Utrecht Icon',
+    render: () => (
+      <LinkList
+        icon={() => <UtrechtIconChevronRight />}
+        links={[
+          { href: '#', children: 'Link 1 with so much content wow look how long!' },
+          { href: '#', children: 'Link 2' },
+          { href: '#', children: 'Link 3' },
+        ]}
+      />
+    ),
   },
 ];
