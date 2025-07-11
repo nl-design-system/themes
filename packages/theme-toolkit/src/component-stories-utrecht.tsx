@@ -59,6 +59,7 @@ import {
   Code,
   ColorSample,
   FormFieldErrorMessage,
+  Icon,
 } from '@utrecht/component-library-react/dist/css-module';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { clsx } from 'clsx';
@@ -3108,5 +3109,12 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.listbox.option.selected.disabled.color',
       ],
     },
+  },
+  {
+    storyId: 'react-utrecht-icon--default',
+    component: 'utrecht-icon',
+    group: STORY_GROUPS['ICON'],
+    name: 'Utrecht Icon',
+    render: () => <Icon>→</Icon>,
   },
 ];
