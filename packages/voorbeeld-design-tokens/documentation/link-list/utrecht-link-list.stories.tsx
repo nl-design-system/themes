@@ -10,9 +10,9 @@ const meta = {
   args: {
     icon: () => <UtrechtIconChevronRight />,
     links: [
-    { href: '#', children: 'Bekijk alle beschikbare documenten en aanvullende informatie over dit onderwerp' },
-    { href: '#', children: 'Contact' },
-    { href: '#', children: 'Veelgestelde vragen' },
+      { href: '#', children: 'Bekijk alle beschikbare documenten en aanvullende informatie over dit onderwerp' },
+      { href: '#', children: 'Contact' },
+      { href: '#', children: 'Veelgestelde vragen' },
     ],
   },
 } satisfies Meta<typeof LinkList>;
