@@ -59,8 +59,10 @@ import {
   Code,
   ColorSample,
   FormFieldErrorMessage,
+  LinkList,
   Icon,
 } from '@utrecht/component-library-react/dist/css-module';
+import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { clsx } from 'clsx';
 
@@ -3109,6 +3111,22 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.listbox.option.selected.disabled.color',
       ],
     },
+  },
+  {
+    storyId: 'react-utrecht-link-list--default',
+    component: 'utrecht-link-list',
+    group: STORY_GROUPS['LINK_LIST'],
+    name: 'Utrecht Icon',
+    render: () => (
+      <LinkList
+        icon={() => <UtrechtIconChevronRight />}
+        links={[
+          { href: '#', children: 'Bekijk alle beschikbare documenten en aanvullende informatie over dit onderwerp' },
+          { href: '#', children: 'Contact' },
+          { href: '#', children: 'Veelgestelde vragen' },
+        ]}
+      />
+    ),
   },
   {
     storyId: 'react-utrecht-icon--default',

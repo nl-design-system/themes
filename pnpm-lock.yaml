@@ -917,6 +917,9 @@ importers:
       '@utrecht/url-data-css':
         specifier: 1.3.0
         version: 1.3.0
+      '@utrecht/web-component-library-react':
+        specifier: 3.0.7
+        version: 3.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1113,6 +1116,9 @@ importers:
       '@utrecht/components':
         specifier: 7.4.0
         version: 7.4.0
+      '@utrecht/web-component-library-react':
+        specifier: 3.0.7
+        version: 3.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -4875,8 +4881,17 @@ packages:
   '@utrecht/url-data-css@1.3.0':
     resolution: {integrity: sha512-ByvAbbJvsWaU9nitser/f+JYAjYtk2Cv8P6CydqlQu6evd4c+odkZcn0UnalaNZO0A+hOLmEAMd+EK2mzgmMLg==}
 
+  '@utrecht/web-component-library-react@3.0.7':
+    resolution: {integrity: sha512-yBHtgP1s3167F9HEasOBg/GrlaNDI46Oi6FiC2B+DKo96HSKlX0bbS6l2IOtwAVTPcgfjVcV87Pc2Ot3h2O4uQ==}
+    peerDependencies:
+      react: 16 - 18
+      react-dom: 16 - 18
+
   '@utrecht/web-component-library-stencil@3.0.1':
     resolution: {integrity: sha512-LRviT6RAV7ULxbuF3yxpO41XAlgL6UmPnDWL+ltj9lZm6FmKbprQ03u3mt02RN3Zk9Fr/sTwiJ9ydrHn+aagpQ==}
+
+  '@utrecht/web-component-library-stencil@3.5.0':
+    resolution: {integrity: sha512-uGNtsqQgSMo9ac9NrDVZGg/fClOqPwdcvNI8HWu8d/Z2EvutCROJLOBx92p/pepnLVtaDk77eJwmZ5EU0UwdWA==}
 
   '@yarnpkg/fslib@2.10.3':
     resolution: {integrity: sha512-41H+Ga78xT9sHvWLlFOZLIhtU6mTGZ20pZ29EiZa97vnxdohJD2AF42rCoAoWfqUz486xY6fhjMH+DYEM9r14A==}
@@ -12530,7 +12545,17 @@ snapshots:
 
   '@utrecht/url-data-css@1.3.0': {}
 
+  '@utrecht/web-component-library-react@3.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@utrecht/web-component-library-stencil': 3.5.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   '@utrecht/web-component-library-stencil@3.0.1':
+    dependencies:
+      '@stencil/core': 4.18.3
+
+  '@utrecht/web-component-library-stencil@3.5.0':
     dependencies:
       '@stencil/core': 4.18.3
 
