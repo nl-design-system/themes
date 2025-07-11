@@ -60,6 +60,7 @@ import {
   ColorSample,
   FormFieldErrorMessage,
   LinkList,
+  Icon,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
@@ -3126,5 +3127,12 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         ]}
       />
     ),
+  },
+  {
+    storyId: 'react-utrecht-icon--default',
+    component: 'utrecht-icon',
+    group: STORY_GROUPS['ICON'],
+    name: 'Utrecht Icon',
+    render: () => <Icon>→</Icon>,
   },
 ];
