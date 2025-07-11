@@ -24,6 +24,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   FORM_FIELD_ERROR_MESSAGE: 'Form Field Error Message',
   STEPS: 'Steps',
   LINK_LIST: 'Link List',
+  SIDE_NAVIGATION: 'Side Navigation',
   ICON: 'Icons',
 };
 
