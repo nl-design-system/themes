@@ -23,6 +23,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   FORM_FIELD_DESCRIPTION: 'Form Field Description',
   FORM_FIELD_ERROR_MESSAGE: 'Form Field Error Message',
   STEPS: 'Steps',
+  SIDE_NAVIGATION: 'Side Navigation',
   ICON: 'Icons',
 };
 
