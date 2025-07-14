@@ -3,6 +3,8 @@ import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 import { ArchiveIcon, CheckCircleIcon, GridIcon, InboxIcon, UserIcon } from '@gemeente-denhaag/icons';
 import { SideNavigation } from '@gemeente-denhaag/side-navigation';
 import '@gemeente-denhaag/side-navigation/index.css';
+import { CaseCard } from '@gemeente-denhaag/card';
+import '@gemeente-denhaag/card/index.css';
 import { Status } from '@gemeente-denhaag/process-steps';
 // eslint-disable-next-line no-unused-vars
 
@@ -107,6 +109,13 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
         ]}
       />
     ),
+  },
+  {
+    storyId: 'react-denhaag-case-card--default',
+    component: 'denhaag-case-card',
+    group: STORY_GROUPS['CASE_CARD'],
+    name: 'Den Haag Case Card',
+    render: () => <CaseCard title={'Aanvraag subsidie geluidsisolatie'} context={'17 oktober 2022'} href={'#'} />,
   },
   // {
   //   storyId: 'denhaag-process-steps--default',
