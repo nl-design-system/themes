@@ -4,29 +4,121 @@ import config from "../src/config.json";
 
 <Meta title="Amsterdam/Typography" />
 
-export const typography = tokens[config.prefix]["text"];
 export const textContent = "Tweede Kamerverkiezingen gaan anders dan anders";
-export const renderScale = (scale) => (
-  <div>
-    {Object.entries(scale).map(([key, size]) => (
-      <div key={key}>
-        <h3>{key}</h3>
-        {size["description"] && <p>{size["description"]}</p>}
-        <div
-          style={{
-            fontFamily: typography["font-family"].value,
-            fontSize: size["font-size"] ? size["font-size"].value : null,
-            fontWeight: typography["font-weight"]["normal"],
-            lineHeight: size["line-height"] ? size["line-height"].value : null,
-          }}
-        >
-          {textContent}
-        </div>
-      </div>
-    ))}
-  </div>
-);
+export const typography = tokens[config.prefix].typography;
+
+export const baseStyle = {
+  fontFamily: typography["font-family"].value,
+  hyphenateLimitChars: typography["hyphenate-limit-chars"].value,
+};
+
+export function kebabToCamel(kebabStr) {
+  return kebabStr.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+}
+
+export const settings = {
+  heading: {
+    scaleProperties: ["font-weight", "text-wrap"],
+    objectProperties: ["font-size", "line-height"],
+    variants: {},
+  },
+  "body-text": {
+    scaleProperties: ["font-size", "font-weight", "line-height"],
+    objectProperties: ["font-size", "line-height"],
+    variants: {
+      bold: {
+        objectProperties: ["font-weight"],
+      },
+    },
+  },
+};
+
+export const getTypographyForScale = (scaleName) => {
+  const scaleData = typography[scaleName] || {};
+  const { scaleProperties = [], variants = {} } = settings[scaleName] || {};
+  const variantKeys = Object.keys(variants);
+  const exceptions = [...scaleProperties, ...variantKeys];
+
+  return Object.entries(scaleData).reduce((acc, [key, value]) => {
+    if (!exceptions.includes(key)) {
+      acc[key] = value;
+    }
+    return acc;
+  }, {});
+};
+
+export const renderScale = (scaleName) => {
+  const scale = getTypographyForScale(scaleName);
+  const { scaleProperties = [], objectProperties = [], variants = {} } = settings[scaleName] || {};
+
+  return (
+    <div>
+      {Object.entries(scale).map(([sizeName, sizeConfig]) => {
+        const style = {
+          ...baseStyle,
+          paddingInlineStart: "1.5rem",
+        };
+        scaleProperties.forEach((property) => {
+          const propKey = kebabToCamel(property);
+          style[propKey] = typography[scaleName]?.[property]?.value;
+        });
+
+        objectProperties.forEach((property) => {
+          const propKey = kebabToCamel(property);
+          style[propKey] = sizeConfig[property]?.value;
+        });
+
+        return (
+          <div key={`${scaleName}-${sizeName}`} style={{ paddingBlockStart: "2rem" }}>
+            <h3 id={`${scaleName}-${sizeName}`}>
+              {scaleName}: <code>{sizeName}</code>
+            </h3>
+            <p style={style}>{textContent}</p>
+
+            {Object.keys(variants).length > 0 && (
+              <div style={{ paddingInlineStart: "2rem" }}>
+                {Object.entries(variants).map(([variantName, variantConfig]) => {
+                  const variantStyle = { ...style };
+
+                  const variantProperties = Array.isArray(variantConfig?.objectProperties)
+                    ? variantConfig.objectProperties
+                    : [variantConfig.objectProperties];
+
+                  variantProperties.forEach((prop) => {
+                    const propKey = kebabToCamel(prop);
+                    variantStyle[propKey] =
+                      typography[scaleName]?.[variantName]?.[prop]?.value || null;
+                  });
+
+                  return (
+                    <div
+                      key={`${scaleName}-${sizeName}-${variantName}`}
+                      style={{ paddingBlockStart: "1rem" }}
+                    >
+                      <h4 id={`${scaleName}-${sizeName}-${variantName}`}>
+                        variant: <code>{variantName}</code>
+                      </h4>
+                      <p style={variantStyle}>{textContent}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 # Typography
 
-<div>{renderScale(typography["level"])}</div>
+Typography is displayed via a `div` element with an inline style, as the Storybook `<Typeset>` component does not yet support additional properties like `lineHeight` or `fontStyle`.
+
+## Heading
+
+<div>{renderScale("heading")}</div>
+
+## Body text
+
+<div>{renderScale("body-text")}</div>
