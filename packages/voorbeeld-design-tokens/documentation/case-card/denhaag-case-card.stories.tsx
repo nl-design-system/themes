@@ -8,9 +8,9 @@ const meta = {
   component: CaseCard,
   parameters: { actions: { disable: true } },
   args: {
-    title: 'Shrimp and Chorizo Paella fwaefawef awef awe',
-    subTitle: 'This impressive paella is a perfect party dish and a fun meal to cook.',
-    context: '',
+    title: 'Aanvraag subsidie geluidsisolatie',
+    subTitle: '',
+    context: '17 oktober 2022',
     href: '#',
   },
   decorators: [

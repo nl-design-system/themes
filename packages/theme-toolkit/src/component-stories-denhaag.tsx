@@ -115,14 +115,7 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     component: 'denhaag-case-card',
     group: STORY_GROUPS['CASE_CARD'],
     name: 'Den Haag Case Card',
-    render: () => (
-      <CaseCard
-        title={'Shrimp and Chorizo Paella fwaefawef awef awe'}
-        subTitle={'This impressive paella is a perfect party dish and a fun meal to cook.'}
-        context={''}
-        href={'#'}
-      />
-    ),
+    render: () => <CaseCard title={'Aanvraag subsidie geluidsisolatie'} context={'17 oktober 2022'} href={'#'} />,
   },
   // {
   //   storyId: 'denhaag-process-steps--default',
