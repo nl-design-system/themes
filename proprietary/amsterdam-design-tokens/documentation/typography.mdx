@@ -38,37 +38,38 @@ export const getTypographyForScale = (scaleName) => {
   const { scaleProperties = [], variants = {} } = settings[scaleName] || {};
   const variantKeys = Object.keys(variants);
   const exceptions = [...scaleProperties, ...variantKeys];
-
-return Object.entries(scaleData).reduce((acc, [key, value]) => {
-if (!exceptions.includes(key)) {
-acc[key] = value;
-}
-return acc;
-}, {});
+  return Object.entries(scaleData).reduce((acc, [key, value]) => {
+    if (!exceptions.includes(key)) {
+      acc[key] = value;
+    }
+    return acc;
+  }, {});
 };
 
 export const renderScale = (scaleName) => {
   const scale = getTypographyForScale(scaleName);
   const { scaleProperties = [], objectProperties = [], variants = {} } = settings[scaleName] || {};
-
-return (
-
-<div>
-{Object.entries(scale).map(([sizeName, sizeConfig]) => {
-const style = {
-...baseStyle,
-paddingInlineStart: "1.5rem",
-};
-scaleProperties.forEach((property) => {
-const propKey = kebabToCamel(property);
-style[propKey] = typography[scaleName]?.[property]?.value;
-});
-
+  const scaleStyle = {
+    ...baseStyle,
+  };
+  scaleProperties.forEach((property) => {
+    const propKey = kebabToCamel(property);
+    scaleStyle[propKey] = typography[scaleName]?.[property]?.value;
+  });
+  const sizes = Object.entries(scale);
+  sizes.unshift(["default", {}]);
+  return (
+    <div>
+      {sizes.map(([sizeName, sizeConfig]) => {
+        const style = {
+          ...scaleStyle,
+          paddingInlineStart: "1.5rem",
+        };
         objectProperties.forEach((property) => {
-          const propKey = kebabToCamel(property);
-          style[propKey] = sizeConfig[property]?.value;
+          if (sizeConfig[property]?.value) {
+            style[kebabToCamel(property)] = sizeConfig[property].value;
+          }
         });
-
         return (
           <div key={`${scaleName}-${sizeName}`} style={{ paddingBlockStart: "2rem" }}>
             <h3 id={`${scaleName}-${sizeName}`}>
@@ -81,14 +82,10 @@ style[propKey] = typography[scaleName]?.[property]?.value;
                 {Object.entries(variants).map(([variantName, variantConfig]) => {
                   const variantStyle = { ...style };
 
-                  const variantProperties = Array.isArray(variantConfig?.objectProperties)
-                    ? variantConfig.objectProperties
-                    : [variantConfig.objectProperties];
-
-                  variantProperties.forEach((prop) => {
-                    const propKey = kebabToCamel(prop);
-                    variantStyle[propKey] =
-                      typography[scaleName]?.[variantName]?.[prop]?.value || null;
+                  variantConfig.objectProperties.forEach((prop) => {
+                    if (typography[scaleName]?.[variantName]?.[prop]?.value) {
+                      variantStyle[kebabToCamel(prop)] = typography[scaleName][variantName][prop].value;
+                    }
                   });
 
                   return (
