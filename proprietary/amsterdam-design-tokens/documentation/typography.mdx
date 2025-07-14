@@ -52,6 +52,7 @@ export const renderScale = (scaleName) => {
   const { scaleProperties = [], objectProperties = [], variants = {} } = settings[scaleName] || {};
 
 return (
+
 <div>
 {Object.entries(scale).map(([sizeName, sizeConfig]) => {
 const style = {
