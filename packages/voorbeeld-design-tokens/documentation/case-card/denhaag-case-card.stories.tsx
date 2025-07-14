@@ -15,7 +15,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div style={{ maxWidth: '360px' }}>
+      <div style={{ maxInlineSize: '360px' }}>
         <Story />
       </div>
     ),
