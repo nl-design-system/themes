@@ -274,7 +274,51 @@ importers:
         specifier: 4.0.1
         version: 4.0.1
 
+<<<<<<< Updated upstream
   packages/start-design-tokens: {}
+=======
+  packages/start-design-tokens:
+    devDependencies:
+      '@fontsource/ibm-plex-mono':
+        specifier: 5.2.6
+        version: 5.2.6
+      '@fontsource/ibm-plex-sans':
+        specifier: 5.2.6
+        version: 5.2.6
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../design-tokens-definition
+      '@nl-design-system-unstable/basis-design-tokens':
+        specifier: workspace:*
+        version: link:../basis-design-tokens
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: workspace:*
+        version: link:../components-react/design-tokens-table-react
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../tokens-lib
+      '@storybook/react':
+        specifier: 8.2.7
+        version: 8.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.7(@babel/preset-env@7.24.5(@babel/core@7.26.0)))(typescript@5.5.4)
+      '@tokens-studio/sd-transforms':
+        specifier: 1.2.3
+        version: 1.2.3(style-dictionary@4.0.1)
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      style-dictionary:
+        specifier: 4.0.1
+        version: 4.0.1
+>>>>>>> Stashed changes
 
   packages/storybook:
     devDependencies:
@@ -3499,6 +3543,12 @@ packages:
 
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
+
+  '@fontsource/ibm-plex-mono@5.2.6':
+    resolution: {integrity: sha512-LTZJNTcpoT19fmwERZNMDI+ljHueuyhF2Qn+bICJ4Y4hxBLAAoJ2MRsGnyp0QNutW6t/25eyZpvaUK1LDrCo7Q==}
+
+  '@fontsource/ibm-plex-sans@5.2.6':
+    resolution: {integrity: sha512-yclktpagJncROwdWHHEfPsrIfoo3uiIeDFchvmjNmTW/YMBfLYWJnUv19EAqPNhGizdtmcH9FjzOR2094Z2uPg==}
 
   '@fontsource/lato@5.0.21':
     resolution: {integrity: sha512-UubLwvJO2bKuhWv6+ocx2Bou/pPIT6q7VpYaHIW7ZDaLPQY3uYAhveJg6P7Lvz5HYHyLba8JUc3yP7wvcqA8zQ==}
@@ -10944,6 +10994,10 @@ snapshots:
   '@fontsource/clear-sans@4.5.3': {}
 
   '@fontsource/fira-sans@5.1.0': {}
+
+  '@fontsource/ibm-plex-mono@5.2.6': {}
+
+  '@fontsource/ibm-plex-sans@5.2.6': {}
 
   '@fontsource/lato@5.0.21': {}
 
