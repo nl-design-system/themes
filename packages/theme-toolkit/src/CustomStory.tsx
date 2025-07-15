@@ -15,6 +15,10 @@ const Canvas = ({ className, children }: PropsWithChildren<{ className?: string 
         paddingBlock: '30px',
         paddingInline: '20px',
         position: 'relative',
+        // Since there is not yet an accepted method of changing the background color of the document in basis thema,
+        // this is the solution we decided on as kernteam, which is to use the basis-color-default-bg-document token.
+        // This will support changing the background color in the stories according to color-scheme.
+        backgroundColor: 'var(--basis-color-default-bg-document)',
       }}
     >
       {children}
