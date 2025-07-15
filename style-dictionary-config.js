@@ -240,13 +240,14 @@ const createConfig = ({
  * @returns {DesignTokens} dictionary
  */
 const colorSchemeDefaultPreprocessor = (dictionary) => {
+  const clonedDictionary = structuredClone(dictionary);
   // Delete all keys that start with "color-scheme-"
-  Object.keys(dictionary).forEach((key) => {
+  Object.keys(clonedDictionary).forEach((key) => {
     if (key.startsWith('color-scheme-')) {
-      delete dictionary[key];
+      delete clonedDictionary[key];
     }
   });
-  return dictionary;
+  return clonedDictionary;
 };
 
 /**
@@ -263,13 +264,14 @@ const colorSchemeDefaultPreprocessor = (dictionary) => {
  * @returns {DesignTokens} dictionary
  */
 const colorSchemeDarkPreprocessor = (dictionary) => {
+  const clonedDictionary = structuredClone(dictionary);
   // Include only tokens that belong to the "color-scheme-dark" tokenset
-  Object.keys(dictionary).forEach((key) => {
+  Object.keys(clonedDictionary).forEach((key) => {
     if (!key.startsWith('color-scheme-dark/')) {
-      delete dictionary[key];
+      delete clonedDictionary[key];
     }
   });
-  return dictionary;
+  return clonedDictionary;
 };
 
 module.exports = { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor };
