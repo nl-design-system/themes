@@ -17,7 +17,7 @@
     "directory": "packages/start-design-tokens"
   },
   "scripts": {
-    "clean": "rimraf -rf dist/",
+    "clean": "rimraf dist/",
     "build": "npm-run-all clean build:style-dictionary",
     "build:style-dictionary": "node ./style-dictionary.mjs"
   },
