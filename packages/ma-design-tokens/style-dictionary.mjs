@@ -16,15 +16,9 @@ const build = async () => {
     preprocessor: typeDtcgDelegate,
   });
 
-  StyleDictionary.registerPreprocessor({
-    name: 'color-scheme-default',
-    preprocessor: colorSchemeDefaultPreprocessor,
-  });
+  StyleDictionary.registerPreprocessor(colorSchemeDefaultPreprocessor);
 
-  StyleDictionary.registerPreprocessor({
-    name: 'color-scheme-dark',
-    preprocessor: colorSchemeDarkPreprocessor,
-  });
+  StyleDictionary.registerPreprocessor(colorSchemeDarkPreprocessor);
 
   register(StyleDictionary, {
     excludeParentKeys: true,
@@ -34,7 +28,7 @@ const build = async () => {
     ...createConfig({
       className: `${themeConfig.prefix}-theme`,
     }),
-    preprocessors: ['color-scheme-default', 'tokens-studio', 'dtcg-delegate'],
+    preprocessors: [colorSchemeDefaultPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
     source: ['src/tokens.json', 'src/*.tokens.json'],
   });
 
@@ -47,7 +41,7 @@ const build = async () => {
       className: `${themeConfig.prefix}-theme--color-scheme-dark`,
       buildPath: 'dist/color-scheme-dark/',
     }),
-    preprocessors: ['color-scheme-dark', 'tokens-studio', 'dtcg-delegate'],
+    preprocessors: [colorSchemeDarkPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
     source: ['src/tokens.json', 'src/*.tokens.json'],
   });
 

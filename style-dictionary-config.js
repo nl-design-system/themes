@@ -228,26 +228,24 @@ const createConfig = ({
 
 /**
  * Style Dictionary preprocessor to remove all tokens that start with "color-scheme-".
+ *
  * This is used to create a default color scheme configuration.
  *
  * Register with:
-    StyleDictionary.registerPreprocessor({
-     name: 'color-scheme-default',
-     preprocessor: colorSchemeDefaultPreprocessor,
-   });
- *
- * @param {DesignTokens} dictionary
- * @returns {DesignTokens} dictionary
+ * StyleDictionary.registerPreprocessor(colorSchemeDefaultPreprocessor);
  */
-const colorSchemeDefaultPreprocessor = (dictionary) => {
-  const clonedDictionary = structuredClone(dictionary);
-  // Delete all keys that start with "color-scheme-"
-  Object.keys(clonedDictionary).forEach((key) => {
-    if (key.startsWith('color-scheme-')) {
-      delete clonedDictionary[key];
-    }
-  });
-  return clonedDictionary;
+const colorSchemeDefaultPreprocessor = {
+  name: 'color-scheme-default',
+  preprocessor(dictionary) {
+    Object.keys(dictionary).forEach((key) => {
+      if (key.startsWith('color-scheme-')) {
+        /* eslint-disable-next-line @typescript-eslint/no-dynamic-delete */
+        delete dictionary[key];
+      }
+    });
+
+    return dictionary;
+  },
 };
 
 /**
@@ -255,23 +253,20 @@ const colorSchemeDefaultPreprocessor = (dictionary) => {
  * This is used to create a dark color scheme configuration.
  *
  * Register with:
-    StyleDictionary.registerPreprocessor({
-     name: 'color-scheme-dark',
-     preprocessor: colorSchemeDarkPreprocessor,
-   });
- *
- * @param {DesignTokens} dictionary
- * @returns {DesignTokens} dictionary
+ * StyleDictionary.registerPreprocessor(colorSchemeDarkPreprocessor);
  */
-const colorSchemeDarkPreprocessor = (dictionary) => {
-  const clonedDictionary = structuredClone(dictionary);
-  // Include only tokens that belong to the "color-scheme-dark" tokenset
-  Object.keys(clonedDictionary).forEach((key) => {
-    if (!key.startsWith('color-scheme-dark/')) {
-      delete clonedDictionary[key];
-    }
-  });
-  return clonedDictionary;
+const colorSchemeDarkPreprocessor = {
+  name: 'color-scheme-dark',
+  preprocessor(dictionary) {
+    Object.keys(dictionary).forEach((key) => {
+      if (!key.startsWith('color-scheme-dark/')) {
+        /* eslint-disable-next-line @typescript-eslint/no-dynamic-delete */
+        delete dictionary[key];
+      }
+    });
+
+    return dictionary;
+  },
 };
 
 module.exports = { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor };
