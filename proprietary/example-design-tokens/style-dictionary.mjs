@@ -25,22 +25,6 @@ const build = async () => {
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
-
-  sd = new StyleDictionary({
-    ...createConfig({
-      className: `${themeConfig.prefix}-theme--color-scheme-dark`,
-      buildPath: 'dist/color-scheme-dark/',
-    }),
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: [
-      '../../packages/basis-design-tokens/figma/**/*.tokens.json',
-      'src/color-scheme-dark/tokens.json',
-      'src/color-scheme-dark/*.tokens.json',
-    ],
-  });
-
-  await sd.cleanAllPlatforms();
-  await sd.buildAllPlatforms();
 };
 
 build();
