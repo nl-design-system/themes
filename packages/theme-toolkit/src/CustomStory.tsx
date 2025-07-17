@@ -6,7 +6,7 @@ import { clsx } from 'clsx';
 const Canvas = ({ className, children }: PropsWithChildren<{ className?: string }>) => {
   return (
     <Document
-      className={clsx(className, 'utrecht-document--surface')}
+      className={clsx(className)}
       style={{
         borderRadius: '4px',
         border: '1px solid rgba(0, 0, 0, 0.1)',
@@ -18,7 +18,8 @@ const Canvas = ({ className, children }: PropsWithChildren<{ className?: string 
         // Since there is not yet an accepted method of changing the background color of the document in basis thema,
         // this is the solution we decided on as kernteam, which is to use the basis-color-default-bg-document token.
         // This will support changing the background color in the stories according to color-scheme.
-        backgroundColor: 'var(--basis-color-default-bg-document)',
+        // With a fallback to the Utrecht document background color, for those who do not use the basis theme.
+        backgroundColor: 'var(--basis-color-default-bg-document, var(--utrecht-document-background-color))',
       }}
     >
       {children}
