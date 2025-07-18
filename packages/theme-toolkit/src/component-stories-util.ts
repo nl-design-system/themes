@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 export const STORY_GROUPS: { [index: string]: string } = {
+  ACTION_GROUP: 'Action Group',
   AVATAR: 'Avatars',
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
