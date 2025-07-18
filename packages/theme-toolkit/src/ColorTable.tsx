@@ -11,6 +11,7 @@ import {
   getColors,
   getColorName,
   getColorGroupName,
+  getColorSubGroupName,
   styleDictionaryRef,
   isColorOrUnknown,
 } from '@nl-design-system-unstable/tokens-lib/src/util';
@@ -64,7 +65,7 @@ export interface ColorTableProps<T extends StyleDictionaryDesignToken = StyleDic
 export const ColorTable = <T extends StyleDictionaryDesignToken = StyleDictionaryDesignToken>({
   tokens,
 }: ColorTableProps<T>) => {
-  const { grouped, nonGrouped } = getColors<StyleDictionaryDesignToken>(tokens);
+  const { grouped, subGrouped, nonGrouped } = getColors<StyleDictionaryDesignToken>(tokens);
 
   return (
     <ColorPalette>
@@ -79,6 +80,21 @@ export const ColorTable = <T extends StyleDictionaryDesignToken = StyleDictionar
             return null;
           }
         })}
+      {subGrouped.map((subGroups, subGroupIndex) =>
+        subGroups.map((tokens, groupIndex) => {
+          const colorTokens = tokens.filter(isColorOrUnknown);
+          if (colorTokens.length >= 1 && colorTokens[0]) {
+            const subGroupName = getColorSubGroupName(colorTokens[0]) || '';
+            const groupName = getColorGroupName(colorTokens[0]) || '';
+            const name = `${subGroupName}${subGroupName && groupName ? '.' : ''}${groupName}`;
+            return (
+              <ColorGroupRow key={`subgroup-${subGroupIndex}-${groupIndex}-${name}`} name={name} tokens={colorTokens} />
+            );
+          } else {
+            return null;
+          }
+        }),
+      )}
       {nonGrouped.map((token) => {
         const name = getColorName(token) || '';
         return <ColorRow key={token.path.join('-')} name={name} token={token} />;

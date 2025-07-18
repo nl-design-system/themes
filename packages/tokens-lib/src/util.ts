@@ -84,17 +84,22 @@ export const isColorToken = (arg: DesignToken): boolean => getType(arg) === 'col
 
 export const getColors = <T extends DesignToken = DesignToken>(
   tokens: DesignTokenTree<T> | T[],
-): { grouped: T[][]; nonGrouped: T[] } => {
+): { grouped: T[][]; subGrouped: T[][][]; nonGrouped: T[] } => {
   const grouped: T[][] = isDesignTokenMap(tokens)
     ? Object.values(tokens)
         .filter(isDesignTokenMap)
         .map((map) => Object.values(map))
     : [];
 
+  const subGrouped: T[][][] = grouped
+    .map((group) => group.filter(isDesignTokenMap).map((subgroup) => Object.values(subgroup)))
+    .filter((subgroups) => subgroups.length > 0);
+
   const nonGrouped: T[] = Object.values(tokens).filter((value) => isToken(value));
 
   return {
     grouped,
+    subGrouped,
     nonGrouped,
   };
 };
@@ -105,6 +110,9 @@ export const flattenColorTokens = <T extends DesignToken = DesignToken>(tokens: 
 };
 
 export const getColorGroupName = (token: StyleDictionaryDesignToken) => token.path[token.path.length - 2];
+
+export const getColorSubGroupName = (token: StyleDictionaryDesignToken) =>
+  token.path.length > 2 ? token.path[token.path.length - 3] : '';
 
 export const getColorName = (token: StyleDictionaryDesignToken) => token.path[token.path.length - 1];
 
