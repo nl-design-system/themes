@@ -10,6 +10,9 @@ import {
   Paragraph,
   SkipLink,
   UnorderedList,
+  PageHeader,
+  Grid,
+  LinkList,
 } from '@amsterdam/design-system-react';
 
 export const AMS_COMPONENT_STORIES: ComponentStory[] = [
@@ -208,5 +211,90 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <Breadcrumb.Link href="#">Recyclepunten voor bedrijven</Breadcrumb.Link>
       </Breadcrumb>
     ),
+  },
+  {
+    storyId: 'react-ams-page-header--default',
+    component: 'ams-page-header',
+    group: STORY_GROUPS['PAGE_HEADER'],
+    name: 'Amsterdam Page Header',
+    render: () => {
+      const defaultStoryLinks = [
+        [
+          { href: '#', label: 'Kaart' },
+          { href: '#', label: 'Panoramabeelden' },
+          { href: '#', label: 'Tabellen' },
+          { href: '#', label: 'Catalogus (Beta)' },
+          { href: '#', label: 'Kaarten' },
+          { href: '#', label: 'Datacatalogus' },
+        ],
+        [
+          { href: '#', label: 'Over de organisatie' },
+          { href: '#', label: 'Over het dataplatform' },
+        ],
+        [
+          { href: '#', label: 'Help' },
+          { href: '#', label: 'Contact' },
+        ],
+      ];
+      return (
+        <PageHeader
+          brandName="Data Amsterdam"
+          menuItems={[
+            <PageHeader.MenuLink href="#" key={1} lang="en">
+              English
+            </PageHeader.MenuLink>,
+            <PageHeader.MenuLink fixed href="#" key={2}>
+              Zoeken
+            </PageHeader.MenuLink>,
+          ]}
+        >
+          <Grid paddingVertical="large">
+            <PageHeader.GridCellNarrowWindowOnly span="all">
+              <LinkList>
+                <LinkList.Link href="#" lang="en">
+                  English
+                </LinkList.Link>
+              </LinkList>
+            </PageHeader.GridCellNarrowWindowOnly>
+            <Grid.Cell span={4}>
+              <Heading className="ams-mb-s" level={3}>
+                Onderdelen
+              </Heading>
+              <LinkList>
+                {defaultStoryLinks[0]?.map(({ href, label }) => (
+                  <LinkList.Link href={href} key={label}>
+                    {label}
+                  </LinkList.Link>
+                ))}
+              </LinkList>
+            </Grid.Cell>
+            <Grid.Cell span={4}>
+              <Heading className="ams-mb-s" level={3}>
+                Over ons
+              </Heading>
+              <LinkList>
+                {defaultStoryLinks[1]?.map(({ href, label }) => (
+                  <LinkList.Link href={href} key={label}>
+                    {label}
+                  </LinkList.Link>
+                ))}
+              </LinkList>
+            </Grid.Cell>
+            <Grid.Cell span={4}>
+              <Heading className="ams-mb-s" level={3}>
+                Help
+              </Heading>
+              <LinkList>
+                {defaultStoryLinks[2]?.map(({ href, label }) => (
+                  <LinkList.Link href={href} key={label}>
+                    {label}
+                  </LinkList.Link>
+                ))}
+              </LinkList>
+            </Grid.Cell>
+          </Grid>
+        </PageHeader>
+      );
+    },
   },
 ];
