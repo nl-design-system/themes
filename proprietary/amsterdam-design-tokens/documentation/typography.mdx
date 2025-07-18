@@ -18,11 +18,13 @@ export function kebabToCamel(kebabStr) {
 
 export const settings = {
   heading: {
+    default: false,
     scaleProperties: ["font-weight", "text-wrap"],
     objectProperties: ["font-size", "line-height"],
     variants: {},
   },
   "body-text": {
+    default: "medium (default)",
     scaleProperties: ["font-size", "font-weight", "line-height"],
     objectProperties: ["font-size", "line-height"],
     variants: {
@@ -57,7 +59,9 @@ export const renderScale = (scaleName) => {
     scaleStyle[propKey] = typography[scaleName]?.[property]?.value;
   });
   const sizes = Object.entries(scale);
-  sizes.unshift(["default", {}]);
+  if (settings[scaleName].default) {
+    sizes.unshift([settings[scaleName].default, {}]);
+  }
   return (
     <div>
       {sizes.map(([sizeName, sizeConfig]) => {
