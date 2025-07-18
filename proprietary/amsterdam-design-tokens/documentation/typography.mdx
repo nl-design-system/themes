@@ -38,30 +38,29 @@ export const getTypographyForScale = (scaleName) => {
   const { scaleProperties = [], variants = {} } = settings[scaleName] || {};
   const variantKeys = Object.keys(variants);
   const exceptions = [...scaleProperties, ...variantKeys];
-
-return Object.entries(scaleData).reduce((acc, [key, value]) => {
-if (!exceptions.includes(key)) {
-acc[key] = value;
-}
-return acc;
-}, {});
+  return Object.entries(scaleData).reduce((acc, [key, value]) => {
+    if (!exceptions.includes(key)) {
+      acc[key] = value;
+    }
+    return acc;
+  }, {});
 };
 
 export const renderScale = (scaleName) => {
   const scale = getTypographyForScale(scaleName);
   const { scaleProperties = [], objectProperties = [], variants = {} } = settings[scaleName] || {};
 
-return (
-<div>
-{Object.entries(scale).map(([sizeName, sizeConfig]) => {
-const style = {
-...baseStyle,
-paddingInlineStart: "1.5rem",
-};
-scaleProperties.forEach((property) => {
-const propKey = kebabToCamel(property);
-style[propKey] = typography[scaleName]?.[property]?.value;
-});
+  return (
+    <div>
+      {Object.entries(scale).map(([sizeName, sizeConfig]) => {
+        const style = {
+          ...baseStyle,
+          paddingInlineStart: "1.5rem",
+        };
+        scaleProperties.forEach((property) => {
+          const propKey = kebabToCamel(property);
+          style[propKey] = typography[scaleName]?.[property]?.value;
+        });
 
         objectProperties.forEach((property) => {
           const propKey = kebabToCamel(property);
@@ -108,8 +107,7 @@ style[propKey] = typography[scaleName]?.[property]?.value;
         );
       })}
     </div>
-
-);
+  );
 };
 
 # Typography
