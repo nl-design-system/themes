@@ -29,6 +29,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   ICON: 'Icons',
   CASE_CARD: 'Case Card',
   PAGE_HEADER: 'Page Header',
+  PAGE_FOOTER: 'Page Footer',
 };
 
 export interface ComponentStory {
