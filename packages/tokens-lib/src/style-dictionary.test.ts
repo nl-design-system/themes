@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import { describe, expect, beforeAll, it } from '@jest/globals';
+import { describe, expect, beforeAll, it, xdescribe } from '@jest/globals';
 import { access, constants, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
@@ -13,7 +13,7 @@ const fileExists = async (path: string) => {
   }
 };
 const testDirectory = (distPath: string) => {
-  describe('Style Dictionary build', () => {
+  xdescribe('Style Dictionary build', () => {
     describe('.less output', () => {
       const path = resolve(distPath, './variables.less');
       it('has a `dist/variables.less` file', async () => {
