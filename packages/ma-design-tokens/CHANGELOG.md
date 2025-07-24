@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/ma-design-tokens
 
+## 2.0.0
+
+### Major Changes
+
+- 3e53935: Add ma tokens for ma theme based on start-thema basis tokens.
+
 ## 1.1.0
 
 ### Minor Changes
