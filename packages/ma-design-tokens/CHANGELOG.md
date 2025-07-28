@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/ma-design-tokens
 
+## 2.1.0
+
+### Minor Changes
+
+- 601e026: Tokens van Navigation Bar component van MA zijn toegevoegd aan de JSON.
+
 ## 2.0.0
 
 ### Major Changes
