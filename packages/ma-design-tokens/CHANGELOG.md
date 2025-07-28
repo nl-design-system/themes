@@ -1,5 +1,12 @@
 # @nl-design-system-unstable/ma-design-tokens
 
+## 2.1.1
+
+### Patch Changes
+
+- 5129d29: - Token `ma.navigation-bar.item.border-color` is toegevoegd aan Navigation Bar component.
+  - Token `ma.navigation-bar.item.current.border-block-start-width` is hernoemd naar `ma.navigation-bar.item.border-block-start-width` in Navigation Bar component.
+
 ## 2.1.0
 
 ### Minor Changes
