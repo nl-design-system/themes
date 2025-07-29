@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/ma-design-tokens
 
+## 2.2.0
+
+### Minor Changes
+
+- 393717d: Tokens van Page Footer en Page Header component van MA zijn toegevoegd aan de JSON.
+
 ## 2.1.1
 
 ### Patch Changes
