@@ -12,6 +12,7 @@ import '@nl-design-system-community/nora-design-tokens/src/font.js';
 import '@nl-design-system-community/purmerend-design-tokens/dist/theme.css';
 import '@nl-design-system-community/purmerend-design-tokens/dist/color-scheme-dark/theme.css';
 import '@nl-design-system-community/purmerend-design-tokens/src/font.js';
+import '@nl-design-system-community/zaanstad-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/basis-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/font';
