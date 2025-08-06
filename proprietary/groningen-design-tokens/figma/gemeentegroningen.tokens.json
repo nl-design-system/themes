@@ -14,19 +14,17 @@
           "$type": "color",
           "$value": "#E10019"
         },
+        "lightblue": {
+          "dark": {
+            "$type": "color",
+            "$value": "#055FA5"
+          },
+          "light": {
+            "$type": "color",
+            "$value": "#EBF0FA"
+          }
+        },
         "blue": {
-          "cta": {
-            "$type": "color",
-            "$value": "#0065BD"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#004784"
-          },
-          "link": {
-            "$type": "color",
-            "$value": "#0057A3"
-          },
           "dark": {
             "$type": "color",
             "$value": "#283773"
@@ -34,6 +32,20 @@
           "light": {
             "$type": "color",
             "$value": "#EBE6EB"
+          }
+        },
+        "interactive": {
+          "link": {
+            "$type": "color",
+            "$value": "#0057A3"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{groningen.color.blue.dark}"
+          },
+          "cta": {
+            "$type": "color",
+            "$value": "{groningen.color.lightblue.dark}"
           }
         },
         "grey": {
@@ -103,16 +115,6 @@
               "$value": "#B40013",
               "$description": "Error message description on white background - text color seems to be quite dark"
             }
-          }
-        },
-        "lightblue": {
-          "dark": {
-            "$type": "color",
-            "$value": "#055FA5"
-          },
-          "light": {
-            "$type": "color",
-            "$value": "#EBF0FA"
           }
         },
         "pink": {
@@ -328,35 +330,35 @@
           },
           "border-subtle": {
             "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
+            "$value": "{groningen.color.interactive.cta}"
           },
           "border-default": {
             "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
+            "$value": "{groningen.color.interactive.cta}"
           },
           "border-hover": {
             "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
+            "$value": "{groningen.color.interactive.hover}"
           },
           "border-active": {
             "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
+            "$value": "{groningen.color.interactive.hover}"
           },
           "color-default": {
             "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
+            "$value": "{groningen.color.interactive.cta}"
           },
           "color-hover": {
             "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
+            "$value": "{groningen.color.interactive.hover}"
           },
           "color-active": {
             "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
+            "$value": "{groningen.color.interactive.hover}"
           },
           "color-subtle": {
             "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
+            "$value": "{groningen.color.interactive.cta}"
           },
           "color-document": {
             "$type": "color",
@@ -1066,23 +1068,23 @@
           },
           "bg-subtle": {
             "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
+            "$value": "{groningen.color.interactive.cta}"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
+            "$value": "{groningen.color.interactive.cta}"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
+            "$value": "{groningen.color.interactive.hover}"
           },
           "bg-active": {
             "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
+            "$value": "{groningen.color.interactive.hover}"
           },
           "border-subtle": {
             "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
+            "$value": "{groningen.color.interactive.cta}"
           },
           "border-default": {
             "$type": "color",
@@ -2656,7 +2658,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.form-control.background-color}"
+            "$value": "{basis.form-control.border-color}"
           },
           "border-width": {
             "$type": "dimension",
@@ -4246,7 +4248,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.form-control.focus.border-color}"
+              "$value": "{basis.color.transparent}"
             },
             "border-width": {
               "$type": "dimension",
@@ -8436,7 +8438,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.form-control.focus.border-color}"
+              "$value": "{basis.color.transparent}"
             },
             "border-width": {
               "$type": "dimension",
