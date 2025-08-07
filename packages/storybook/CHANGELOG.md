@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/storybook
 
+## 1.1.0
+
+### Minor Changes
+
+- 33c4a6d: Add Gemeente Zaanstad design tokens.
+
 ## 1.0.0
 
 ### Patch Changes
