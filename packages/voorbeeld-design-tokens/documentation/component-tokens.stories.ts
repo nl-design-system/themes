@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import tokensDefinition from '@nl-design-system-community/design-tokens-definition/dist/list.json';
 import config from '../src/config.json';
 import lightTokens from '../dist/list.json';
-import darkTokens from '../dist/color-scheme-dark/list.json';
+// import darkTokens from '../dist/color-scheme-dark/list.json';
 
 const meta = {
   title: 'Voorbeeld Thema',
@@ -29,10 +29,10 @@ export const ComponentTokensLightMode: Story = {
   },
 };
 
-export const ComponentTokensDarkMode: Story = {
-  name: 'Component Tokens (color-scheme: dark)',
-  args: {
-    theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
-    tokens: darkTokens,
-  },
-};
+// export const ComponentTokensDarkMode: Story = {
+//   name: 'Component Tokens (color-scheme: dark)',
+//   args: {
+//     theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
+//     tokens: darkTokens,
+//   },
+// };
