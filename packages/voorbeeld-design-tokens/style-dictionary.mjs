@@ -2,29 +2,51 @@ import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
-import { createConfig } from '../../style-dictionary-config.js';
+import {
+  createConfig,
+  colorSchemeDarkPreprocessor,
+  colorSchemeDefaultPreprocessor,
+} from '../../style-dictionary-config.js';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
+
   StyleDictionary.registerPreprocessor({
     name: 'dtcg-delegate',
     preprocessor: typeDtcgDelegate,
   });
 
+  StyleDictionary.registerPreprocessor(colorSchemeDefaultPreprocessor);
+
+  StyleDictionary.registerPreprocessor(colorSchemeDarkPreprocessor);
+
   register(StyleDictionary, {
     excludeParentKeys: true,
   });
 
-  const sd = new StyleDictionary({
+  let sd = new StyleDictionary({
     ...createConfig({
-      selector: `.${themeConfig.prefix}-theme`,
+      className: `${themeConfig.prefix}-theme`,
     }),
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: ['figma/**/*.tokens.json'],
+    preprocessors: [colorSchemeDefaultPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
+    source: ['figma/tokens.json', 'figma/*.tokens.json'],
   });
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
+
+  // color scheme dark. Turned off for now, as a bug needs to be fixed for this, which shouldn't block the current PR.
+  // let sdDark = new StyleDictionary({
+  //   ...createConfig({
+  //     className: `${themeConfig.prefix}-theme--color-scheme-dark`,
+  //     buildPath: 'dist/color-scheme-dark/',
+  //   }),
+  //   preprocessors: [colorSchemeDarkPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
+  //   source: ['figma/tokens.json', 'figma/*.tokens.json'],
+  // });
+
+  // await sdDark.cleanAllPlatforms();
+  // await sdDark.buildAllPlatforms();
 };
 
 build();
