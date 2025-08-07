@@ -35,18 +35,18 @@ const build = async () => {
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
 
-  // color scheme dark
-  let sdDark = new StyleDictionary({
-    ...createConfig({
-      className: `${themeConfig.prefix}-theme--color-scheme-dark`,
-      buildPath: 'dist/color-scheme-dark/',
-    }),
-    preprocessors: [colorSchemeDarkPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
-    source: ['figma/tokens.json', 'figma/*.tokens.json'],
-  });
+  // color scheme dark. Turned off for now, as a bug needs to be fixed for this, which shouldn't block the current PR.
+  // let sdDark = new StyleDictionary({
+  //   ...createConfig({
+  //     className: `${themeConfig.prefix}-theme--color-scheme-dark`,
+  //     buildPath: 'dist/color-scheme-dark/',
+  //   }),
+  //   preprocessors: [colorSchemeDarkPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
+  //   source: ['figma/tokens.json', 'figma/*.tokens.json'],
+  // });
 
-  await sdDark.cleanAllPlatforms();
-  await sdDark.buildAllPlatforms();
+  // await sdDark.cleanAllPlatforms();
+  // await sdDark.buildAllPlatforms();
 };
 
 build();
