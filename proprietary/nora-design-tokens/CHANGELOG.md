@@ -1,5 +1,11 @@
 # @nl-design-system-community/nora-design-tokens
 
+## 1.7.2
+
+### Patch Changes
+
+- 35797a7: Verwijder `src/index.scss` in nieuwe stijl themes. Dit bestand was al onbruikbaar gezien het niet-bestaande bestanden importeerde.
+
 ## 1.7.1
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @nl-design-system-unstable/ma-design-tokens
 
+## 2.2.1
+
+### Patch Changes
+
+- 35797a7: Verwijder `src/index.scss` in nieuwe stijl themes. Dit bestand was al onbruikbaar gezien het niet-bestaande bestanden importeerde.
+- 9123875: De volgende tokens zijn toegevoegd aan Page Footer component:
+
+  - `ma.page-footer.link.active.color`
+  - `ma.page-footer.link.hover.color`
+  - `ma.page-footer.link.focus-visible.color`
+  - `ma.page-footer.link.focus-visible.background-color`
+
 ## 2.2.0
 
 ### Minor Changes
