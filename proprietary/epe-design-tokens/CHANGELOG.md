@@ -1,5 +1,13 @@
 # @nl-design-system-unstable/epe-design-tokens
 
+## 1.0.2
+
+### Patch Changes
+
+- 35797a7: Verwijder `src/index.scss` in nieuwe stijl themes. Dit bestand was al onbruikbaar gezien het niet-bestaande bestanden importeerde.
+- Updated dependencies [35797a7]
+  - @nl-design-system-unstable/basis-design-tokens@3.0.1
+
 ## 1.0.1
 
 ### Patch Changes

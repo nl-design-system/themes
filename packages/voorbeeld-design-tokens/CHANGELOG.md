@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 5.0.1
+
+### Patch Changes
+
+- 35797a7: Verwijder `src/index.scss` in nieuwe stijl themes. Dit bestand was al onbruikbaar gezien het niet-bestaande bestanden importeerde.
+
 ## 5.0.0
 
 ### Major Changes
