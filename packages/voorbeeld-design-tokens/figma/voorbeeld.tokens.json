@@ -10232,7 +10232,161 @@
       }
     }
   },
-  "components/page-header": {
+  "components/page-header/amsterdam": {
+    "ams": {
+      "page-header": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.3xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "medium": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.5xl}"
+          }
+        },
+        "wide": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "96px"
+          }
+        },
+        "brand-name": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1.color-document}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.xl}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.heading.font-weight}"
+          },
+          "text-wrap": {
+            "$type": "other",
+            "$value": "nowrap",
+            "$description": "[code-only]"
+          }
+        },
+        "logo-link": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.xl}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          }
+        },
+        "mega-menu-button": {
+          "cursor": {
+            "$type": "other",
+            "$value": "default",
+            "$description": "[code-only]"
+          },
+          "label": {
+            "open": {
+              "font-weight": {
+                "$type": "fontWeights",
+                "$value": "{basis.text.font-weight.bold}"
+              }
+            }
+          }
+        },
+        "menu": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.3xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.3xl}"
+          }
+        },
+        "menu-item": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-default}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.color-hover}"
+            }
+          }
+        },
+        "menu-link": {
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "text-decoration-thickness": {
+            "$type": "textDecoration",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "text-underline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "hover": {
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            }
+          }
+        },
+        "navigation": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.4xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.xl}"
+          }
+        }
+      }
+    }
+  },
+  "components/page-header/utrecht": {
     "utrecht": {
       "page-header": {
         "background-color": {
@@ -12372,7 +12526,8 @@
       "components/unordered-list",
       "components/root",
       "components/body",
-      "components/page-header",
+      "components/page-header/amsterdam",
+      "components/page-header/utrecht",
       "components/page-body",
       "components/page-footer/amsterdam",
       "components/page-footer/utrecht",
