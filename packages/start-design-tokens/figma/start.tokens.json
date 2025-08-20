@@ -9992,13 +9992,13 @@
           "$type": "fontFamilies",
           "$value": "{basis.text.font-family.default}"
         },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.xl}"
-        },
         "padding-block": {
           "$type": "dimension",
           "$value": "{basis.space.block.3xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
         },
         "medium": {
           "padding-inline": {
@@ -10010,17 +10010,6 @@
           "padding-inline": {
             "$type": "dimension",
             "$value": "96px"
-          }
-        },
-        "logo-link": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.xl}"
-          },
-          "outline-offset": {
-            "$type": "other",
-            "$value": "auto",
-            "$description": "[code-only]"
           }
         },
         "brand-name": {
@@ -10042,81 +10031,13 @@
             "$description": "[code-only]"
           }
         },
-        "navigation": {
+        "logo-link": {
           "column-gap": {
             "$type": "dimension",
-            "$value": "{basis.space.column.4xl}"
-          },
-          "row-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.row.xl}"
-          }
-        },
-        "menu": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.3xl}"
-          },
-          "row-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.row.3xl}"
-          }
-        },
-        "menu-item": {
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.action-1.color-default}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{basis.text.line-height.md}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{basis.text.font-size.md}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.default}"
+            "$value": "{basis.space.column.xl}"
           },
           "outline-offset": {
             "$type": "other",
-            "$value": "auto",
-            "$description": "[code-only]"
-          },
-          "padding-block": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.lg}"
-          },
-          "hover": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.color-hover}"
-            }
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.text.xs}"
-          }
-        },
-        "menu-link": {
-          "text-decoration-line": {
-            "$type": "textDecoration",
-            "$value": "None"
-          },
-          "text-underline-offset": {
-            "$type": "other",
-            "$value": "auto",
-            "$description": "[code-only]"
-          },
-          "hover": {
-            "text-decoration-line": {
-              "$type": "textDecoration",
-              "$value": "underline"
-            }
-          },
-          "text-decoration-thickness": {
-            "$type": "textDecoration",
             "$value": "auto",
             "$description": "[code-only]"
           }
@@ -10134,6 +10055,85 @@
                 "$value": "{basis.text.font-weight.bold}"
               }
             }
+          }
+        },
+        "menu": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.3xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.3xl}"
+          }
+        },
+        "menu-item": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-default}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.color-hover}"
+            }
+          }
+        },
+        "menu-link": {
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "text-decoration-thickness": {
+            "$type": "textDecoration",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "text-underline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "hover": {
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            }
+          }
+        },
+        "navigation": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.4xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.xl}"
           }
         }
       }
