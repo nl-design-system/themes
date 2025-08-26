@@ -5876,9 +5876,24 @@
   "components/icon": {
     "utrecht": {
       "icon": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "inset-block-start": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
         "size": {
           "$type": "dimension",
           "$value": "{basis.size.icon.md}"
+        },
+        "baseline": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0px",
+            "$description": "[code-only]"
+          }
         }
       }
     }
