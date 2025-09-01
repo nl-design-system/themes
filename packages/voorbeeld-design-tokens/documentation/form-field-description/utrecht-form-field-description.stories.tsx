@@ -8,7 +8,7 @@ const meta = {
   parameters: { actions: { disable: true } },
   args: {
     id: null,
-    children: '',
+    children: 'Dit is een verplicht veld en mag niet leeg blijven.',
     status: '',
     distanced: false,
   },
