@@ -1,5 +1,13 @@
 # @nl-design-system-unstable/ma-design-tokens
 
+## 2.3.0
+
+### Minor Changes
+
+- 7f2110a: Tokens van Banner component van MA zijn toegevoegd aan de JSON.
+- cd0c235: Tokens van Card as Link component van MA zijn toegevoegd aan de JSON.
+- b114c94: Tokens van Tag component van MA zijn toegevoegd aan de JSON.
+
 ## 2.2.1
 
 ### Patch Changes
