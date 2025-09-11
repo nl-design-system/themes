@@ -1,5 +1,31 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 5.2.0
+
+### Minor Changes
+
+- 85132d1: De volgende tokens zijn hernoemd in Action Group component:
+
+  - `utrecht.button-group.background-color` naar `utrecht.action-group.background-color`
+  - `utrecht.button-group.column-gap` naar `utrecht.action-group.column-gap`
+  - `utrecht.button-group.padding-block-end` naar `utrecht.action-group.padding-block-end`
+  - `utrecht.button-group.padding-block-start` naar `utrecht.action-group.padding-block-start`
+  - `utrecht.button-group.row-gap` naar `utrecht.action-group.row-gap`
+
+- 7a1df20: De description van de volgende tokens zijn gewijzigd:
+
+  - `nl.link.color` description `[code-only]` verwijderd.
+  - `nl.link.text-decoration-color` description `[code-only]` toegevoegd.
+
+- 7911fd5: Token `ams.image.aspect-ratio` is toegevoegd aan Image component.
+- b5e113b: De waarde van de volgende tokens zijn gewijzigd:
+
+  - `utrecht.spotlight-section.border-width` naar `0px`.
+  - `utrecht.spotlight-section.info.border-width` naar component token `utrecht.spotlight-section.border-width`.
+  - `utrecht.spotlight-section.error.border-width` naar component token `utrecht.spotlight-section.border-width`.
+  - `utrecht.spotlight-section.ok.border-width` naar component token `utrecht.spotlight-section.border-width`.
+  - `utrecht.spotlight-section.warning.border-width` naar component token `utrecht.spotlight-section.border-width`.
+
 ## 5.1.0
 
 ### Minor Changes

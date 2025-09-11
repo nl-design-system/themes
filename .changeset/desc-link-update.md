@@ -1,8 +1,0 @@
----
-"@nl-design-system-unstable/start-design-tokens": minor
----
-
-De description van de volgende tokens zijn gewijzigd:
-
-- `nl.link.color` description `[code-only]` verwijderd.
-- `nl.link.text-decoration-color` description `[code-only]` toegevoegd.
