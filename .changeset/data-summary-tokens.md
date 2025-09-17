@@ -2,7 +2,7 @@
 "@nl-design-system-unstable/start-design-tokens": minor
 ---
 
-De volgende tokens zijn toegevoegd aan Data List component:
+De volgende tokens zijn toegevoegd aan Data Summary component:
 
 - `denhaag.description-list.border-color`
 - `denhaag.description-list.color`
