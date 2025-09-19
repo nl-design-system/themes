@@ -1,5 +1,5 @@
 ---
-"@nl-design-system-unstable/start-design-tokens": minor
+"@nl-design-system-unstable/start-design-tokens": major
 ---
 
 De volgende tokens zijn hernoemd in Side Navigation component:
