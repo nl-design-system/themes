@@ -4,6 +4,7 @@ import {
   Blockquote,
   Breadcrumb,
   Button,
+  Dialog as AlertDialog,
   Heading,
   Link,
   OrderedList,
@@ -394,6 +395,22 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
           </PageFooter.Menu>
         </>
       </PageFooter>
+    ),
+  },
+  {
+    storyId: 'react-ams-alert-dialog--default',
+    component: 'ams-alert-dialog',
+    group: STORY_GROUPS['ALERT_DIALOG'],
+    name: 'Amsterdam Alert Dialog',
+    render: () => (
+      <AlertDialog
+        open={true}
+        id="react-ams-alert-dialog--default"
+        heading="De gegevens zijn opgeslagen"
+        footer={<Button>Sluiten</Button>}
+      >
+        <Paragraph>U ontvangt een bevestiging per e-mail.</Paragraph>
+      </AlertDialog>
     ),
   },
 ];
