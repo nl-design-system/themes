@@ -30,7 +30,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   CASE_CARD: 'Case Card',
   PAGE_HEADER: 'Page Header',
   PAGE_FOOTER: 'Page Footer',
-  ALERT_DIALOG: 'Alert Dialog',
+  MODAL_DIALOG: 'Modal Dialog',
 };
 
 export interface ComponentStory {

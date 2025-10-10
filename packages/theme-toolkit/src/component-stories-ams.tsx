@@ -4,7 +4,7 @@ import {
   Blockquote,
   Breadcrumb,
   Button,
-  Dialog as AlertDialog,
+  Dialog as ModalDialog,
   Heading,
   Link,
   OrderedList,
@@ -398,19 +398,19 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     ),
   },
   {
-    storyId: 'react-ams-alert-dialog--default',
-    component: 'ams-alert-dialog',
-    group: STORY_GROUPS['ALERT_DIALOG'],
-    name: 'Amsterdam Alert Dialog',
+    storyId: 'react-ams-modal-dialog--default',
+    component: 'ams-modal-dialog',
+    group: STORY_GROUPS['MODAL_DIALOG'],
+    name: 'Amsterdam Modal Dialog',
     render: () => (
-      <AlertDialog
+      <ModalDialog
         open={true}
-        id="react-ams-alert-dialog--default"
+        id="react-ams-modal-dialog--default"
         heading="De gegevens zijn opgeslagen"
         footer={<Button>Sluiten</Button>}
       >
         <Paragraph>U ontvangt een bevestiging per e-mail.</Paragraph>
-      </AlertDialog>
+      </ModalDialog>
     ),
   },
 ];

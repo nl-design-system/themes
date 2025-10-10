@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, Paragraph, Dialog as AlertDialog } from '@amsterdam/design-system-react';
+import { Button, Paragraph, Dialog as ModalDialog } from '@amsterdam/design-system-react';
 
 const meta = {
-  id: 'ams-alert-dialog',
-  title: 'Components/Alert Dialog/Amsterdam',
-  component: AlertDialog,
+  id: 'ams-modal-dialog',
+  title: 'Components/Modal Dialog/Amsterdam',
+  component: ModalDialog,
   parameters: { actions: { disable: true } },
   decorators: [
     (Story, { args }) => (
       <>
         <Button
           onClick={() => {
-            AlertDialog.open(`#${args.id}`);
+            ModalDialog.open(`#${args.id}`);
           }}
         >
           Open
@@ -21,20 +21,20 @@ const meta = {
     ),
   ],
   args: {
-    id: 'ams-alert-dialog-default',
+    id: 'ams-modal-dialog-default',
     children: <Paragraph>U ontvangt een bevestiging per e-mail.</Paragraph>,
     heading: 'De gegevens zijn opgeslagen',
     footer: (
       <Button
         onClick={(event) => {
-          return AlertDialog.close(event);
+          return ModalDialog.close(event);
         }}
       >
         Sluiten
       </Button>
     ),
   },
-} satisfies Meta<typeof AlertDialog>;
+} satisfies Meta<typeof ModalDialog>;
 
 export default meta;
 
