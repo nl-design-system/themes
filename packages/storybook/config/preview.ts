@@ -4,6 +4,7 @@ import '@amsterdam/design-system-css/dist/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@gemeente-rotterdam/design-tokens/dist/index.css';
 import '@nl-design-system-community/nora-design-tokens/dist/theme.css';
+import '@lux-design-system/design-tokens/dist/logius/index-theme.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@nl-design-system-community/ma-design-tokens/src/font.js';
 import '@nl-design-system-community/ma-design-tokens/dist/theme.css';
