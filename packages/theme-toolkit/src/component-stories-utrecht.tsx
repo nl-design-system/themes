@@ -1716,6 +1716,54 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
   },
   {
+    storyId: 'react-utrecht-page-number-navigation--default',
+    component: 'utrecht-page-number-navigation',
+    group: STORY_GROUPS['PAGE_NUMBER_NAVIGATION'],
+    name: 'Utrecht Page Number Navigation',
+    render: () => (
+      <nav className="utrecht-pagination utrecht-pagination--distanced">
+        <span className="utrecht-pagination__before">
+          <span
+            className="utrecht-pagination__relative-link utrecht-pagination__relative-link--disabled utrecht-pagination__relative-link--prev"
+            rel="prev"
+          >
+            Vorige
+          </span>
+        </span>
+        <span role="group" className="utrecht-pagination__pages">
+          <a className="utrecht-pagination__page-link" href="./1">
+            1
+          </a>
+          <a className="utrecht-pagination__page-link" href="./2" rel="prev">
+            2
+          </a>
+          <a
+            className="utrecht-pagination__page-link utrecht-pagination__page-link--current"
+            href="./3"
+            aria-current="true"
+          >
+            3
+          </a>
+          <a className="utrecht-pagination__page-link" href="./4" rel="next">
+            4
+          </a>
+          <a className="utrecht-pagination__page-link" href="./5">
+            5
+          </a>
+        </span>
+        <span className="utrecht-pagination__before">
+          <a
+            href="./2"
+            className="utrecht-pagination__relative-link utrecht-pagination__relative-link--next"
+            rel="next"
+          >
+            Volgende
+          </a>
+        </span>
+      </nav>
+    ),
+  },
+  {
     storyId: 'react-utrecht-textbox--default',
     component: 'utrecht-textbox',
     group: STORY_GROUPS['TEXTBOX'],
