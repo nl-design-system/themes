@@ -4,6 +4,7 @@ import {
   Blockquote,
   Breadcrumb,
   Button,
+  Dialog as ModalDialog,
   Heading,
   Link,
   OrderedList,
@@ -394,6 +395,22 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
           </PageFooter.Menu>
         </>
       </PageFooter>
+    ),
+  },
+  {
+    storyId: 'react-ams-modal-dialog--default',
+    component: 'ams-modal-dialog',
+    group: STORY_GROUPS['MODAL_DIALOG'],
+    name: 'Amsterdam Modal Dialog',
+    render: () => (
+      <ModalDialog
+        open={true}
+        id="react-ams-modal-dialog--default"
+        heading="De gegevens zijn opgeslagen"
+        footer={<Button>Sluiten</Button>}
+      >
+        <Paragraph>U ontvangt een bevestiging per e-mail.</Paragraph>
+      </ModalDialog>
     ),
   },
 ];
