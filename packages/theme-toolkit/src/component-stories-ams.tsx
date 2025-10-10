@@ -5,6 +5,7 @@ import {
   Breadcrumb,
   Button,
   Dialog as ModalDialog,
+  Card as CardAsLink,
   Heading,
   Link,
   OrderedList,
@@ -229,6 +230,24 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <Breadcrumb.Link href="#">Bedrijfsafval</Breadcrumb.Link>
         <Breadcrumb.Link href="#">Recyclepunten voor bedrijven</Breadcrumb.Link>
       </Breadcrumb>
+    ),
+  },
+  {
+    storyId: 'react-ams-card-as-link--default',
+    component: 'ams-card-as-link',
+    group: STORY_GROUPS['CARD_AS_LINK'],
+    name: 'Amsterdam Card As Link',
+    render: () => (
+      <CardAsLink
+        style={{
+          maxWidth: '24rem',
+        }}
+      >
+        <CardAsLink.Heading level={2}>
+          <CardAsLink.Link href="/">Parkeren + Reizen (P+R)</CardAsLink.Link>
+        </CardAsLink.Heading>
+        <Paragraph>U kunt met uw auto goedkoop parkeren bij een P+R-locatie aan de rand van de stad.</Paragraph>
+      </CardAsLink>
     ),
   },
   {
