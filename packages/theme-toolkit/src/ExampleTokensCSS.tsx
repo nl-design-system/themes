@@ -102,7 +102,7 @@ export const ExampleTokensCSS = ({ definition }: ExampleTokensCSSProps) => {
       </p>
       <p>
         Combine the design tokens CSS with our{' '}
-        <a href="https://npmjs.com/package/@utrecht/component-library-css">CSS component library pacakge on npm</a>, and
+        <a href="https://npmjs.com/package/@utrecht/component-library-css">CSS component library package on npm</a>, and
         you should be able to quickly and easily create a web page with our components and your own design.
       </p>
       <div>
