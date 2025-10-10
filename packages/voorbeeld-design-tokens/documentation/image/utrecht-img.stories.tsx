@@ -2,15 +2,16 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Image } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
+  id: 'utrecht-image',
   title: 'Components/Image/Utrecht',
-  id: 'utrecht-img',
   component: Image,
+  parameters: { actions: { disable: true } },
   args: {
-    alt: 'Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor',
-    height: 1536,
+    alt: 'Utrecht stadskantoor',
+    height: 830,
     photo: true,
-    src: '/images/photo-nijntje-vuelta.jpg',
-    width: 2048,
+    src: '/images/stadskantoor.jpg',
+    width: 1040,
   },
 } satisfies Meta<typeof Image>;
 
@@ -23,6 +24,7 @@ export const VoorbeeldTheme: Story = {
     theme: 'voorbeeld-theme',
   },
 };
+
 export const UtrechtTheme: Story = {
   name: 'Utrecht theme',
   parameters: {

@@ -31,6 +31,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   PAGE_HEADER: 'Page Header',
   PAGE_FOOTER: 'Page Footer',
   MODAL_DIALOG: 'Modal Dialog',
+  IMAGE: 'Image',
 };
 
 export interface ComponentStory {

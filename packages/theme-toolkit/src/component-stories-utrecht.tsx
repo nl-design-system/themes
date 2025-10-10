@@ -61,6 +61,7 @@ import {
   FormFieldErrorMessage,
   LinkList,
   Icon,
+  Image,
   ButtonGroup as ActionGroup,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
@@ -3146,6 +3147,16 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <Button appearance="primary-action-button">Opslaan en doorgaan</Button>
         <Button appearance="secondary-action-button">Annuleren</Button>
       </ActionGroup>
+    ),
+  },
+
+  {
+    storyId: 'react-utrecht-image--default',
+    component: 'utrecht-image',
+    group: STORY_GROUPS['IMAGE'],
+    name: 'Utrecht Image',
+    render: () => (
+      <Image alt="Utrecht stadskantoor" height={830} photo={true} src="/images/stadskantoor.jpg" width={1040} />
     ),
   },
 ];
