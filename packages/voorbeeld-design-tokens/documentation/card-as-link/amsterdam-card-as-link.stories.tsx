@@ -26,13 +26,11 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 
-// Een story met het voorbeeld thema
 export const VoorbeeldTheme: Story = {
   name: 'Voorbeeld theme',
   parameters: { theme: 'voorbeeld-theme' },
 };
 
-// Een story met het thema van Amsterdam
 export const AmsterdamTheme: Story = {
   name: 'Amsterdam theme',
   parameters: { theme: 'ams-theme' },
