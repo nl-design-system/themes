@@ -6,6 +6,8 @@ import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
 import '@gemeente-denhaag/card/index.css';
 import { Status } from '@gemeente-denhaag/process-steps';
+import '@gemeente-denhaag/descriptionlist/index.css';
+import { DescriptionList } from '@gemeente-denhaag/descriptionlist';
 // eslint-disable-next-line no-unused-vars
 
 export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
@@ -116,6 +118,30 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CASE_CARD'],
     name: 'Den Haag Case Card',
     render: () => <CaseCard title={'Aanvraag subsidie geluidsisolatie'} context={'17 oktober 2022'} href={'#'} />,
+  },
+  {
+    storyId: 'denhaag-descriptionlist--default',
+    component: 'denhaag-description-list',
+    group: STORY_GROUPS['DATA_SUMMARY'],
+    name: 'Den Haag Description List',
+    render: () => (
+      <DescriptionList
+        items={[
+          {
+            detail: 'A large feline inhabiting Bodmin Moor.',
+            title: 'Beast of Bodmin',
+          },
+          {
+            detail: 'A sea serpent.',
+            title: 'Morgawr',
+          },
+          {
+            detail: 'A giant owl-like creature.',
+            title: 'Owlman',
+          },
+        ]}
+      />
+    ),
   },
   // {
   //   storyId: 'denhaag-process-steps--default',
