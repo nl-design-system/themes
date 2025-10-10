@@ -3155,6 +3155,8 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     component: 'utrecht-image',
     group: STORY_GROUPS['IMAGE'],
     name: 'Utrecht Image',
-    render: () => <Image width="600px" height="600px" />,
+    render: () => (
+      <Image alt="Utrecht stadskantoor" height={830} photo={true} src="/images/stadskantoor.jpg" width={1040} />
+    ),
   },
 ];
