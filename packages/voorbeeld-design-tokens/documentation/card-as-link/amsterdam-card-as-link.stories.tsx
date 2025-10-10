@@ -3,8 +3,8 @@ import { Paragraph } from '@amsterdam/design-system-react';
 import { Card as CardAsLink } from '@amsterdam/design-system-react';
 
 const meta = {
-  id: 'amsterdam-card-as-link',
-  title: 'Components/Card As Link/Amsterdam',
+  id: 'ams-card-as-link',
+  title: 'Components/Card as Link/Amsterdam',
   component: CardAsLink,
   parameters: { actions: { disable: true } },
   args: {},
