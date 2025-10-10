@@ -233,7 +233,7 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     ),
   },
   {
-    storyId: 'react-ams-card-as-link--default',
+    storyId: 'react-ams-card-as-link',
     component: 'ams-card-as-link',
     group: STORY_GROUPS['CARD_AS_LINK'],
     name: 'Amsterdam Card as Link',
