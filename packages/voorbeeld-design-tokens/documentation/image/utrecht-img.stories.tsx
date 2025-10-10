@@ -8,10 +8,10 @@ const meta = {
   parameters: { actions: { disable: true } },
   args: {
     alt: 'Utrecht stadskantoor',
-    height: 900,
+    height: 830,
     photo: true,
     src: '/images/stadskantoor.jpg',
-    width: 1600,
+    width: 1040,
   },
 } satisfies Meta<typeof Image>;
 
