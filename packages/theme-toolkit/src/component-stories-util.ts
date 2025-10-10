@@ -6,6 +6,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
   BUTTON_LINK_DEFAULT: 'Link that looks like a button',
+  CARD_AS_LINK: 'Card as Link',
   CHECKBOX: 'Checkbox',
   RADIO_BUTTON: 'Radio Button',
   LINK_BUTTON_DEFAULT: 'Button that looks like a link',
