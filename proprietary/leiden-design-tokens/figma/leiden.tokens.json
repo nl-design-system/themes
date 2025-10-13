@@ -224,39 +224,35 @@
         }
       },
       "font-weight": {
-        "heading": {
+        "bold": {
           "$type": "fontWeights",
           "$value": "Bold"
         },
-        "hero": {
+        "extra-bold": {
           "$type": "fontWeights",
           "$value": "ExtraBold"
         },
-        "paragraph": {
-          "$type": "fontWeights",
-          "$value": "Regular"
-        },
-        "code": {
+        "regular": {
           "$type": "fontWeights",
           "$value": "Regular"
         }
       },
       "fonts": {
-        "paragraph": {
+        "secundary": {
           "$type": "fontFamilies",
           "$value": "Open Sans, Sans Serif"
         },
-        "code": {
+        "tertiary": {
           "$type": "fontFamilies",
           "$value": "IBM Plex Mono, Sans Serif"
         },
-        "heading": {
+        "primairy": {
           "$type": "fontFamilies",
           "$value": "Poppins, Sans Serif"
         }
       },
       "line-height": {
-        "XL": {
+        "more-space": {
           "$type": "lineHeights",
           "$value": "175%"
         }
@@ -269,21 +265,21 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "{leiden.fonts.paragraph}"
+            "$value": "{leiden.fonts.secundary}"
           },
           "monospace": {
             "$type": "fontFamilies",
-            "$value": "{leiden.fonts.code}"
+            "$value": "{leiden.fonts.tertiary}"
           }
         },
         "font-weight": {
           "default": {
             "$type": "fontWeights",
-            "$value": "{leiden.font-weight.paragraph}"
+            "$value": "{leiden.font-weight.regular}"
           },
           "bold": {
             "$type": "fontWeights",
-            "$value": "{leiden.font-weight.heading}"
+            "$value": "{leiden.font-weight.bold}"
           }
         },
         "font-size": {
@@ -323,27 +319,31 @@
           },
           "md": {
             "$type": "lineHeights",
-            "$value": "{leiden.line-height.XL}"
+            "$value": "150%"
           },
           "lg": {
             "$type": "lineHeights",
-            "$value": "125%"
+            "$value": "150%"
           },
           "xl": {
             "$type": "lineHeights",
-            "$value": "125%"
+            "$value": "150%"
           },
           "2xl": {
             "$type": "lineHeights",
-            "$value": "125%"
+            "$value": "150%"
           },
           "3xl": {
             "$type": "lineHeights",
-            "$value": "125%"
+            "$value": "150%"
           },
           "4xl": {
             "$type": "lineHeights",
-            "$value": "110%"
+            "$value": "125%"
+          },
+          "more-space": {
+            "$type": "lineHeights",
+            "$value": "175%"
           }
         }
       },
@@ -2662,7 +2662,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "4px"
         },
         "border-width": {
           "$type": "dimension",
@@ -2680,7 +2680,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{leiden.fonts.paragraph}"
+          "$value": "{leiden.fonts.secundary}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -2688,7 +2688,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{leiden.font-weight.code}"
+          "$value": "{leiden.font-weight.regular}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -2834,11 +2834,11 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{leiden.fonts.heading}"
+          "$value": "{leiden.fonts.primairy}"
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{leiden.font-weight.heading}"
+          "$value": "{leiden.font-weight.bold}"
         }
       },
       "page": {
@@ -3432,6 +3432,14 @@
             "$type": "fontSizes",
             "$value": "{basis.text.font-size.xl}"
           }
+        }
+      }
+    },
+    "leiden": {
+      "blockquote": {
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.more-space}"
         }
       }
     }
@@ -4285,7 +4293,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.form-control.border-radius}"
         },
         "border-width": {
           "$type": "dimension",
@@ -4641,7 +4649,7 @@
         },
         "line-height": {
           "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
+          "$value": "{basis.text.line-height.more-space}"
         },
         "padding-block": {
           "$type": "dimension",
@@ -7365,7 +7373,7 @@
           },
           "border-radius": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.form-control.border-radius}"
           },
           "border-width": {
             "$type": "dimension",
@@ -7439,7 +7447,7 @@
           },
           "border-radius": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.form-control.border-radius}"
           },
           "border-width": {
             "$type": "dimension",
@@ -7861,7 +7869,7 @@
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "{basis.text.line-height.md}"
+            "$value": "{basis.text.line-height.more-space}"
           },
           "margin-block-end": {
             "$type": "dimension",
