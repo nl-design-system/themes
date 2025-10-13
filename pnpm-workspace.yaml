@@ -7,6 +7,11 @@ autoInstallPeers: false
 
 engineStrict: true
 
+# Configure pnpm so it only installs package versions that have been published on the npm registry for at least 24 hours
+# (1440 minutes). This helps mitigate the risk of supply chain attacks by avoiding newly published, potentially
+# malicious versions. Keep this in sync with npm-check-updates's `cooldown` configuration.
+minimumReleaseAge: 1440
+
 saveExact: true
 
 savePrefix: ""
