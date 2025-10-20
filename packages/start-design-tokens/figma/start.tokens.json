@@ -3405,7 +3405,252 @@
       }
     }
   },
-  "components/button": {
+  "components/button/nl": {
+    "nl": {
+      "button": {
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.md}"
+        },
+        "border-width": {
+          "$type": "borderWidth",
+          "$value": "{basis.border-width.sm}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.xs}"
+        },
+        "font-familly": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.bold}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-inline-size}"
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.lg}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.lg}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.focus.background-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.focus.color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
+          }
+        },
+        "primary": {
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{basis.border-width.sm}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.bold}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.color-default}"
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.bg-active}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.color-active}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.bg-default}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.border-subtle}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.bg-hover}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.color-hover}"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.bg-active}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.color-active}"
+            }
+          },
+          "positive": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.positive-inverse.bg-default}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.positive-inverse.color-default}"
+            },
+            "active": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.positive-inverse.bg-active}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.positive-inverse.color-active}"
+              }
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.positive-inverse.bg-hover}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.positive-inverse.color-hover}"
+              }
+            },
+            "pressed": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.positive-inverse.bg-active}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.positive-inverse.color-active}"
+              }
+            }
+          },
+          "negative": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.negative-inverse.bg-default}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.negative-inverse.color-default}"
+            },
+            "active": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.negative-inverse.bg-active}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.negative-inverse.color-active}"
+              }
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.negative-inverse.bg-hover}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.negative-inverse.color-hover}"
+              }
+            },
+            "pressed": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.negative-inverse.bg-active}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.negative-inverse.color-active}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/button/utrecht": {
     "utrecht": {
       "button": {
         "background-color": {
@@ -12722,7 +12967,8 @@
       "components/blockquote",
       "components/breadcrumb-nav/utrecht",
       "components/breadcrumb-nav/todo",
-      "components/button",
+      "components/button/nl",
+      "components/button/utrecht",
       "components/card-as-link",
       "components/case-card",
       "components/checkbox",
