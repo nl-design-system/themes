@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Code } from '@nl-design-system-candidate/code-react';
-import '@nl-design-system-candidate/code-react/css';
+import { Code } from '@nl-design-system-candidate/code-react/css';
 
 const meta = {
   id: 'nl-code',
