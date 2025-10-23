@@ -3486,10 +3486,6 @@
           }
         },
         "primary": {
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.action-1-inverse.color-default}"
-          },
           "border-color": {
             "$type": "color",
             "$value": "{basis.color.transparent}"
@@ -3497,6 +3493,10 @@
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.action-1-inverse.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.color-default}"
           },
           "border-width": {
             "$type": "borderWidth",
@@ -3559,15 +3559,15 @@
           "pressed": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-active}"
+              "$value": "{basis.color.action-1.bg-active}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "{basis.color.action-1.border-active}"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-active}"
+              "$value": "{basis.color.action-1.color-active}"
             }
           },
           "positive": {
@@ -3614,15 +3614,15 @@
             "pressed": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.positive-inverse.bg-active}"
+                "$value": "{basis.color.positive.bg-active}"
               },
               "border-color": {
                 "$type": "color",
-                "$value": "{basis.color.transparent}"
+                "$value": "{basis.color.positive.border-active}"
               },
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.positive-inverse.color-active}"
+                "$value": "{basis.color.positive.color-active}"
               }
             }
           },
@@ -3670,15 +3670,15 @@
             "pressed": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.negative-inverse.bg-active}"
+                "$value": "{basis.color.negative.bg-active}"
               },
               "border-color": {
                 "$type": "color",
-                "$value": "{basis.color.transparent}"
+                "$value": "{basis.color.negative.border-active}"
               },
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.negative-inverse.color-active}"
+                "$value": "{basis.color.negative.color-active}"
               }
             }
           }
@@ -3757,15 +3757,15 @@
           "pressed": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.bg-active}"
+              "$value": "{basis.color.action-1-inverse.bg-active}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.border-active}"
+              "$value": "{basis.color.transparent}"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.color-active}"
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           },
           "positive": {
@@ -3812,15 +3812,15 @@
             "pressed": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.positive.bg-active}"
+                "$value": "{basis.color.positive-inverse.bg-active}"
               },
               "border-color": {
                 "$type": "color",
-                "$value": "{basis.color.positive.border-active}"
+                "$value": "{basis.color.transparent}"
               },
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.positive.color-active}"
+                "$value": "{basis.color.positive-inverse.color-active}"
               }
             }
           },
@@ -3868,15 +3868,15 @@
             "pressed": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.negative.bg-active}"
+                "$value": "{basis.color.negative-inverse.bg-active}"
               },
               "border-color": {
                 "$type": "color",
-                "$value": "{basis.color.negative.border-active}"
+                "$value": "{basis.color.transparent}"
               },
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.negative.color-active}"
+                "$value": "{basis.color.negative-inverse.color-active}"
               }
             }
           }
@@ -3955,7 +3955,7 @@
           "pressed": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.bg-active}"
+              "$value": "{basis.color.action-1-inverse.bg-active}"
             },
             "border-color": {
               "$type": "color",
@@ -3963,7 +3963,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.color-active}"
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           },
           "positive": {
@@ -4010,7 +4010,7 @@
             "pressed": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.positive.bg-active}"
+                "$value": "{basis.color.positive-inverse.bg-active}"
               },
               "border-color": {
                 "$type": "color",
@@ -4018,7 +4018,7 @@
               },
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.positive.color-active}"
+                "$value": "{basis.color.positive-inverse.color-active}"
               }
             }
           },
@@ -4040,6 +4040,10 @@
                 "$type": "color",
                 "$value": "{basis.color.negative.bg-active}"
               },
+              "border-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
+              },
               "color": {
                 "$type": "color",
                 "$value": "{basis.color.negative.color-active}"
@@ -4050,6 +4054,10 @@
                 "$type": "color",
                 "$value": "{basis.color.negative.bg-hover}"
               },
+              "border-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
+              },
               "color": {
                 "$type": "color",
                 "$value": "{basis.color.negative.color-hover}"
@@ -4058,11 +4066,15 @@
             "pressed": {
               "background-color": {
                 "$type": "color",
-                "$value": "{basis.color.negative.bg-active}"
+                "$value": "{basis.color.negative-inverse.bg-active}"
+              },
+              "border-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
               },
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.negative.color-active}"
+                "$value": "{basis.color.negative-inverse.color-active}"
               }
             }
           }
