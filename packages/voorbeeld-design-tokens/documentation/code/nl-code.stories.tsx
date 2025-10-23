@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Code } from '@nl-design-system-candidate/code-react';
+import '@nl-design-system-candidate/code-react/css';
 
 const meta = {
   id: 'nl-code',
@@ -17,7 +18,7 @@ export const VoorbeeldTheme: Story = {
   parameters: { theme: 'voorbeeld-theme' },
 };
 
-export const BasisTheme: Story = {
-  name: 'Basis theme',
-  parameters: { theme: 'basis-theme' },
+export const StartTheme: Story = {
+  name: 'Start theme',
+  parameters: { theme: 'start-theme' },
 };
