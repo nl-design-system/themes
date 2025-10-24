@@ -38,6 +38,9 @@ importers:
       '@nl-design-system-candidate/code-react':
         specifier: 1.2.5
         version: 1.2.5(@babel/runtime@7.27.4)(react@18.3.1)
+      '@nl-design-system-candidate/color-sample-react':
+        specifier: 1.2.0
+        version: 1.2.0(@babel/runtime@7.27.4)(react@18.3.1)
       '@nl-design-system/component-index':
         specifier: 1.0.0-alpha.30
         version: 1.0.0-alpha.30
@@ -200,7 +203,7 @@ importers:
         version: 3.20.0(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9))
       '@testing-library/react':
         specifier: 15.0.7
         version: 15.0.7(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -692,7 +695,7 @@ importers:
         version: 15.2.3(rollup@4.19.2)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9))
       '@testing-library/react':
         specifier: 15.0.7
         version: 15.0.7(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -980,7 +983,7 @@ importers:
         version: 4.0.1
       ts-jest:
         specifier: 29.2.4
-        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))(typescript@5.5.4)
+        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9))(typescript@5.5.4)
       tsx:
         specifier: 4.17.0
         version: 4.17.0
@@ -1053,7 +1056,7 @@ importers:
         version: 3.20.0(react@18.3.1)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))
+        version: 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9))
       '@types/prop-types':
         specifier: 15.7.12
         version: 15.7.12
@@ -1083,7 +1086,7 @@ importers:
         version: 4.0.1
       ts-jest:
         specifier: 29.2.4
-        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))(typescript@5.5.4)
+        version: 29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9))(typescript@5.5.4)
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@types/node@22.10.9)(typescript@5.5.4)
@@ -3838,6 +3841,12 @@ packages:
 
   '@nl-design-system-candidate/code-react@1.2.5':
     resolution: {integrity: sha512-vVjK62KzbSruH4I37xccBCzKYFeIHvg9pby2mb2Z2lDG5Fi7LtKEKOYASxUlIf/7If0VhM0nIrJ8LUbjz4W0Fw==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/color-sample-react@1.2.0':
+    resolution: {integrity: sha512-WfgoVdLMkjRdbzBoGLV+t7rE9Jox9/omxg9JXuBy2ZYAJC+fcDzbcKI6A7Bkeyo8X9+v9twvHDR+7/Tgyn1GmA==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
@@ -11401,6 +11410,11 @@ snapshots:
       '@babel/runtime': 7.27.4
       react: 18.3.1
 
+  '@nl-design-system-candidate/color-sample-react@1.2.0(@babel/runtime@7.27.4)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.27.4
+      react: 18.3.1
+
   '@nl-design-system/component-index@1.0.0-alpha.30': {}
 
   '@nl-design-system/rollup-config-react-component@1.0.2(@types/babel__core@7.20.5)(postcss@8.4.40)(rollup@4.19.2)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4))(tslib@2.6.2)(typescript@5.5.4)':
@@ -11894,7 +11908,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))':
+  '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@22.10.9))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.25.7
@@ -17857,7 +17871,7 @@ snapshots:
 
   ts-dedent@2.2.0: {}
 
-  ts-jest@29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9)(ts-node@10.9.2(@types/node@22.10.9)(typescript@5.5.4)))(typescript@5.5.4):
+  ts-jest@29.2.4(@babel/core@7.26.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.0))(jest@29.7.0(@types/node@22.10.9))(typescript@5.5.4):
     dependencies:
       bs-logger: 0.2.6
       ejs: 3.1.10
