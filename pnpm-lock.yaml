@@ -41,6 +41,9 @@ importers:
       '@nl-design-system-candidate/color-sample-react':
         specifier: 1.2.0
         version: 1.2.0(@babel/runtime@7.27.4)(react@18.3.1)
+      '@nl-design-system-candidate/data-badge-react':
+        specifier: 1.1.5
+        version: 1.1.5(@babel/runtime@7.27.4)(react@18.3.1)
       '@nl-design-system/component-index':
         specifier: 1.0.0-alpha.30
         version: 1.0.0-alpha.30
@@ -3847,6 +3850,12 @@ packages:
 
   '@nl-design-system-candidate/color-sample-react@1.2.0':
     resolution: {integrity: sha512-WfgoVdLMkjRdbzBoGLV+t7rE9Jox9/omxg9JXuBy2ZYAJC+fcDzbcKI6A7Bkeyo8X9+v9twvHDR+7/Tgyn1GmA==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/data-badge-react@1.1.5':
+    resolution: {integrity: sha512-VTtk2tvGGKurf9S7A1ZzdBUsfbDYjF1zsW9Li40w9eku1S9gQEPf0zIpURMSA3oTiGivRQeTkk7/SVcYhYaHqA==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
@@ -11411,6 +11420,11 @@ snapshots:
       react: 18.3.1
 
   '@nl-design-system-candidate/color-sample-react@1.2.0(@babel/runtime@7.27.4)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.27.4
+      react: 18.3.1
+
+  '@nl-design-system-candidate/data-badge-react@1.1.5(@babel/runtime@7.27.4)(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.27.4
       react: 18.3.1
