@@ -44,6 +44,9 @@ importers:
       '@nl-design-system-candidate/data-badge-react':
         specifier: 1.1.5
         version: 1.1.5(@babel/runtime@7.27.4)(react@18.3.1)
+      '@nl-design-system-candidate/heading-react':
+        specifier: 1.1.5
+        version: 1.1.5(@babel/runtime@7.27.4)(react@18.3.1)
       '@nl-design-system/component-index':
         specifier: 1.0.0-alpha.30
         version: 1.0.0-alpha.30
@@ -3856,6 +3859,12 @@ packages:
 
   '@nl-design-system-candidate/data-badge-react@1.1.5':
     resolution: {integrity: sha512-VTtk2tvGGKurf9S7A1ZzdBUsfbDYjF1zsW9Li40w9eku1S9gQEPf0zIpURMSA3oTiGivRQeTkk7/SVcYhYaHqA==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/heading-react@1.1.5':
+    resolution: {integrity: sha512-nM6Lqiz+CHi+tGgEVl+aHBQwP+JTZg1pNx27chwIL6EMIgH47Z4AzE31IHVi5SyTkNElhmeF5esooClRbnMh0A==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
@@ -11425,6 +11434,11 @@ snapshots:
       react: 18.3.1
 
   '@nl-design-system-candidate/data-badge-react@1.1.5(@babel/runtime@7.27.4)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.27.4
+      react: 18.3.1
+
+  '@nl-design-system-candidate/heading-react@1.1.5(@babel/runtime@7.27.4)(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.27.4
       react: 18.3.1
