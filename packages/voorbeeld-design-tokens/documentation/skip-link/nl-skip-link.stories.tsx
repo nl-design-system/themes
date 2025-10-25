@@ -1,0 +1,40 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { SkipLink } from '@nl-design-system-candidate/skip-link-react/css';
+
+const meta = {
+  title: 'Components/Skip link/Candidate',
+  id: 'nl-skip-link',
+  component: SkipLink,
+  argTypes: {
+    href: {
+      name: 'href',
+      type: { name: 'string', required: true },
+      table: {
+        category: 'HTML attribute',
+        defaultValue: { summary: '' },
+      },
+    },
+  },
+  render: (args) => (
+    <SkipLink className="nl-skip-link--focus nl-skip-link--visible" href="#main" {...args}>
+      Skip to main content
+    </SkipLink>
+  ),
+} satisfies Meta<typeof SkipLink>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: {
+    theme: 'voorbeeld-theme',
+  },
+};
+export const BasisTheme: Story = {
+  name: 'Basis theme',
+  parameters: {
+    theme: 'basis-theme',
+  },
+};
