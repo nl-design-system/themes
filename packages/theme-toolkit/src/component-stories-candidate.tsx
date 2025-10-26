@@ -13,50 +13,103 @@ import { SkipLink } from '@nl-design-system-candidate/skip-link-react/css';
 
 export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   {
-    storyId: 'react-nl-paragraph--default',
-    group: STORY_GROUPS['PARAGRAPH'],
-    name: 'Candidate Paragraph',
-    render: () => (
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
-      </Paragraph>
-    ),
+    storyId: 'react-nl-code--default',
+    name: 'Candidate Code',
+    render: () => <Code>{'<input type="url" value="https://example.fi/">'}</Code>,
     detectTokens: {
       anyOf: [
-        'utrecht.paragraph.color',
-        'utrecht.paragraph.font-size',
-        'utrecht.paragraph.font-family',
-        'utrecht.paragraph.font-weight',
-        'utrecht.paragraph.line-height',
-        'utrecht.paragraph.margin-block-start',
-        'utrecht.paragraph.margin-block-end',
+        'nl.code.color',
+        'nl.code.background-color',
+        'nl.code.font-size',
+        'nl.code.font-family',
+        'nl.code.line-height',
       ],
     },
   },
   {
-    storyId: 'react-nl-paragraph--lead',
-    component: 'nl-paragraph',
-    group: STORY_GROUPS['PARAGRAPH'],
-    name: 'Candidate Lead Paragraph',
+    storyId: 'react-nl-code-block--default',
+    name: 'Candidate Code Block',
     render: () => (
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
-      </Paragraph>
+      <CodeBlock>
+        {`<!DOCTYPE html>
+        <html lang="nl" dir="ltr">
+          <head>
+            <title>NL Design System</title>
+            <meta charset="utf-8"/>
+          </head>
+          <body>
+            <h1>NL Design System</h1>
+          </body>
+        </html>`}
+      </CodeBlock>
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.paragraph.lead.color',
-        'utrecht.paragraph.lead.font-size',
-        'utrecht.paragraph.lead.font-weight',
-        'utrecht.paragraph.lead.line-height',
+        'nl.code-block.font-family',
+        'nl.code-block.background-color',
+        'nl.code-block.color',
+        'nl.code-block.font-size',
+        'nl.code-block.line-height',
+        'nl.code-block.margin-block-start',
+        'nl.code-block.margin-block-end',
+        'nl.code-block.margin-inline-start',
+        'nl.code-block.margin-inline-end',
+        'nl.code-block.padding-block-start',
+        'nl.code-block.padding-block-end',
+        'nl.code-block.padding-inline-start',
+        'nl.code-block.padding-inline-end',
+      ],
+    },
+  },
+  {
+    storyId: 'react-nl-color-sample',
+    name: 'Candidate Color Sample',
+    render: () => <ColorSample value="#007DAD" />,
+    detectTokens: {
+      anyOf: [
+        'nl.color-sample.background-color',
+        'nl.color-sample.border-color',
+        'nl.color-sample.border-width',
+        'nl.color-sample.border-radius',
+        'nl.color-sample.block-size',
+        'nl.color-sample.inline-size',
+      ],
+    },
+  },
+  {
+    storyId: 'react-nl-color-sample-dark',
+    name: 'Candidate Color Sample Dark',
+    render: () => <ColorSample value="#007DAD" />,
+    detectTokens: {
+      anyOf: ['nl.color-sample.dark.border-color'],
+    },
+  },
+  {
+    storyId: 'react-nl-color-sample-light',
+    name: 'Candidate Color Sample Light',
+    render: () => <ColorSample value="#007DAD" />,
+    detectTokens: {
+      anyOf: ['nl.color-sample.light.border-color'],
+    },
+  },
+  {
+    storyId: 'react-nl-data-badge--default',
+    group: STORY_GROUPS['BADGES'],
+    name: 'Candidate Data Badge',
+    render: () => <DataBadge>Category 1</DataBadge>,
+    detectTokens: {
+      anyOf: [
+        'nl.data-badge.color',
+        'nl.data-badge.border-radius',
+        'nl.data-badge.border-width',
+        'nl.data-badge.background-color',
+        'nl.data-badge.font-size',
+        'nl.data-badge.font-weight',
+        'nl.data-badge.line-height',
+        'nl.data-badge.min-block-size',
+        'nl.data-badge.min-inline-size',
+        'nl.data-badge.padding-block',
+        'nl.data-badge.padding-inline',
       ],
     },
   },
@@ -71,7 +124,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       </Heading>
     ),
     detectTokens: {
-      allOf: ['utrecht.heading-1.font-size'],
+      allOf: ['nl.heading-1.font-size'],
     },
   },
   {
@@ -85,7 +138,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       </Heading>
     ),
     detectTokens: {
-      allOf: ['utrecht.heading-2.font-size'],
+      allOf: ['nl.heading-2.font-size'],
     },
   },
   {
@@ -99,7 +152,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       </Heading>
     ),
     detectTokens: {
-      allOf: ['utrecht.heading-3.font-size'],
+      allOf: ['nl.heading-3.font-size'],
     },
   },
   {
@@ -113,7 +166,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       </Heading>
     ),
     detectTokens: {
-      allOf: ['utrecht.heading-4.font-size'],
+      allOf: ['nl.heading-4.font-size'],
     },
   },
   {
@@ -139,30 +192,17 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     ),
   },
   {
-    storyId: 'react-nl-number-badge--default',
-    group: STORY_GROUPS['BADGES'],
-    name: 'Candidate Number Badge',
-    render: () => <NumberBadge>42</NumberBadge>,
-  },
-  {
-    storyId: 'react-nl-data-badge--default',
-    group: STORY_GROUPS['BADGES'],
-    name: 'Candidate Data Badge',
-    render: () => <DataBadge>Category 1</DataBadge>,
+    storyId: 'react-nl-link--active',
+    group: STORY_GROUPS['LINK'],
+    name: 'Candidate Link: Active',
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" target="_new" className="utrecht-link--active">
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
     detectTokens: {
-      anyOf: [
-        'utrecht.data-badge.color',
-        'utrecht.data-badge.border-radius',
-        'utrecht.data-badge.border-width',
-        'utrecht.data-badge.background-color',
-        'utrecht.data-badge.font-size',
-        'utrecht.data-badge.font-weight',
-        'utrecht.data-badge.line-height',
-        'utrecht.data-badge.min-block-size',
-        'utrecht.data-badge.min-inline-size',
-        'utrecht.data-badge.padding-block',
-        'utrecht.data-badge.padding-inline',
-      ],
+      anyOf: ['nl.link.active.color'],
     },
   },
   {
@@ -177,59 +217,11 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.link.color',
-        'utrecht.link.text-decoration',
-        'utrecht.link.text-decoration-thickness',
-        'utrecht.link.text-underline-offset',
+        'nl.link.color',
+        'nl.link.text-decoration',
+        'nl.link.text-decoration-thickness',
+        'nl.link.text-underline-offset',
       ],
-    },
-  },
-  {
-    storyId: 'react-nl-link--active',
-    group: STORY_GROUPS['LINK'],
-    name: 'Candidate Link: Active',
-    inline: true,
-    render: () => (
-      <Link href="https://example.com" target="_new" className="utrecht-link--active">
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Link>
-    ),
-    detectTokens: {
-      anyOf: ['utrecht.link.active.color'],
-    },
-  },
-  {
-    storyId: 'react-nl-link--hover',
-    group: STORY_GROUPS['LINK'],
-    name: 'Candidate Link: Hover',
-    state: true,
-    inline: true,
-    render: () => (
-      <Link href="https://example.com" target="_new" className="utrecht-link--hover">
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Link>
-    ),
-    detectTokens: {
-      anyOf: [
-        'utrecht.link.hover.color',
-        'utrecht.link.hover.text-decoration',
-        'utrecht.link.hover.text-decoration-thickness',
-      ],
-    },
-  },
-  {
-    storyId: 'react-nl-link--placeholder',
-    group: STORY_GROUPS['LINK'],
-    name: 'Candidate Link: Placeholder',
-    state: true,
-    inline: true,
-    render: () => (
-      <Link href="https://example.com" target="_new">
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Link>
-    ),
-    detectTokens: {
-      anyOf: ['utrecht.link.placeholder.color', 'utrecht.link.placeholder.font-weight'],
     },
   },
   {
@@ -245,10 +237,10 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.link.focus.color',
-        'utrecht.link.focus.background-color',
-        'utrecht.link.focus.text-decoration',
-        'utrecht.link.focus.text-decoration-thickness',
+        'nl.link.focus.color',
+        'nl.link.focus.background-color',
+        'nl.link.focus.text-decoration',
+        'nl.link.focus.text-decoration-thickness',
       ],
     },
   },
@@ -264,7 +256,37 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       </Link>
     ),
     detectTokens: {
-      anyOf: ['utrecht.link.focus-visible.text-decoration', 'utrecht.link.focus-visible.text-decoration-thickness'],
+      anyOf: ['nl.link.focus-visible.text-decoration', 'nl.link.focus-visible.text-decoration-thickness'],
+    },
+  },
+  {
+    storyId: 'react-nl-link--hover',
+    group: STORY_GROUPS['LINK'],
+    name: 'Candidate Link: Hover',
+    state: true,
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" target="_new" className="utrecht-link--hover">
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
+    detectTokens: {
+      anyOf: ['nl.link.hover.color', 'nl.link.hover.text-decoration', 'nl.link.hover.text-decoration-thickness'],
+    },
+  },
+  {
+    storyId: 'react-nl-link--placeholder',
+    group: STORY_GROUPS['LINK'],
+    name: 'Candidate Link: Placeholder',
+    state: true,
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" target="_new">
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
+    detectTokens: {
+      anyOf: ['nl.link.placeholder.color', 'nl.link.placeholder.font-weight'],
     },
   },
   {
@@ -279,7 +301,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       </Link>
     ),
     detectTokens: {
-      anyOf: ['utrecht.link.visited.color'],
+      anyOf: ['nl.link.visited.color'],
     },
   },
   {
@@ -287,87 +309,61 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Mark',
     render: () => <Mark>Mark my words!</Mark>,
     detectTokens: {
-      anyOf: ['utrecht.mark.color', 'utrecht.mark.background-color'],
+      anyOf: ['nl.mark.color', 'nl.mark.background-color'],
     },
   },
   {
-    storyId: 'react-nl-code--default',
-    name: 'Candidate Code',
-    render: () => <Code>{'<input type="url" value="https://example.fi/">'}</Code>,
-    detectTokens: {
-      anyOf: [
-        'utrecht.code.color',
-        'utrecht.code.background-color',
-        'utrecht.code.font-size',
-        'utrecht.code.font-family',
-        'utrecht.code.line-height',
-      ],
-    },
+    storyId: 'react-nl-number-badge--default',
+    group: STORY_GROUPS['BADGES'],
+    name: 'Candidate Number Badge',
+    render: () => <NumberBadge>42</NumberBadge>,
   },
   {
-    storyId: 'react-nl-code-block--default',
-    name: 'Candidate Code Block',
+    storyId: 'react-nl-paragraph--default',
+    group: STORY_GROUPS['PARAGRAPH'],
+    name: 'Candidate Paragraph',
     render: () => (
-      <CodeBlock>
-        {`<!DOCTYPE html>
-        <html lang="nl" dir="ltr">
-          <head>
-            <title>NL Design System</title>
-            <meta charset="utf-8"/>
-          </head>
-          <body>
-            <h1>NL Design System</h1>
-          </body>
-        </html>`}
-      </CodeBlock>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </Paragraph>
     ),
     detectTokens: {
       anyOf: [
-        'utrecht.code-block.font-family',
-        'utrecht.code-block.background-color',
-        'utrecht.code-block.color',
-        'utrecht.code-block.font-size',
-        'utrecht.code-block.line-height',
-        'utrecht.code-block.margin-block-start',
-        'utrecht.code-block.margin-block-end',
-        'utrecht.code-block.margin-inline-start',
-        'utrecht.code-block.margin-inline-end',
-        'utrecht.code-block.padding-block-start',
-        'utrecht.code-block.padding-block-end',
-        'utrecht.code-block.padding-inline-start',
-        'utrecht.code-block.padding-inline-end',
+        'nl.paragraph.color',
+        'nl.paragraph.font-size',
+        'nl.paragraph.font-family',
+        'nl.paragraph.font-weight',
+        'nl.paragraph.line-height',
+        'nl.paragraph.margin-block-start',
+        'nl.paragraph.margin-block-end',
       ],
     },
   },
   {
-    storyId: 'react-nl-color-sample',
-    name: 'Candidate Color Sample',
-    render: () => <ColorSample value="#007DAD" />,
+    storyId: 'react-nl-paragraph--lead',
+    component: 'nl-paragraph',
+    group: STORY_GROUPS['PARAGRAPH'],
+    name: 'Candidate Lead Paragraph',
+    render: () => (
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum
+      </Paragraph>
+    ),
     detectTokens: {
       anyOf: [
-        'utrecht.color-sample.background-color',
-        'utrecht.color-sample.border-color',
-        'utrecht.color-sample.border-width',
-        'utrecht.color-sample.border-radius',
-        'utrecht.color-sample.block-size',
-        'utrecht.color-sample.inline-size',
+        'nl.paragraph.lead.color',
+        'nl.paragraph.lead.font-size',
+        'nl.paragraph.lead.font-weight',
+        'nl.paragraph.lead.line-height',
       ],
-    },
-  },
-  {
-    storyId: 'react-nl-color-sample-dark',
-    name: 'Candidate Color Sample Dark',
-    render: () => <ColorSample value="#007DAD" />,
-    detectTokens: {
-      anyOf: ['utrecht.color-sample.dark.border-color'],
-    },
-  },
-  {
-    storyId: 'react-nl-color-sample-light',
-    name: 'Candidate Color Sample Light',
-    render: () => <ColorSample value="#007DAD" />,
-    detectTokens: {
-      anyOf: ['utrecht.color-sample.light.border-color'],
     },
   },
   {
