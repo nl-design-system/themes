@@ -32,9 +32,9 @@ export const VoorbeeldTheme: Story = {
     theme: 'voorbeeld-theme',
   },
 };
-export const BasisTheme: Story = {
-  name: 'Basis theme',
+export const StartTheme: Story = {
+  name: 'Start theme',
   parameters: {
-    theme: 'basis-theme',
+    theme: 'start-theme',
   },
 };

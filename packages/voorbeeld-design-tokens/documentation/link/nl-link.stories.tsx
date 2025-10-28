@@ -88,8 +88,8 @@ export const VoorbeeldTheme: Story = {
   },
 };
 export const BasisTheme: Story = {
-  name: 'Basis theme',
+  name: 'Start theme',
   parameters: {
-    theme: 'basis-theme',
+    theme: 'start-theme',
   },
 };
