@@ -19,7 +19,7 @@ export const VoorbeeldTheme: Story = {
   parameters: { theme: 'voorbeeld-theme' },
 };
 
-export const BasisTheme: Story = {
-  name: 'Basis theme',
-  parameters: { theme: 'basis-theme' },
+export const StartTheme: Story = {
+  name: 'Start theme',
+  parameters: { theme: 'start-theme' },
 };
