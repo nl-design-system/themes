@@ -62,7 +62,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
-    storyId: 'react-nl-color-sample',
+    storyId: 'react-nl-color-sample--default',
     name: 'Candidate Color Sample',
     render: () => <ColorSample value="#007DAD" />,
     detectTokens: {
@@ -74,22 +74,6 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
         'nl.color-sample.block-size',
         'nl.color-sample.inline-size',
       ],
-    },
-  },
-  {
-    storyId: 'react-nl-color-sample-dark',
-    name: 'Candidate Color Sample Dark',
-    render: () => <ColorSample value="#007DAD" />,
-    detectTokens: {
-      anyOf: ['nl.color-sample.dark.border-color'],
-    },
-  },
-  {
-    storyId: 'react-nl-color-sample-light',
-    name: 'Candidate Color Sample Light',
-    render: () => <ColorSample value="#007DAD" />,
-    detectTokens: {
-      anyOf: ['nl.color-sample.light.border-color'],
     },
   },
   {
@@ -118,11 +102,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     component: 'nl-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 1',
-    render: () => (
-      <Heading role="presentation" level={1}>
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Heading>
-    ),
+    render: () => <Heading level={1}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
       allOf: ['nl.heading-1.font-size'],
     },
@@ -132,11 +112,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     component: 'nl-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 2',
-    render: () => (
-      <Heading role="presentation" level={2}>
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Heading>
-    ),
+    render: () => <Heading level={2}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
       allOf: ['nl.heading-2.font-size'],
     },
@@ -146,11 +122,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     component: 'nl-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 3',
-    render: () => (
-      <Heading role="presentation" level={3}>
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Heading>
-    ),
+    render: () => <Heading level={3}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
       allOf: ['nl.heading-3.font-size'],
     },
@@ -160,11 +132,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     component: 'nl-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 4',
-    render: () => (
-      <Heading role="presentation" level={4}>
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Heading>
-    ),
+    render: () => <Heading level={4}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
       allOf: ['nl.heading-4.font-size'],
     },
@@ -174,22 +142,14 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     component: 'nl-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 5',
-    render: () => (
-      <Heading role="presentation" level={5}>
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Heading>
-    ),
+    render: () => <Heading level={5}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
   },
   {
     storyId: 'react-nl-heading--level-6',
     component: 'nl-heading',
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 6',
-    render: () => (
-      <Heading role="presentation" level={6}>
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Heading>
-    ),
+    render: () => <Heading level={6}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
   },
   {
     storyId: 'react-nl-link--active',
@@ -197,7 +157,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Link: Active',
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" className="utrecht-link--active">
+      <Link href="https://example.com" target="_new" className="nl-link--active">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -225,48 +185,13 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
-    storyId: 'react-nl-link--focus',
-    group: STORY_GROUPS['LINK'],
-    name: 'Candidate Link: Focus',
-    state: true,
-    inline: true,
-    render: () => (
-      <Link href="https://example.com" target="_new" className="utrecht-link--focus">
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Link>
-    ),
-    detectTokens: {
-      anyOf: [
-        'nl.link.focus.color',
-        'nl.link.focus.background-color',
-        'nl.link.focus.text-decoration',
-        'nl.link.focus.text-decoration-thickness',
-      ],
-    },
-  },
-  {
-    storyId: 'react-nl-link--focus-visible',
-    group: STORY_GROUPS['LINK'],
-    name: 'Candidate Link: Focus Visible',
-    state: true,
-    inline: true,
-    render: () => (
-      <Link href="https://example.com" target="_new" className="utrecht-link--focus utrecht-link--focus-visible">
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Link>
-    ),
-    detectTokens: {
-      anyOf: ['nl.link.focus-visible.text-decoration', 'nl.link.focus-visible.text-decoration-thickness'],
-    },
-  },
-  {
     storyId: 'react-nl-link--hover',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link: Hover',
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" className="utrecht-link--hover">
+      <Link href="https://example.com" className="nl-link--hover">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -280,11 +205,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Link: Placeholder',
     state: true,
     inline: true,
-    render: () => (
-      <Link href="https://example.com" target="_new">
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Link>
-    ),
+    render: () => <Link href="https://example.com">The Quick Brown Fox Jumps Over The Lazy Dog</Link>,
     detectTokens: {
       anyOf: ['nl.link.placeholder.color', 'nl.link.placeholder.font-weight'],
     },
@@ -296,7 +217,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" className="utrecht-link--visited">
+      <Link href="https://example.com" target="_new" className="nl-link--visited">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
