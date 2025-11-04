@@ -47,6 +47,7 @@ import '@nl-design-system-unstable/noordoostpolder-design-tokens/src/font';
 import '@nl-design-system-unstable/noordwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/noordwijk-design-tokens/src/font';
 import '@nl-design-system-unstable/provincie-zuid-holland-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/start-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tubbergen-design-tokens/dist/index.css';
