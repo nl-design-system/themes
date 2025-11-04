@@ -3,7 +3,7 @@ import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/d
 
 const meta = {
   id: 'utrecht-ordered-list',
-  title: 'Components/Ordered list/Utrecht',
+  title: 'Components/Ordered List/Utrecht',
   component: OrderedList,
   parameters: { actions: { disable: true } },
   args: {

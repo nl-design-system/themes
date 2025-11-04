@@ -200,7 +200,7 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-ams-skip-link',
     component: 'ams-skip-link',
     // group: ...,
-    name: 'Amsterdam Skip link',
+    name: 'Amsterdam Skip Link',
     render: () => (
       <SkipLink
         href="#"

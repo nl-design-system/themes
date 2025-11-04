@@ -3,7 +3,7 @@ import { FormField, Paragraph, Textbox } from '@utrecht/component-library-react/
 
 const meta = {
   id: 'utrecht-form-field',
-  title: 'Components/Form field/Utrecht',
+  title: 'Components/Form Field/Utrecht',
   component: FormField,
   render: (args) => {
     const { description, invalid, label } = args;

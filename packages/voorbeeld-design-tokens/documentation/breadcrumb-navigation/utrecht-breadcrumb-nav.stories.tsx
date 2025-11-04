@@ -13,7 +13,7 @@ const items = [
 
 const meta = {
   id: 'utrecht-breadcrumb-nav',
-  title: 'Components/Breadcrumb navigation/Utrecht',
+  title: 'Components/Breadcrumb Navigation/Utrecht',
   component: BreadcrumbNav,
   parameters: { actions: { disable: true } },
   args: { label: 'kruimelpad' },

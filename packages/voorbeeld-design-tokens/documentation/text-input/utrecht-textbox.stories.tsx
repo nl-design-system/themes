@@ -3,7 +3,7 @@ import { Textbox } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
   id: 'utrecht-textbox',
-  title: 'Components/Text input/Utrecht',
+  title: 'Components/Text Input/Utrecht',
   component: Textbox,
   args: { disabled: false, readOnly: false, required: false },
   argTypes: {
