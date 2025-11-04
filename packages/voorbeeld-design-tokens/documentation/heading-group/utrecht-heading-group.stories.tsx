@@ -3,7 +3,7 @@ import { Heading1, HeadingGroup, Paragraph } from '@utrecht/component-library-re
 
 const meta = {
   id: 'utrecht-heading-group',
-  title: 'Components/Heading group/Utrecht',
+  title: 'Components/Heading Group/Utrecht',
   component: HeadingGroup,
   args: {
     children: (

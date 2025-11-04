@@ -3,7 +3,7 @@ import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-rea
 
 const meta = {
   id: 'utrecht-unordered-list',
-  title: 'Components/Unordered list/Utrecht',
+  title: 'Components/Unordered List/Utrecht',
   component: UnorderedList,
   parameters: {
     controls: { disable: true },

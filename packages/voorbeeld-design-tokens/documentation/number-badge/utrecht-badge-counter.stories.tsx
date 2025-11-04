@@ -3,7 +3,7 @@ import { BadgeCounter } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
   id: 'utrecht-badge-counter',
-  title: 'Components/Number badge/Utrecht',
+  title: 'Components/Number Badge/Utrecht',
   component: BadgeCounter,
   args: {
     children: '9',

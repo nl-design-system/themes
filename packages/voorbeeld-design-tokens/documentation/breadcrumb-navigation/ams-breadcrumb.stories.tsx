@@ -3,7 +3,7 @@ import { Breadcrumb } from '@amsterdam/design-system-react';
 
 const meta = {
   id: 'ams-breadcrumb',
-  title: 'Components/Breadcrumb navigation/Amsterdam',
+  title: 'Components/Breadcrumb Navigation/Amsterdam',
   component: Breadcrumb,
   parameters: { actions: { disable: true } },
   args: {},

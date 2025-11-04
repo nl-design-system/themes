@@ -1601,7 +1601,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-unordered-list--default',
     component: 'utrecht-unordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Unordered list',
+    name: 'Utrecht Unordered List',
     render: () => (
       <UnorderedList>
         <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
@@ -1622,7 +1622,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-unordered-list--item',
     component: 'utrecht-unordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Unordered list: Item',
+    name: 'Utrecht Unordered List: Item',
     render: () => (
       <UnorderedList>
         <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
@@ -1641,7 +1641,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-unordered-list--marker',
     component: 'utrecht-unordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Unordered list: Marker',
+    name: 'Utrecht Unordered List: Marker',
     render: () => (
       <UnorderedList>
         <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
@@ -1656,7 +1656,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-ordered-list--default',
     component: 'utrecht-ordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Ordered list',
+    name: 'Utrecht Ordered List',
     render: () => (
       <OrderedList>
         <OrderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</OrderedListItem>
@@ -2914,7 +2914,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-utrecht-form-field-description--default',
     group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
-    name: 'Utrecht Form field description',
+    name: 'Utrecht Form Field Description',
     render: () => <FormFieldDescription>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
     detectTokens: {
       anyOf: [
@@ -2931,7 +2931,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-utrecht-form-field-error-message--default',
     group: STORY_GROUPS['FORM_FIELD_ERROR_MESSAGE'],
-    name: 'Utrecht Form field Error Message',
+    name: 'Utrecht Form Field Error Message',
     render: () => <FormFieldErrorMessage>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldErrorMessage>,
     detectTokens: {
       anyOf: [

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { SkipLink } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
-  title: 'Components/Skip link/Utrecht',
+  title: 'Components/Skip Link/Utrecht',
   id: 'utrecht-skip-link',
   component: SkipLink,
   argTypes: {
