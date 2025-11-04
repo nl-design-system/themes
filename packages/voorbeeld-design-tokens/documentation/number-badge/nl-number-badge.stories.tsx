@@ -5,6 +5,7 @@ const meta = {
   id: 'nl-number-badge',
   title: 'Components/Number Badge/Candidate',
   component: NumberBadge,
+  parameters: { actions: { disable: true } },
   args: {
     children: '9',
   },

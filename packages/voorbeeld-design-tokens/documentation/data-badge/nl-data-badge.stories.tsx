@@ -5,6 +5,7 @@ const meta = {
   id: 'nl-data-badge',
   title: 'Components/Data Badge/Candidate',
   component: DataBadge,
+  parameters: { actions: { disable: true } },
   args: { children: 'Nieuw!' },
 } satisfies Meta<typeof DataBadge>;
 

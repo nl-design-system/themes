@@ -5,6 +5,7 @@ const meta = {
   id: 'nl-link',
   title: 'Components/Link/Candidate',
   component: Link,
+  parameters: { actions: { disable: true } },
   args: {
     children: 'Lees meer',
     href: 'https://www.example.com',

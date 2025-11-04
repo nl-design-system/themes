@@ -5,6 +5,7 @@ const meta = {
   id: 'nl-color-sample',
   title: 'Components/Color Sample/Candidate',
   component: ColorSample,
+  parameters: { actions: { disable: true } },
   args: {
     color: '#007DAD',
   },

@@ -5,6 +5,7 @@ const meta = {
   id: 'nl-code',
   title: 'Components/Code/Candidate',
   component: Code,
+  parameters: { actions: { disable: true } },
   args: { children: '<input type="url" value="https://nldesignsystem.nl/">' },
 } satisfies Meta<typeof Code>;
 

@@ -5,6 +5,7 @@ const meta = {
   id: 'nl-mark',
   title: 'Components/Mark/Candidate',
   component: Mark,
+  parameters: { actions: { disable: true } },
   args: {
     children: 'Ik markeer!',
   },

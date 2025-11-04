@@ -5,6 +5,7 @@ const meta = {
   title: 'Components/Skip Link/Candidate',
   id: 'nl-skip-link',
   component: SkipLink,
+  parameters: { actions: { disable: true } },
   argTypes: {
     href: {
       name: 'href',
