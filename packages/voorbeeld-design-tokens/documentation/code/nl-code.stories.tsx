@@ -5,7 +5,7 @@ const meta = {
   id: 'nl-code',
   title: 'Components/Code/Candidate',
   component: Code,
-  args: { children: '<input type="url" value="https://example.fi/">' },
+  args: { children: '<input type="url" value="https://nldesignsystem.nl/">' },
 } satisfies Meta<typeof Code>;
 
 type Story = StoryObj<typeof meta>;

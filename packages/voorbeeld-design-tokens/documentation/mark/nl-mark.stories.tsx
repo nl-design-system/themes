@@ -6,7 +6,7 @@ const meta = {
   title: 'Components/Mark/Candidate',
   component: Mark,
   args: {
-    children: 'Mark my words!',
+    children: 'Ik markeer!',
   },
 } satisfies Meta<typeof Mark>;
 

@@ -3,7 +3,7 @@ import { NumberBadge } from '@nl-design-system-candidate/number-badge-react/css'
 
 const meta = {
   id: 'nl-number-badge',
-  title: 'Components/Number badge/Candidate',
+  title: 'Components/Number Badge/Candidate',
   component: NumberBadge,
   args: {
     children: '9',

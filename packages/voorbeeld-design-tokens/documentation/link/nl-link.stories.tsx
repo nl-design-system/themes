@@ -6,7 +6,7 @@ const meta = {
   title: 'Components/Link/Candidate',
   component: Link,
   args: {
-    children: 'Read more',
+    children: 'Lees meer',
     href: 'https://www.example.com',
   },
   argTypes: {
