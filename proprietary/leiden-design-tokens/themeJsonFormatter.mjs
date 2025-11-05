@@ -16,6 +16,59 @@ function readJsonSafe(filePath, fallback = {}) {
     }
 }
 
+/**
+ * Laad alle JSON bestanden uit een directory en merge ze in één object
+ * @param {string} dirPath - Path naar de directory
+ * @param {Object} fallback - Fallback waarde als directory niet bestaat
+ * @returns {Object} Gemerged object met alle JSON bestanden
+ */
+function loadJsonDirectory(dirPath, fallback = {}) {
+    try {
+        const files = fs.readdirSync(dirPath);
+        const jsonFiles = files.filter(file => file.endsWith('.json'));
+        
+        if (jsonFiles.length === 0) {
+            return fallback;
+        }
+        
+        const merged = jsonFiles.reduce((acc, file) => {
+            const filePath = path.join(dirPath, file);
+            const content = readJsonSafe(filePath, {});
+            
+            // Deep merge voor nested properties
+            return deepMerge(acc, content);
+        }, {});
+        
+        console.log(`✓ Loaded ${jsonFiles.length} JSON file(s) from ${path.basename(dirPath)}/`);
+        return merged;
+    } catch (e) {
+        if (e.code !== 'ENOENT') {
+            throw e;
+        }
+        return fallback;
+    }
+}
+
+/**
+ * Deep merge van twee objecten
+ * @param {Object} target - Target object
+ * @param {Object} source - Source object
+ * @returns {Object} Gemerged object
+ */
+function deepMerge(target, source) {
+    const result = { ...target };
+    
+    for (const key in source) {
+        if (source[key] instanceof Object && !Array.isArray(source[key]) && key in target && target[key] instanceof Object && !Array.isArray(target[key])) {
+            result[key] = deepMerge(target[key], source[key]);
+        } else {
+            result[key] = source[key];
+        }
+    }
+    
+    return result;
+}
+
 // Recursieve functie om {token.path} te vervangen door de waarde uit tokens (ook voor dieper geneste tokens)
 function resolveReferences(obj, tokens) {
     if (Array.isArray(obj)) {
@@ -57,56 +110,13 @@ function resolveReferences(obj, tokens) {
 // Functie om alle element bestanden in te lezen uit styles/elements/
 function loadElementStyles(baseDir) {
     const elementsDir = path.resolve(baseDir, 'src/wordpress/styles/elements');
-    const elements = {};
-    
-    try {
-        const files = fs.readdirSync(elementsDir);
-        for (const file of files) {
-            if (file.endsWith('.json')) {
-                const elementName = path.basename(file, '.json');
-                const filePath = path.join(elementsDir, file);
-                const elementStyle = readJsonSafe(filePath, {});
-                
-                // Alleen toevoegen als het element daadwerkelijk inhoud heeft
-                if (Object.keys(elementStyle).length > 0) {
-                    elements[elementName] = elementStyle;
-                }
-            }
-        }
-    } catch (e) {
-        // Als de directory niet bestaat, gewoon een leeg object teruggeven
-        if (e.code !== 'ENOENT') {
-            throw e;
-        }
-    }
-    
-    return elements;
+    return loadJsonDirectory(elementsDir);
 }
 
 // Functie om alle block bestanden in te lezen uit styles/blocks/
 function loadBlockStyles(baseDir) {
     const blocksDir = path.resolve(baseDir, 'src/wordpress/styles/blocks');
-    const blocks = {};
-    
-    try {
-        const files = fs.readdirSync(blocksDir);
-        for (const file of files) {
-            if (file.endsWith('.json')) {
-                const filePath = path.join(blocksDir, file);
-                const blockStyles = readJsonSafe(filePath, {});
-                
-                // Voeg alle block definities uit het bestand toe
-                Object.assign(blocks, blockStyles);
-            }
-        }
-    } catch (e) {
-        // Als de directory niet bestaat, gewoon een leeg object teruggeven
-        if (e.code !== 'ENOENT') {
-            throw e;
-        }
-    }
-    
-    return blocks;
+    return loadJsonDirectory(blocksDir);
 }
 
 // Functie om door color tokens te lopen en deze om te zetten naar WordPress color palette formaat
@@ -157,79 +167,62 @@ function generateColorPalette(tokens, prefix) {
 }
 
 export default function themeJsonFormatter({ dictionary }) {
-    const themeJson = {
-        $schema: "https://schemas.wp.org/trunk/theme.json",
-        version: 3,
-        settings: {},
-        styles: {},
-        customTemplates: [],
-        templateParts: []
-    };
-
-    // Gebruik dictionary.tokens in plaats van tokens.json bestand (dat mogelijk nog niet bestaat)
     const tokens = dictionary.tokens || {};
-    
-    // Lees de config om de prefix te krijgen
     const config = readJsonSafe(path.resolve(__dirname, 'src/config.json'), {});
     const prefix = config.prefix || 'leiden';
+    const wpDir = path.resolve(__dirname, 'src/wordpress');
     
-    // console.log('Available tokens from dictionary:', Object.keys(tokens));
-    // console.log('Typography tokens:', tokens.typography ? Object.keys(tokens.typography) : 'No typography tokens');
+    console.log('\n=== Building WordPress theme.json ===');
     
-    // Lees settings en los verwijzingen op
-    const settings = readJsonSafe(path.resolve(__dirname, 'src/wordpress/settings.json'), {});
-    let resolvedSettings = resolveReferences(settings.settings || {}, tokens);
+    // 1. Laad base configuratie (schema, version, templates)
+    const base = readJsonSafe(path.join(wpDir, 'base.json'), {
+        $schema: "https://schemas.wp.org/trunk/theme.json",
+        version: 3
+    });
+    console.log('✓ Loaded base configuration');
     
-    // Genereer dynamisch de color palette vanuit de tokens
-    // Dit doorloopt alle color tokens en voegt ze automatisch toe aan de WordPress color palette
+    // 2. Laad en merge alle settings
+    const settingsDir = path.join(wpDir, 'settings');
+    let settings = loadJsonDirectory(settingsDir);
+    settings = resolveReferences(settings, tokens);
+    console.log('✓ Loaded and resolved settings');
+    
+    // 3. Genereer dynamisch color palette vanuit tokens
     const colorPalette = generateColorPalette(tokens, prefix);
     if (colorPalette.length > 0) {
-        // Voeg de dynamisch gegenereerde kleuren toe aan de settings
-        if (!resolvedSettings.color) {
-            resolvedSettings.color = {};
-        }
-        
-        // Combineer dynamisch gegenereerde kleuren met eventuele handmatige palette entries
-        // Dynamisch gegenereerde kleuren komen eerst, handmatige entries kunnen deze overschrijven
-        const manualPalette = resolvedSettings.color.palette || [];
-        resolvedSettings.color.palette = [...colorPalette, ...manualPalette];
+        settings.color = settings.color || {};
+        // Dynamische kleuren eerst, dan eventuele handmatige entries
+        settings.color.palette = [...colorPalette, ...(settings.color.palette || [])];
+        console.log(`✓ Added ${colorPalette.length} colors to palette`);
     }
     
-    themeJson.settings = resolvedSettings;
-
-    // Lees styles en los verwijzingen op
-    const styles = readJsonSafe(path.resolve(__dirname, 'src/wordpress/styles.json'), {});
-    let resolvedStyles = resolveReferences(styles.styles || {}, tokens);
+    // 4. Laad root styles
+    const stylesDir = path.join(wpDir, 'styles');
+    const rootStyles = readJsonSafe(path.join(stylesDir, 'root.json'), {});
+    console.log('✓ Loaded root styles');
     
-    // Laad element styles uit losse bestanden
-    const elements = loadElementStyles(__dirname);
-    const resolvedElements = resolveReferences(elements, tokens);
+    // 5. Laad element styles
+    const elementsDir = path.join(stylesDir, 'elements');
+    const elements = loadJsonDirectory(elementsDir);
     
-    // Voeg element styles toe aan de bestaande styles.elements
-    if (Object.keys(resolvedElements).length > 0) {
-        resolvedStyles.elements = {
-            ...resolvedStyles.elements,
-            ...resolvedElements
-        };
-    }
+    // 6. Laad block styles
+    const blocksDir = path.join(stylesDir, 'blocks');
+    const blocks = loadJsonDirectory(blocksDir);
     
-    // Laad block styles uit losse bestanden
-    const blocks = loadBlockStyles(__dirname);
-    const resolvedBlocks = resolveReferences(blocks, tokens);
+    // 7. Merge en resolve alle styles
+    const styles = resolveReferences({
+        ...rootStyles,
+        elements,
+        blocks
+    }, tokens);
+    console.log('✓ Resolved all style references');
     
-    // Voeg block styles toe aan de bestaande styles.blocks
-    if (Object.keys(resolvedBlocks).length > 0) {
-        resolvedStyles.blocks = {
-            ...resolvedStyles.blocks,
-            ...resolvedBlocks
-        };
-    }
+    console.log('=== Build complete ===\n');
     
-    themeJson.styles = resolvedStyles;
-
-    // templateParts (optioneel)
-    const templateParts = readJsonSafe(path.resolve(__dirname, 'src/wordpress/templateParts.json'), {});
-    themeJson.templateParts = resolveReferences(templateParts.templateParts || [], tokens);
-
-    return JSON.stringify(themeJson, null, 2);
-};
+    // Retourneer het complete theme.json object
+    return JSON.stringify({
+        ...base,
+        settings,
+        styles
+    }, null, 2);
+}
