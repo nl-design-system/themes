@@ -109,6 +109,53 @@ function loadBlockStyles(baseDir) {
     return blocks;
 }
 
+// Functie om door color tokens te lopen en deze om te zetten naar WordPress color palette formaat
+/**
+ * Genereert een WordPress color palette vanuit design tokens
+ * @param {Object} tokens - Het volledige tokens object
+ * @param {string} prefix - De prefix van het thema (bijv. 'leiden')
+ * @returns {Array} Array met color palette items in WordPress formaat
+ */
+function generateColorPalette(tokens, prefix) {
+    const palette = [];
+    
+    // Zoek naar color tokens in de token structuur
+    if (!tokens[prefix] || !tokens[prefix].colors) {
+        console.log(`No colors found for prefix: ${prefix}`);
+        return palette;
+    }
+    
+    const colors = tokens[prefix].colors;
+    
+    // Recursieve functie om door geneste color objecten te lopen
+    function traverseColors(obj, path = []) {
+        for (const [key, value] of Object.entries(obj)) {
+            // Check of dit een color token is (heeft een $value en $type)
+            if (value && typeof value === 'object' && value.$value && value.$type === 'color') {
+                // Maak een naam voor de kleur
+                const colorPath = [...path, key];
+                const slug = colorPath.join('-');
+                const name = colorPath.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+                
+                palette.push({
+                    color: value.$value,
+                    name: name,
+                    slug: slug
+                });
+            } else if (value && typeof value === 'object' && !value.$value) {
+                // Dit is een geneste groep, ga verder
+                traverseColors(value, [...path, key]);
+            }
+        }
+    }
+    
+    traverseColors(colors);
+    
+    console.log(`Generated ${palette.length} colors for WordPress color palette`);
+    
+    return palette;
+}
+
 export default function themeJsonFormatter({ dictionary }) {
     const themeJson = {
         $schema: "https://schemas.wp.org/trunk/theme.json",
@@ -122,12 +169,33 @@ export default function themeJsonFormatter({ dictionary }) {
     // Gebruik dictionary.tokens in plaats van tokens.json bestand (dat mogelijk nog niet bestaat)
     const tokens = dictionary.tokens || {};
     
+    // Lees de config om de prefix te krijgen
+    const config = readJsonSafe(path.resolve(__dirname, 'src/config.json'), {});
+    const prefix = config.prefix || 'leiden';
+    
     // console.log('Available tokens from dictionary:', Object.keys(tokens));
     // console.log('Typography tokens:', tokens.typography ? Object.keys(tokens.typography) : 'No typography tokens');
     
     // Lees settings en los verwijzingen op
     const settings = readJsonSafe(path.resolve(__dirname, 'src/wordpress/settings.json'), {});
-    themeJson.settings = resolveReferences(settings.settings || {}, tokens);
+    let resolvedSettings = resolveReferences(settings.settings || {}, tokens);
+    
+    // Genereer dynamisch de color palette vanuit de tokens
+    // Dit doorloopt alle color tokens en voegt ze automatisch toe aan de WordPress color palette
+    const colorPalette = generateColorPalette(tokens, prefix);
+    if (colorPalette.length > 0) {
+        // Voeg de dynamisch gegenereerde kleuren toe aan de settings
+        if (!resolvedSettings.color) {
+            resolvedSettings.color = {};
+        }
+        
+        // Combineer dynamisch gegenereerde kleuren met eventuele handmatige palette entries
+        // Dynamisch gegenereerde kleuren komen eerst, handmatige entries kunnen deze overschrijven
+        const manualPalette = resolvedSettings.color.palette || [];
+        resolvedSettings.color.palette = [...colorPalette, ...manualPalette];
+    }
+    
+    themeJson.settings = resolvedSettings;
 
     // Lees styles en los verwijzingen op
     const styles = readJsonSafe(path.resolve(__dirname, 'src/wordpress/styles.json'), {});
