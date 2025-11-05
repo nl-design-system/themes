@@ -178,7 +178,8 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     detectTokens: {
       anyOf: [
         'nl.link.color',
-        'nl.link.text-decoration',
+        'nl.link.text-decoration-color',
+        'nl.link.text-decoration-line',
         'nl.link.text-decoration-thickness',
         'nl.link.text-underline-offset',
       ],
@@ -196,7 +197,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       </Link>
     ),
     detectTokens: {
-      anyOf: ['nl.link.hover.color', 'nl.link.hover.text-decoration', 'nl.link.hover.text-decoration-thickness'],
+      anyOf: ['nl.link.hover.color', 'nl.link.hover.text-decoration-line', 'nl.link.hover.text-decoration-thickness'],
     },
   },
   {
@@ -226,6 +227,36 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
+    storyId: 'react-nl-link--current',
+    group: STORY_GROUPS['LINK'],
+    name: 'Candidate Link: Current',
+    state: true,
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" className="nl-link--current">
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
+    detectTokens: {
+      anyOf: ['nl.link.current.cursor'],
+    },
+  },
+  {
+    storyId: 'react-nl-link--disabled',
+    group: STORY_GROUPS['LINK'],
+    name: 'Candidate Link: Disabled',
+    state: true,
+    inline: true,
+    render: () => (
+      <Link href="https://example.com" className="nl-link--disabled">
+        The Quick Brown Fox Jumps Over The Lazy Dog
+      </Link>
+    ),
+    detectTokens: {
+      anyOf: ['nl.link.disabled.color', 'nl.link.disabled.cursor'],
+    },
+  },
+  {
     storyId: 'react-nl-mark--default',
     name: 'Candidate Mark',
     render: () => <Mark>Mark my words!</Mark>,
@@ -238,6 +269,22 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['BADGES'],
     name: 'Candidate Number Badge',
     render: () => <NumberBadge>42</NumberBadge>,
+    detectTokens: {
+      anyOf: [
+        'nl.number-badge.background-color',
+        'nl.number-badge.border-color',
+        'nl.number-badge.border-radius',
+        'nl.number-badge.border-width',
+        'nl.number-badge.color',
+        'nl.number-badge.font-family',
+        'nl.number-badge.font-size',
+        'nl.number-badge.font-weight',
+        'nl.number-badge.min-block-size',
+        'nl.number-badge.min-inline-size',
+        'nl.number-badge.padding-block',
+        'nl.number-badge.padding-inline',
+      ],
+    },
   },
   {
     storyId: 'react-nl-paragraph--default',
@@ -255,12 +302,12 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     detectTokens: {
       anyOf: [
         'nl.paragraph.color',
-        'nl.paragraph.font-size',
         'nl.paragraph.font-family',
+        'nl.paragraph.font-size',
         'nl.paragraph.font-weight',
         'nl.paragraph.line-height',
-        'nl.paragraph.margin-block-start',
         'nl.paragraph.margin-block-end',
+        'nl.paragraph.margin-block-start',
       ],
     },
   },
@@ -284,6 +331,8 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
         'nl.paragraph.lead.font-size',
         'nl.paragraph.lead.font-weight',
         'nl.paragraph.lead.line-height',
+        'nl.paragraph.lead.margin-block-end',
+        'nl.paragraph.lead.margin-block-start',
       ],
     },
   },
@@ -292,7 +341,18 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Skip Link',
     render: () => <SkipLink href="main" />,
     detectTokens: {
-      anyOf: [],
+      anyOf: [
+        'nl.skip-link.background-color',
+        'nl.skip-link.color',
+        'nl.skip-link.font-size',
+        'nl.skip-link.line-height',
+        'nl.skip-link.min-block-size',
+        'nl.skip-link.min-inline-size',
+        'nl.skip-link.padding-block',
+        'nl.skip-link.padding-inline',
+        'nl.skip-link.text-decoration-thickness',
+        'nl.skip-link.text-underline-offset',
+      ],
     },
   },
 ];
