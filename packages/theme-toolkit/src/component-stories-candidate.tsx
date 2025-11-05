@@ -15,15 +15,9 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-nl-code--default',
     name: 'Candidate Code',
-    render: () => <Code>{'<input type="url" value="https://example.fi/">'}</Code>,
+    render: () => <Code>{'<input type="url" value="https://nldesignsystem.nl">'}</Code>,
     detectTokens: {
-      anyOf: [
-        'nl.code.color',
-        'nl.code.background-color',
-        'nl.code.font-size',
-        'nl.code.font-family',
-        'nl.code.line-height',
-      ],
+      anyOf: ['nl.code.color', 'nl.code.background-color', 'nl.code.font-size', 'nl.code.font-family'],
     },
   },
   {
@@ -47,17 +41,12 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
       anyOf: [
         'nl.code-block.font-family',
         'nl.code-block.background-color',
+        'nl.code-block.border-radius',
         'nl.code-block.color',
         'nl.code-block.font-size',
         'nl.code-block.line-height',
-        'nl.code-block.margin-block-start',
-        'nl.code-block.margin-block-end',
-        'nl.code-block.margin-inline-start',
-        'nl.code-block.margin-inline-end',
-        'nl.code-block.padding-block-start',
-        'nl.code-block.padding-block-end',
-        'nl.code-block.padding-inline-start',
-        'nl.code-block.padding-inline-end',
+        'nl.code-block.padding-block',
+        'nl.code-block.padding-inline',
       ],
     },
   },
@@ -84,9 +73,11 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     detectTokens: {
       anyOf: [
         'nl.data-badge.color',
+        'nl.data-badge.border-color',
         'nl.data-badge.border-radius',
         'nl.data-badge.border-width',
         'nl.data-badge.background-color',
+        'nl.data-badge.font-family',
         'nl.data-badge.font-size',
         'nl.data-badge.font-weight',
         'nl.data-badge.line-height',
@@ -104,7 +95,15 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Heading - Level 1',
     render: () => <Heading level={1}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
-      allOf: ['nl.heading-1.font-size'],
+      anyOf: [
+        'nl.heading-1.color',
+        'nl.heading-1.font-family',
+        'nl.heading-1.font-size',
+        'nl.heading-1.font-weight',
+        'nl.heading-1.line-height',
+        'nl.heading-1.margin-block-end',
+        'nl.heading-1.margin-block-start',
+      ],
     },
   },
   {
@@ -114,7 +113,15 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Heading - Level 2',
     render: () => <Heading level={2}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
-      allOf: ['nl.heading-2.font-size'],
+      anyOf: [
+        'nl.heading-2.color',
+        'nl.heading-2.font-family',
+        'nl.heading-2.font-size',
+        'nl.heading-2.font-weight',
+        'nl.heading-2.line-height',
+        'nl.heading-2.margin-block-end',
+        'nl.heading-2.margin-block-start',
+      ],
     },
   },
   {
@@ -124,7 +131,15 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Heading - Level 3',
     render: () => <Heading level={3}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
-      allOf: ['nl.heading-3.font-size'],
+      anyOf: [
+        'nl.heading-3.color',
+        'nl.heading-3.font-family',
+        'nl.heading-3.font-size',
+        'nl.heading-3.font-weight',
+        'nl.heading-3.line-height',
+        'nl.heading-3.margin-block-end',
+        'nl.heading-3.margin-block-start',
+      ],
     },
   },
   {
@@ -134,7 +149,15 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Heading - Level 4',
     render: () => <Heading level={4}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
     detectTokens: {
-      allOf: ['nl.heading-4.font-size'],
+      anyOf: [
+        'nl.heading-4.color',
+        'nl.heading-4.font-family',
+        'nl.heading-4.font-size',
+        'nl.heading-4.font-weight',
+        'nl.heading-4.line-height',
+        'nl.heading-4.margin-block-end',
+        'nl.heading-4.margin-block-start',
+      ],
     },
   },
   {
@@ -143,6 +166,17 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 5',
     render: () => <Heading level={5}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    detectTokens: {
+      anyOf: [
+        'nl.heading-5.color',
+        'nl.heading-5.font-family',
+        'nl.heading-5.font-size',
+        'nl.heading-5.font-weight',
+        'nl.heading-5.line-height',
+        'nl.heading-5.margin-block-end',
+        'nl.heading-5.margin-block-start',
+      ],
+    },
   },
   {
     storyId: 'react-nl-heading--level-6',
@@ -150,6 +184,17 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['HEADINGS'],
     name: 'Candidate Heading - Level 6',
     render: () => <Heading level={6}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>,
+    detectTokens: {
+      anyOf: [
+        'nl.heading-6.color',
+        'nl.heading-6.font-family',
+        'nl.heading-6.font-size',
+        'nl.heading-6.font-weight',
+        'nl.heading-6.line-height',
+        'nl.heading-6.margin-block-end',
+        'nl.heading-6.margin-block-start',
+      ],
+    },
   },
   {
     storyId: 'react-nl-link--active',
@@ -157,7 +202,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Link: Active',
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" className="nl-link--active">
+      <Link href="https://nldesignsystem.nl" target="_new" className="nl-link--active">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -171,7 +216,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Link',
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new">
+      <Link href="https://nldesignsystem.nl" target="_new">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -192,7 +237,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" className="nl-link--hover">
+      <Link href="https://nldesignsystem.nl" className="nl-link--hover">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -206,7 +251,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Link: Placeholder',
     state: true,
     inline: true,
-    render: () => <Link href="https://example.com">The Quick Brown Fox Jumps Over The Lazy Dog</Link>,
+    render: () => <Link href="https://nldesignsystem.nl">The Quick Brown Fox Jumps Over The Lazy Dog</Link>,
     detectTokens: {
       anyOf: ['nl.link.placeholder.color', 'nl.link.placeholder.font-weight'],
     },
@@ -218,7 +263,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" target="_new" className="nl-link--visited">
+      <Link href="https://nldesignsystem.nl" target="_new" className="nl-link--visited">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -233,7 +278,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" className="nl-link--current">
+      <Link href="https://nldesignsystem.nl" className="nl-link--current">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -248,7 +293,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://example.com" className="nl-link--disabled">
+      <Link href="https://nldesignsystem.nl" className="nl-link--disabled">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
