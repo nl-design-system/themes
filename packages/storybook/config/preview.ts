@@ -36,7 +36,7 @@ import '@nl-design-system-unstable/hoeksche-waard-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/hoorn-design-tokens/dist/design-tokens.css';
 import '@nl-design-system-unstable/hoorn-design-tokens/src/font';
 import '@nl-design-system-unstable/horstaandemaas-design-tokens/dist/index.css';
-import '@nl-design-system-unstable/leiden-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/leiden-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/leiden-design-tokens/src/font';
 import '@nl-design-system-unstable/leidschendam-voorburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/nijmegen-design-tokens/dist/index.css';
