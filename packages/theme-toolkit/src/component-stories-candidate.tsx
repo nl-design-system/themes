@@ -202,7 +202,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Candidate Link: Active',
     inline: true,
     render: () => (
-      <Link href="https://nldesignsystem.nl" target="_new" className="nl-link--active">
+      <Link href="https://nldesignsystem.nl" className="nl-link--active">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
@@ -215,11 +215,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link',
     inline: true,
-    render: () => (
-      <Link href="https://nldesignsystem.nl" target="_new">
-        The Quick Brown Fox Jumps Over The Lazy Dog
-      </Link>
-    ),
+    render: () => <Link href="https://nldesignsystem.nl">The Quick Brown Fox Jumps Over The Lazy Dog</Link>,
     detectTokens: {
       anyOf: [
         'nl.link.color',
@@ -263,7 +259,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     state: true,
     inline: true,
     render: () => (
-      <Link href="https://nldesignsystem.nl" target="_new" className="nl-link--visited">
+      <Link href="https://nldesignsystem.nl" className="nl-link--visited">
         The Quick Brown Fox Jumps Over The Lazy Dog
       </Link>
     ),
