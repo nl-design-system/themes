@@ -1,6 +1,6 @@
 # NL Design System Themes repository
 
-This repository contains publicly available themes for organisations working with [NL Design System](https://www.nldesignsystem.nl/). Each organisations' theme can be found in [/proprietary](./proprietary/) and is viewable with Storybook.
+This repository contains publicly available themes for organisations working with [NL Design System](https://www.nldesignsystem.nl/). Each organisation's theme can be found in [/proprietary](./proprietary/) and is viewable with Storybook.
 
 ## Getting started
 

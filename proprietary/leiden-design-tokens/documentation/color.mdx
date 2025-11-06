@@ -2,6 +2,7 @@ import { Meta } from "@storybook/blocks";
 import tokens from "../dist/tokens.json";
 import { ColorSearch } from "@nl-design-system-unstable/theme-toolkit/src/ColorSearch";
 import { ColorTable } from "@nl-design-system-unstable/theme-toolkit/src/ColorTable";
+import { flattenColorTokens } from "@nl-design-system-unstable/tokens-lib/src/util";
 import config from "../src/config.json";
 
 <Meta title="Leiden/Color" />
@@ -10,8 +11,15 @@ import config from "../src/config.json";
 
 ## Find a color
 
-<ColorSearch tokens={tokens[config.prefix]["color"]} />
+<ColorSearch tokens={tokens[config.prefix]["colors"]} />
 
 ## Color palette
 
-<ColorTable tokens={tokens[config.prefix]["color"]} />
+{(() => {
+  const colorGroups = tokens[config.prefix]["colors"];
+  const allColorTokens = Object.keys(colorGroups).flatMap(colorGroupKey => 
+    flattenColorTokens(colorGroups[colorGroupKey])
+  );
+  console.log('All color tokens flattened:', allColorTokens);
+  return <ColorTable tokens={allColorTokens} />;
+})()}
