@@ -426,9 +426,9 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         open={true}
         id="react-ams-modal-dialog--default"
         heading="De gegevens zijn opgeslagen"
-        footer={<Button>Sluiten</Button>}
+        footer={<Button>Sluiten wijziging</Button>}
       >
-        <Paragraph>U ontvangt een bevestiging per e-mail.</Paragraph>
+        <Paragraph>U ontvangt een bevestiging per e-mail wijziging.</Paragraph>
       </ModalDialog>
     ),
   },
