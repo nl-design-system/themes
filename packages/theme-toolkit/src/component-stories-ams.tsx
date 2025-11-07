@@ -17,6 +17,7 @@ import {
   LinkList,
   PageFooter,
   Avatar,
+  DescriptionList,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -440,5 +441,25 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['AVATAR'],
     name: 'Amsterdam Avatar',
     render: () => <Avatar label="Avatar" />,
+  },
+  {
+    storyId: 'react-ams-description-list--default',
+    component: 'ams-description-list',
+    group: STORY_GROUPS['DESCRIPTION_LIST'],
+    name: 'Amsterdam Description List',
+    render: () => (
+      <DescriptionList>
+        <DescriptionList.Term key={1}>Het hoger onderwijs</DescriptionList.Term>
+        <DescriptionList.Description key={2}>Het hbo en wo</DescriptionList.Description>
+        <DescriptionList.Term key={3}>Het mbo en hoger onderwijs</DescriptionList.Term>
+        <DescriptionList.Description key={4}>Het vervolgonderwijs</DescriptionList.Description>
+        <DescriptionList.Term key={5}>Laagopgeleid</DescriptionList.Term>
+        <DescriptionList.Description key={6}>Praktisch opgeleid</DescriptionList.Description>
+        <DescriptionList.Term key={7}>Hoogopgeleid</DescriptionList.Term>
+        <DescriptionList.Description key={8}>Theoretisch opgeleid</DescriptionList.Description>
+        <DescriptionList.Term key={9}>Opleidingsniveau</DescriptionList.Term>
+        <DescriptionList.Description key={10}>Onderwijsrichting</DescriptionList.Description>
+      </DescriptionList>
+    ),
   },
 ];
