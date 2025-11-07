@@ -18,6 +18,7 @@ import {
   PageFooter,
   Avatar,
   DescriptionList,
+  DateInput,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -461,5 +462,12 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <DescriptionList.Description key={10}>Onderwijsrichting</DescriptionList.Description>
       </DescriptionList>
     ),
+  },
+  {
+    storyId: 'react-ams-date-input--default',
+    component: 'ams-date-input',
+    group: STORY_GROUPS['DATE_INPUT'],
+    name: 'Amsterdam Date Input',
+    render: () => <DateInput />,
   },
 ];
