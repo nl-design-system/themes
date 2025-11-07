@@ -34,6 +34,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   MODAL_DIALOG: 'Modal Dialog',
   PAGE_NUMBER_NAVIGATION: 'Page Number Navigation',
   IMAGE: 'Image',
+  DESCRIPTION_LIST: 'Description List',
   FORM_SUMMARY: 'Form Summary',
 };
 
