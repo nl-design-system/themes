@@ -1,6 +1,7 @@
 import '@amsterdam/design-system-tokens/dist/index.theme.css';
 import '@amsterdam/design-system-assets/font/index.css';
 import '@amsterdam/design-system-css/dist/index.css';
+import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@gemeente-rotterdam/design-tokens/dist/index.css';
 import '@nl-design-system-community/nora-design-tokens/dist/theme.css';

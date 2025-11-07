@@ -2,6 +2,7 @@ import { AMS_COMPONENT_STORIES } from './component-stories-ams';
 import { DENHAAG_COMPONENT_STORIES } from './component-stories-denhaag';
 import { UTRECHT_COMPONENT_STORIES } from './component-stories-utrecht';
 import { CANDIDATE_COMPONENT_STORIES } from './component-stories-candidate';
+import { RHC_COMPONENT_STORIES } from './component-stories-rhc';
 import { CustomStory } from './CustomStory';
 // eslint-disable-next-line no-unused-vars
 import { type PropsWithChildren } from 'react';
@@ -64,6 +65,7 @@ export const ComponentStories = ({
     ...AMS_COMPONENT_STORIES,
     ...UTRECHT_COMPONENT_STORIES,
     ...DENHAAG_COMPONENT_STORIES,
+    ...RHC_COMPONENT_STORIES,
   ];
 
   // TODO: Add glob option for variants to config https://www.npmjs.com/package/glob
