@@ -66,6 +66,9 @@ import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
 import type { Preview } from '@storybook/react';
 import '@utrecht/design-tokens/dist/index.css';
 import { ThemeDecorator } from './ThemeDecorator';
+import { defineCustomElements } from '@lux-design-system/web-components-stencil/loader/index.js';
+
+defineCustomElements();
 
 const preview: Preview = {
   parameters: {
