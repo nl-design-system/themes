@@ -63,6 +63,10 @@ import {
   Icon,
   Image,
   ButtonGroup as ActionGroup,
+  DataList as FormSummary,
+  DataListItem as FormSummaryItem,
+  DataListKey as FormSummaryKey,
+  DataListValue as FormSummaryValue,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
@@ -136,6 +140,27 @@ export const ListboxStory = ({
       </ListboxOption>
     ))}
   </Listbox>
+);
+
+interface FormSummaryStoryProps {
+  appearance?: string | '' | 'rows';
+  items: {
+    key: ReactNode;
+    keyId?: string;
+    value: ReactNode;
+    multiline?: boolean;
+  }[];
+}
+
+const FormSummaryStory = ({ appearance, items }: FormSummaryStoryProps) => (
+  <FormSummary appearance={appearance}>
+    {items.map(({ key, keyId, value, multiline }) => (
+      <FormSummaryItem key={keyId}>
+        <FormSummaryKey id={keyId}>{key}</FormSummaryKey>
+        <FormSummaryValue multiline={multiline}>{value}</FormSummaryValue>
+      </FormSummaryItem>
+    ))}
+  </FormSummary>
 );
 
 export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
@@ -3205,6 +3230,32 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Image',
     render: () => (
       <Image alt="Utrecht stadskantoor" height={830} photo={true} src="/images/stadskantoor.jpg" width={1040} />
+    ),
+  },
+  {
+    storyId: 'react-utrecht-form-summary--default',
+    component: 'utrecht-form-summary',
+    group: STORY_GROUPS['FORM_SUMMARY'],
+    name: 'Utrecht Form Summary',
+    render: () => (
+      <FormSummaryStory
+        appearance="rows"
+        items={[
+          {
+            key: 'Voornaam',
+            value: 'Mees',
+          },
+          {
+            key: 'Achternaam',
+            value: 'de Vos',
+          },
+          {
+            key: 'Adres',
+            value: 'Tweede Kamer der Staten-Generaal\nPostbus 20018\n2500 EA Den Haag',
+            multiline: true,
+          },
+        ]}
+      />
     ),
   },
 ];
