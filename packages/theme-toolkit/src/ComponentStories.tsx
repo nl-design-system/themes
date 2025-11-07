@@ -14,6 +14,8 @@ interface HeadingProps {
   level?: number;
 }
 
+// hi
+
 export const Heading = ({ level, children }: PropsWithChildren<HeadingProps>) =>
   level === 1 ? (
     <h1>{children}</h1>
