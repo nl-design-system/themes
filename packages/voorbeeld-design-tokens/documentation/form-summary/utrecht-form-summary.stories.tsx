@@ -11,7 +11,6 @@ interface FormSummaryStoryProps {
   appearance?: string | '' | 'rows';
   items: {
     key: ReactNode;
-    keyId?: string;
     value: ReactNode;
     multiline?: boolean;
   }[];
@@ -19,9 +18,9 @@ interface FormSummaryStoryProps {
 
 const FormSummaryStory = ({ appearance, items }: FormSummaryStoryProps) => (
   <FormSummary appearance={appearance}>
-    {items.map(({ key, keyId, value, multiline }) => (
-      <FormSummaryItem key={keyId}>
-        <FormSummaryKey id={keyId}>{key}</FormSummaryKey>
+    {items.map(({ key, value, multiline }) => (
+      <FormSummaryItem key={key}>
+        <FormSummaryKey id={key}>{key}</FormSummaryKey>
         <FormSummaryValue multiline={multiline}>{value}</FormSummaryValue>
       </FormSummaryItem>
     ))}
