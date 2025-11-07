@@ -16,6 +16,7 @@ import {
   Grid,
   LinkList,
   PageFooter,
+  Avatar,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -432,5 +433,12 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <Paragraph>U ontvangt een bevestiging per e-mail.</Paragraph>
       </ModalDialog>
     ),
+  },
+  {
+    storyId: 'react-ams-avatar--default',
+    component: 'ams-avatar',
+    group: STORY_GROUPS['AVATAR'],
+    name: 'Amsterdam Avatar',
+    render: () => <Avatar label="Avatar" />,
   },
 ];
