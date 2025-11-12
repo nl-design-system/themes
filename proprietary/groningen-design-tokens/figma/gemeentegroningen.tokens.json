@@ -49,7 +49,7 @@
           }
         },
         "grey": {
-          "text": {
+          "dark": {
             "$type": "color",
             "$value": "#3F3D3C"
           },
@@ -288,15 +288,15 @@
           },
           "color-default": {
             "$type": "color",
-            "$value": "{groningen.color.grey.text}"
+            "$value": "{groningen.color.grey.dark}"
           },
           "color-hover": {
             "$type": "color",
-            "$value": "{groningen.color.grey.text}"
+            "$value": "{groningen.color.grey.dark}"
           },
           "color-active": {
             "$type": "color",
-            "$value": "{groningen.color.grey.text}"
+            "$value": "{groningen.color.grey.dark}"
           },
           "color-subtle": {
             "$type": "color",
@@ -304,13 +304,13 @@
           },
           "color-document": {
             "$type": "color",
-            "$value": "{groningen.color.grey.text}"
+            "$value": "{groningen.color.black}"
           }
         },
         "accent-1": {
           "bg-document": {
             "$type": "color",
-            "$value": "{groningen.color.white}"
+            "$value": "{groningen.color.grey.background}"
           },
           "bg-subtle": {
             "$type": "color",
@@ -362,7 +362,7 @@
           },
           "color-document": {
             "$type": "color",
-            "$value": "{groningen.color.grey.text}"
+            "$value": "{groningen.color.grey.dark}"
           }
         },
         "accent-2": {
@@ -420,7 +420,7 @@
           },
           "color-document": {
             "$type": "color",
-            "$value": "{groningen.color.grey.text}"
+            "$value": "{groningen.color.grey.dark}"
           }
         },
         "accent-3": {
@@ -2434,7 +2434,7 @@
       "border-radius": {
         "sm": {
           "$type": "dimension",
-          "$value": "3px"
+          "$value": "4px"
         },
         "md": {
           "$type": "dimension",
@@ -2792,7 +2792,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.action-2.color-default}"
+            "$value": "{basis.color.selected.border-active}"
           },
           "gap": {
             "$type": "dimension",
@@ -2898,6 +2898,10 @@
             "$type": "color",
             "$value": "{basis.color.default.border-subtle}"
           },
+          "bg-color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1.bg-document}"
+          },
           "hover": {
             "border-color": {
               "$type": "color",
@@ -2934,11 +2938,17 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.bold}"
+            "$value": "{basis.text.font-weight.default}"
           },
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
+          }
+        },
+        "button-expanded": {
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.bold}"
           }
         }
       }
@@ -3743,7 +3753,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.default.border-default}"
+            "$value": "{basis.color.default.color-default}"
           },
           "color": {
             "$type": "color",
@@ -3768,7 +3778,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.default.border-active}"
+              "$value": "{basis.color.default.color-default}"
             },
             "color": {
               "$type": "color",
@@ -3806,15 +3816,15 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.bg-hover}"
+              "$value": "{basis.color.default.color-hover}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.default.border-hover}"
+              "$value": "{basis.color.transparent}"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.color-hover}"
+              "$value": "{basis.color.selected.bg-default}"
             }
           }
         },
@@ -4082,7 +4092,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.form-control.border-color}"
+          "$value": "{basis.color.default.border-default}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -6014,12 +6024,12 @@
       "link": {
         "color": {
           "$type": "color",
-          "$value": "{basis.color.action-2.color-default}",
+          "$value": "{groningen.color.interactive.link}",
           "$description": "[code-only]"
         },
         "text-decoration-color": {
           "$type": "color",
-          "$value": "{basis.color.action-2.color-default}"
+          "$value": "{groningen.color.interactive.link}"
         },
         "text-decoration-line": {
           "$type": "textDecoration",
@@ -6082,7 +6092,7 @@
       "link": {
         "color": {
           "$type": "color",
-          "$value": "{basis.color.action-2.color-default}"
+          "$value": "{groningen.color.interactive.link}"
         },
         "column-gap": {
           "$type": "dimension",
@@ -6094,7 +6104,7 @@
         },
         "text-decoration-color": {
           "$type": "color",
-          "$value": "{basis.color.action-2.color-default}",
+          "$value": "{groningen.color.interactive.link}",
           "$description": "[code-only]"
         },
         "text-decoration-thickness": {
@@ -6158,7 +6168,7 @@
         "visited": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.action-2.color-default}"
+            "$value": "{groningen.color.interactive.link}"
           }
         }
       }
