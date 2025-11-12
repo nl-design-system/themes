@@ -11201,6 +11201,16 @@
       }
     }
   },
+  "utrecht": {
+    "utrecht": {
+      "document": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        }
+      }
+    }
+  },
   "color-scheme-dark/common": {
     "basis": {
       "color": {
@@ -12914,6 +12924,18 @@
       }
     }
   },
+  "of": {
+    "of": {
+      "typography": {
+        "sans-serif": {
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          }
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -13013,8 +13035,10 @@
       "components/page-footer/utrecht",
       "components/article",
       "components/listbox",
+      "utrecht",
       "color-scheme-dark/common",
-      "color-scheme-dark/components/progress-list/todo"
+      "color-scheme-dark/components/progress-list/todo",
+      "of"
     ]
   }
 }
