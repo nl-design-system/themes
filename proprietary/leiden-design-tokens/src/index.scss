@@ -9,6 +9,27 @@
     @include themeMixin.leiden-theme;
 }
 
+/* TODO: Use a (custom) design token */
+body.utrecht-page {
+    max-inline-size: 100%;
+    background-color: var(--basis-color-default-bg-default);
+}
+
+.utrecht-page__content {
+    background-color: var(--basis-color-default-bg-default);
+    margin: 0 auto;
+}
+
+.openforms-app__body {
+    background: var(--basis-color-default-inverse-color-document);
+}
+
+.openforms-app__progress-indicator .openforms-progress-indicator {
+    background: var(--basis-color-default-inverse-color-document);
+}
+
+
+
 /* START WYSIWYG Editor */
 
 // Content
