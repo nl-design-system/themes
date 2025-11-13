@@ -256,6 +256,16 @@
           "$type": "lineHeights",
           "$value": "175%"
         }
+      },
+      "logo": {
+        "width": {
+          "$type": "dimension",
+          "$value": "120px"
+        },
+        "heigth": {
+          "$type": "dimension",
+          "$value": "55px"
+        }
       }
     }
   },
@@ -2855,6 +2865,16 @@
         "min-inline-size": {
           "$type": "dimension",
           "$value": "3rem"
+        }
+      },
+      "logo": {
+        "width": {
+          "$type": "dimension",
+          "$value": "{leiden.logo.width}"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "{leiden.logo.heigth}"
         }
       }
     }
@@ -11208,6 +11228,16 @@
           "$type": "fontFamilies",
           "$value": "{basis.text.font-family.default}"
         }
+      },
+      "header-logo": {
+        "width": {
+          "$type": "dimension",
+          "$value": "{basis.logo.width}"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "{basis.logo.height}"
+        }
       }
     }
   },
@@ -11224,6 +11254,10 @@
         "max-inline-size": {
           "$type": "dimension",
           "$value": "{basis.page.max-inline-size}"
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default-inverse.bg-subtle}"
         }
       }
     }
