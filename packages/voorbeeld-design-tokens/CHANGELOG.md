@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 6.2.1
+
+### Patch Changes
+
+- f41e917: Include correct fonts in package (tokens were updated to use Noto Sans/Serif/Sans Mono instead of Fira/Source Sans)
+
 ## 6.2.0
 
 ### Minor Changes
