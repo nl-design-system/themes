@@ -9,15 +9,14 @@
     @include themeMixin.leiden-theme;
 }
 
-/* TODO: Use a (custom) design token */
 body.utrecht-page {
-    max-inline-size: 100%;
+    max-inline-size: 100%; // TODO: Use a (custom) design token if there are more items
     background-color: var(--basis-color-default-bg-default);
 }
 
 .utrecht-page__content {
     background-color: var(--basis-color-default-bg-default);
-    margin: 0 auto;
+    margin: 0 auto; // TODO: Use a (custom) design token if there are more items
 }
 
 .openforms-app__body {
@@ -189,17 +188,22 @@ body.utrecht-page {
 
 /* END WYSIWYG Editor */
 
-// /* TODO: Check if there are design tokens for the styling below
-//  * TODO: Check if nested fieldsets are working as expected
-//  */
-// // fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
-// //     padding: 1rem;
-// //     border: 0;
-// //     box-sizing: border-box;
-// // }
-// // fieldset.openforms-fieldset:not(.openforms-fieldset--no-header):has(:not(.openforms-fieldset)) {
-// //     background: #f7f7f8;
-// // }
+// editgrid - fieldset items
+.openforms-editgrid .openforms-editgrid__item {
+    background: var(--basis-color-default-bg-default);
+}
+
+/* TODO: Check if there are design tokens for the styling below
+ * TODO: Check if nested fieldsets are working as expected
+ */
+// fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
+//     padding: 1rem;
+//     border: 0;
+//     box-sizing: border-box;
+// }
+// fieldset.openforms-fieldset:not(.openforms-fieldset--no-header):has(:not(.openforms-fieldset)) {
+//     background: var(--basis-color-default-bg-default);
+// }
 
 // // .openforms-fieldset legend.openforms-legend {
 // //     margin: 0;
