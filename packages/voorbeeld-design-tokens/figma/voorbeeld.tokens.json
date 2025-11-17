@@ -4934,6 +4934,34 @@
           "$type": "dimension",
           "$value": "{basis.space.row.lg}"
         },
+        "description": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "archived": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            }
+          }
+        },
         "heading": {
           "color": {
             "$type": "color",
@@ -4955,10 +4983,38 @@
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.xl}"
           },
-          "read-only": {
+          "archived": {
             "color": {
               "$type": "color",
               "$value": "{basis.heading.color}"
+            }
+          }
+        },
+        "metadata": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "archived": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
             }
           }
         },
@@ -4978,7 +5034,7 @@
             "$value": "{basis.color.action-1.bg-active}"
           }
         },
-        "focus-visible": {
+        "focus": {
           "background-color": {
             "$type": "color",
             "$value": "{basis.focus.background-color}"
@@ -4994,7 +5050,7 @@
             "$value": "{basis.color.action-1.bg-hover}"
           }
         },
-        "read-only": {
+        "archived": {
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.default.bg-default}"
@@ -5034,13 +5090,13 @@
                 "$value": "{basis.color.action-1.bg-active}"
               }
             },
-            "focus-visible": {
+            "focus": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.focus.background-color}"
               }
             },
-            "read-only": {
+            "archived": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.color.default.bg-active}"
