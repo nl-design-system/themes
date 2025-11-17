@@ -1,0 +1,51 @@
+---
+"@nl-design-system-unstable/start-design-tokens": minor
+---
+
+De volgende tokens zijn toegevoegd aan Status Badge component:
+
+- `utrecht.badge-status.background-color`
+- `utrecht.badge-status.border-color`
+- `utrecht.badge-status.border-radius`
+- `utrecht.badge-status.border-width`
+- `utrecht.badge-status.color`
+- `utrecht.badge-status.font-family`
+- `utrecht.badge-status.font-size`
+- `utrecht.badge-status.font-weight`
+- `utrecht.badge-status.line-height`
+- `utrecht.badge-status.letter-spacing`
+- `utrecht.badge-status.min-block-size`
+- `utrecht.badge-status.min-inline-size`
+- `utrecht.badge-status.padding-block`
+- `utrecht.badge-status.padding-inline`
+- `utrecht.badge-status.text-transform`
+- `utrecht.badge-status.active.background-color`
+- `utrecht.badge-status.active.border-color`
+- `utrecht.badge-status.active.color`
+- `utrecht.badge-status.danger.background-color`
+- `utrecht.badge-status.danger.border-color`
+- `utrecht.badge-status.danger.color`
+- `utrecht.badge-status.error.background-color`
+- `utrecht.badge-status.error.border-color`
+- `utrecht.badge-status.error.color`
+- `utrecht.badge-status.inactive.background-color`
+- `utrecht.badge-status.inactive.border-color`
+- `utrecht.badge-status.inactive.color`
+- `utrecht.badge-status.invalid.background-color`
+- `utrecht.badge-status.invalid.border-color`
+- `utrecht.badge-status.invalid.color`
+- `utrecht.badge-status.neutral.background-color`
+- `utrecht.badge-status.neutral.border-color`
+- `utrecht.badge-status.neutral.color`
+- `utrecht.badge-status.safe.background-color`
+- `utrecht.badge-status.safe.border-color`
+- `utrecht.badge-status.safe.color`
+- `utrecht.badge-status.success.background-color`
+- `utrecht.badge-status.success.border-color`
+- `utrecht.badge-status.success.color`
+- `utrecht.badge-status.valid.background-color`
+- `utrecht.badge-status.valid.border-color`
+- `utrecht.badge-status.valid.color`
+- `utrecht.badge-status.warning.background-color`
+- `utrecht.badge-status.warning.border-color`
+- `utrecht.badge-status.warning.color`
