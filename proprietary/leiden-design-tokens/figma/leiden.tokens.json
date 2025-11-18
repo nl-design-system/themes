@@ -11238,6 +11238,122 @@
           "$type": "dimension",
           "$value": "{basis.logo.height}"
         }
+      },
+      "color-fg": {
+        "$type": "color",
+        "$value": "{basis.color.default.color-document}"
+      },
+      "list-gap": {
+        "$type": "dimension",
+        "$value": "{basis.space.row.2xl}"
+      },
+      "fieldset": {
+        "legend-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        }
+      },
+      "file-upload": {
+        "drop-area": {
+          "padding": {
+            "$type": "dimension",
+            "$value": "{basis.form-control.padding-block-start}"
+          }
+        }
+      },
+      "field": {
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.default-inverse.border-default}"
+        }
+      },
+      "color": {
+        "danger": {
+          "$type": "color",
+          "$value": "{basis.color.negative.color-default}"
+        },
+        "primary": {
+          "$type": "color",
+          "$value": "{basis.form-control.background-color}"
+        },
+        "fg": {
+          "muted": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-subtle}"
+          }
+        }
+      },
+      "utrecht": {
+        "form-field": {
+          "description-error": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            },
+            "line-height": {
+              "$type": "lineHeights",
+              "$value": "{basis.text.line-height.md}"
+            }
+          }
+        },
+        "form-label": {
+          "checkbox": {
+            "padding": {
+              "block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.lg}"
+              }
+            }
+          },
+          "radio": {
+            "padding": {
+              "block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.lg}"
+              }
+            }
+          }
+        }
+      },
+      "checkbox": {
+        "bg": {
+          "$type": "color",
+          "$value": "{basis.color.transparent}"
+        }
+      },
+      "editgrid": {
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.column.4xl}"
+        },
+        "item": {
+          "padding": {
+            "block": {
+              "end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              }
+            },
+            "inline": {
+              "end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -11254,6 +11370,52 @@
         "max-inline-size": {
           "$type": "dimension",
           "$value": "{basis.page.max-inline-size}"
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.transparent}"
+        }
+      },
+      "page-color": {
+        "$type": "color",
+        "$value": "{basis.color.default.color-document}"
+      },
+      "form-field": {
+        "description-invalid": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.color-default}"
+          }
+        }
+      },
+      "checkbox": {
+        "margin": {
+          "inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          }
+        }
+      },
+      "action": {
+        "activate": {
+          "cursos": {
+            "$type": "other",
+            "$value": "{basis.action.activate.cursor}"
+          }
+        },
+        "submit": {
+          "cursor": {
+            "$type": "other",
+            "$value": "{basis.action.submit.cursor}"
+          }
+        }
+      },
+      "radio-button": {
+        "margin": {
+          "inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          }
         }
       }
     }
