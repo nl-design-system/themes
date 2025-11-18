@@ -4707,12 +4707,6 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
-          },
-          "archived": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-document}"
-            }
           }
         },
         "heading": {
@@ -4735,12 +4729,6 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.xl}"
-          },
-          "archived": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.heading.color}"
-            }
           }
         },
         "metadata": {
@@ -4763,12 +4751,6 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
-          },
-          "archived": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-document}"
-            }
           }
         },
         "icon": {
@@ -4803,28 +4785,6 @@
             "$value": "{basis.color.action-2.bg-hover}"
           }
         },
-        "archived": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.bg-default}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.default.color-document}"
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.bg-active}"
-            }
-          },
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.bg-hover}"
-            }
-          }
-        },
         "decoration": {
           "folder": {
             "background-color": {
@@ -4848,8 +4808,56 @@
                 "$type": "color",
                 "$value": "{basis.focus.background-color}"
               }
-            },
-            "archived": {
+            }
+          },
+          "paper": {
+            "background-color": {
+              "$type": "color",
+              "$value": "#ffffff"
+            }
+          }
+        },
+        "archived": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            }
+          },
+          "heading": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.heading.color}"
+            }
+          },
+          "metadata": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.default.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.default.bg-hover}"
+            }
+          },
+          "decoration": {
+            "folder": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.color.default.bg-active}"
@@ -4866,12 +4874,6 @@
                   "$value": "{basis.color.default.bg-active}"
                 }
               }
-            }
-          },
-          "paper": {
-            "background-color": {
-              "$type": "color",
-              "$value": "#ffffff"
             }
           }
         }
