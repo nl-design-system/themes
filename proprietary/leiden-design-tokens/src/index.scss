@@ -7,29 +7,77 @@
 // Include the theme mixin
 .leiden-theme {
     @include themeMixin.leiden-theme;
+
+    --of-form-navigation-save-button-fa-icon: ""; // Changes save icon to a floppy instead of right arrow.
 }
 
+/* LOGO CENTERING START */
+
+// Make the <a> element a positioning container
+.utrecht-page-header.utrecht-page-header--openforms-with-logo 
+.utrecht-page-header__openforms-return-url {
+    position: relative; // set element to relative to make the pseudo fall inside
+    background-image: none; // disable original background image
+    inline-size: auto !important; // override fixed inline size
+}
+
+// Centered frame of --utrecht-page-max-inline-size with the logo aligned left inside it
+.utrecht-page-header.utrecht-page-header--openforms-with-logo 
+.utrecht-page-header__openforms-return-url::before {
+    content: "";
+    position: absolute;
+
+    /* center the frame */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--utrecht-page-max-inline-size);
+
+    /* logo height */
+    height: var(--of-header-logo-height);
+
+    /* logo aligned left inside the centered frame */
+    background-image: var(--of-header-logo-url);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+
+    /* ensure the pseudo-element does not block clicks */
+    pointer-events: none;
+}
+
+/* LOGO CENTERING END */
+
 body.utrecht-page {
-    max-inline-size: 100%; // TODO: Use a (custom) design token if there are more items
-    background-color: var(--basis-color-default-bg-default);
-    margin-block-start: 0; // TODO: Use a (custom) design token if there are more items
-    margin-block-end: 0; // TODO: Use a (custom) design token if there are more items
+    max-inline-size: 100%; // Needed to center page content. TODO: Use a (custom) design token if there are more items
+    background-color: var(--basis-color-default-bg-default); // No token available for only this class. The default sets backgrounds for too many elements.
+    margin-block-start: 0; // Fixes Weird top margin above the header from the browsers styling rules. TODO: Use a (custom) design token if there are more items
+    margin-block-end: 0; // Fixes Weird top margin above the header from the browsers styling rules TODO: Use a (custom) design token if there are more items
 }
 
 .utrecht-page__content {
-    background-color: var(--basis-color-default-bg-default);
-    margin: 0 auto; // TODO: Use a (custom) design token if there are more items
+    background-color: var(--basis-color-default-bg-default); // No token available for only this class. The default sets backgrounds for too many elements.
+    margin: 0 auto; // Needed to center page content. TODO: Use a (custom) design token if there are more items
 }
 
 .openforms-app__body {
-    background: var(--basis-color-default-inverse-color-document);
+    background: var(--basis-color-default-inverse-color-document); // Sets background color of the app to white.
 }
 
-.openforms-app__progress-indicator .openforms-progress-indicator {
-    background: var(--basis-color-default-inverse-color-document);
+/* File upload - Drag zone */
+.utrecht-form-field.utrecht-form-field--file .fileSelector {
+    border-radius: var(--basis-form-control-border-radius); // Interactive elements should have a border radius. No token available to set border radius.
 }
 
+/* Button Primary - Icon color */
+button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
+    color: currentColor; // Reason: the submit variation doesn't set a color for the icon
+}
 
+/* Footer - Link list padding-left */
+.utrecht-page-footer ul.utrecht-link-list {
+    padding-inline-start: 0; // Reason: No token available to disable padding.
+}
 
 /* START WYSIWYG Editor */
 
@@ -192,7 +240,7 @@ body.utrecht-page {
 
 // editgrid - fieldset items
 .openforms-editgrid .openforms-editgrid__item {
-    background: var(--basis-color-default-bg-default);
+    background: var(--basis-color-default-bg-default); // No token available to set background for fieldset items inside a repeater field.
 }
 
 /* TODO: Check if there are design tokens for the styling below
