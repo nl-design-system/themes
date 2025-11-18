@@ -21,14 +21,14 @@ De volgende tokens zijn hernoemd in Case Card component:
 
 Read-only --> Archived
 
-- `todo.case-card.heading.read-only.color` naar `todo.case-card.heading.archived.color`
+- `todo.case-card.heading.read-only.color` naar `todo.case-card.archived.heading.color`
 - `todo.case-card.read-only.background-color` naar `todo.case-card.archived.background-color`
 - `todo.case-card.read-only.color` naar `todo.case-card.archived.color`
 - `todo.case-card.read-only.active.background-color` naar `todo.case-card.archived.active.background-color`
 - `todo.case-card.read-only.hover.background-color` naar `todo.case-card.archived.hover.background-color`
-- `todo.case-card.decoration.folder.read-only.background-color` naar `todo.case-card.decoration.folder.archived.background-color`
-- `todo.case-card.decoration.folder.read-only.active.background-color` naar `todo.case-card.decoration.folder.archived.active.background-color`
-- `todo.case-card.decoration.folder.read-only.hover.background-color` naar `todo.case-card.decoration.folder.archived.hover.background-color`
+- `todo.case-card.decoration.folder.read-only.background-color` naar `todo.case-card.archived.decoration.folder.background-color`
+- `todo.case-card.decoration.folder.read-only.active.background-color` naar `todo.case-card.archived.decoration.folder.active.background-color`
+- `todo.case-card.decoration.folder.read-only.hover.background-color` naar `todo.case-card.archived.decoration.folder.hover.background-color`
 
 Focus-visible naar Focus
 
