@@ -11225,8 +11225,10 @@
     "of": {
       "typography": {
         "sans-serif": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          }
         }
       },
       "header-logo": {
@@ -11285,7 +11287,7 @@
       },
       "utrecht": {
         "form-field": {
-          "description-error": {
+          "description-errors": {
             "font-weight": {
               "$type": "fontWeights",
               "$value": "{basis.text.font-weight.bold}"
@@ -11398,7 +11400,7 @@
       },
       "action": {
         "activate": {
-          "cursos": {
+          "cursor": {
             "$type": "other",
             "$value": "{basis.action.activate.cursor}"
           }
