@@ -2982,7 +2982,152 @@
       }
     }
   },
-  "components/avatar": {
+  "components/avatar/amsterdam": {
+    "ams": {
+      "avatar": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.accent-1-inverse.bg-default}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.transparent}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.accent-1-inverse.color-default}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "aspect-ratio": {
+          "$type": "other",
+          "$value": "1 / 1",
+          "$description": "[code-only]"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid"
+        },
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-inline-size}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "has-image": {
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-inline-size}"
+          }
+        },
+        "azure": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.info-inverse.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.info-inverse.color-default}"
+          }
+        },
+        "green": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.positive-inverse.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.positive-inverse.color-default}"
+          }
+        },
+        "lime": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight-inverse.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight-inverse.color-default}"
+          }
+        },
+        "magenta": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1-inverse.color-default}"
+          }
+        },
+        "orange": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.warning-inverse.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.warning-inverse.color-default}"
+          }
+        },
+        "yellow": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight-inverse.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.highlight-inverse.color-default}"
+          }
+        }
+      }
+    }
+  },
+  "components/avatar/todo": {
     "todo": {
       "avatar": {
         "background-color": {
@@ -13464,7 +13609,8 @@
       "components/accordion",
       "components/action-group",
       "components/alert",
-      "components/avatar",
+      "components/avatar/amsterdam",
+      "components/avatar/todo",
       "components/backdrop",
       "components/blockquote",
       "components/breadcrumb-nav/utrecht",
