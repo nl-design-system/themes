@@ -9,7 +9,7 @@ De volgende tokens zijn toegevoegd aan Case Card component:
 - `todo.case-card.description.font-size`
 - `todo.case-card.description.font-weight`
 - `todo.case-card.description.line-height`
-- `todo.case-card.description.archived.color`
+- `todo.case-card.archived.description.color`
 - `todo.case-card.metadata.color`
 - `todo.case-card.metadata.font-family`
 - `todo.case-card.metadata.font-size`
