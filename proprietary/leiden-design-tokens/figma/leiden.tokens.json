@@ -11283,6 +11283,10 @@
             "$type": "color",
             "$value": "{basis.color.default.color-subtle}"
           }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{basis.color.default-inverse.color-document}"
         }
       },
       "utrecht": {
@@ -11313,6 +11317,14 @@
                 "$type": "dimension",
                 "$value": "{basis.space.block.lg}"
               }
+            }
+          }
+        },
+        "page": {
+          "footer": {
+            "max-inline-size": {
+              "$type": "dimension",
+              "$value": "{utrecht.page.max-inline-size}"
             }
           }
         }
@@ -11356,6 +11368,28 @@
             }
           }
         }
+      },
+      "progress": {
+        "indicator": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-document}"
+          }
+        }
+      },
+      "card": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default-inverse.color-document}"
+        }
+      },
+      "form-field": {
+        "container": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.4xl}"
+          }
+        }
       }
     }
   },
@@ -11376,6 +11410,44 @@
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.transparent}"
+        },
+        "header": {
+          "block": {
+            "end": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.lg}"
+            },
+            "start": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.lg}"
+            }
+          }
+        },
+        "content": {
+          "padding": {
+            "block": {
+              "end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.3xl}"
+              },
+              "start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.3xl}"
+              }
+            }
+          }
+        },
+        "footer": {
+          "block": {
+            "end": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.lg}"
+            },
+            "start": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.lg}"
+            }
+          }
         }
       },
       "page-color": {
@@ -11417,6 +11489,26 @@
           "inline-end": {
             "$type": "dimension",
             "$value": "{basis.space.inline.md}"
+          }
+        }
+      },
+      "button": {
+        "primary-action": {
+          "border": {
+            "width": {
+              "$type": "dimension",
+              "$value": "{basis.size.5xs}"
+            }
+          }
+        }
+      },
+      "form": {
+        "fieldset": {
+          "legend": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
           }
         }
       }
