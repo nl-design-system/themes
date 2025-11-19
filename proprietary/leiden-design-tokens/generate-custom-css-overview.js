@@ -1,3 +1,5 @@
+// TODO: Custom Token overrides inside the .leiden-theme are not added to the json.
+
 const fs = require('fs');
 const path = require('path');
 
