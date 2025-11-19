@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const inputFile = path.join(__dirname, 'src', 'index.scss');
-const outputFile = path.join(__dirname, 'custom-css-overview.json');
+const outputFile = path.join(__dirname, 'dist', 'custom-css-overview.json');
 
 const fileContent = fs.readFileSync(inputFile, 'utf-8');
 const lines = fileContent.split(/\r?\n/);
