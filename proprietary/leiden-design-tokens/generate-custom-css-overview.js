@@ -4,24 +4,51 @@ const path = require('path');
 const inputFile = path.join(__dirname, 'src', 'index.scss');
 const outputFile = path.join(__dirname, 'dist', 'custom-css-overview.json');
 
-const fileContent = fs.readFileSync(inputFile, 'utf-8');
-const lines = fileContent.split(/\r?\n/);
-
+const lines = fs.readFileSync(inputFile, 'utf-8').split(/\r?\n/);
 const overrides = [];
 
+// Parser state
 let insideComment = false;
 let isCustomOverride = false;
 let currentComment = null;
-let selectorBuffer = [];
-let collectingSelector = false;
 let collectingRules = false;
-let ruleBuffer = [];
+let selectorBuffer = [];
 let openBraces = 0;
+let blockStack = [];
 
 for (let line of lines) {
     const trimmed = line.trim();
 
-    // Start van een comment
+    // Detect opening of a CSS block
+    if (trimmed.endsWith('{')) {
+        const selectorLine = selectorBuffer.join(' ') + ' ' + trimmed.replace('{','').trim();
+        selectorBuffer = []; // reset buffer
+        blockStack.push(selectorLine.trim());
+    }
+
+    // Detect closing of a CSS block
+    if (trimmed.endsWith('}')) {
+        blockStack.pop();
+        if (collectingRules) {
+            openBraces -= 1;
+            if (openBraces <= 0) {
+                overrides.push(currentComment);
+                currentComment = null;
+                collectingRules = false;
+                openBraces = 0;
+            }
+        }
+    }
+
+    processLine(trimmed, blockStack.join(' > '));
+}
+
+// Write JSON
+fs.writeFileSync(outputFile, JSON.stringify(overrides, null, 4));
+console.log(`JSON overzicht gemaakt: ${outputFile}`);
+
+function processLine(trimmed, context) {
+    // Start comment
     if (trimmed.startsWith('/*')) {
         insideComment = true;
         isCustomOverride = false;
@@ -32,16 +59,16 @@ for (let line of lines) {
             safeToRemove: '',
             lastVerified: '',
             selectors: [],
-            css: [] // hier als array
+            css: [],
+            context: context
         };
-        continue;
+        selectorBuffer = [];
+        return;
     }
 
-    // Binnen een comment
+    // Inside comment
     if (insideComment) {
-        if (trimmed.includes('CUSTOM OVERRIDE')) {
-            isCustomOverride = true;
-        }
+        if (trimmed.includes('CUSTOM OVERRIDE')) isCustomOverride = true;
 
         if (isCustomOverride) {
             const reasonMatch = trimmed.match(/\* Reason:\s*(.*)/);
@@ -60,52 +87,29 @@ for (let line of lines) {
         if (trimmed.endsWith('*/')) {
             insideComment = false;
             if (isCustomOverride) {
-                collectingSelector = true;
-                selectorBuffer = [];
+                collectingRules = true;
+                openBraces = 0; // reset voor de eerste CSS block
             }
         }
-
-        continue;
+        return;
     }
 
-    // Collect selectors na comment
-    if (collectingSelector) {
-        if (trimmed.length === 0 || trimmed.startsWith('//')) continue;
-
-        selectorBuffer.push(trimmed.replace('{', '').trim());
-
+    // Collect selector regels over meerdere lijnen
+    if (collectingRules && trimmed.length > 0) {
         if (trimmed.endsWith('{')) {
-            const fullSelector = selectorBuffer.join(' ').split(',').map(s => s.trim()).filter(Boolean);
-            currentComment.selectors = fullSelector;
-
-            collectingSelector = false;
-            collectingRules = true;
-            ruleBuffer = [];
-            openBraces = 1; // eerste '{' geteld
-            continue;
+            const selectorLine = selectorBuffer.join(' ') + ' ' + trimmed.replace('{','').trim();
+            selectorBuffer = [];
+            const selectors = selectorLine.split(',').map(s => s.trim()).filter(Boolean);
+            currentComment.selectors = currentComment.selectors.concat(selectors);
+            openBraces += 1;
+        } else if (!trimmed.endsWith('}') && !trimmed.startsWith('//')) {
+            // verzamel selector regels totdat '{' verschijnt
+            selectorBuffer.push(trimmed);
         }
-    }
 
-    // Collect CSS regels
-    if (collectingRules) {
-        openBraces += (trimmed.match(/{/g) || []).length;
-        openBraces -= (trimmed.match(/}/g) || []).length;
-
-        // Voeg niet lege regels toe aan de array, sluit-accolades negeren
-        if (trimmed.length > 0 && trimmed !== '}') {
+        // Voeg CSS regels toe (niet de selectors zelf)
+        if (trimmed.includes(':') || trimmed.startsWith('--')) {
             currentComment.css.push(trimmed);
-        }
-
-        if (openBraces === 0) {
-            overrides.push(currentComment);
-
-            currentComment = null;
-            ruleBuffer = [];
-            collectingRules = false;
         }
     }
 }
-
-// Schrijf JSON bestand
-fs.writeFileSync(outputFile, JSON.stringify(overrides, null, 4));
-console.log(`JSON overzicht gemaakt: ${outputFile}`);
