@@ -2,7 +2,7 @@
 "@nl-design-system-unstable/start-design-tokens": major
 ---
 
-De volgende tokens zijn toegevoegd aan Case Card component:
+De volgende tokens zijn toegevoegd aan Case Card component...
 
 - `todo.case-card.description.color`
 - `todo.case-card.description.font-family`
