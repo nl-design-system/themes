@@ -24,7 +24,8 @@
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
     "build": "npm-run-all clean build:**",
     "build:style-dictionary": "node ./style-dictionary.mjs",
-    "build:scss": "sass --no-source-map src/:dist/ --pkg-importer=node"
+    "build:scss": "sass --no-source-map src/:dist/ --pkg-importer=node",
+    "build:custom-css-overview": "node generate-custom-css-overview.js"
   },
   "devDependencies": {
     "@nl-design-system-unstable/design-tokens-table-react": "workspace:*",
