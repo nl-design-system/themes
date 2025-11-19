@@ -7,7 +7,15 @@
 .leiden-theme {
     @include themeMixin.leiden-theme;
 
-    --of-form-navigation-save-button-fa-icon: ""; // Changes save icon to a floppy instead of right arrow.
+    /*
+    * CUSTOM OVERRIDE
+    * Reason: Wrong icon on the save form link; missing feature in NLDS or OF.
+    * Related Component: openforms-form-navigation-save-button
+    * Upstream Issue: TODO - create an issue
+    * Safe to remove when: OF changed the default icon
+    * Last verified: 2025-11-19 (OF 3.3.4)
+    */
+    --of-form-navigation-save-button-fa-icon: "";
 }
 
 /*
