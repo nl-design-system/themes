@@ -4,50 +4,51 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-// Include the theme mixin
 .leiden-theme {
     @include themeMixin.leiden-theme;
 
     --of-form-navigation-save-button-fa-icon: ""; // Changes save icon to a floppy instead of right arrow.
 }
 
-/* LOGO CENTERING START */
-
-// Make the <a> element a positioning container
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Center the Open Forms logo inside the header; missing feature in NLDS or OF.
+ * Related Component: utrecht-page-header / logo alignment
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes centered left-aligned logo slot OR alignment token.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .utrecht-page-header.utrecht-page-header--openforms-with-logo 
 .utrecht-page-header__openforms-return-url {
-    position: relative; // set element to relative to make the pseudo fall inside
-    background-image: none; // disable original background image
-    inline-size: auto !important; // override fixed inline size
+    position: relative;
+    background-image: none;
+    inline-size: auto !important;
 }
 
-// Centered frame of --utrecht-page-max-inline-size with the logo aligned left inside it
 .utrecht-page-header.utrecht-page-header--openforms-with-logo 
 .utrecht-page-header__openforms-return-url::before {
     content: "";
     position: absolute;
-
-    /* center the frame */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     max-width: var(--utrecht-page-max-inline-size);
-
-    /* logo height */
     height: var(--of-header-logo-height);
-
-    /* logo aligned left inside the centered frame */
     background-image: var(--of-header-logo-url);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
-
-    /* ensure the pseudo-element does not block clicks */
     pointer-events: none;
 }
 
-/* LOGO CENTERING END */
-
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Center the Open Forms content containers; missing feature in NLDS or OF.
+ * Related Component: utrecht-page / utrecht-page-content / openforms-app-body / alignment
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes alignment tokens.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 body.utrecht-page {
     max-inline-size: 100%; // Needed to center page content. TODO: Use a (custom) design token if there are more items
     background-color: var(--basis-color-default-bg-default); // No token available for only this class. The default sets backgrounds for too many elements.
@@ -64,112 +65,209 @@ body.utrecht-page {
     background: var(--basis-color-default-inverse-color-document); // Sets background color of the app to white.
 }
 
-/* File upload - Drag zone */
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Interactive elements should have a border radius in our design; missing feature in NLDS or OF.
+ * Related Component: file-upload-drop-zone
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes border-radius tokens for the drag zone.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .utrecht-form-field.utrecht-form-field--file .fileSelector {
     border-radius: var(--basis-form-control-border-radius); // Interactive elements should have a border radius. No token available to set border radius.
 }
 
-/* Button Primary - Icon color */
+/*
+ * CUSTOM OVERRIDE
+ * Reason: The buttons submit variation doesn't set a color for the icon; missing feature in NLDS or OF.
+ * Related Component: utrecht-button-submit
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a color for the icon.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
-    color: currentColor; // Reason: the submit variation doesn't set a color for the icon
+    color: currentColor; 
 }
 
-/* Footer - Link list padding-left */
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No token available to set de padding inline start; missing feature in NLDS or OF.
+ * Related Component: utrecht-link-list
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the padding-inline-start for the icon.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .utrecht-page-footer ul.utrecht-link-list {
-    padding-inline-start: 0; // Reason: No token available to disable padding.
+    padding-inline-start: 0;
 }
 
-/* START WYSIWYG Editor */
-
-// Content
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-family for the WYSIWYG content; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-family on the WYSIWYG content component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content {
     font-family: var(--basis-text-font-family-default);
 }
 
-// Heading 1 - H2
-// .openforms-formio-content h1 {
-//     font-family: variables.$basis-heading-font-family;
-//     font-size: variables.$basis-text-font-size-3xl;
-//     line-height: variables.$basis-text-line-height-3xl;
-//     font-weight: variables.$basis-heading-font-weight;
-//     // letter-spacing: variables.$typography-heading-1-letter-spacing;
-//     // text-decoration: variables.$typography-heading-1-text-decoration;
-//     // color: variables.$utrecht-heading-1-color;
-// }
-// Heading 2 - H1
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-family, font-size, line-height and font-weight for the WYSIWYG heading 2; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-heading-2
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-family, font-size, line-height and font-weight on the WYSIWYG heading 2 component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content h2 {
     font-family: var(--basis-heading-font-family);
     font-size: var(--basis-text-font-size-2xl);
     line-height: var(--basis-text-line-height-2xl);
     font-weight: var(--basis-heading-font-weight);
-    // letter-spacing: variables.$typography-heading-2-letter-spacing;
-    // text-decoration: variables.$typography-heading-2-text-decoration;
-    // color: variables.$utrecht-heading-2-color;
 }
-// Heading 3 - H2
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-family, font-size, line-height and font-weight for the WYSIWYG heading 3; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-heading-3
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-family, font-size, line-height and font-weight on the WYSIWYG heading 3 component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content h3 {
     font-family: var(--basis-heading-font-family);
     font-size: var(--basis-text-font-size-xl);
     line-height: var(--basis-text-line-height-xl);
     font-weight: var(--basis-heading-font-weight);
-    // letter-spacing: var(--typography-heading-3-letter-spacing);
-    // text-decoration: var(--typography-heading-3-text-decoration);
-    // color: variables.$utrecht-heading-3-color;
 }
-// Heading 4 - H3
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-family, font-size, line-height and font-weight for the WYSIWYG heading 4; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-heading-4
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens for the font-family, font-size, line-height and font-weight on the WYSIWYG heading 4 component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content h4 {
     font-family: var(--basis-heading-font-family);
     font-size: var(--basis-text-font-size-lg);
     line-height: var(--basis-text-line-height-lg);
     font-weight: var(--basis-heading-font-weight);
-    // letter-spacing: variables.$typography-heading-4-letter-spacing;
-    // text-decoration: variables.$typography-heading-4-text-decoration;
-    // color: variables.$utrecht-heading-3-color;
 }
 
-// Paragraph
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-family and font-size for the WYSIWYG paragraph; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-paragraph
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-family and font-size on the WYSIWYG paragraph component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content p {
     font-family: var(--basis-text-font-family-default);
     font-size: var(--basis-text-font-size-md);
 }
 
-// // Link hover
-// .openforms-formio-content a:hover {
-//     // color: variables.$color-red-50;
-// }
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set color for the WYSIWYG link hovers; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-link
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the hovers on the WYSIWYG link component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
+.openforms-formio-content a {
+    color: var(--nl-link-color);
+    text-decoration: var(--nl-link-text-decoration-line);
+}
+.openforms-formio-content a:hover {
+    color: var(--nl-link-hover-color);
+}
 
-// Text Tiny
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-size for the WYSIWYG text tiny component; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-text-tiny
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-size on the WYSIWYG text tiny component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content span.text-tiny {
     font-size: calc(var(--basis-text-font-size-sm) - 0.125rem);
 }
-// Text Small
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-size for the WYSIWYG text small component; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-text-small
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-size on the WYSIWYG text small component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content span.text-small {
     font-size: var(--basis-text-font-size-sm);
 }
-// Text Big
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-size for the WYSIWYG text big component; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-text-big
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-size on the WYSIWYG text big component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content span.text-big {
     font-size: var(--basis-text-font-size-lg);
 }
-// // Text Huge
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-size for the WYSIWYG text huge component; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-text-huge
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-size on the WYSIWYG text huge component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content span.text-huge {
     font-size: var(--basis-text-font-size-xl);
 }
 
-// Unordered list
-// Ordered list
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to set font-family for the WYSIWYG (un)ordered lists; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-(un)ordered-lists
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for the font-family on the WYSIWYG (un)ordered lists.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content ul,
 .openforms-formio-content ol {
     font-family: var(--basis-text-font-family-default);
 }
 
-// Caption
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the WYSIWYG figcaption; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content-figcaption
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG figcaption.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content figcaption {
     font-family: var(--basis-text-font-family-default);
-    // font-size: variables.$typography-font-size-sm;
-    // color: variables.$color-grey-50;
 }
 
-// // Blockquote
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the WYSIWYG blockquote; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content-blockquote
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG blockquote.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 // .openforms-formio-content blockquote {
 //     // font-size: variables.$typography-font-size-lg;
 //     // border-left: variables.$border-width-md variables.$border-style-solid variables.$color-red-40;
@@ -182,6 +280,14 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 // // TODO: Table with header column
 // // TODO: Table with both
 
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the WYSIWYG tables; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content-table
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG table.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content table {
     font-family: var(--basis-text-font-family-default);
 }
@@ -216,35 +322,75 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 // // Embedded video
 // // BUG: Shows url and not the embedded video
 
-// Content info
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the WYSIWYG info; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content-info
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG info.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content.openforms-formio-content--info {
     border-inline-start-color: var(--basis-color-info-border-default);
 }
 
-// Content warning
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the WYSIWYG warning; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content-info
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG warning.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content.openforms-formio-content--warning {
     border-inline-start-color: var(--basis-color-warning-border-default);
 }
 
-// Content error
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the WYSIWYG error; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content-error
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG error.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content.openforms-formio-content--error {
     border-inline-start-color: var(--basis-color-negative-border-default);
 }
 
-// Content success
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the WYSIWYG success; missing feature in NLDS or OF.
+ * Related Component: openforms-formio-content-success
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG success.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-formio-content.openforms-formio-content--success {
     border-inline-start-color: var(--basis-color-positive-border-default);
 }
 
 /* END WYSIWYG Editor */
 
-// editgrid - fieldset items
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the editgrid items; missing feature in NLDS or OF.
+ * Related Component: openforms-editgrid-item / repeater
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the editgrid items component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
 .openforms-editgrid .openforms-editgrid__item {
-    background: var(--basis-color-default-bg-default); // No token available to set background for fieldset items inside a repeater field.
+    background: var(--basis-color-default-bg-default);
 }
 
-/* TODO: Check if there are design tokens for the styling below
- * TODO: Check if nested fieldsets are working as expected
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the fieldsets; missing feature in NLDS or OF.
+ * Related Component: openforms-fieldset
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens on the fieldsets.
+ * Last verified: 2025-11-19 (OF 3.3.4)
  */
 // fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
 //     padding: 1rem;
@@ -262,20 +408,4 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 // //     top: 3rem;
 // //     color: #101920;
 // //     font-weight: 700;
-// // }
-
-// // .utrecht-page__content.utrecht-page-content {
-// //     // background: variables.$of-layout-bg;
-// //     max-inline-size: 1200px;
-// //     margin: 0 auto;
-// // }
-
-// /*  You may want to specify a background color for the .utrecht-page selector. 
-//     Open Forms currently falls back to --of-layout-background-color, but if you
-//     have a custom theme this will not be picked up. 
-
-//     @doc https://open-forms.readthedocs.io/en/3.0.3/installation/upgrade-250.html#page
-// */
-// // body.utrecht-page {
-// //     background: variables.$of-layout-bg;
 // // }
