@@ -99,14 +99,16 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 
 /*
  * CUSTOM OVERRIDE
- * Reason: No token available to set de padding inline start; missing feature in NLDS or OF.
+ * Reason: No token available to style the footer; missing feature in NLDS or OF.
  * Related Component: utrecht-link-list
  * Upstream Issue: TODO - create an issue
- * Safe to remove when: OF or NLDS includes a token for the padding-inline-start for the icon.
+ * Safe to remove when: OF or NLDS include tokens for the footer.
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .utrecht-page-footer ul.utrecht-link-list {
     padding-inline-start: 0;
+    flex-direction: row;
+    column-gap: var(--basis-space-column-3xl);
 }
 
 /*
@@ -299,33 +301,32 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 .openforms-formio-content table {
     font-family: var(--basis-text-font-family-default);
 }
-
-// .openforms-formio-content figure.table {
-//     margin: 0;
-// }
-// .openforms-formio-content table {
-//     // font-size: variables.$typography-font-size-sm;
-//     width: 100%;
-// }
-// .openforms-formio-content table th {
-//     // background-color: variables.$color-black;
-//     // color: variables.$color-white;
-//     // font-weight: variables.$typography-font-weight-bold;
-//     // padding: variables.$space-block-sm;
-//     border: 0;
-// }
-// .openforms-formio-content table tr {
-//   border: 0;
-// }
-// .openforms-formio-content table tr:nth-of-type(odd) {
-//     // background-color: variables.$color-grey-40;
-// }
-// .openforms-formio-content table tr:last-child {
-//   border: 0;
-// }
-// .openforms-formio-content table td {
-//     // padding: variables.$space-block-sm;
-// }
+.openforms-formio-content figure.table {
+    margin: 0;
+}
+.openforms-formio-content table {
+    font-size: var(--basis-text-font-size-sm);
+    width: 100%;
+}
+.openforms-formio-content table th {
+    background-color: var(--basis-color-default-color-document);
+    color: var(--basis-color-action-1-inverse-color-default);
+    font-weight: var(--basis-text-font-weight-bold);
+    padding: var(--basis-space-block-lg);
+    border: 0;
+}
+.openforms-formio-content table tr {
+  border: 0;
+}
+.openforms-formio-content table tr:nth-of-type(odd) {
+    background-color: var(--basis-color-default-bg-default);
+}
+.openforms-formio-content table tr:last-child {
+  border: 0;
+}
+.openforms-formio-content table td {
+    padding: var(--basis-space-block-lg);
+}
 
 // // Embedded video
 // // BUG: Shows url and not the embedded video
@@ -392,6 +393,10 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
     background: var(--basis-color-default-bg-default);
 }
 
+.openforms-editgrid .openforms-editgrid__item:not(:last-of-type) {
+    margin-block-end: var(--basis-space-column-xl);
+}
+
 /*
  * CUSTOM OVERRIDE
  * Reason: No option to style the fieldsets; missing feature in NLDS or OF.
@@ -400,20 +405,107 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Safe to remove when: OF or NLDS includes tokens on the fieldsets.
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
-// fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
-//     padding: 1rem;
-//     border: 0;
-//     box-sizing: border-box;
-// }
-// fieldset.openforms-fieldset:not(.openforms-fieldset--no-header):has(:not(.openforms-fieldset)) {
-//     background: var(--basis-color-default-bg-default);
-// }
+fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
+    padding-block-start: var(--basis-space-block-4xl);
+    padding-block-end: var(--basis-space-block-xl);
+    padding-inline-start: var(--basis-space-inline-xl);
+    padding-inline-end: var(--basis-space-inline-xl);
+    box-sizing: border-box;
+    border: 0;
+}
+fieldset.openforms-fieldset:not(.openforms-fieldset--no-header):has(:not(.openforms-fieldset)) {
+    background-color: var(--basis-color-default-bg-default);
+}
+fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) > .openforms-form-field-container > div > fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
+    background-color: var(--basis-color-default-inverse-color-document);
+}
+fieldset.openforms-fieldset .openforms-form-field-container {
+    gap: var(--basis-space-column-md);
+}
+.openforms-fieldset .openforms-fieldset__legend {
+    position: relative;
+    top: var(--basis-size-xs);
+    margin-inline-start: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    font-family: var(--basis-heading-font-family);
+    font-weight: var(--basis-heading-font-weight);
+}
 
-// // .openforms-fieldset legend.openforms-legend {
-// //     margin: 0;
-// //     padding: 0 0 3rem 0;
-// //     position: relative;
-// //     top: 3rem;
-// //     color: #101920;
-// //     font-weight: 700;
-// // }
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Interactive elements should have a border-radius; missing feature in NLDS or OF.
+ * Related Component: openforms-leaflet-map
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a border-radius token on the leaflet map component.
+ * Last verified: 2025-11-20 (OF 3.3.4)
+ */
+.openforms-leaflet-map {
+    border-radius: var(--basis-form-control-border-radius);
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Headings should be bold; missing feature in NLDS or OF.
+ * Related Component: openforms-progress-indicator openforms-caption
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a font-weight token for the h2 inside the progress indicator component.
+ * Last verified: 2025-11-20 (OF 3.3.4)
+ */
+.openforms-progress-indicator h2.openforms-caption {
+    font-weight: var(--basis-heading-font-weight);
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Field blocks don't align with submit button; missing feature in NLDS or OF.
+ * Related Component: openforms-multi-value-table
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a border-spacing token for this component.
+ * Last verified: 2025-11-20 (OF 3.3.4)
+ */
+.openforms-multi-value-table {
+        border-spacing: 0;
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Align remove field icon with the end of the field; missing feature in NLDS or OF.
+ * Related Component: openforms-multi-value-row-input
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a token for this component.
+ * Last verified: 2025-11-20 (OF 3.3.4)
+ */
+ .openforms-multi-value-row__input {
+    max-width: 25rem;
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Field blocks don't align with submit button; missing feature in NLDS or OF.
+ * Related Component: openforms-multi-value-table
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes a border-spacing token for this component.
+ * Last verified: 2025-11-20 (OF 3.3.4)
+ */
+.openforms-progress-indicator .utrecht-link--placeholder {
+    --_utrecht-link-state-color: var(--basis-form-control-disabled-color);
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Choices button in a selection field missing style; missing feature in NLDS or OF.
+ * Related Component: utrecht-form-field-select
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens or a fix for this component.
+ * Last verified: 2025-11-20 (OF 3.3.4)
+ */
+[ref=component]>.utrecht-form-field.utrecht-form-field--select .selection .choices__item {
+    background-color: var(--basis-form-control-accent-color);
+    border-radius: var(--basis-form-control-border-radius);
+    line-height: var(--basis-text-line-height-more-space);
+}
+.choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+    border-left: 0;
+    margin-left: 0;
+}
