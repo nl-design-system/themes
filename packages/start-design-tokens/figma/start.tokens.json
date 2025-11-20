@@ -10677,47 +10677,41 @@
             "$value": "pointer",
             "$description": "[code-only]"
           },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.default}"
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
             "$value": "{basis.text.font-size.md}"
           },
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{basis.text.font-family.default}"
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
           },
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
           },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.lg}"
-          },
           "padding-block-end": {
             "$type": "dimension",
             "$value": "{basis.space.block.lg}"
           },
-          "padding-inline-start": {
+          "padding-block-start": {
             "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
+            "$value": "{basis.space.block.lg}"
           },
           "padding-inline-end": {
             "$type": "dimension",
             "$value": "{basis.space.block.xl}"
           },
-          "selected": {
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-document}"
-            }
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "outline": {
+            "$type": "other",
+            "$value": "0px"
           },
           "hover": {
             "color": {
@@ -10731,9 +10725,15 @@
               "$value": "{basis.focus.color}"
             }
           },
-          "outline": {
-            "$type": "other",
-            "$value": "0px"
+          "selected": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
           }
         },
         "tab-indicator": {
@@ -10751,15 +10751,15 @@
           }
         },
         "tab-panel": {
-          "padding-block-start": {
-            "$type": "dimension",
+          "outline": {
+            "$type": "other",
             "$value": "0px"
           },
           "padding-block-end": {
             "$type": "dimension",
             "$value": "0px"
           },
-          "padding-inline-start": {
+          "padding-block-start": {
             "$type": "dimension",
             "$value": "0px"
           },
@@ -10767,8 +10767,8 @@
             "$type": "dimension",
             "$value": "0px"
           },
-          "outline": {
-            "$type": "other",
+          "padding-inline-start": {
+            "$type": "dimension",
             "$value": "0px"
           }
         }
