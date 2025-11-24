@@ -10642,7 +10642,113 @@
       }
     }
   },
-  "components/tabs": {
+  "components/tabs/amsterdam": {
+    "ams": {
+      "tabs": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.3xl}"
+        },
+        "button": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "pointer",
+            "$description": "[code-only]"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "0px"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "hover": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "",
+                "y": "-{basis.border-width.md}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.hover.color}",
+                "type": "innerShadow"
+              }
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            }
+          },
+          "selected": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.md}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            },
+            "cursor": {
+              "$type": "other",
+              "$value": "not-allowed"
+            }
+          }
+        },
+        "list": {
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "-{basis.border-width.sm}",
+              "blur": "0",
+              "spread": "0",
+              "color": "{basis.color.default.border-subtle}",
+              "type": "innerShadow"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/tabs/den-haag": {
     "denhaag": {
       "tabs": {
         "border-color": {
@@ -10703,11 +10809,11 @@
           },
           "padding-inline-end": {
             "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
+            "$value": "{basis.space.inline.xl}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
+            "$value": "{basis.space.inline.xl}"
           },
           "outline": {
             "$type": "other",
@@ -13732,7 +13838,8 @@
       "components/step-marker",
       "components/switch",
       "components/table",
-      "components/tabs",
+      "components/tabs/amsterdam",
+      "components/tabs/den-haag",
       "components/task-card",
       "components/task-list",
       "components/task-navigation",
