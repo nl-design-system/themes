@@ -10688,20 +10688,20 @@
             "$value": "{basis.space.inline.xl}"
           },
           "hover": {
-            "box-shadow": {
-              "$type": "boxShadow",
-              "$value": {
-                "x": "",
-                "y": "-{basis.border-width.md}",
-                "blur": "0",
-                "spread": "0",
-                "color": "{ams.tabs.button.hover.color}",
-                "type": "innerShadow"
-              }
-            },
             "color": {
               "$type": "color",
               "$value": "{basis.color.action-2.color-hover}"
+            },
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.md}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
             }
           },
           "selected": {
@@ -10709,7 +10709,7 @@
               "$type": "boxShadow",
               "$value": {
                 "x": "0",
-                "y": "-{basis.border-width.md}",
+                "y": "- {basis.border-width.md}",
                 "blur": "0",
                 "spread": "0",
                 "color": "{ams.tabs.button.color}",
