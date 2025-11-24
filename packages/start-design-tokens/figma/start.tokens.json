@@ -10696,29 +10696,12 @@
               "$type": "boxShadow",
               "$value": {
                 "x": "0",
-                "y": "-{basis.border-width.md}",
+                "y": "-{basis.border-width.lg}",
                 "blur": "0",
                 "spread": "0",
                 "color": "{ams.tabs.button.color}",
                 "type": "innerShadow"
               }
-            }
-          },
-          "selected": {
-            "box-shadow": {
-              "$type": "boxShadow",
-              "$value": {
-                "x": "0",
-                "y": "- {basis.border-width.md}",
-                "blur": "0",
-                "spread": "0",
-                "color": "{ams.tabs.button.color}",
-                "type": "innerShadow"
-              }
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
             }
           },
           "disabled": {
@@ -10728,7 +10711,25 @@
             },
             "cursor": {
               "$type": "other",
-              "$value": "not-allowed"
+              "$value": "not-allowed",
+              "$description": "[code-only]"
+            }
+          },
+          "selected": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.lg}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
             }
           }
         },
@@ -10849,7 +10850,7 @@
           },
           "border-width": {
             "$type": "borderWidth",
-            "$value": "{basis.border-width.md}"
+            "$value": "{basis.border-width.lg}"
           },
           "bottom": {
             "$type": "other",
