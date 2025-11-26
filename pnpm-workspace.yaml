@@ -3,6 +3,12 @@ packages:
   - packages/components-react/*
   - proprietary/*
 
+patchedDependencies:
+  "@dynamize/color-utilities@1.0.11": "patches/@dynamize__color-utilities@1.0.11.patch"
+
+overrides:
+  form-data@>=4.0.0 <4.0.4: ">=4.0.4"
+
 autoInstallPeers: false
 
 engineStrict: true
