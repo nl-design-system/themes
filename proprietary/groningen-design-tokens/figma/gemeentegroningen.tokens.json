@@ -10086,7 +10086,7 @@
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "{basis.space.inline.xl}"
+          "$value": "{basis.space.inline.3xl}"
         },
         "item": {
           "margin-block-end": {
@@ -10191,6 +10191,160 @@
       }
     }
   },
+  "components/page-header/amsterdam": {
+    "ams": {
+      "page-header": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.3xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "medium": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.5xl}"
+          }
+        },
+        "wide": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "96px"
+          }
+        },
+        "brand-name": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1.color-document}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.xl}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.heading.font-weight}"
+          },
+          "text-wrap": {
+            "$type": "other",
+            "$value": "nowrap",
+            "$description": "[code-only]"
+          }
+        },
+        "logo-link": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.xl}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          }
+        },
+        "mega-menu-button": {
+          "cursor": {
+            "$type": "other",
+            "$value": "default",
+            "$description": "[code-only]"
+          },
+          "label": {
+            "open": {
+              "font-weight": {
+                "$type": "fontWeights",
+                "$value": "{basis.text.font-weight.bold}"
+              }
+            }
+          }
+        },
+        "menu": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.3xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.3xl}"
+          }
+        },
+        "menu-item": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-default}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.color-hover}"
+            }
+          }
+        },
+        "menu-link": {
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "text-decoration-thickness": {
+            "$type": "textDecoration",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "text-underline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "hover": {
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            }
+          }
+        },
+        "navigation": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.4xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.xl}"
+          }
+        }
+      }
+    }
+  },
   "components/page-body": {
     "utrecht": {
       "page-body": {
@@ -10224,6 +10378,135 @@
     }
   },
   "components/page-footer": {
+    "utrecht": {
+      "page-footer": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.accent-1.bg-default}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.page.max-inline-size}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.4xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.4xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.4xl}"
+          }
+        }
+      }
+    }
+  },
+  "components/page-footer/amsterdam": {
+    "ams": {
+      "page-footer": {
+        "menu": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.4xl}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          },
+          "medium": {
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.5xl}"
+            }
+          },
+          "wide": {
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "96px"
+            }
+          }
+        },
+        "menu-link": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-default}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "underline"
+          },
+          "text-decoration-thickness": {
+            "$type": "textDecoration",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "text-underline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.color-hover}"
+            },
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "None"
+            }
+          }
+        },
+        "spotlight": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
+          }
+        }
+      }
+    }
+  },
+  "components/page-footer/utrecht": {
     "utrecht": {
       "page-footer": {
         "background-color": {
@@ -12203,8 +12486,11 @@
       "components/root",
       "components/body",
       "components/page-header",
+      "components/page-header/amsterdam",
       "components/page-body",
       "components/page-footer",
+      "components/page-footer/amsterdam",
+      "components/page-footer/utrecht",
       "components/article",
       "components/listbox",
       "color-scheme-dark/common",
