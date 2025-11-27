@@ -7,24 +7,76 @@
         }
       },
       "scale": {
-        "xs": { "font-size": { "value": "12px", "comment": "md.font-size * 0.75 = 12px" } },
-        "sm": { "font-size": { "value": "14.4px", "comment": "md.font-size = 0.9 = 14.4px" } },
-        "md": { "font-size": { "value": "1rem", "comment": "16px" } },
-        "lg": { "font-size": { "value": "17.6px", "comment": "md.font-size * 1.1 = 17.6px" } },
-        "xl": { "font-size": { "value": "20px", "comment": "md.font-size * 1.25 = 20px" } },
-        "2xl": { "font-size": { "value": "20.8px", "comment": "md.font-size * 1.3 = 20.8px" } },
-        "3xl": { "font-size": { "value": "25.6px", "comment": "md.font-size * 1.6 = 25.6px" } },
-        "4xl": { "font-size": { "value": "35.2px", "comment": "md.font-size * 2.2 = 35.2px" } }
+        "xs": {
+          "font-size": {
+            "value": "0.81rem",
+            "comment": "xs font-size (base * 0.9 * 0.9)"
+          }
+        },
+        "sm": {
+          "font-size": {
+            "value": "0.9rem",
+            "comment": "small font-size (base * 0.9)"
+          }
+        },
+        "md": {
+          "font-size": {
+            "value": "1rem",
+            "comment": "base font size"
+          }
+        },
+        "lg": {
+          "font-size": {
+            "value": "1.1rem",
+            "comment": "lead font-size (base * 1.1)"
+          }
+        },
+        "xl": {
+          "font-size": {
+            "value": "1.25rem",
+            "comment": "h4-font-size (base * 1.25)"
+          }
+        },
+        "2xl": {
+          "font-size": {
+            "value": "1.3rem",
+            "comment": "h3-font-size (base * 1.3)"
+          }
+        },
+        "3xl": {
+          "font-size": {
+            "value": "1.6rem",
+            "comment": "h2-font-size (base * 1.6)"
+          }
+        },
+        "4xl": {
+          "font-size": {
+            "value": "2.2rem",
+            "comment": "h1-font-size (base * 2.2)"
+          }
+        },
+        "5xl": {
+          "font-size": {
+            "value": "2.75rem",
+            "comment": "assumed larger heading (base * 2.75)"
+          }
+        },
+        "6xl": {
+          "font-size": {
+            "value": "3.4rem",
+            "comment": "display-size (base * 3.4)"
+          }
+        }
       },
       "weight-scale": {
         "bold": { "font-weight": { "value": "700" } },
         "normal": { "font-weight": { "value": "400" } }
       },
       "line-height": {
-        "xs": { "line-height": { "value": "1" } },
-        "sm": { "line-height": { "value": "1.25" } },
-        "md": { "line-height": { "value": "1.5" } },
-        "lg": { "line-height": { "value": "1.7" } }
+        "xs": { "line-height": { "value": "1.25" } },
+        "sm": { "line-height": { "value": "1.4" } },
+        "md": { "line-height": { "value": "1.75" } },
+        "lg": { "line-height": { "value": "2" } }
       }
     }
   }
