@@ -31,6 +31,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   CASE_CARD: 'Case Card',
   PAGE_HEADER: 'Page Header',
   PAGE_FOOTER: 'Page Footer',
+  LOGIN_LINK: 'Login Link',
   MODAL_DIALOG: 'Modal Dialog',
   PAGE_NUMBER_NAVIGATION: 'Page Number Navigation',
   IMAGE: 'Image',
