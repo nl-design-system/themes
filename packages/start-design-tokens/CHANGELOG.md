@@ -1,5 +1,101 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 2.0.0
+
+### Major Changes
+
+- 6e0a690: De volgende tokens zijn toegevoegd aan Case Card component...
+
+  - `todo.case-card.description.color`
+  - `todo.case-card.description.font-family`
+  - `todo.case-card.description.font-size`
+  - `todo.case-card.description.font-weight`
+  - `todo.case-card.description.line-height`
+  - `todo.case-card.archived.description.color`
+  - `todo.case-card.metadata.color`
+  - `todo.case-card.metadata.font-family`
+  - `todo.case-card.metadata.font-size`
+  - `todo.case-card.metadata.font-weight`
+  - `todo.case-card.metadata.line-height`
+  - `todo.case-card.archived.metadata.color`
+
+  De volgende tokens zijn hernoemd in Case Card component:
+
+  Read-only --> Archived
+
+  - `todo.case-card.heading.read-only.color` naar `todo.case-card.archived.heading.color`
+  - `todo.case-card.read-only.background-color` naar `todo.case-card.archived.background-color`
+  - `todo.case-card.read-only.color` naar `todo.case-card.archived.color`
+  - `todo.case-card.read-only.active.background-color` naar `todo.case-card.archived.active.background-color`
+  - `todo.case-card.read-only.hover.background-color` naar `todo.case-card.archived.hover.background-color`
+  - `todo.case-card.decoration.folder.read-only.background-color` naar `todo.case-card.archived.decoration.folder.background-color`
+  - `todo.case-card.decoration.folder.read-only.active.background-color` naar `todo.case-card.archived.decoration.folder.active.background-color`
+  - `todo.case-card.decoration.folder.read-only.hover.background-color` naar `todo.case-card.archived.decoration.folder.hover.background-color`
+
+  Focus-visible naar Focus
+
+  - `todo.case-card.focus-visible.background-color` naar `todo.case-card.focus.background-color`
+  - `todo.case-card.focus-visible.color` naar `todo.case-card.focus.color`
+  - `todo.case-card.decoration.folder.focus-visible.background-color` naar `todo.case-card.decoration.folder.focus.background-color`
+
+### Minor Changes
+
+- e093d9e: De volgende tokens zijn toegevoegd aan Tabs component van Amsterdam:
+
+  - `ams.tabs.gap`
+  - `ams.tabs.button.color`
+  - `ams.tabs.button.cursor`
+  - `ams.tabs.button.font-family`
+  - `ams.tabs.button.font-size`
+  - `ams.tabs.button.font-weight`
+  - `ams.tabs.button.line-height`
+  - `ams.tabs.button.outline-offset`
+  - `ams.tabs.button.padding-block`
+  - `ams.tabs.button.padding-inline`
+  - `ams.tabs.button.hover.color`
+  - `ams.tabs.button.hover.box-shadow`
+  - `ams.tabs.button.disabled.color`
+  - `ams.tabs.button.disabled.cursor`
+  - `ams.tabs.button.selected.box-shadow`
+  - `ams.tabs.button.selected.font-weight`
+  - `ams.tabs.list.box-shadow`
+
+  De volgende tokens zijn toegevoegd aan Tabs component van Den Haag:
+
+  - `denhaag.tabs.border-color`
+  - `denhaag.tabs.border-width`
+  - `denhaag.tabs.border-style`
+  - `denhaag.tabs.width`
+  - `denhaag.tabs.tab.background-color`
+  - `denhaag.tabs.tab.color`
+  - `denhaag.tabs.tab.cursor`
+  - `denhaag.tabs.tab.font-family`
+  - `denhaag.tabs.tab.font-size`
+  - `denhaag.tabs.tab.font-weight`
+  - `denhaag.tabs.tab.line-height`
+  - `denhaag.tabs.tab.padding-block-end`
+  - `denhaag.tabs.tab.padding-block-start`
+  - `denhaag.tabs.tab.padding-inline-end`
+  - `denhaag.tabs.tab.padding-inline-start`
+  - `denhaag.tabs.tab.outline`
+  - `denhaag.tabs.tab.hover.color`
+  - `denhaag.tabs.tab.focus.color`
+  - `denhaag.tabs.tab.selected.color`
+  - `denhaag.tabs.tab.selected.font-weight`
+  - `denhaag.tabs.tab-indicator.border-color`
+  - `denhaag.tabs.tab-indicator.border-width`
+  - `denhaag.tabs.tab-indicator.bottom`
+  - `denhaag.tabs.tab-panel.outline`
+  - `denhaag.tabs.tab-panel.padding-block-end`
+  - `denhaag.tabs.tab-panel.padding-block-start`
+  - `denhaag.tabs.tab-panel.padding-inline-end`
+  - `denhaag.tabs.tab-panel.padding-inline-start`
+
+### Patch Changes
+
+- a957530: - Waarde van token `utrecht.pagination.relative-link.disabled.color` is gewijzigd omdat er 'curly-braces' ontbraken.
+  - De waarde was `basis.color.disabled.color-subtle` en wordt `{basis.color.disabled.color-subtle}`.
+
 ## 1.2.0
 
 ### Minor Changes
