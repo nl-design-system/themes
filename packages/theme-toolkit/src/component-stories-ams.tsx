@@ -21,6 +21,7 @@ import {
   DateInput,
   Figure,
   Image,
+  PasswordInput,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -483,5 +484,12 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <Figure.Caption>Utrecht stadskantoor</Figure.Caption>
       </Figure>
     ),
+  },
+  {
+    storyId: 'react-ams-password-input--default',
+    component: 'ams-password-input',
+    group: STORY_GROUPS['PASSWORD_INPUT'],
+    name: 'Amsterdam Password Input',
+    render: () => <PasswordInput />,
   },
 ];
