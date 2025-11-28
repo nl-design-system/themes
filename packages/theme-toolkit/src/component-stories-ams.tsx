@@ -22,6 +22,7 @@ import {
   Figure,
   Image,
   PasswordInput,
+  FileInput,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -491,5 +492,12 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['PASSWORD_INPUT'],
     name: 'Amsterdam Password Input',
     render: () => <PasswordInput />,
+  },
+  {
+    storyId: 'react-ams-file-input--default',
+    component: 'ams-file-input',
+    group: STORY_GROUPS['FILE_INPUT'],
+    name: 'Amsterdam File Input',
+    render: () => <FileInput />,
   },
 ];
