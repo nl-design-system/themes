@@ -3,9 +3,33 @@ packages:
   - packages/components-react/*
   - proprietary/*
 
+patchedDependencies:
+  "@dynamize/color-utilities@1.0.11": "patches/@dynamize__color-utilities@1.0.11.patch"
+
+overrides:
+  form-data@>=4.0.0 <4.0.4: ">=4.0.4"
+
 autoInstallPeers: false
 
 engineStrict: true
+
+# Configure pnpm so it only installs package versions that have been published on the npm registry for at least 24 hours
+# (1440 minutes). This helps mitigate the risk of supply chain attacks by avoiding newly published, potentially
+# malicious versions. Keep this in sync with npm-check-updates's `cooldown` configuration.
+minimumReleaseAge: 1440
+
+# Make an exception for trusted packages, notably our own
+minimumReleaseAgeExclude:
+  - "@amsterdam/*"
+  - "@gemeente-denhaag/*"
+  - "@gemeente-rotterdam/*"
+  - "@nl-design-system/*"
+  - "@nl-design-system-candidate/*"
+  - "@nl-design-system-community/*"
+  - "@nl-design-system-unstable/*"
+  - "@nl-rvo/*"
+  - "@rijkshuisstijl-community/*"
+  - "@utrecht/*"
 
 saveExact: true
 

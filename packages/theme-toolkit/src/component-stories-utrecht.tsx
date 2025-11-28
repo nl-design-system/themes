@@ -61,7 +61,12 @@ import {
   FormFieldErrorMessage,
   LinkList,
   Icon,
+  Image,
   ButtonGroup as ActionGroup,
+  DataList as FormSummary,
+  DataListItem as FormSummaryItem,
+  DataListKey as FormSummaryKey,
+  DataListValue as FormSummaryValue,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
@@ -135,6 +140,27 @@ export const ListboxStory = ({
       </ListboxOption>
     ))}
   </Listbox>
+);
+
+interface FormSummaryStoryProps {
+  appearance?: string | '' | 'rows';
+  items: {
+    key: ReactNode;
+    keyId?: string;
+    value: ReactNode;
+    multiline?: boolean;
+  }[];
+}
+
+const FormSummaryStory = ({ appearance, items }: FormSummaryStoryProps) => (
+  <FormSummary appearance={appearance}>
+    {items.map(({ key, keyId, value, multiline }) => (
+      <FormSummaryItem key={keyId}>
+        <FormSummaryKey id={keyId}>{key}</FormSummaryKey>
+        <FormSummaryValue multiline={multiline}>{value}</FormSummaryValue>
+      </FormSummaryItem>
+    ))}
+  </FormSummary>
 );
 
 export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
@@ -1600,7 +1626,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-unordered-list--default',
     component: 'utrecht-unordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Unordered list',
+    name: 'Utrecht Unordered List',
     render: () => (
       <UnorderedList>
         <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
@@ -1621,7 +1647,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-unordered-list--item',
     component: 'utrecht-unordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Unordered list: Item',
+    name: 'Utrecht Unordered List: Item',
     render: () => (
       <UnorderedList>
         <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
@@ -1640,7 +1666,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-unordered-list--marker',
     component: 'utrecht-unordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Unordered list: Marker',
+    name: 'Utrecht Unordered List: Marker',
     render: () => (
       <UnorderedList>
         <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
@@ -1655,7 +1681,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-utrecht-ordered-list--default',
     component: 'utrecht-ordered-list',
     group: STORY_GROUPS['LISTS'],
-    name: 'Utrecht Ordered list',
+    name: 'Utrecht Ordered List',
     render: () => (
       <OrderedList>
         <OrderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</OrderedListItem>
@@ -1712,6 +1738,54 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       <PageFooter>
         <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
       </PageFooter>
+    ),
+  },
+  {
+    storyId: 'react-utrecht-page-number-navigation--default',
+    component: 'utrecht-page-number-navigation',
+    group: STORY_GROUPS['PAGE_NUMBER_NAVIGATION'],
+    name: 'Utrecht Page Number Navigation',
+    render: () => (
+      <nav className="utrecht-pagination utrecht-pagination--distanced">
+        <span className="utrecht-pagination__before">
+          <span
+            className="utrecht-pagination__relative-link utrecht-pagination__relative-link--disabled utrecht-pagination__relative-link--prev"
+            rel="prev"
+          >
+            Vorige
+          </span>
+        </span>
+        <span role="group" className="utrecht-pagination__pages">
+          <a className="utrecht-pagination__page-link" href="./1">
+            1
+          </a>
+          <a className="utrecht-pagination__page-link" href="./2" rel="prev">
+            2
+          </a>
+          <a
+            className="utrecht-pagination__page-link utrecht-pagination__page-link--current"
+            href="./3"
+            aria-current="true"
+          >
+            3
+          </a>
+          <a className="utrecht-pagination__page-link" href="./4" rel="next">
+            4
+          </a>
+          <a className="utrecht-pagination__page-link" href="./5">
+            5
+          </a>
+        </span>
+        <span className="utrecht-pagination__before">
+          <a
+            href="./2"
+            className="utrecht-pagination__relative-link utrecht-pagination__relative-link--next"
+            rel="next"
+          >
+            Volgende
+          </a>
+        </span>
+      </nav>
     ),
   },
   {
@@ -2865,7 +2939,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-utrecht-form-field-description--default',
     group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
-    name: 'Utrecht Form field description',
+    name: 'Utrecht Form Field Description',
     render: () => <FormFieldDescription>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldDescription>,
     detectTokens: {
       anyOf: [
@@ -2882,7 +2956,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-utrecht-form-field-error-message--default',
     group: STORY_GROUPS['FORM_FIELD_ERROR_MESSAGE'],
-    name: 'Utrecht Form field Error Message',
+    name: 'Utrecht Form Field Error Message',
     render: () => <FormFieldErrorMessage>The Quick Brown Fox Jumps Over The Lazy Dog</FormFieldErrorMessage>,
     detectTokens: {
       anyOf: [
@@ -3146,6 +3220,42 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <Button appearance="primary-action-button">Opslaan en doorgaan</Button>
         <Button appearance="secondary-action-button">Annuleren</Button>
       </ActionGroup>
+    ),
+  },
+
+  {
+    storyId: 'react-utrecht-image--default',
+    component: 'utrecht-image',
+    group: STORY_GROUPS['IMAGE'],
+    name: 'Utrecht Image',
+    render: () => (
+      <Image alt="Utrecht stadskantoor" height={830} photo={true} src="/images/stadskantoor.jpg" width={1040} />
+    ),
+  },
+  {
+    storyId: 'react-utrecht-form-summary--default',
+    component: 'utrecht-form-summary',
+    group: STORY_GROUPS['FORM_SUMMARY'],
+    name: 'Utrecht Form Summary',
+    render: () => (
+      <FormSummaryStory
+        appearance="rows"
+        items={[
+          {
+            key: 'Voornaam',
+            value: 'Mees',
+          },
+          {
+            key: 'Achternaam',
+            value: 'de Vos',
+          },
+          {
+            key: 'Adres',
+            value: 'Tweede Kamer der Staten-Generaal\nPostbus 20018\n2500 EA Den Haag',
+            multiline: true,
+          },
+        ]}
+      />
     ),
   },
 ];

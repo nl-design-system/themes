@@ -2,6 +2,8 @@ import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/C
 import type { Meta, StoryObj } from '@storybook/react';
 import config from '../src/config.json';
 
+import '../src/font';
+
 const meta = {
   title: 'Hoeksche Waard',
   component: ComponentStories,

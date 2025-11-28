@@ -3,7 +3,7 @@ import { RadioButton } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
   id: 'utrecht-radio-button',
-  title: 'Components/Radio button/Utrecht',
+  title: 'Components/Radio Button/Utrecht',
   component: RadioButton,
   args: { disabled: false, invalid: false, name: 'radio' },
   render: (args) => (

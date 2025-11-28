@@ -4,6 +4,8 @@ import {
   Blockquote,
   Breadcrumb,
   Button,
+  Dialog as ModalDialog,
+  Card as CardAsLink,
   Heading,
   Link,
   OrderedList,
@@ -14,6 +16,9 @@ import {
   Grid,
   LinkList,
   PageFooter,
+  Avatar,
+  DescriptionList,
+  DateInput,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -198,7 +203,7 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-ams-skip-link',
     component: 'ams-skip-link',
     // group: ...,
-    name: 'Amsterdam Skip link',
+    name: 'Amsterdam Skip Link',
     render: () => (
       <SkipLink
         href="#"
@@ -228,6 +233,24 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <Breadcrumb.Link href="#">Bedrijfsafval</Breadcrumb.Link>
         <Breadcrumb.Link href="#">Recyclepunten voor bedrijven</Breadcrumb.Link>
       </Breadcrumb>
+    ),
+  },
+  {
+    storyId: 'react-ams-card-as-link--default',
+    component: 'ams-card-as-link',
+    group: STORY_GROUPS['CARD_AS_LINK'],
+    name: 'Amsterdam Card as Link',
+    render: () => (
+      <CardAsLink
+        style={{
+          maxWidth: '24rem',
+        }}
+      >
+        <CardAsLink.Heading level={2}>
+          <CardAsLink.Link href="/">Parkeren + Reizen (P+R)</CardAsLink.Link>
+        </CardAsLink.Heading>
+        <Paragraph>U kunt met uw auto goedkoop parkeren bij een P+R-locatie aan de rand van de stad.</Paragraph>
+      </CardAsLink>
     ),
   },
   {
@@ -395,5 +418,56 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         </>
       </PageFooter>
     ),
+  },
+  {
+    storyId: 'react-ams-modal-dialog--default',
+    component: 'ams-modal-dialog',
+    group: STORY_GROUPS['MODAL_DIALOG'],
+    name: 'Amsterdam Modal Dialog',
+    render: () => (
+      <ModalDialog
+        open={true}
+        id="react-ams-modal-dialog--default"
+        heading="De gegevens zijn opgeslagen"
+        footer={<Button>Sluiten</Button>}
+        style={{ position: 'static' }}
+      >
+        <Paragraph>U ontvangt een bevestiging per e-mail.</Paragraph>
+      </ModalDialog>
+    ),
+  },
+  {
+    storyId: 'react-ams-avatar--default',
+    component: 'ams-avatar',
+    group: STORY_GROUPS['AVATAR'],
+    name: 'Amsterdam Avatar',
+    render: () => <Avatar label="Avatar" />,
+  },
+  {
+    storyId: 'react-ams-description-list--default',
+    component: 'ams-description-list',
+    group: STORY_GROUPS['DESCRIPTION_LIST'],
+    name: 'Amsterdam Description List',
+    render: () => (
+      <DescriptionList>
+        <DescriptionList.Term key={1}>Het hoger onderwijs</DescriptionList.Term>
+        <DescriptionList.Description key={2}>Het hbo en wo</DescriptionList.Description>
+        <DescriptionList.Term key={3}>Het mbo en hoger onderwijs</DescriptionList.Term>
+        <DescriptionList.Description key={4}>Het vervolgonderwijs</DescriptionList.Description>
+        <DescriptionList.Term key={5}>Laagopgeleid</DescriptionList.Term>
+        <DescriptionList.Description key={6}>Praktisch opgeleid</DescriptionList.Description>
+        <DescriptionList.Term key={7}>Hoogopgeleid</DescriptionList.Term>
+        <DescriptionList.Description key={8}>Theoretisch opgeleid</DescriptionList.Description>
+        <DescriptionList.Term key={9}>Opleidingsniveau</DescriptionList.Term>
+        <DescriptionList.Description key={10}>Onderwijsrichting</DescriptionList.Description>
+      </DescriptionList>
+    ),
+  },
+  {
+    storyId: 'react-ams-date-input--default',
+    component: 'ams-date-input',
+    group: STORY_GROUPS['DATE_INPUT'],
+    name: 'Amsterdam Date Input',
+    render: () => <DateInput />,
   },
 ];

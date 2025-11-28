@@ -6,6 +6,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
   BUTTON_LINK_DEFAULT: 'Link that looks like a button',
+  CARD_AS_LINK: 'Card as Link',
   CHECKBOX: 'Checkbox',
   RADIO_BUTTON: 'Radio Button',
   LINK_BUTTON_DEFAULT: 'Button that looks like a link',
@@ -31,6 +32,12 @@ export const STORY_GROUPS: { [index: string]: string } = {
   PAGE_HEADER: 'Page Header',
   PAGE_FOOTER: 'Page Footer',
   LOGIN_LINK: 'Login Link',
+  MODAL_DIALOG: 'Modal Dialog',
+  PAGE_NUMBER_NAVIGATION: 'Page Number Navigation',
+  IMAGE: 'Image',
+  DESCRIPTION_LIST: 'Description List',
+  FORM_SUMMARY: 'Form Summary',
+  DATE_INPUT: 'Date Input',
 };
 
 export interface ComponentStory {

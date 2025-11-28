@@ -1,5 +1,198 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 6.2.1
+
+### Patch Changes
+
+- f41e917: Include correct fonts in package (tokens were updated to use Noto Sans/Serif/Sans Mono instead of Fira/Source Sans)
+
+## 6.2.0
+
+### Minor Changes
+
+- d38c74b: De volgende tokens zijn toegevoegd aan (candidate) Button component:
+
+  - `nl.button.border-radius`
+  - `nl.button.column-gap`
+  - `nl.button.font-family`
+  - `nl.button.min-block-size`
+  - `nl.button.min-inline-size`
+  - `nl.button.outline-offset`
+  - `nl.button.padding-block-end`
+  - `nl.button.padding-block-start`
+  - `nl.button.padding-inline-end`
+  - `nl.button.padding-inline-start`
+  - `nl.button.focus.background-color`
+  - `nl.button.focus.border-color`
+  - `nl.button.focus.color`
+  - `nl.button.icon.size`
+  - `nl.button.default.background-color`
+  - `nl.button.default.border-color`
+  - `nl.button.default.border-width`
+  - `nl.button.default.color`
+  - `nl.button.default.font-size`
+  - `nl.button.default.font-weight`
+  - `nl.button.default.line-height`
+  - `nl.button.default.active.background-color`
+  - `nl.button.default.active.border-color`
+  - `nl.button.default.active.color`
+  - `nl.button.default.disabled.background-color`
+  - `nl.button.default.disabled.border-color`
+  - `nl.button.default.disabled.color`
+  - `nl.button.default.hover.background-color`
+  - `nl.button.default.hover.border-color`
+  - `nl.button.default.hover.color`
+  - `nl.button.default.pressed.background-color`
+  - `nl.button.default.pressed.border-color`
+  - `nl.button.default.pressed.color`
+  - `nl.button.primary.background-color`
+  - `nl.button.primary.border-color`
+  - `nl.button.primary.border-width`
+  - `nl.button.primary.color`
+  - `nl.button.primary.font-size`
+  - `nl.button.primary.font-weight`
+  - `nl.button.primary.line-height`
+  - `nl.button.primary.active.background-color`
+  - `nl.button.primary.active.border-color`
+  - `nl.button.primary.active.color`
+  - `nl.button.primary.disabled.background-color`
+  - `nl.button.primary.disabled.border-color`
+  - `nl.button.primary.disabled.color`
+  - `nl.button.primary.hover.background-color`
+  - `nl.button.primary.hover.border-color`
+  - `nl.button.primary.hover.color`
+  - `nl.button.primary.pressed.background-color`
+  - `nl.button.primary.pressed.border-color`
+  - `nl.button.primary.pressed.color`
+  - `nl.button.primary.positive.background-color`
+  - `nl.button.primary.positive.border-color`
+  - `nl.button.primary.positive.color`
+  - `nl.button.primary.positive.active.background-color`
+  - `nl.button.primary.positive.active.border-color`
+  - `nl.button.primary.positive.active.color`
+  - `nl.button.primary.positive.hover.background-color`
+  - `nl.button.primary.positive.hover.border-color`
+  - `nl.button.primary.positive.hover.color`
+  - `nl.button.primary.positive.pressed.background-color`
+  - `nl.button.primary.positive.pressed.border-color`
+  - `nl.button.primary.positive.pressed.color`
+  - `nl.button.primary.negative.background-color`
+  - `nl.button.primary.negative.border-color`
+  - `nl.button.primary.negative.color`
+  - `nl.button.primary.negative.active.background-color`
+  - `nl.button.primary.negative.active.border-color`
+  - `nl.button.primary.negative.active.color`
+  - `nl.button.primary.negative.hover.background-color`
+  - `nl.button.primary.negative.hover.border-color`
+  - `nl.button.primary.negative.hover.color`
+  - `nl.button.primary.negative.pressed.background-color`
+  - `nl.button.primary.negative.pressed.border-color`
+  - `nl.button.primary.negative.pressed.color`
+  - `nl.button.secondary.background-color`
+  - `nl.button.secondary.border-color`
+  - `nl.button.secondary.border-width`
+  - `nl.button.secondary.color`
+  - `nl.button.secondary.font-size`
+  - `nl.button.secondary.font-weight`
+  - `nl.button.secondary.line-height`
+  - `nl.button.secondary.active.background-color`
+  - `nl.button.secondary.active.border-color`
+  - `nl.button.secondary.active.color`
+  - `nl.button.secondary.disabled.background-color`
+  - `nl.button.secondary.disabled.border-color`
+  - `nl.button.secondary.disabled.color`
+  - `nl.button.secondary.hover.background-color`
+  - `nl.button.secondary.hover.border-color`
+  - `nl.button.secondary.hover.color`
+  - `nl.button.secondary.pressed.background-color`
+  - `nl.button.secondary.pressed.border-color`
+  - `nl.button.secondary.pressed.color`
+  - `nl.button.secondary.positive.background-color`
+  - `nl.button.secondary.positive.border-color`
+  - `nl.button.secondary.positive.color`
+  - `nl.button.secondary.positive.active.background-color`
+  - `nl.button.secondary.positive.active.border-color`
+  - `nl.button.secondary.positive.active.color`
+  - `nl.button.secondary.positive.hover.background-color`
+  - `nl.button.secondary.positive.hover.border-color`
+  - `nl.button.secondary.positive.hover.color`
+  - `nl.button.secondary.positive.pressed.background-color`
+  - `nl.button.secondary.positive.pressed.border-color`
+  - `nl.button.secondary.positive.pressed.color`
+  - `nl.button.secondary.negative.background-color`
+  - `nl.button.secondary.negative.border-color`
+  - `nl.button.secondary.negative.color`
+  - `nl.button.secondary.negative.active.background-color`
+  - `nl.button.secondary.negative.active.border-color`
+  - `nl.button.secondary.negative.active.color`
+  - `nl.button.secondary.negative.hover.background-color`
+  - `nl.button.secondary.negative.hover.border-color`
+  - `nl.button.secondary.negative.hover.color`
+  - `nl.button.secondary.negative.pressed.background-color`
+  - `nl.button.secondary.negative.pressed.border-color`
+  - `nl.button.secondary.negative.pressed.color`
+  - `nl.button.subtle.background-color`
+  - `nl.button.subtle.border-color`
+  - `nl.button.subtle.border-width`
+  - `nl.button.subtle.color`
+  - `nl.button.subtle.font-size`
+  - `nl.button.subtle.font-weight`
+  - `nl.button.subtle.line-height`
+  - `nl.button.subtle.active.background-color`
+  - `nl.button.subtle.active.border-color`
+  - `nl.button.subtle.active.color`
+  - `nl.button.subtle.disabled.background-color`
+  - `nl.button.subtle.disabled.border-color`
+  - `nl.button.subtle.disabled.color`
+  - `nl.button.subtle.hover.background-color`
+  - `nl.button.subtle.hover.border-color`
+  - `nl.button.subtle.hover.color`
+  - `nl.button.subtle.pressed.background-color`
+  - `nl.button.subtle.pressed.border-color`
+  - `nl.button.subtle.pressed.color`
+  - `nl.button.subtle.positive.background-color`
+  - `nl.button.subtle.positive.border-color`
+  - `nl.button.subtle.positive.color`
+  - `nl.button.subtle.positive.active.background-color`
+  - `nl.button.subtle.positive.active.border-color`
+  - `nl.button.subtle.positive.active.color`
+  - `nl.button.subtle.positive.hover.background-color`
+  - `nl.button.subtle.positive.hover.border-color`
+  - `nl.button.subtle.positive.hover.color`
+  - `nl.button.subtle.positive.pressed.background-color`
+  - `nl.button.subtle.positive.pressed.border-color`
+  - `nl.button.subtle.positive.pressed.color`
+  - `nl.button.subtle.negative.background-color`
+  - `nl.button.subtle.negative.border-color`
+  - `nl.button.subtle.negative.color`
+  - `nl.button.subtle.negative.active.background-color`
+  - `nl.button.subtle.negative.active.border-color`
+  - `nl.button.subtle.negative.active.color`
+  - `nl.button.subtle.negative.hover.background-color`
+  - `nl.button.subtle.negative.hover.border-color`
+  - `nl.button.subtle.negative.hover.color`
+  - `nl.button.subtle.negative.pressed.background-color`
+  - `nl.button.subtle.negative.pressed.border-color`
+  - `nl.button.subtle.negative.pressed.color`
+
+## 6.1.0
+
+### Minor Changes
+
+- e86ddce: De volgende tokens zijn toegevoegd aan Card as Link component:
+
+  - `ams.card.outline-offset`
+  - `ams.card.heading.margin-block-end`
+  - `ams.card.heading-group.gap`
+  - `ams.card.heading-group.margin-block-end`
+  - `ams.card.image.margin-block-end`
+  - `ams.card.link.color`
+  - `ams.card.link.text-decoration-line`
+  - `ams.card.link.text-decoration-thickness`
+  - `ams.card.link.text-underline-offset`
+  - `ams.card.link.hover.color`
+  - `ams.card.link.hover.text-decoration-line`
+
 ## 6.0.0
 
 ### Major Changes

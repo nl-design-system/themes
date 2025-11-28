@@ -3,7 +3,7 @@ import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
   id: 'utrecht-badge-status',
-  title: 'Components/Status badge/Utrecht',
+  title: 'Components/Status Badge/Utrecht',
   component: StatusBadge,
   parameters: { actions: { disable: true } },
   args: {
