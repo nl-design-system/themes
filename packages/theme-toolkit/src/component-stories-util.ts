@@ -39,6 +39,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   FORM_SUMMARY: 'Form Summary',
   DATE_INPUT: 'Date Input',
   FIGURE: 'Figure',
+  PASSWORD_INPUT: 'Password Input',
 };
 
 export interface ComponentStory {
