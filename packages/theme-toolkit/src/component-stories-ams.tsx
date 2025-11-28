@@ -19,6 +19,8 @@ import {
   Avatar,
   DescriptionList,
   DateInput,
+  Figure,
+  Image,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -469,5 +471,17 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['DATE_INPUT'],
     name: 'Amsterdam Date Input',
     render: () => <DateInput />,
+  },
+  {
+    storyId: 'react-ams-figure--default',
+    component: 'ams-figure',
+    group: STORY_GROUPS['FIGURE'],
+    name: 'Amsterdam Figure',
+    render: () => (
+      <Figure>
+        <Image alt="Utrecht stadskantoor" height={830} src="/images/stadskantoor.jpg" width={1040} />
+        <Figure.Caption>Utrecht stadskantoor</Figure.Caption>
+      </Figure>
+    ),
   },
 ];
