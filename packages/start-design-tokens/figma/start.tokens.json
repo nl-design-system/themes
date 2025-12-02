@@ -5964,13 +5964,15 @@
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.default}"
           },
-          "inverse-color": {
-            "$type": "color",
-            "$value": "{basis.color.default-inverse.color-document}"
-          },
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
+          },
+          "inverse": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default-inverse.color-document}"
+            }
           }
         }
       }
