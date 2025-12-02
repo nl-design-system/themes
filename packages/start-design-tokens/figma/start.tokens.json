@@ -2985,6 +2985,11 @@
   "components/avatar/amsterdam": {
     "ams": {
       "avatar": {
+        "aspect-ratio": {
+          "$type": "other",
+          "$value": "1 / 1",
+          "$description": "[code-only]"
+        },
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.accent-1-inverse.bg-default}"
@@ -2992,6 +2997,11 @@
         "border-color": {
           "$type": "color",
           "$value": "{basis.color.transparent}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
         },
         "border-width": {
           "$type": "dimension",
@@ -3012,15 +3022,6 @@
         "line-height": {
           "$type": "lineHeights",
           "$value": "{basis.text.line-height.md}"
-        },
-        "aspect-ratio": {
-          "$type": "other",
-          "$value": "1 / 1",
-          "$description": "[code-only]"
-        },
-        "border-style": {
-          "$type": "other",
-          "$value": "solid"
         },
         "inline-size": {
           "$type": "dimension",
@@ -3043,7 +3044,7 @@
         "azure": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.info-inverse.bg-default}"
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -3051,13 +3052,13 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.info-inverse.color-default}"
+            "$value": "{basis.color.accent-1-inverse.color-default}"
           }
         },
         "green": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.positive-inverse.bg-default}"
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -3065,13 +3066,13 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.positive-inverse.color-default}"
+            "$value": "{basis.color.accent-1-inverse.color-default}"
           }
         },
         "lime": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.highlight-inverse.bg-default}"
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -3079,7 +3080,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.highlight-inverse.color-default}"
+            "$value": "{basis.color.accent-1-inverse.color-default}"
           }
         },
         "magenta": {
@@ -3099,7 +3100,7 @@
         "orange": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.warning-inverse.bg-default}"
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -3107,13 +3108,13 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.warning-inverse.color-default}"
+            "$value": "{basis.color.accent-1-inverse.color-default}"
           }
         },
         "yellow": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.highlight-inverse.bg-default}"
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -3121,7 +3122,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.highlight-inverse.color-default}"
+            "$value": "{basis.color.accent-1-inverse.color-default}"
           }
         }
       }
