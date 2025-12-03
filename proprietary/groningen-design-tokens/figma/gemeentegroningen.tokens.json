@@ -5322,10 +5322,6 @@
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
         },
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.text.md}"
-        },
         "font-family": {
           "$type": "fontFamilies",
           "$value": "{basis.text.font-family.default}"
@@ -10377,6 +10373,42 @@
       }
     }
   },
+  "components/page-footer": {
+    "utrecht": {
+      "page-footer": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.accent-1.bg-default}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.page.max-inline-size}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.4xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.4xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.4xl}"
+          }
+        }
+      }
+    }
+  },
   "components/page-footer/amsterdam": {
     "ams": {
       "page-footer": {
@@ -10464,7 +10496,7 @@
         "spotlight": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.accent-1.color-document}"
+            "$value": "{basis.color.accent-1-inverse.bg-default}"
           }
         }
       }
@@ -10475,7 +10507,7 @@
       "page-footer": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.accent-1.bg-document}"
+          "$value": "{basis.color.accent-1.bg-default}"
         },
         "color": {
           "$type": "color",
@@ -12452,6 +12484,7 @@
       "components/page-header",
       "components/page-header/amsterdam",
       "components/page-body",
+      "components/page-footer",
       "components/page-footer/amsterdam",
       "components/page-footer/utrecht",
       "components/article",
