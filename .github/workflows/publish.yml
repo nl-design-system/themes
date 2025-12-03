@@ -38,7 +38,7 @@ jobs:
           pnpm audit --audit-level critical
 
       - name: Install dependencies specified in package.json
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Run the lint script in package.json scripts
         run: pnpm run --if-present lint
@@ -116,7 +116,7 @@ jobs:
           pnpm audit --audit-level critical
 
       - name: Install dependencies specified in package.json
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Run the build script in package.json
         run: pnpm run --if-present build
