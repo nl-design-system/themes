@@ -66,6 +66,7 @@ jobs:
           storybookBuildDir: packages/storybook/dist/
           storybookConfigDir: packages/storybook/config/
           onlyChanged: true
+          externals: "proprietary/**/*.tokens.json"
 
       - name: Upload the Storybook artifact from the build step
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
