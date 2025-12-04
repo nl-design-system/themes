@@ -481,7 +481,7 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Amsterdam Figure',
     render: () => (
       <Figure>
-        <Image alt="Utrecht stadskantoor" height={830} src="/images/stadskantoor.jpg" width={1040} />
+        <Image alt="Utrecht stadskantoor" height={830} src="images/stadskantoor.jpg" width={1040} />
         <Figure.Caption>Utrecht stadskantoor</Figure.Caption>
       </Figure>
     ),

@@ -11,7 +11,7 @@ const meta = {
   },
   render: ({ children, ...args }) => (
     <Figure>
-      <Image alt="Utrecht stadskantoor" height={830} src="/images/stadskantoor.jpg" width={1040} />
+      <Image alt="Utrecht stadskantoor" height={830} src="images/stadskantoor.jpg" width={1040} />
       <Figure.Caption {...args}>{children}</Figure.Caption>
     </Figure>
   ),

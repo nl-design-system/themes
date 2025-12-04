@@ -3229,7 +3229,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['IMAGE'],
     name: 'Utrecht Image',
     render: () => (
-      <Image alt="Utrecht stadskantoor" height={830} photo={true} src="/images/stadskantoor.jpg" width={1040} />
+      <Image alt="Utrecht stadskantoor" height={830} photo={true} src="images/stadskantoor.jpg" width={1040} />
     ),
   },
   {
