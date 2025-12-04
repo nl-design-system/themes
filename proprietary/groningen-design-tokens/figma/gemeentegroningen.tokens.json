@@ -3664,6 +3664,20 @@
             "$value": "{basis.color.action-1-inverse.color-hover}"
           }
         },
+        "pressed": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.bg-active}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.color-active}"
+          }
+        },
         "primary-action": {
           "background-color": {
             "$type": "color",
@@ -3743,6 +3757,20 @@
             "color": {
               "$type": "color",
               "$value": "{basis.color.action-1-inverse.color-hover}"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.bg-active}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           }
         },
@@ -3826,6 +3854,20 @@
               "$type": "color",
               "$value": "{basis.color.selected.bg-default}"
             }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.bg-active}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-default}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-default}"
+            }
           }
         },
         "subtle": {
@@ -3907,6 +3949,20 @@
             "color": {
               "$type": "color",
               "$value": "{basis.color.action-1.color-hover}"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.bg-active}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.color-active}"
             }
           }
         }
@@ -5321,6 +5377,10 @@
         "color": {
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.md}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -10373,42 +10433,6 @@
       }
     }
   },
-  "components/page-footer": {
-    "utrecht": {
-      "page-footer": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.accent-1.bg-default}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "0px"
-        },
-        "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{basis.page.max-inline-size}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.4xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.4xl}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.4xl}"
-          }
-        }
-      }
-    }
-  },
   "components/page-footer/amsterdam": {
     "ams": {
       "page-footer": {
@@ -10496,7 +10520,7 @@
         "spotlight": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.accent-1-inverse.bg-default}"
+            "$value": "{basis.color.accent-1.color-document}"
           }
         }
       }
@@ -10507,7 +10531,7 @@
       "page-footer": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.accent-1.bg-default}"
+          "$value": "{basis.color.accent-1.bg-document}"
         },
         "color": {
           "$type": "color",
@@ -12484,7 +12508,6 @@
       "components/page-header",
       "components/page-header/amsterdam",
       "components/page-body",
-      "components/page-footer",
       "components/page-footer/amsterdam",
       "components/page-footer/utrecht",
       "components/article",
