@@ -6248,9 +6248,19 @@
   "components/link-list": {
     "utrecht": {
       "link-list": {
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.default}"
+        "link": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          }
         },
         "row-gap": {
           "$type": "dimension",
@@ -6264,16 +6274,6 @@
           "size": {
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
-          }
-        },
-        "link": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.text.xs}"
-          },
-          "text-decoration": {
-            "$type": "textDecoration",
-            "$value": "None"
           }
         }
       }
