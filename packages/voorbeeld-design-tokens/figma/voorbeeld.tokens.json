@@ -6273,7 +6273,45 @@
       }
     }
   },
-  "components/figure": {
+  "components/figure/amsterdam": {
+    "ams": {
+      "figure": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.md}"
+        },
+        "caption": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "inverse": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default-inverse.color-document}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/figure/utrecht": {
     "utrecht": {
       "figure": {
         "margin-block-end": {
@@ -14065,7 +14103,8 @@
       "components/drawer/utrecht",
       "components/drawer/todo",
       "components/dot-badge",
-      "components/figure",
+      "components/figure/amsterdam",
+      "components/figure/utrecht",
       "components/file",
       "components/form-field",
       "components/form-field-checkbox-option",
