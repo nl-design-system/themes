@@ -2982,7 +2982,7 @@
       }
     }
   },
-  "components/avatar/amsterdam": {
+  "components/avatar": {
     "ams": {
       "avatar": {
         "aspect-ratio": {
@@ -3019,13 +3019,13 @@
           "$type": "fontSizes",
           "$value": "{basis.text.font-size.md}"
         },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
-        },
         "inline-size": {
           "$type": "dimension",
           "$value": "{basis.pointer-target.min-inline-size}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
         },
         "padding-block": {
           "$type": "dimension",
@@ -3040,62 +3040,6 @@
             "$type": "dimension",
             "$value": "{basis.pointer-target.min-inline-size}"
           }
-        }
-      }
-    }
-  },
-  "components/avatar/todo": {
-    "todo": {
-      "avatar": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.action-1-inverse.bg-default}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.transparent}"
-        },
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{basis.border-radius.round}"
-        },
-        "border-width": {
-          "$type": "dimension",
-          "$value": "{basis.border-width.sm}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.action-1-inverse.color-default}"
-        },
-        "size": {
-          "$type": "dimension",
-          "$value": "{basis.pointer-target.min-block-size}"
-        },
-        "icon": {
-          "icon-size": {
-            "$type": "dimension",
-            "$value": "{basis.size.icon.md}"
-          }
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
-        },
-        "text-transform": {
-          "$type": "textCase",
-          "$value": "uppercase"
         }
       }
     }
@@ -3541,7 +3485,7 @@
             "$value": "{basis.color.default.border-default}"
           },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{basis.border-width.sm}"
           },
           "color": {
@@ -3627,7 +3571,7 @@
             "$value": "{basis.color.transparent}"
           },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{nl.button.default.border-width}"
           },
           "color": {
@@ -3825,7 +3769,7 @@
             "$value": "{basis.color.action-1.border-default}"
           },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{nl.button.default.border-width}"
           },
           "color": {
@@ -4023,7 +3967,7 @@
             "$value": "{basis.color.transparent}"
           },
           "border-width": {
-            "$type": "borderWidth",
+            "$type": "dimension",
             "$value": "{nl.button.default.border-width}"
           },
           "color": {
@@ -4749,6 +4693,28 @@
           "$type": "dimension",
           "$value": "{basis.space.row.lg}"
         },
+        "description": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          }
+        },
         "heading": {
           "color": {
             "$type": "color",
@@ -4769,12 +4735,28 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.xl}"
+          }
+        },
+        "metadata": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
           },
-          "read-only": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.heading.color}"
-            }
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
           }
         },
         "icon": {
@@ -4793,7 +4775,7 @@
             "$value": "{basis.color.action-2.bg-active}"
           }
         },
-        "focus-visible": {
+        "focus": {
           "background-color": {
             "$type": "color",
             "$value": "{basis.focus.background-color}"
@@ -4807,28 +4789,6 @@
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.action-2.bg-hover}"
-          }
-        },
-        "read-only": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.bg-default}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.default.color-document}"
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.bg-active}"
-            }
-          },
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.bg-hover}"
-            }
           }
         },
         "decoration": {
@@ -4849,13 +4809,61 @@
                 "$value": "{basis.color.action-2.bg-active}"
               }
             },
-            "focus-visible": {
+            "focus": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.focus.background-color}"
               }
-            },
-            "read-only": {
+            }
+          },
+          "paper": {
+            "background-color": {
+              "$type": "color",
+              "$value": "#ffffff"
+            }
+          }
+        },
+        "archived": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            }
+          },
+          "heading": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.heading.color}"
+            }
+          },
+          "metadata": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.default.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.default.bg-hover}"
+            }
+          },
+          "decoration": {
+            "folder": {
               "background-color": {
                 "$type": "color",
                 "$value": "{basis.color.default.bg-active}"
@@ -4872,12 +4880,6 @@
                   "$value": "{basis.color.default.bg-active}"
                 }
               }
-            }
-          },
-          "paper": {
-            "background-color": {
-              "$type": "color",
-              "$value": "#ffffff"
             }
           }
         }
@@ -5609,7 +5611,7 @@
         },
         "padding-block": {
           "$type": "dimension",
-          "$value": "None"
+          "$value": "0px"
         },
         "padding-inline": {
           "$type": "dimension",
@@ -5667,7 +5669,7 @@
         },
         "padding-block": {
           "$type": "dimension",
-          "$value": "None"
+          "$value": "0px"
         },
         "padding-inline": {
           "$type": "dimension",
@@ -8110,7 +8112,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "basis.color.disabled.color-subtle"
+              "$value": "{basis.color.disabled.color-subtle}"
             }
           }
         }
@@ -10641,6 +10643,250 @@
           "font-weight": {
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.bold}"
+          }
+        }
+      }
+    }
+  },
+  "components/tabs/amsterdam": {
+    "ams": {
+      "tabs": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.3xl}"
+        },
+        "button": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "pointer",
+            "$description": "[code-only]"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            },
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.lg}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
+            }
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            },
+            "cursor": {
+              "$type": "other",
+              "$value": "not-allowed",
+              "$description": "[code-only]"
+            }
+          },
+          "selected": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.lg}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          }
+        },
+        "list": {
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "-{basis.border-width.sm}",
+              "blur": "0",
+              "spread": "0",
+              "color": "{basis.color.default.border-subtle}",
+              "type": "innerShadow"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/tabs/den-haag": {
+    "denhaag": {
+      "tabs": {
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.border-subtle}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
+        },
+        "width": {
+          "$type": "dimension",
+          "$value": "100%",
+          "$description": "[code-only]"
+        },
+        "tab": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "pointer",
+            "$description": "[code-only]"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "outline": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            }
+          },
+          "focus": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.focus.color}"
+            }
+          },
+          "selected": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          }
+        },
+        "tab-indicator": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-active}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.lg}"
+          },
+          "bottom": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          }
+        },
+        "tab-panel": {
+          "outline": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.3xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.3xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "0px"
           }
         }
       }
@@ -13526,8 +13772,7 @@
       "components/accordion",
       "components/action-group",
       "components/alert",
-      "components/avatar/amsterdam",
-      "components/avatar/todo",
+      "components/avatar",
       "components/backdrop",
       "components/blockquote",
       "components/breadcrumb-nav/utrecht",
@@ -13604,6 +13849,8 @@
       "components/step-marker",
       "components/switch",
       "components/table",
+      "components/tabs/amsterdam",
+      "components/tabs/den-haag",
       "components/task-card",
       "components/task-list",
       "components/task-navigation",
