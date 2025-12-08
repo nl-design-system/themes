@@ -6059,23 +6059,24 @@
       "file-input": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
+          "$value": "{basis.form-control.background-color}"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.default.border-default}"
+          "$value": "{basis.form-control.border-color}"
         },
         "border-style": {
           "$type": "other",
-          "$value": "dashed"
+          "$value": "dashed",
+          "$description": "[code-only]"
         },
         "border-width": {
           "$type": "dimension",
-          "$value": "{basis.border-width.md}"
+          "$value": "{basis.form-control.border-width}"
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.default.color-document}"
+          "$value": "{basis.form-control.color}"
         },
         "cursor": {
           "$type": "other",
@@ -6090,7 +6091,7 @@
         "disabled": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.disabled.color-subtle}"
+            "$value": "{basis.form-control.disabled.color}"
           },
           "cursor": {
             "$type": "other",
@@ -6100,15 +6101,19 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
+          "$value": "{basis.form-control.font-family}"
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
+          "$value": "{basis.form-control.font-size}"
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.default}"
+          "$value": "{basis.form-control.font-weight}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.form-control.line-height}"
         },
         "padding-block": {
           "$type": "dimension",
@@ -6129,7 +6134,8 @@
           },
           "border-style": {
             "$type": "other",
-            "$value": "solid"
+            "$value": "solid",
+            "$description": "[code-only]"
           },
           "border-width": {
             "$type": "dimension",
