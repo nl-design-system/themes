@@ -6207,22 +6207,6 @@
           "$value": "default",
           "$description": "[code-only]"
         },
-        "outline-offset": {
-          "$type": "other",
-          "$value": "auto",
-          "$description": "[code-only]"
-        },
-        "disabled": {
-          "color": {
-            "$type": "color",
-            "$value": "{basis.form-control.disabled.color}"
-          },
-          "cursor": {
-            "$type": "other",
-            "$value": "disabled",
-            "$description": "[code-only]"
-          }
-        },
         "font-family": {
           "$type": "fontFamilies",
           "$value": "{basis.form-control.font-family}"
@@ -6239,6 +6223,11 @@
           "$type": "lineHeights",
           "$value": "{basis.form-control.line-height}"
         },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "auto",
+          "$description": "[code-only]"
+        },
         "padding-block": {
           "$type": "dimension",
           "$value": "{basis.space.block.xl}"
@@ -6246,6 +6235,17 @@
         "padding-inline": {
           "$type": "dimension",
           "$value": "{basis.space.inline.xl}"
+        },
+        "disabled": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.disabled.color}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "disabled",
+            "$description": "[code-only]"
+          }
         },
         "button": {
           "background-color": {
@@ -6274,27 +6274,6 @@
             "$value": "default",
             "$description": "[code-only]"
           },
-          "disabled": {
-            "cursor": {
-              "$type": "other",
-              "$value": "disabled",
-              "$description": "[code-only]"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.color-subtle}"
-            }
-          },
-          "hover": {
-            "box-shadow": {
-              "$type": "boxShadow",
-              "$value": "None"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.color-hover}"
-            }
-          },
           "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
@@ -6311,6 +6290,27 @@
           "padding-inline": {
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            },
+            "cursor": {
+              "$type": "other",
+              "$value": "disabled",
+              "$description": "[code-only]"
+            }
+          },
+          "hover": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": "None"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.color-hover}"
+            }
           }
         }
       }
