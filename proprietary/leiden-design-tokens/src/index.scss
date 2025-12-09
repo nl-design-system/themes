@@ -20,33 +20,46 @@
 
 /*
  * CUSTOM OVERRIDE
+ * Reason: Skip to link is not styled; missing feature in NLDS or OF.
+ * Related Component: skiplink / utrecht-link
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes centered left-aligned logo slot OR alignment token.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
+a.skiplink.utrecht-link {
+  margin-block-start: var(--basis-space-block-lg);
+  margin-block-end: var(--basis-space-block-lg);
+  margin-inline-start: var(--basis-space-inline-lg);
+  margin-inline-end: var(--basis-space-inline-lg);
+  padding-block-start: var(--basis-space-block-lg);
+  padding-block-end: var(--basis-space-block-lg);
+  padding-inline-start: var(--basis-space-inline-lg);
+  padding-inline-end: var(--basis-space-inline-lg);
+  background: var(--basis-focus-background-color);
+  border-color: var(--basis-focus-background-color);
+  border-radius: var(--basis-border-radius-md);
+  border-style: solid;
+  border-width: var(--basis-border-width-lg);
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--basis-focus-color);
+  font-weight: var(--basis-text-font-weight-bold);
+}
+
+/*
+ * CUSTOM OVERRIDE
  * Reason: Center the Open Forms logo inside the header; missing feature in NLDS or OF.
  * Related Component: utrecht-page-header / logo alignment
  * Upstream Issue: TODO - create an issue
  * Safe to remove when: OF includes centered left-aligned logo slot OR alignment token.
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
-.utrecht-page-header.utrecht-page-header--openforms-with-logo 
-.utrecht-page-header__openforms-return-url {
-    position: relative;
-    background-image: none;
-    inline-size: auto !important;
-}
-
-.utrecht-page-header.utrecht-page-header--openforms-with-logo 
-.utrecht-page-header__openforms-return-url::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: var(--utrecht-page-max-inline-size);
-    height: var(--of-header-logo-height);
-    background-image: var(--of-header-logo-url);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: contain;
-    pointer-events: none;
+.utrecht-page-header--openforms-with-logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-inline-size: var(--basis-page-max-inline-size);
+  margin: 0 auto;
 }
 
 /*
@@ -58,31 +71,190 @@
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 body.utrecht-page {
-    max-inline-size: 100%; // Needed to center page content. TODO: Use a (custom) design token if there are more items
-    background-color: var(--basis-color-default-bg-default); // No token available for only this class. The default sets backgrounds for too many elements.
-    margin-block-start: 0; // Fixes Weird top margin above the header from the browsers styling rules. TODO: Use a (custom) design token if there are more items
-    margin-block-end: 0; // Fixes Weird top margin above the header from the browsers styling rules TODO: Use a (custom) design token if there are more items
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  max-inline-size: 100%;
+  background-color: var(--basis-color-default-color-document);
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .utrecht-page__content {
-    background-color: var(--basis-color-default-bg-default); // No token available for only this class. The default sets backgrounds for too many elements.
-    margin: 0 auto; // Needed to center page content. TODO: Use a (custom) design token if there are more items
+  background-color: var(--basis-color-default-bg-default);
+  max-inline-size: 100%;
+  flex: 1 0 auto;
+}
+
+.utrecht-page-content__main {
+  max-inline-size: var(--basis-page-max-inline-size);
+  margin: 0 auto;
 }
 
 .openforms-app__body {
-    background: var(--basis-color-default-inverse-color-document); // Sets background color of the app to white.
+  background: var(--basis-color-default-inverse-color-document);
+}
+
+.a11y-toolbar {
+  max-inline-size: var(--basis-page-max-inline-size);
+  margin: 0 auto;
+}
+
+footer.utrecht-page-footer {
+  flex-shrink: 0;
 }
 
 /*
  * CUSTOM OVERRIDE
- * Reason: Interactive elements should have a border radius in our design; missing feature in NLDS or OF.
+ * Reason: Changing order of the file upload top components; missing feature in NLDS or OF.
+ * Related Component: file-upload
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes tokens for the component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Hide file details section when there are no items uploaded; missing feature in NLDS or OF.
+ * Related Component: file-upload-file-details
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes tokens for the component.
+ * Last verified: 2025-11-19 (OF 3.3.4)
+ */
+.list-group {
+  display: none;
+}
+
+.list-group:has(> li.list-group-item:not(.list-group-header)) {
+  display: block;
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Drop zone is interactive and should have a border radius, more padding and different colors in our design; missing feature in NLDS or OF.
  * Related Component: file-upload-drop-zone
  * Upstream Issue: TODO - create an issue
- * Safe to remove when: OF includes border-radius tokens for the drag zone.
+ * Safe to remove when: OF includes tokens for the drag zone.
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .utrecht-form-field.utrecht-form-field--file .fileSelector {
-    border-radius: var(--basis-form-control-border-radius); // Interactive elements should have a border radius. No token available to set border radius.
+  border-radius: var(--basis-form-control-border-radius);
+  background: var(--basis-color-default-bg-default);
+  border-color: var(--leiden-colors-grey-50);
+  border-width: var(--basis-border-width-md);
+  padding-block: var(--basis-space-block-4xl);
+  padding-inline: var(--basis-space-block-4xl);
+  order: 2;
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Change the order of the elements inside the file upload error; missing feature in NLDS or OF.
+ * Related Component: file-upload-error
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes tokens for the component.
+ * Last verified: 2025-11-26 (OF 3.3.4)
+ */
+.utrecht-form-field.utrecht-form-field--file .file {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  font-size: var(--basis-text-font-size-md);
+}
+
+.utrecht-form-field.utrecht-form-field--file .file > div.row:first-child {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.utrecht-form-field.utrecht-form-field--file .file > div.row:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.utrecht-form-field.utrecht-form-field--file .file .fileSize {
+  width: auto;
+}
+
+.utrecht-form-field.utrecht-form-field--file .file.has-error .alert.alert-danger.bg-error {
+  color: var(--basis-color-negative-color-default);
+  font-weight: var(--basis-text-font-weight-bold);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.utrecht-form-field.utrecht-form-field--file .file [ref=fileStatusRemove] {
+  color: var(--utrecht-button-subtle-color);
+  opacity: 1;
+}
+
+.utrecht-form-field.utrecht-form-field--file .file [ref=fileStatusRemove]:hover {
+  color: var(--utrecht-button-subtle-hover-color);
+}
+
+.utrecht-form-field--file .file:not(.has-error) {
+  border-left: 4px solid var(--basis-color-info-color-active);
+  padding-inline-start: var(--basis-space-inline-lg);
+  box-sizing: border-box;
+}
+
+.utrecht-form-field.utrecht-form-field--file .fileSelector + .file:not(.has-error) {
+  margin-top: 0;
+}
+
+.utrecht-form-field--file .openforms-loading {
+  margin-bottom: 0;
+  gap: var(--basis-space-column-sm);
+}
+
+.utrecht-form-field--file .openforms-loading .openforms-loading__spinner {
+  border: 3px solid var(--basis-color-action-2-color-hover);
+  border-top: 3px solid var(--of-color-primary);
+  width: 10px;
+  height: 10px;
+}
+
+.utrecht-form-field.utrecht-form-field--file .list-group:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.utrecht-form-field--file {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basis-space-row-sm);
+}
+
+.utrecht-form-field--file .utrecht-form-field__label {
+  order: 1;
+}
+
+.utrecht-form-field--file .fileSelector {
+  order: 2;
+}
+
+.utrecht-form-field--file .list-group {
+  order: 3;
+}
+
+.utrecht-form-field--file .file {
+  order: 4;
+}
+
+.utrecht-form-field--file .file.has-error {
+  order: 5;
+}
+
+.utrecht-form-field--file .utrecht-form-field-description {
+  order: 6;
+}
+
+/* list group order */
+.utrecht-form-field.utrecht-form-field--file .list-group-item .row .col-md-1 {
+  order: 3;
 }
 
 /*
@@ -94,7 +266,7 @@ body.utrecht-page {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
-    color: currentColor; 
+  color: currentColor;
 }
 
 /*
@@ -106,9 +278,9 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .utrecht-page-footer ul.utrecht-link-list {
-    padding-inline-start: 0;
-    flex-direction: row;
-    column-gap: var(--basis-space-column-3xl);
+  padding-inline-start: 0;
+  flex-direction: row;
+  column-gap: var(--basis-space-column-3xl);
 }
 
 /*
@@ -120,7 +292,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content {
-    font-family: var(--basis-text-font-family-default);
+  font-family: var(--basis-text-font-family-default);
 }
 
 /*
@@ -132,10 +304,10 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content h2 {
-    font-family: var(--basis-heading-font-family);
-    font-size: var(--basis-text-font-size-2xl);
-    line-height: var(--basis-text-line-height-2xl);
-    font-weight: var(--basis-heading-font-weight);
+  font-family: var(--basis-heading-font-family);
+  font-size: var(--basis-text-font-size-2xl);
+  line-height: var(--basis-text-line-height-2xl);
+  font-weight: var(--basis-heading-font-weight);
 }
 
 /*
@@ -147,10 +319,10 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content h3 {
-    font-family: var(--basis-heading-font-family);
-    font-size: var(--basis-text-font-size-xl);
-    line-height: var(--basis-text-line-height-xl);
-    font-weight: var(--basis-heading-font-weight);
+  font-family: var(--basis-heading-font-family);
+  font-size: var(--basis-text-font-size-xl);
+  line-height: var(--basis-text-line-height-xl);
+  font-weight: var(--basis-heading-font-weight);
 }
 
 /*
@@ -162,10 +334,10 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content h4 {
-    font-family: var(--basis-heading-font-family);
-    font-size: var(--basis-text-font-size-lg);
-    line-height: var(--basis-text-line-height-lg);
-    font-weight: var(--basis-heading-font-weight);
+  font-family: var(--basis-heading-font-family);
+  font-size: var(--basis-text-font-size-lg);
+  line-height: var(--basis-text-line-height-lg);
+  font-weight: var(--basis-heading-font-weight);
 }
 
 /*
@@ -177,8 +349,8 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content p {
-    font-family: var(--basis-text-font-family-default);
-    font-size: var(--basis-text-font-size-md);
+  font-family: var(--basis-text-font-family-default);
+  font-size: var(--basis-text-font-size-md);
 }
 
 /*
@@ -190,11 +362,12 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content a {
-    color: var(--nl-link-color);
-    text-decoration: var(--nl-link-text-decoration-line);
+  color: var(--nl-link-color);
+  text-decoration: var(--nl-link-text-decoration-line);
 }
+
 .openforms-formio-content a:hover {
-    color: var(--nl-link-hover-color);
+  color: var(--nl-link-hover-color);
 }
 
 /*
@@ -206,7 +379,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content span.text-tiny {
-    font-size: calc(var(--basis-text-font-size-sm) - 0.125rem);
+  font-size: calc(var(--basis-text-font-size-sm) - 0.125rem);
 }
 
 /*
@@ -218,7 +391,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content span.text-small {
-    font-size: var(--basis-text-font-size-sm);
+  font-size: var(--basis-text-font-size-sm);
 }
 
 /*
@@ -230,7 +403,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content span.text-big {
-    font-size: var(--basis-text-font-size-lg);
+  font-size: var(--basis-text-font-size-lg);
 }
 
 /*
@@ -242,7 +415,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content span.text-huge {
-    font-size: var(--basis-text-font-size-xl);
+  font-size: var(--basis-text-font-size-xl);
 }
 
 /*
@@ -255,7 +428,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  */
 .openforms-formio-content ul,
 .openforms-formio-content ol {
-    font-family: var(--basis-text-font-family-default);
+  font-family: var(--basis-text-font-family-default);
 }
 
 /*
@@ -267,7 +440,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content figcaption {
-    font-family: var(--basis-text-font-family-default);
+  font-family: var(--basis-text-font-family-default);
 }
 
 /*
@@ -277,18 +450,13 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Upstream Issue: TODO - create an issue
  * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG blockquote.
  * Last verified: 2025-11-19 (OF 3.3.4)
- */
-// .openforms-formio-content blockquote {
-//     // font-size: variables.$typography-font-size-lg;
-//     // border-left: variables.$border-width-md variables.$border-style-solid variables.$color-red-40;
-//     // padding-left: variables.$space-block-xl;
-// }
-
-// // Table
-// // TODO: Table full width with no margin?
-// // TODO: Table with header row
-// // TODO: Table with header column
-// // TODO: Table with both
+ *
+.openforms-formio-content blockquote {
+    font-size: variables.$typography-font-size-lg;
+    border-left: variables.$border-width-md variables.$border-style-solid variables.$color-red-40;
+    padding-left: variables.$space-block-xl;
+}
+*/
 
 /*
  * CUSTOM OVERRIDE
@@ -299,37 +467,41 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content table {
-    font-family: var(--basis-text-font-family-default);
+  font-family: var(--basis-text-font-family-default);
 }
+
 .openforms-formio-content figure.table {
-    margin: 0;
+  margin: 0;
 }
+
 .openforms-formio-content table {
-    font-size: var(--basis-text-font-size-sm);
-    width: 100%;
+  font-size: var(--basis-text-font-size-sm);
+  width: 100%;
 }
+
 .openforms-formio-content table th {
-    background-color: var(--basis-color-default-color-document);
-    color: var(--basis-color-action-1-inverse-color-default);
-    font-weight: var(--basis-text-font-weight-bold);
-    padding: var(--basis-space-block-lg);
-    border: 0;
+  background-color: var(--basis-color-default-color-document);
+  color: var(--basis-color-action-1-inverse-color-default);
+  font-weight: var(--basis-text-font-weight-bold);
+  padding: var(--basis-space-block-lg);
+  border: 0;
 }
+
 .openforms-formio-content table tr {
   border: 0;
 }
+
 .openforms-formio-content table tr:nth-of-type(odd) {
-    background-color: var(--basis-color-default-bg-default);
+  background-color: var(--basis-color-default-bg-default);
 }
+
 .openforms-formio-content table tr:last-child {
   border: 0;
 }
-.openforms-formio-content table td {
-    padding: var(--basis-space-block-lg);
-}
 
-// // Embedded video
-// // BUG: Shows url and not the embedded video
+.openforms-formio-content table td {
+  padding: var(--basis-space-block-lg);
+}
 
 /*
  * CUSTOM OVERRIDE
@@ -340,7 +512,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content.openforms-formio-content--info {
-    border-inline-start-color: var(--basis-color-info-border-default);
+  border-inline-start-color: var(--basis-color-info-border-default);
 }
 
 /*
@@ -352,7 +524,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content.openforms-formio-content--warning {
-    border-inline-start-color: var(--basis-color-warning-border-default);
+  border-inline-start-color: var(--basis-color-warning-border-default);
 }
 
 /*
@@ -364,7 +536,7 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content.openforms-formio-content--error {
-    border-inline-start-color: var(--basis-color-negative-border-default);
+  border-inline-start-color: var(--basis-color-negative-border-default);
 }
 
 /*
@@ -376,11 +548,10 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content.openforms-formio-content--success {
-    border-inline-start-color: var(--basis-color-positive-border-default);
+  border-inline-start-color: var(--basis-color-positive-border-default);
 }
 
 /* END WYSIWYG Editor */
-
 /*
  * CUSTOM OVERRIDE
  * Reason: No option to style the editgrid items; missing feature in NLDS or OF.
@@ -390,11 +561,11 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-editgrid .openforms-editgrid__item {
-    background: var(--basis-color-default-bg-default);
+  background: var(--basis-color-default-bg-default);
 }
 
 .openforms-editgrid .openforms-editgrid__item:not(:last-of-type) {
-    margin-block-end: var(--basis-space-column-xl);
+  margin-block-end: var(--basis-space-column-xl);
 }
 
 /*
@@ -406,30 +577,34 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
-    padding-block-start: var(--basis-space-block-4xl);
-    padding-block-end: var(--basis-space-block-xl);
-    padding-inline-start: var(--basis-space-inline-xl);
-    padding-inline-end: var(--basis-space-inline-xl);
-    box-sizing: border-box;
-    border: 0;
+  padding-block-start: var(--basis-space-block-4xl);
+  padding-block-end: var(--basis-space-block-xl);
+  padding-inline-start: var(--basis-space-inline-xl);
+  padding-inline-end: var(--basis-space-inline-xl);
+  box-sizing: border-box;
+  border: 0;
 }
+
 fieldset.openforms-fieldset:not(.openforms-fieldset--no-header):has(:not(.openforms-fieldset)) {
-    background-color: var(--basis-color-default-bg-default);
+  background-color: var(--basis-color-default-bg-default);
 }
+
 fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) > .openforms-form-field-container > div > fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
-    background-color: var(--basis-color-default-inverse-color-document);
+  background-color: var(--basis-color-default-inverse-color-document);
 }
+
 fieldset.openforms-fieldset .openforms-form-field-container {
-    gap: var(--basis-space-column-md);
+  gap: var(--basis-space-column-md);
 }
+
 .openforms-fieldset .openforms-fieldset__legend {
-    position: relative;
-    top: var(--basis-size-xs);
-    margin-inline-start: 0;
-    padding-block: 0;
-    padding-inline: 0;
-    font-family: var(--basis-heading-font-family);
-    font-weight: var(--basis-heading-font-weight);
+  position: relative;
+  top: var(--basis-size-xs);
+  margin-inline-start: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  font-family: var(--basis-heading-font-family);
+  font-weight: var(--basis-heading-font-weight);
 }
 
 /*
@@ -441,7 +616,7 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Last verified: 2025-11-20 (OF 3.3.4)
  */
 .openforms-leaflet-map {
-    border-radius: var(--basis-form-control-border-radius);
+  border-radius: var(--basis-form-control-border-radius);
 }
 
 /*
@@ -453,7 +628,7 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Last verified: 2025-11-20 (OF 3.3.4)
  */
 .openforms-progress-indicator h2.openforms-caption {
-    font-weight: var(--basis-heading-font-weight);
+  font-weight: var(--basis-heading-font-weight);
 }
 
 /*
@@ -465,7 +640,7 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Last verified: 2025-11-20 (OF 3.3.4)
  */
 .openforms-multi-value-table {
-        border-spacing: 0;
+  border-spacing: 0;
 }
 
 /*
@@ -476,8 +651,8 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Safe to remove when: OF or NLDS includes a token for this component.
  * Last verified: 2025-11-20 (OF 3.3.4)
  */
- .openforms-multi-value-row__input {
-    max-width: 25rem;
+.openforms-multi-value-row__input {
+  max-width: 25rem;
 }
 
 /*
@@ -489,7 +664,7 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Last verified: 2025-11-20 (OF 3.3.4)
  */
 .openforms-progress-indicator .utrecht-link--placeholder {
-    --_utrecht-link-state-color: var(--basis-form-control-disabled-color);
+  --_utrecht-link-state-color: var(--basis-form-control-disabled-color);
 }
 
 /*
@@ -500,12 +675,13 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Safe to remove when: OF or NLDS includes tokens or a fix for this component.
  * Last verified: 2025-11-20 (OF 3.3.4)
  */
-[ref=component]>.utrecht-form-field.utrecht-form-field--select .selection .choices__item {
-    background-color: var(--basis-form-control-accent-color);
-    border-radius: var(--basis-form-control-border-radius);
-    line-height: var(--basis-text-line-height-more-space);
+[ref=component] > .utrecht-form-field.utrecht-form-field--select .selection .choices__item {
+  background-color: var(--basis-form-control-accent-color);
+  border-radius: var(--basis-form-control-border-radius);
+  line-height: var(--basis-text-line-height-more-space);
 }
+
 .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
-    border-left: 0;
-    margin-left: 0;
+  border-left: 0;
+  margin-left: 0;
 }
