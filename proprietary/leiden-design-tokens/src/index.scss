@@ -109,14 +109,6 @@ footer.utrecht-page-footer {
 
 /*
  * CUSTOM OVERRIDE
- * Reason: Changing order of the file upload top components; missing feature in NLDS or OF.
- * Related Component: file-upload
- * Upstream Issue: TODO - create an issue
- * Safe to remove when: OF includes tokens for the component.
- * Last verified: 2025-11-19 (OF 3.3.4)
- */
-/*
- * CUSTOM OVERRIDE
  * Reason: Hide file details section when there are no items uploaded; missing feature in NLDS or OF.
  * Related Component: file-upload-file-details
  * Upstream Issue: TODO - create an issue
@@ -142,7 +134,7 @@ footer.utrecht-page-footer {
 .utrecht-form-field.utrecht-form-field--file .fileSelector {
   border-radius: var(--basis-form-control-border-radius);
   background: var(--basis-color-default-bg-default);
-  border-color: var(--leiden-colors-grey-50);
+  border-color: var(--basis-color-default-border-default);
   border-width: var(--basis-border-width-md);
   padding-block: var(--basis-space-block-4xl);
   padding-inline: var(--basis-space-block-4xl);
@@ -180,8 +172,11 @@ footer.utrecht-page-footer {
   width: auto;
 }
 
+.utrecht-form-field.utrecht-form-field--file .file.has-error {
+    color: var(--basis-color-negative-color-default);
+}
+
 .utrecht-form-field.utrecht-form-field--file .file.has-error .alert.alert-danger.bg-error {
-  color: var(--basis-color-negative-color-default);
   font-weight: var(--basis-text-font-weight-bold);
   grid-column-start: 1;
   grid-column-end: 3;
@@ -669,6 +664,109 @@ fieldset.openforms-fieldset .openforms-form-field-container {
 
 /*
  * CUSTOM OVERRIDE
+ * Reason: No option to style the progress indicator numbers; missing feature in NLDS or OF.
+ * Related Component: openforms-progress-indicator
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens for the progress indicator.
+ * Last verified: 2025-12-10 (OF 3.3.8)
+ */
+
+.openforms-progress-indicator__nav .openforms-list {
+    /* list-style: decimal; */
+    gap: 0;
+}
+
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item {
+    list-style: none;
+    counter-increment: progress-indicator-counter;
+}
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item:first-child {
+    counter-reset: progress-indicator-counter;
+}
+
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item:not(:has(.fa-check)) {
+    /* display:list-item; */
+}
+
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item:not(:first-child) {
+    padding-top: var(--basis-space-block-lg);
+}
+
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item:not(:last-child){
+    padding-bottom: var(--basis-space-block-lg);
+    border-bottom: 1px solid var(--basis-color-default-bg-default);
+}
+
+.openforms-progress-indicator-item .openforms-progress-indicator-item__marker:before {
+    content: counter(progress-indicator-counter);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    font-weight: var(--basis-text-font-weight-bold);
+    background-color: var(--basis-color-transparent);
+    color: var(--basis-color-default-color-document);
+    text-align: center;
+    line-height: 1rem;
+    border-radius: var(--basis-border-radius-round);
+    padding: var(--basis-space-block-md);
+}
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item:has(.fa-check) .openforms-progress-indicator-item__marker:before {
+    display: none;
+}
+
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item:has(a.utrecht-link[aria-disabled="true"] ) .openforms-progress-indicator-item__marker:before {
+    background-color: var(--basis-color-transparent);
+    color: var(--basis-form-control-disabled-color);
+}
+
+.openforms-progress-indicator__nav .openforms-list > li.openforms-list__item:has(a.utrecht-link--current ) .openforms-progress-indicator-item__marker:before {
+    background-color: var(--basis-color-default-color-document);
+    color: var(--basis-color-default-inverse-color-document);
+}
+
+.openforms-progress-indicator-item .openforms-progress-indicator-item__marker {
+    width: auto;
+}
+
+.openforms-progress-indicator-item .openforms-progress-indicator-item__marker i {
+    border-radius: var(--basis-border-radius-round);
+    padding-inline: var(--basis-space-inline-md);
+    padding-block: var(--basis-space-block-md);
+    color: var(--basis-color-positive-color-default);
+    font-size: var(--basis-text-font-size-md);
+}
+
+.openforms-progress-indicator-item .openforms-progress-indicator-item__label {
+    padding-inline-start: var(--basis-form-control-padding-inline-start);
+    display: flex;
+    align-items: center;
+}
+
+.openforms-progress-indicator__nav .openforms-list a.utrecht-link:not(:focus) {
+    color: var(--basis-color-accent-2-border-default);
+    text-decoration: underline;
+}
+
+.openforms-progress-indicator__nav .openforms-list a.utrecht-link:focus {
+    color: var(--basis-color-default-inverse-color-document);
+}
+
+.openforms-progress-indicator__nav .openforms-list a.utrecht-link:hover {
+    text-decoration: none;
+}
+
+.openforms-progress-indicator__nav .openforms-list a.utrecht-link[aria-disabled="true"] {
+    color: var(--basis-form-control-disabled-color);
+    text-decoration: none;
+}
+
+.openforms-progress-indicator__nav .openforms-list a.utrecht-link.utrecht-link--current:not(:focus)  {
+    text-decoration: none;
+    color: var(--of-color-fg);
+}
+
+/*
+ * CUSTOM OVERRIDE
  * Reason: Choices button in a selection field missing style; missing feature in NLDS or OF.
  * Related Component: utrecht-form-field-select
  * Upstream Issue: TODO - create an issue
@@ -684,4 +782,145 @@ fieldset.openforms-fieldset .openforms-form-field-container {
 .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
   border-left: 0;
   margin-left: 0;
+}
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Datepicker is not styled; missing feature in NLDS or OF.
+ * Related Component: flatpickr-calender
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS has their own datepicker component or includes tokens for this component.
+ * Last verified: 2025-12-09 (OF 3.3.4)
+ */
+.flatpickr-calendar {
+    border-radius: var(--basis-border-radius-md);
+    // padding: var(--basis-space-block-xl);
+    width: auto;
+    /* -webkit-box-shadow: 1px 0 0 #e6e6e6, -1px 0 0 #e6e6e6, 0 1px 0 #e6e6e6, 0 -1px 0 #e6e6e6, 0 3px 13px rgba(0, 0, 0, .08);
+    box-shadow: 1px 0 #e6e6e6, -1px 0 #e6e6e6, 0 1px #e6e6e6, 0 -1px #e6e6e6, 0 3px 13px #00000014; */
+}
+
+.flatpickr-calendar .flatpickr-months {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: var(--basis-space-block-xl);
+}
+.flatpickr-calendar .flatpickr-current-month {
+    position: relative;
+    left: unset;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    font-size: 100%;
+}
+
+.flatpickr-calendar .flatpickr-months .flatpickr-month {
+    height: auto;
+    justify-items: center;
+}
+
+.flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year, .flatpickr-current-month input.cur-year {
+    // padding-block-end: var(--basis-form-control-padding-block-end);
+    // padding-block-start: var(--basis-form-control-padding-block-start);
+    // padding-inline-end: var(--basis-form-control-padding-inline-end);
+    // padding-inline-start: var(--basis-form-control-padding-inline-start);
+    border: 1px solid var(--basis-color-default-border-default);
+    border-radius: var(--basis-form-control-border-radius);
+    margin: 0;
+    color: var(--basis-color-default-color-document);
+    width: 100%;    
+    max-width: 100px;
+    height: 48px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-overflow: ellipsis;
+}
+
+.flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.flatpickr-current-month .numInputWrapper {
+    width: 100%;
+}
+
+// Weekdays
+.flatpickr-weekday {
+    /* font-size: 1rem; */
+    text-transform: capitalize;
+    color: var(--basis-color-default-color-default);
+}
+
+// Days
+.flatpickr-innerContainer {
+    padding: 0 var(--basis-space-block-sm);
+}
+
+.flatpickr-day {
+    color: var(--basis-form-control-accent-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+.flatpickr-day.nextMonthDay, .flatpickr-day.prevMonthDay {
+    color: var(--basis-color-disabled-color-default);
+    text-decoration: none;
+    font-weight: normal;
+}
+.flatpickr-day.selected {
+    background: var(--basis-form-control-accent-color);
+    border-color: var(--basis-form-control-accent-color);
+}
+.flatpickr-day.selected:hover {
+    background: var(--basis-form-control-hover-accent-color);
+    border-color: var(--basis-form-control-accent-color);
+}
+
+// Time
+.flatpickr-calendar.hasTime .flatpickr-time {
+    height: auto;
+    max-height: unset;
+    border-top: none;
+    padding: var(--basis-space-block-xl);
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.flatpickr-calendar.hasTime .flatpickr-time::after {
+    content: unset;
+}
+
+.flatpickr-time input.flatpickr-hour,
+.flatpickr-time input.flatpickr-minute {
+    padding-block-end: var(--basis-form-control-padding-block-end);
+    padding-block-start: var(--basis-form-control-padding-block-start);
+    padding-inline-end: var(--basis-form-control-padding-inline-end);
+    padding-inline-start: var(--basis-form-control-padding-inline-start);
+    border: 1px solid var(--basis-color-default-border-default);
+    border-radius: var(--basis-form-control-border-radius);
+    margin: 0;
+    color: var(--basis-color-default-color-document);
+    width: 100%;
+    font-weight: normal;
+}
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Radio button checked icon size is too big; missing feature in NLDS or OF.
+ * Related Component: utrecht-radio-button--html-input:checked
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS fixes the icon size.
+ * Last verified: 2025-12-09 (OF 3.3.4)
+ */
+.utrecht-radio-button--html-input:checked {
+    --utrecht-radio-button-icon-size: 4px;
 }
