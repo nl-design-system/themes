@@ -1869,6 +1869,10 @@
             "$type": "color",
             "$value": "{basis.color.accent-1-inverse.color-document}"
           }
+        },
+        "box-shadow": {
+          "$type": "color",
+          "$value": "rgba(0,0,0,0.25)"
         }
       },
       "space": {
@@ -2588,7 +2592,7 @@
             "y": "2",
             "blur": "6",
             "spread": "0",
-            "color": "{basis.color.default.color-default}",
+            "color": "{basis.color.box-shadow}",
             "type": "dropShadow"
           }
         },
@@ -2599,7 +2603,7 @@
             "y": "8",
             "blur": "16",
             "spread": "0",
-            "color": "{basis.color.default.color-default}",
+            "color": "{basis.color.box-shadow}",
             "type": "dropShadow"
           }
         },
@@ -2610,7 +2614,7 @@
             "y": "16",
             "blur": "48",
             "spread": "0",
-            "color": "{basis.color.default.color-default}",
+            "color": "{basis.color.box-shadow}",
             "type": "dropShadow"
           }
         }
@@ -11499,6 +11503,116 @@
             "max-inline-size": {
               "$type": "dimension",
               "$value": "{utrecht.page.max-inline-size}"
+            },
+            "mobile": {
+              "padding-block-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-inline-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              },
+              "padding-inline-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              }
+            },
+            "tablet": {
+              "padding-block-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-inline-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              },
+              "padding-inline-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              }
+            },
+            "laptop": {
+              "padding-block-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-inline-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              },
+              "padding-inline-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              }
+            }
+          },
+          "header": {
+            "mobile": {
+              "padding-block-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-inline-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              },
+              "padding-inline-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              }
+            },
+            "tablet": {
+              "padding-block-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-inline-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              },
+              "padding-inline-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              }
+            },
+            "laptop": {
+              "padding-block-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-block-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.block.xl}"
+              },
+              "padding-inline-start": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              },
+              "padding-inline-end": {
+                "$type": "dimension",
+                "$value": "{basis.space.inline.xl}"
+              }
             }
           }
         }
@@ -11569,6 +11683,12 @@
         "padding-block-end": {
           "$type": "dimension",
           "$value": "{basis.space.block.sm}"
+        }
+      },
+      "select": {
+        "highlighted-bg": {
+          "$type": "color",
+          "$value": "{basis.color.accent-2-inverse.bg-active}"
         }
       }
     }
