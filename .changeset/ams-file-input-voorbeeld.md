@@ -1,5 +1,5 @@
 ---
-"@nl-design-system-unstable/start-design-tokens": minor
+"@nl-design-system-unstable/voorbeeld-design-tokens": minor
 ---
 
 De volgende tokens zijn toegevoegd aan File Input component van Amsterdam:
