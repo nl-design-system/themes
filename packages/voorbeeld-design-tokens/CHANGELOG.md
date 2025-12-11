@@ -1,5 +1,183 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 7.0.0
+
+### Major Changes
+
+- a999745: De volgende tokens zijn toegevoegd aan Avatar component van Amsterdam:
+
+  - `ams.avatar.aspect-ratio`
+  - `ams.avatar.background-color`
+  - `ams.avatar.border-color`
+  - `ams.avatar.border-style`
+  - `ams.avatar.border-width`
+  - `ams.avatar.color`
+  - `ams.avatar.font-family`
+  - `ams.avatar.font-size`
+  - `ams.avatar.inline-size`
+  - `ams.avatar.line-height`
+  - `ams.avatar.padding-block`
+  - `ams.avatar.padding-inline`
+  - `ams.avatar.has-image.inline-size`
+
+  De volgende tokens zijn verwijderd uit ToDo Avatar component:
+
+  - `todo.avatar.background-color`
+  - `todo.avatar.border-color`
+  - `todo.avatar.border-radius`
+  - `todo.avatar.border-width`
+  - `todo.avatar.color`
+  - `todo.avatar.size`
+  - `todo.avatar.icon.icon-size`
+  - `todo.avatar.font-family`
+  - `todo.avatar.font-size`
+  - `todo.avatar.font-weight`
+  - `todo.avatar.line-height`
+  - `todo.avatar.text-transform`
+
+- 3c6748d: De volgende tokens zijn toegevoegd aan Case Card component:
+
+  - `todo.case-card.description.color`
+  - `todo.case-card.description.font-family`
+  - `todo.case-card.description.font-size`
+  - `todo.case-card.description.font-weight`
+  - `todo.case-card.description.line-height`
+  - `todo.case-card.archived.description.color`
+  - `todo.case-card.metadata.color`
+  - `todo.case-card.metadata.font-family`
+  - `todo.case-card.metadata.font-size`
+  - `todo.case-card.metadata.font-weight`
+  - `todo.case-card.metadata.line-height`
+  - `todo.case-card.archived.metadata.color`
+
+  De volgende tokens zijn hernoemd in Case Card component:
+
+  Read-only --> Archived
+
+  - `todo.case-card.heading.read-only.color` naar `todo.case-card.archived.heading.color`
+  - `todo.case-card.read-only.background-color` naar `todo.case-card.archived.background-color`
+  - `todo.case-card.read-only.color` naar `todo.case-card.archived.color`
+  - `todo.case-card.read-only.active.background-color` naar `todo.case-card.archived.active.background-color`
+  - `todo.case-card.read-only.hover.background-color` naar `todo.case-card.archived.hover.background-color`
+  - `todo.case-card.decoration.folder.read-only.background-color` naar `todo.case-card.archived.decoration.folder.background-color`
+  - `todo.case-card.decoration.folder.read-only.active.background-color` naar `todo.case-card.archived.decoration.folder.active.background-color`
+  - `todo.case-card.decoration.folder.read-only.hover.background-color` naar `todo.case-card.archived.decoration.folder.hover.background-color`
+
+  Focus-visible naar Focus
+
+  - `todo.case-card.focus-visible.background-color` naar `todo.case-card.focus.background-color`
+  - `todo.case-card.focus-visible.color` naar `todo.case-card.focus.color`
+  - `todo.case-card.decoration.folder.focus-visible.background-color` naar `todo.case-card.decoration.folder.focus.background-color`
+
+### Minor Changes
+
+- 27fc88f: De volgende tokens zijn toegevoegd aan Figure component van Amsterdam:
+
+  - `ams.figure.gap`
+  - `ams.figure.caption.color`
+  - `ams.figure.caption.font-family`
+  - `ams.figure.caption.font-size`
+  - `ams.figure.caption.font-weight`
+  - `ams.figure.caption.line-height`
+  - `ams.figure.caption.inverse.color`
+
+- ed87dd5: De volgende tokens zijn toegevoegd aan File Input component van Amsterdam:
+
+  - `ams.file-input.background-color`
+  - `ams.file-input.border-color`
+  - `ams.file-input.border-style`
+  - `ams.file-input.border-width`
+  - `ams.file-input.color`
+  - `ams.file-input.cursor`
+  - `ams.file-input.outline-offset`
+  - `ams.file-input.disabled.color`
+  - `ams.file-input.disabled.cursor`
+  - `ams.file-input.font-family`
+  - `ams.file-input.font-size`
+  - `ams.file-input.font-weight`
+  - `ams.file-input.line-height`
+  - `ams.file-input.padding-block`
+  - `ams.file-input.padding-inline`
+  - `ams.file-input.button.background-color`
+  - `ams.file-input.button.border-color`
+  - `ams.file-input.button.border-style`
+  - `ams.file-input.button.border-width`
+  - `ams.file-input.button.color`
+  - `ams.file-input.button.cursor`
+  - `ams.file-input.button.line-height`
+  - `ams.file-input.button.margin-inline-end`
+  - `ams.file-input.button.padding-block`
+  - `ams.file-input.button.padding-inline`
+  - `ams.file-input.button.disabled.color`
+  - `ams.file-input.button.disabled.cursor`
+  - `ams.file-input.button.hover.box-shadow`
+  - `ams.file-input.button.hover.color`
+
+- 3e79e61: De volgende tokens zijn toegevoegd aan Dot Badge component van Rijkshuisstijl Community:
+
+  - `rhc.dot-badge.block-size`
+  - `rhc.dot-badge.border-radius`
+  - `rhc.dot-badge.color`
+  - `rhc.dot-badge.inline-size`
+
+- c7ac1d4: De volgende tokens zijn toegevoegd aan Tabs component van Amsterdam:
+
+  - `ams.tabs.gap`
+  - `ams.tabs.button.color`
+  - `ams.tabs.button.cursor`
+  - `ams.tabs.button.font-family`
+  - `ams.tabs.button.font-size`
+  - `ams.tabs.button.font-weight`
+  - `ams.tabs.button.line-height`
+  - `ams.tabs.button.outline-offset`
+  - `ams.tabs.button.padding-block`
+  - `ams.tabs.button.padding-inline`
+  - `ams.tabs.button.hover.color`
+  - `ams.tabs.button.hover.box-shadow`
+  - `ams.tabs.button.disabled.color`
+  - `ams.tabs.button.disabled.cursor`
+  - `ams.tabs.button.selected.box-shadow`
+  - `ams.tabs.button.selected.font-weight`
+  - `ams.tabs.list.box-shadow`
+
+  De volgende tokens zijn toegevoegd aan Tabs component van Den Haag:
+
+  - `denhaag.tabs.border-color`
+  - `denhaag.tabs.border-width`
+  - `denhaag.tabs.border-style`
+  - `denhaag.tabs.width`
+  - `denhaag.tabs.tab.background-color`
+  - `denhaag.tabs.tab.color`
+  - `denhaag.tabs.tab.cursor`
+  - `denhaag.tabs.tab.font-family`
+  - `denhaag.tabs.tab.font-size`
+  - `denhaag.tabs.tab.font-weight`
+  - `denhaag.tabs.tab.line-height`
+  - `denhaag.tabs.tab.padding-block-end`
+  - `denhaag.tabs.tab.padding-block-start`
+  - `denhaag.tabs.tab.padding-inline-end`
+  - `denhaag.tabs.tab.padding-inline-start`
+  - `denhaag.tabs.tab.outline`
+  - `denhaag.tabs.tab.hover.color`
+  - `denhaag.tabs.tab.focus.color`
+  - `denhaag.tabs.tab.selected.color`
+  - `denhaag.tabs.tab.selected.font-weight`
+  - `denhaag.tabs.tab-indicator.border-color`
+  - `denhaag.tabs.tab-indicator.border-width`
+  - `denhaag.tabs.tab-indicator.bottom`
+  - `denhaag.tabs.tab-panel.outline`
+  - `denhaag.tabs.tab-panel.padding-block-end`
+  - `denhaag.tabs.tab-panel.padding-block-start`
+  - `denhaag.tabs.tab-panel.padding-inline-end`
+  - `denhaag.tabs.tab-panel.padding-inline-start`
+
+### Patch Changes
+
+- 3937344: - Waarde van token `utrecht.pagination.relative-link.disabled.color` is gewijzigd omdat er 'curly-braces' ontbraken.
+  - De waarde was `basis.color.disabled.color-subtle` en wordt `{basis.color.disabled.color-subtle}`.
+- 1e5f1e8: - Waarde van token `utrecht.data-badge.padding-block` gewijzigd van `None` naar `0px`.
+  - Waarde van token `nl.data-badge.padding-block` gewijzigd van `None` naar `0px`.
+
 ## 6.2.1
 
 ### Patch Changes
