@@ -1,5 +1,6 @@
 ---
 "@nl-design-system-unstable/voorbeeld-design-tokens": minor
+"@nl-design-system-unstable/start-design-tokens": minor
 ---
 
 Aanvullende design tokens voor de pressed state van de Candidate Button. De volgende design tokens zijn erbij gekomen:
