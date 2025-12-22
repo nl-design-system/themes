@@ -1,5 +1,112 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 2.2.0
+
+### Minor Changes
+
+- 597b3b6: De volgende tokens zijn toegevoegd voor de Breadcrumb Navigation component van Amsterdam:
+
+  - `ams.breadcrumb.font-family`
+  - `ams.breadcrumb.font-size`
+  - `ams.breadcrumb.font-weight`
+  - `ams.breadcrumb.line-height`
+  - `ams.breadcrumb.separator.background-image`
+  - `ams.breadcrumb.separator.block-size`
+  - `ams.breadcrumb.separator.inline-size`
+  - `ams.breadcrumb.separator.margin-inline`
+  - `ams.breadcrumb.link.color`
+  - `ams.breadcrumb.link.outline-offset`
+  - `ams.breadcrumb.link.text-decoration-line`
+  - `ams.breadcrumb.link.text-underline-offset`
+  - `ams.breadcrumb.link.text-decoration-thickness`
+  - `ams.breadcrumb.link.hover.color`
+  - `ams.breadcrumb.link.hover.text-decoration-line`
+
+- b7f3e31: De volgende tokens zijn toegevoegd aan Button component:
+
+  - `nl.button.icon-only.padding-block-end`
+  - `nl.button.icon-only.padding-block-start`
+  - `nl.button.icon-only.padding-inline-end`
+  - `nl.button.icon-only.padding-inline-start`
+
+- 86bcbf7: De volgende tokens zijn toegevoegd aan Navigation List component:
+
+  - `rhc.navigation-list.item.background-color`
+  - `rhc.navigation-list.item.border-color`
+  - `rhc.navigation-list.item.border-width`
+  - `rhc.navigation-list.item.column-gap`
+  - `rhc.navigation-list.item.min-height`
+  - `rhc.navigation-list.item.padding-block`
+  - `rhc.navigation-list.item.padding-inline`
+  - `rhc.navigation-list.item.active.background-color`
+  - `rhc.navigation-list.item.hover.background-color`
+  - `rhc.navigation-list.item.focus.background-color`
+  - `rhc.navigation-list.item.content.column-gap`
+  - `rhc.navigation-list.item.content.row-gap`
+  - `rhc.navigation-list.item.description.color`
+  - `rhc.navigation-list.item.description.font-size`
+  - `rhc.navigation-list.item.description.line-height`
+  - `rhc.navigation-list.item.icon-end.color`
+  - `rhc.navigation-list.item.icon-start.background-color`
+  - `rhc.navigation-list.item.icon-start.border-radius`
+  - `rhc.navigation-list.item.icon-start.color`
+  - `rhc.navigation-list.item.icon-start.padding-block`
+  - `rhc.navigation-list.item.icon-start.padding-inline`
+  - `rhc.navigation-list.item.icon-start.size`
+  - `rhc.navigation-list.item.label.color`
+  - `rhc.navigation-list.item.label.font-family`
+  - `rhc.navigation-list.item.label.font-size`
+  - `rhc.navigation-list.item.label.font-weight`
+  - `rhc.navigation-list.item.label.line-height`
+
+- 1f3a2bf: De volgende tokens zijn toegevoegd voor de Status Badge component:
+
+  - `utrecht.status-badge.background-color`
+  - `utrecht.status-badge.border-color`
+  - `utrecht.status-badge.border-radius`
+  - `utrecht.status-badge.border-width`
+  - `utrecht.status-badge.color`
+  - `utrecht.status-badge.font-family`
+  - `utrecht.status-badge.font-size`
+  - `utrecht.status-badge.font-weight`
+  - `utrecht.status-badge.line-height`
+  - `utrecht.status-badge.letter-spacing`
+  - `utrecht.status-badge.min-block-size`
+  - `utrecht.status-badge.min-inline-size`
+  - `utrecht.status-badge.padding-block`
+  - `utrecht.status-badge.padding-inline`
+  - `utrecht.status-badge.text-transform`
+  - `utrecht.status-badge.active.background-color`
+  - `utrecht.status-badge.active.border-color`
+  - `utrecht.status-badge.active.color`
+  - `utrecht.status-badge.danger.background-color`
+  - `utrecht.status-badge.danger.border-color`
+  - `utrecht.status-badge.danger.color`
+  - `utrecht.status-badge.error.background-color`
+  - `utrecht.status-badge.error.border-color`
+  - `utrecht.status-badge.error.color`
+  - `utrecht.status-badge.inactive.background-color`
+  - `utrecht.status-badge.inactive.border-color`
+  - `utrecht.status-badge.inactive.color`
+  - `utrecht.status-badge.invalid.background-color`
+  - `utrecht.status-badge.invalid.border-color`
+  - `utrecht.status-badge.invalid.color`
+  - `utrecht.status-badge.neutral.background-color`
+  - `utrecht.status-badge.neutral.border-color`
+  - `utrecht.status-badge.neutral.color`
+  - `utrecht.status-badge.safe.background-color`
+  - `utrecht.status-badge.safe.border-color`
+  - `utrecht.status-badge.safe.color`
+  - `utrecht.status-badge.success.background-color`
+  - `utrecht.status-badge.success.border-color`
+  - `utrecht.status-badge.success.color`
+  - `utrecht.status-badge.valid.background-color`
+  - `utrecht.status-badge.valid.border-color`
+  - `utrecht.status-badge.valid.color`
+  - `utrecht.status-badge.warning.background-color`
+  - `utrecht.status-badge.warning.border-color`
+  - `utrecht.status-badge.warning.color`
+
 ## 2.1.0
 
 ### Minor Changes
