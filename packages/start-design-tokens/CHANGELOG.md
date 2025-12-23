@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 2.3.0
+
+### Minor Changes
+
+- 2c084f0: Waarde van token `nl.button.subtle.border-width` is gewijzigd van `{nl.button.default.border-width}` naar `0px`.
+
 ## 2.2.0
 
 ### Minor Changes
