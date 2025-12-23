@@ -253,11 +253,13 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "Noto Sans, sans-serif"
+            "$value": "Noto Sans, Noto Sans Variable, sans-serif",
+            "$comment": "The variable font does not support italic yet, that is why the regular font is the preferred variant."
           },
           "monospace": {
             "$type": "fontFamilies",
-            "$value": "Noto Sans Mono, monospace"
+            "$value": "Noto Sans Mono Variable, Noto Sans Mono, monospace",
+            "$comment": "Both the variable and the regular font do not support italic, so prefer the variable font."
           }
         },
         "font-weight": {
@@ -2818,7 +2820,8 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "Noto Serif, serif"
+          "$value": "Noto Serif, Noto Serif Variable, serif",
+          "$comment": "The variable font does not support italic yet, that is why the regular font is the preferred variant."
         },
         "font-weight": {
           "$type": "fontWeights",
