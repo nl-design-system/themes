@@ -1,5 +1,6 @@
 import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 
+import { Button } from '@nl-design-system-candidate/button-react/css';
 import { CodeBlock } from '@nl-design-system-candidate/code-block-react/css';
 import { Code } from '@nl-design-system-candidate/code-react/css';
 import { ColorSample } from '@nl-design-system-candidate/color-sample-react/css';
@@ -12,6 +13,270 @@ import { Paragraph } from '@nl-design-system-candidate/paragraph-react/css';
 import { SkipLink } from '@nl-design-system-candidate/skip-link-react/css';
 
 export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
+  {
+    storyId: 'react-nl-button--default',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Default',
+    inline: true,
+    render: () => <Button label="Default" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--default-active',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Default Active',
+    inline: true,
+    render: () => <Button className="nl-button--active" label="Default Active" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--default-disabled',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Default Disabled',
+    inline: true,
+    render: () => <Button disabled label="Default Disabled" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--default-hover',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Default Hover',
+    state: true,
+    inline: true,
+    render: () => <Button className="nl-button--hover" label="Default Hover" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--primary',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Primary',
+    inline: true,
+    render: () => (
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        <Button label="Primary" purpose="primary" />
+        <Button label="Primary (positive)" purpose="primary" hint="positive" />
+        <Button label="Primary (negative)" purpose="primary" hint="negative" />
+      </div>
+    ),
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--primary-active',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Primary Active',
+    inline: true,
+    render: () => <Button className="nl-button--active" label="Primary Active" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--primary-disabled',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Primary Disabled',
+    inline: true,
+    render: () => <Button disabled label="Primary Disabled" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--primary-hover',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Primary Hover',
+    state: true,
+    inline: true,
+    render: () => <Button className="nl-button--hover" label="Primary Hover" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--secondary',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Secondary',
+    inline: true,
+    render: () => (
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        <Button label="Secondary" purpose="secondary" />
+        <Button label="Secondary (positive)" purpose="secondary" hint="positive" />
+        <Button label="Secondary (negative)" purpose="secondary" hint="negative" />
+      </div>
+    ),
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--secondary-active',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Secondary Active',
+    inline: true,
+    render: () => <Button className="nl-button--active" label="Secondary Active" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--secondary-disabled',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Secondary Disabled',
+    inline: true,
+    render: () => <Button disabled label="Secondary Disabled" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--secondary-hover',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Secondary Hover',
+    state: true,
+    inline: true,
+    render: () => <Button className="nl-button--hover" label="Secondary Hover" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--subtle',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Subtle',
+    inline: true,
+    render: () => (
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        <Button label="Subtle" purpose="subtle" />
+        <Button label="Subtle (positive)" purpose="subtle" hint="positive" />
+        <Button label="Subtle (negative)" purpose="subtle" hint="negative" />
+      </div>
+    ),
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--subtle-active',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Subtle Active',
+    inline: true,
+    render: () => <Button className="nl-button--active" label="Subtle Active" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--subtle-disabled',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Subtle Disabled',
+    inline: true,
+    render: () => <Button disabled label="Subtle Disabled" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--subtle-hover',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Subtle Hover',
+    state: true,
+    inline: true,
+    render: () => <Button className="nl-button--hover" label="Subtle Hover" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--toggle',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Toggle',
+    inline: true,
+    render: () => <Button label="Ingedrukt" pressed />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--default-active',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Default Active',
+    inline: true,
+    render: () => <Button className="nl-button--active" label="Default Active" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--default-disabled',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Default Disabled',
+    inline: true,
+    render: () => <Button disabled label="Disabled" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--default-hover',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Default Hover',
+    state: true,
+    inline: true,
+    render: () => <Button className="nl-button--hover" label="Default Hover" />,
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-button--full-width',
+    component: 'nl-button',
+    group: STORY_GROUPS['BUTTON_DEFAULT'],
+    name: 'Candidate Button: Volle breedte',
+    inline: true,
+    render: () => (
+      <>
+        <div style={{ display: 'flex', resize: 'both', overflow: 'auto' }}>
+          <Button style={{ flex: 1 }} label="Volle breedte" />
+        </div>
+        <br />
+        <div style={{ display: 'flex', resize: 'both', overflow: 'auto', width: '300px' }}>
+          <Button style={{ flex: 1 }} label="Volle breedte" />
+        </div>
+      </>
+    ),
+    detectTokens: {
+      anyOf: ['nl.button.XXXXXXXX.color'],
+    },
+  },
   {
     storyId: 'react-nl-code--default',
     name: 'Candidate Code',
