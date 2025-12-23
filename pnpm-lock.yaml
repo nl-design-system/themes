@@ -718,8 +718,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(react@18.3.1)
       '@nl-design-system-candidate/button-react':
-        specifier: link:../../../candidate/packages/components-react/button-react
-        version: link:../../../candidate/packages/components-react/button-react
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.0)(react@18.3.1)
       '@nl-design-system-candidate/code-block-react':
         specifier: 1.3.5
         version: 1.3.5(@babel/runtime@7.25.0)(react@18.3.1)
@@ -1202,11 +1202,11 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(react@18.3.1)
       '@nl-design-system-candidate/button-docs':
-        specifier: link:../../../candidate/packages/docs/button-docs
-        version: link:../../../candidate/packages/docs/button-docs
+        specifier: 1.0.0
+        version: 1.0.0
       '@nl-design-system-candidate/button-react':
-        specifier: link:../../../candidate/packages/components-react/button-react
-        version: link:../../../candidate/packages/components-react/button-react
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.27.4)(react@18.3.1)
       '@nl-design-system-candidate/link-docs':
         specifier: 1.2.0
         version: 1.2.0
@@ -4034,6 +4034,15 @@ packages:
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
+
+  '@nl-design-system-candidate/button-docs@1.0.0':
+    resolution: {integrity: sha512-SC2ytQJt2l9l2UFYvVeXcAUeQmOb8/JV3UUlOPlmmveoRAnQaPAwyO9TYnQBw+h3SMHz8/6HnLReYwgN+UxGYA==}
+
+  '@nl-design-system-candidate/button-react@1.0.0':
+    resolution: {integrity: sha512-vJgms4HPQlOzHUAcddRgZFpJgmHYGZ1JCxO9rboITME8wV31aZw8NSWxRWo4sGYcn4BxrxZ8qZ7o2cQp4t9wng==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18 || ^19
 
   '@nl-design-system-candidate/code-block-react@1.3.5':
     resolution: {integrity: sha512-kU+lrX5sciAw8t2vAcjZHTcEupTincmnU8YIxwZKJoCKLzPo8Qp63VPkLpIweIUX29YhcB+SgDG9f1VDjx+NpQ==}
@@ -11668,6 +11677,20 @@ snapshots:
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     dependencies:
       eslint-scope: 5.1.1
+
+  '@nl-design-system-candidate/button-docs@1.0.0': {}
+
+  '@nl-design-system-candidate/button-react@1.0.0(@babel/runtime@7.25.0)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      clsx: 2.1.1
+      react: 18.3.1
+
+  '@nl-design-system-candidate/button-react@1.0.0(@babel/runtime@7.27.4)(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.27.4
+      clsx: 2.1.1
+      react: 18.3.1
 
   '@nl-design-system-candidate/code-block-react@1.3.5(@babel/runtime@7.25.0)(react@18.3.1)':
     dependencies:
