@@ -314,6 +314,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-nl-mark--default',
     component: 'nl-mark',
+    group: STORY_GROUPS['MARK'],
     name: 'Candidate Mark',
     render: () => <Mark>Mark my words!</Mark>,
     detectTokens: {
