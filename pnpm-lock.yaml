@@ -312,6 +312,21 @@ importers:
 
   packages/start-design-tokens:
     devDependencies:
+      '@fontsource/ibm-plex-mono':
+        specifier: 5.2.7
+        version: 5.2.7
+      '@fontsource/ibm-plex-sans':
+        specifier: 5.2.8
+        version: 5.2.8
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../design-tokens-definition
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: workspace:*
+        version: link:../components-react/design-tokens-table-react
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../theme-toolkit
       '@tokens-studio/sd-transforms':
         specifier: 1.2.3
         version: 1.2.3(style-dictionary@4.0.1)
@@ -3735,6 +3750,12 @@ packages:
 
   '@fontsource/fira-sans@5.1.0':
     resolution: {integrity: sha512-qfAjF5WcrL6qQh9eIWLK7lOh9wbCgCnVWh2Nu2gozrTgsUgYBLR8sbCGYwlK1K0yZoQsR2i9VSiQ16wwPCBkSw==}
+
+  '@fontsource/ibm-plex-mono@5.2.7':
+    resolution: {integrity: sha512-MKAb8qV+CaiMQn2B0dIi1OV3565NYzp3WN5b4oT6LTkk+F0jR6j0ZN+5BKJiIhffDC3rtBULsYZE65+0018z9w==}
+
+  '@fontsource/ibm-plex-sans@5.2.8':
+    resolution: {integrity: sha512-eztSXjDhPhcpxNIiGTgMebdLP9qS4rWkysuE1V7c+DjOR0qiezaiDaTwQE7bTnG5HxAY/8M43XKDvs3cYq6ZYQ==}
 
   '@fontsource/lato@5.0.21':
     resolution: {integrity: sha512-UubLwvJO2bKuhWv6+ocx2Bou/pPIT6q7VpYaHIW7ZDaLPQY3uYAhveJg6P7Lvz5HYHyLba8JUc3yP7wvcqA8zQ==}
@@ -11293,6 +11314,10 @@ snapshots:
   '@fontsource/fira-code@5.1.0': {}
 
   '@fontsource/fira-sans@5.1.0': {}
+
+  '@fontsource/ibm-plex-mono@5.2.7': {}
+
+  '@fontsource/ibm-plex-sans@5.2.8': {}
 
   '@fontsource/lato@5.0.21': {}
 
