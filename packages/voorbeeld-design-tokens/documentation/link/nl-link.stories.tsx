@@ -19,7 +19,7 @@ export const VoorbeeldTheme = {
   },
 };
 
-export const BasisTheme = {
+export const StartTheme = {
   ...Stories.Link,
   name: 'Start theme',
   parameters: {
