@@ -1,5 +1,5 @@
 // packages/voorbeeld-design-tokens/documentation/{naam-component}/{prefix-organisatie}-{naam-component}.stories.tsx
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import '@utrecht/components/pagination/dist/index.css';
 
 const meta = {

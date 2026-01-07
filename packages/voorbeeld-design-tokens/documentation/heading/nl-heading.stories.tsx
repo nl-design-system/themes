@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
 
 const meta = {

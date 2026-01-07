@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Paragraph } from '@amsterdam/design-system-react';
 import { Card as CardAsLink } from '@amsterdam/design-system-react';
 
