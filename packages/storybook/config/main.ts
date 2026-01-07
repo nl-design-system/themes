@@ -27,6 +27,13 @@ const config: StorybookConfig = {
     'storybook/highlight',
   ],
   staticDirs: ['../../voorbeeld-design-tokens/documentation/assets'],
+  viteFinal: async (config) => {
+    config.esbuild = {
+      ...config.esbuild,
+      jsx: 'automatic',
+    };
+    return config;
+  },
 };
 
 export default config;
