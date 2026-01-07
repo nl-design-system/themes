@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PageHeader, Grid, LinkList, Heading } from '@amsterdam/design-system-react';
 
 const defaultStoryLinks = [

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { LinkList } from '@utrecht/component-library-react/dist';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 

@@ -1,5 +1,5 @@
 import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/ComponentStories';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokensDefinition from '@nl-design-system-community/design-tokens-definition/dist/list.json';
 import config from '../src/config.json';
 import tokens from '../dist/list.json';

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from '@nl-design-system-candidate/button-react/css';
 import * as Stories from '@nl-design-system-candidate/button-docs/stories/button.stories';
 import reactMeta from '@nl-design-system-candidate/button-docs/stories/button.react.meta';
