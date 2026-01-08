@@ -162,10 +162,35 @@ footer.utrecht-page-footer {
   * Related Component: openforms-title
   * Upstream Issue: TODO - create an issue
   * Safe to remove when: OF includes a font-size token for the title component.
-  * Last verified: 2025-11-19 (OF 3.4.0-leiden.1)
+  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
   */
 .openforms-title {
     font-size: var(--basis-text-font-size-sm);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: No option to set font-size and font-weight for the Open Forms subtitles; missing feature in NLDS or OF.
+  * Related Component: openforms-subtitle
+  * Upstream Issue: TODO - create an issue
+  * Safe to remove when: OF includes font-size and font-weight tokens for the subtitle component.
+  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  */
+.openforms-subtitle {
+    font-size: var(--basis-text-font-size-3xl);
+    font-weight: var(--basis-text-font-weight-bold);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Remove top margin from card body to align with our design; missing feature in NLDS or OF.
+  * Related Component: openforms-card
+  * Upstream Issue: TODO - create an issue
+  * Safe to remove when: OF includes tokens for the card component.
+  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  */
+.openforms-card .openforms-card__body {
+  margin-top: 0;
 }
 
 /*
@@ -659,6 +684,22 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Safe to remove when: OF or NLDS includes tokens on the fieldsets.
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
+
+ fieldset.openforms-fieldset {
+    border-width: 0;
+}
+
+ .openforms-fieldset .openforms-fieldset__legend {
+    margin-inline-start: 0;
+    padding-block: var(--basis-space-block-xl);
+    padding-inline: 0;
+    border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    width: 100%;
+    font-size: var(--basis-text-font-size-xl);
+    font-weight: var(--basis-text-font-weight-bold);
+    line-height: var(--basis-text-line-height-xl);
+}
+
 // fieldset.openforms-fieldset:not(.openforms-fieldset--no-header) {
 //   padding-block-start: var(--basis-space-block-4xl);
 //   padding-block-end: var(--basis-space-block-xl);
