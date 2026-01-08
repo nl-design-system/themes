@@ -175,7 +175,7 @@ describe.only('finding close color', () => {
       },
       {
         token: lightgray,
-        deltaE: 9.47098408750843,
+        deltaE: 9.470984087508421,
       },
       {
         token: silver,
@@ -193,7 +193,7 @@ describe.only('finding close color', () => {
       },
       {
         token: lightgray,
-        deltaE: 9.47098408750843,
+        deltaE: 9.470984087508421,
       },
     ]);
   });
