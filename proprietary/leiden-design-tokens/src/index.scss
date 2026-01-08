@@ -1027,6 +1027,18 @@ fieldset.openforms-fieldset .openforms-form-field-container {
 }
 
 /*
+  * CUSTOM OVERRIDE
+  * Reason: No option to style the card word-break; missing feature in NLDS or OF.
+  * Related Component: openforms-card
+  * Upstream Issue: TODO - create an issue
+  * Safe to remove when: OF or NLDS includes a token for the component
+  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  */
+.openforms-card {
+  word-break: break-word;
+}
+
+/*
  * CUSTOM OVERRIDE
  * Reason: No option to style the card padding for different screen sizes; missing feature in NLDS or OF.
  * Related Component: openforms-card
