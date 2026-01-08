@@ -138,6 +138,20 @@ body.utrecht-page {
   margin: 0 auto;
 }
 
+@media (width <= 991px) {
+  .a11y-toolbar {
+    padding-inline-start: var(--basis-space-inline-3xl);
+    padding-inline-end: var(--basis-space-inline-3xl);
+  }
+}
+
+@media (width <= 767px) {
+  .a11y-toolbar {
+    padding-inline-start: var(--basis-space-inline-4xl);
+    padding-inline-end: var(--basis-space-inline-4xl);
+  }
+}
+
 footer.utrecht-page-footer {
   flex-shrink: 0;
 }
@@ -392,10 +406,10 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 
 /*
  * CUSTOM OVERRIDE
- * Reason: No option to set color for the WYSIWYG link hovers; missing feature in NLDS or OF.
+ * Reason: No option to style the WYSIWYG link hovers; missing feature in NLDS or OF.
  * Related Component: openforms-formio-link
  * Upstream Issue: TODO - create an issue
- * Safe to remove when: OF or NLDS includes a token for the hovers on the WYSIWYG link component.
+ * Safe to remove when: OF or NLDS include tokens for the WYSIWYG link component.
  * Last verified: 2025-11-19 (OF 3.3.4)
  */
 .openforms-formio-content a {
@@ -405,6 +419,26 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 
 .openforms-formio-content a:hover {
   color: var(--nl-link-hover-color);
+}
+
+.openforms-formio-content a:focus-visible {
+    --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0) var(--utrecht-focus-inverse-outline-color, transparent);
+    box-shadow: var(--_utrecht-focus-ring-box-shadow);
+    outline-color: var(--utrecht-focus-outline-color, revert);
+    outline-offset: var(--utrecht-focus-outline-offset, revert);
+    outline-style: var(--utrecht-focus-outline-style, revert);
+    outline-width: var(--utrecht-focus-outline-width, revert);
+    --_utrecht-link-state-text-decoration: var(--utrecht-link-focus-visible-text-decoration, var(--utrecht-link-focus-text-decoration));
+    --_utrecht-link-state-text-decoration-thickness: var(--utrecht-link-focus-visible-text-decoration-thickness, var(--utrecht-link-focus-text-decoration-thickness));
+    z-index: var(--utrecht-stack-focus-z-index, 1);
+}
+
+.openforms-formio-content a:focus {
+    --_utrecht-link-state-color: var(--utrecht-link-focus-color);
+    background-color: var(--utrecht-link-focus-background-color, transparent);
+    text-decoration-skip: none;
+    text-decoration-skip-ink: none;
+    color: var(--basis-color-default-inverse-color-document);
 }
 
 /*
@@ -478,6 +512,8 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  */
 .openforms-formio-content figcaption {
   font-family: var(--basis-text-font-family-default);
+  font-size: var(--basis-text-font-size-md);
+  color: var(--basis-color-default-color-subtle);
 }
 
 /*
@@ -487,13 +523,11 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
  * Upstream Issue: TODO - create an issue
  * Safe to remove when: OF or NLDS includes tokens on the WYSIWYG blockquote.
  * Last verified: 2025-11-19 (OF 3.3.4)
- *
+ */
 .openforms-formio-content blockquote {
-    font-size: variables.$typography-font-size-lg;
-    border-left: variables.$border-width-md variables.$border-style-solid variables.$color-red-40;
-    padding-left: variables.$space-block-xl;
+    border-left: 4px solid var(--basis-color-info-color-active);
+    padding-inline-start: var(--basis-space-inline-lg);;
 }
-*/
 
 /*
  * CUSTOM OVERRIDE
@@ -814,7 +848,7 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Safe to remove when: OF or NLDS includes tokens or a fix for this component.
  * Last verified: 2025-11-20 (OF 3.3.4)
  */
-[ref=component] > .utrecht-form-field.utrecht-form-field--select .selection .choices__item {
+[ref=component]>.utrecht-form-field.utrecht-form-field--select .selection .choices__item {
   background-color: var(--basis-form-control-accent-color);
   border-radius: var(--basis-form-control-border-radius);
   line-height: var(--basis-text-line-height-more-space);
@@ -823,6 +857,10 @@ fieldset.openforms-fieldset .openforms-form-field-container {
 .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
   border-left: 0;
   margin-left: 0;
+}
+
+.utrecht-form-field--select .choices .choices__list .is-highlighted {
+    color: var(--basis-color-action-1-inverse-color-default);
 }
 
 /* 
@@ -866,10 +904,8 @@ fieldset.openforms-fieldset .openforms-form-field-container {
 
 .flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months,
 .flatpickr-current-month input.cur-year, .flatpickr-current-month input.cur-year {
-    // padding-block-end: var(--basis-form-control-padding-block-end);
-    // padding-block-start: var(--basis-form-control-padding-block-start);
-    // padding-inline-end: var(--basis-form-control-padding-inline-end);
-    // padding-inline-start: var(--basis-form-control-padding-inline-start);
+    font-weight: normal;
+    padding-inline: var(--basis-space-inline-lg);
     border: 1px solid var(--basis-color-default-border-default);
     border-radius: var(--basis-form-control-border-radius);
     margin: 0;
@@ -883,7 +919,8 @@ fieldset.openforms-fieldset .openforms-form-field-container {
     text-overflow: ellipsis;
 }
 
-.flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month,
+.flatpickr-calendar .flatpickr-months .flatpickr-next-month {
     position: relative;
     display: flex;
     align-items: center;
@@ -891,37 +928,60 @@ fieldset.openforms-fieldset .openforms-form-field-container {
     padding: 0;
 }
 
-.flatpickr-current-month .numInputWrapper {
+.flatpickr-calendar .flatpickr-current-month .numInputWrapper {
     width: 100%;
 }
 
+// Arrows
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month svg, 
+.flatpickr-calendar .flatpickr-months .flatpickr-next-month svg {
+    fill: var(--utrecht-button-secondary-action-color);
+}
+
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month:hover svg, 
+.flatpickr-calendar .flatpickr-months .flatpickr-next-month:hover svg {
+    fill: var(--utrecht-button-secondary-action-hover-color);
+}
+
 // Weekdays
-.flatpickr-weekday {
+.flatpickr-calendar .flatpickr-weekday {
     /* font-size: 1rem; */
     text-transform: capitalize;
     color: var(--basis-color-default-color-default);
+    color: var(--basis-color-accent-1-color-document);
 }
 
 // Days
-.flatpickr-innerContainer {
+.flatpickr-calendar .flatpickr-innerContainer {
     padding: 0 var(--basis-space-block-sm);
 }
 
-.flatpickr-day {
+.flatpickr-calendar .flatpickr-day {
     color: var(--basis-form-control-accent-color);
     font-weight: bold;
     text-decoration: underline;
 }
-.flatpickr-day.nextMonthDay, .flatpickr-day.prevMonthDay {
+
+.flatpickr-calendar span.flatpickr-day:hover {
+    background: var(--basis-color-accent-2-color-hover);
+    border-color: var(--basis-color-accent-2-color-hover);
+    color: var(--basis-color-action-2-inverse-color-hover);
+    text-decoration: none;
+}
+
+.flatpickr-calendar .flatpickr-day.nextMonthDay, 
+.flatpickr-calendar .flatpickr-day.prevMonthDay {
     color: var(--basis-color-disabled-color-default);
     text-decoration: none;
     font-weight: normal;
 }
-.flatpickr-day.selected {
-    background: var(--basis-form-control-accent-color);
-    border-color: var(--basis-form-control-accent-color);
+.flatpickr-calendar .flatpickr-day.selected {
+  color: var(--basis-color-accent-1-inverse-color-document);
+  background: var(--basis-form-control-accent-color);
+  border-color: var(--basis-form-control-accent-color);
+  text-decoration: none;
 }
-.flatpickr-day.selected:hover {
+.flatpickr-calendar .flatpickr-day.selected:hover {
     background: var(--basis-form-control-hover-accent-color);
     border-color: var(--basis-form-control-accent-color);
 }
@@ -940,8 +1000,8 @@ fieldset.openforms-fieldset .openforms-form-field-container {
     content: unset;
 }
 
-.flatpickr-time input.flatpickr-hour,
-.flatpickr-time input.flatpickr-minute {
+.flatpickr-calendar .flatpickr-time input.flatpickr-hour,
+.flatpickr-calendar .flatpickr-time input.flatpickr-minute {
     padding-block-end: var(--basis-form-control-padding-block-end);
     padding-block-start: var(--basis-form-control-padding-block-start);
     padding-inline-end: var(--basis-form-control-padding-inline-end);
@@ -974,6 +1034,11 @@ fieldset.openforms-fieldset .openforms-form-field-container {
  * Safe to remove when: OF or NLDS includes tokens for the component
  * Last verified: 2025-12-10 (OF 3.3.8)
  */
+@media (width <= 767px) {
+  .openforms-card {
+    padding: var(--basis-space-block-xl);
+  }
+}
 @media (768px <= width <= 991px) {
   .openforms-card {
     padding-block-end: var(--basis-space-block-3xl);
@@ -1023,7 +1088,7 @@ fieldset.openforms-fieldset .openforms-form-field-container {
   --of-utrecht-page-footer-laptop-padding-inline-end: var(--basis-space-inline-3xl);
   --of-utrecht-page-footer-laptop-padding-inline-start: var(--basis-space-inline-3xl);
   position: relative;
-  border-bottom: 16px solid var(--basis-color-default-inverse-color-document);
+  border-bottom: 8px solid var(--basis-color-default-inverse-color-document);
   background-color: var(--basis-color-default-color-document);
   color: var(--basis-color-default-inverse-color-document);
 }
@@ -1055,6 +1120,22 @@ fieldset.openforms-fieldset .openforms-form-field-container {
 
 @media (width <= 825px) {
     footer.utrecht-page-footer .utrecht-page-footer__navigation {
-        padding-bottom: 40px;
+        padding-bottom: 60px;
     }
 }
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the icons in de button group form navigation; missing feature in NLDS or OF.
+ * Related Component: openforms-form-navigation
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF or NLDS includes tokens for the component
+ * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+ */
+
+.openforms-form-navigation a.utrecht-link:focus .utrecht-icon,
+.openforms-form-navigation .utrecht-link-button:focus,
+.openforms-form-navigation .utrecht-link-button:focus .utrecht-icon {
+    color: var(--basis-focus-inverse-outline-color);
+ }
+ 
