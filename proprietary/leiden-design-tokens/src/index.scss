@@ -157,6 +157,18 @@ footer.utrecht-page-footer {
 }
 
 /*
+  * CUSTOM OVERRIDE
+  * Reason: No option to set font-size for the Open Forms titles; missing feature in NLDS or OF.
+  * Related Component: openforms-title
+  * Upstream Issue: TODO - create an issue
+  * Safe to remove when: OF includes a font-size token for the title component.
+  * Last verified: 2025-11-19 (OF 3.4.0-leiden.1)
+  */
+.openforms-title {
+    font-size: var(--basis-text-font-size-sm);
+}
+
+/*
  * CUSTOM OVERRIDE
  * Reason: Hide file details section when there are no items uploaded; missing feature in NLDS or OF.
  * Related Component: file-upload-file-details
