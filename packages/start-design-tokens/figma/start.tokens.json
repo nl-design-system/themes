@@ -5056,19 +5056,11 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.default}"
+            "$value": "{basis.text.font-weight.bold}"
           },
           "line-heigth": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
-          },
-          "max-block-size": {
-            "$type": "dimension",
-            "$value": "{basis.pointer-target.min-block-size}"
-          },
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{basis.pointer-target.min-inline-size}"
           },
           "min-block-size": {
             "$type": "dimension",
@@ -5169,7 +5161,7 @@
             },
             "font-weight": {
               "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.default}"
+              "$value": "{basis.text.font-weight.bold}"
             },
             "active": {
               "background-color": {
@@ -5363,6 +5355,48 @@
           "row-gap": {
             "$type": "dimension",
             "$value": "{basis.space.row.sm}"
+          }
+        },
+        "header": {
+          "button": {
+            "border-radius": {
+              "$type": "dimension",
+              "$value": "{basis.border-radius.md}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{basis.border-width.sm}"
+            },
+            "min-block-size": {
+              "$type": "dimension",
+              "$value": "{basis.pointer-target.min-block-size}"
+            },
+            "min-inline-size": {
+              "$type": "dimension",
+              "$value": "2.5rem"
+            },
+            "padding-block-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.md}"
+            },
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.md}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.md}"
+            },
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.md}"
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{basis.size.icon.md}"
+              }
+            }
           }
         },
         "weekday": {
