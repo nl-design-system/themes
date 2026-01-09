@@ -5025,6 +5025,10 @@
   "components/calendar": {
     "todo": {
       "calendar": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
         "day": {
           "background-color": {
             "$type": "color",
@@ -5358,7 +5362,55 @@
           }
         },
         "header": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.sm}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-familiy": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.bold}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          },
           "button": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.transparent}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.transparent}"
+            },
             "border-radius": {
               "$type": "dimension",
               "$value": "{basis.border-radius.md}"
@@ -5366,6 +5418,10 @@
             "border-width": {
               "$type": "dimension",
               "$value": "{basis.border-width.sm}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-default}"
             },
             "min-block-size": {
               "$type": "dimension",
@@ -5390,6 +5446,62 @@
             "padding-inline-start": {
               "$type": "dimension",
               "$value": "{basis.space.inline.md}"
+            },
+            "active": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.action-2.bg-active}"
+              },
+              "border-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.action-2.color-active}"
+              }
+            },
+            "disabled": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
+              },
+              "border-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.disabled.color-default}"
+              }
+            },
+            "focus": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.focus.background-color}"
+              },
+              "border-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.focus.color}"
+              }
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{basis.color.action-2.bg-hover}"
+              },
+              "border-color": {
+                "$type": "color",
+                "$value": "{basis.color.transparent}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.action-2.color-hover}"
+              }
             },
             "icon": {
               "size": {
@@ -5432,7 +5544,7 @@
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.default}"
           },
-          "line-heigth": {
+          "line-height": {
             "$type": "lineHeights",
             "$value": "{basis.text.line-height.md}"
           },
