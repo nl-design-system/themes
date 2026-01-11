@@ -195,6 +195,39 @@ footer.utrecht-page-footer {
 
 /*
  * CUSTOM OVERRIDE
+ * Reason: Style the form navigation to match our design; missing feature in NLDS or OF.
+ * Related Component: openforms-form-navigation
+ * Upstream Issue: TODO - create an issue
+ * Safe to remove when: OF includes tokens for the form navigation component.
+ * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+ */
+.openforms-form-navigation {
+    margin-block: var(--basis-space-block-4xl);
+    padding-block: var(--basis-space-block-4xl);
+    border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button.utrecht-button.utrecht-button--submit.utrecht-button--primary-action.openforms-form-navigation__next-button {
+    order: 2;
+    margin-right: auto;
+}
+
+a.utrecht-link.openforms-previous-link.openforms-previous-link--end.utrecht-link--html-a.utrecht-link--openforms {
+    order: 1;
+}
+
+button.utrecht-link-button.utrecht-link-button--html-button.openforms-form-navigation__save-button {
+    order: 3;
+}
+
+button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-button {
+    order: 4;
+}
+
+/*
+ * CUSTOM OVERRIDE
  * Reason: Hide file details section when there are no items uploaded; missing feature in NLDS or OF.
  * Related Component: file-upload-file-details
  * Upstream Issue: TODO - create an issue
