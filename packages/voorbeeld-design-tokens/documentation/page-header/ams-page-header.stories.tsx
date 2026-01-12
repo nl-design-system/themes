@@ -1,5 +1,4 @@
-import { forwardRef } from 'react';
-import type { ForwardedRef, SVGProps } from 'react';
+import type { SVGProps } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PageHeader, Grid, LinkList, Heading } from '@amsterdam/design-system-react';
 
@@ -22,11 +21,10 @@ const defaultStoryLinks = [
   ],
 ];
 
-const ExampleLogo = forwardRef((props: SVGProps<SVGSVGElement>, ref: ForwardedRef<SVGSVGElement>) => (
+const ExampleLogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
     focusable="false"
     height="1rem" // Height for when CSS does not load, gets overridden when it does
-    ref={ref}
     role="img"
     viewBox="0 0 94 16"
     xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +35,7 @@ const ExampleLogo = forwardRef((props: SVGProps<SVGSVGElement>, ref: ForwardedRe
       fill="#8A00EC"
     />
   </svg>
-));
+);
 
 ExampleLogo.displayName = 'ExampleLogo';
 
