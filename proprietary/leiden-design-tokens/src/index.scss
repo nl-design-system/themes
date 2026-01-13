@@ -228,6 +228,28 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
     order: 4;
 }
 
+.openforms-form-navigation .openforms-previous-link,
+.openforms-form-navigation .openforms-form-navigation__save-button,
+.openforms-form-navigation .openforms-abort-button {
+  color: var(--basis-color-action-2-color-default);
+  font-weight: var(--basis-text-font-weight-default);
+}
+
+.openforms-form-navigation .openforms-previous-link .utrecht-icon,
+.openforms-form-navigation .openforms-form-navigation__save-button .utrecht-icon,
+.openforms-form-navigation .openforms-abort-button .utrecht-icon {
+  color: var(--basis-color-action-2-color-default);
+}
+
+.openforms-form-navigation .openforms-previous-link:hover,
+.openforms-form-navigation .openforms-form-navigation__save-button:hover,
+.openforms-form-navigation .openforms-abort-button:hover,
+.openforms-form-navigation .openforms-previous-link:hover .utrecht-icon,
+.openforms-form-navigation .openforms-form-navigation__save-button:hover .utrecht-icon,
+.openforms-form-navigation .openforms-abort-button:hover .utrecht-icon {
+  color: var(--basis-color-action-2-color-hover);
+}
+
 /*
  * CUSTOM OVERRIDE
  * Reason: Hide file details section when there are no items uploaded; missing feature in NLDS or OF.
