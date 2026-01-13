@@ -164,6 +164,10 @@ footer.utrecht-page-footer {
   * Safe to remove when: OF includes a font-size token for the title component.
   * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
   */
+.openforms-card > .openforms-card__header > h1.openforms-title {
+  font-size: var(--basis-text-font-size-2xl);
+  margin-bottom: var(--basis-space-block-lg);
+}
 .openforms-card:has(.openforms-subtitle)
   > .openforms-card__header
   > h1.openforms-title {
@@ -1259,5 +1263,4 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 .openforms-form-navigation .utrecht-link-button:focus,
 .openforms-form-navigation .utrecht-link-button:focus .utrecht-icon {
     color: var(--basis-focus-inverse-outline-color);
- }
- 
+}
