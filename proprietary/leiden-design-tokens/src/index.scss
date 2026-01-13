@@ -124,6 +124,11 @@ body.utrecht-page {
   margin: 0 auto;
 }
 
+.openforms-app {
+  padding-inline-end: var(--basis-space-inline-xl);
+  padding-inline-start: var(--basis-space-inline-xl);
+}
+
 .openforms-app__body {
   background: var(--basis-color-default-inverse-color-document);
 }
@@ -1228,4 +1233,40 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 
 input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]"] {
     max-inline-size: 100%;
+}
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Styling the summary component to match the design tokens
+ * Related Component: openforms-summary
+ * Safe to remove when: OF or NLDS includes tokens for the component
+ * Last verified: 2026-01-13 (OF 3.4.0-leiden.1)
+ */
+
+.openforms-summary {
+    padding-block: var(--basis-space-block-md) var(--basis-space-block-3xl);
+    border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+}
+
+.openforms-summary .openforms-summary__header h2.utrecht-heading-2.utrecht-heading-2--openforms-summary-step-name {
+    font-size: var(--basis-text-font-size-lg);
+    line-height: var(--basis-text-line-height-lg);
+}
+
+.openforms-summary .openforms-summary__header {
+    padding-block-end: var(--basis-space-block-md);
+}
+
+.openforms-summary .utrecht-data-list.utrecht-data-list--openforms {
+    gap: var(--basis-space-row-md)
+}
+
+.openforms-summary .utrecht-data-list--openforms .utrecht-data-list__item-key {
+    font-weight: var(--basis-text-font-weight-default);
+    line-height: var(--basis-text-line-height-md);
+}
+
+.openforms-summary .utrecht-data-list--openforms .utrecht-data-list__item-value {
+    font-weight: var(--basis-text-font-weight-bold);
+    line-height: var(--basis-text-line-height-md)
 }
