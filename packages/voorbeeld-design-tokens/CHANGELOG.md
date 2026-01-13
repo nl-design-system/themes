@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 7.4.1
+
+### Patch Changes
+
+- 7d5674d: Token `nl.button.outline-offset` is verwijderd uit Button component.
+
 ## 7.4.0
 
 ### Minor Changes
