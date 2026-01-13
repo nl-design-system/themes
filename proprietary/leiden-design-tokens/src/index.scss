@@ -1028,13 +1028,13 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
     padding: 0 var(--basis-space-block-sm);
 }
 
-.flatpickr-calendar .flatpickr-day {
+.flatpickr-calendar .flatpickr-day:not(.flatpickr-disabled) {
     color: var(--basis-form-control-accent-color);
     font-weight: bold;
     text-decoration: underline;
 }
 
-.flatpickr-calendar span.flatpickr-day:hover {
+.flatpickr-calendar span.flatpickr-day:not(.flatpickr-disabled):hover {
     background: var(--basis-color-accent-2-color-hover);
     border-color: var(--basis-color-accent-2-color-hover);
     color: var(--basis-color-action-2-inverse-color-hover);
@@ -1042,7 +1042,8 @@ button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
 }
 
 .flatpickr-calendar .flatpickr-day.nextMonthDay, 
-.flatpickr-calendar .flatpickr-day.prevMonthDay {
+.flatpickr-calendar .flatpickr-day.prevMonthDay,
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled {
     color: var(--basis-color-disabled-color-default);
     text-decoration: none;
     font-weight: normal;
