@@ -124,9 +124,11 @@ body.utrecht-page {
   margin: 0 auto;
 }
 
-.openforms-app {
-  padding-inline-end: var(--basis-space-inline-xl);
-  padding-inline-start: var(--basis-space-inline-xl);
+@media (width <= 1165px) {
+  .openforms-app {
+    padding-inline-end: var(--basis-space-inline-xl);
+    padding-inline-start: var(--basis-space-inline-xl);
+  }
 }
 
 .openforms-app__body {
