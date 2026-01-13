@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 2.4.1
+
+### Patch Changes
+
+- adb7894: Token `nl.button.outline-offset` is verwijderd uit Button component.
+
 ## 2.4.0
 
 ### Minor Changes
