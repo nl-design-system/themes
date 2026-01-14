@@ -8190,7 +8190,136 @@
       }
     }
   },
-  "components/modal-dialog": {
+  "components/modal-dialog/amsterdam": {
+    "ams": {
+      "dialog": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.border-subtle}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "312px"
+        },
+        "max-block-size": {
+          "$type": "dimension",
+          "$value": "80vh",
+          "$description": "[code-only]"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "640px"
+        },
+        "medium": {
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "640px"
+          },
+          "max-block-size": {
+            "$type": "dimension",
+            "$value": "80vh",
+            "$description": "[code-only]"
+          }
+        },
+        "backdrop": {
+          "background-color": {
+            "$type": "color",
+            "$value": "rgba(36,36,36,0.2)"
+          }
+        },
+        "header": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.xl}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          }
+        },
+        "body": {
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "medium": {
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          }
+        },
+        "footer": {
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.3xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.3xl}"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          }
+        }
+      }
+    },
+    "todo": {
+      "dialog": {
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.lg}"
+        },
+        "box-shadow": {
+          "$type": "boxShadow",
+          "$value": "{basis.box-shadow.lg}"
+        }
+      }
+    }
+  },
+  "components/modal-dialog/todo": {
     "todo": {
       "modal-dialog": {
         "background-color": {
@@ -14877,7 +15006,8 @@
       "components/logo",
       "components/mark/nl",
       "components/mark/utrecht",
-      "components/modal-dialog",
+      "components/modal-dialog/amsterdam",
+      "components/modal-dialog/todo",
       "components/navigation-bar",
       "components/navigation-list",
       "components/note",
