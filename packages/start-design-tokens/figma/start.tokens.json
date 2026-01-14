@@ -8190,7 +8190,7 @@
       }
     }
   },
-  "components/modal-dialog/amsterdam": {
+  "components/modal-dialog": {
     "ams": {
       "dialog": {
         "background-color": {
@@ -8315,136 +8315,6 @@
         "box-shadow": {
           "$type": "boxShadow",
           "$value": "{basis.box-shadow.lg}"
-        }
-      }
-    }
-  },
-  "components/modal-dialog/todo": {
-    "todo": {
-      "modal-dialog": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.border-subtle}"
-        },
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{basis.border-radius.lg}"
-        },
-        "border-width": {
-          "$type": "dimension",
-          "$value": "{basis.border-width.sm}"
-        },
-        "box-shadow": {
-          "$type": "boxShadow",
-          "$value": "{basis.box-shadow.lg}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "content": {
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.3xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.3xl}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          }
-        },
-        "footer": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          }
-        },
-        "header": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-subtle}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.md}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.md}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "label": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-document}"
-            },
-            "font-family": {
-              "$type": "fontFamilies",
-              "$value": "{basis.text.font-family.default}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{basis.text.font-size.md}"
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            },
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{basis.text.line-height.md}"
-            }
-          }
         }
       }
     }
@@ -15006,8 +14876,7 @@
       "components/logo",
       "components/mark/nl",
       "components/mark/utrecht",
-      "components/modal-dialog/amsterdam",
-      "components/modal-dialog/todo",
+      "components/modal-dialog",
       "components/navigation-bar",
       "components/navigation-list",
       "components/note",
