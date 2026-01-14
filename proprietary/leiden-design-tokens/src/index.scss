@@ -1272,3 +1272,135 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
     font-weight: var(--basis-text-font-weight-bold);
     line-height: var(--basis-text-line-height-md)
 }
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling the children component table to match the design tokens
+  * Related Component: openforms-children
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-01-14 (OF 3.4.0-leiden.1)
+  */
+.openforms-children {
+    padding: 0;
+    // margin-block-start: var(--basis-form-control-padding-block-start);
+    margin-block-end: var(--basis-space-block-3xl);
+}
+
+.openforms-children table.utrecht-table,
+.openforms-children .utrecht-table--html-table>thead, 
+.openforms-children .utrecht-table__header,
+.openforms-children .utrecht-table__header .utrecht-table__row {
+    background-color: var(--basis-color-default-bg-hover);
+    font-weight: var(--basis-text-font-weight-default);
+}
+
+.openforms-children .utrecht-table__header-cell {
+    font-weight: var(--basis-text-font-weight-default);
+}
+
+.openforms-children .utrecht-table__body {
+    background-color: var(--basis-color-default-inverse-color-document);
+    font-weight: var(--basis-text-font-weight-bold);
+}
+
+.openforms-children .utrecht-table__body .utrecht-table__cell {
+    border: 0;
+}
+
+.openforms-children .utrecht-table__body > tr:nth-child(even) {
+    background-color: var(--basis-color-default-bg-hover);
+}
+
+.openforms-children .utrecht-table__body > tr > .utrecht-table__cell.openforms-children__actions {
+  text-align: right;
+}
+
+.openforms-children .openforms-children__actions button.utrecht-button.utrecht-button--subtle {
+    padding: 0;
+    min-block-size: 0;
+    min-inline-size: 0;
+}
+
+.openforms-children .openforms-children__actions .utrecht-icon {
+    font-size: var(--basis-form-control-font-size);
+    color: var(--basis-color-action-2-color-default);
+}
+
+.openforms-children .openforms-children__actions .utrecht-button--subtle:hover .utrecht-icon {
+    color: var(--basis-color-action-2-color-hover);
+}
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Styling the partners form field to match the design tokens
+ * Related Component: openforms-form-field--partners
+ * Safe to remove when: OF or NLDS includes tokens for the component
+ * Last verified: 2026-01-14 (OF 3.4.0-leiden.1)
+ */
+
+.utrecht-form-field--partners .utrecht-data-list {
+    margin-block-end: var(--basis-space-row-3xl);
+}
+
+.utrecht-form-field--partners .utrecht-data-list .utrecht-data-list__item-key {
+    font-weight: var(--basis-text-font-weight-default);
+    line-height: var(--basis-text-line-height-md);
+}
+
+.utrecht-form-field--partners .utrecht-data-list .utrecht-data-list__item-value {
+    font-weight: var(--basis-text-font-weight-bold);
+    line-height: var(--basis-text-line-height-md)
+}
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Adding margin to form field labels to match design tokens
+ * Related Component: openforms-form-field
+ * Safe to remove when: OF or NLDS includes tokens for the component
+ * Last verified: 2026-01-14 (OF 3.4.0-leiden.1)
+ */
+
+.utrecht-form-field__label {
+    margin-block-end: var(--basis-space-row-md);
+}
+
+/*
+* CUSTOM OVERRIDE
+* Reason: Styling invalid form fields to match design
+* Related Component: openforms-form-field
+* Safe to remove when: OF or NLDS includes tokens for the component
+* Last verified: 2026-01-14 (OF 3.4.0-leiden.1)
+*/
+
+input.is-invalid,
+.utrecht-form-field--invalid .utrecht-textbox--openforms-date-day,
+.utrecht-form-field--invalid .utrecht-textbox--openforms-date-month,
+.utrecht-form-field--invalid .utrecht-textbox--openforms-date-year{
+    border: 2px solid #F14848;
+    background-color: #FEEDED;
+    color: #96190B;
+}
+
+.utrecht-form-fieldset--invalid, .utrecht-form-field--invalid, [ref=component].has-error>.utrecht-form-field, [ref=component].formio-error-wrapper>.utrecht-form-field, [ref=component].formio-error-wrapper>.utrecht-form-fieldset {
+    border-inline-start-width: 0;
+    padding-inline-start: 0;
+}
+
+.utrecht-form-field-description.utrecht-form-field-description--openforms-errors, .utrecht-form-field.utrecht-form-field--file .utrecht-form-field-description.bg-error {
+    font-weight: var(--basis-text-font-weight-regular);
+}
+
+.utrecht-form-field-description.utrecht-form-field-description--openforms-errors .form-text.error:before, 
+.utrecht-form-field.utrecht-form-field--file .utrecht-form-field-description.bg-error:before,
+.utrecht-form-field--invalid .utrecht-form-field-description--invalid.utrecht-form-field-description--openforms-errors:before {
+    content: "";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: var(--fa-style, 900);
+    display: inline-block;
+    margin-inline-end: var(--basis-space-column-sm);
+}
+
+[ref=component].has-error>.utrecht-form-field .form-text.error, [ref=component].formio-error-wrapper>.utrecht-form-field .form-text.error {
+    display: inline-block;
+}
+
