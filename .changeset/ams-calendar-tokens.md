@@ -2,7 +2,7 @@
 "@nl-design-system-unstable/start-design-tokens": major
 ---
 
-De volgende tokens zijn toegevoegd aan Calender component:
+De volgende tokens zijn toegevoegd aan Modal Dialog component:
 
 - `ams.dialog.background-color`
 - `ams.dialog.border-color`
