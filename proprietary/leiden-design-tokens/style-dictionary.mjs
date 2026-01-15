@@ -43,18 +43,6 @@ const build = async () => {
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
-  // color scheme dark
-  // let sdDark = new StyleDictionary({
-  //   ...createConfig({
-  //     className: `${themeConfig.prefix}-theme--color-scheme-dark`,
-  //     buildPath: 'dist/color-scheme-dark/',
-  //   }),
-  //   preprocessors: ['color-scheme-dark', 'tokens-studio', 'dtcg-delegate'],
-  //   source: ['figma/**/start.tokens.json'],
-  // });
-
-  // await sdDark.cleanAllPlatforms();
-  // await sdDark.buildAllPlatforms();
 
   // theme.json
   let sdThemeJson = new StyleDictionary({
@@ -81,8 +69,6 @@ const build = async () => {
 };
 
 build();
-
-// TODO: Include preprocessor functions from ../../style-dictionary-config.js when available
 
 /**
  * Style Dictionary preprocessor to remove all tokens that start with "color-scheme-".
