@@ -860,6 +860,8 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-code--default',
+    component: 'nl-code',
+    group: STORY_GROUPS['CODE'],
     name: 'Candidate Code',
     render: () => <Code>{'<input type="url" value="https://nldesignsystem.nl">'}</Code>,
     detectTokens: {
@@ -868,6 +870,8 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-code-block--default',
+    component: 'nl-code-block',
+    group: STORY_GROUPS['CODE_BLOCK'],
     name: 'Candidate Code Block',
     render: () => (
       <CodeBlock>
@@ -898,6 +902,8 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-color-sample--default',
+    component: 'nl-color-sample',
+    group: STORY_GROUPS['COLOR_SAMPLE'],
     name: 'Candidate Color Sample',
     render: () => <ColorSample value="#007DAD" />,
     detectTokens: {
@@ -913,6 +919,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-data-badge--default',
+    component: 'nl-data-badge',
     group: STORY_GROUPS['BADGES'],
     name: 'Candidate Data Badge',
     render: () => <DataBadge>Category 1</DataBadge>,
@@ -1044,6 +1051,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-link--active',
+    component: 'nl-link',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link: Active',
     inline: true,
@@ -1058,6 +1066,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-link--default',
+    component: 'nl-link',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link',
     inline: true,
@@ -1074,6 +1083,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-link--hover',
+    component: 'nl-link',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link: Hover',
     state: true,
@@ -1089,6 +1099,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-link--placeholder',
+    component: 'nl-link',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link: Placeholder',
     state: true,
@@ -1100,6 +1111,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-link--visited',
+    component: 'nl-link',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link: Visited',
     state: true,
@@ -1115,6 +1127,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-link--current',
+    component: 'nl-link',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link: Current',
     state: true,
@@ -1130,6 +1143,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-link--disabled',
+    component: 'nl-link',
     group: STORY_GROUPS['LINK'],
     name: 'Candidate Link: Disabled',
     state: true,
@@ -1145,6 +1159,8 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-mark--default',
+    component: 'nl-mark',
+    group: STORY_GROUPS['MARK'],
     name: 'Candidate Mark',
     render: () => <Mark>Mark my words!</Mark>,
     detectTokens: {
@@ -1153,6 +1169,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-number-badge--default',
+    component: 'nl-number-badge',
     group: STORY_GROUPS['BADGES'],
     name: 'Candidate Number Badge',
     render: () => <NumberBadge>42</NumberBadge>,
@@ -1175,6 +1192,7 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-paragraph--default',
+    component: 'nl-paragraph',
     group: STORY_GROUPS['PARAGRAPH'],
     name: 'Candidate Paragraph',
     render: () => <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>,
@@ -1209,6 +1227,8 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
   },
   {
     storyId: 'react-nl-skip-link',
+    component: 'nl-skip-link',
+    group: STORY_GROUPS['SKIP_LINK'],
     name: 'Candidate Skip Link',
     render: () => <SkipLink href="main" />,
     detectTokens: {
