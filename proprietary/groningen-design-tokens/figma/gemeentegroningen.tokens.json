@@ -5227,6 +5227,90 @@
       }
     }
   },
+  "components/description-list": {
+    "ams": {
+      "description-list": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.column.3xl}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "grid-template-columns": {
+          "$type": "other",
+          "$value": "auto 1fr",
+          "$description": "[code-only]"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.xl}"
+        },
+        "description": {
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          }
+        },
+        "inverse": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-document}"
+          }
+        },
+        "medium": {
+          "grid-template-columns": {
+            "$type": "other",
+            "$value": "1fr 2fr",
+            "$description": "[code-only]"
+          }
+        },
+        "narrow": {
+          "grid-template-columns": {
+            "$type": "other",
+            "$value": "1fr 4fr",
+            "$description": "[code-only]"
+          }
+        },
+        "section": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.xl}"
+          }
+        },
+        "term": {
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.bold}"
+          }
+        },
+        "wide": {
+          "grid-template-columns": {
+            "$type": "other",
+            "$value": "1fr 1fr",
+            "$description": "[code-only]"
+          }
+        }
+      }
+    }
+  },
   "components/drawer/utrecht": {
     "utrecht": {
       "drawer": {
@@ -12965,6 +13049,7 @@
       "components/data-badge/nl",
       "components/data-badge/utrecht",
       "components/data-summary",
+      "components/description-list",
       "components/drawer/utrecht",
       "components/drawer/todo",
       "components/figure",
