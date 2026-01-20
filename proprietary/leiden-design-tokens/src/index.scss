@@ -1368,3 +1368,22 @@ input.is-invalid,
     display: inline-block;
 }
 
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Styling the back to top link to match design
+ * Related Component: openforms-backtotop-link
+ * Safe to remove when: OF or NLDS includes tokens for the component
+ * Last verified: 2026-01-20 (OF 3.4.0-leiden.1)
+ */
+
+.utrecht-link.openforms-backtotop-link {
+  width: fit-content;
+}
+
+.utrecht-link.openforms-backtotop-link .utrecht-icon {
+  color: var(--basis-color-action-2-color-default);
+}
+
+.utrecht-link.openforms-backtotop-link:focus .utrecht-icon {
+  color: var(--basis-focus-inverse-outline-color);
+}
