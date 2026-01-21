@@ -1445,3 +1445,19 @@ input.is-invalid,
 .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-custom-checkbox, .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-checkbox--custom {
   margin-block-start: 0;
 }
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Adding external link icon to footer links that open in a new tab
+ * Related Component: utrecht-page-footer
+ * Safe to remove when: NLDS includes this feature natively
+ * Last verified: 2026-01-21 (OF 3.4.0-leiden.1)
+ */
+
+.utrecht-page-footer a[href^="https://"]::after {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
