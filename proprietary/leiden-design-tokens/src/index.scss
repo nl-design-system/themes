@@ -1244,6 +1244,10 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
   margin-block-end: 0;
 }
 
+.openforms-summary dd.utrecht-data-list__item-value.utrecht-data-list__item-value--html-dd:empty::before {
+  content: "–";
+}
+
 
 /*
   * CUSTOM OVERRIDE
