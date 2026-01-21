@@ -1318,13 +1318,13 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
 
 /* 
  * CUSTOM OVERRIDE
- * Reason: Adding margin to form field labels to match design tokens
+ * Reason: Adding margin to form field labels to match design
  * Related Component: openforms-form-field
  * Safe to remove when: OF or NLDS includes tokens for the component
- * Last verified: 2026-01-14 (OF 3.4.0-leiden.1)
+ * Last verified: 2026-01-21 (OF 3.4.0-leiden.1)
  */
 
-.utrecht-form-field__label {
+.utrecht-form-label.utrecht-form-label--openforms {
     margin-block-end: var(--basis-space-row-md);
 }
 
