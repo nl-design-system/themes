@@ -1387,3 +1387,15 @@ input.is-invalid,
 .utrecht-link.openforms-backtotop-link:focus .utrecht-icon {
   color: var(--basis-focus-inverse-outline-color);
 }
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Adding gap between form fields to match design tokens
+  * Related Component: openforms-form-field-container, formio-form
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-01-20 (OF 3.4.0-leiden.1)
+  */
+
+.openforms-form-field-container, .formio-form {
+  gap: var(--basis-size-xs);
+}
