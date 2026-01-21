@@ -1,0 +1,51 @@
+---
+"@nl-design-system-unstable/start-design-tokens": minor
+"@nl-design-system-unstable/voorbeeld-design-tokens": minor
+---
+
+De volgende tokens zijn toegevoegd aan Calendar component:
+
+- `utrecht.calendar.background-color`
+- `utrecht.calendar.width`
+- `utrecht.calendar.icon.size`
+- `utrecht.calendar.navigation.background-color`
+- `utrecht.calendar.navigation.color`
+- `utrecht.calendar.navigation.padding-block-end`
+- `utrecht.calendar.navigation.padding-block-start`
+- `utrecht.calendar.navigation.label.color`
+- `utrecht.calendar.navigation.label.font-size`
+- `utrecht.calendar.table.padding-block-end`
+- `utrecht.calendar.table.padding-block-start`
+- `utrecht.calendar.table.days-item-day.border-color`
+- `utrecht.calendar.table.days-item-day.border-width`
+- `utrecht.calendar.table.days-item-day.color`
+- `utrecht.calendar.table.days-item-day.size`
+- `utrecht.calendar.table.days-item-day.active.background-color`
+- `utrecht.calendar.table.days-item-day.active.border-color`
+- `utrecht.calendar.table.days-item-day.active.color`
+- `utrecht.calendar.table.days-item-day.disabled.background-color`
+- `utrecht.calendar.table.days-item-day.disabled.border-color`
+- `utrecht.calendar.table.days-item-day.disabled.color`
+- `utrecht.calendar.table.days-item-day.emphasis.background-color`
+- `utrecht.calendar.table.days-item-day.emphasis.border-color`
+- `utrecht.calendar.table.days-item-day.emphasis.color`
+- `utrecht.calendar.table.days-item-day.emphasis.font-weight`
+- `utrecht.calendar.table.days-item-day.focus.background-color`
+- `utrecht.calendar.table.days-item-day.focus.border-color`
+- `utrecht.calendar.table.days-item-day.focus.color`
+- `utrecht.calendar.table.days-item-day.hover.background-color`
+- `utrecht.calendar.table.days-item-day.hover.border-color`
+- `utrecht.calendar.table.days-item-day.hover.color`
+- `utrecht.calendar.table.days-item-day.is-today.background-color`
+- `utrecht.calendar.table.days-item-day.is-today.border-color`
+- `utrecht.calendar.table.days-item-day.is-today.color`
+- `utrecht.calendar.table.days-item-day.is-today.font-weight`
+- `utrecht.calendar.table.days-item-day.out-of-the-month.background-color`
+- `utrecht.calendar.table.days-item-day.out-of-the-month.border-color`
+- `utrecht.calendar.table.days-item-day.out-of-the-month.color`
+- `utrecht.calendar.table.days-item-day.selected.background-color`
+- `utrecht.calendar.table.days-item-day.selected.border-color`
+- `utrecht.calendar.table.days-item-day.selected.color`
+- `utrecht.calendar.table.days-item-day.selected.font-weight`
+- `utrecht.calendar.table.weeks-item.width`
+- `todo.calendar.table.days-item-day.disabled.font-weight`
