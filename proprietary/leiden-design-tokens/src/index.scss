@@ -1416,10 +1416,6 @@ input.is-invalid,
     margin-block-start: 0;
 }
 
-.utrecht-form-fieldset__fieldset .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio {
-    margin-block-end: var(--basis-space-block-md);
-}
-
 /*
   * CUSTOM OVERRIDE
   * Reason: Styling checkboxes in openforms to match design
@@ -1427,15 +1423,10 @@ input.is-invalid,
   * Safe to remove when: OF or NLDS includes tokens for the component
   * Last verified: 2026-01-21 (OF 3.4.0-leiden.1)
   */
-
-.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-form-field__label {
-    margin-block-end: var(--basis-space-block-md);
-}
-
-.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-custom-checkbox, .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-checkbox--custom {
-    margin-block-start: 0;
-}
-
+  
 .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-form-label--checkbox {
-    padding-block-start: 0;
+  padding-block-start: 0;
+}
+.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-custom-checkbox, .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-checkbox--custom {
+  margin-block-start: 0;
 }
