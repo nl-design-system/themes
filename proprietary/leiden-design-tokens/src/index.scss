@@ -1399,3 +1399,24 @@ input.is-invalid,
 .openforms-form-field-container, .formio-form {
   gap: var(--basis-size-xs);
 }
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling radio buttons in openforms to match design
+  * Related Component: openforms-form-field--radio
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-01-21 (OF 3.4.0-leiden.1)
+  */
+
+.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio .utrecht-form-label--radio {
+    padding-block-start: 0;
+}
+
+.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio .utrecht-radio-button {
+    margin-block-start: 0;
+}
+
+.utrecht-form-fieldset__fieldset .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio {
+    margin-block-end: var(--basis-space-block-md);
+}
+
