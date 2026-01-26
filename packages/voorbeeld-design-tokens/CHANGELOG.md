@@ -1,5 +1,175 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 8.0.0
+
+### Major Changes
+
+- 32b6be1: De volgende tokens zijn toegevoegd aan Modal Dialog component:
+
+  - `ams.dialog.background-color`
+  - `ams.dialog.border-color`
+  - `ams.dialog.border-style`
+  - `ams.dialog.border-width`
+  - `ams.dialog.gap`
+  - `ams.dialog.inline-size`
+  - `ams.dialog.max-block-size`
+  - `ams.dialog.max-inline-size`
+  - `ams.dialog.medium.inline-size`
+  - `ams.dialog.medium.max-block-size`
+  - `ams.dialog.backdrop.background-color`
+  - `ams.dialog.header.gap`
+  - `ams.dialog.header.padding-block`
+  - `ams.dialog.header.padding-inline`
+  - `ams.dialog.header.medium.padding-block`
+  - `ams.dialog.header.medium.padding-inline`
+  - `ams.dialog.body.padding-block`
+  - `ams.dialog.body.padding-inline`
+  - `ams.dialog.body.medium.padding-inline`
+  - `ams.dialog.footer.padding-block`
+  - `ams.dialog.footer.padding-inline`
+  - `ams.dialog.footer.medium.padding-block`
+  - `ams.dialog.footer.medium.padding-inline`
+  - `todo.dialog.border-radius`
+  - `todo.dialog.box-shadow`
+
+  De volgende tokens zijn verwijderd uit ToDo Modal Dialog component:
+
+  - `todo.modal-dialog.background-color`
+  - `todo.modal-dialog.border-color`
+  - `todo.modal-dialog.border-radius`
+  - `todo.modal-dialog.border-width`
+  - `todo.modal-dialog.box-shadow`
+  - `todo.modal-dialog.color`
+  - `todo.modal-dialog.content.padding-block-end`
+  - `todo.modal-dialog.content.padding-block-start`
+  - `todo.modal-dialog.content.padding-inline`
+  - `todo.modal-dialog.footer.background-color`
+  - `todo.modal-dialog.footer.border-color`
+  - `todo.modal-dialog.footer.border-width`
+  - `todo.modal-dialog.footer.padding-block-end`
+  - `todo.modal-dialog.footer.padding-block-start`
+  - `todo.modal-dialog.footer.padding-inline-end`
+  - `todo.modal-dialog.footer.padding-inline-start`
+  - `todo.modal-dialog.header.background-color`
+  - `todo.modal-dialog.header.border-color`
+  - `todo.modal-dialog.header.border-width`
+  - `todo.modal-dialog.header.column-gap`
+  - `todo.modal-dialog.header.padding-block-end`
+  - `todo.modal-dialog.header.padding-block-start`
+  - `todo.modal-dialog.header.padding-inline-end`
+  - `todo.modal-dialog.header.padding-inline-start`
+  - `todo.modal-dialog.header.label.color`
+  - `todo.modal-dialog.header.label.font-family`
+  - `todo.modal-dialog.header.label.font-size`
+  - `todo.modal-dialog.header.label.font-weight`
+  - `todo.modal-dialog.header.label.line-height`
+
+- fea1c1f: Token `ams.heading.inverse-color` is hernoemd naar `ams.heading.inverse.color` in Heading component.
+
+### Minor Changes
+
+- 11566b7: De volgende tokens zijn toegevoegd aan Date Input component:
+
+  - `ams.date-input.background-color`
+  - `ams.date-input.border-color`
+  - `ams.date-input.border-style`
+  - `ams.date-input.border-width`
+  - `ams.date-input.color`
+  - `ams.date-input.font-size`
+  - `ams.date-input.font-family`
+  - `ams.date-input.font-weight`
+  - `ams.date-input.line-height`
+  - `ams.date-input.min-block-size`
+  - `ams.date-input.min-inline-size`
+  - `ams.date-input.outline-offset`
+  - `ams.date-input.padding-block`
+  - `ams.date-input.padding-inline`
+  - `ams.date-input.calendar-picker-indicator.background-image`
+  - `ams.date-input.calendar-picker-indicator.cursor`
+  - `ams.date-input.disabled.border-color`
+  - `ams.date-input.disabled.color`
+  - `ams.date-input.disabled.cursor`
+  - `ams.date-input.disabled.calendar-picker-indicator.background-image`
+  - `ams.date-input.hover.box-shadow`
+  - `ams.date-input.hover.calendar-picker-indicator.background-image`
+  - `ams.date-input.invalid.border-color`
+  - `ams.date-input.invalid.hover.border-color`
+  - `ams.date-input.invalid.hover.box-shadow`
+
+- 775c4ef: De volgende tokens zijn toegevoegd aan Description List component:
+
+  - `ams.description-list.color`
+  - `ams.description-list.column-gap`
+  - `ams.description-list.font-family`
+  - `ams.description-list.font-size`
+  - `ams.description-list.grid-template-columns`
+  - `ams.description-list.line-height`
+  - `ams.description-list.row-gap`
+  - `ams.description-list.description.font-weight`
+  - `ams.description-list.description.padding-inline-start`
+  - `ams.description-list.inverse.color`
+  - `ams.description-list.medium.grid-template-columns`
+  - `ams.description-list.narrow.grid-template-columns`
+  - `ams.description-list.section.column-gap`
+  - `ams.description-list.term.font-weight`
+  - `ams.description-list.wide.grid-template-columns`
+
+- bc75456: De volgende tokens zijn toegevoegd aan Navigation Bar component:
+
+  - `utrecht.nav-bar.content.background-color`
+  - `utrecht.nav-bar.content.color`
+
+  Waarde van token `utrecht.nav-bar.content.max-inline-size` is gewijzigd van `1184px` naar `{basis.page.max-inline-size}`.
+
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+- e959539: De volgende tokens zijn toegevoegd aan Calendar component:
+
+  - `utrecht.calendar.background-color`
+  - `utrecht.calendar.width`
+  - `utrecht.calendar.icon.size`
+  - `utrecht.calendar.navigation.background-color`
+  - `utrecht.calendar.navigation.color`
+  - `utrecht.calendar.navigation.padding-block-end`
+  - `utrecht.calendar.navigation.padding-block-start`
+  - `utrecht.calendar.navigation.label.color`
+  - `utrecht.calendar.navigation.label.font-size`
+  - `utrecht.calendar.table.padding-block-end`
+  - `utrecht.calendar.table.padding-block-start`
+  - `utrecht.calendar.table.days-item-day.border-color`
+  - `utrecht.calendar.table.days-item-day.border-width`
+  - `utrecht.calendar.table.days-item-day.color`
+  - `utrecht.calendar.table.days-item-day.size`
+  - `utrecht.calendar.table.days-item-day.active.background-color`
+  - `utrecht.calendar.table.days-item-day.active.border-color`
+  - `utrecht.calendar.table.days-item-day.active.color`
+  - `utrecht.calendar.table.days-item-day.disabled.background-color`
+  - `utrecht.calendar.table.days-item-day.disabled.border-color`
+  - `utrecht.calendar.table.days-item-day.disabled.color`
+  - `utrecht.calendar.table.days-item-day.emphasis.background-color`
+  - `utrecht.calendar.table.days-item-day.emphasis.border-color`
+  - `utrecht.calendar.table.days-item-day.emphasis.color`
+  - `utrecht.calendar.table.days-item-day.emphasis.font-weight`
+  - `utrecht.calendar.table.days-item-day.focus.background-color`
+  - `utrecht.calendar.table.days-item-day.focus.border-color`
+  - `utrecht.calendar.table.days-item-day.focus.color`
+  - `utrecht.calendar.table.days-item-day.hover.background-color`
+  - `utrecht.calendar.table.days-item-day.hover.border-color`
+  - `utrecht.calendar.table.days-item-day.hover.color`
+  - `utrecht.calendar.table.days-item-day.is-today.background-color`
+  - `utrecht.calendar.table.days-item-day.is-today.border-color`
+  - `utrecht.calendar.table.days-item-day.is-today.color`
+  - `utrecht.calendar.table.days-item-day.is-today.font-weight`
+  - `utrecht.calendar.table.days-item-day.out-of-the-month.background-color`
+  - `utrecht.calendar.table.days-item-day.out-of-the-month.border-color`
+  - `utrecht.calendar.table.days-item-day.out-of-the-month.color`
+  - `utrecht.calendar.table.days-item-day.selected.background-color`
+  - `utrecht.calendar.table.days-item-day.selected.border-color`
+  - `utrecht.calendar.table.days-item-day.selected.color`
+  - `utrecht.calendar.table.days-item-day.selected.font-weight`
+  - `utrecht.calendar.table.weeks-item.width`
+  - `todo.calendar.table.days-item-day.disabled.font-weight`
+
 ## 7.4.1
 
 ### Patch Changes
