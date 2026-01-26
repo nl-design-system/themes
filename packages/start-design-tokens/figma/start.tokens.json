@@ -12319,25 +12319,9 @@
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
         },
-        "font-familiy": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
-        },
         "gap": {
           "$type": "dimension",
           "$value": "{basis.space.row.md}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -12369,6 +12353,32 @@
             "$value": "{basis.space.block.xl}"
           }
         },
+        "actions": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          }
+        },
+        "content": {
+          "bold": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          }
+        },
+        "context": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          },
+          "lg": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{basis.space.column.xl}"
+            }
+          }
+        },
         "date": {
           "color": {
             "$type": "color",
@@ -12397,14 +12407,6 @@
             }
           }
         },
-        "content": {
-          "bold": {
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            }
-          }
-        },
         "details": {
           "gap": {
             "$type": "dimension",
@@ -12417,28 +12419,24 @@
             }
           }
         },
-        "link": {
-          "icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-2.color-default}"
-            },
-            "width": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
+        "link-icon": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
           }
         },
-        "warning": {
-          "icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.negative.color-default}"
-            },
-            "width": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
+        "warning-icon": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.color-default}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
           }
         }
       }
