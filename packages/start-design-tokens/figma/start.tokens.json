@@ -6554,7 +6554,14 @@
         "hover": {
           "box-shadow": {
             "$type": "boxShadow",
-            "$value": "None"
+            "$value": {
+              "x": "0",
+              "y": "0",
+              "blur": "0",
+              "spread": "{basis.form-control.hover.border-width}",
+              "color": "{basis.form-control.hover.border-color}",
+              "type": "innerShadow"
+            }
           },
           "calendar-picker-indicator": {
             "background-image": {
@@ -6576,7 +6583,14 @@
             },
             "box-shadow": {
               "$type": "boxShadow",
-              "$value": "None"
+              "$value": {
+                "x": "0",
+                "y": "0",
+                "blur": "0",
+                "spread": "{basis.form-control.hover.border-width}",
+                "color": "{basis.color.negative.border-hover}",
+                "type": "innerShadow"
+              }
             }
           }
         }
