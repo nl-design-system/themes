@@ -18,7 +18,7 @@ De volgende tokens zijn hernoemd:
 - `denhaag.action.warning.icon.color` naar `denhaag.action.warning-icon.color`
 - `denhaag.action.warning.icon.width` naar `denhaag.action.warning-icon.width`
 
-De volgende tokens zijn verwijderd uit {naam-component} component:
+De volgende tokens zijn verwijderd:
 
 - `denhaag.action.font-familiy`
 - `denhaag.action.font-size`
