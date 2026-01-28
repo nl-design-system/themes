@@ -7259,7 +7259,58 @@
       }
     }
   },
-  "components/form-field-error-message": {
+  "components/form-field-error-message/nl": {
+    "nl": {
+      "form-field-error-message": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.negative.color-default}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.xs}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-style": {
+          "$type": "other",
+          "$value": "normal",
+          "$description": "[code-only]"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.default}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
+          }
+        }
+      }
+    }
+  },
+  "components/form-field-error-message/utrecht": {
     "utrecht": {
       "form-field-error-message": {
         "background-color": {
@@ -15333,7 +15384,8 @@
       "components/form-field",
       "components/form-field-checkbox-option",
       "components/form-field-description",
-      "components/form-field-error-message",
+      "components/form-field-error-message/nl",
+      "components/form-field-error-message/utrecht",
       "components/form-field-label/utrecht",
       "components/form-field-label/todo",
       "components/form-field-label-suffix",
