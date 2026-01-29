@@ -1,5 +1,69 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 4.0.0
+
+### Major Changes
+
+- 2a03dca: De volgende tokens zijn toegevoegd aan de Task Card en Task Navigation componenten:
+
+  - `denhaag.action.context.gap`
+  - `denhaag.action.context.lg.gap`
+  - `denhaag.action.actions.gap`
+
+  Token `denhaag.action.border-style` is aangevuld met description `[code-only]`.
+
+  De volgende tokens zijn hernoemd:
+
+  - `denhaag.action.link.icon.color` naar `denhaag.action.link-icon.color`
+  - `denhaag.action.link.icon.width` naar `denhaag.action.link-icon.width`
+  - `denhaag.action.warning.icon.color` naar `denhaag.action.warning-icon.color`
+  - `denhaag.action.warning.icon.width` naar `denhaag.action.warning-icon.width`
+
+  De volgende tokens zijn verwijderd:
+
+  - `denhaag.action.font-familiy`
+  - `denhaag.action.font-size`
+  - `denhaag.action.font-weight`
+  - `denhaag.action.line-height`
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `denhaag.action.date.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.date.warning.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.lg.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.xl}`.
+
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+### Minor Changes
+
+- f1a6d87: De volgende tokens zijn toegevoegd aan Password Input component:
+
+  - `ams.password-input.background-color`
+  - `ams.password-input.border-color`
+  - `ams.password-input.border-style`
+  - `ams.password-input.border-width`
+  - `ams.password-input.color`
+  - `ams.password-input.font-family`
+  - `ams.password-input.font-size`
+  - `ams.password-input.font-weight`
+  - `ams.password-input.line-height`
+  - `ams.password-input.outline-offset`
+  - `ams.password-input.padding-block`
+  - `ams.password-input.padding-inline`
+  - `ams.password-input.placeholder.color`
+  - `ams.password-input.disabled.color`
+  - `ams.password-input.disabled.cursor`
+  - `ams.password-input.hover.box-shadow`
+  - `ams.password-input.invalid.border-color`
+  - `ams.password-input.invalid.hover.border-color`
+  - `ams.password-input.invalid.hover.box-shadow`
+
+- be0ba7c: De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `ams.date-input.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.form-control.hover.border-color} type: innerShadow}`.
+  - Waarde van token `ams.date-input.invalid.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.color.negative.border-hover} type: innerShadow}`.
+
 ## 3.0.0
 
 ### Major Changes
