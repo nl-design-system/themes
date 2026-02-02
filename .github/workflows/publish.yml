@@ -1,4 +1,6 @@
 name: Continuous Deployment
+# Triggers the following workflows:
+# - .github/workflows/codecov.yml
 
 on:
   push:
@@ -49,10 +51,12 @@ jobs:
       - name: Run the test script in package.json scripts
         run: pnpm run --if-present test
 
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@5a1091511ad55cbe89839c7260b706298ca349f7 # v5.5.1
+      - name: Upload coverage-report artifact
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          name: coverage-report
+          path: "**/coverage/"
+          retention-days: 1
 
       - name: Publish to Chromatic
         uses: chromaui/action@4c20b95e9d3209ecfdf9cd6aace6bbde71ba1694 # v13.3.4
