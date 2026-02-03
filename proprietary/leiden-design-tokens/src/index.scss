@@ -182,7 +182,7 @@ footer.utrecht-page-footer {
   * Reason: Add border and spacing between title and subtitle and bottom border to match our design; missing feature in NLDS or OF.
   * Related Component: openforms-card / openforms-title / openforms-subtitle
   * Safe to remove when: OF includes spacing and border tokens for the card header when both title and subtitle are present.
-  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  * Last verified: 2026-02-02 (OF 3.4.0-leiden.1)
   */
 .openforms-card:has(.formio-form > [ref="component"]:nth-child(1)):not(:has(.formio-form > [ref="component"]:nth-child(1) fieldset.openforms-fieldset)) header.openforms-card__header:has(.utrecht-heading-2.openforms-subtitle) {
   border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
@@ -196,7 +196,16 @@ footer.utrecht-page-footer {
   margin-bottom: var(--basis-space-block-4xl);
 }
 
-
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Add gap between input and suffix to match our design; missing feature in NLDS or OF.
+  * Related Component: openforms-input-container
+  * Safe to remove when: OF includes spacing token for the input container component.
+  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  */
+.openforms-input-container {
+  gap: var(--basis-form-control-padding-inline-end);
+}
 
 
 
