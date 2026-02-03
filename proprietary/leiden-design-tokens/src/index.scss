@@ -190,7 +190,7 @@ footer.utrecht-page-footer {
   margin-bottom: var(--basis-space-block-3xl);
 }
 
-.openforms-card:not(:has(.formio-form)) header.openforms-card__header:not(:has(.utrecht-heading-2.openforms-subtitle)) {
+.openforms-card:not(:has(.formio-form),:has(form > div.openforms-summary)) header.openforms-card__header:not(:has(.utrecht-heading-2.openforms-subtitle)) {
   border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
   padding-bottom: var(--basis-space-block-3xl);
   margin-bottom: var(--basis-space-block-4xl);
