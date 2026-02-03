@@ -318,6 +318,18 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 
 /*
  * CUSTOM OVERRIDE
+ * Reason: Drop zone invalid state colors to match our design; missing feature in NLDS or OF.
+ * Related Component: file-upload-drop-zone
+ * Safe to remove when: OF includes tokens for the drop zone invalid state.
+ * Last verified: 2026-02-02 (OF 3.4.0-leiden.1)
+ */
+.formio-error-wrapper .utrecht-form-field.utrecht-form-field--file .fileSelector {
+    border-color: var(--basis-form-control-invalid-border-color);
+    background: var(--basis-form-control-invalid-background-color);
+}
+
+/*
+ * CUSTOM OVERRIDE
  * Reason: Change the order of the elements inside the file upload error; missing feature in NLDS or OF.
  * Related Component: file-upload-error
  * Safe to remove when: OF includes tokens for the component.
