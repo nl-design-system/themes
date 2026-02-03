@@ -10519,7 +10519,8 @@
         },
         "border-style": {
           "$type": "other",
-          "$value": "solid"
+          "$value": "solid",
+          "$description": "[code-only]"
         },
         "border-width": {
           "$type": "dimension",
@@ -10529,25 +10530,9 @@
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
         },
-        "font-familiy": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
-        },
         "gap": {
           "$type": "dimension",
           "$value": "{basis.space.row.md}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -10579,6 +10564,32 @@
             "$value": "{basis.space.block.xl}"
           }
         },
+        "actions": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          }
+        },
+        "content": {
+          "bold": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          }
+        },
+        "context": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          },
+          "lg": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{basis.space.column.xl}"
+            }
+          }
+        },
         "date": {
           "color": {
             "$type": "color",
@@ -10590,12 +10601,12 @@
           },
           "gap": {
             "$type": "dimension",
-            "$value": "{basis.space.row.md}"
+            "$value": "{basis.space.column.md}"
           },
           "warning": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.negative.color-default}"
+              "$value": "{groningen.color.state.error.message}"
             },
             "font-weight": {
               "$type": "fontWeights",
@@ -10603,15 +10614,7 @@
             },
             "gap": {
               "$type": "dimension",
-              "$value": "{basis.space.row.md}"
-            }
-          }
-        },
-        "content": {
-          "bold": {
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
+              "$value": "{basis.space.column.md}"
             }
           }
         },
@@ -10627,28 +10630,24 @@
             }
           }
         },
-        "link": {
-          "icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-2.color-default}"
-            },
-            "width": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
+        "link-icon": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
           }
         },
-        "warning": {
-          "icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.negative.color-default}"
-            },
-            "width": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
+        "warning-icon": {
+          "color": {
+            "$type": "color",
+            "$value": "{groningen.color.state.error.message}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
           }
         }
       }
@@ -10737,12 +10736,12 @@
           "details": {
             "gap": {
               "$type": "dimension",
-              "$value": "{basis.space.row.md}"
+              "$value": "{basis.space.column.md}"
             },
             "lg": {
               "gap": {
                 "$type": "dimension",
-                "$value": "{basis.space.row.md}"
+                "$value": "{basis.space.column.xl}"
               }
             }
           }
