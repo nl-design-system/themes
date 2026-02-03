@@ -207,8 +207,6 @@ footer.utrecht-page-footer {
   gap: var(--basis-form-control-padding-inline-end);
 }
 
-
-
 /*
   * CUSTOM OVERRIDE
   * Reason: No option to set font-size and font-weight for the Open Forms subtitles; missing feature in NLDS or OF.
@@ -1283,6 +1281,27 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
 .openforms-summary .openforms-statement-checkboxes {
   padding-top: var(--basis-space-block-4xl);
   border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling the statement checkboxes to match our design
+  * Related Component: openforms-statement-checkboxes
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-02-02 (OF 3.4.0-leiden.1)
+  */
+.openforms-statement-checkboxes {
+    gap: 0;
+}
+
+.openforms-statement-checkboxes .openforms-privacy-checkbox:first-child {
+    border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    padding-bottom: var(--basis-space-block-3xl);
+}
+
+.openforms-statement-checkboxes .openforms-privacy-checkbox {
+    border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    padding-top: var(--basis-space-block-4xl);
 }
 
 /*
