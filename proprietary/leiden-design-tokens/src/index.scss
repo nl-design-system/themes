@@ -1476,10 +1476,15 @@ input.is-invalid,
 
 .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio .utrecht-form-label--radio {
     padding-block-start: 0;
+    margin-block-end: 0;
 }
 
 .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio .utrecht-radio-button {
     margin-block-start: 0;
+}
+
+.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio .utrecht-description {
+    color: var(--utrecht-form-field-description-color);
 }
 
 /*
@@ -1492,6 +1497,7 @@ input.is-invalid,
   
 .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-form-label--checkbox {
   padding-block-start: 0;
+  margin-block-end: 0;
 }
 .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-custom-checkbox, .utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-checkbox--custom {
   margin-block-start: 0;
