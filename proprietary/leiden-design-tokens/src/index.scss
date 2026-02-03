@@ -179,6 +179,29 @@ footer.utrecht-page-footer {
 
 /*
   * CUSTOM OVERRIDE
+  * Reason: Add border and spacing between title and subtitle and bottom border to match our design; missing feature in NLDS or OF.
+  * Related Component: openforms-card / openforms-title / openforms-subtitle
+  * Safe to remove when: OF includes spacing and border tokens for the card header when both title and subtitle are present.
+  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  */
+.openforms-card:has(.formio-form > [ref="component"]:nth-child(1)):not(:has(.formio-form > [ref="component"]:nth-child(1) fieldset.openforms-fieldset)) header.openforms-card__header:has(.utrecht-heading-2.openforms-subtitle) {
+  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+  padding-bottom: var(--basis-space-block-3xl);
+  margin-bottom: var(--basis-space-block-3xl);
+}
+
+.openforms-card:not(:has(.formio-form)) header.openforms-card__header:not(:has(.utrecht-heading-2.openforms-subtitle)) {
+  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+  padding-bottom: var(--basis-space-block-3xl);
+  margin-bottom: var(--basis-space-block-4xl);
+}
+
+
+
+
+
+/*
+  * CUSTOM OVERRIDE
   * Reason: No option to set font-size and font-weight for the Open Forms subtitles; missing feature in NLDS or OF.
   * Related Component: openforms-subtitle
   * Safe to remove when: OF includes font-size and font-weight tokens for the subtitle component.
