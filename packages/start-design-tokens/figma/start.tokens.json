@@ -5551,6 +5551,10 @@
           "$type": "dimension",
           "$value": "{basis.form-control.border-width}"
         },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
         "size": {
           "$type": "dimension",
           "$value": "{basis.size.xs}"
@@ -6947,13 +6951,11 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
-            "$description": "[code-only]"
+            "$value": "{basis.space.block.xl}"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
-            "$description": "[code-only]"
+            "$value": "0px"
           },
           "disabled": {
             "color": {
@@ -7326,13 +7328,11 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "{basis.space.block.md}"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "0px"
         }
       }
     }
@@ -7366,13 +7366,11 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "{basis.space.block.md}"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "0px"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -7394,15 +7392,15 @@
     },
     "todo": {
       "form-field-error-message": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.md}"
+        },
         "icon": {
           "size": {
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
           }
-        },
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.text.md}"
         }
       }
     }
@@ -7453,6 +7451,10 @@
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.default}"
           }
+        },
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.xl}"
         }
       }
     }
