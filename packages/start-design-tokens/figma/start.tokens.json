@@ -5551,6 +5551,10 @@
           "$type": "dimension",
           "$value": "{basis.form-control.border-width}"
         },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
         "size": {
           "$type": "dimension",
           "$value": "{basis.size.xs}"
@@ -5806,24 +5810,6 @@
               "$value": "{basis.color.default.bg-document}"
             }
           }
-        }
-      }
-    }
-  },
-  "components/checkbox-group": {
-    "todo": {
-      "checkbox-group": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.xl}"
         }
       }
     }
@@ -6897,6 +6883,82 @@
       }
     }
   },
+  "components/fieldset": {
+    "utrecht": {
+      "form-fieldset": {
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "invalid": {
+          "border-inline-start-color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.border-default}"
+          },
+          "border-inline-start-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.md}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          }
+        },
+        "legend": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.bold}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            }
+          }
+        },
+        "section": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          }
+        }
+      }
+    }
+  },
   "components/figure/amsterdam": {
     "ams": {
       "figure": {
@@ -7217,16 +7279,6 @@
       }
     }
   },
-  "components/form-field-checkbox-option": {
-    "todo": {
-      "form-field-checkbox-option": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.column.md}"
-        }
-      }
-    }
-  },
   "components/form-field-description": {
     "utrecht": {
       "form-field-description": {
@@ -7248,13 +7300,11 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "{basis.space.block.lg}"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "0px"
         }
       }
     }
@@ -7288,13 +7338,11 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "{basis.space.block.lg}"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
-          "$description": "[code-only]"
+          "$value": "0px"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -7316,20 +7364,20 @@
     },
     "todo": {
       "form-field-error-message": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.md}"
+        },
         "icon": {
           "size": {
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
           }
-        },
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.text.md}"
         }
       }
     }
   },
-  "components/form-field-label/utrecht": {
+  "components/form-field-label": {
     "utrecht": {
       "form-label": {
         "color": {
@@ -7375,36 +7423,10 @@
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.default}"
           }
-        }
-      }
-    }
-  },
-  "components/form-field-label/todo": {
-    "todo": {
-      "form-field-label": {
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
         },
-        "column-gap": {
+        "margin-block-end": {
           "$type": "dimension",
-          "$value": "{basis.space.text.md}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
+          "$value": "{basis.space.block.lg}"
         }
       }
     }
@@ -7416,20 +7438,6 @@
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
         },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.default}"
-        }
-      }
-    }
-  },
-  "components/form-field-option-label": {
-    "todo": {
-      "form-field-option-label": {
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
         "font-family": {
           "$type": "fontFamilies",
           "$value": "{basis.text.font-family.default}"
@@ -7446,21 +7454,9 @@
           "$type": "lineHeights",
           "$value": "{basis.text.line-height.md}"
         },
-        "disabled": {
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.color-subtle}"
-          }
-        }
-      }
-    }
-  },
-  "components/form-field-radio-option": {
-    "todo": {
-      "form-field-radio-option": {
-        "column-gap": {
+        "margin-inline-start": {
           "$type": "dimension",
-          "$value": "{basis.space.column.md}"
+          "$value": "{basis.space.inline.sm}"
         }
       }
     }
@@ -10752,6 +10748,10 @@
           "$value": "0px",
           "$description": "[code-only]"
         },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
         "size": {
           "$type": "dimension",
           "$value": "{basis.size.xs}"
@@ -10939,24 +10939,6 @@
               "$value": "{basis.form-control.disabled.color}"
             }
           }
-        }
-      }
-    }
-  },
-  "components/radio-group": {
-    "todo": {
-      "radio-group": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.xl}"
         }
       }
     }
@@ -15310,7 +15292,6 @@
       "components/card-as-link",
       "components/case-card",
       "components/checkbox",
-      "components/checkbox-group",
       "components/code/nl",
       "components/code/utrecht",
       "components/code-block/nl",
@@ -15326,19 +15307,16 @@
       "components/drawer/utrecht",
       "components/drawer/todo",
       "components/dot-badge",
+      "components/fieldset",
       "components/figure/amsterdam",
       "components/figure/utrecht",
       "components/file",
       "components/file-input",
       "components/form-field",
-      "components/form-field-checkbox-option",
       "components/form-field-description",
       "components/form-field-error-message",
-      "components/form-field-label/utrecht",
-      "components/form-field-label/todo",
+      "components/form-field-label",
       "components/form-field-label-suffix",
-      "components/form-field-option-label",
-      "components/form-field-radio-option",
       "components/form-summary",
       "components/heading/nl",
       "components/heading/amsterdam",
@@ -15374,7 +15352,6 @@
       "components/progress-list/den-haag",
       "components/progress-list/todo",
       "components/radio-button",
-      "components/radio-group",
       "components/select",
       "components/separator",
       "components/side-navigation",
