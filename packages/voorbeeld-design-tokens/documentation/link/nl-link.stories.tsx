@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react';
+import { Meta } from '@storybook/react-vite';
 import * as Stories from '@nl-design-system-candidate/link-docs/stories/link.stories';
 import reactMeta from '@nl-design-system-candidate/link-docs/stories/link.react.meta';
 
@@ -19,7 +19,7 @@ export const VoorbeeldTheme = {
   },
 };
 
-export const BasisTheme = {
+export const StartTheme = {
   ...Stories.Link,
   name: 'Start theme',
   parameters: {

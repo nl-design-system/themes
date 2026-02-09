@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FormLabel as FormFieldLabel } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {

@@ -40,6 +40,11 @@ export const STORY_GROUPS: { [index: string]: string } = {
   DATE_INPUT: 'Date Input',
   FIGURE: 'Figure',
   PASSWORD_INPUT: 'Password Input',
+  CODE: 'Code',
+  CODE_BLOCK: 'Code Block',
+  COLOR_SAMPLE: 'Color Sample',
+  SKIP_LINK: 'Skip Link',
+  MARK: 'Mark',
 };
 
 export interface ComponentStory {

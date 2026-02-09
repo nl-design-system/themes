@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { ColorPalette, ColorItem } from '@storybook/blocks';
+import { ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 import { CopyCode } from './CopyCode';
 import {
   cssVariable,

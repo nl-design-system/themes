@@ -18,23 +18,22 @@ const config: StorybookConfig = {
     enableCrashReports: false,
   },
   addons: [
-    // Drawer addons, in order
-    '@storybook/addon-controls',
-    '@storybook/addon-a11y',
-    '@storybook/addon-actions',
-    // Toolbar addons, in order
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-measure',
-    '@storybook/addon-outline',
-    '@storybook/addon-viewport',
-    '@storybook/addon-highlight',
-    '@storybook/addon-toolbars',
     '@storybook/addon-docs',
+    // Drawer addons, in order
+    '@storybook/addon-a11y',
+    'storybook/actions',
+    // Toolbar addons, in order
+    'storybook/viewport',
+    'storybook/highlight',
   ],
-  docs: {
-    autodocs: 'tag',
-  },
   staticDirs: ['../../voorbeeld-design-tokens/documentation/assets'],
+  viteFinal: async (config) => {
+    config.esbuild = {
+      ...config.esbuild,
+      jsx: 'automatic',
+    };
+    return config;
+  },
 };
 
 export default config;
