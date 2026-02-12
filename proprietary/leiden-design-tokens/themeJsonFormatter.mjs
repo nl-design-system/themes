@@ -99,8 +99,11 @@ function resolveReferences(obj, tokens) {
                     return match; // Onbekende verwijzing, laat staan
                 }
             }
-            
-            // Als de gevonden waarde zelf géén string is (bijv. een object of array), converteer naar string
+                        // Als de gevonden waarde een object is met $value, extract die
+            if (typeof val === 'object' && val !== null && '$value' in val) {
+                return String(val.$value);
+            }
+                        // Als de gevonden waarde zelf géén string is (bijv. een object of array), converteer naar string
             return typeof val === 'string' ? val : JSON.stringify(val);
         });
     }
@@ -173,6 +176,7 @@ export default function themeJsonFormatter({ dictionary }) {
     const wpDir = path.resolve(__dirname, 'src/wordpress');
     
     console.log('\n=== Building WordPress theme.json ===');
+    console.log('Token structure keys:', Object.keys(tokens).slice(0, 10));
     
     // 1. Laad base configuratie (schema, version, templates)
     const base = readJsonSafe(path.join(wpDir, 'base.json'), {
@@ -198,16 +202,18 @@ export default function themeJsonFormatter({ dictionary }) {
     
     // 4. Laad root styles
     const stylesDir = path.join(wpDir, 'styles');
-    const rootStyles = readJsonSafe(path.join(stylesDir, 'root.json'), {});
-    console.log('✓ Loaded root styles');
+    const rootStyles = loadJsonDirectory(stylesDir);
+    console.log('✓ Loaded root styles', stylesDir);
     
     // 5. Laad element styles
     const elementsDir = path.join(stylesDir, 'elements');
     const elements = loadJsonDirectory(elementsDir);
+    console.log('✓ Loaded element styles');
     
     // 6. Laad block styles
     const blocksDir = path.join(stylesDir, 'blocks');
     const blocks = loadJsonDirectory(blocksDir);
+    console.log('✓ Loaded block styles');
     
     // 7. Merge en resolve alle styles
     const styles = resolveReferences({
