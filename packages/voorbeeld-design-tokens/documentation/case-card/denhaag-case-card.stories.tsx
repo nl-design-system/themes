@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { CaseCard } from '@gemeente-denhaag/card';
 import '@gemeente-denhaag/card/index.css';
 

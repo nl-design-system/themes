@@ -1,4 +1,4 @@
-import type { Decorator } from '@storybook/react';
+import type { Decorator } from '@storybook/react-vite';
 import { clsx } from 'clsx';
 
 export const ThemeDecorator: Decorator = (Story, { parameters }) => (
