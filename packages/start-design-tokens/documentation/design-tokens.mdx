@@ -1,0 +1,18 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { DesignTokensTable } from "@nl-design-system-unstable/design-tokens-table-react/css";
+import tokens from "../dist/list.json";
+import tokensDefinition from "@nl-design-system-community/design-tokens-definition/dist/list.json";
+import config from "../src/config.json";
+
+<Meta title="Start Thema/Design Tokens" />
+
+# Design Tokens
+
+<DesignTokensTable
+  tokens={tokens.filter((token) => token.path[0] !== config.prefix)}
+  tokensDefinition={tokensDefinition}
+/>
+
+## Proprietary Design Tokens
+
+<DesignTokensTable tokens={tokens.filter((token) => token.path[0] === config.prefix)} />
