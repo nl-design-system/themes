@@ -1,5 +1,153 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 9.0.0
+
+### Major Changes
+
+- 2a03dca: De volgende tokens zijn toegevoegd aan de Task Card en Task Navigation componenten:
+
+  - `denhaag.action.context.gap`
+  - `denhaag.action.context.lg.gap`
+  - `denhaag.action.actions.gap`
+
+  Token `denhaag.action.border-style` is aangevuld met description `[code-only]`.
+
+  De volgende tokens zijn hernoemd:
+
+  - `denhaag.action.link.icon.color` naar `denhaag.action.link-icon.color`
+  - `denhaag.action.link.icon.width` naar `denhaag.action.link-icon.width`
+  - `denhaag.action.warning.icon.color` naar `denhaag.action.warning-icon.color`
+  - `denhaag.action.warning.icon.width` naar `denhaag.action.warning-icon.width`
+
+  De volgende tokens zijn verwijderd:
+
+  - `denhaag.action.font-familiy`
+  - `denhaag.action.font-size`
+  - `denhaag.action.font-weight`
+  - `denhaag.action.line-height`
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `denhaag.action.date.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.date.warning.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.lg.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.xl}`.
+
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+- 4dc16e0: Tokens verwijderd
+
+  De volgende tokens zijn verwijderd uit ToDo Checkbox Group component:
+
+  - `todo.checkbox-group.padding-block-end`
+  - `todo.checkbox-group.padding-block-start`
+  - `todo.checkbox-group.row-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Checkbox Option component:
+
+  - `todo.form-field-checkbox-option.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Label component:
+
+  - `todo.form-field-label.color`
+  - `todo.form-field-label.column-gap`
+  - `todo.form-field-label.font-family`
+  - `todo.form-field-label.font-size`
+  - `todo.form-field-label.font-weight`
+  - `todo.form-field-label.line-height`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Option Label component:
+
+  - `todo.form-field-option-label.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Radio Option component:
+
+  - `todo.form-field-radio-option.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Radio Group component:
+
+  - `todo.radio-group.padding-block-end`
+  - `todo.radio-group.padding-block-start`
+  - `todo.radio-group.row-gap`
+
+  Tokens toegevoegd
+
+  - Token `utrecht.checkbox.margin-inline-end` is toegevoegd aan Checkbox component.
+  - Token `utrecht.form-field-label.margin-block-end` is toegevoegd aan Form Field Label component.
+  - Token `utrecht.radio-button.margin-inline-end` is toegevoegd aan Radio Button component.
+
+  De volgende tokens zijn toegevoegd aan Fieldset component:
+
+  - `utrecht.form-fieldset.margin-block-end`
+  - `utrecht.form-fieldset.margin-block-start`
+  - `utrecht.form-fieldset.invalid.border-inline-start-color`
+  - `utrecht.form-fieldset.invalid.border-inline-start-width`
+  - `utrecht.form-fieldset.invalid.padding-inline-start`
+  - `utrecht.form-fieldset.legend.color`
+  - `utrecht.form-fieldset.legend.font-family`
+  - `utrecht.form-fieldset.legend.font-size`
+  - `utrecht.form-fieldset.legend.font-weight`
+  - `utrecht.form-fieldset.legend.line-height`
+  - `utrecht.form-fieldset.legend.margin-block-end`
+  - `utrecht.form-fieldset.legend.margin-block-start`
+  - `utrecht.form-fieldset.legend.disabled.color`
+  - `utrecht.form-fieldset.section.background-color`
+  - `utrecht.form-fieldset.section.color`
+
+  De volgende tokens zijn toegevoegd aan ToDo Form Field Label Suffix:
+
+  - `todo.form-field-label-suffix.font-family`
+  - `todo.form-field-label-suffix.font-size`
+  - `todo.form-field-label-suffix.line-height`
+  - `todo.form-field-label-suffix.margin-inline-start`
+
+  Tokenwaarde gewijzigd
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `utrecht.form-field-description.margin-block-end` is gewijzigd van `0px` naar `basis.space.block.lg`.
+  - Waarde van token `utrecht.form-field-error-message.margin-block-end` is gewijzigd van `0px` naar `basis.space.block.lg`.
+
+  De description van de volgende tokens zijn verwijderd:
+
+  - `utrecht.form-field-description.margin-block-end`
+  - `utrecht.form-field-description.margin-block-start`
+  - `utrecht.form-field-error-message.margin-block-end`
+  - `utrecht.form-field-error-message.margin-block-start`
+
+  Technische verbeteringen
+
+  Volgorde van token `utrecht.form-field-error-message.column-gap` is aangepast naar de juiste positie geplaatst.
+
+### Minor Changes
+
+- f1a6d87: De volgende tokens zijn toegevoegd aan Password Input component:
+
+  - `ams.password-input.background-color`
+  - `ams.password-input.border-color`
+  - `ams.password-input.border-style`
+  - `ams.password-input.border-width`
+  - `ams.password-input.color`
+  - `ams.password-input.font-family`
+  - `ams.password-input.font-size`
+  - `ams.password-input.font-weight`
+  - `ams.password-input.line-height`
+  - `ams.password-input.outline-offset`
+  - `ams.password-input.padding-block`
+  - `ams.password-input.padding-inline`
+  - `ams.password-input.placeholder.color`
+  - `ams.password-input.disabled.color`
+  - `ams.password-input.disabled.cursor`
+  - `ams.password-input.hover.box-shadow`
+  - `ams.password-input.invalid.border-color`
+  - `ams.password-input.invalid.hover.border-color`
+  - `ams.password-input.invalid.hover.box-shadow`
+
+- be0ba7c: De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `ams.date-input.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.form-control.hover.border-color} type: innerShadow}`.
+  - Waarde van token `ams.date-input.invalid.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.color.negative.border-hover} type: innerShadow}`.
+
 ## 8.0.0
 
 ### Major Changes
