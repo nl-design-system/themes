@@ -1,5 +1,12 @@
 # @nl-design-system-unstable/epe-design-tokens
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [f0dfa7a]
+  - @nl-design-system-unstable/basis-design-tokens@3.0.2
+
 ## 1.0.2
 
 ### Patch Changes
