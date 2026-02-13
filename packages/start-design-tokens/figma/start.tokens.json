@@ -12802,7 +12802,179 @@
       }
     }
   },
-  "components/text-input": {
+  "components/text-input/nl": {
+    "nl": {
+      "text-input": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.form-control.background-color}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.form-control.border-color}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.border-radius}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.border-width}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.form-control.color}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.text.lg}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.form-control.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.form-control.font-size}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.form-control.font-weight}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.form-control.line-height}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-inline-size}"
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.padding-block-end}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.padding-block-start}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.padding-inline-end}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.padding-inline-start}"
+        },
+        "placeholder": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.placeholder.color}"
+          }
+        },
+        "disabled": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.disabled.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.disabled.border-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.disabled.color}"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.focus.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.focus.border-color}"
+          },
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "0",
+              "blur": "0",
+              "spread": "{basis.border-width.md}",
+              "color": "{nl.text-input.focus.border-color}",
+              "type": "innerShadow"
+            }
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.focus.color}"
+          }
+        },
+        "hover": {
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "0",
+              "blur": "0",
+              "spread": "{basis.border-width.md}",
+              "color": "{nl.text-input.border-color}",
+              "type": "innerShadow"
+            }
+          }
+        },
+        "invalid": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.invalid.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.invalid.border-color}"
+          },
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "0",
+              "blur": "0",
+              "spread": "{basis.border-width.md}",
+              "color": "{nl.text-input.invalid.border-color}",
+              "type": "innerShadow"
+            }
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.color}"
+          }
+        },
+        "read-only": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.read-only.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.read-only.border-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.read-only.color}"
+          }
+        }
+      }
+    }
+  },
+  "components/text-input/utrecht": {
     "utrecht": {
       "textbox": {
         "background-color": {
@@ -12811,7 +12983,7 @@
         },
         "border-block-end-width": {
           "$type": "dimension",
-          "$value": "{utrecht.textbox.border-width}"
+          "$value": "{nl.text-input.border-width}"
         },
         "border-color": {
           "$type": "color",
@@ -12910,7 +13082,7 @@
           },
           "border-block-end-width": {
             "$type": "dimension",
-            "$value": "{utrecht.textbox.invalid.border-width}"
+            "$value": "{nl.text-input.invalid.border-width}"
           },
           "border-color": {
             "$type": "color",
@@ -15368,7 +15540,8 @@
       "components/task-list",
       "components/task-navigation",
       "components/text-area",
-      "components/text-input",
+      "components/text-input/nl",
+      "components/text-input/utrecht",
       "components/toolbar-button",
       "components/unordered-list",
       "components/root",
