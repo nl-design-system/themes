@@ -4,9 +4,7 @@ import { ArchiveIcon, CheckCircleIcon, GridIcon, InboxIcon, UserIcon } from '@ge
 import { SideNavigation } from '@gemeente-denhaag/side-navigation';
 import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
-import '@gemeente-denhaag/card/index.css';
 import { ActionSingle } from '@gemeente-denhaag/action';
-import '@gemeente-denhaag/action/index.css';
 import { Status } from '@gemeente-denhaag/process-steps';
 // eslint-disable-next-line no-unused-vars
 
@@ -122,7 +120,7 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
   {
     storyId: 'react-denhaag-task-navigation--default',
     component: 'denhaag-task-navigation',
-    group: STORY_GROUPS['TASK_NAVOIGATION'],
+    group: STORY_GROUPS['TASK_NAVIGATION'],
     name: 'Den Haag Case Card',
     render: () => (
       <ActionSingle link="#" details="19 februari 2026">
