@@ -62,7 +62,7 @@ vertegenwoordiger bij een online of offline evenement.
 
 Beledigend, intimiderend of anderszins onaanvaardbaar gedrag kan gerapporteerd
 worden aan de communityleiders die verantwoordelijk zijn voor handhaving via
-[kernteam@nldesignsystem.nl](mailto:kernteam@nldesignsystem.nl) of door
+[info@nldesignsystem.nl](mailto:info@nldesignsystem.nl) of door
 rechtstreeks contact op te nemen met
 [leden van het kernteam](https://nldesignsystem.nl/project/kernteam) (via Slack
 of email). Alle klachten zullen onmiddellijk en eerlijk worden beoordeeld en
