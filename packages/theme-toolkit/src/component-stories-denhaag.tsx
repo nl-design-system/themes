@@ -121,7 +121,7 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     storyId: 'react-denhaag-task-navigation--default',
     component: 'denhaag-task-navigation',
     group: STORY_GROUPS['TASK_NAVIGATION'],
-    name: 'Den Haag Case Card',
+    name: 'Den Haag Task Navigation',
     render: () => (
       <ActionSingle link="#" details="19 februari 2026">
         Wij hebben documenten van u nodig
