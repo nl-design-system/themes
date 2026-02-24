@@ -687,6 +687,9 @@ importers:
       '@gemeente-denhaag/card':
         specifier: 4.1.0
         version: 4.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@gemeente-denhaag/file':
+        specifier: 2.3.0
+        version: 2.3.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react@19.2.3)
       '@gemeente-denhaag/icons':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1180,6 +1183,9 @@ importers:
       '@gemeente-denhaag/card':
         specifier: 4.1.0
         version: 4.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@gemeente-denhaag/file':
+        specifier: 2.3.0
+        version: 2.3.0(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@gemeente-denhaag/icons':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -3394,6 +3400,12 @@ packages:
 
   '@gemeente-denhaag/design-tokens-components@4.1.0':
     resolution: {integrity: sha512-Bwjpf9NTCoGw/Y0EHs5vNwc2zZdQt5WQ5SsCbJkQMgKPLkrR8yivwqncNbEy6A24wtudJqHy9es+0t8kCZ2WQQ==}
+
+  '@gemeente-denhaag/file@2.3.0':
+    resolution: {integrity: sha512-qkcSafrgLQYy7AqfMdP3BKmkrc0aoXJH1gyDM0oovWSPaDjmYzwS8qSN25DutB39pWH92z43anptaqERZlOa6w==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
 
   '@gemeente-denhaag/icons@0.2.3-alpha.401':
     resolution: {integrity: sha512-Myugm9st8TVJD3K7mhVvcok9xsMaXz7QoW8Hw9jI2kn36w2sHfxRFx6i2npba1a5rWymCrl3yjhjXkpkCVMirA==}
@@ -10007,6 +10019,31 @@ snapshots:
   '@gemeente-denhaag/design-tokens-components@0.2.3-alpha.403': {}
 
   '@gemeente-denhaag/design-tokens-components@4.1.0': {}
+
+  '@gemeente-denhaag/file@2.3.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react@19.2.3)':
+    dependencies:
+      '@gemeente-denhaag/icons': 4.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@utrecht/component-library-react': 10.3.10(@babel/runtime@7.25.0)(date-fns@2.30.0)(react@19.2.3)
+      clsx: 2.1.1
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@babel/runtime'
+      - date-fns
+      - react-vega
+      - vega
+
+  '@gemeente-denhaag/file@2.3.0(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@gemeente-denhaag/icons': 4.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@utrecht/component-library-react': 10.3.10(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      clsx: 2.1.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+    transitivePeerDependencies:
+      - '@babel/runtime'
+      - date-fns
+      - react-vega
+      - vega
 
   '@gemeente-denhaag/icons@0.2.3-alpha.401(react@19.2.3)':
     dependencies:

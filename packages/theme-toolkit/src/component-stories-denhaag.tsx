@@ -5,6 +5,9 @@ import { SideNavigation } from '@gemeente-denhaag/side-navigation';
 import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
 import { ActionSingle } from '@gemeente-denhaag/action';
+import '@gemeente-denhaag/card/index.css';
+import { File } from '@gemeente-denhaag/file';
+import '@gemeente-denhaag/file/index.css';
 import { Status } from '@gemeente-denhaag/process-steps';
 // eslint-disable-next-line no-unused-vars
 
@@ -127,6 +130,13 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
         Wij hebben documenten van u nodig
       </ActionSingle>
     ),
+  },
+  {
+    storyId: 'react-denhaag-file--default',
+    component: 'denhaag-file',
+    group: STORY_GROUPS['FILE'],
+    name: 'Den Haag File',
+    render: () => <File name="Afbeelding.png" href="#" size="123 KB" />,
   },
   // {
   //   storyId: 'denhaag-process-steps--default',
