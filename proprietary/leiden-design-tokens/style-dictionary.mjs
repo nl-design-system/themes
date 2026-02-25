@@ -50,19 +50,21 @@ const build = async () => {
     preprocessors: ['color-scheme-default', 'tokens-studio', 'dtcg-delegate'],
     platforms: {
       themeJson: {
-        transformGroup: "tokens-studio",
-        transforms: ["name/camel"],
+        transformGroup: 'tokens-studio',
+        transforms: ['name/camel'],
         buildPath: 'dist/',
-        files: [{
-          destination: 'theme.json',
-          format: 'custom/themeJson'
-        }]
-      }
+        files: [
+          {
+            destination: 'theme.json',
+            format: 'custom/themeJson',
+          },
+        ],
+      },
     },
     log: {
       verbosity: 'verbose',
-    }
-  })
+    },
+  });
 
   await sdThemeJson.cleanAllPlatforms();
   await sdThemeJson.buildAllPlatforms();

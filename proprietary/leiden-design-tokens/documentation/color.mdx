@@ -16,10 +16,10 @@ import config from "../src/config.json";
 ## Color palette
 
 {(() => {
-  const colorGroups = tokens[config.prefix]["colors"];
-  const allColorTokens = Object.keys(colorGroups).flatMap(colorGroupKey => 
-    flattenColorTokens(colorGroups[colorGroupKey])
-  );
-  console.log('All color tokens flattened:', allColorTokens);
-  return <ColorTable tokens={allColorTokens} />;
+const colorGroups = tokens[config.prefix]["colors"];
+const allColorTokens = Object.keys(colorGroups).flatMap(colorGroupKey =>
+flattenColorTokens(colorGroups[colorGroupKey])
+);
+console.log('All color tokens flattened:', allColorTokens);
+return <ColorTable tokens={allColorTokens} />;
 })()}
