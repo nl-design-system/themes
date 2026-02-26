@@ -3374,6 +3374,12 @@ packages:
     peerDependencies:
       react: ^18.0.0
 
+  '@gemeente-denhaag/button@3.0.2':
+    resolution: {integrity: sha512-nybKK0rD3z/MtEC6zF604aNrblxNHsKrVLVntI3lB2Sj4/kjlPXvQdc5cuHUtkb1hGhA6q+d3lZ3fSubpWN1bA==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
   '@gemeente-denhaag/card@4.1.0':
     resolution: {integrity: sha512-95kPzuca+NMUHO79HIHzuEZvEMvBCoAT9cxbZ8gHEsKEmpEjEX7Z0FtlBFW3D2/FJQCD/FjCvEAkS6h1ohVsOw==}
     peerDependencies:
@@ -3400,8 +3406,20 @@ packages:
       react: 18 || 19
       react-dom: 18 || 19
 
+  '@gemeente-denhaag/icons@4.0.1':
+    resolution: {integrity: sha512-SX+o0S1SvdPDaCXCdha+2dQaOkyiHdYIqLhR80FblBrkxaS45K/zY2vahlI15NdKY8kQ3onEZv26i/6TPh1gyg==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
   '@gemeente-denhaag/link@3.1.0':
     resolution: {integrity: sha512-3SppBhewR5+tTobtgMeRnkU5nq6hXSGGNvIRrqF2T41QTc13F93n7ZqhzzgD4QZsbOJfcn+YLlVuANQk3SosfA==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/link@4.1.0':
+    resolution: {integrity: sha512-mYeUCOmn12ZmhKJBoguf8hFTjR7N6sxROAYHsT1MdrgPRhjjL3n0IccdBWOsNq8wXoJjqR6BPiu4hxdvT379fg==}
     peerDependencies:
       react: 18 || 19
       react-dom: 18 || 19
@@ -3441,6 +3459,12 @@ packages:
 
   '@gemeente-denhaag/utils@2.1.0':
     resolution: {integrity: sha512-/owf96o2+SA65NnJppjDbJo/O6R4RlMJFXfe+r62I88nswMLhIKwy8Fdx3Ug1Q5YbuhVILiwplaFUAV+Yh9hNg==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/utils@3.0.1':
+    resolution: {integrity: sha512-9chFgxFCZLnQcF8/DGkBQEAxCJ8kFI2ODoH46z4RgQx3q2V5agdZet6Kd7Tme9gBzWLsU8Z6FFYbn+oGMvM33A==}
     peerDependencies:
       react: 18 || 19
       react-dom: 18 || 19
@@ -9945,10 +9969,28 @@ snapshots:
 
   '@fontsource/source-serif-pro@5.1.0': {}
 
+  '@gemeente-denhaag/action@4.1.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@gemeente-denhaag/button': 3.0.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@gemeente-denhaag/icons': 4.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@gemeente-denhaag/link': 4.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@gemeente-denhaag/utils': 3.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      clsx: 2.1.1
+      date-fns: 4.1.0
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
   '@gemeente-denhaag/button@0.2.3-alpha.401(react@19.2.3)':
     dependencies:
       '@gemeente-denhaag/icons': 0.2.3-alpha.401(react@19.2.3)
       react: 19.2.3
+
+  '@gemeente-denhaag/button@3.0.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@gemeente-denhaag/icons': 4.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      clsx: 2.1.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
   '@gemeente-denhaag/card@4.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
@@ -9976,7 +10018,18 @@ snapshots:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
+  '@gemeente-denhaag/icons@4.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      clsx: 2.1.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
   '@gemeente-denhaag/link@3.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
+  '@gemeente-denhaag/link@4.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
@@ -10018,6 +10071,12 @@ snapshots:
       react: 19.2.3
 
   '@gemeente-denhaag/utils@2.1.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      date-fns: 4.1.0
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
+  '@gemeente-denhaag/utils@3.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       date-fns: 4.1.0
       react: 19.2.3
