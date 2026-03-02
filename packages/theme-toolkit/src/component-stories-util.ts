@@ -30,6 +30,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   ICON: 'Icons',
   CASE_CARD: 'Case Card',
   TASK_NAVIGATION: 'Task Navigation',
+  FILE: 'File',
   PAGE_HEADER: 'Page Header',
   PAGE_FOOTER: 'Page Footer',
   LOGIN_LINK: 'Login Link',
