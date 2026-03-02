@@ -5,9 +5,7 @@ import { SideNavigation } from '@gemeente-denhaag/side-navigation';
 import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
 import { ActionSingle } from '@gemeente-denhaag/action';
-import '@gemeente-denhaag/card/index.css';
 import { File } from '@gemeente-denhaag/file';
-import '@gemeente-denhaag/file/index.css';
 import { Status } from '@gemeente-denhaag/process-steps';
 // eslint-disable-next-line no-unused-vars
 
