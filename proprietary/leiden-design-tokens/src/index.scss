@@ -339,6 +339,18 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
   --utrecht-icon-size: 1em;
 }
 
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Change tooltip line height to align
+ * Related Component: utrecht-form-field__label--openforms-tooltip
+ * Safe to remove when: added as a token or fixed in OF
+ * Last verified: 2026-03-03 (OF 3.4.4)
+ */
+.utrecht-form-field .utrecht-form-field__label.utrecht-form-field__label--openforms-tooltip,
+.utrecht-form-fieldset .utrecht-form-fieldset__legend.utrecht-form-fieldset__legend--openforms-tooltip {
+  line-height: 1;
+}
+
 /* 
  * CUSTOM OVERRIDE
  * Reason: No option to style the icons in de button group form navigation; missing feature in NLDS or OF.
