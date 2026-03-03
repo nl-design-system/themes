@@ -8,13 +8,31 @@
   @include themeMixin.leiden-theme;
 
   /*
-    * CUSTOM OVERRIDE
-    * Reason: Wrong icon on the save form link; missing feature in NLDS or OF.
-    * Related Component: openforms-form-navigation-save-button
-    * Safe to remove when: OF changed the default icon
-    * Last verified: 2025-11-19 (OF 3.3.4)
-    */
+   * CUSTOM OVERRIDE
+   * Reason: Wrong icon on the save form link; missing feature in NLDS or OF.
+   * Related Component: openforms-form-navigation-save-button
+   * Safe to remove when: OF changed the default icon
+   * Last verified: 2025-11-19 (OF 3.3.4)
+   */
   --of-form-navigation-save-button-fa-icon: "";
+
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Reset to 100% to fix columns issue.
+   * Related Component: fields
+   * Safe to remove when: design token is changed in our set.    
+   * Last verified: 2026-03-03 (OF 3.3.4)
+   */
+  --basis-form-control-max-inline-size: 100%;
+
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Set max inline size for multifield fields to prevent them from being too wide and makes icon stay next to field; missing feature in NLDS or OF.
+   * Related Component: openforms-multifield-field
+   * Safe to remove when: added as a token in our set
+   * Last verified: 2026-03-03 (OF 3.3.4)
+   */
+  --of-multifield-field-max-inline-size: 25rem;
 }
 
 /*
