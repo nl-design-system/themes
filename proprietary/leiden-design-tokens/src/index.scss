@@ -193,17 +193,19 @@ footer.utrecht-page-footer {
   * Last verified: 2026-02-02 (OF 3.4.0-leiden.1)
   */
 
-.openforms-card:not(:has(.formio-form), :has(form > div.openforms-summary))
-  header.openforms-card__header:not(:has(.utrecht-heading-2.openforms-subtitle)) {
+.openforms-card:not(
+  :has(.formio-form), 
+  :has(form > div.openforms-summary)
+  )
+  header.openforms-card__header:not(
+    :has(.utrecht-heading-2.openforms-subtitle)
+  ) {
   border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
   padding-block-end: var(--basis-space-block-3xl);
   margin-block-end: var(--basis-space-block-4xl);
 }
 
-.openforms-card:has(.formio-form > [ref="component"]:nth-child(1)):not(
-    :has(.formio-form > [ref="component"]:nth-child(1) fieldset.openforms-fieldset)
-  )
-  header.openforms-card__header:has(.utrecht-heading-2.openforms-subtitle) {
+.openforms-card:has(form .openforms-form-field-container > div):not(:has(form .openforms-form-field-container > div fieldset.openforms-fieldset)) header.openforms-card__header:has(.utrecht-heading-2.openforms-subtitle) {
   border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
   padding-block-end: var(--basis-space-block-3xl);
   margin-block-end: var(--basis-space-block-3xl);
