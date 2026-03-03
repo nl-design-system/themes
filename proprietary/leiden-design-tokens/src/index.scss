@@ -33,6 +33,15 @@
    * Last verified: 2026-03-03 (OF 3.3.4)
    */
   --of-multifield-field-max-inline-size: 25rem;
+
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Set border color for uploaded file errors to match our design; missing feature in NLDS or OF.
+   * Related Component: openforms-uploaded-file--errors
+   * Safe to remove when: added as a token in our set
+   * Last verified: 2026-03-03 (OF 3.4.4)
+   */
+  --of-uploaded-file-errors-border-color: var(--basis-color-negative-color-default);
 }
 
 /*
