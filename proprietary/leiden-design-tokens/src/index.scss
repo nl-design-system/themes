@@ -1065,6 +1065,18 @@ fieldset.openforms-fieldset {
 
 /* 
  * CUSTOM OVERRIDE
+ * Reason: Choices options in a selection field missing color on focus; missing feature in NLDS or OF.
+ * Related Component: utrecht-select rs-menu__option
+ * Safe to remove when: OF or NLDS includes tokens or a fix for this component.
+ * Last verified: 2026-03-04 (OF 3.3.4)
+ */
+.utrecht-select.utrecht-select--openforms + .rs-menu .rs-menu__option--focus,
+.utrecht-select.utrecht-select--openforms + .rs-menu .rs-menu__option--focus-visible {
+  color: var(--basis-color-default-inverse-color-default);
+}
+
+/* 
+ * CUSTOM OVERRIDE
  * Reason: Datepicker is not styled; missing feature in NLDS or OF.
  * Related Component: flatpickr-calender
  * Safe to remove when: OF or NLDS has their own datepicker component or includes tokens for this component.
