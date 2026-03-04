@@ -1755,3 +1755,14 @@ input.is-invalid,
   font-size: 0.85rem;
   margin-inline-start: 0.5rem;
 }
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling the datepicker toggle icon to match design tokens
+  * Related Component: openforms-datepicker-textbox
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-03 (OF 3.4.4)
+  */
+.openforms-datepicker-textbox .openforms-datepicker-textbox__calendar-toggle {
+  font-size: 100%;
+}
