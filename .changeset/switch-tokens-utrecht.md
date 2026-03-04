@@ -1,7 +1,7 @@
 ---
 "@nl-design-system-unstable/start-design-tokens": major
 "@nl-design-system-unstable/voorbeeld-design-tokens": major
-"@nl-design-system-unstable/ma-design-tokens": major
+"@nl-design-system-community/ma-design-tokens": major
 ---
 
 De volgende tokens zijn toegevoegd aan Switch component:
