@@ -275,6 +275,22 @@ footer.utrecht-page-footer {
 }
 
 /*
+  * CUSTOM OVERRIDE
+  * Reason: Added line height to the subtle button variant to prevent the icon from being cut off, and added a token for the icon size to ensure it matches the design tokens
+  * Related Component: utrecht-button--subtle
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.4)
+  */
+.utrecht-button--subtle {
+  /* --utrecht-icon-size: 1rem; */
+  line-height: 1;
+}
+
+.utrecht-button--subtle .utrecht-icon {
+  --utrecht-icon-size: 1rem;
+}
+
+/*
  * CUSTOM OVERRIDE
  * Reason: Style the form navigation to match our design; missing feature in NLDS or OF.
  * Related Component: openforms-form-navigation
@@ -786,6 +802,22 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
   padding-block-end: var(--basis-space-block-lg);
   padding-inline-start: var(--basis-space-block-lg);
   padding-inline-end: var(--basis-space-block-lg);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Vertically align table cells to the middle to match the design tokens
+  * Related Component: utrecht-table
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.0-leiden.1)
+  */
+
+.utrecht-table--html-table > tr > td,
+.utrecht-table--html-table > thead > tr > td,
+.utrecht-table--html-table > tbody > tr > td,
+.utrecht-table--html-table > tfoot > tr > td,
+.utrecht-table__cell {
+  vertical-align: middle;
 }
 
 /*
@@ -1419,6 +1451,22 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
 .utrecht-form-field--partners .utrecht-data-list .utrecht-data-list__item-value {
   font-weight: var(--basis-text-font-weight-bold);
   line-height: var(--basis-text-line-height-md);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Add spacing between items and make the value bold
+  * Related Component: openforms-editgrid
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.4)
+  */
+
+.openforms-editgrid .utrecht-data-list__item {
+  margin-block-end: var(--basis-space-block-sm);
+}
+
+.openforms-editgrid .utrecht-data-list__item-value.utrecht-data-list__item-value--html-dd {
+  font-weight: 700;
 }
 
 /* 
