@@ -1064,6 +1064,18 @@ fieldset.openforms-fieldset {
 }
 
 /*
+ * CUSTOM OVERRIDE
+ * Reason: Form field labels don't have margin-bottom; missing feature in NLDS or OF.
+ * Related Component: utrecht-form-field__label--openforms and utrecht-form-fieldset__legend--openforms
+ * Safe to remove when: OF or NLDS includes tokens for the margin-bottom on the form field labels and legends.
+ * Last verified: 2026-03-04 (OF 3.3.4)
+ */
+.utrecht-form-fieldset .utrecht-form-fieldset__legend:has(.utrecht-form-label--openforms),
+.utrecht-form-field__label {
+  --utrecht-form-field-label-margin-block-end: var(--basis-space-block-sm);
+}
+
+/*
   * CUSTOM OVERRIDE
   * Reason: Choices button in a multi selection field missing style; missing feature in NLDS or OF.
   * Related Component: utrecht-select
