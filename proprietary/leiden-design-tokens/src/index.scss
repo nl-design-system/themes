@@ -1615,6 +1615,18 @@ input.is-invalid,
 
 /*
   * CUSTOM OVERRIDE
+  * Reason: Adding margin between radio and checkbox form fields in openforms to match design tokens
+  * Related Component: openforms-form-field--radio, openforms-form-field--checkbox
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.4)
+  */
+.utrecht-form-field.utrecht-form-field--radio.utrecht-form-field--openforms,
+.utrecht-form-field.utrecht-form-field--checkbox.utrecht-form-field--openforms {
+  margin-block-end: var(--basis-space-block-md);
+}
+
+/*
+  * CUSTOM OVERRIDE
   * Reason: Styling form field descriptions in openforms to match design tokens
   * Related Component: utrecht-form-description--openforms
   * Safe to remove when: OF or NLDS includes tokens for the component
