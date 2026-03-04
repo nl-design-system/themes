@@ -1613,7 +1613,14 @@ input.is-invalid,
   margin-block-start: 0;
 }
 
-.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio .utrecht-description {
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling form field descriptions in openforms to match design tokens
+  * Related Component: utrecht-form-description--openforms
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-03 (OF 3.4.4)
+  */
+.utrecht-form-description--openforms {
   color: var(--utrecht-form-field-description-color);
 }
 
