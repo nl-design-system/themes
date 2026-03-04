@@ -380,6 +380,22 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 
 /*
  * CUSTOM OVERRIDE
+ * Reason: No option to style the file upload input; missing feature in NLDS or OF.
+ * Related Component: openforms-upload-input
+ * Safe to remove when: OF includes tokens for the file upload input.
+ * Last verified: 2026-03-03 (OF 3.4.4)
+ */
+.openforms-file-upload .openforms-upload-input {
+  border-radius: var(--basis-form-control-border-radius);
+  background: var(--basis-color-default-bg-default);
+  border-color: var(--basis-color-default-border-default);
+  border-width: var(--basis-border-width-md);
+  padding-block: var(--basis-space-block-4xl);
+  padding-inline: var(--basis-space-block-4xl);
+}
+
+/*
+ * CUSTOM OVERRIDE
  * Reason: Drop zone invalid state colors to match our design; missing feature in NLDS or OF.
  * Related Component: file-upload-drop-zone
  * Safe to remove when: OF includes tokens for the drop zone invalid state.
