@@ -807,6 +807,11 @@ fieldset.openforms-fieldset {
   line-height: var(--basis-text-line-height-xl);
 }
 
+.openforms-form-field-container > fieldset.openforms-fieldset:first-child legend.openforms-fieldset__legend {
+    border-top: 0;
+    padding-block: 0;
+}
+
 /*
  * CUSTOM OVERRIDE
  * Reason: Interactive elements should have a border-radius; missing feature in NLDS or OF.
