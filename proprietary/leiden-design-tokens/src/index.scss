@@ -8,13 +8,41 @@
   @include themeMixin.leiden-theme;
 
   /*
-    * CUSTOM OVERRIDE
-    * Reason: Wrong icon on the save form link; missing feature in NLDS or OF.
-    * Related Component: openforms-form-navigation-save-button
-    * Safe to remove when: OF changed the default icon
-    * Last verified: 2025-11-19 (OF 3.3.4)
-    */
+   * CUSTOM OVERRIDE
+   * Reason: Wrong icon on the save form link; missing feature in NLDS or OF.
+   * Related Component: openforms-form-navigation-save-button
+   * Safe to remove when: OF changed the default icon
+   * Last verified: 2025-11-19 (OF 3.3.4)
+   */
   --of-form-navigation-save-button-fa-icon: "";
+
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Reset to 100% to fix columns issue.
+   * Related Component: fields
+   * Safe to remove when: design token is changed in our set.    
+   * Last verified: 2026-03-03 (OF 3.3.4)
+   */
+  --basis-form-control-max-inline-size: 100%;
+
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Set max inline size for multifield fields to prevent them from being too wide and makes icon stay next to field; missing feature in NLDS or OF.
+   * Related Component: openforms-multifield-field textbox / utrecht-textbox
+   * Safe to remove when: added as a token in our set
+   * Last verified: 2026-03-03 (OF 3.3.4)
+   */
+  // --of-multifield-field-max-inline-size: 25rem;
+  // --_utrecht-textbox-max-inline-size: 25rem;
+
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Set border color for uploaded file errors to match our design; missing feature in NLDS or OF.
+   * Related Component: openforms-uploaded-file--errors
+   * Safe to remove when: added as a token in our set
+   * Last verified: 2026-03-03 (OF 3.4.4)
+   */
+  --of-uploaded-file-errors-border-color: var(--basis-color-negative-color-default);
 }
 
 /*
@@ -194,21 +222,18 @@ footer.utrecht-page-footer {
   */
 
 .openforms-card:not(
-  :has(.formio-form), 
-  :has(form > div.openforms-summary)
-  )
-  header.openforms-card__header:not(
-    :has(.utrecht-heading-2.openforms-subtitle)
-  ) {
+    :has(form),
+    :has(form > div.openforms-summary),
+    :has(.openforms-loading-indicator)
+  )header.openforms-card__header:not(:has(.utrecht-heading-2.openforms-subtitle)) {
   border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
   padding-block-end: var(--basis-space-block-3xl);
   margin-block-end: var(--basis-space-block-4xl);
 }
 
 .openforms-card:has(form .openforms-form-field-container > div):not(
-  :has(form .openforms-form-field-container > div fieldset.openforms-fieldset),
-  :has(form .openforms-form-field-container > fieldset.openforms-fieldset)
-  ) 
+    :has(form .openforms-form-field-container > div fieldset.openforms-fieldset)
+  )
   header.openforms-card__header:has(.utrecht-heading-2.openforms-subtitle) {
   border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
   padding-block-end: var(--basis-space-block-3xl);
@@ -247,6 +272,22 @@ footer.utrecht-page-footer {
   */
 .openforms-card .openforms-card__body {
   margin-block-start: 0;
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Added line height to the subtle button variant to prevent the icon from being cut off, and added a token for the icon size to ensure it matches the design tokens
+  * Related Component: utrecht-button--subtle
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.4)
+  */
+.utrecht-button--subtle {
+  /* --utrecht-icon-size: 1rem; */
+  line-height: 1;
+}
+
+.utrecht-button--subtle .utrecht-icon {
+  --utrecht-icon-size: 1rem;
 }
 
 /*
@@ -305,6 +346,30 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 
 /* 
  * CUSTOM OVERRIDE
+ * Reason: Change tooltip size
+ * Related Component: utrecht-form-field__label--openforms-tooltip
+ * Safe to remove when: added as a token
+ * Last verified: 2026-03-03 (OF 3.4.4)
+ */
+.utrecht-form-field .utrecht-form-field__label.utrecht-form-field__label--openforms-tooltip .utrecht-icon,
+.utrecht-form-fieldset .utrecht-form-fieldset__legend.utrecht-form-fieldset__legend--openforms-tooltip .utrecht-icon {
+  --utrecht-icon-size: 1em;
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Change tooltip line height to align
+ * Related Component: utrecht-form-field__label--openforms-tooltip
+ * Safe to remove when: added as a token or fixed in OF
+ * Last verified: 2026-03-03 (OF 3.4.4)
+ */
+.utrecht-form-field .utrecht-form-field__label.utrecht-form-field__label--openforms-tooltip,
+.utrecht-form-fieldset .utrecht-form-fieldset__legend.utrecht-form-fieldset__legend--openforms-tooltip {
+  line-height: 1;
+}
+
+/* 
+ * CUSTOM OVERRIDE
  * Reason: No option to style the icons in de button group form navigation; missing feature in NLDS or OF.
  * Related Component: openforms-form-navigation
  * Safe to remove when: OF or NLDS includes tokens for the component
@@ -327,6 +392,22 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
  */
 .openforms-form-navigation button.utrecht-button--primary-action.utrecht-button--submit .utrecht-icon {
   color: currentcolor;
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the file upload input; missing feature in NLDS or OF.
+ * Related Component: openforms-upload-input
+ * Safe to remove when: OF includes tokens for the file upload input.
+ * Last verified: 2026-03-03 (OF 3.4.4)
+ */
+.openforms-file-upload .openforms-upload-input {
+  border-radius: var(--basis-form-control-border-radius);
+  background: var(--basis-color-default-bg-default);
+  border-color: var(--basis-color-default-border-default);
+  border-width: var(--basis-border-width-md);
+  padding-block: var(--basis-space-block-4xl);
+  padding-inline: var(--basis-space-block-4xl);
 }
 
 /*
@@ -724,6 +805,22 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 }
 
 /*
+  * CUSTOM OVERRIDE
+  * Reason: Vertically align table cells to the middle to match the design tokens
+  * Related Component: utrecht-table
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.0-leiden.1)
+  */
+
+.utrecht-table--html-table > tr > td,
+.utrecht-table--html-table > thead > tr > td,
+.utrecht-table--html-table > tbody > tr > td,
+.utrecht-table--html-table > tfoot > tr > td,
+.utrecht-table__cell {
+  vertical-align: middle;
+}
+
+/*
  * CUSTOM OVERRIDE
  * Reason: No option to style the WYSIWYG info; missing feature in NLDS or OF.
  * Related Component: openforms-formio-content-info
@@ -1003,6 +1100,44 @@ fieldset.openforms-fieldset {
   color: var(--basis-color-action-1-inverse-color-default);
 }
 
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Form field labels don't have margin-bottom; missing feature in NLDS or OF.
+ * Related Component: utrecht-form-field__label--openforms and utrecht-form-fieldset__legend--openforms
+ * Safe to remove when: OF or NLDS includes tokens for the margin-bottom on the form field labels and legends.
+ * Last verified: 2026-03-04 (OF 3.3.4)
+ */
+.utrecht-form-fieldset .utrecht-form-fieldset__legend:has(.utrecht-form-label--openforms),
+.utrecht-form-field__label {
+  --utrecht-form-field-label-margin-block-end: var(--basis-space-block-sm);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Choices button in a multi selection field missing style; missing feature in NLDS or OF.
+  * Related Component: utrecht-select
+  * Safe to remove when: OF or NLDS includes tokens or a fix for this component.
+  * Last verified: 2026-03-04 (OF 3.3.4)
+  */
+
+.utrecht-select.utrecht-select--openforms .rs-value--multi {
+  background-color: var(--basis-form-control-accent-color);
+  border-radius: var(--basis-form-control-border-radius);
+  line-height: var(--basis-text-line-height-more-space);
+}
+
+/* 
+ * CUSTOM OVERRIDE
+ * Reason: Choices options in a selection field missing color on focus; missing feature in NLDS or OF.
+ * Related Component: utrecht-select rs-menu__option
+ * Safe to remove when: OF or NLDS includes tokens or a fix for this component.
+ * Last verified: 2026-03-04 (OF 3.3.4)
+ */
+.utrecht-select.utrecht-select--openforms + .rs-menu .rs-menu__option--focus,
+.utrecht-select.utrecht-select--openforms + .rs-menu .rs-menu__option--focus-visible {
+  color: var(--basis-color-default-inverse-color-default);
+}
+
 /* 
  * CUSTOM OVERRIDE
  * Reason: Datepicker is not styled; missing feature in NLDS or OF.
@@ -1184,10 +1319,10 @@ fieldset.openforms-fieldset {
   * Reason: No option to style the card word-break; missing feature in NLDS or OF.
   * Related Component: openforms-card
   * Safe to remove when: OF or NLDS includes a token for the component
-  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  * Last verified: 2026-03-03 (OF 3.4.4)
   */
 .openforms-card {
-  word-break: break-word;
+  word-break: auto-phrase;
 }
 
 /*
@@ -1323,6 +1458,22 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
   line-height: var(--basis-text-line-height-md);
 }
 
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Add spacing between items and make the value bold
+  * Related Component: openforms-editgrid
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.4)
+  */
+
+.openforms-editgrid .utrecht-data-list__item {
+  margin-block-end: var(--basis-space-block-sm);
+}
+
+.openforms-editgrid .utrecht-data-list__item-value.utrecht-data-list__item-value--html-dd {
+  font-weight: 700;
+}
+
 /* 
  * CUSTOM OVERRIDE
  * Reason: Styling the summary component to match the design tokens
@@ -1379,13 +1530,8 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
   * Reason: Styling the statement checkboxes to match our design
   * Related Component: openforms-statement-checkboxes
   * Safe to remove when: OF or NLDS includes tokens for the component
-  * Last verified: 2026-02-02 (OF 3.4.0-leiden.1)
+  * Last verified: 2026-03-03 (OF 3.4.4)
   */
-.openforms-statement-checkboxes {
-  padding-block-start: var(--basis-space-block-4xl);
-  border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
-}
-
 .openforms-statement-checkboxes .openforms-privacy-checkbox {
   border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
   padding-block-start: var(--basis-space-block-4xl);
@@ -1457,18 +1603,6 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
 
 .openforms-children .openforms-children__actions .utrecht-button--subtle:hover .utrecht-icon {
   color: var(--basis-color-action-2-color-hover);
-}
-
-/* 
- * CUSTOM OVERRIDE
- * Reason: Adding margin to form field labels to match design
- * Related Component: openforms-form-field
- * Safe to remove when: OF or NLDS includes tokens for the component
- * Last verified: 2026-01-21 (OF 3.4.0-leiden.1)
- */
-
-.utrecht-form-label.utrecht-form-label--openforms {
-  margin-block-end: var(--basis-space-row-md);
 }
 
 /*
@@ -1570,7 +1704,26 @@ input.is-invalid,
   margin-block-start: 0;
 }
 
-.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--radio .utrecht-description {
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Adding margin between radio and checkbox form fields in openforms to match design tokens
+  * Related Component: openforms-form-field--radio, openforms-form-field--checkbox
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-04 (OF 3.4.4)
+  */
+.utrecht-form-field.utrecht-form-field--radio.utrecht-form-field--openforms,
+.utrecht-form-field.utrecht-form-field--checkbox.utrecht-form-field--openforms {
+  margin-block-end: var(--basis-space-block-md);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling form field descriptions in openforms to match design tokens
+  * Related Component: utrecht-form-description--openforms
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-03 (OF 3.4.4)
+  */
+.utrecht-form-description--openforms {
   color: var(--utrecht-form-field-description-color);
 }
 
@@ -1606,4 +1759,15 @@ input.is-invalid,
   font-weight: 700;
   font-size: 0.85rem;
   margin-inline-start: 0.5rem;
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling the datepicker toggle icon to match design tokens
+  * Related Component: openforms-datepicker-textbox
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-03 (OF 3.4.4)
+  */
+.openforms-datepicker-textbox .openforms-datepicker-textbox__calendar-toggle {
+  font-size: 100%;
 }
