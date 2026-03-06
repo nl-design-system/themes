@@ -1,0 +1,17 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import tokens from "../dist/tokens.json";
+import { ColorSearch } from "@nl-design-system-unstable/theme-toolkit/src/ColorSearch";
+import { ColorTable } from "@nl-design-system-unstable/theme-toolkit/src/ColorTable";
+import config from "../src/config.json";
+
+<Meta title="Start Thema/Colors" />
+
+# Color
+
+## Find a color
+
+<ColorSearch tokens={tokens["basis"]["color"]} />
+
+## Color palette
+
+<ColorTable tokens={tokens["basis"]["color"]} />
