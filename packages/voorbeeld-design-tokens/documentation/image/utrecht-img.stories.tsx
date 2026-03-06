@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Image } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
@@ -10,7 +10,7 @@ const meta = {
     alt: 'Utrecht stadskantoor',
     height: 830,
     photo: true,
-    src: '/images/stadskantoor.jpg',
+    src: 'images/stadskantoor.jpg',
     width: 1040,
   },
 } satisfies Meta<typeof Image>;

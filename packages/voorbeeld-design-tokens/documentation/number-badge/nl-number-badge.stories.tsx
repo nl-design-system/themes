@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { NumberBadge } from '@nl-design-system-candidate/number-badge-react/css';
 
 const meta = {

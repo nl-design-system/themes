@@ -1,5 +1,5 @@
 import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/ComponentStories';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import config from './config.json';
 
 const meta = {

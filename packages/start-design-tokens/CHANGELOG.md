@@ -1,5 +1,849 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 5.0.0
+
+### Major Changes
+
+- 9c4c9e6: De volgende tokens zijn toegevoegd aan Switch component:
+
+  - `utrecht.form-toggle.accent-color`
+  - `utrecht.form-toggle.background-color`
+  - `utrecht.form-toggle.border-color`
+  - `utrecht.form-toggle.border-radius`
+  - `utrecht.form-toggle.border-style`
+  - `utrecht.form-toggle.border-width`
+  - `utrecht.form-toggle.color`
+  - `utrecht.form-toggle.height`
+  - `utrecht.form-toggle.padding-block-end`
+  - `utrecht.form-toggle.padding-block-start`
+  - `utrecht.form-toggle.padding-inline-end`
+  - `utrecht.form-toggle.padding-inline-start`
+  - `utrecht.form-toggle.width`
+  - `utrecht.form-toggle.checked.accent-color`
+  - `utrecht.form-toggle.disabled.border-color`
+  - `utrecht.form-toggle.disabled.border-style`
+  - `utrecht.form-toggle.disabled.border-width`
+  - `utrecht.form-toggle.disabled.color`
+  - `utrecht.form-toggle.hover.background-color`
+  - `utrecht.form-toggle.hover.color`
+  - `utrecht.form-toggle.focus.border-color`
+  - `utrecht.form-toggle.focus.border-style`
+  - `utrecht.form-toggle.focus.border-width`
+  - `utrecht.form-toggle.thumb.background-color`
+  - `utrecht.form-toggle.thumb.border-radius`
+  - `utrecht.form-toggle.thumb.box-shadow`
+  - `utrecht.form-toggle.thumb.margin-inline-end`
+  - `utrecht.form-toggle.thumb.margin-inline-start`
+  - `utrecht.form-toggle.thumb.min-inline-size`
+  - `utrecht.form-toggle.thumb.disabled.background-color`
+  - `utrecht.form-toggle.thumb.disabled.box-shadow`
+  - `utrecht.form-toggle.track.border-color`
+  - `utrecht.form-toggle.track.border-radius`
+  - `utrecht.form-toggle.track.disabled.background-color`
+  - `utrecht.form-toggle.track.disabled.border-color`
+
+  De volgende tokens zijn verwijderd uit ToDo Switch component:
+
+  - `todo.switch.icon.color`
+  - `todo.switch.icon.size`
+  - `todo.switch.icon.disabled.color`
+  - `todo.switch.icon.focus-visible.color`
+  - `todo.switch.thumb.background-color`
+  - `todo.switch.thumb.border-color`
+  - `todo.switch.thumb.border-radius`
+  - `todo.switch.thumb.border-width`
+  - `todo.switch.thumb.box-shadow`
+  - `todo.switch.thumb.min-block-size`
+  - `todo.switch.thumb.min-inline-size`
+  - `todo.switch.thumb.disabled.background-color`
+  - `todo.switch.thumb.disabled.box-shadow`
+  - `todo.switch.thumb.focus-visible.background-color`
+  - `todo.switch.track.background-color`
+  - `todo.switch.track.border-color`
+  - `todo.switch.track.border-radius`
+  - `todo.switch.track.border-width`
+  - `todo.switch.track.inline-size`
+  - `todo.switch.track.padding-block`
+  - `todo.switch.track.padding-inline`
+  - `todo.switch.track.active.background-color`
+  - `todo.switch.track.disabled.background-color`
+  - `todo.switch.track.focus-visible.background-color`
+  - `todo.switch.track.hover.background-color`
+  - `todo.switch.track.checked.background-color`
+  - `todo.switch.track.checked.active.background-color`
+  - `todo.switch.track.checked.disabled.background-color`
+  - `todo.switch.track.checked.focus-visible.background-color`
+  - `todo.switch.track.checked.hover.background-color`
+
+## 4.0.0
+
+### Major Changes
+
+- 2a03dca: De volgende tokens zijn toegevoegd aan de Task Card en Task Navigation componenten:
+
+  - `denhaag.action.context.gap`
+  - `denhaag.action.context.lg.gap`
+  - `denhaag.action.actions.gap`
+
+  Token `denhaag.action.border-style` is aangevuld met description `[code-only]`.
+
+  De volgende tokens zijn hernoemd:
+
+  - `denhaag.action.link.icon.color` naar `denhaag.action.link-icon.color`
+  - `denhaag.action.link.icon.width` naar `denhaag.action.link-icon.width`
+  - `denhaag.action.warning.icon.color` naar `denhaag.action.warning-icon.color`
+  - `denhaag.action.warning.icon.width` naar `denhaag.action.warning-icon.width`
+
+  De volgende tokens zijn verwijderd:
+
+  - `denhaag.action.font-familiy`
+  - `denhaag.action.font-size`
+  - `denhaag.action.font-weight`
+  - `denhaag.action.line-height`
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `denhaag.action.date.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.date.warning.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.lg.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.xl}`.
+
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+- e148363: Tokens verwijderd
+
+  De volgende tokens zijn verwijderd uit ToDo Checkbox Group component:
+
+  - `todo.checkbox-group.padding-block-end`
+  - `todo.checkbox-group.padding-block-start`
+  - `todo.checkbox-group.row-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Checkbox Option component:
+
+  - `todo.form-field-checkbox-option.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Label component:
+
+  - `todo.form-field-label.color`
+  - `todo.form-field-label.column-gap`
+  - `todo.form-field-label.font-family`
+  - `todo.form-field-label.font-size`
+  - `todo.form-field-label.font-weight`
+  - `todo.form-field-label.line-height`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Option Label component:
+
+  - `todo.form-field-option-label.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Radio Option component:
+
+  - `todo.form-field-radio-option.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Radio Group component:
+
+  - `todo.radio-group.padding-block-end`
+  - `todo.radio-group.padding-block-start`
+  - `todo.radio-group.row-gap`
+
+  Tokens toegevoegd
+
+  - Token `utrecht.checkbox.margin-inline-end` is toegevoegd aan Checkbox component.
+  - Token `utrecht.form-field-label.margin-block-end` is toegevoegd aan Form Field Label component.
+  - Token `utrecht.radio-button.margin-inline-end` is toegevoegd aan Radio Button component.
+
+  De volgende tokens zijn toegevoegd aan Fieldset component:
+
+  - `utrecht.form-fieldset.margin-block-end`
+  - `utrecht.form-fieldset.margin-block-start`
+  - `utrecht.form-fieldset.invalid.border-inline-start-color`
+  - `utrecht.form-fieldset.invalid.border-inline-start-width`
+  - `utrecht.form-fieldset.invalid.padding-inline-start`
+  - `utrecht.form-fieldset.legend.color`
+  - `utrecht.form-fieldset.legend.font-family`
+  - `utrecht.form-fieldset.legend.font-size`
+  - `utrecht.form-fieldset.legend.font-weight`
+  - `utrecht.form-fieldset.legend.line-height`
+  - `utrecht.form-fieldset.legend.margin-block-end`
+  - `utrecht.form-fieldset.legend.margin-block-start`
+  - `utrecht.form-fieldset.legend.disabled.color`
+  - `utrecht.form-fieldset.section.background-color`
+  - `utrecht.form-fieldset.section.color`
+
+  De volgende tokens zijn toegevoegd aan ToDo Form Field Label Suffix:
+
+  - `todo.form-field-label-suffix.font-family`
+  - `todo.form-field-label-suffix.font-size`
+  - `todo.form-field-label-suffix.line-height`
+  - `todo.form-field-label-suffix.margin-inline-start`
+
+  Tokenwaarde gewijzigd
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `utrecht.form-field-description.margin-block-end` is gewijzigd van `0px` naar `basis.space.block.lg`.
+  - Waarde van token `utrecht.form-field-error-message.margin-block-end` is gewijzigd van `0px` naar `basis.space.block.lg`.
+
+  De description van de volgende tokens zijn verwijderd:
+
+  - `utrecht.form-field-description.margin-block-end`
+  - `utrecht.form-field-description.margin-block-start`
+  - `utrecht.form-field-error-message.margin-block-end`
+  - `utrecht.form-field-error-message.margin-block-start`
+
+  Technische verbeteringen
+
+  Volgorde van token `utrecht.form-field-error-message.column-gap` is aangepast naar de juiste positie geplaatst.
+
+### Minor Changes
+
+- f1a6d87: De volgende tokens zijn toegevoegd aan Password Input component:
+
+  - `ams.password-input.background-color`
+  - `ams.password-input.border-color`
+  - `ams.password-input.border-style`
+  - `ams.password-input.border-width`
+  - `ams.password-input.color`
+  - `ams.password-input.font-family`
+  - `ams.password-input.font-size`
+  - `ams.password-input.font-weight`
+  - `ams.password-input.line-height`
+  - `ams.password-input.outline-offset`
+  - `ams.password-input.padding-block`
+  - `ams.password-input.padding-inline`
+  - `ams.password-input.placeholder.color`
+  - `ams.password-input.disabled.color`
+  - `ams.password-input.disabled.cursor`
+  - `ams.password-input.hover.box-shadow`
+  - `ams.password-input.invalid.border-color`
+  - `ams.password-input.invalid.hover.border-color`
+  - `ams.password-input.invalid.hover.box-shadow`
+
+- 7745317: De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van common token `basis.text.font-size.2xl` is gewijzigd van `2rem` naar `1.75rem`.
+  - Waarde van common token `basis.text.font-size.3xl` is gewijzigd van `2.5rem` naar `2rem`.
+  - Waarde van common token `basis.text.font-size.4xl` is gewijzigd van `3rem` naar `2.5rem`.
+  - Waarde van common token `basis.text.line-height.4xl` is gewijzigd van `110%` naar `125%`.
+  - Waarde van common token `basis.size.icon.2xl` is gewijzigd van `2.5rem` naar `2rem`.
+  - Waarde van common token `basis.size.icon.3xl` is gewijzigd van `3rem` naar `2.5rem`.
+
+  Controleer of deze wijzigingen ook wenselijk zijn voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+- be0ba7c: De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `ams.date-input.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.form-control.hover.border-color} type: innerShadow}`.
+  - Waarde van token `ams.date-input.invalid.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.color.negative.border-hover} type: innerShadow}`.
+
+### Patch Changes
+
+- 0598398: Tokenset `data-list` is hernoemd naar `data-summary`.
+
+## 3.0.0
+
+### Major Changes
+
+- bc7143d: De volgende tokens zijn toegevoegd aan Modal Dialog component:
+
+  - `ams.dialog.background-color`
+  - `ams.dialog.border-color`
+  - `ams.dialog.border-style`
+  - `ams.dialog.border-width`
+  - `ams.dialog.gap`
+  - `ams.dialog.inline-size`
+  - `ams.dialog.max-block-size`
+  - `ams.dialog.max-inline-size`
+  - `ams.dialog.medium.inline-size`
+  - `ams.dialog.medium.max-block-size`
+  - `ams.dialog.backdrop.background-color`
+  - `ams.dialog.header.gap`
+  - `ams.dialog.header.padding-block`
+  - `ams.dialog.header.padding-inline`
+  - `ams.dialog.header.medium.padding-block`
+  - `ams.dialog.header.medium.padding-inline`
+  - `ams.dialog.body.padding-block`
+  - `ams.dialog.body.padding-inline`
+  - `ams.dialog.body.medium.padding-inline`
+  - `ams.dialog.footer.padding-block`
+  - `ams.dialog.footer.padding-inline`
+  - `ams.dialog.footer.medium.padding-block`
+  - `ams.dialog.footer.medium.padding-inline`
+  - `todo.dialog.border-radius`
+  - `todo.dialog.box-shadow`
+
+  De volgende tokens zijn verwijderd uit ToDo Modal Dialog component:
+
+  - `todo.modal-dialog.background-color`
+  - `todo.modal-dialog.border-color`
+  - `todo.modal-dialog.border-radius`
+  - `todo.modal-dialog.border-width`
+  - `todo.modal-dialog.box-shadow`
+  - `todo.modal-dialog.color`
+  - `todo.modal-dialog.content.padding-block-end`
+  - `todo.modal-dialog.content.padding-block-start`
+  - `todo.modal-dialog.content.padding-inline`
+  - `todo.modal-dialog.footer.background-color`
+  - `todo.modal-dialog.footer.border-color`
+  - `todo.modal-dialog.footer.border-width`
+  - `todo.modal-dialog.footer.padding-block-end`
+  - `todo.modal-dialog.footer.padding-block-start`
+  - `todo.modal-dialog.footer.padding-inline-end`
+  - `todo.modal-dialog.footer.padding-inline-start`
+  - `todo.modal-dialog.header.background-color`
+  - `todo.modal-dialog.header.border-color`
+  - `todo.modal-dialog.header.border-width`
+  - `todo.modal-dialog.header.column-gap`
+  - `todo.modal-dialog.header.padding-block-end`
+  - `todo.modal-dialog.header.padding-block-start`
+  - `todo.modal-dialog.header.padding-inline-end`
+  - `todo.modal-dialog.header.padding-inline-start`
+  - `todo.modal-dialog.header.label.color`
+  - `todo.modal-dialog.header.label.font-family`
+  - `todo.modal-dialog.header.label.font-size`
+  - `todo.modal-dialog.header.label.font-weight`
+  - `todo.modal-dialog.header.label.line-height`
+
+- fea1c1f: Token `ams.heading.inverse-color` is hernoemd naar `ams.heading.inverse.color` in Heading component.
+
+### Minor Changes
+
+- 11566b7: De volgende tokens zijn toegevoegd aan Date Input component:
+
+  - `ams.date-input.background-color`
+  - `ams.date-input.border-color`
+  - `ams.date-input.border-style`
+  - `ams.date-input.border-width`
+  - `ams.date-input.color`
+  - `ams.date-input.font-size`
+  - `ams.date-input.font-family`
+  - `ams.date-input.font-weight`
+  - `ams.date-input.line-height`
+  - `ams.date-input.min-block-size`
+  - `ams.date-input.min-inline-size`
+  - `ams.date-input.outline-offset`
+  - `ams.date-input.padding-block`
+  - `ams.date-input.padding-inline`
+  - `ams.date-input.calendar-picker-indicator.background-image`
+  - `ams.date-input.calendar-picker-indicator.cursor`
+  - `ams.date-input.disabled.border-color`
+  - `ams.date-input.disabled.color`
+  - `ams.date-input.disabled.cursor`
+  - `ams.date-input.disabled.calendar-picker-indicator.background-image`
+  - `ams.date-input.hover.box-shadow`
+  - `ams.date-input.hover.calendar-picker-indicator.background-image`
+  - `ams.date-input.invalid.border-color`
+  - `ams.date-input.invalid.hover.border-color`
+  - `ams.date-input.invalid.hover.box-shadow`
+
+- cbe4c6f: De volgende tokens zijn toegevoegd aan Description List component:
+
+  - `ams.description-list.color`
+  - `ams.description-list.column-gap`
+  - `ams.description-list.font-family`
+  - `ams.description-list.font-size`
+  - `ams.description-list.grid-template-columns`
+  - `ams.description-list.line-height`
+  - `ams.description-list.row-gap`
+  - `ams.description-list.description.font-weight`
+  - `ams.description-list.description.padding-inline-start`
+  - `ams.description-list.inverse.color`
+  - `ams.description-list.medium.grid-template-columns`
+  - `ams.description-list.narrow.grid-template-columns`
+  - `ams.description-list.section.column-gap`
+  - `ams.description-list.term.font-weight`
+  - `ams.description-list.wide.grid-template-columns`
+
+- bc75456: De volgende tokens zijn toegevoegd aan Navigation Bar component:
+
+  - `utrecht.nav-bar.content.background-color`
+  - `utrecht.nav-bar.content.color`
+
+  Waarde van token `utrecht.nav-bar.content.max-inline-size` is gewijzigd van `1184px` naar `{basis.page.max-inline-size}`.
+
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+- e959539: De volgende tokens zijn toegevoegd aan Calendar component:
+
+  - `utrecht.calendar.background-color`
+  - `utrecht.calendar.width`
+  - `utrecht.calendar.icon.size`
+  - `utrecht.calendar.navigation.background-color`
+  - `utrecht.calendar.navigation.color`
+  - `utrecht.calendar.navigation.padding-block-end`
+  - `utrecht.calendar.navigation.padding-block-start`
+  - `utrecht.calendar.navigation.label.color`
+  - `utrecht.calendar.navigation.label.font-size`
+  - `utrecht.calendar.table.padding-block-end`
+  - `utrecht.calendar.table.padding-block-start`
+  - `utrecht.calendar.table.days-item-day.border-color`
+  - `utrecht.calendar.table.days-item-day.border-width`
+  - `utrecht.calendar.table.days-item-day.color`
+  - `utrecht.calendar.table.days-item-day.size`
+  - `utrecht.calendar.table.days-item-day.active.background-color`
+  - `utrecht.calendar.table.days-item-day.active.border-color`
+  - `utrecht.calendar.table.days-item-day.active.color`
+  - `utrecht.calendar.table.days-item-day.disabled.background-color`
+  - `utrecht.calendar.table.days-item-day.disabled.border-color`
+  - `utrecht.calendar.table.days-item-day.disabled.color`
+  - `utrecht.calendar.table.days-item-day.emphasis.background-color`
+  - `utrecht.calendar.table.days-item-day.emphasis.border-color`
+  - `utrecht.calendar.table.days-item-day.emphasis.color`
+  - `utrecht.calendar.table.days-item-day.emphasis.font-weight`
+  - `utrecht.calendar.table.days-item-day.focus.background-color`
+  - `utrecht.calendar.table.days-item-day.focus.border-color`
+  - `utrecht.calendar.table.days-item-day.focus.color`
+  - `utrecht.calendar.table.days-item-day.hover.background-color`
+  - `utrecht.calendar.table.days-item-day.hover.border-color`
+  - `utrecht.calendar.table.days-item-day.hover.color`
+  - `utrecht.calendar.table.days-item-day.is-today.background-color`
+  - `utrecht.calendar.table.days-item-day.is-today.border-color`
+  - `utrecht.calendar.table.days-item-day.is-today.color`
+  - `utrecht.calendar.table.days-item-day.is-today.font-weight`
+  - `utrecht.calendar.table.days-item-day.out-of-the-month.background-color`
+  - `utrecht.calendar.table.days-item-day.out-of-the-month.border-color`
+  - `utrecht.calendar.table.days-item-day.out-of-the-month.color`
+  - `utrecht.calendar.table.days-item-day.selected.background-color`
+  - `utrecht.calendar.table.days-item-day.selected.border-color`
+  - `utrecht.calendar.table.days-item-day.selected.color`
+  - `utrecht.calendar.table.days-item-day.selected.font-weight`
+  - `utrecht.calendar.table.weeks-item.width`
+  - `todo.calendar.table.days-item-day.disabled.font-weight`
+
+## 2.4.1
+
+### Patch Changes
+
+- adb7894: Token `nl.button.outline-offset` is verwijderd uit Button component.
+
+## 2.4.0
+
+### Minor Changes
+
+- e79dc28: De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `nl.button.padding-block-end` is gewijzigd van `basis.space.block.lg` naar `basis.space.block.md`.
+  - Waarde van token `nl.button.padding-block-start` is gewijzigd van `basis.space.block.lg` naar `basis.space.block.md`.
+  - Waarde van token `nl.button.icon-only.padding-block-end` is gewijzigd van `basis.space.block.lg` naar `basis.space.block.md`.
+  - Waarde van token `nl.button.icon-only.padding-block-start` is gewijzigd van `basis.space.block.lg` naar `basis.space.block.md`.
+  - Waarde van token `nl.button.icon-only.padding-inline-end` is gewijzigd van `basis.space.inline.lg` naar `basis.space.inline.md`.
+  - Waarde van token `nl.button.icon-only.padding-inline-start` is gewijzigd van `basis.space.inline.lg` naar `basis.space.inline.md`.
+
+## 2.3.0
+
+### Minor Changes
+
+- 2c084f0: Waarde van token `nl.button.subtle.border-width` is gewijzigd van `{nl.button.default.border-width}` naar `0px`.
+
+## 2.2.0
+
+### Minor Changes
+
+- 597b3b6: De volgende tokens zijn toegevoegd voor de Breadcrumb Navigation component van Amsterdam:
+
+  - `ams.breadcrumb.font-family`
+  - `ams.breadcrumb.font-size`
+  - `ams.breadcrumb.font-weight`
+  - `ams.breadcrumb.line-height`
+  - `ams.breadcrumb.separator.background-image`
+  - `ams.breadcrumb.separator.block-size`
+  - `ams.breadcrumb.separator.inline-size`
+  - `ams.breadcrumb.separator.margin-inline`
+  - `ams.breadcrumb.link.color`
+  - `ams.breadcrumb.link.outline-offset`
+  - `ams.breadcrumb.link.text-decoration-line`
+  - `ams.breadcrumb.link.text-underline-offset`
+  - `ams.breadcrumb.link.text-decoration-thickness`
+  - `ams.breadcrumb.link.hover.color`
+  - `ams.breadcrumb.link.hover.text-decoration-line`
+
+- b7f3e31: De volgende tokens zijn toegevoegd aan Button component:
+
+  - `nl.button.icon-only.padding-block-end`
+  - `nl.button.icon-only.padding-block-start`
+  - `nl.button.icon-only.padding-inline-end`
+  - `nl.button.icon-only.padding-inline-start`
+
+- 86bcbf7: De volgende tokens zijn toegevoegd aan Navigation List component:
+
+  - `rhc.navigation-list.item.background-color`
+  - `rhc.navigation-list.item.border-color`
+  - `rhc.navigation-list.item.border-width`
+  - `rhc.navigation-list.item.column-gap`
+  - `rhc.navigation-list.item.min-height`
+  - `rhc.navigation-list.item.padding-block`
+  - `rhc.navigation-list.item.padding-inline`
+  - `rhc.navigation-list.item.active.background-color`
+  - `rhc.navigation-list.item.hover.background-color`
+  - `rhc.navigation-list.item.focus.background-color`
+  - `rhc.navigation-list.item.content.column-gap`
+  - `rhc.navigation-list.item.content.row-gap`
+  - `rhc.navigation-list.item.description.color`
+  - `rhc.navigation-list.item.description.font-size`
+  - `rhc.navigation-list.item.description.line-height`
+  - `rhc.navigation-list.item.icon-end.color`
+  - `rhc.navigation-list.item.icon-start.background-color`
+  - `rhc.navigation-list.item.icon-start.border-radius`
+  - `rhc.navigation-list.item.icon-start.color`
+  - `rhc.navigation-list.item.icon-start.padding-block`
+  - `rhc.navigation-list.item.icon-start.padding-inline`
+  - `rhc.navigation-list.item.icon-start.size`
+  - `rhc.navigation-list.item.label.color`
+  - `rhc.navigation-list.item.label.font-family`
+  - `rhc.navigation-list.item.label.font-size`
+  - `rhc.navigation-list.item.label.font-weight`
+  - `rhc.navigation-list.item.label.line-height`
+
+- 1f3a2bf: De volgende tokens zijn toegevoegd voor de Status Badge component:
+
+  - `utrecht.status-badge.background-color`
+  - `utrecht.status-badge.border-color`
+  - `utrecht.status-badge.border-radius`
+  - `utrecht.status-badge.border-width`
+  - `utrecht.status-badge.color`
+  - `utrecht.status-badge.font-family`
+  - `utrecht.status-badge.font-size`
+  - `utrecht.status-badge.font-weight`
+  - `utrecht.status-badge.line-height`
+  - `utrecht.status-badge.letter-spacing`
+  - `utrecht.status-badge.min-block-size`
+  - `utrecht.status-badge.min-inline-size`
+  - `utrecht.status-badge.padding-block`
+  - `utrecht.status-badge.padding-inline`
+  - `utrecht.status-badge.text-transform`
+  - `utrecht.status-badge.active.background-color`
+  - `utrecht.status-badge.active.border-color`
+  - `utrecht.status-badge.active.color`
+  - `utrecht.status-badge.danger.background-color`
+  - `utrecht.status-badge.danger.border-color`
+  - `utrecht.status-badge.danger.color`
+  - `utrecht.status-badge.error.background-color`
+  - `utrecht.status-badge.error.border-color`
+  - `utrecht.status-badge.error.color`
+  - `utrecht.status-badge.inactive.background-color`
+  - `utrecht.status-badge.inactive.border-color`
+  - `utrecht.status-badge.inactive.color`
+  - `utrecht.status-badge.invalid.background-color`
+  - `utrecht.status-badge.invalid.border-color`
+  - `utrecht.status-badge.invalid.color`
+  - `utrecht.status-badge.neutral.background-color`
+  - `utrecht.status-badge.neutral.border-color`
+  - `utrecht.status-badge.neutral.color`
+  - `utrecht.status-badge.safe.background-color`
+  - `utrecht.status-badge.safe.border-color`
+  - `utrecht.status-badge.safe.color`
+  - `utrecht.status-badge.success.background-color`
+  - `utrecht.status-badge.success.border-color`
+  - `utrecht.status-badge.success.color`
+  - `utrecht.status-badge.valid.background-color`
+  - `utrecht.status-badge.valid.border-color`
+  - `utrecht.status-badge.valid.color`
+  - `utrecht.status-badge.warning.background-color`
+  - `utrecht.status-badge.warning.border-color`
+  - `utrecht.status-badge.warning.color`
+
+## 2.1.0
+
+### Minor Changes
+
+- e01b7f5: Aanvullende design tokens voor de pressed state van de Candidate Button. De volgende design tokens zijn erbij gekomen:
+
+  **Default**
+
+  - `nl.button.default.pressed.active.background-color`
+  - `nl.button.default.pressed.active.border-color`
+  - `nl.button.default.pressed.active.color`
+  - `nl.button.default.pressed.disabled.background-color`
+  - `nl.button.default.pressed.disabled.border-color`
+  - `nl.button.default.pressed.disabled.color`
+  - `nl.button.default.pressed.hover.background-color`
+  - `nl.button.default.pressed.hover.border-color`
+  - `nl.button.default.pressed.hover.color`
+
+  **Primary**
+
+  - `nl.button.primary.pressed.active.background-color`
+  - `nl.button.primary.pressed.active.border-color`
+  - `nl.button.primary.pressed.active.color`
+  - `nl.button.primary.pressed.disabled.background-color`
+  - `nl.button.primary.pressed.disabled.border-color`
+  - `nl.button.primary.pressed.disabled.color`
+  - `nl.button.primary.pressed.hover.background-color`
+  - `nl.button.primary.pressed.hover.border-color`
+  - `nl.button.primary.pressed.hover.color`
+
+  **Primary - Negative**
+
+  - `nl.button.primary.negative.pressed.active.background-color`
+  - `nl.button.primary.negative.pressed.active.border-color`
+  - `nl.button.primary.negative.pressed.active.color`
+  - `nl.button.primary.negative.pressed.disabled.background-color`
+  - `nl.button.primary.negative.pressed.disabled.border-color`
+  - `nl.button.primary.negative.pressed.disabled.color`
+  - `nl.button.primary.negative.pressed.hover.background-color`
+  - `nl.button.primary.negative.pressed.hover.border-color`
+  - `nl.button.primary.negative.pressed.hover.color`
+
+  **Primary - Positive**
+
+  - `nl.button.primary.positive.pressed.active.background-color`
+  - `nl.button.primary.positive.pressed.active.border-color`
+  - `nl.button.primary.positive.pressed.active.color`
+  - `nl.button.primary.positive.pressed.disabled.background-color`
+  - `nl.button.primary.positive.pressed.disabled.border-color`
+  - `nl.button.primary.positive.pressed.disabled.color`
+  - `nl.button.primary.positive.pressed.hover.background-color`
+  - `nl.button.primary.positive.pressed.hover.border-color`
+  - `nl.button.primary.positive.pressed.hover.color`
+
+  **Secondary**
+
+  - `nl.button.secondary.pressed.active.background-color`
+  - `nl.button.secondary.pressed.active.border-color`
+  - `nl.button.secondary.pressed.active.color`
+  - `nl.button.secondary.pressed.disabled.background-color`
+  - `nl.button.secondary.pressed.disabled.border-color`
+  - `nl.button.secondary.pressed.disabled.color`
+  - `nl.button.secondary.pressed.hover.background-color`
+  - `nl.button.secondary.pressed.hover.border-color`
+  - `nl.button.secondary.pressed.hover.color`
+
+  **Secondary - Negative**
+
+  - `nl.button.secondary.negative.pressed.active.background-color`
+  - `nl.button.secondary.negative.pressed.active.border-color`
+  - `nl.button.secondary.negative.pressed.active.color`
+  - `nl.button.secondary.negative.pressed.disabled.background-color`
+  - `nl.button.secondary.negative.pressed.disabled.border-color`
+  - `nl.button.secondary.negative.pressed.disabled.color`
+  - `nl.button.secondary.negative.pressed.hover.background-color`
+  - `nl.button.secondary.negative.pressed.hover.border-color`
+  - `nl.button.secondary.negative.pressed.hover.color`
+
+  **Secondary - Positive**
+
+  - `nl.button.secondary.positive.pressed.active.background-color`
+  - `nl.button.secondary.positive.pressed.active.border-color`
+  - `nl.button.secondary.positive.pressed.active.color`
+  - `nl.button.secondary.positive.pressed.disabled.background-color`
+  - `nl.button.secondary.positive.pressed.disabled.border-color`
+  - `nl.button.secondary.positive.pressed.disabled.color`
+  - `nl.button.secondary.positive.pressed.hover.background-color`
+  - `nl.button.secondary.positive.pressed.hover.border-color`
+  - `nl.button.secondary.positive.pressed.hover.color`
+
+  **Subtle**
+
+  - `nl.button.subtle.pressed.active.background-color`
+  - `nl.button.subtle.pressed.active.border-color`
+  - `nl.button.subtle.pressed.active.color`
+  - `nl.button.subtle.pressed.disabled.background-color`
+  - `nl.button.subtle.pressed.disabled.border-color`
+  - `nl.button.subtle.pressed.disabled.color`
+  - `nl.button.subtle.pressed.hover.background-color`
+  - `nl.button.subtle.pressed.hover.border-color`
+  - `nl.button.subtle.pressed.hover.color`
+
+  **Subtle - Negative**
+
+  - `nl.button.subtle.negative.pressed.active.background-color`
+  - `nl.button.subtle.negative.pressed.active.border-color`
+  - `nl.button.subtle.negative.pressed.active.color`
+  - `nl.button.subtle.negative.pressed.disabled.background-color`
+  - `nl.button.subtle.negative.pressed.disabled.border-color`
+  - `nl.button.subtle.negative.pressed.disabled.color`
+  - `nl.button.subtle.negative.pressed.hover.background-color`
+  - `nl.button.subtle.negative.pressed.hover.border-color`
+  - `nl.button.subtle.negative.pressed.hover.color`
+
+  **Subtle - Positive**
+
+  - `nl.button.subtle.positive.pressed.active.background-color`
+  - `nl.button.subtle.positive.pressed.active.border-color`
+  - `nl.button.subtle.positive.pressed.active.color`
+  - `nl.button.subtle.positive.pressed.disabled.background-color`
+  - `nl.button.subtle.positive.pressed.disabled.border-color`
+  - `nl.button.subtle.positive.pressed.disabled.color`
+  - `nl.button.subtle.positive.pressed.hover.background-color`
+  - `nl.button.subtle.positive.pressed.hover.border-color`
+  - `nl.button.subtle.positive.pressed.hover.color`
+
+## 2.0.0
+
+### Major Changes
+
+- e95f8e6: De volgende tokens zijn toegevoegd aan Avatar component van Amsterdam:
+
+  - `ams.avatar.aspect-ratio`
+  - `ams.avatar.background-color`
+  - `ams.avatar.border-color`
+  - `ams.avatar.border-style`
+  - `ams.avatar.border-width`
+  - `ams.avatar.color`
+  - `ams.avatar.font-family`
+  - `ams.avatar.font-size`
+  - `ams.avatar.inline-size`
+  - `ams.avatar.line-height`
+  - `ams.avatar.padding-block`
+  - `ams.avatar.padding-inline`
+  - `ams.avatar.has-image.inline-size`
+
+  De volgende tokens zijn verwijderd uit ToDo Avatar component:
+
+  - `todo.avatar.background-color`
+  - `todo.avatar.border-color`
+  - `todo.avatar.border-radius`
+  - `todo.avatar.border-width`
+  - `todo.avatar.color`
+  - `todo.avatar.size`
+  - `todo.avatar.icon.icon-size`
+  - `todo.avatar.font-family`
+  - `todo.avatar.font-size`
+  - `todo.avatar.font-weight`
+  - `todo.avatar.line-height`
+  - `todo.avatar.text-transform`
+
+- 6e0a690: De volgende tokens zijn toegevoegd aan Case Card component...
+
+  - `todo.case-card.description.color`
+  - `todo.case-card.description.font-family`
+  - `todo.case-card.description.font-size`
+  - `todo.case-card.description.font-weight`
+  - `todo.case-card.description.line-height`
+  - `todo.case-card.archived.description.color`
+  - `todo.case-card.metadata.color`
+  - `todo.case-card.metadata.font-family`
+  - `todo.case-card.metadata.font-size`
+  - `todo.case-card.metadata.font-weight`
+  - `todo.case-card.metadata.line-height`
+  - `todo.case-card.archived.metadata.color`
+
+  De volgende tokens zijn hernoemd in Case Card component:
+
+  Read-only --> Archived
+
+  - `todo.case-card.heading.read-only.color` naar `todo.case-card.archived.heading.color`
+  - `todo.case-card.read-only.background-color` naar `todo.case-card.archived.background-color`
+  - `todo.case-card.read-only.color` naar `todo.case-card.archived.color`
+  - `todo.case-card.read-only.active.background-color` naar `todo.case-card.archived.active.background-color`
+  - `todo.case-card.read-only.hover.background-color` naar `todo.case-card.archived.hover.background-color`
+  - `todo.case-card.decoration.folder.read-only.background-color` naar `todo.case-card.archived.decoration.folder.background-color`
+  - `todo.case-card.decoration.folder.read-only.active.background-color` naar `todo.case-card.archived.decoration.folder.active.background-color`
+  - `todo.case-card.decoration.folder.read-only.hover.background-color` naar `todo.case-card.archived.decoration.folder.hover.background-color`
+
+  Focus-visible naar Focus
+
+  - `todo.case-card.focus-visible.background-color` naar `todo.case-card.focus.background-color`
+  - `todo.case-card.focus-visible.color` naar `todo.case-card.focus.color`
+  - `todo.case-card.decoration.folder.focus-visible.background-color` naar `todo.case-card.decoration.folder.focus.background-color`
+
+### Minor Changes
+
+- 3a83ffd: De volgende tokens zijn toegevoegd aan Figure component van Amsterdam:
+
+  - `ams.figure.gap`
+  - `ams.figure.caption.color`
+  - `ams.figure.caption.font-family`
+  - `ams.figure.caption.font-size`
+  - `ams.figure.caption.font-weight`
+  - `ams.figure.caption.line-height`
+  - `ams.figure.caption.inverse.color`
+
+- 1b1f4ff: De volgende tokens zijn toegevoegd aan File Input component van Amsterdam:
+
+  - `ams.file-input.background-color`
+  - `ams.file-input.border-color`
+  - `ams.file-input.border-style`
+  - `ams.file-input.border-width`
+  - `ams.file-input.color`
+  - `ams.file-input.cursor`
+  - `ams.file-input.outline-offset`
+  - `ams.file-input.disabled.color`
+  - `ams.file-input.disabled.cursor`
+  - `ams.file-input.font-family`
+  - `ams.file-input.font-size`
+  - `ams.file-input.font-weight`
+  - `ams.file-input.line-height`
+  - `ams.file-input.padding-block`
+  - `ams.file-input.padding-inline`
+  - `ams.file-input.button.background-color`
+  - `ams.file-input.button.border-color`
+  - `ams.file-input.button.border-style`
+  - `ams.file-input.button.border-width`
+  - `ams.file-input.button.color`
+  - `ams.file-input.button.cursor`
+  - `ams.file-input.button.line-height`
+  - `ams.file-input.button.margin-inline-end`
+  - `ams.file-input.button.padding-block`
+  - `ams.file-input.button.padding-inline`
+  - `ams.file-input.button.disabled.color`
+  - `ams.file-input.button.disabled.cursor`
+  - `ams.file-input.button.hover.box-shadow`
+  - `ams.file-input.button.hover.color`
+
+- 75c731b: De volgende tokens zijn toegevoegd aan Dot Badge component van Rijkshuisstijl Community:
+
+  - `rhc.dot-badge.block-size`
+  - `rhc.dot-badge.border-radius`
+  - `rhc.dot-badge.color`
+  - `rhc.dot-badge.inline-size`
+
+- e093d9e: De volgende tokens zijn toegevoegd aan Tabs component van Amsterdam:
+
+  - `ams.tabs.gap`
+  - `ams.tabs.button.color`
+  - `ams.tabs.button.cursor`
+  - `ams.tabs.button.font-family`
+  - `ams.tabs.button.font-size`
+  - `ams.tabs.button.font-weight`
+  - `ams.tabs.button.line-height`
+  - `ams.tabs.button.outline-offset`
+  - `ams.tabs.button.padding-block`
+  - `ams.tabs.button.padding-inline`
+  - `ams.tabs.button.hover.color`
+  - `ams.tabs.button.hover.box-shadow`
+  - `ams.tabs.button.disabled.color`
+  - `ams.tabs.button.disabled.cursor`
+  - `ams.tabs.button.selected.box-shadow`
+  - `ams.tabs.button.selected.font-weight`
+  - `ams.tabs.list.box-shadow`
+
+  De volgende tokens zijn toegevoegd aan Tabs component van Den Haag:
+
+  - `denhaag.tabs.border-color`
+  - `denhaag.tabs.border-width`
+  - `denhaag.tabs.border-style`
+  - `denhaag.tabs.width`
+  - `denhaag.tabs.tab.background-color`
+  - `denhaag.tabs.tab.color`
+  - `denhaag.tabs.tab.cursor`
+  - `denhaag.tabs.tab.font-family`
+  - `denhaag.tabs.tab.font-size`
+  - `denhaag.tabs.tab.font-weight`
+  - `denhaag.tabs.tab.line-height`
+  - `denhaag.tabs.tab.padding-block-end`
+  - `denhaag.tabs.tab.padding-block-start`
+  - `denhaag.tabs.tab.padding-inline-end`
+  - `denhaag.tabs.tab.padding-inline-start`
+  - `denhaag.tabs.tab.outline`
+  - `denhaag.tabs.tab.hover.color`
+  - `denhaag.tabs.tab.focus.color`
+  - `denhaag.tabs.tab.selected.color`
+  - `denhaag.tabs.tab.selected.font-weight`
+  - `denhaag.tabs.tab-indicator.border-color`
+  - `denhaag.tabs.tab-indicator.border-width`
+  - `denhaag.tabs.tab-indicator.bottom`
+  - `denhaag.tabs.tab-panel.outline`
+  - `denhaag.tabs.tab-panel.padding-block-end`
+  - `denhaag.tabs.tab-panel.padding-block-start`
+  - `denhaag.tabs.tab-panel.padding-inline-end`
+  - `denhaag.tabs.tab-panel.padding-inline-start`
+
+### Patch Changes
+
+- a957530: - Waarde van token `utrecht.pagination.relative-link.disabled.color` is gewijzigd omdat er 'curly-braces' ontbraken.
+  - De waarde was `basis.color.disabled.color-subtle` en wordt `{basis.color.disabled.color-subtle}`.
+- 75bc007: - Waarde van token `utrecht.data-badge.padding-block` gewijzigd van `None` naar `0px`.
+  - Waarde van token `nl.data-badge.padding-block` gewijzigd van `None` naar `0px`.
+
 ## 1.2.0
 
 ### Minor Changes

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Heading1, HeadingGroup, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Select, SelectOption, type SelectOptionProps } from '@utrecht/component-library-react/dist/css-module';
 
 const options: SelectOptionProps[] = [

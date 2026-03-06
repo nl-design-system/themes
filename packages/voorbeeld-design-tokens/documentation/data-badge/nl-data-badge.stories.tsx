@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { DataBadge } from '@nl-design-system-candidate/data-badge-react/css';
 
 const meta = {

@@ -18,6 +18,11 @@ import {
   PageFooter,
   Avatar,
   DescriptionList,
+  DateInput,
+  Figure,
+  Image,
+  PasswordInput,
+  FileInput,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -461,5 +466,38 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <DescriptionList.Description key={10}>Onderwijsrichting</DescriptionList.Description>
       </DescriptionList>
     ),
+  },
+  {
+    storyId: 'react-ams-date-input--default',
+    component: 'ams-date-input',
+    group: STORY_GROUPS['DATE_INPUT'],
+    name: 'Amsterdam Date Input',
+    render: () => <DateInput />,
+  },
+  {
+    storyId: 'react-ams-figure--default',
+    component: 'ams-figure',
+    group: STORY_GROUPS['FIGURE'],
+    name: 'Amsterdam Figure',
+    render: () => (
+      <Figure>
+        <Image alt="Utrecht stadskantoor" height={830} src="images/stadskantoor.jpg" width={1040} />
+        <Figure.Caption>Utrecht stadskantoor</Figure.Caption>
+      </Figure>
+    ),
+  },
+  {
+    storyId: 'react-ams-password-input--default',
+    component: 'ams-password-input',
+    group: STORY_GROUPS['PASSWORD_INPUT'],
+    name: 'Amsterdam Password Input',
+    render: () => <PasswordInput />,
+  },
+  {
+    storyId: 'react-ams-file-input--default',
+    component: 'ams-file-input',
+    group: STORY_GROUPS['FILE_INPUT'],
+    name: 'Amsterdam File Input',
+    render: () => <FileInput />,
   },
 ];

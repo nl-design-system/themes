@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { steps } from './steps';
 import basisTheme from '@nl-design-system-unstable/basis-design-tokens/dist/tokens.json';
 import voorbeeldTheme from '@nl-design-system-unstable/voorbeeld-design-tokens/dist/tokens.json';

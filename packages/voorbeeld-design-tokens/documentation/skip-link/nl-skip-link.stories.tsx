@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { SkipLink } from '@nl-design-system-candidate/skip-link-react/css';
 
 const meta = {
