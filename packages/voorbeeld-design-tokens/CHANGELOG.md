@@ -1,5 +1,239 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 10.0.0
+
+### Major Changes
+
+- 9c4c9e6: De volgende tokens zijn toegevoegd aan Switch component:
+
+  - `utrecht.form-toggle.accent-color`
+  - `utrecht.form-toggle.background-color`
+  - `utrecht.form-toggle.border-color`
+  - `utrecht.form-toggle.border-radius`
+  - `utrecht.form-toggle.border-style`
+  - `utrecht.form-toggle.border-width`
+  - `utrecht.form-toggle.color`
+  - `utrecht.form-toggle.height`
+  - `utrecht.form-toggle.padding-block-end`
+  - `utrecht.form-toggle.padding-block-start`
+  - `utrecht.form-toggle.padding-inline-end`
+  - `utrecht.form-toggle.padding-inline-start`
+  - `utrecht.form-toggle.width`
+  - `utrecht.form-toggle.checked.accent-color`
+  - `utrecht.form-toggle.disabled.border-color`
+  - `utrecht.form-toggle.disabled.border-style`
+  - `utrecht.form-toggle.disabled.border-width`
+  - `utrecht.form-toggle.disabled.color`
+  - `utrecht.form-toggle.hover.background-color`
+  - `utrecht.form-toggle.hover.color`
+  - `utrecht.form-toggle.focus.border-color`
+  - `utrecht.form-toggle.focus.border-style`
+  - `utrecht.form-toggle.focus.border-width`
+  - `utrecht.form-toggle.thumb.background-color`
+  - `utrecht.form-toggle.thumb.border-radius`
+  - `utrecht.form-toggle.thumb.box-shadow`
+  - `utrecht.form-toggle.thumb.margin-inline-end`
+  - `utrecht.form-toggle.thumb.margin-inline-start`
+  - `utrecht.form-toggle.thumb.min-inline-size`
+  - `utrecht.form-toggle.thumb.disabled.background-color`
+  - `utrecht.form-toggle.thumb.disabled.box-shadow`
+  - `utrecht.form-toggle.track.border-color`
+  - `utrecht.form-toggle.track.border-radius`
+  - `utrecht.form-toggle.track.disabled.background-color`
+  - `utrecht.form-toggle.track.disabled.border-color`
+
+  De volgende tokens zijn verwijderd uit ToDo Switch component:
+
+  - `todo.switch.icon.color`
+  - `todo.switch.icon.size`
+  - `todo.switch.icon.disabled.color`
+  - `todo.switch.icon.focus-visible.color`
+  - `todo.switch.thumb.background-color`
+  - `todo.switch.thumb.border-color`
+  - `todo.switch.thumb.border-radius`
+  - `todo.switch.thumb.border-width`
+  - `todo.switch.thumb.box-shadow`
+  - `todo.switch.thumb.min-block-size`
+  - `todo.switch.thumb.min-inline-size`
+  - `todo.switch.thumb.disabled.background-color`
+  - `todo.switch.thumb.disabled.box-shadow`
+  - `todo.switch.thumb.focus-visible.background-color`
+  - `todo.switch.track.background-color`
+  - `todo.switch.track.border-color`
+  - `todo.switch.track.border-radius`
+  - `todo.switch.track.border-width`
+  - `todo.switch.track.inline-size`
+  - `todo.switch.track.padding-block`
+  - `todo.switch.track.padding-inline`
+  - `todo.switch.track.active.background-color`
+  - `todo.switch.track.disabled.background-color`
+  - `todo.switch.track.focus-visible.background-color`
+  - `todo.switch.track.hover.background-color`
+  - `todo.switch.track.checked.background-color`
+  - `todo.switch.track.checked.active.background-color`
+  - `todo.switch.track.checked.disabled.background-color`
+  - `todo.switch.track.checked.focus-visible.background-color`
+  - `todo.switch.track.checked.hover.background-color`
+
+## 9.0.0
+
+### Major Changes
+
+- 2a03dca: De volgende tokens zijn toegevoegd aan de Task Card en Task Navigation componenten:
+
+  - `denhaag.action.context.gap`
+  - `denhaag.action.context.lg.gap`
+  - `denhaag.action.actions.gap`
+
+  Token `denhaag.action.border-style` is aangevuld met description `[code-only]`.
+
+  De volgende tokens zijn hernoemd:
+
+  - `denhaag.action.link.icon.color` naar `denhaag.action.link-icon.color`
+  - `denhaag.action.link.icon.width` naar `denhaag.action.link-icon.width`
+  - `denhaag.action.warning.icon.color` naar `denhaag.action.warning-icon.color`
+  - `denhaag.action.warning.icon.width` naar `denhaag.action.warning-icon.width`
+
+  De volgende tokens zijn verwijderd:
+
+  - `denhaag.action.font-familiy`
+  - `denhaag.action.font-size`
+  - `denhaag.action.font-weight`
+  - `denhaag.action.line-height`
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `denhaag.action.date.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.date.warning.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.md}`.
+  - Waarde van token `denhaag.action.single.details.lg.gap` is gewijzigd van `{basis.space.row.md}` naar `{basis.space.column.xl}`.
+
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+- 4dc16e0: Tokens verwijderd
+
+  De volgende tokens zijn verwijderd uit ToDo Checkbox Group component:
+
+  - `todo.checkbox-group.padding-block-end`
+  - `todo.checkbox-group.padding-block-start`
+  - `todo.checkbox-group.row-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Checkbox Option component:
+
+  - `todo.form-field-checkbox-option.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Label component:
+
+  - `todo.form-field-label.color`
+  - `todo.form-field-label.column-gap`
+  - `todo.form-field-label.font-family`
+  - `todo.form-field-label.font-size`
+  - `todo.form-field-label.font-weight`
+  - `todo.form-field-label.line-height`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Option Label component:
+
+  - `todo.form-field-option-label.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Form Field Radio Option component:
+
+  - `todo.form-field-radio-option.column-gap`
+
+  De volgende tokens zijn verwijderd uit ToDo Radio Group component:
+
+  - `todo.radio-group.padding-block-end`
+  - `todo.radio-group.padding-block-start`
+  - `todo.radio-group.row-gap`
+
+  Tokens toegevoegd
+
+  - Token `utrecht.checkbox.margin-inline-end` is toegevoegd aan Checkbox component.
+  - Token `utrecht.form-field-label.margin-block-end` is toegevoegd aan Form Field Label component.
+  - Token `utrecht.radio-button.margin-inline-end` is toegevoegd aan Radio Button component.
+
+  De volgende tokens zijn toegevoegd aan Fieldset component:
+
+  - `utrecht.form-fieldset.margin-block-end`
+  - `utrecht.form-fieldset.margin-block-start`
+  - `utrecht.form-fieldset.invalid.border-inline-start-color`
+  - `utrecht.form-fieldset.invalid.border-inline-start-width`
+  - `utrecht.form-fieldset.invalid.padding-inline-start`
+  - `utrecht.form-fieldset.legend.color`
+  - `utrecht.form-fieldset.legend.font-family`
+  - `utrecht.form-fieldset.legend.font-size`
+  - `utrecht.form-fieldset.legend.font-weight`
+  - `utrecht.form-fieldset.legend.line-height`
+  - `utrecht.form-fieldset.legend.margin-block-end`
+  - `utrecht.form-fieldset.legend.margin-block-start`
+  - `utrecht.form-fieldset.legend.disabled.color`
+  - `utrecht.form-fieldset.section.background-color`
+  - `utrecht.form-fieldset.section.color`
+
+  De volgende tokens zijn toegevoegd aan ToDo Form Field Label Suffix:
+
+  - `todo.form-field-label-suffix.font-family`
+  - `todo.form-field-label-suffix.font-size`
+  - `todo.form-field-label-suffix.line-height`
+  - `todo.form-field-label-suffix.margin-inline-start`
+
+  Tokenwaarde gewijzigd
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `utrecht.form-field-description.margin-block-end` is gewijzigd van `0px` naar `basis.space.block.lg`.
+  - Waarde van token `utrecht.form-field-error-message.margin-block-end` is gewijzigd van `0px` naar `basis.space.block.lg`.
+
+  De description van de volgende tokens zijn verwijderd:
+
+  - `utrecht.form-field-description.margin-block-end`
+  - `utrecht.form-field-description.margin-block-start`
+  - `utrecht.form-field-error-message.margin-block-end`
+  - `utrecht.form-field-error-message.margin-block-start`
+
+  Technische verbeteringen
+
+  Volgorde van token `utrecht.form-field-error-message.column-gap` is aangepast naar de juiste positie geplaatst.
+
+### Minor Changes
+
+- f1a6d87: De volgende tokens zijn toegevoegd aan Password Input component:
+
+  - `ams.password-input.background-color`
+  - `ams.password-input.border-color`
+  - `ams.password-input.border-style`
+  - `ams.password-input.border-width`
+  - `ams.password-input.color`
+  - `ams.password-input.font-family`
+  - `ams.password-input.font-size`
+  - `ams.password-input.font-weight`
+  - `ams.password-input.line-height`
+  - `ams.password-input.outline-offset`
+  - `ams.password-input.padding-block`
+  - `ams.password-input.padding-inline`
+  - `ams.password-input.placeholder.color`
+  - `ams.password-input.disabled.color`
+  - `ams.password-input.disabled.cursor`
+  - `ams.password-input.hover.box-shadow`
+  - `ams.password-input.invalid.border-color`
+  - `ams.password-input.invalid.hover.border-color`
+  - `ams.password-input.invalid.hover.box-shadow`
+
+- 7745317: De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van common token `basis.text.font-size.2xl` is gewijzigd van `2rem` naar `1.75rem`.
+  - Waarde van common token `basis.text.font-size.3xl` is gewijzigd van `2.5rem` naar `2rem`.
+  - Waarde van common token `basis.text.font-size.4xl` is gewijzigd van `3rem` naar `2.5rem`.
+  - Waarde van common token `basis.text.line-height.4xl` is gewijzigd van `110%` naar `125%`.
+  - Waarde van common token `basis.size.icon.2xl` is gewijzigd van `2.5rem` naar `2rem`.
+  - Waarde van common token `basis.size.icon.3xl` is gewijzigd van `3rem` naar `2.5rem`.
+
+  Controleer of deze wijzigingen ook wenselijk zijn voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
+- be0ba7c: De waarde van de volgende tokens zijn gewijzigd:
+
+  - Waarde van token `ams.date-input.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.form-control.hover.border-color} type: innerShadow}`.
+  - Waarde van token `ams.date-input.invalid.hover.box-shadow` is gewijzigd van `None` naar `{x: 0 y: 0 blur: 0 spread: {basis.form-control.hover.border-width} color: {basis.color.negative.border-hover} type: innerShadow}`.
+
 ## 8.0.0
 
 ### Major Changes

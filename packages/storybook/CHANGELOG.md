@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/storybook
 
+## 2.0.0
+
+### Major Changes
+
+- 2560b78: New theme based on NL Design System Start thema
+
 ## 1.1.0
 
 ### Minor Changes
