@@ -1,4 +1,4 @@
-# @nl-design-system-unstable/ma-design-tokens
+# @nl-design-system-community/ma-design-tokens
 
 ## 4.0.0
 
