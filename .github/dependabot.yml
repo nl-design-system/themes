@@ -5,6 +5,11 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    groups:
+      github-actions:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
     reviewers:
       - "nl-design-system/kernteam-dependabot"
   - package-ecosystem: "npm"
