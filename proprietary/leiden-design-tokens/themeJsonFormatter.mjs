@@ -1,7 +1,44 @@
 import fs from 'fs';
 import path from 'path';
 
-const themeRoot = path.resolve(process.cwd(), 'proprietary/leiden-design-tokens');
+const themeRootCandidates = [
+  process.cwd(),
+  path.resolve(process.cwd(), 'proprietary/leiden-design-tokens'),
+  path.resolve(process.cwd(), 'themes/proprietary/leiden-design-tokens'),
+];
+
+const themeRoot =
+  themeRootCandidates.find((candidate) => fs.existsSync(path.join(candidate, 'src', 'config.json'))) ||
+  path.resolve(process.cwd(), 'proprietary/leiden-design-tokens');
+
+function getObjectAtPath(source, pathParts) {
+  let current = source;
+
+  for (const part of pathParts) {
+    if (!current || typeof current !== 'object' || !(part in current)) {
+      return undefined;
+    }
+    current = current[part];
+  }
+
+  return current;
+}
+
+function findFontSizeTokens(tokens) {
+  const candidates = [
+    ['common', 'basis', 'text', 'font-size'],
+    ['basis', 'text', 'font-size'],
+  ];
+
+  for (const candidatePath of candidates) {
+    const candidate = getObjectAtPath(tokens, candidatePath);
+    if (candidate && typeof candidate === 'object' && Object.keys(candidate).length > 0) {
+      return candidate;
+    }
+  }
+
+  return undefined;
+}
 
 function readJsonSafe(filePath, fallback = {}) {
   try {
@@ -23,7 +60,7 @@ function readJsonSafe(filePath, fallback = {}) {
 function loadJsonDirectory(dirPath, fallback = {}) {
   try {
     const files = fs.readdirSync(dirPath);
-    const jsonFiles = files.filter((file) => file.endsWith('.json'));
+    const jsonFiles = files.filter((file) => file.endsWith('.json')).sort();
 
     if (jsonFiles.length === 0) {
       return fallback;
@@ -38,6 +75,7 @@ function loadJsonDirectory(dirPath, fallback = {}) {
     }, {});
 
     console.log(`✓ Loaded ${jsonFiles.length} JSON file(s) from ${path.basename(dirPath)}/`);
+    console.log(`  Files: ${jsonFiles.join(', ')}`);
     return merged;
   } catch (e) {
     if (e.code !== 'ENOENT') {
@@ -196,10 +234,11 @@ export default function themeJsonFormatter({ dictionary }) {
   }
 
   // Genereer ook alle font-sizes uit de basis tokens (optioneel, afhankelijk van of je die in je theme.json wilt hebben)
-  if (!tokens['basis'] && !tokens['basis'].text['font-size']) {
+  const fontSizeTokens = findFontSizeTokens(tokens);
+  if (!fontSizeTokens) {
     console.log('No font sizes found in tokens, skipping typography.fontSizes generation');
   } else {
-    const fontSizes = Object.entries(tokens['basis'].text['font-size']).map(([key, value]) => ({
+    const fontSizes = Object.entries(fontSizeTokens).map(([key, value]) => ({
       name: key.charAt(0).toUpperCase() + key.slice(1),
       slug: key,
       size: value.$value,
