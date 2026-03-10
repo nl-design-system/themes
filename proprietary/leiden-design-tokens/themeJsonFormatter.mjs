@@ -169,6 +169,9 @@ export default function themeJsonFormatter({ dictionary }) {
 
   console.log('\n=== Building WordPress theme.json ===');
   console.log('Token structure keys:', Object.keys(tokens).slice(0, 10));
+  console.log('Using prefix:', prefix);
+  console.log('WordPress source directory:', wpDir);
+  console.log('---');
 
   // 1. Laad base configuratie (schema, version, templates)
   const base = readJsonSafe(path.join(wpDir, 'base.json'), {
@@ -190,6 +193,20 @@ export default function themeJsonFormatter({ dictionary }) {
     // Dynamische kleuren eerst, dan eventuele handmatige entries
     settings.color.palette = [...colorPalette, ...(settings.color.palette || [])];
     console.log(`✓ Added ${colorPalette.length} colors to palette`);
+  }
+
+  // Genereer ook alle font-sizes uit de basis tokens (optioneel, afhankelijk van of je die in je theme.json wilt hebben)
+  if (!tokens['basis'] && !tokens['basis'].text['font-size']) {
+    console.log('No font sizes found in tokens, skipping typography.fontSizes generation');
+  } else {
+    const fontSizes = Object.entries(tokens['basis'].text['font-size']).map(([key, value]) => ({
+      name: key.charAt(0).toUpperCase() + key.slice(1),
+      slug: key,
+      size: value.$value,
+    }));
+    settings.typography = settings.typography || {};
+    settings.typography.fontSizes = fontSizes;
+    console.log(`✓ Added ${fontSizes.length} font sizes to typography settings`);
   }
 
   // 4. Laad root styles
