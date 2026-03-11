@@ -248,6 +248,8 @@ export default function themeJsonFormatter({ dictionary }) {
     console.log(`✓ Added ${fontSizes.length} font sizes to typography settings`);
   }
 
+  // TODO: Genereer fontFamilies op basis van prefix tokens als die er zijn, vergelijkbaar met color palette
+
   // 4. Laad root styles
   const stylesDir = path.join(wpDir, 'styles');
   const rootStyles = loadJsonDirectory(stylesDir);
