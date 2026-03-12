@@ -137,12 +137,6 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     render: () => <File name="Afbeelding.png" href="#" size="123 KB" />,
   },
   // {
-  //   storyId: 'denhaag-process-steps--default',
-  //   detectTokens: {
-  //     anyOf: ['denhaag.process-steps.step-marker.background-color', 'denhaag.process-steps.step-marker.color'],
-  //   }
-  // },
-  // {
   //   storyId: 'react-denhaag-avatar--default',
   //   component: 'denhaag-avatar',
   //   group: STORY_GROUPS.AVATAR,
