@@ -17,9 +17,6 @@ export default meta;
 // Chromatic has a limit of 25000 pixels per story, so we need to split them
 // into multiple stories.
 
-// TODO: remove, temp kept for UI Test
-export const Components: Story = { parameters: { theme: `${config.prefix}-theme` } };
-
 export const ComponentsPage1: Story = {
   name: 'Visual regression test (component 1 - 50)',
   args: {
