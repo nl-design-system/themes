@@ -6,16 +6,12 @@ import config from "../src/config.json";
 
 <Meta title="Mooi & Anders/Color" />
 
-# Kleuren
+# Color
 
-## Vind een kleur
+## Find a color
 
-<ColorSearch tokens={{ ...tokens["basis"]["color"], ...tokens[config.prefix]["color"] }} />
+<ColorSearch tokens={tokens["basis"]["color"]} />
 
-## Huisstijl kleurenpalet
+## Color palette
 
-Deze kleuren vormen de brand-laag van de design tokens en worden gebruikt door de basis tokens in de common-laag.
-
-**Tip** Door de componenten niet direct aan deze tokens de koppelen blijft het thema makkelijker te onderhouden.
-
-<ColorTable tokens={tokens[config.prefix]["color"]} />
+<ColorTable tokens={tokens["basis"]["color"]} />
