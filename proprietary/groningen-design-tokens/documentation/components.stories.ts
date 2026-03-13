@@ -1,7 +1,8 @@
 import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/ComponentStories';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import config from '../src/config.json';
-import tokens from '../dist/list.json';
+// import tokens from '../dist/list.json'; // TODO: temp the below hardcoded, so we can see a good preview in the huge PR where Groningen updated their format, and their huisstijl
+import tokens from './list.json';
 
 const meta = {
   title: 'Groningen',
