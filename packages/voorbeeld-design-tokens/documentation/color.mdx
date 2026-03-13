@@ -4,6 +4,10 @@ import { ColorSearch } from "@nl-design-system-unstable/theme-toolkit/src/ColorS
 import { ColorTable } from "@nl-design-system-unstable/theme-toolkit/src/ColorTable";
 import config from "../src/config.json";
 
+{console.log("tokens", tokens)}
+
+{console.log("use", { ...tokens["basis"]["color"], ...tokens[config.prefix]["color"] })}
+
 <Meta title="Voorbeeld Thema/Color" />
 
 # Color
