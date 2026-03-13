@@ -40,7 +40,7 @@ const builtinThemes = [
   {
     className: 'groningen-theme',
     title: 'Gemeente Groningen',
-    href: 'https://unpkg.com/@nl-design-system-unstable/groningen-design-tokens/dist/index.css',
+    href: 'https://unpkg.com/@nl-design-system-unstable/groningen-design-tokens/dist/theme.css',
     package: '@nl-design-system-unstable/groningen-design-tokens',
   },
   {
