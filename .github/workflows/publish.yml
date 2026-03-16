@@ -130,7 +130,7 @@ jobs:
       - name: Check the release
         run: pnpm run lint-release
 
-      - name: Publish to GitHub repository
+      - name: Publish to npm Registry
         uses: changesets/action@6a0a831ff30acef54f2c6aa1cbbc1096b066edaf # v1.7.0
         id: changeset
         env:
