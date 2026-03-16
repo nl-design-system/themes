@@ -118,7 +118,14 @@ export const ComponentStories = ({
   const tokensMap = arrayToMap(tokens || []);
 
   return (
-    <div>
+    <div
+      style={{
+        // Do not exceed the limit for screenshots in Chromatic
+        maxInlineSize: '2500px',
+        maxBlockSize: '20000px',
+        overflowBlock: 'hidden',
+      }}
+    >
       {Object.entries(groupedStories).map(([group, stories]) => {
         const isGrouped = group !== UNGROUPED && stories.length > 1;
         return (
