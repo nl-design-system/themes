@@ -27,10 +27,10 @@ jobs:
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
       - name: Install pnpm package manager
-        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: .nvmrc
 
@@ -52,14 +52,14 @@ jobs:
         run: pnpm run --if-present test
 
       - name: Upload coverage-report artifact
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: coverage-report
           path: "**/coverage/"
           retention-days: 1
 
       - name: Publish to Chromatic
-        uses: chromaui/action@07791f8243f4cb2698bf4d00426baf4b2d1cb7e0 # v13.3.5
+        uses: chromaui/action@0794e6939fe40ce46a88963f818092afc427da5b # v15.3.0
         if: |
           github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
@@ -113,10 +113,10 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Install pnpm package manager
-        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: .nvmrc
 
