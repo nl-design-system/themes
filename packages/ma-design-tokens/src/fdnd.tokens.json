@@ -54,6 +54,12 @@
           "$type": "fontSizes",
           "$value": "1,25rem"
         }
+      },
+      "fontweight": {
+        "bold": {
+          "$type": "fontWeights",
+          "$value": "Bold"
+        }
       }
     }
   },
@@ -77,7 +83,7 @@
           },
           "bold": {
             "$type": "fontWeights",
-            "$value": "bold"
+            "$value": "{fdnd.fontweight.bold}"
           }
         },
         "font-size": {
@@ -2412,15 +2418,15 @@
       "focus": {
         "background-color": {
           "$type": "color",
-          "$value": "#ffdd00"
+          "$value": "{fdnd.color.yelow}"
         },
         "color": {
           "$type": "color",
-          "$value": "#0b0c0c"
+          "$value": "{fdnd.color.blue}"
         },
         "outline-color": {
           "$type": "color",
-          "$value": "#0b0c0c"
+          "$value": "{fdnd.color.blue}"
         },
         "inverse": {
           "outline-color": {
