@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ActionSingle } from '@gemeente-denhaag/action';
 import '@gemeente-denhaag/action/index.css';
+import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 
 const meta = {
   id: 'denhaag-task-navigation',
@@ -25,10 +26,16 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 export const VoorbeeldTheme: Story = {
-  name: 'Voorbeeld theme',
+  name: 'Voorbeeld theme, met status badge',
   parameters: { theme: 'voorbeeld-theme' },
+  args: {
+    details: <StatusBadge status="warning">Actie nodig</StatusBadge>,
+  },
 };
 export const DenHaagNaamTheme: Story = {
-  name: 'Den Haag theme',
+  name: 'Den Haag theme, met status badge',
   parameters: { theme: 'denhaag-theme' },
+  args: {
+    details: <StatusBadge status="warning">Actie nodig</StatusBadge>,
+  },
 };
