@@ -26,10 +26,10 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 export const VoorbeeldTheme: Story = {
-  name: 'Voorbeeld theme, met status badge',
+  name: 'Voorbeeld theme',
   parameters: { theme: 'voorbeeld-theme' },
 };
 export const DenHaagNaamTheme: Story = {
-  name: 'Den Haag theme, met status badge',
+  name: 'Den Haag theme',
   parameters: { theme: 'denhaag-theme' },
 };
