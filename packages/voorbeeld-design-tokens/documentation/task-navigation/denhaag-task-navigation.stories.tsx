@@ -11,7 +11,7 @@ const meta = {
   args: {
     children: 'Wij hebben documenten van u nodig',
     link: '#',
-    details: '19 februari 2026',
+    details: <StatusBadge status="warning">Actie nodig</StatusBadge>,
   },
   decorators: [
     (Story) => (
@@ -28,14 +28,8 @@ export default meta;
 export const VoorbeeldTheme: Story = {
   name: 'Voorbeeld theme, met status badge',
   parameters: { theme: 'voorbeeld-theme' },
-  args: {
-    details: <StatusBadge status="warning">Actie nodig</StatusBadge>,
-  },
 };
 export const DenHaagNaamTheme: Story = {
   name: 'Den Haag theme, met status badge',
   parameters: { theme: 'denhaag-theme' },
-  args: {
-    details: <StatusBadge status="warning">Actie nodig</StatusBadge>,
-  },
 };
