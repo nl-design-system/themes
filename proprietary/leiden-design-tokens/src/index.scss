@@ -100,7 +100,16 @@
   --utrecht-textbox-read-only-border-color: var(--basis-color-disabled-border-subtle);
 }
 
-
+/*
+ * CUSTOM OVERRIDE
+ * Reason: Set max inline size for the datepicker textbox to prevent it from being too wide; missing feature in NLDS or OF.
+ * Related Component: openforms-datepicker-textbox / utrecht-textbox
+ * Safe to remove when: added as a token in our set
+ * Last verified: 2026-03-25 (OF 3.4.6)
+ */
+.openforms-datepicker-textbox {
+  max-inline-size: 25rem;
+}
 
 /*
  * CUSTOM OVERRIDE
