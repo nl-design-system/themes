@@ -981,6 +981,18 @@ fieldset.openforms-fieldset {
 
 /*
  * CUSTOM OVERRIDE
+ * Reason: No option to style the character count component; missing feature in NLDS or OF.
+ * Related Component: openforms-charcount
+ * Safe to remove when: OF or NLDS includes tokens for the character count component.
+ * Last verified: 2026-03-25 (OF 3.4.6)
+ */
+.openforms-charcount {
+    padding-block-start: 0;
+    line-height: normal;
+}
+
+/*
+ * CUSTOM OVERRIDE
  * Reason: Headings should be bold; missing feature in NLDS or OF.
  * Related Component: openforms-progress-indicator openforms-caption
  * Safe to remove when: OF or NLDS includes a font-weight token for the h2 inside the progress indicator component.
