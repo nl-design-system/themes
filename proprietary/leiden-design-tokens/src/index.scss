@@ -201,7 +201,7 @@ footer.utrecht-page-footer {
   * Reason: No option to set font-size for the Open Forms titles when there is a subtitle; missing feature in NLDS or OF.
   * Related Component: openforms-title
   * Safe to remove when: OF includes a font-size token for the title component.
-  * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
+  * Last verified: 2026-03-25 (OF 3.4.6)
   */
 .openforms-card > .openforms-card__header > h1.openforms-title {
   font-family: var(--basis-text-font-family-default);
@@ -226,18 +226,30 @@ footer.utrecht-page-footer {
     :has(form > div.openforms-summary),
     :has(.openforms-loading-indicator)
   )header.openforms-card__header:not(:has(.utrecht-heading-2.openforms-subtitle)) {
-  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
-  padding-block-end: var(--basis-space-block-3xl);
-  margin-block-end: var(--basis-space-block-4xl);
+    padding-block-end: var(--basis-space-block-3xl);
+    border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    margin-block-end: var(--basis-space-block-4xl);
 }
 
 .openforms-card:has(form .openforms-form-field-container > div):not(
     :has(form .openforms-form-field-container > div fieldset.openforms-fieldset)
   )
   header.openforms-card__header:has(.utrecht-heading-2.openforms-subtitle) {
-  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
-  padding-block-end: var(--basis-space-block-3xl);
-  margin-block-end: var(--basis-space-block-3xl);
+    padding-block-end: var(--basis-space-block-3xl);
+    border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    margin-block-end: var(--basis-space-block-3xl);
+  }
+
+form[data-testid="start-form"] {
+    padding-block-start: var(--basis-space-block-3xl);
+    border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    margin-block-start: var(--basis-space-block-4xl);
+}
+
+.openforms-app__body > .openforms-card:has(form[data-testid="start-form"]) header h1 {
+    padding-block-end: var(--basis-space-block-3xl);
+    border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+    margin-block-end: var(--basis-space-block-3xl);
 }
 
 /*
