@@ -43,6 +43,21 @@
    * Last verified: 2026-03-03 (OF 3.4.4)
    */
   --of-uploaded-file-errors-border-color: var(--basis-color-negative-color-default);
+
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Set max inline size for fields to prevent them from being too wide.
+   * Related Component: fields textbox selects
+   * Safe to remove when: added as a token in our set
+   * Last verified: 2026-03-25 (OF 3.4.6)
+   */
+  --of-multifield-field-max-inline-size: 25rem;
+  --utrecht-form-control-max-inline-size: 25rem;
+  --utrecht-textarea-max-inline-size: 25rem;
+  --utrecht-textbox-max-inline-size: 25rem;
+  --_utrecht-textbox-max-inline-size: 25rem;
+  --utrecht-select-max-inline-size: 25rem;
+  
 }
 
 /*
@@ -1121,7 +1136,7 @@ fieldset.openforms-fieldset {
  */
 .utrecht-form-fieldset .utrecht-form-fieldset__legend:has(.utrecht-form-label--openforms),
 .utrecht-form-field__label {
-  --utrecht-form-field-label-margin-block-end: var(--basis-space-block-sm);
+  --utrecht-form-field-label-margin-block-end: var(--basis-space-block-md);
 }
 
 /*
