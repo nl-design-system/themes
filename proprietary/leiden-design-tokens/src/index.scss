@@ -79,7 +79,18 @@
   --of-editgrid-item-heading-line-height: var(--basis-text-line-height-lg);
   --of-editgrid-item-heading-margin-block-end: var(--basis-space-block-md);
   
+  /*
+   * CUSTOM OVERRIDE
+   * Reason: Set padding for the select value in the multi select to match our design.
+   * Related Component: rs-value rs-value--multi sdk-react-select-x2yrli-multiValue
+   * Safe to remove when: added as a token in our set
+   * Last verified: 2026-03-25 (OF 3.4.6)
+   */
+  --of-select-value-multi-padding-inline-start: 8px;
+  --of-select-value-multi-padding-inline-end: 8px;
 }
+
+
 
 /*
  * CUSTOM OVERRIDE
