@@ -481,6 +481,57 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 
 /*
  * CUSTOM OVERRIDE
+ * Reason: No option to style the uploaded file; missing feature in NLDS or OF.
+ * Related Component: openforms-uploaded-file
+ * Safe to remove when: OF includes tokens for the uploaded file component.
+ * Last verified: 2026-03-25 (OF 3.4.6)
+ */
+.openforms-uploaded-file {
+    border-width: var(--basis-border-width-md);
+    border-color: var(--basis-color-accent-2-inverse-border-subtle);
+    border-radius: var(--basis-border-radius-md);
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-areas: "name metadata state";
+}
+
+.openforms-uploaded-file__name, .openforms-uploaded-file__metadata {
+    align-content: center;
+}
+
+.openforms-uploaded-file .openforms-uploaded-file__state .utrecht-button--danger > span {
+    color: var(--basis-color-accent-2-color-default);
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the uploaded file errors; missing feature in NLDS or OF.
+ * Related Component: openforms-uploaded-file--errors
+ * Safe to remove when: OF includes tokens for the uploaded file error state.
+ * Last verified: 2026-03-25 (OF 3.4.6)
+ */
+.openforms-uploaded-file--errors {
+    grid-template-areas:
+        "name metadata state"
+        "desc desc desc";
+    background-color: var(--basis-color-negative-bg-default);
+    border-color: var(--basis-color-negative-color-default)
+}
+.openforms-uploaded-file--errors .openforms-uploaded-file__name a, .openforms-uploaded-file--errors .openforms-uploaded-file__metadata {
+    color: var(--basis-color-negative-color-default);
+    text-decoration-color: currentColor;
+}
+.openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger:hover {
+    background: var(--basis-color-negative-bg-hover);
+}
+.openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger > span {
+    color: var(--basis-color-accent-1-inverse-bg-default);
+}
+.openforms-uploaded-file__errors {
+    grid-area: desc;
+}
+
+/*
+ * CUSTOM OVERRIDE
  * Reason: Drop zone invalid state colors to match our design; missing feature in NLDS or OF.
  * Related Component: file-upload-drop-zone
  * Safe to remove when: OF includes tokens for the drop zone invalid state.
