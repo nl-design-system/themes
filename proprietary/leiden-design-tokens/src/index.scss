@@ -1182,8 +1182,13 @@ fieldset.openforms-fieldset {
 .utrecht-select.utrecht-select--openforms .rs-value--multi {
   background-color: var(--basis-form-control-accent-color);
   border-radius: var(--basis-form-control-border-radius);
-  font-size: var(--basis-border-radius-sm);
+  font-size: var(--basis-text-font-size-sm);
   line-height: var(--basis-text-line-height-sm);
+}
+
+.utrecht-select.utrecht-select--openforms .rs-value--multi :first-child:after {
+    content: "";
+    margin-inline-start: 0px;
 }
 
 /* 
