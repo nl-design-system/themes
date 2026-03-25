@@ -1716,8 +1716,8 @@ input.is-invalid,
 
 .utrecht-form-field-description.utrecht-form-field-description--openforms-errors .form-text.error::before,
 .utrecht-form-field.utrecht-form-field--file .utrecht-form-field-description.bg-error::before,
-.utrecht-form-field--invalid
-  .utrecht-form-field-description--invalid.utrecht-form-field-description--openforms-errors::before {
+.utrecht-form-field--invalid .utrecht-form-field-description--invalid.utrecht-form-field-description--openforms-errors::before,
+.utrecht-form-field--invalid .openforms-charcount::before {
   content: "";
   font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: var(--fa-style, 900);
