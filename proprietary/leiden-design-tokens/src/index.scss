@@ -318,6 +318,25 @@ form[data-testid="start-form"] {
     margin-block-end: var(--basis-space-block-3xl);
 }
 
+.openforms-app__body > .openforms-card:has(> .openforms-card__body > .openforms-loading-indicator) header h1 {
+  padding-block-end: var(--basis-space-block-3xl);
+  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+  margin-block-end: var(--basis-space-block-3xl);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Change loading indicator colors and alignment to match our design; missing feature in NLDS or OF.
+  * Related Component: openforms-loading-indicator
+  * Safe to remove when: OF includes tokens for alignment.
+  * Last verified: 2026-03-26 (OF 3.4.6)
+  */
+.openforms-loading-indicator.openforms-loading-indicator--color-normal {
+    --_of-loading-indicator-bg-color: var(--basis-color-accent-2-color-default);
+    --_of-loading-indicator-fg-color: var(--basis-color-accent-3-inverse-color-default);
+    justify-content: flex-start;
+}
+
 /*
   * CUSTOM OVERRIDE
   * Reason: Add gap between input and suffix to match our design; missing feature in NLDS or OF.
