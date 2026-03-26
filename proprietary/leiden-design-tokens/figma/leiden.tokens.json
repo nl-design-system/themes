@@ -2672,7 +2672,7 @@
         },
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
+          "$value": "{basis.color.default-inverse.color-default}"
         },
         "border-color": {
           "$type": "color",
@@ -5581,6 +5581,18 @@
           }
         }
       }
+    },
+    "leiden": {
+      "calendar": {
+        "table": {
+          "days-item-day": {
+            "decoration-line": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            }
+          }
+        }
+      }
     }
   },
   "components/card-as-link": {},
@@ -7218,11 +7230,11 @@
           },
           "border-inline-start-width": {
             "$type": "dimension",
-            "$value": "{basis.border-width.md}"
+            "$value": "0px"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
+            "$value": "0px"
           }
         },
         "legend": {
@@ -12858,6 +12870,12 @@
           "color": {
             "$type": "color",
             "$value": "{basis.form-control.read-only.color}"
+          }
+        },
+        "counter": {
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
           }
         }
       }
