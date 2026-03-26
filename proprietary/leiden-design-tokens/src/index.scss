@@ -1497,6 +1497,17 @@ fieldset.openforms-fieldset {
 }
 
 /*
+  * CUSTOM OVERRIDE
+  * Reason: No option to style the card min-height; missing feature in NLDS or OF.
+  * Related Component: children openforms-card of openforms-app__body
+  * Safe to remove when: OF or NLDS includes a token for the component or makes main always stretch between header and footer.
+  * Last verified: 2026-03-26 (OF 3.4.6)
+  */
+.openforms-app__body > .openforms-card {
+    min-height: 600px;
+}
+
+/*
  * CUSTOM OVERRIDE
  * Reason: No option to style the card padding for different screen sizes; missing feature in NLDS or OF.
  * Related Component: openforms-card
