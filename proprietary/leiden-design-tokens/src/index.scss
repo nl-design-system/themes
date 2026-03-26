@@ -1941,6 +1941,17 @@ input.is-invalid,
     margin-block-end: 0;
 }
 
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling checkboxes in openforms to match design 
+  * Related Component: openforms-form-field--checkbox
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-03-26 (OF 3.4.6)
+  */
+.utrecht-form-field--checkbox .utrecht-custom-checkbox {
+  background-color: var(--basis-form-control-background-color)
+}
+
 /* 
  * CUSTOM OVERRIDE
  * Reason: Adding external link icon to footer links that open in a new tab
