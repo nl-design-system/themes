@@ -20,7 +20,7 @@
    * CUSTOM OVERRIDE
    * Reason: Reset to 100% to fix columns issue.
    * Related Component: fields
-   * Safe to remove when: design token is changed in our set.    
+   * Safe to remove when: design token is changed in our set.
    * Last verified: 2026-03-03 (OF 3.3.4)
    */
   --basis-form-control-max-inline-size: 100%;
@@ -78,7 +78,7 @@
   --of-editgrid-item-heading-font-size: var(--basis-text-font-size-lg);
   --of-editgrid-item-heading-line-height: var(--basis-text-line-height-lg);
   --of-editgrid-item-heading-margin-block-end: var(--basis-space-block-md);
-  
+
   /*
    * CUSTOM OVERRIDE
    * Reason: Set padding for the select value in the multi select to match our design.
@@ -116,7 +116,7 @@
  * Reason: Skip to link is not styled; missing feature in NLDS or OF.
  * Related Component: skiplink / utrecht-link
  * Safe to remove when: OF includes centered left-aligned logo slot OR alignment token.
- * Last verified: 2025-11-19 (OF 3.3.4)     
+ * Last verified: 2025-11-19 (OF 3.3.4)
  */
 a.skiplink.utrecht-link {
   margin-block-start: var(--basis-space-block-lg);
@@ -292,30 +292,30 @@ footer.utrecht-page-footer {
     :has(form > div.openforms-summary),
     :has(.openforms-loading-indicator)
   )header.openforms-card__header:not(:has(.utrecht-heading-2.openforms-subtitle)) {
-    padding-block-end: var(--basis-space-block-3xl);
-    border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
-    margin-block-end: var(--basis-space-block-4xl);
+  padding-block-end: var(--basis-space-block-3xl);
+  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+  margin-block-end: var(--basis-space-block-4xl);
 }
 
 .openforms-card:has(form .openforms-form-field-container > div):not(
     :has(form .openforms-form-field-container > div fieldset.openforms-fieldset)
   )
   header.openforms-card__header:has(.utrecht-heading-2.openforms-subtitle) {
-    padding-block-end: var(--basis-space-block-3xl);
-    border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
-    margin-block-end: var(--basis-space-block-3xl);
-  }
+  padding-block-end: var(--basis-space-block-3xl);
+  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+  margin-block-end: var(--basis-space-block-3xl);
+}
 
 form[data-testid="start-form"] {
-    padding-block-start: var(--basis-space-block-3xl);
-    border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
-    margin-block-start: var(--basis-space-block-4xl);
+  padding-block-start: var(--basis-space-block-3xl);
+  border-top: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+  margin-block-start: var(--basis-space-block-4xl);
 }
 
 .openforms-app__body > .openforms-card:has(form[data-testid="start-form"]) header h1 {
-    padding-block-end: var(--basis-space-block-3xl);
-    border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
-    margin-block-end: var(--basis-space-block-3xl);
+  padding-block-end: var(--basis-space-block-3xl);
+  border-bottom: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+  margin-block-end: var(--basis-space-block-3xl);
 }
 
 .openforms-app__body > .openforms-card:has(> .openforms-card__body > .openforms-loading-indicator) header h1 {
@@ -332,9 +332,10 @@ form[data-testid="start-form"] {
   * Last verified: 2026-03-26 (OF 3.4.6)
   */
 .openforms-loading-indicator.openforms-loading-indicator--color-normal {
-    --_of-loading-indicator-bg-color: var(--basis-color-accent-2-color-default);
-    --_of-loading-indicator-fg-color: var(--basis-color-accent-3-inverse-color-default);
-    justify-content: flex-start;
+  --_of-loading-indicator-bg-color: var(--basis-color-accent-2-color-default);
+  --_of-loading-indicator-fg-color: var(--basis-color-accent-3-inverse-color-default);
+
+  justify-content: flex-start;
 }
 
 /*
@@ -441,7 +442,7 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
   color: var(--basis-color-action-2-color-hover);
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Change tooltip size
  * Related Component: utrecht-form-field__label--openforms-tooltip
@@ -465,7 +466,7 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
   line-height: 1;
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: No option to style the icons in de button group form navigation; missing feature in NLDS or OF.
  * Related Component: openforms-form-navigation
@@ -508,7 +509,7 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 }
 
 .openforms-file-upload .openforms-upload-input:hover {
-    background: var(--basis-color-default-bg-hover);
+  background: var(--basis-color-default-bg-hover);
 }
 
 /*
@@ -519,19 +520,20 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
  * Last verified: 2026-03-25 (OF 3.4.6)
  */
 .openforms-uploaded-file {
-    border-width: var(--basis-border-width-md);
-    border-color: var(--basis-color-accent-2-inverse-border-subtle);
-    border-radius: var(--basis-border-radius-md);
-    grid-template-columns: min-content 1fr min-content;
-    grid-template-areas: "name metadata state";
+  border-width: var(--basis-border-width-md);
+  border-color: var(--basis-color-accent-2-inverse-border-subtle);
+  border-radius: var(--basis-border-radius-md);
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-areas: "name metadata state";
 }
 
-.openforms-uploaded-file__name, .openforms-uploaded-file__metadata {
-    align-content: center;
+.openforms-uploaded-file__name,
+.openforms-uploaded-file__metadata {
+  align-content: center;
 }
 
 .openforms-uploaded-file .openforms-uploaded-file__state .utrecht-button--danger > span {
-    color: var(--basis-color-accent-2-color-default);
+  color: var(--basis-color-accent-2-color-default);
 }
 
 /*
@@ -542,24 +544,25 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
  * Last verified: 2026-03-25 (OF 3.4.6)
  */
 .openforms-uploaded-file--errors {
-    grid-template-areas:
-        "name metadata state"
-        "desc desc desc";
-    background-color: var(--basis-color-negative-bg-default);
-    border-color: var(--basis-color-negative-color-default)
+  grid-template-areas:
+    "name metadata state"
+    "desc desc desc";
+  background-color: var(--basis-color-negative-bg-default);
+  border-color: var(--basis-color-negative-color-default);
 }
-.openforms-uploaded-file--errors .openforms-uploaded-file__name a, .openforms-uploaded-file--errors .openforms-uploaded-file__metadata {
-    color: var(--basis-color-negative-color-default);
-    text-decoration-color: currentColor;
+.openforms-uploaded-file--errors .openforms-uploaded-file__name a,
+.openforms-uploaded-file--errors .openforms-uploaded-file__metadata {
+  color: var(--basis-color-negative-color-default);
+  text-decoration-color: currentcolor;
 }
 .openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger:hover {
-    background: var(--basis-color-negative-bg-hover);
+  background: var(--basis-color-negative-bg-hover);
 }
 .openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger > span {
-    color: var(--basis-color-accent-1-inverse-bg-default);
+  color: var(--basis-color-accent-1-inverse-bg-default);
 }
 .openforms-uploaded-file__errors {
-    grid-area: desc;
+  grid-area: desc;
 }
 
 /*
@@ -1057,8 +1060,8 @@ fieldset.openforms-fieldset {
 }
 
 .openforms-form-field-container > fieldset.openforms-fieldset:first-child legend.openforms-fieldset__legend {
-    border-top: 0;
-    padding-block: 0;
+  border-top: 0;
+  padding-block: 0;
 }
 
 /*
@@ -1080,8 +1083,8 @@ fieldset.openforms-fieldset {
  * Last verified: 2026-03-25 (OF 3.4.6)
  */
 .openforms-charcount {
-    padding-block-start: 0;
-    line-height: normal;
+  padding-block-start: 0;
+  line-height: normal;
 }
 
 /*
@@ -1292,12 +1295,12 @@ fieldset.openforms-fieldset {
   column-gap: var(--basis-space-column-sm);
 }
 
-.utrecht-select.utrecht-select--openforms .rs-value--multi :first-child:after {
-    content: "";
-    margin-inline-start: 0px;
+.utrecht-select.utrecht-select--openforms .rs-value--multi :first-child::after {
+  content: "";
+  margin-inline-start: 0;
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Choices options in a selection field missing color on focus; missing feature in NLDS or OF.
  * Related Component: utrecht-select rs-menu__option
@@ -1309,7 +1312,7 @@ fieldset.openforms-fieldset {
   color: var(--basis-color-default-inverse-color-default);
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Datepicker is not styled; missing feature in NLDS or OF.
  * Related Component: flatpickr-calender
@@ -1474,7 +1477,7 @@ fieldset.openforms-fieldset {
   font-weight: 400;
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Radio button checked icon size is too big; missing feature in NLDS or OF.
  * Related Component: utrecht-radio-button--html-input:checked
@@ -1504,7 +1507,7 @@ fieldset.openforms-fieldset {
   * Last verified: 2026-03-26 (OF 3.4.6)
   */
 .openforms-app__body > .openforms-card {
-    min-height: 600px;
+  min-height: 600px;
 }
 
 /*
@@ -1547,7 +1550,7 @@ fieldset.openforms-fieldset {
   }
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: No option to style the page footer; missing feature in NLDS or OF.
  * Related Component: utrecht-page-footer
@@ -1606,7 +1609,7 @@ fieldset.openforms-fieldset {
   }
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Increase max width of the input field for 'woonplaatsInwonerAanvragerPrefill' to 100%
  * Related Component: utrecht-textbox--openforms
@@ -1618,7 +1621,7 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
   max-inline-size: 100%;
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Styling the partners form field to match the design tokens
  * Related Component: openforms-form-field--partners
@@ -1656,7 +1659,7 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
   font-weight: 700;
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Styling the summary component to match the design tokens
  * Related Component: openforms-summary
@@ -1760,6 +1763,7 @@ input.utrecht-textbox--openforms[name="data\[woonplaatsInwonerAanvragerPrefill\]
   border: 0;
   padding-block-end: var(--basis-space-block-sm);
   padding-block-start: var(--basis-space-block-sm);
+
   // padding-inline-end: var(--basis-space-inline-sm);
   // padding-inline-start: var(--basis-space-inline-sm);
 }
@@ -1824,7 +1828,8 @@ input.is-invalid,
 
 .utrecht-form-field-description.utrecht-form-field-description--openforms-errors .form-text.error::before,
 .utrecht-form-field.utrecht-form-field--file .utrecht-form-field-description.bg-error::before,
-.utrecht-form-field--invalid .utrecht-form-field-description--invalid.utrecht-form-field-description--openforms-errors::before,
+.utrecht-form-field--invalid
+  .utrecht-form-field-description--invalid.utrecht-form-field-description--openforms-errors::before,
 .utrecht-form-field--invalid .openforms-charcount::before {
   content: "";
   font-family: "Font Awesome 6 Free", sans-serif;
@@ -1838,7 +1843,7 @@ input.is-invalid,
   display: inline-block;
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Styling the back to top link to match design
  * Related Component: openforms-backtotop-link
@@ -1938,21 +1943,21 @@ input.is-invalid,
   * Last verified: 2026-03-26 (OF 3.4.6)
   */
 .utrecht-form-field--checkbox .utrecht-form-field-description {
-    margin-block-end: 0;
+  margin-block-end: 0;
 }
 
 /*
   * CUSTOM OVERRIDE
-  * Reason: Styling checkboxes in openforms to match design 
+  * Reason: Styling checkboxes in openforms to match design
   * Related Component: openforms-form-field--checkbox
   * Safe to remove when: OF or NLDS includes tokens for the component
   * Last verified: 2026-03-26 (OF 3.4.6)
   */
 .utrecht-form-field--checkbox .utrecht-custom-checkbox {
-  background-color: var(--basis-form-control-background-color)
+  background-color: var(--basis-form-control-background-color);
 }
 
-/* 
+/*
  * CUSTOM OVERRIDE
  * Reason: Adding external link icon to footer links that open in a new tab
  * Related Component: utrecht-page-footer
