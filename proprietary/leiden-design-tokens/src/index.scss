@@ -538,35 +538,6 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 
 /*
  * CUSTOM OVERRIDE
- * Reason: No option to style the uploaded file errors; missing feature in NLDS or OF.
- * Related Component: openforms-uploaded-file--errors
- * Safe to remove when: OF includes tokens for the uploaded file error state.
- * Last verified: 2026-03-25 (OF 3.4.6)
- */
-.openforms-uploaded-file--errors {
-  grid-template-areas:
-    "name metadata state"
-    "desc desc desc";
-  background-color: var(--basis-color-negative-bg-default);
-  border-color: var(--basis-color-negative-color-default);
-}
-.openforms-uploaded-file--errors .openforms-uploaded-file__name a,
-.openforms-uploaded-file--errors .openforms-uploaded-file__metadata {
-  color: var(--basis-color-negative-color-default);
-  text-decoration-color: currentcolor;
-}
-.openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger:hover {
-  background: var(--basis-color-negative-bg-hover);
-}
-.openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger > span {
-  color: var(--basis-color-accent-1-inverse-bg-default);
-}
-.openforms-uploaded-file__errors {
-  grid-area: desc;
-}
-
-/*
- * CUSTOM OVERRIDE
  * Reason: Drop zone invalid state colors to match our design; missing feature in NLDS or OF.
  * Related Component: file-upload-drop-zone
  * Safe to remove when: OF includes tokens for the drop zone invalid state.
@@ -826,6 +797,35 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
   text-decoration-skip: none;
   text-decoration-skip-ink: none;
   color: var(--basis-color-default-inverse-color-document);
+}
+
+/*
+ * CUSTOM OVERRIDE
+ * Reason: No option to style the uploaded file errors; missing feature in NLDS or OF.
+ * Related Component: openforms-uploaded-file--errors
+ * Safe to remove when: OF includes tokens for the uploaded file error state.
+ * Last verified: 2026-03-25 (OF 3.4.6)
+ */
+.openforms-uploaded-file--errors {
+  grid-template-areas:
+    "name metadata state"
+    "desc desc desc";
+  background-color: var(--basis-color-negative-bg-default);
+  border-color: var(--basis-color-negative-color-default);
+}
+.openforms-uploaded-file--errors .openforms-uploaded-file__name a,
+.openforms-uploaded-file--errors .openforms-uploaded-file__metadata {
+  color: var(--basis-color-negative-color-default);
+  text-decoration-color: currentcolor;
+}
+.openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger:hover {
+  background: var(--basis-color-negative-bg-hover);
+}
+.openforms-uploaded-file--errors .openforms-uploaded-file__state .utrecht-button--danger > span {
+  color: var(--basis-color-accent-1-inverse-bg-default);
+}
+.openforms-uploaded-file__errors {
+  grid-area: desc;
 }
 
 /*
@@ -1920,23 +1920,6 @@ input.is-invalid,
 
 /*
   * CUSTOM OVERRIDE
-  * Reason: Styling checkboxes in openforms to match design
-  * Related Component: openforms-form-field--checkbox
-  * Safe to remove when: OF or NLDS includes tokens for the component
-  * Last verified: 2026-01-21 (OF 3.4.0-leiden.1)
-  */
-
-.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-form-label--checkbox {
-  padding-block-start: 0;
-  margin-block-end: 0;
-}
-.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-custom-checkbox,
-.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-checkbox--custom {
-  margin-block-start: 0;
-}
-
-/*
-  * CUSTOM OVERRIDE
   * Reason: Removing margin between checkbox and description in openforms to match design tokens
   * Related Component: openforms-form-field--checkbox
   * Safe to remove when: OF or NLDS includes tokens for the component
@@ -1955,6 +1938,23 @@ input.is-invalid,
   */
 .utrecht-form-field--checkbox .utrecht-custom-checkbox {
   background-color: var(--basis-form-control-background-color);
+}
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Styling checkboxes in openforms to match design
+  * Related Component: openforms-form-field--checkbox
+  * Safe to remove when: OF or NLDS includes tokens for the component
+  * Last verified: 2026-01-21 (OF 3.4.0-leiden.1)
+  */
+
+.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-form-label--checkbox {
+  padding-block-start: 0;
+  margin-block-end: 0;
+}
+.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-custom-checkbox,
+.utrecht-form-field.utrecht-form-field--openforms.utrecht-form-field--checkbox .utrecht-checkbox--custom {
+  margin-block-start: 0;
 }
 
 /*
