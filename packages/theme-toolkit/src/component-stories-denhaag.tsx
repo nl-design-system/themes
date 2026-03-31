@@ -4,8 +4,10 @@ import { ArchiveIcon, CheckCircleIcon, GridIcon, InboxIcon, UserIcon } from '@ge
 import { SideNavigation } from '@gemeente-denhaag/side-navigation';
 import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
-import '@gemeente-denhaag/card/index.css';
+import { ActionSingle } from '@gemeente-denhaag/action';
+import { File } from '@gemeente-denhaag/file';
 import { Status } from '@gemeente-denhaag/process-steps';
+import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 // eslint-disable-next-line no-unused-vars
 
 export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
@@ -117,12 +119,24 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Den Haag Case Card',
     render: () => <CaseCard title={'Aanvraag subsidie geluidsisolatie'} context={'17 oktober 2022'} href={'#'} />,
   },
-  // {
-  //   storyId: 'denhaag-process-steps--default',
-  //   detectTokens: {
-  //     anyOf: ['denhaag.process-steps.step-marker.background-color', 'denhaag.process-steps.step-marker.color'],
-  //   }
-  // },
+  {
+    storyId: 'react-denhaag-task-navigation--default',
+    component: 'denhaag-task-navigation',
+    group: STORY_GROUPS['TASK_NAVIGATION'],
+    name: 'Den Haag Task Navigation',
+    render: () => (
+      <ActionSingle link="#" details={<StatusBadge status="warning">Actie nodig</StatusBadge>}>
+        Wij hebben documenten van u nodig
+      </ActionSingle>
+    ),
+  },
+  {
+    storyId: 'react-denhaag-file--default',
+    component: 'denhaag-file',
+    group: STORY_GROUPS['FILE'],
+    name: 'Den Haag File',
+    render: () => <File name="Afbeelding.png" href="#" size="123 KB" />,
+  },
   // {
   //   storyId: 'react-denhaag-avatar--default',
   //   component: 'denhaag-avatar',
