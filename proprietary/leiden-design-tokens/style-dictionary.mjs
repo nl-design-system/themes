@@ -4,8 +4,6 @@ import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
 import { createConfig } from '../../style-dictionary-config.js';
 
-import themeJsonFormatter from './themeJsonFormatter.mjs';
-
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
   StyleDictionary.registerPreprocessor({
@@ -23,11 +21,6 @@ const build = async () => {
     preprocessor: colorSchemeDarkPreprocessor,
   });
 
-  StyleDictionary.registerFormat({
-    name: 'custom/themeJson',
-    format: themeJsonFormatter,
-  });
-
   register(StyleDictionary, {
     excludeParentKeys: true,
   });
@@ -43,31 +36,6 @@ const build = async () => {
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
-
-  // theme.json
-  let sdThemeJson = new StyleDictionary({
-    source: ['figma/**/leiden.tokens.json'],
-    preprocessors: ['color-scheme-default', 'tokens-studio', 'dtcg-delegate'],
-    platforms: {
-      themeJson: {
-        transformGroup: 'tokens-studio',
-        transforms: ['name/camel'],
-        buildPath: 'dist/',
-        files: [
-          {
-            destination: 'theme.json',
-            format: 'custom/themeJson',
-          },
-        ],
-      },
-    },
-    log: {
-      verbosity: 'verbose',
-    },
-  });
-
-  await sdThemeJson.cleanAllPlatforms();
-  await sdThemeJson.buildAllPlatforms();
 };
 
 build();
