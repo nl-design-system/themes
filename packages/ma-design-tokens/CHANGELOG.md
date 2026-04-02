@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 4.1.0
+
+### Minor Changes
+
+- d443ae5: - Waarde van basis.box-shadow.\* design tokens aangepast waardoor deze minder heftig en natuurlijker over komen.
+
 ## 4.0.0
 
 ### Major Changes

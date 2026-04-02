@@ -8112,10 +8112,6 @@
   "components/icon": {
     "utrecht": {
       "icon": {
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
         "inset-block-start": {
           "$type": "dimension",
           "$value": "0px"
@@ -13031,6 +13027,36 @@
       }
     }
   },
+  "components/document": {
+    "utrecht": {
+      "document": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.default}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        }
+      }
+    }
+  },
   "components/root": {
     "utrecht": {
       "root": {
@@ -15313,6 +15339,7 @@
       "components/description-list",
       "components/drawer/utrecht",
       "components/drawer/todo",
+      "components/document",
       "components/dot-badge",
       "components/fieldset",
       "components/figure/amsterdam",
