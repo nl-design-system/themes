@@ -1,5 +1,15 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 5.1.0
+
+### Minor Changes
+
+- 50d3bda: Add `utrecht.document` tokens.
+
+### Patch Changes
+
+- 4defe5e: Remove hardcoded icon color. Color should depend on context.
+
 ## 5.0.0
 
 ### Major Changes
