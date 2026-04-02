@@ -1599,6 +1599,10 @@
         }
       },
       "space": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
         "inline": {
           "2xs": {
             "$type": "dimension",
@@ -2272,6 +2276,11 @@
         }
       },
       "border-radius": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "Square"
+        },
         "sm": {
           "$type": "dimension",
           "$value": "4px"
@@ -2290,6 +2299,10 @@
         }
       },
       "border-width": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
         "sm": {
           "$type": "dimension",
           "$value": "0.0625rem"
@@ -2304,38 +2317,72 @@
         }
       },
       "box-shadow": {
+        "none": {
+          "$type": "boxShadow",
+          "$value": "none"
+        },
         "sm": {
           "$type": "boxShadow",
-          "$value": {
-            "x": "0",
-            "y": "2",
-            "blur": "6",
-            "spread": "0",
-            "color": "{basis.color.default.color-default}",
-            "type": "dropShadow"
-          }
+          "$value": [
+            {
+              "x": "0",
+              "y": "1",
+              "blur": "2",
+              "spread": "0",
+              "color": "rgba(0,0,0,0.06)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "4",
+              "spread": "0",
+              "color": "rgba(0,0,0,0.04)",
+              "type": "dropShadow"
+            }
+          ]
         },
         "md": {
           "$type": "boxShadow",
-          "$value": {
-            "x": "0",
-            "y": "8",
-            "blur": "16",
-            "spread": "0",
-            "color": "{basis.color.default.color-default}",
-            "type": "dropShadow"
-          }
+          "$value": [
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "4",
+              "spread": "0",
+              "color": "rgba(0,0,0,0.08)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "8",
+              "blur": "16",
+              "spread": "0",
+              "color": "rgba(0,0,0,0.06)",
+              "type": "dropShadow"
+            }
+          ]
         },
         "lg": {
           "$type": "boxShadow",
-          "$value": {
-            "x": "0",
-            "y": "16",
-            "blur": "48",
-            "spread": "0",
-            "color": "{basis.color.default.color-default}",
-            "type": "dropShadow"
-          }
+          "$value": [
+            {
+              "x": "0",
+              "y": "4",
+              "blur": "8",
+              "spread": "0",
+              "color": "rgba(0,0,0,0.10)",
+              "type": "dropShadow"
+            },
+            {
+              "x": "0",
+              "y": "16",
+              "blur": "32",
+              "spread": "0",
+              "color": "rgba(0,0,0,0.08)",
+              "type": "dropShadow"
+            }
+          ]
         }
       },
       "action": {
@@ -2601,17 +2648,17 @@
       "accordion": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "row-gap": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "button": {
           "background-color": {
@@ -2624,7 +2671,7 @@
           },
           "border-radius": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.border-radius.none}"
           },
           "border-width": {
             "$type": "dimension",
@@ -2750,12 +2797,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         }
@@ -2797,20 +2844,20 @@
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "row-gap": {
@@ -2833,7 +2880,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
@@ -2849,12 +2896,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "padding-block-end": {
@@ -2882,7 +2929,7 @@
         "icon": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "size": {
             "$type": "dimension",
@@ -3029,11 +3076,11 @@
         },
         "padding-block": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "has-image": {
           "inline-size": {
@@ -3094,15 +3141,15 @@
         },
         "border-inline-start-width": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-width.none}"
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-width.none}"
         },
         "color": {
           "$type": "color",
@@ -3118,22 +3165,22 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-inline-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-inline-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "padding-block-end": {
@@ -3146,11 +3193,11 @@
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "row-gap": {
           "$type": "dimension",
@@ -3294,7 +3341,7 @@
           "first": {
             "padding-inline-start": {
               "$type": "dimension",
-              "$value": "0px"
+              "$value": "{basis.space.none}"
             }
           }
         },
@@ -3413,11 +3460,11 @@
           },
           "padding-inline-end": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           }
         },
         "link": {
@@ -4295,7 +4342,7 @@
           },
           "border-width": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.border-width.none}"
           },
           "color": {
             "$type": "color",
@@ -5046,7 +5093,7 @@
           },
           "padding-block-end": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-block-start": {
             "$type": "dimension",
@@ -5249,7 +5296,7 @@
         "heading": {
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -5260,14 +5307,14 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
         "image": {
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -5545,7 +5592,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
@@ -5925,22 +5972,22 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-inline-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-inline-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "padding-block-start": {
@@ -5975,7 +6022,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
@@ -6040,7 +6087,7 @@
         "step": {
           "distance": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-block-end": {
             "$type": "dimension",
@@ -6145,7 +6192,7 @@
           "connector": {
             "bottom": {
               "$type": "dimension",
-              "$value": "0px"
+              "$value": "{basis.space.none}"
             },
             "desktop": {
               "margin-inline-start": {
@@ -6156,7 +6203,7 @@
             "mobile": {
               "margin-inline-start": {
                 "$type": "dimension",
-                "$value": "0px"
+                "$value": "{basis.space.none}"
               }
             }
           }
@@ -6243,7 +6290,7 @@
         },
         "padding-block": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline": {
           "$type": "dimension",
@@ -6301,7 +6348,7 @@
         },
         "padding-block": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline": {
           "$type": "dimension",
@@ -6339,21 +6386,21 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "caption": {
           "color": {
@@ -6680,7 +6727,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
@@ -6744,7 +6791,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
@@ -6888,12 +6935,12 @@
       "form-fieldset": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "invalid": {
@@ -6937,7 +6984,7 @@
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "disabled": {
             "color": {
@@ -7002,12 +7049,12 @@
       "figure": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "caption": {
@@ -7254,12 +7301,12 @@
       "form-field": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "invalid": {
@@ -7304,7 +7351,7 @@
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         }
       }
     }
@@ -7342,23 +7389,23 @@
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         }
       }
     },
@@ -7505,7 +7552,7 @@
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "row": {
             "padding-block-end": {
@@ -7518,7 +7565,7 @@
             },
             "padding-inline-end": {
               "$type": "dimension",
-              "$value": "0px"
+              "$value": "{basis.space.none}"
             },
             "padding-inline-start": {
               "$type": "dimension",
@@ -7541,11 +7588,11 @@
           },
           "padding-inline-end": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "row": {
             "padding-block-end": {
@@ -7562,7 +7609,7 @@
             },
             "padding-inline-start": {
               "$type": "dimension",
-              "$value": "0px"
+              "$value": "{basis.space.none}"
             }
           }
         },
@@ -7581,11 +7628,11 @@
           },
           "padding-inline-end": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "row": {
             "padding-block-end": {
@@ -7598,11 +7645,11 @@
             },
             "padding-inline-end": {
               "$type": "dimension",
-              "$value": "0px"
+              "$value": "{basis.space.none}"
             },
             "padding-inline-start": {
               "$type": "dimension",
-              "$value": "0px"
+              "$value": "{basis.space.none}"
             }
           }
         }
@@ -7635,12 +7682,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -7667,12 +7714,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -7699,12 +7746,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -7731,12 +7778,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -7763,12 +7810,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -7795,12 +7842,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         }
@@ -7918,12 +7965,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -7954,12 +8001,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -7990,12 +8037,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -8026,12 +8073,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -8062,12 +8109,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -8098,12 +8145,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -8114,7 +8161,7 @@
       "icon": {
         "inset-block-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "size": {
           "$type": "dimension",
@@ -8123,7 +8170,7 @@
         "baseline": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         }
@@ -8323,12 +8370,12 @@
       "link-list": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "row-gap": {
@@ -8338,7 +8385,7 @@
         "icon": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "size": {
             "$type": "dimension",
@@ -8568,7 +8615,7 @@
         },
         "gap": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "inline-size": {
           "$type": "dimension",
@@ -8627,7 +8674,7 @@
         "body": {
           "padding-block": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -8868,11 +8915,11 @@
         },
         "border-width": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-width.none}"
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "color": {
           "$type": "color",
@@ -8880,12 +8927,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "padding-block-end": {
@@ -9164,12 +9211,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "page-link": {
@@ -9183,7 +9230,7 @@
           },
           "border-radius": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.border-radius.none}"
           },
           "border-width": {
             "$type": "dimension",
@@ -9257,7 +9304,7 @@
           },
           "border-radius": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.border-radius.none}"
           },
           "border-width": {
             "$type": "dimension",
@@ -9385,7 +9432,7 @@
           },
           "border-radius": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.border-radius.none}"
           },
           "border-width": {
             "$type": "dimension",
@@ -9413,11 +9460,11 @@
           },
           "padding-inline-end": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "min-block-size": {
             "$type": "dimension",
@@ -9517,7 +9564,7 @@
           },
           "border-radius": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.border-radius.none}"
           },
           "border-width": {
             "$type": "dimension",
@@ -9660,12 +9707,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "lead": {
@@ -9683,12 +9730,12 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         }
@@ -9891,12 +9938,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -10736,12 +10783,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-inline-end": {
@@ -11082,12 +11129,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         }
       }
@@ -11123,22 +11170,22 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-inline-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-inline-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -11189,15 +11236,15 @@
         "list": {
           "padding-block-end": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           }
         }
       }
@@ -11376,7 +11423,7 @@
         },
         "letter-spacing": {
           "$type": "letterSpacing",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "min-block-size": {
           "$type": "dimension",
@@ -11388,7 +11435,7 @@
         },
         "padding-block": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline": {
           "$type": "dimension",
@@ -11668,7 +11715,7 @@
         },
         "margin": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "size": {
           "$type": "dimension",
@@ -11889,19 +11936,19 @@
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "width": {
           "$type": "dimension",
@@ -12033,12 +12080,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "caption": {
@@ -12195,7 +12242,7 @@
           },
           "outline-offset": {
             "$type": "other",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "padding-block": {
@@ -12337,7 +12384,7 @@
           },
           "outline": {
             "$type": "other",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "hover": {
@@ -12374,14 +12421,14 @@
           },
           "bottom": {
             "$type": "other",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
         "tab-panel": {
           "outline": {
             "$type": "other",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "padding-block-end": {
@@ -12394,11 +12441,11 @@
           },
           "padding-inline-end": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
+            "$value": "{basis.space.none}"
           }
         }
       }
@@ -13429,7 +13476,7 @@
         },
         "padding-inline": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "content": {
           "max-inline-size": {
@@ -13487,19 +13534,19 @@
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.space.none}"
         },
         "hover": {
           "background-color": {
