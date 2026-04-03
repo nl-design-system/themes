@@ -1,5 +1,13 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 4.2.0
+
+### Minor Changes
+
+- 2d8b6bd: - Nieuwe basis-tokens toegevoegd: `basis.border-radius.none`, `basis.space.none`, `basis.border-width.none`, `basis.box-shadow.none`
+  - In het Start en Mooi & Anders thema wordt er door component tokens naar deze nieuwe basis-tokens verwezen. Bij het Voorbeeld thema doen we dat later.
+  - In het Start en Voorbeeld thema is de waarde van de box-shadows gelijk getrokken met die van het Mooi & Anders thema.
+
 ## 4.1.0
 
 ### Minor Changes
