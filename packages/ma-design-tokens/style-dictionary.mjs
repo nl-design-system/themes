@@ -29,7 +29,7 @@ const build = async () => {
       className: `${themeConfig.prefix}-theme`,
     }),
     preprocessors: [colorSchemeDefaultPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
-    source: ['src/tokens.json', 'src/*.tokens.json'],
+    source: ['src/fdnd.tokens.json', 'src/*.fdnd.tokens.json'],
   });
 
   await sd.cleanAllPlatforms();
