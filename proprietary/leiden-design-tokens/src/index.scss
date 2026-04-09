@@ -53,10 +53,7 @@
    */
   --of-multifield-field-max-inline-size: 25rem;
   --utrecht-form-control-max-inline-size: 25rem;
-  // --utrecht-textarea-max-inline-size: 25rem;
-  // --utrecht-textbox-max-inline-size: 25rem;
   --_utrecht-textbox-max-inline-size: 25rem;
-  // --utrecht-select-max-inline-size: 25rem;
 
   /*
    * CUSTOM OVERRIDE
@@ -88,16 +85,6 @@
    */
   --of-select-value-multi-padding-inline-start: 8px;
   --of-select-value-multi-padding-inline-end: 8px;
-
-  /*
-   * CUSTOM OVERRIDE
-   * Reason: Set background and border color for read only fields to match our design.
-   * Related Component: utrecht-textbox--read-only
-   * Safe to remove when: added as a token in our set
-   * Last verified: 2026-03-25 (OF 3.4.6)
-   */
-  // --utrecht-textbox-read-only-background-color: var(--basis-color-disabled-bg-default);
-  // --utrecht-textbox-read-only-border-color: var(--basis-color-disabled-border-subtle);
 }
 
 /*
