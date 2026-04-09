@@ -180,6 +180,7 @@ const createConfig = ({
         ],
       },
       'scss-theme-mixin': {
+        transformGroup: transformGroup,
         transforms: ['name/kebab'],
         buildPath,
         files: [

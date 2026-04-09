@@ -27,7 +27,6 @@ const build = async () => {
 
   let sd = new StyleDictionary({
     ...createConfig({
-      backwardsCompatible: true,
       selector: `.${themeConfig.prefix}-theme`,
     }),
     preprocessors: ['color-scheme-default', 'tokens-studio', 'dtcg-delegate'],
