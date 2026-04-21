@@ -1,5 +1,12 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 2.0.0
+
+### Major Changes
+
+- 0cc7b20: Vervangen van design tokens met nieuwe bibliotheek.
+  Conform NL Design System Figma changelog 12.1.0, zie: https://nldesignsystem.nl/handboek/designer/figma-changelog/#1210
+
 ## 1.0.2
 
 ### Patch Changes
