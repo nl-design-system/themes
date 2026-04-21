@@ -818,6 +818,21 @@ button.utrecht-link-button.utrecht-link-button--html-button.openforms-abort-butt
 }
 
 /*
+  * CUSTOM OVERRIDE
+  * Reason: No option to style the links; missing feature in NLDS or OF.
+  * Related Component: openforms-formio-link
+  * Safe to remove when: OF or NLDS include tokens for the WYSIWYG link component.
+  * Last verified: 2026-04-21 (OF 3.4.8)
+  */
+.utrecht-link:hover,
+.openforms-body.openforms-body--wysiwyg a:hover,
+.utrecht-form-label.utrecht-form-label--openforms a:hover,
+.utrecht-form-field.utrecht-form-field--file a:hover {
+  color: var(--nl-link-hover-color);
+  text-decoration: none;
+}
+
+/*
  * CUSTOM OVERRIDE
  * Reason: No option to set font-size for the WYSIWYG text tiny component; missing feature in NLDS or OF.
  * Related Component: openforms-formio-text-tiny
