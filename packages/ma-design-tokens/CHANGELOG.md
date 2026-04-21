@@ -1,5 +1,26 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 4.2.0
+
+### Minor Changes
+
+- 2d8b6bd: - Nieuwe basis-tokens toegevoegd: `basis.border-radius.none`, `basis.space.none`, `basis.border-width.none`, `basis.box-shadow.none`
+  - In het Start en Mooi & Anders thema wordt er door component tokens naar deze nieuwe basis-tokens verwezen. Bij het Voorbeeld thema doen we dat later.
+  - In het Start en Voorbeeld thema is de waarde van de box-shadows gelijk getrokken met die van het Mooi & Anders thema.
+- 11f07af: De volgende tokens zijn toegevoegd aan Task List component:
+
+  - `ma.task-list.padding-block-start`
+  - `ma.task-list.item.column-gap`
+  - `ma.task-list.item.margin-block-end`
+  - `ma.task-list.item.margin-block-start`
+  - `ma.task-list.item.marker.block-size`
+  - `ma.task-list.item.marker.inline-size`
+  - `ma.task-list.item.marker.min-inline-size`
+  - `ma.task-list.item.marker-label.block-size`
+  - `ma.task-list.item.marker-label.inline-size`
+  - `ma.task-list.item.marker-label.margin-block`
+  - `ma.task-list.item.marker-label.margin-inline`
+
 ## 4.1.0
 
 ### Minor Changes

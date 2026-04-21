@@ -1,5 +1,24 @@
 # @nl-design-system-unstable/leiden-design-tokens
 
+## 3.0.0
+
+### Major Changes
+
+- 0fcf0aa: No longer ship the legacy files. Migration steps:
+
+  - Migrate from `dist/index.json` to `dist/list.json`
+  - Migrate from `dist/design-tokens.css` to `dist/theme.css`
+  - Migrate from `dist/index.less` to `dist/variables.less`
+  - Migrate from `index.js` to `dist/variables.mjs`
+
+### Minor Changes
+
+- df44bf8: Apply NL Design System Figma changelog 12.1.0, see: https://nldesignsystem.nl/handboek/designer/figma-changelog/#1210
+
+### Patch Changes
+
+- 0fcf0aa: Fix `box-shadow` design tokens with `[object Object]` values.
+
 ## 2.0.0
 
 ### Major Changes
