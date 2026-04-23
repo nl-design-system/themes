@@ -349,7 +349,7 @@ form[data-testid="start-form"] {
   * Safe to remove when: OF includes font-size and font-weight tokens for the subtitle component.
   * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
   */
-.openforms-subtitle {
+.openforms-subtitle:not(.cookie-group) {
   font-size: var(--basis-text-font-size-3xl);
   font-weight: var(--basis-text-font-weight-bold);
 }
