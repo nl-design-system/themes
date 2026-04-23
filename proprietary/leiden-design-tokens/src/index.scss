@@ -262,7 +262,8 @@ footer.utrecht-page-footer {
   font-weight: var(--basis-text-font-weight-bold);
   margin-block-end: var(--basis-space-block-lg);
 }
-.openforms-card:has(.openforms-subtitle) > .openforms-card__header > h1.openforms-title {
+.openforms-card:has(.openforms-subtitle):not(:has(.openforms-card__body ul li .cookie-group)) 
+> .openforms-card__header > h1.openforms-title {
   font-size: var(--basis-text-font-size-sm);
 }
 
@@ -1996,3 +1997,5 @@ input.is-invalid,
 .openforms-datepicker-textbox .openforms-datepicker-textbox__calendar-toggle {
   font-size: 100%;
 }
+
+ 
