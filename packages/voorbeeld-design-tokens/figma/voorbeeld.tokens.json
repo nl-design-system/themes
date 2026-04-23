@@ -8855,6 +8855,10 @@
           "$type": "color",
           "$value": "{basis.color.default.border-subtle}"
         },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.lg}"
+        },
         "border-style": {
           "$type": "other",
           "$value": "solid",
@@ -8863,6 +8867,10 @@
         "border-width": {
           "$type": "dimension",
           "$value": "{basis.border-width.sm}"
+        },
+        "box-shadow": {
+          "$type": "boxShadow",
+          "$value": "{basis.box-shadow.lg}"
         },
         "gap": {
           "$type": "dimension",
@@ -8957,18 +8965,6 @@
               "$value": "{basis.space.inline.xl}"
             }
           }
-        }
-      }
-    },
-    "todo": {
-      "dialog": {
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{basis.border-radius.lg}"
-        },
-        "box-shadow": {
-          "$type": "boxShadow",
-          "$value": "{basis.box-shadow.lg}"
         }
       }
     }
