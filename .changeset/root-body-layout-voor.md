@@ -18,4 +18,4 @@ De volgende tokens zijn toegevoegd aan Page Body component:
 
 Token `utrecht.page-body.content.padding-inline` is verwijderd uit Page Body component.
 
-Positie Root and Page Body tokenset binnen JSON op juiste plek.
+Root en Page Body tokenset binnen JSON op juiste positie.
