@@ -21,7 +21,7 @@ const build = async () => {
       },
     },
     preprocessors: ['dtcg-delegate'],
-    source: ['src/**/*.tokens.json'],
+    source: ['src/tokens.json', 'src/**/*.tokens.json'],
     platforms: {
       css: {
         transforms: ['name/kebab'],
