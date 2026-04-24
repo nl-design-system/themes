@@ -1,4 +1,4 @@
-// import '@nl-design-system-unstable/basis-design-tokens/dist/property.css';
+import '@nl-design-system-unstable/basis-design-tokens/dist/property.css';
 import '@amsterdam/design-system-tokens/dist/index.theme.css';
 import '@amsterdam/design-system-assets/font/index.css';
 import '@amsterdam/design-system-css/dist/index.css';
@@ -15,7 +15,6 @@ import '@nl-design-system-community/purmerend-design-tokens/dist/theme.css';
 import '@nl-design-system-community/purmerend-design-tokens/dist/color-scheme-dark/theme.css';
 import '@nl-design-system-community/purmerend-design-tokens/src/font.js';
 import '@nl-design-system-community/zaanstad-design-tokens/dist/theme.css';
-// import '@nl-design-system-unstable/basis-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/font';
 import '@nl-design-system-unstable/borne-design-tokens/dist/index.css';
