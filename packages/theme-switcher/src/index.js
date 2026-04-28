@@ -16,8 +16,8 @@ const builtinThemes = [
   {
     className: 'denhaag-theme',
     title: 'Gemeente Den Haag',
-    href: 'https://unpkg.com/@gemeente-denhaag/design-tokens-components/dist/theme/index.css',
-    package: '@gemeente-denhaag/design-tokens-components',
+    href: 'https://unpkg.com/@gemeente-denhaag/design-tokens/dist/theme/index.css',
+    package: '@gemeente-denhaag/design-tokens',
   },
   {
     className: 'drechterland-theme',

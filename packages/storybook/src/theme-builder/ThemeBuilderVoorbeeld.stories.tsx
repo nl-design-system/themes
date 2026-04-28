@@ -4,7 +4,7 @@ import basisTheme from '@nl-design-system-unstable/basis-design-tokens/dist/toke
 import voorbeeldTheme from '@nl-design-system-unstable/voorbeeld-design-tokens/dist/tokens.json';
 import groningenTheme from '@nl-design-system-unstable/groningen-design-tokens/dist/tokens.json';
 import utrechtTheme from '@utrecht/design-tokens/dist/tokens.cjs';
-import denhaagTheme from '@gemeente-denhaag/design-tokens-components/dist/index.json';
+import denhaagTheme from '@gemeente-denhaag/design-tokens/dist/index.json';
 import rotterdamTheme from '@gemeente-rotterdam/design-tokens/dist/tokens.cjs';
 import { ThemeBuilder } from './ThemeBuilder';
 import { examples } from './examples';
