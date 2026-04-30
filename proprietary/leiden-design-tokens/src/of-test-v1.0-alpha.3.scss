@@ -368,7 +368,7 @@ form[data-testid="start-form"] {
   * Safe to remove when: OF includes font-size and font-weight tokens for the subtitle component.
   * Last verified: 2026-01-08 (OF 3.4.0-leiden.1)
   */
-.openforms-subtitle:not(.cookie-group) {
+.openforms-subtitle:not(.cookie-group__title) {
   font-size: var(--basis-text-font-size-3xl);
   font-weight: var(--basis-text-font-weight-bold);
 }
@@ -1541,7 +1541,7 @@ fieldset.openforms-fieldset {
   * Safe to remove when: OF or NLDS includes a token for the component or makes main always stretch between header and footer.
   * Last verified: 2026-03-26 (OF 3.4.6)
   */
-.openforms-app__body > .openforms-card {
+.openforms-app__body > .openforms-card:not(:has(.utrecht-alert--info)) {
   min-height: 600px;
 }
 
