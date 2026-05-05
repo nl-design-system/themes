@@ -13230,6 +13230,100 @@
       }
     }
   },
+  "components/toptask-navigation": {
+    "utrecht": {
+      "toptask-link": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.accent-1-inverse.bg-default}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.accent-1-inverse.color-default}"
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1-inverse.bg-hover}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.accent-1-inverse.color-hover}"
+          },
+          "transform-scale": {
+            "$type": "other",
+            "$value": "none"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.focus.background-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.focus.color}"
+          }
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "auto"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "7.5rem"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "15rem"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.xl}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.xl}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.4xl}"
+          }
+        }
+      },
+      "toptask-link-nav": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.xl}"
+        },
+        "link": {
+          "grid": {
+            "max-inline-width": {
+              "$type": "dimension",
+              "$value": "15rem"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
@@ -15568,6 +15662,7 @@
       "components/text-area",
       "components/text-input",
       "components/toolbar-button",
+      "components/toptask-navigation",
       "components/unordered-list",
       "components/body",
       "components/page-header/amsterdam",
