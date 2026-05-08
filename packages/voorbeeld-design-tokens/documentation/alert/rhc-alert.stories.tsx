@@ -1,10 +1,9 @@
-import { Alert, Heading, Paragraph } from "@rijkshuisstijl-community/components-react";
-import type { Meta, StoryObj } from "@storybook/react-vite";
-
+import { Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
-  id: "rhc-alert",
-  title: "Components/Alert/Rijkshuisstijl Community",
+  id: 'rhc-alert',
+  title: 'Components/Alert/Rijkshuisstijl Community',
   component: Alert,
   parameters: { actions: { disable: true } },
   argTypes: {
@@ -33,19 +32,15 @@ const meta = {
   },
 } satisfies Meta<typeof Alert>;
 
-
 type Story = StoryObj<typeof meta>;
-
 
 export default meta;
 
-
 // Een story met het voorbeeld thema
 export const VoorbeeldTheme: Story = {
-  name: "Voorbeeld theme",
-  parameters: { theme: "voorbeeld-theme" },
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
 };
-
 
 // Een story met het thema van de organisatie die de component bijdraagt
 export const RijkshuisstijlTheme: Story = {

@@ -1,5 +1,5 @@
 import { STORY_GROUPS } from './component-stories-util';
-import { DotBadge,Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { DotBadge, Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 
 export const RHC_COMPONENT_STORIES = [
   {
@@ -14,9 +14,11 @@ export const RHC_COMPONENT_STORIES = [
     component: 'rhc-alert',
     group: STORY_GROUPS['ALERTS'],
     name: 'Rijkshuisstijl Alert',
-    render: () => <Alert type="info">
+    render: () => (
+      <Alert type="info">
         <Heading level={3}>Heading</Heading>
         <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-      </Alert>,
-    }
+      </Alert>
+    ),
+  },
 ];
