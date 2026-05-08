@@ -30,7 +30,7 @@
   },
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
-    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
+    "clean": "rimraf ./dist/ ./.rollup.cache/ && rimraf --glob \"./*.tsbuildinfo\"",
     "config": "tsc --showConfig",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "typecheck": "tsc"

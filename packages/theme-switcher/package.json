@@ -21,7 +21,7 @@
     "directory": "packages/theme-switcher"
   },
   "scripts": {
-    "build": "mkdir -p dist/ && node src/generate-json.mjs",
+    "build": "node -e \"require('fs').mkdirSync('dist', { recursive: true })\" && node src/generate-json.mjs",
     "clean": "rimraf dist/"
   },
   "devDependencies": {
