@@ -68,6 +68,7 @@ import {
   DataListKey as FormSummaryKey,
   DataListValue as FormSummaryValue,
 } from '@utrecht/component-library-react/dist/css-module';
+import { Root } from '@utrecht/root-react/css';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { clsx } from 'clsx';
@@ -3257,5 +3258,23 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         ]}
       />
     ),
+  },
+  {
+    storyId: 'react-root--default',
+    component: 'utrecht-root',
+    group: STORY_GROUPS['ROOT'],
+    name: 'Utrecht Root',
+    render: () => <Root Component="div">The Quick Brown Fox Jumps Over The Lazy Dog</Root>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.root.background-color',
+        'utrecht.root.color',
+        'utrecht.root.font-family',
+        'utrecht.root.font-size-adjust',
+        'utrecht.root.font-size',
+        'utrecht.root.font-weight',
+        'utrecht.root.line-height',
+      ],
+    },
   },
 ];
