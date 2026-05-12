@@ -1,3 +1,6 @@
+import type { Preview } from '@storybook/react-vite';
+import { ThemeDecorator } from './ThemeDecorator';
+import { defineCustomElements } from '@lux-design-system/web-components-stencil/loader/index.js';
 import '@amsterdam/design-system-tokens/dist/index.theme.css';
 import '@amsterdam/design-system-assets/font/index.css';
 import '@amsterdam/design-system-css/dist/index.css';
@@ -64,10 +67,8 @@ import '@nl-design-system-unstable/xxllnc-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zevenaar-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/zevenaar-design-tokens/src/font';
 import '@nl-design-system-unstable/zwolle-design-tokens/dist/index.css';
-import type { Preview } from '@storybook/react-vite';
 import '@utrecht/design-tokens/dist/index.css';
-import { ThemeDecorator } from './ThemeDecorator';
-import { defineCustomElements } from '@lux-design-system/web-components-stencil/loader/index.js';
+import './preview.css';
 
 defineCustomElements();
 
