@@ -47,6 +47,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   COLOR_SAMPLE: 'Color Sample',
   SKIP_LINK: 'Skip Link',
   MARK: 'Mark',
+  ROOT: 'Root',
 };
 
 export interface ComponentStory {
