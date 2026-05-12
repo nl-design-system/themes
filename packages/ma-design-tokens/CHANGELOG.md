@@ -1,5 +1,65 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 5.0.0
+
+### Major Changes
+
+- c5f3304: De volgende tokens zijn toegevoegd aan Root component:
+
+  - `utrecht.root.font-size`
+  - `utrecht.root.font-size-adjust`
+  - `utrecht.root.line-height`
+
+  De volgende tokens zijn toegevoegd aan Page Body component:
+
+  - `utrecht.page-body.content.background-color`
+  - `utrecht.page-body.content.color`
+  - `utrecht.page-body.content.padding-inline-end`
+  - `utrecht.page-body.content.padding-inline-start`
+
+  Token `utrecht.page-body.content.padding-inline` is verwijderd uit Page Body component.
+
+  Root en Page Body tokenset binnen JSON op juiste positie.
+
+### Minor Changes
+
+- 2ffb95a: De volgende tokens zijn toegevoegd aan Icon Button component:
+
+  - `ams.icon-button.color`
+  - `ams.icon-button.cursor`
+  - `ams.icon-button.outline-offset`
+  - `ams.icon-button.disabled.color`
+  - `ams.icon-button.disabled.cursor`
+  - `ams.icon-button.hover.background-color`
+  - `ams.icon-button.hover.color`
+  - `ams.icon-button.contrast.color`
+  - `ams.icon-button.contrast.disabled.color`
+  - `ams.icon-button.contrast.hover.background-color`
+  - `ams.icon-button.contrast.hover.color`
+  - `ams.icon-button.inverse.background-color`
+  - `ams.icon-button.inverse.color`
+  - `ams.icon-button.inverse.disabled.background-color`
+  - `ams.icon-button.inverse.disabled.color`
+  - `ams.icon-button.inverse.hover.background-color`
+  - `ams.icon-button.inverse.hover.color`
+
+- ce19947: De volgende updates zijn gedaan in Community component 'File' van Den Haag:
+
+  - Token `denhaag.file.border-radius` is toegevoegd aan File component.
+  - Description `[code-only]` is toegevoegd aan token `denhaag.file.border-style`.
+  - Tokens zijn in de juiste volgorde gezet.
+
+- f0dface: - Waarde van token `utrecht.form-toggle.color` is gewijzigd van `basis.color.default.color-document` naar `basis.color.default-inverse.color-default`.
+  - Waarde van token `utrecht.form-toggle.hover.color` is gewijzigd van `basis.color.default.color-document` naar `basis.color.default-inverse.color-hover`.
+- bc16ead: De volgende tokens zijn hernoemd in Modal Dialog component:
+
+  - `todo.dialog.border-radius` naar `ams.dialog.border-radius`
+  - `todo.dialog.box-shadow` naar `ams.dialog.box-shadow`
+
+### Patch Changes
+
+- 8015afa: fix: revert ref naar `basis.space.none` voor `$type=other` tokens
+
 ## 4.2.0
 
 ### Minor Changes
