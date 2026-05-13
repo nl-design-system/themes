@@ -9052,6 +9052,37 @@
       }
     }
   },
+  "components/root": {
+    "utrecht": {
+      "root": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-size-adjust": {
+          "$type": "other",
+          "$value": "0.515",
+          "$description": "[code-only]"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        }
+      }
+    }
+  },
   "components/select": {
     "utrecht": {
       "select": {
@@ -10684,24 +10715,6 @@
       }
     }
   },
-  "components/root": {
-    "utrecht": {
-      "root": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        }
-      }
-    }
-  },
   "components/body": {
     "utrecht": {
       "body": {
@@ -10930,6 +10943,14 @@
           "$value": "{basis.color.default.color-document}"
         },
         "content": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-document}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
           "max-inline-size": {
             "$type": "dimension",
             "$value": "{basis.page.max-inline-size}"
@@ -10940,11 +10961,15 @@
           },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": "{basis.space.block.4xl}"
+            "$value": "{basis.space.none}"
           },
-          "padding-inline": {
+          "padding-inline-end": {
             "$type": "dimension",
-            "$value": "{basis.space.inline.4xl}"
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           }
         }
       }
@@ -13002,6 +13027,7 @@
       "components/progress-list/den-haag",
       "components/progress-list/todo",
       "components/radio-button",
+      "components/root",
       "components/select",
       "components/separator",
       "components/side-navigation",
@@ -13018,7 +13044,6 @@
       "components/text-input",
       "components/toolbar-button",
       "components/unordered-list",
-      "components/root",
       "components/body",
       "components/page-header",
       "components/page-header/amsterdam",
