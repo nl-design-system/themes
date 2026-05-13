@@ -1,160 +1,107 @@
 {
   "brand": {
-    "groningen": {
-      "color": {
-        "white": {
-          "$type": "color",
-          "$value": "#ffffff"
+    "ams": {
+      "tabs": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.3xl}"
         },
-        "black": {
-          "$type": "color",
-          "$value": "#0F0C0B"
-        },
-        "accent": {
-          "$type": "color",
-          "$value": "#E10019"
-        },
-        "lightblue": {
-          "dark": {
+        "button": {
+          "color": {
             "$type": "color",
-            "$value": "#055FA5"
+            "$value": "{basis.color.action-2.color-default}"
           },
-          "light": {
-            "$type": "color",
-            "$value": "#EBF0FA"
-          }
-        },
-        "blue": {
-          "dark": {
-            "$type": "color",
-            "$value": "#283773"
+          "cursor": {
+            "$type": "other",
+            "$value": "pointer",
+            "$description": "[code-only]"
           },
-          "light": {
-            "$type": "color",
-            "$value": "#EBE6EB"
-          }
-        },
-        "interactive": {
-          "link": {
-            "$type": "color",
-            "$value": "#0057A3"
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           },
           "hover": {
-            "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
-          },
-          "cta": {
-            "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
-          }
-        },
-        "grey": {
-          "dark": {
-            "$type": "color",
-            "$value": "#3F3D3C"
-          },
-          "border": {
-            "$type": "color",
-            "$value": "#6F6D6D"
-          },
-          "background": {
-            "$type": "color",
-            "$value": "#DDE0E0"
-          },
-          "background-light": {
-            "$type": "color",
-            "$value": "#F0F2F2"
-          },
-          "mid": {
-            "$type": "color",
-            "$value": "#929494"
-          }
-        },
-        "state": {
-          "information": {
-            "bg": {
+            "color": {
               "$type": "color",
-              "$value": "#EBF0FA"
+              "$value": "{basis.color.action-2.color-hover}"
             },
-            "text": {
-              "$type": "color",
-              "$value": "#283773"
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.lg}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
             }
           },
-          "success": {
-            "bg": {
+          "disabled": {
+            "color": {
               "$type": "color",
-              "$value": "#EBF5F5"
+              "$value": "{basis.color.disabled.color-subtle}"
             },
-            "text": {
-              "$type": "color",
-              "$value": "#00693C"
+            "cursor": {
+              "$type": "other",
+              "$value": "not-allowed",
+              "$description": "[code-only]"
             }
           },
-          "warning": {
-            "background": {
-              "$type": "color",
-              "$value": "#FFDCAD"
+          "selected": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.lg}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
             },
-            "text": {
-              "$type": "color",
-              "$value": "#704000"
-            }
-          },
-          "error": {
-            "bg": {
-              "$type": "color",
-              "$value": "#FBDBE1"
-            },
-            "text": {
-              "$type": "color",
-              "$value": "#5C000F"
-            },
-            "message": {
-              "$type": "color",
-              "$value": "#B40013",
-              "$description": "Error message description on white background - text color seems to be quite dark"
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
             }
           }
         },
-        "pink": {
-          "dark": {
-            "$type": "color",
-            "$value": "#D73282"
-          },
-          "light": {
-            "$type": "color",
-            "$value": "#FFF0F5"
-          }
-        },
-        "purple": {
-          "dark": {
-            "$type": "color",
-            "$value": "#871E64"
-          },
-          "light": {
-            "$type": "color",
-            "$value": "#F5EBEB"
-          }
-        },
-        "turquoise": {
-          "dark": {
-            "$type": "color",
-            "$value": "#008787"
-          },
-          "light": {
-            "$type": "color",
-            "$value": "#EBF5F5"
-          }
-        },
-        "green": {
-          "dark": {
-            "$type": "color",
-            "$value": "#00693C"
-          },
-          "light": {
-            "$type": "color",
-            "$value": "#E6EBE6"
+        "list": {
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "-{basis.border-width.sm}",
+              "blur": "0",
+              "spread": "0",
+              "color": "{basis.color.default.border-subtle}",
+              "type": "innerShadow"
+            }
           }
         }
       }
@@ -10060,6 +10007,250 @@
       }
     }
   },
+  "components/tabs/ams": {
+    "ams": {
+      "tabs": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.3xl}"
+        },
+        "button": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "pointer",
+            "$description": "[code-only]"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            },
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.lg}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
+            }
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            },
+            "cursor": {
+              "$type": "other",
+              "$value": "not-allowed",
+              "$description": "[code-only]"
+            }
+          },
+          "selected": {
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "-{basis.border-width.lg}",
+                "blur": "0",
+                "spread": "0",
+                "color": "{ams.tabs.button.color}",
+                "type": "innerShadow"
+              }
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          }
+        },
+        "list": {
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "-{basis.border-width.sm}",
+              "blur": "0",
+              "spread": "0",
+              "color": "{basis.color.default.border-subtle}",
+              "type": "innerShadow"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/tabs/den-haag": {
+    "denhaag": {
+      "tabs": {
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.border-subtle}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
+        },
+        "width": {
+          "$type": "dimension",
+          "$value": "100%",
+          "$description": "[code-only]"
+        },
+        "tab": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "pointer",
+            "$description": "[code-only]"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "outline": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            }
+          },
+          "focus": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.focus.color}"
+            }
+          },
+          "selected": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{basis.text.font-weight.bold}"
+            }
+          }
+        },
+        "tab-indicator": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-active}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.lg}"
+          },
+          "bottom": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          }
+        },
+        "tab-panel": {
+          "outline": {
+            "$type": "other",
+            "$value": "0px",
+            "$description": "[code-only]"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.3xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.3xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "0px"
+          }
+        }
+      }
+    }
+  },
   "components/task-card": {
     "denhaag": {
       "action": {
@@ -13011,6 +13202,8 @@
       "components/step-marker",
       "components/switch",
       "components/table",
+      "components/tabs/ams",
+      "components/tabs/den-haag",
       "components/task-card",
       "components/task-list",
       "components/task-navigation",
