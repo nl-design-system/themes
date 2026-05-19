@@ -1,11 +1,9 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
-import { readFile } from 'node:fs/promises';
-import { createConfig } from '../../style-dictionary-config.js';
+import { propertyFormatterHooksConfig } from './src/css-property-formatter.mjs';
 
 const build = async () => {
-  const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
   StyleDictionary.registerPreprocessor({
     name: 'dtcg-delegate',
     preprocessor: typeDtcgDelegate,
@@ -15,12 +13,27 @@ const build = async () => {
     excludeParentKeys: true,
   });
 
+  // Special style dictionary build that only builds one property.css file
   const sd = new StyleDictionary({
-    ...createConfig({
-      selector: `.${themeConfig.prefix}-theme`,
-    }),
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: ['figma/**/*.tokens.json'],
+    hooks: {
+      formats: {
+        ...propertyFormatterHooksConfig,
+      },
+    },
+    preprocessors: ['dtcg-delegate'],
+    source: ['src/tokens.json', 'src/**/*.tokens.json'],
+    platforms: {
+      css: {
+        transforms: ['name/kebab'],
+        buildPath: 'dist/',
+        files: [
+          {
+            destination: 'property.css',
+            format: 'css/property',
+          },
+        ],
+      },
+    },
   });
 
   await sd.cleanAllPlatforms();
