@@ -8454,6 +8454,99 @@
     }
   },
   "components/icon": {
+    "ams": {
+      "icon-button": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.action-2.color-default}"
+        },
+        "cursor": {
+          "$type": "other",
+          "$value": "default",
+          "$description": "[code-only]"
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "auto",
+          "$description": "[code-only]"
+        },
+        "disabled": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.color-subtle}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "disabled",
+            "$description": "[code-only]"
+          }
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.bg-hover}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-hover}"
+          }
+        },
+        "contrast": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.bg-hover}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            }
+          }
+        },
+        "inverse": {
+          "background-color": {
+            "$type": "color",
+            "$value": "rgba(0 0 0 / 0%)"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2-inverse.color-default}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled-inverse.bg-subtle}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled-inverse.color-subtle}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2-inverse.bg-hover}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2-inverse.color-hover}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/icon-button": {
     "utrecht": {
       "icon": {
         "color": {
@@ -8895,8 +8988,8 @@
     }
   },
   "components/modal-dialog": {
-    "todo": {
-      "modal-dialog": {
+    "ams": {
+      "dialog": {
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.default.bg-document}"
@@ -8909,6 +9002,11 @@
           "$type": "dimension",
           "$value": "{basis.border-radius.lg}"
         },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
+        },
         "border-width": {
           "$type": "dimension",
           "$value": "{basis.border-width.sm}"
@@ -8917,107 +9015,97 @@
           "$type": "boxShadow",
           "$value": "{basis.box-shadow.lg}"
         },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
+        "gap": {
+          "$type": "dimension",
+          "$value": "0px"
         },
-        "content": {
-          "padding-block-end": {
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "328px"
+        },
+        "max-block-size": {
+          "$type": "dimension",
+          "$value": "80vh",
+          "$description": "[code-only]"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "640px"
+        },
+        "medium": {
+          "inline-size": {
             "$type": "dimension",
-            "$value": "{basis.space.block.3xl}"
+            "$value": "640px"
           },
-          "padding-block-start": {
+          "max-block-size": {
+            "$type": "dimension",
+            "$value": "80vh",
+            "$description": "[code-only]"
+          }
+        },
+        "backdrop": {
+          "background-color": {
+            "$type": "color",
+            "$value": "rgba(36 36 36 / 20%)"
+          }
+        },
+        "header": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.xl}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          }
+        },
+        "body": {
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "medium": {
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          }
+        },
+        "footer": {
+          "padding-block": {
             "$type": "dimension",
             "$value": "{basis.space.block.3xl}"
           },
           "padding-inline": {
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
-          }
-        },
-        "footer": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
           },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          }
-        },
-        "header": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-subtle}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.md}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.md}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "label": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-document}"
+          "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.3xl}"
             },
-            "font-family": {
-              "$type": "fontFamilies",
-              "$value": "{basis.text.font-family.default}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{basis.text.font-size.md}"
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            },
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{basis.text.line-height.md}"
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
             }
           }
         }
@@ -9979,6 +10067,50 @@
               "$type": "textDecoration",
               "$value": "none"
             }
+          }
+        }
+      }
+    }
+  },
+  "components/page-body": {
+    "utrecht": {
+      "page-body": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "content": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-document}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.page.max-inline-size}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.4xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
           }
         }
       }
@@ -11288,6 +11420,37 @@
       }
     }
   },
+  "components/root": {
+    "utrecht": {
+      "root": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-size-adjust": {
+          "$type": "other",
+          "$value": "0.515",
+          "$description": "[code-only]"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        }
+      }
+    }
+  },
   "components/select": {
     "utrecht": {
       "select": {
@@ -12230,7 +12393,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.default.color-document}"
+          "$value": "{basis.color.default-inverse.color-default}"
         },
         "height": {
           "$type": "dimension",
@@ -12288,7 +12451,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.color-document}"
+            "$value": "{basis.color.default-inverse.bg-hover}"
           }
         },
         "focus": {
@@ -13138,24 +13301,6 @@
       }
     }
   },
-  "components/root": {
-    "utrecht": {
-      "root": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        }
-      }
-    }
-  },
   "components/body": {
     "utrecht": {
       "body": {
@@ -13350,38 +13495,6 @@
         "padding-inline": {
           "$type": "dimension",
           "$value": "{basis.space.inline.4xl}"
-        },
-        "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{basis.page.max-inline-size}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.4xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.4xl}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.4xl}"
-          }
-        }
-      }
-    }
-  },
-  "components/page-body": {
-    "utrecht": {
-      "page-body": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
         },
         "content": {
           "max-inline-size": {
@@ -14504,6 +14617,7 @@
       "components/heading-5",
       "components/heading-6",
       "components/icon",
+      "components/icon-button",
       "components/icon-only-button",
       "components/image",
       "components/link/nl",
@@ -14522,6 +14636,7 @@
       "components/ordered-list",
       "components/page-number-navigation/utrecht",
       "components/page-number-navigation/todo",
+      "components/page-body",
       "components/paragraph/nl",
       "components/paragraph/utrecht",
       "components/pre-heading",
@@ -14529,6 +14644,7 @@
       "components/progress-list/den-haag",
       "components/progress-list/todo",
       "components/radio-button",
+      "components/root",
       "components/select",
       "components/separator",
       "components/side-navigation",
@@ -14546,11 +14662,9 @@
       "components/text-input",
       "components/toolbar-button",
       "components/unordered-list",
-      "components/root",
       "components/body",
       "components/page-header/amsterdam",
       "components/page-header/utrecht",
-      "components/page-body",
       "components/tabs/den-haag",
       "components/tabs/amsterdam",
       "components/page-footer/amsterdam",
