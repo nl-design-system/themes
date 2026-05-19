@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/basis-design-tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- 031ae89: Add basis tokens.json
+
 ## 3.0.2
 
 ### Patch Changes
