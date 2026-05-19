@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 5.0.1
+
+### Patch Changes
+
+- f3cd7e7: fix onjuiste referentie in utrecht.status-badge.letter-spacing
+
 ## 5.0.0
 
 ### Major Changes
