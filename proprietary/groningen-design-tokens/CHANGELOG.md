@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- ce9920c: Conform NL Design System Figma changelog 14.4.0, zie: https://nldesignsystem.nl/handboek/designer/figma-changelog/#1440
+
 ## 3.0.0
 
 ### Major Changes
