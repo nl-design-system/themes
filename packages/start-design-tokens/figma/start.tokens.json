@@ -2867,7 +2867,219 @@
       }
     }
   },
-  "components/alert": {
+  "components/alert/nl": {
+    "nl": {
+      "alert": {
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.none}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.md}"
+        },
+        "border-inline-start-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.md}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.column.xl}"
+        },
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.3xl}"
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.3xl}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-block-size}"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.3xl}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.xl}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "body": {
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          }
+        },
+        "content": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-document}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.xl}"
+          }
+        },
+        "footer": {
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          }
+        },
+        "header": {
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          }
+        },
+        "heading": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.lg}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.heading.font-weight}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.lg}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.lg}"
+          }
+        },
+        "message": {
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.xl}"
+          }
+        },
+        "error": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.border-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.color-default}"
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.negative.color-default}"
+            }
+          }
+        },
+        "info": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.info.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.info.border-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.info.color-default}"
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.info.color-default}"
+            }
+          }
+        },
+        "success": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.positive.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.positive.border-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.positive.color-default}"
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.positive.color-default}"
+            }
+          }
+        },
+        "warning": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.warning.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.warning.border-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.warning.color-default}"
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.warning.color-default}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/alert/utrecht": {
     "utrecht": {
       "alert": {
         "background-color": {
@@ -15478,7 +15690,8 @@
       "common",
       "components/accordion",
       "components/action-group",
-      "components/alert",
+      "components/alert/nl",
+      "components/alert/utrecht",
       "components/avatar",
       "components/backdrop",
       "components/blockquote",
