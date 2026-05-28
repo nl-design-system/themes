@@ -2,51 +2,17 @@
   "brand": {
     "groningen": {
       "color": {
-        "white": {
-          "$type": "color",
-          "$value": "#ffffff"
-        },
         "black": {
           "$type": "color",
           "$value": "#0F0C0B"
         },
+        "white": {
+          "$type": "color",
+          "$value": "#ffffff"
+        },
         "accent": {
           "$type": "color",
           "$value": "#E10019"
-        },
-        "lightblue": {
-          "dark": {
-            "$type": "color",
-            "$value": "#055FA5"
-          },
-          "light": {
-            "$type": "color",
-            "$value": "#EBF0FA"
-          }
-        },
-        "blue": {
-          "dark": {
-            "$type": "color",
-            "$value": "#283773"
-          },
-          "light": {
-            "$type": "color",
-            "$value": "#EBE6EB"
-          }
-        },
-        "interactive": {
-          "link": {
-            "$type": "color",
-            "$value": "#0057A3"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{groningen.color.blue.dark}"
-          },
-          "cta": {
-            "$type": "color",
-            "$value": "{groningen.color.lightblue.dark}"
-          }
         },
         "grey": {
           "dark": {
@@ -70,51 +36,24 @@
             "$value": "#929494"
           }
         },
-        "state": {
-          "information": {
-            "bg": {
-              "$type": "color",
-              "$value": "#EBF0FA"
-            },
-            "text": {
-              "$type": "color",
-              "$value": "#283773"
-            }
+        "lightblue": {
+          "dark": {
+            "$type": "color",
+            "$value": "#055FA5"
           },
-          "success": {
-            "bg": {
-              "$type": "color",
-              "$value": "#EBF5F5"
-            },
-            "text": {
-              "$type": "color",
-              "$value": "#00693C"
-            }
+          "light": {
+            "$type": "color",
+            "$value": "#EBF0FA"
+          }
+        },
+        "blue": {
+          "dark": {
+            "$type": "color",
+            "$value": "#283773"
           },
-          "warning": {
-            "background": {
-              "$type": "color",
-              "$value": "#FFDCAD"
-            },
-            "text": {
-              "$type": "color",
-              "$value": "#704000"
-            }
-          },
-          "error": {
-            "bg": {
-              "$type": "color",
-              "$value": "#FBDBE1"
-            },
-            "text": {
-              "$type": "color",
-              "$value": "#5C000F"
-            },
-            "message": {
-              "$type": "color",
-              "$value": "#B40013",
-              "$description": "Error message description on white background - text color seems to be quite dark"
-            }
+          "light": {
+            "$type": "color",
+            "$value": "#EBE6EB"
           }
         },
         "pink": {
@@ -155,6 +94,63 @@
           "light": {
             "$type": "color",
             "$value": "#E6EBE6"
+          }
+        },
+        "interactive": {
+          "hover": {
+            "$type": "color",
+            "$value": "{groningen.color.blue.dark}"
+          },
+          "cta": {
+            "$type": "color",
+            "$value": "{groningen.color.lightblue.dark}"
+          }
+        },
+        "state": {
+          "information": {
+            "text": {
+              "$type": "color",
+              "$value": "#283773"
+            },
+            "bg": {
+              "$type": "color",
+              "$value": "#EBF0FA"
+            }
+          },
+          "success": {
+            "text": {
+              "$type": "color",
+              "$value": "#00693C"
+            },
+            "bg": {
+              "$type": "color",
+              "$value": "#EBF5F5"
+            }
+          },
+          "warning": {
+            "text": {
+              "$type": "color",
+              "$value": "#704000"
+            },
+            "background": {
+              "$type": "color",
+              "$value": "#FFDCAD"
+            }
+          },
+          "error": {
+            "text": {
+              "$type": "color",
+              "$value": "#5C000F"
+            },
+            "bg": {
+              "$type": "color",
+              "$value": "#FBDBE1"
+            },
+            "message": {
+              "$type": "color",
+              "$value": "#B40013",
+              "$description": "Error message description on white background - text color seems to be quite dark"
+            }
           }
         }
       }
