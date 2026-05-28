@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 5.0.2
+
+### Patch Changes
+
+- 88506b4: Add component tokens with values for the doc site
+
 ## 5.0.1
 
 ### Patch Changes
