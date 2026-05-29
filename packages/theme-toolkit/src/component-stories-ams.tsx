@@ -23,8 +23,8 @@ import {
   Image,
   PasswordInput,
   FileInput,
+  Tabs,
 } from '@amsterdam/design-system-react';
-import { Tabs } from '@amsterdam/design-system-react/src';
 
 import {
   CameraIcon,
@@ -176,7 +176,7 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     // group: ...,
     name: 'Amsterdam Accordion',
     render: () => (
-      <Accordion headingLevel={1}>
+      <Accordion headingLevel={2}>
         <Accordion.Section label="Verhuizing doorgeven per post">
           <Paragraph>
             We richten de rotonde bij de Bouhuijstunnel opnieuw in en maken het veiliger. We passen ook het fiets- en

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Paragraph } from '@amsterdam/design-system-react';
-import { Tabs } from '@amsterdam/design-system-react/src';
+import { Paragraph, Tabs } from '@amsterdam/design-system-react';
 
 const meta = {
   id: 'ams-tabs',
