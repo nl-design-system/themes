@@ -69,6 +69,7 @@ import {
   DataListValue as FormSummaryValue,
 } from '@utrecht/component-library-react/dist/css-module';
 import { Root } from '@utrecht/root-react/css';
+import { PageBody } from '@utrecht/page-body-react/css';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { clsx } from 'clsx';
@@ -3274,6 +3275,28 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.root.font-size',
         'utrecht.root.font-weight',
         'utrecht.root.line-height',
+      ],
+    },
+  },
+  {
+    storyId: 'react-page-body--default',
+    component: 'utrecht-page-body',
+    group: STORY_GROUPS['PAGE_BODY'],
+    name: 'Utrecht Page Body',
+    render: () => <PageBody>The Quick Brown Fox Jumps Over The Lazy Dog</PageBody>,
+    detectTokens: {
+      anyOf: [
+        'utrecht.page-body.padding-inline-end',
+        'utrecht.page-body.padding-inline-start',
+        'utrecht.page-body.padding-block-end',
+        'utrecht.page-body.padding-block-start',
+        'utrecht.page-body.content.background-color',
+        'utrecht.page-body.content.color',
+        'utrecht.page-body.content.max-inline-size',
+        'utrecht.page-body.content.padding-inline-end',
+        'utrecht.page-body.content.padding-inline-start',
+        'utrecht.page-body.content.padding-block-end',
+        'utrecht.page-body.content.padding-block-start',
       ],
     },
   },

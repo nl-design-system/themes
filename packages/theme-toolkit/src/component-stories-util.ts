@@ -48,6 +48,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   SKIP_LINK: 'Skip Link',
   MARK: 'Mark',
   ROOT: 'Root',
+  PAGE_BODY: 'Page Body',
 };
 
 export interface ComponentStory {
