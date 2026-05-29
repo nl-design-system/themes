@@ -13,6 +13,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   PARAGRAPH: 'Paragraph',
   HEADINGS: 'Headings',
   LISTS: 'Lists',
+  TABS: 'Tabs',
   TEXTBOX: 'Textbox',
   TEXTAREA: 'Textarea',
   SELECT: 'Select',
