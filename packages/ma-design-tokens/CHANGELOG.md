@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 5.2.0
+
+### Minor Changes
+
+- e571dcb: Nieuwe design tokens toegevoegd voor Side-navigation component van Den Haag.
+
 ## 5.1.0
 
 ### Minor Changes
