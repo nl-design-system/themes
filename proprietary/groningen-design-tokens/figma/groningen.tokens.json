@@ -2549,7 +2549,7 @@
           }
         },
         "outline-offset": {
-          "$type": "other",
+          "$type": "dimension",
           "$value": "0px"
         },
         "outline-style": {
@@ -2669,6 +2669,10 @@
           }
         },
         "focus": {
+          "accent-color": {
+            "$type": "color",
+            "$value": "{basis.focus.background-color}"
+          },
           "background-color": {
             "$type": "color",
             "$value": "{basis.focus.background-color}"
@@ -2709,6 +2713,10 @@
           }
         },
         "invalid": {
+          "accent-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.background-color}"
+          },
           "background-color": {
             "$type": "color",
             "$value": "{basis.form-control.background-color}"
@@ -2727,6 +2735,10 @@
           }
         },
         "read-only": {
+          "accent-color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.bg-default}"
+          },
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.disabled.bg-default}"
@@ -3548,7 +3560,7 @@
         "separator": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.color-subtle}"
+            "$value": "{basis.color.action-2.color-default}"
           },
           "icon": {
             "size": {
@@ -3668,7 +3680,7 @@
         "separator": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.color-subtle}"
+            "$value": "{basis.color.action-2.color-default}"
           },
           "size": {
             "$type": "dimension",
@@ -5732,11 +5744,11 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.default.border-default}"
+          "$value": "{basis.form-control.border-color}"
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "{basis.border-radius.sm}"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
@@ -5837,7 +5849,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.bg-document}"
+            "$value": "{basis.color.action-1-inverse.color-default}"
           }
         },
         "indeterminate": {
@@ -5855,7 +5867,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.bg-document}"
+            "$value": "{basis.color.action-1-inverse.color-default}"
           }
         }
       }
@@ -5878,7 +5890,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           },
           "disabled": {
@@ -5898,11 +5910,11 @@
           "focus-visible": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.form-control.accent-color}"
+              "$value": "{basis.form-control.focus.accent-color}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "{basis.form-control.focus.border-color}"
             },
             "border-width": {
               "$type": "dimension",
@@ -5910,7 +5922,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.form-control.focus.background-color}"
+              "$value": "{basis.form-control.focus.color}"
             }
           },
           "hover": {
@@ -5928,7 +5940,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-hover}"
             }
           }
         },
@@ -5948,7 +5960,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           },
           "disabled": {
@@ -5968,7 +5980,7 @@
           "focus-visible": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.form-control.accent-color}"
+              "$value": "{basis.form-control.focus.accent-color}"
             },
             "border-color": {
               "$type": "color",
@@ -5980,7 +5992,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.form-control.focus.background-color}"
+              "$value": "{basis.form-control.focus.color}"
             }
           },
           "hover": {
@@ -5998,7 +6010,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-hover}"
             }
           }
         }
@@ -11374,12 +11386,12 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{basis.space.none}",
           "$description": "[code-only]"
         },
         "margin-inline-end": {
@@ -11497,7 +11509,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.bg-document}"
+            "$value": "{basis.color.action-1-inverse.color-default}"
           },
           "active": {
             "background-color": {
@@ -11514,17 +11526,17 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           },
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.form-control.accent-color}"
+              "$value": "{basis.form-control.focus.accent-color}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "{basis.form-control.focus.border-color}"
             },
             "border-width": {
               "$type": "dimension",
@@ -11532,7 +11544,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.form-control.focus.background-color}"
+              "$value": "{basis.form-control.focus.color}"
             }
           },
           "hover": {
@@ -11550,7 +11562,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-hover}"
             }
           }
         }
@@ -11562,7 +11574,7 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.form-control.disabled.background-color}"
+              "$value": "{basis.form-control.disabled.accent-color}"
             },
             "border-color": {
               "$type": "color",
@@ -11570,7 +11582,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.form-control.disabled.accent-color}"
+              "$value": "{basis.form-control.disabled.color}"
             }
           }
         }
