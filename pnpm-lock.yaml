@@ -522,6 +522,9 @@ importers:
       '@utrecht/page-body-react':
         specifier: 1.0.13
         version: 1.0.13(@babel/runtime@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@utrecht/page-layout-react':
+        specifier: 1.0.12
+        version: 1.0.12(@babel/runtime@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@utrecht/root-react':
         specifier: 1.0.16
         version: 1.0.16(@babel/runtime@7.29.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -963,6 +966,9 @@ importers:
       '@utrecht/page-header-css':
         specifier: 1.5.0
         version: 1.5.0
+      '@utrecht/page-layout-react':
+        specifier: 1.0.12
+        version: 1.0.12(@babel/runtime@7.25.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@utrecht/pagination-css':
         specifier: 1.4.0
         version: 1.4.0
@@ -1243,6 +1249,9 @@ importers:
       '@utrecht/page-body-react':
         specifier: 1.0.13
         version: 1.0.13(@babel/runtime@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@utrecht/page-layout-react':
+        specifier: 1.0.12
+        version: 1.0.12(@babel/runtime@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@utrecht/root-react':
         specifier: 1.0.16
         version: 1.0.16(@babel/runtime@7.29.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -5097,6 +5106,16 @@ packages:
 
   '@utrecht/page-layout-css@2.0.1':
     resolution: {integrity: sha512-FXLvM6A4Lex+Miz9cuDjFuoC+HeFBu78oMvFU88c4D01Jnso2gKaZHRy3XT8UqKJbE8z0rNzRTwoztOlBVqFIw==}
+
+  '@utrecht/page-layout-css@4.0.1':
+    resolution: {integrity: sha512-7Ut/zjYPOqt/07OvlRSK2PZ19RBkmKFufvOrFit9LsyiO/ZgAyRTMcBwLm3eXJg5d4MQHxtAP3LTj38krm0K0w==}
+
+  '@utrecht/page-layout-react@1.0.12':
+    resolution: {integrity: sha512-bPeKsPYMmnrp4rb+uzM/wZPicBV6SQJIo+XSzf0yg6mg0ccG3jrW1fvXVvhhxMgAU8aFKMBAanirLP3CIpn26w==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   '@utrecht/page-layout-react@1.0.9':
     resolution: {integrity: sha512-zzGb5ftmQdFx51TH8+qGgRlIjDr7kek1d7nVCyTdTF1YpLkvJ7aR2/ZuCHIvE0I6wIWT74N6CKa7UcgpYBN83g==}
@@ -13547,6 +13566,24 @@ snapshots:
       react-dom: 19.2.3(react@19.2.3)
 
   '@utrecht/page-layout-css@2.0.1': {}
+
+  '@utrecht/page-layout-css@4.0.1': {}
+
+  '@utrecht/page-layout-react@1.0.12(@babel/runtime@7.25.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/page-layout-css': 4.0.1
+      clsx: 2.1.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
+  '@utrecht/page-layout-react@1.0.12(@babel/runtime@7.28.6)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@babel/runtime': 7.28.6
+      '@utrecht/page-layout-css': 4.0.1
+      clsx: 2.1.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
   '@utrecht/page-layout-react@1.0.9(@babel/runtime@7.25.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:

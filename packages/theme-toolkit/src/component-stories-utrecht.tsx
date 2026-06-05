@@ -37,7 +37,7 @@ import {
   // Page ,
   // PageContent ,
   PageFooter,
-  // PageHeader ,
+  PageHeader,
   // Pagination ,
   Select,
   SelectOption,
@@ -70,6 +70,7 @@ import {
 } from '@utrecht/component-library-react/dist/css-module';
 import { Root } from '@utrecht/root-react/css';
 import { PageBody } from '@utrecht/page-body-react/css';
+import { PageLayout } from '@utrecht/page-layout-react/css';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { clsx } from 'clsx';
@@ -3298,6 +3299,24 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.page-body.content.padding-block-end',
         'utrecht.page-body.content.padding-block-start',
       ],
+    },
+  },
+  {
+    storyId: 'react-page-layout--default',
+    component: 'utrecht-page-layout',
+    group: STORY_GROUPS['PAGE_LAYOUT'],
+    name: 'Utrecht Page Layout',
+    render: () => (
+      <PageLayout>
+        <PageHeader>Header area</PageHeader>
+        <PageBody>
+          <main>Content area</main>
+        </PageBody>
+        <PageFooter>Footer area</PageFooter>
+      </PageLayout>
+    ),
+    detectTokens: {
+      anyOf: [],
     },
   },
 ];
