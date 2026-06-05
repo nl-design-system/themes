@@ -10,11 +10,11 @@ const meta = {
   args: {
     children: (
       <>
-        <PageHeader>Header area</PageHeader>,
+        <PageHeader>Header area</PageHeader>
         <PageBody>
           <main>Content area</main>
         </PageBody>
-        ,<PageFooter>Footer area</PageFooter>,
+        <PageFooter>Footer area</PageFooter>
       </>
     ),
   },
