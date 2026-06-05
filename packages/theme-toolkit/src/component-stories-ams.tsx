@@ -23,6 +23,7 @@ import {
   Image,
   PasswordInput,
   FileInput,
+  Tabs,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -175,7 +176,7 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     // group: ...,
     name: 'Amsterdam Accordion',
     render: () => (
-      <Accordion headingLevel={1}>
+      <Accordion headingLevel={2}>
         <Accordion.Section label="Verhuizing doorgeven per post">
           <Paragraph>
             We richten de rotonde bij de Bouhuijstunnel opnieuw in en maken het veiliger. We passen ook het fiets- en
@@ -499,5 +500,40 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['FILE_INPUT'],
     name: 'Amsterdam File Input',
     render: () => <FileInput />,
+  },
+  {
+    storyId: 'react-ams-tabs--default',
+    component: 'ams-tabs',
+    group: STORY_GROUPS['TABS'],
+    name: 'Amsterdam Tabs',
+    render: () => (
+      <Tabs>
+        <Tabs.List key="list">
+          <Tabs.Button aria-controls="west">West</Tabs.Button>
+          <Tabs.Button aria-controls="centrum">Centrum</Tabs.Button>
+          <Tabs.Button aria-controls="oost">Oost</Tabs.Button>
+        </Tabs.List>
+        <Tabs.Panel id="west" key="west">
+          <Paragraph>
+            Bos en Lommerplein 250
+            <br />
+            1055 EK Amsterdam
+          </Paragraph>
+        </Tabs.Panel>
+        <Tabs.Panel id="centrum" key="centrum">
+          <Paragraph>
+            Amstel 1
+            <br />
+            1011 PN Amsterdam
+          </Paragraph>
+        </Tabs.Panel>
+        <Tabs.Panel id="oost" key="oost">
+          <Paragraph>
+            Oranje-Vrijstaatplein 2<br />
+            1093 NG Amsterdam
+          </Paragraph>
+        </Tabs.Panel>
+      </Tabs>
+    ),
   },
 ];
