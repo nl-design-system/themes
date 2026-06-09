@@ -1,5 +1,22 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 6.2.0
+
+### Minor Changes
+
+- 284d66d: De volgende tokens zijn toegevoegd aan Action (Task Card) component:
+
+  - `denhaag.action.border-radius`
+  - `denhaag.action.font-family`
+
+### Patch Changes
+
+- a3b75d5: - Token `basis.box-shadow.none` is toegevoegd voor dark-mode.
+  - De waarde van de volgende basis-tokens is gewijzigd voor dark-mode:
+    - `basis.box-shadow.sm`
+    - `basis.box-shadow.md`
+    - `basis.box-shadow.lg`
+
 ## 6.1.0
 
 ### Minor Changes
