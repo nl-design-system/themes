@@ -3,6 +3,11 @@ packages:
   - packages/components-react/*
   - proprietary/*
 
+allowBuilds:
+  "@bundled-es-modules/glob": true
+  esbuild: true
+  style-dictionary: true
+
 patchedDependencies:
   "@dynamize/color-utilities@1.0.11": "patches/@dynamize__color-utilities@1.0.11.patch"
 
@@ -34,3 +39,5 @@ minimumReleaseAgeExclude:
 saveExact: true
 
 savePrefix: ""
+
+provenance: true
