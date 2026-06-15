@@ -6,11 +6,10 @@ settings:
 
 overrides:
   form-data@>=4.0.0 <4.0.4: '>=4.0.4'
+  shell-quote@>=1.1.0 <=1.8.3: ^1.8.4
 
 patchedDependencies:
-  '@dynamize/color-utilities@1.0.11':
-    hash: 97941e47008d04ce8cdaf7dfb577725f4d1e1759cf78f5c3fe7f364d681c19ba
-    path: patches/@dynamize__color-utilities@1.0.11.patch
+  '@dynamize/color-utilities@1.0.11': 97941e47008d04ce8cdaf7dfb577725f4d1e1759cf78f5c3fe7f364d681c19ba
 
 importers:
 
@@ -3023,6 +3022,7 @@ packages:
 
   '@dynamize/color-utilities@1.0.11':
     resolution: {integrity: sha512-FFtDaubR7alCrEv8NB4JnnI8bhS8UyFVAbOj8vaWULZMF/e4i4K7bxWGQPWImeTf/APblrws0echaqJ/dRgsrg==}
+    deprecated: This package has been moved to @omnidyon/color-utilities. Please update your dependencies.
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -3734,6 +3734,7 @@ packages:
 
   '@nl-design-system/component-index@1.0.0-alpha.30':
     resolution: {integrity: sha512-PA/xZSL6rUYfBJJp9OmEN0Q05QPT0Z5VFApcE/XyjJnjvkPdzNwYVHpPecXDs2J99YeO1iyOXnyFJBrI68r7Kw==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@nl-design-system/rollup-config-react-component@1.0.2':
     resolution: {integrity: sha512-fWRrAftdVSEbiD7dPKYFyKxsCuU2HRzEZMnkmraEmr+ty/0h19ui6XJbcBMMdkBSZAZbETcwNnv9O/wa5isUOA==}
@@ -4368,6 +4369,7 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@utrecht/accordion-css@1.6.0':
     resolution: {integrity: sha512-0PLGWCgRvFyR8kINBE4v8dsQxxdfKbmC5oEolOF2jGJ7NlmeTE29ODAzlcqwiocWOjM45jgXDK8aRVAle2DObg==}
@@ -6648,6 +6650,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@10.5.0:
@@ -8772,8 +8775,9 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.8.1:
-    resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
+  shell-quote@1.8.4:
+    resolution: {integrity: sha512-VsC6n6vz1ihYYyZZwX7YZSF5l5x36ca17OC+a69h94YqB7X6XLwf+5MOgynYir2SLFUbl8gIYvBo8K8RoNQ6bQ==}
+    engines: {node: '>= 0.4'}
 
   side-channel-list@1.0.0:
     resolution: {integrity: sha512-FCLHtRD/gnpCiCHEiJLOwdmFP+wzCmDEkc9y7NsYxeF4u7Btsn1ZuwgwJGxImImHicJArLP4R0yX4c2KCrMrTA==}
@@ -9499,6 +9503,7 @@ packages:
   whatwg-encoding@2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
     engines: {node: '>=12'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
@@ -17035,7 +17040,7 @@ snapshots:
       minimatch: 3.1.2
       pidtree: 0.3.1
       read-pkg: 3.0.0
-      shell-quote: 1.8.1
+      shell-quote: 1.8.4
       string.prototype.padend: 3.1.4
 
   npm-run-path@4.0.1:
@@ -17958,7 +17963,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shell-quote@1.8.1: {}
+  shell-quote@1.8.4: {}
 
   side-channel-list@1.0.0:
     dependencies:
