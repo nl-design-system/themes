@@ -12,7 +12,7 @@ export const RHC_COMPONENT_STORIES = [
   {
     storyId: 'react-rhc-logo--default',
     component: 'rhc-logo',
-    group: STORY_GROUPS['BADGES'],
+    group: STORY_GROUPS['LOGO'],
     name: 'Rijkshuisstijl Logo',
     render: () => <Logo organisation="Rijkshuisstijl-community" />,
   },
