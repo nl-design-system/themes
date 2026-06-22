@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 5.4.0
+
+### Minor Changes
+
+- bd2233b: Design tokens van Listbox component bijgewerkt.
+
 ## 5.3.0
 
 ### Minor Changes
