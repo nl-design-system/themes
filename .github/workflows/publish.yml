@@ -12,10 +12,14 @@ concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
+permissions: {}
+
 jobs:
   continuous-integration:
     name: Continuous integration
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Download code from GitHub
@@ -88,11 +92,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: continuous-integration
     if: github.ref == 'refs/heads/main'
-
     environment:
       name: github-pages
       url: ${{ steps.deploy-pages.outputs.page_url }}
-
     permissions:
       pages: write
       id-token: write
@@ -107,7 +109,6 @@ jobs:
     needs: continuous-integration
     if: github.ref == 'refs/heads/main'
     environment: publish
-
     permissions:
       id-token: write
 
