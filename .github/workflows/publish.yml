@@ -89,6 +89,8 @@ jobs:
   codecov:
     needs: continuous-integration
     if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
     uses: ./.github/workflows/codecov.yml
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
