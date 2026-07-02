@@ -1,5 +1,20 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 5.5.0
+
+### Minor Changes
+
+- 2dc35c9: Enkele Blockquote tokens aangepast.
+- 41c86f2: Met deze PR voegen we design tokens (incl hun waarde) toe voor:
+
+  - Utrecht's Badge List + Table + Focus States
+  - Den Haag's Icon Button + Task Navigation (focus) + Focus States
+  - Amsterdam's Unordered List
+  - RHC's Card
+
+- 59ef30c: - `basis.page.max-inline-size` aangepast
+  - `denhaag.side-navigation.list.margin-inline-start` aagepast
+
 ## 5.4.0
 
 ### Minor Changes
