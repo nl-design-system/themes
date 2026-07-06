@@ -7708,7 +7708,7 @@
       "grid": {
         "column-count": {
           "$type": "number",
-          "$value": 12
+          "$value": "12"
         },
         "column-gap": {
           "$type": "dimension",
@@ -7749,7 +7749,7 @@
         "vi-medium": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -7759,7 +7759,7 @@
         "vi-wide": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -8304,7 +8304,7 @@
       }
     }
   },
-  "components/icon-button": {
+  "components/icon-button/amsterdam": {
     "ams": {
       "icon-button": {
         "color": {
@@ -8392,6 +8392,56 @@
               "$type": "color",
               "$value": "{basis.color.action-1-inverse.color-hover}"
             }
+          }
+        }
+      }
+    }
+  },
+  "components/icon-button/denhaag": {
+    "denhaag": {
+      "icon-button": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.action-1.color-default}"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.md}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.md}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
+        "focus": {
+          "outline-color": {
+            "$type": "color",
+            "$value": "{basis.focus.outline-color}"
+          },
+          "outline-width": {
+            "$type": "dimension",
+            "$value": "{basis.focus.outline-width}"
+          },
+          "outline-offset": {
+            "$type": "dimension",
+            "$value": "{basis.focus.outline-offset}"
+          },
+          "outline-style": {
+            "$type": "other",
+            "$value": "{basis.focus.outline-style}"
+          }
+        },
+        "hover": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-hover}"
           }
         }
       }
@@ -15686,7 +15736,8 @@
       "components/heading-5",
       "components/heading-6",
       "components/icon",
-      "components/icon-button",
+      "components/icon-button/amsterdam",
+      "components/icon-button/denhaag",
       "components/icon-only-button",
       "components/image",
       "components/link/nl",
