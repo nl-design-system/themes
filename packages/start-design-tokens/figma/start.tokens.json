@@ -11484,6 +11484,14 @@
   "components/side-navigation": {
     "denhaag": {
       "side-navigation": {
+        "display": {
+          "$type": "other",
+          "$value": "flex"
+        },
+        "flex-direction": {
+          "$type": "other",
+          "$value": "column"
+        },
         "min-width": {
           "$type": "dimension",
           "$value": "240px"
@@ -11491,6 +11499,62 @@
         "row-gap": {
           "$type": "dimension",
           "$value": "{basis.space.row.3xl}"
+        },
+        "mobile": {
+          "display": {
+            "$type": "other",
+            "$value": "none"
+          }
+        },
+        "expand-button": {
+          "block-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          },
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          },
+          "transform": {
+            "$type": "other",
+            "$value": "rotate(0deg)"
+          },
+          "transition": {
+            "$type": "other",
+            "$value": "transform 200ms ease-in-out"
+          },
+          "expanded": {
+            "transform": {
+              "$type": "other",
+              "$value": "rotate(180deg)"
+            }
+          }
+        },
+        "expand-separator": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-subtle}"
+          },
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.sm}"
+          },
+          "margin-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.md}"
+          },
+          "margin-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.md}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          }
         },
         "item": {
           "font-family": {
@@ -11535,10 +11599,6 @@
             "$type": "color",
             "$value": "{basis.color.action-2.color-default}"
           },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.max.md}"
-          },
           "padding-block-end": {
             "$type": "dimension",
             "$value": "{basis.space.block.lg}"
@@ -11548,16 +11608,6 @@
             "$value": "{basis.space.block.lg}"
           },
           "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-2.color-active}"
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            }
-          },
-          "current": {
             "color": {
               "$type": "color",
               "$value": "{basis.color.default.color-document}"
@@ -11572,38 +11622,18 @@
               "$type": "color",
               "$value": "{basis.color.action-2.color-hover}"
             }
+          },
+          "label": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{basis.space.column.md}"
+            }
           }
         },
         "list": {
-          "padding-block-end": {
+          "margin-inline-start": {
             "$type": "dimension",
             "$value": "{basis.space.none}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.none}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.none}"
-          }
-        }
-      }
-    },
-    "todo": {
-      "side-navigation": {
-        "link": {
-          "hover": {
-            "text-decoration": {
-              "$type": "textDecoration",
-              "$value": "underline"
-            }
-          },
-          "icon": {
-            "size": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
           }
         }
       }
