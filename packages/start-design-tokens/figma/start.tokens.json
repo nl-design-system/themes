@@ -5629,6 +5629,12 @@
               "type": "color"
             }
           },
+          "icon": {
+            "color": {
+              "value": "{todo.card-as-link.icon.color}",
+              "type": "color"
+            }
+          },
           "metadata": {
             "color": {
               "value": "{todo.card-as-link.case.color}",
@@ -5719,20 +5725,6 @@
             "value": "{basis.color.default.color-document}",
             "type": "color"
           },
-          "hover": {
-            "background-color": {
-              "value": "{basis.color.accent-1.bg-hover}",
-              "type": "color"
-            },
-            "border-color": {
-              "value": "{basis.color.accent-1.bg-active}",
-              "type": "color"
-            },
-            "color": {
-              "value": "{todo.card-as-link.case.color}",
-              "type": "color"
-            }
-          },
           "active": {
             "background-color": {
               "value": "{basis.color.accent-1.bg-active}",
@@ -5747,48 +5739,26 @@
               "type": "color"
             }
           },
+          "hover": {
+            "background-color": {
+              "value": "{basis.color.accent-1.bg-hover}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{basis.color.accent-1.bg-active}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{todo.card-as-link.case.color}",
+              "type": "color"
+            }
+          },
           "decoration": {
             "clip": {
               "color": {
-                "value": "{basis.color.accent-1-inverse.bg-default}",
+                "value": "{basis.color.accent-1.border-subtle}",
                 "type": "color"
               }
-            }
-          },
-          "heading": {
-            "color": {
-              "value": "{basis.heading.color}",
-              "type": "color"
-            }
-          },
-          "icon": {
-            "color": {
-              "value": "{basis.color.action-1.color-default}",
-              "type": "color"
-            }
-          },
-          "metadata": {
-            "color": {
-              "value": "{todo.card-as-link.plan.color}",
-              "type": "color"
-            }
-          },
-          "header": {
-            "padding-block-end": {
-              "value": "{basis.space.none}",
-              "type": "dimension"
-            },
-            "padding-block-start": {
-              "value": "{basis.space.none}",
-              "type": "dimension"
-            },
-            "padding-inline-end": {
-              "value": "{basis.space.none}",
-              "type": "dimension"
-            },
-            "padding-inline-start": {
-              "value": "{basis.space.none}",
-              "type": "dimension"
             }
           },
           "body": {
@@ -5813,6 +5783,42 @@
             "padding-inline-start": {
               "value": "{basis.space.inline.3xl}",
               "type": "dimension"
+            }
+          },
+          "header": {
+            "padding-block-end": {
+              "value": "{basis.space.none}",
+              "type": "dimension"
+            },
+            "padding-block-start": {
+              "value": "{basis.space.none}",
+              "type": "dimension"
+            },
+            "padding-inline-end": {
+              "value": "{basis.space.none}",
+              "type": "dimension"
+            },
+            "padding-inline-start": {
+              "value": "{basis.space.none}",
+              "type": "dimension"
+            }
+          },
+          "heading": {
+            "color": {
+              "value": "{basis.heading.color}",
+              "type": "color"
+            }
+          },
+          "icon": {
+            "color": {
+              "value": "{todo.card-as-link.icon.color}",
+              "type": "color"
+            }
+          },
+          "metadata": {
+            "color": {
+              "value": "{todo.card-as-link.plan.color}",
+              "type": "color"
             }
           },
           "archived": {
@@ -5859,7 +5865,7 @@
             "decoration": {
               "clip": {
                 "color": {
-                  "value": "{basis.color.default-inverse.bg-default}",
+                  "value": "{basis.color.default.border-subtle}",
                   "type": "color"
                 }
               }
