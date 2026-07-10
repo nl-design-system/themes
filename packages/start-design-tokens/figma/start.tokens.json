@@ -5370,41 +5370,69 @@
           "value": "{basis.color.default.bg-document}",
           "type": "color"
         },
-        "color": {
-          "value": "{basis.color.default.color-document}",
-          "type": "color"
-        },
         "border-color": {
           "value": "{basis.color.default.border-default}",
           "type": "color"
-        },
-        "border-width": {
-          "value": "{basis.border-width.sm}",
-          "type": "dimension"
         },
         "border-radius": {
           "value": "{basis.border-radius.md}",
           "type": "dimension"
         },
-        "header": {
-          "padding-block-end": {
-            "value": "{basis.space.none}",
-            "type": "dimension"
+        "border-width": {
+          "value": "{basis.border-width.sm}",
+          "type": "dimension"
+        },
+        "color": {
+          "value": "{basis.color.default.color-document}",
+          "type": "color"
+        },
+        "active": {
+          "background-color": {
+            "value": "{basis.color.default.bg-active}",
+            "type": "color"
           },
-          "padding-block-start": {
-            "value": "{basis.space.block.xl}",
-            "type": "dimension"
+          "border-color": {
+            "value": "{basis.color.default.border-active}",
+            "type": "color"
           },
-          "padding-inline-end": {
-            "value": "{basis.space.inline.xl}",
-            "type": "dimension"
+          "color": {
+            "value": "{todo.card-as-link.color}",
+            "type": "color"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "value": "{basis.focus.background-color}",
+            "type": "color"
           },
-          "padding-inline-start": {
-            "value": "{basis.space.inline.xl}",
-            "type": "dimension"
+          "border-color": {
+            "value": "{basis.color.transparent}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{basis.focus.color}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "background-color": {
+            "value": "{basis.color.default.bg-hover}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{basis.color.default.border-hover}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{todo.card-as-link.color}",
+            "type": "color"
           }
         },
         "body": {
+          "column-gap": {
+            "value": "{basis.space.column.md}",
+            "type": "dimension"
+          },
           "padding-block-end": {
             "value": "{basis.space.block.xl}",
             "type": "dimension"
@@ -5427,6 +5455,10 @@
           }
         },
         "footer": {
+          "column-gap": {
+            "value": "{basis.space.column.md}",
+            "type": "dimension"
+          },
           "padding-block-end": {
             "value": "{basis.space.block.xl}",
             "type": "dimension"
@@ -5441,6 +5473,36 @@
           },
           "padding-inline-start": {
             "value": "{basis.space.inline.xl}",
+            "type": "dimension"
+          },
+          "row-gap": {
+            "value": "{basis.space.row.md}",
+            "type": "dimension"
+          }
+        },
+        "header": {
+          "column-gap": {
+            "value": "{basis.space.column.md}",
+            "type": "dimension"
+          },
+          "padding-block-end": {
+            "value": "{basis.space.none}",
+            "type": "dimension"
+          },
+          "padding-block-start": {
+            "value": "{basis.space.block.xl}",
+            "type": "dimension"
+          },
+          "padding-inline-end": {
+            "value": "{basis.space.inline.xl}",
+            "type": "dimension"
+          },
+          "padding-inline-start": {
+            "value": "{basis.space.inline.xl}",
+            "type": "dimension"
+          },
+          "row-gap": {
+            "value": "{basis.space.row.md}",
             "type": "dimension"
           }
         },
@@ -5464,48 +5526,6 @@
           "line-height": {
             "value": "{basis.text.line-height.xl}",
             "type": "lineHeights"
-          }
-        },
-        "hover": {
-          "background-color": {
-            "value": "{basis.color.default.bg-hover}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{todo.card-as-link.color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{basis.color.default.border-hover}",
-            "type": "color"
-          }
-        },
-        "active": {
-          "background-color": {
-            "value": "{basis.color.default.bg-active}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{todo.card-as-link.color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{basis.color.default.border-active}",
-            "type": "color"
-          }
-        },
-        "focus": {
-          "background-color": {
-            "value": "{basis.focus.background-color}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{basis.focus.color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{basis.color.transparent}",
-            "type": "color"
           }
         },
         "case": {
@@ -5552,20 +5572,6 @@
             },
             "border-color": {
               "value": "{todo.card-as-link.case.border-color}",
-              "type": "color"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "value": "{basis.focus.background-color}",
-              "type": "color"
-            },
-            "color": {
-              "value": "{basis.focus.color}",
-              "type": "color"
-            },
-            "border-color": {
-              "value": "{basis.color.transparent}",
               "type": "color"
             }
           },
