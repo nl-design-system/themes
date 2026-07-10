@@ -1,5 +1,12 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 12.0.0
+
+### Major Changes
+
+- 0f0b2d5: - Side Navigation tokens van Den Haag bijgewerkt.
+  - Icon Button tokens van Den Haag toegevoegd.
+
 ## 11.3.0
 
 ### Minor Changes

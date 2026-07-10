@@ -1,5 +1,12 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 6.0.0
+
+### Major Changes
+
+- 0f0b2d5: - Side Navigation tokens van Den Haag bijgewerkt.
+  - Icon Button tokens van Den Haag toegevoegd.
+
 ## 5.5.0
 
 ### Minor Changes
