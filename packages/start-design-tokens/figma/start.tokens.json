@@ -5484,6 +5484,20 @@
             "type": "dimension"
           }
         },
+        "description": {
+          "color": {
+            "value": "{basis.color.default.color-subtle}",
+            "type": "color"
+          },
+          "font-size": {
+            "value": "{basis.text.font-size.md}",
+            "type": "fontSizes"
+          },
+          "line-height": {
+            "value": "{basis.text.line-height.md}",
+            "type": "lineHeights"
+          }
+        },
         "header": {
           "column-gap": {
             "value": "{basis.space.column.md}",
@@ -5544,17 +5558,29 @@
         },
         "label": {
           "color": {
-            "value": "{todo.card-as-link.plan.color}",
+            "value": "{todo.card-as-link.color}",
             "type": "color"
+          },
+          "font-family": {
+            "value": "{basis.text.font-family.default}",
+            "type": "fontFamilies"
+          },
+          "font-size": {
+            "value": "{basis.text.font-size.md}",
+            "type": "fontSizes"
           },
           "font-weight": {
             "value": "{basis.text.font-weight.bold}",
             "type": "fontWeights"
+          },
+          "line-height": {
+            "value": "{basis.text.line-height.md}",
+            "type": "lineHeights"
           }
         },
         "metadata": {
           "color": {
-            "value": "{todo.card-as-link.case.color}",
+            "value": "{todo.card-as-link.color}",
             "type": "color"
           }
         },
@@ -5959,10 +5985,6 @@
             "size": {
               "value": "{basis.size.icon.4xl}",
               "type": "dimension"
-            },
-            "color": {
-              "value": "{todo.card-as-link.toptask.color}",
-              "type": "color"
             }
           }
         }
