@@ -7803,86 +7803,6 @@
       }
     }
   },
-  "components/grid": {
-    "ams": {
-      "grid": {
-        "column-count": {
-          "$type": "number",
-          "$value": 12
-        },
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.column.xl}"
-        },
-        "padding-block": {
-          "l": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "xl": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.3xl}"
-          },
-          "2xl": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.6xl}"
-          }
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{basis.space.none}"
-        },
-        "row-gap": {
-          "l": {
-            "$type": "dimension",
-            "$value": "{basis.space.row.xl}"
-          },
-          "xl": {
-            "$type": "dimension",
-            "$value": "{basis.space.row.3xl}"
-          },
-          "2xl": {
-            "$type": "dimension",
-            "$value": "{basis.space.row.5xl}"
-          }
-        },
-        "vi-medium": {
-          "column-count": {
-            "$type": "number",
-            "$value": 12
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.none}"
-          }
-        },
-        "vi-wide": {
-          "column-count": {
-            "$type": "number",
-            "$value": 12
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.none}"
-          }
-        },
-        "cell": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "padding-block": {
-            "$type": "dimension",
-            "$value": "{basis.space.none}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.none}"
-          }
-        }
-      }
-    }
-  },
   "components/heading/nl": {
     "nl": {
       "heading": {
@@ -8419,7 +8339,7 @@
       }
     }
   },
-  "components/icon-button": {
+  "components/icon-button/amsterdam": {
     "ams": {
       "icon-button": {
         "color": {
@@ -8507,6 +8427,56 @@
               "$type": "color",
               "$value": "{basis.color.action-1-inverse.color-hover}"
             }
+          }
+        }
+      }
+    }
+  },
+  "components/icon-button/den-haag": {
+    "denhaag": {
+      "icon-button": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.action-1.color-default}"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.lg}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.lg}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.lg}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.lg}"
+        },
+        "focus": {
+          "outline-color": {
+            "$type": "color",
+            "$value": "{basis.focus.outline-color}"
+          },
+          "outline-offset": {
+            "$type": "dimension",
+            "$value": "{basis.focus.outline-offset}"
+          },
+          "outline-style": {
+            "$type": "other",
+            "$value": "{basis.focus.outline-style}"
+          },
+          "outline-width": {
+            "$type": "dimension",
+            "$value": "{basis.focus.outline-width}"
+          }
+        },
+        "hover": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-hover}"
           }
         }
       }
@@ -11857,6 +11827,14 @@
   "components/side-navigation": {
     "denhaag": {
       "side-navigation": {
+        "display": {
+          "$type": "other",
+          "$value": "flex"
+        },
+        "flex-direction": {
+          "$type": "other",
+          "$value": "column"
+        },
         "min-width": {
           "$type": "dimension",
           "$value": "240px"
@@ -11864,6 +11842,62 @@
         "row-gap": {
           "$type": "dimension",
           "$value": "{basis.space.row.3xl}"
+        },
+        "mobile": {
+          "display": {
+            "$type": "other",
+            "$value": "None"
+          }
+        },
+        "expand-button": {
+          "block-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          },
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          },
+          "transform": {
+            "$type": "other",
+            "$value": "rotate(0deg)"
+          },
+          "transition": {
+            "$type": "other",
+            "$value": "None"
+          },
+          "expanded": {
+            "transform": {
+              "$type": "other",
+              "$value": "rotate(180deg)"
+            }
+          }
+        },
+        "expand-separator": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-subtle}"
+          },
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.sm}"
+          },
+          "margin-inline-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.md}"
+          },
+          "margin-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.md}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          }
         },
         "item": {
           "font-family": {
@@ -11884,22 +11918,22 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-inline-end": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-inline-start": {
             "$type": "dimension",
-            "$value": "0px",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           }
         },
@@ -11907,10 +11941,6 @@
           "color": {
             "$type": "color",
             "$value": "{basis.color.action-2.color-default}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.max.md}"
           },
           "padding-block-end": {
             "$type": "dimension",
@@ -11927,17 +11957,7 @@
             },
             "font-weight": {
               "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.medium}"
-            }
-          },
-          "current": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-document}"
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.medium}"
+              "$value": "{basis.text.font-weight.bold}"
             }
           },
           "hover": {
@@ -11945,38 +11965,18 @@
               "$type": "color",
               "$value": "{basis.color.action-2.color-hover}"
             }
+          },
+          "label": {
+            "gap": {
+              "$type": "dimension",
+              "$value": "{basis.space.column.md}"
+            }
           }
         },
         "list": {
-          "padding-block-end": {
+          "margin-inline-start": {
             "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "0px"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "0px"
-          }
-        }
-      }
-    },
-    "todo": {
-      "side-navigation": {
-        "link": {
-          "hover": {
-            "text-decoration": {
-              "$type": "textDecoration",
-              "$value": "underline"
-            }
-          },
-          "icon": {
-            "size": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.md}"
-            }
+            "$value": "{basis.space.inline.4xl}"
           }
         }
       }
@@ -15721,7 +15721,6 @@
       "components/form-field-label",
       "components/form-field-label-suffix",
       "components/form-summary",
-      "components/grid",
       "components/heading/nl",
       "components/heading/amsterdam",
       "components/heading-1",
@@ -15732,7 +15731,8 @@
       "components/heading-6",
       "components/image",
       "components/icon",
-      "components/icon-button",
+      "components/icon-button/amsterdam",
+      "components/icon-button/den-haag",
       "components/icon-only-button",
       "components/link/nl",
       "components/link/utrecht",
