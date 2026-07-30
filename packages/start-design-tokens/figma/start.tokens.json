@@ -5386,6 +5386,10 @@
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
         },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "48rem"
+        },
         "min-block-size": {
           "$type": "dimension",
           "$value": "{basis.pointer-target.min-block-size}"
@@ -5417,10 +5421,6 @@
           }
         },
         "description": {
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.default.color-subtle}"
-          },
           "font-size": {
             "$type": "fontSizes",
             "$value": "{basis.text.font-size.md}"
@@ -5485,17 +5485,21 @@
         "icon": {
           "color": {
             "$type": "color",
-            "$value": "{basis.color.action-1.color-default}"
+            "$value": "{todo.card-as-link.color}"
+          },
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.3xl}"
+          }
+        },
+        "link-icon": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
           },
           "size": {
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
-          }
-        },
-        "metadata": {
-          "color": {
-            "$type": "color",
-            "$value": "{todo.card-as-link.color}"
           }
         },
         "pre-header": {
@@ -5580,50 +5584,6 @@
             "$value": "{basis.focus.color}"
           }
         },
-        "decoration": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.md}"
-          },
-          "padding-block": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.md}"
-          },
-          "info": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.info.bg-default}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.info.color-default}"
-            }
-          },
-          "success": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.positive.bg-default}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.positive.color-default}"
-            }
-          },
-          "warning": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.warning.bg-default}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.warning.color-default}"
-            }
-          }
-        },
         "heading": {
           "color": {
             "$type": "color",
@@ -5688,6 +5648,50 @@
             }
           }
         },
+        "status-banner": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.md}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          },
+          "default": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.info.bg-default}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.info.color-default}"
+            }
+          },
+          "success": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.positive.bg-default}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.positive.color-default}"
+            }
+          },
+          "warning": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.warning.bg-default}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.warning.color-default}"
+            }
+          }
+        },
         "topic": {
           "border-radius": {
             "$type": "dimension",
@@ -5697,36 +5701,14 @@
             "$type": "dimension",
             "$value": "{basis.border-width.sm}"
           },
-          "header": {
-            "padding-block-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.block.xl}"
-            }
-          },
           "icon": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.accent-1-inverse.bg-default}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "border-radius": {
-              "$type": "dimension",
-              "$value": "{basis.border-radius.round}"
-            },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.accent-1-inverse.color-default}"
+              "$value": "{basis.color.accent-1.color-default}"
             },
-            "padding-block": {
+            "size": {
               "$type": "dimension",
-              "$value": "{basis.space.block.sm}"
-            },
-            "padding-inline": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.sm}"
+              "$value": "{basis.size.icon.xl}"
             }
           },
           "pre-header": {
@@ -5827,16 +5809,10 @@
               "$value": "{basis.heading.color}"
             }
           },
-          "icon": {
+          "link-icon": {
             "color": {
               "$type": "color",
-              "$value": "{todo.card-as-link.icon.color}"
-            }
-          },
-          "metadata": {
-            "color": {
-              "$type": "color",
-              "$value": "{todo.card-as-link.case.color}"
+              "$value": "{todo.card-as-link.link-icon.color}"
             }
           },
           "active": {
@@ -5892,16 +5868,10 @@
                 "$value": "{basis.heading.color}"
               }
             },
-            "icon": {
+            "link-icon": {
               "color": {
                 "$type": "color",
                 "$value": "{basis.color.default.color-default}"
-              }
-            },
-            "metadata": {
-              "color": {
-                "$type": "color",
-                "$value": "{todo.card-as-link.case.archived.color}"
               }
             },
             "active": {
@@ -5955,14 +5925,15 @@
             "$type": "dimension",
             "$value": "{basis.border-radius.none}"
           },
-          "border-style": {
-            "$type": "other",
-            "$value": "dashed",
-            "$description": "[code-only]"
-          },
           "border-width": {
             "$type": "dimension",
             "$value": "{basis.border-width.sm}"
+          },
+          "body": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            }
           },
           "footer": {
             "padding-inline-start": {
@@ -5974,36 +5945,6 @@
             "padding-block-end": {
               "$type": "dimension",
               "$value": "{basis.space.block.xl}"
-            }
-          },
-          "icon": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.default.border-default}"
-            },
-            "border-radius": {
-              "$type": "dimension",
-              "$value": "{basis.border-radius.round}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{basis.border-width.md}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-default}"
-            },
-            "padding-block": {
-              "$type": "dimension",
-              "$value": "{basis.space.block.sm}"
-            },
-            "padding-inline": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.sm}"
             }
           },
           "pre-header": {
@@ -6022,17 +5963,9 @@
           },
           "checked": {
             "icon": {
-              "background-color": {
-                "$type": "color",
-                "$value": "{basis.color.positive-inverse.bg-default}"
-              },
-              "border-color": {
-                "$type": "color",
-                "$value": "{basis.color.transparent}"
-              },
               "color": {
                 "$type": "color",
-                "$value": "{basis.color.accent-1-inverse.color-default}"
+                "$value": "{basis.color.positive.color-default}"
               }
             }
           }
@@ -6050,13 +5983,13 @@
             "$type": "dimension",
             "$value": "8px"
           },
-          "min-block-size": {
-            "$type": "dimension",
-            "$value": "12rem"
-          },
           "color": {
             "$type": "color",
             "$value": "{basis.color.default.color-document}"
+          },
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "12rem"
           },
           "body": {
             "padding-inline-end": {
@@ -6103,16 +6036,10 @@
               "$value": "{basis.heading.color}"
             }
           },
-          "icon": {
+          "link-icon": {
             "color": {
               "$type": "color",
-              "$value": "{todo.card-as-link.icon.color}"
-            }
-          },
-          "metadata": {
-            "color": {
-              "$type": "color",
-              "$value": "{todo.card-as-link.plan.color}"
+              "$value": "{todo.card-as-link.link-icon.color}"
             }
           },
           "active": {
@@ -6170,16 +6097,10 @@
                 "$value": "{basis.heading.color}"
               }
             },
-            "icon": {
+            "link-icon": {
               "color": {
                 "$type": "color",
                 "$value": "{basis.color.default.color-default}"
-              }
-            },
-            "metadata": {
-              "color": {
-                "$type": "color",
-                "$value": "{todo.card-as-link.plan.archived.color}"
               }
             },
             "active": {
