@@ -26,11 +26,12 @@
     "directory": "packages/components-react/design-tokens-table-react"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",
-    "clean": "rimraf ./dist/ ./*.tsbuildinfo ./.rollup.cache/",
+    "clean": "rimraf ./dist/ ./tmp/ ./.rollup.cache/",
     "config": "tsc --showConfig",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "typecheck": "tsc"

@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/theme-toolkit
 
+## 1.4.0
+
+### Minor Changes
+
+- 7ec8393: Upgrade progress-steps component and move to devDependencies
+
 ## 1.3.0
 
 ### Minor Changes

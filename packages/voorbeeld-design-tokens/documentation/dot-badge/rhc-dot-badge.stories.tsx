@@ -3,7 +3,7 @@ import { DotBadge } from '@rijkshuisstijl-community/components-react';
 
 const meta = {
   id: 'rhc-dot-badge',
-  title: 'Components/Dot Badge/Rijkshuisstijl community',
+  title: 'Components/Dot Badge/Rijkshuisstijl Community',
   component: DotBadge,
   parameters: { actions: { disable: true } },
   args: {
@@ -20,6 +20,6 @@ export const VoorbeeldTheme: Story = {
   parameters: { theme: 'voorbeeld-theme' },
 };
 export const RijkshuisstijlTheme: Story = {
-  name: 'Rijkshuisstijl theme',
+  name: 'Rijkshuisstijl Community theme',
   parameters: { theme: 'rhc-theme' },
 };

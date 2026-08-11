@@ -1,5 +1,44 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 3.2.0
+
+### Minor Changes
+
+- 5018770: - Styling: button color positive
+  Automatische kleurwaardes van positive button aangepast
+  - Styling: color changes components
+    Kleuren van componenten aangepast en tweede heading kleur toegevoegd van
+    common tokens
+  - Hygiene: link component
+    Link was gekoppeld aan groningen cta brand token, niet aan een common
+    token. Deze nu dus aangepast aan een bestaande common token.
+  - Styling: headings
+    Extra tekst font toegevoegd, naam van de bold versie aangepast naar
+    medium (nu hebben we default, medium en bold). Kleur aangepast van de
+    heading 5 en groottes aangepast conform huisstijl (32-24-20-18-16)
+  - Hygiene: brand tokens
+    Wat hygiëne toegepast op de brand tokens. We beginnen altijd met donkere kleur eerst, dan achtergrond kleur. Deze qua volgorde aangepast.
+    Ook grijswaardes qua volgorde naar boven gebracht. Net als complementaire kleuren aan de blauwe basis. Deze stond eerst helemaal onderaan.
+
+## 3.1.0
+
+### Minor Changes
+
+- ce9920c: Conform NL Design System Figma changelog 14.4.0, zie: https://nldesignsystem.nl/handboek/designer/figma-changelog/#1440
+
+## 3.0.0
+
+### Major Changes
+
+- 57b0358: Conform NL Design System Figma changelog 14.3.0, zie: https://nldesignsystem.nl/handboek/designer/figma-changelog/#1210
+
+## 2.0.0
+
+### Major Changes
+
+- 0cc7b20: Vervangen van design tokens met nieuwe bibliotheek.
+  Conform NL Design System Figma changelog 12.1.0, zie: https://nldesignsystem.nl/handboek/designer/figma-changelog/#1210
+
 ## 1.0.2
 
 ### Patch Changes

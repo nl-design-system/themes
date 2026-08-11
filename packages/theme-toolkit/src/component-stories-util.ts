@@ -13,6 +13,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   PARAGRAPH: 'Paragraph',
   HEADINGS: 'Headings',
   LISTS: 'Lists',
+  TABS: 'Tabs',
   TEXTBOX: 'Textbox',
   TEXTAREA: 'Textarea',
   SELECT: 'Select',
@@ -47,6 +48,8 @@ export const STORY_GROUPS: { [index: string]: string } = {
   COLOR_SAMPLE: 'Color Sample',
   SKIP_LINK: 'Skip Link',
   MARK: 'Mark',
+  ROOT: 'Root',
+  PAGE_BODY: 'Page Body',
 };
 
 export interface ComponentStory {

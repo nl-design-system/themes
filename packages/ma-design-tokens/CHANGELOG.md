@@ -1,4 +1,186 @@
-# @nl-design-system-unstable/ma-design-tokens
+# @nl-design-system-community/ma-design-tokens
+
+## 6.0.0
+
+### Major Changes
+
+- 0f0b2d5: - Side Navigation tokens van Den Haag bijgewerkt.
+  - Icon Button tokens van Den Haag toegevoegd.
+
+## 5.5.0
+
+### Minor Changes
+
+- 2dc35c9: Enkele Blockquote tokens aangepast.
+- 41c86f2: Met deze PR voegen we design tokens (incl hun waarde) toe voor:
+
+  - Utrecht's Badge List + Table + Focus States
+  - Den Haag's Icon Button + Task Navigation (focus) + Focus States
+  - Amsterdam's Unordered List
+  - RHC's Card
+
+- 59ef30c: - `basis.page.max-inline-size` aangepast
+  - `denhaag.side-navigation.list.margin-inline-start` aagepast
+
+## 5.4.0
+
+### Minor Changes
+
+- bd2233b: Design tokens van Listbox component bijgewerkt.
+
+## 5.3.0
+
+### Minor Changes
+
+- 284d66d: De volgende tokens zijn toegevoegd aan Action (Task Card) component:
+
+  - `denhaag.action.border-radius`
+  - `denhaag.action.font-family`
+
+### Patch Changes
+
+- a3b75d5: - Token `basis.box-shadow.none` is toegevoegd voor dark-mode.
+  - De waarde van de volgende basis-tokens is gewijzigd voor dark-mode:
+    - `basis.box-shadow.sm`
+    - `basis.box-shadow.md`
+    - `basis.box-shadow.lg`
+
+## 5.2.0
+
+### Minor Changes
+
+- e571dcb: Nieuwe design tokens toegevoegd voor Side-navigation component van Den Haag.
+
+## 5.1.0
+
+### Minor Changes
+
+- 0e291b5: De volgende basis-tokens zijn toegevoegd:
+
+  - `basis.form-color.focus.accent-color`
+  - `basis.form-color.invalid.accent-color`
+  - `basis.form-color.read-only.accent-color`
+
+  Het type van basis-token `basis.focus.outline-offset` is aangepast van `other` naar `dimension`.
+
+  De waarde van de volgende tokens zijn gewijzigd:
+
+  Checkbox
+
+  - Waarde van token `utrecht.checkbox.checked.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-default}`.
+  - Waarde van token `utrecht.checkbox.indeterminate.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-default}`.
+  - Waarde van token `todo.checkbox.checked.active.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-active}`.
+  - Waarde van token `todo.checkbox.checked.focus-visible.background-color` is gewijzigd van `{basis.form-control.focus.background-color}` naar common token `{basis.form-control.focus.accent-color}`.
+  - Waarde van token `todo.checkbox.checked.hover.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-hover}`.
+  - Waarde van token `todo.checkbox.indeterminate.active.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-active}`.
+  - Waarde van token `todo.checkbox.indeterminate.focus-visible.background-color` is gewijzigd van `{basis.form-control.focus.background-color}` naar common token `{basis.form-control.focus.accent-color}`.
+  - Waarde van token `todo.checkbox.indeterminate.hover.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-hover}`.
+
+  Radio Button
+
+  - Waarde van token `utrecht.radio-button.checked.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-default}`.
+  - Waarde van token `utrecht.radio-button.checked.active.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-active}`.
+  - Waarde van token `utrecht.radio-button.checked.focus.background-color` is gewijzigd van `{basis.form-control.focus.background-color}` naar common token `{basis.form-control.focus.accent-color}`.
+  - Waarde van token `utrecht.radio-button.checked.hover.color` is gewijzigd van `{basis.color.default.bg-document}` naar common token `{basis.color.action-1-inverse.color-hover}`.
+
+## 5.0.2
+
+### Patch Changes
+
+- 88506b4: Add component tokens with values for the doc site
+
+## 5.0.1
+
+### Patch Changes
+
+- f3cd7e7: fix onjuiste referentie in utrecht.status-badge.letter-spacing
+
+## 5.0.0
+
+### Major Changes
+
+- c5f3304: De volgende tokens zijn toegevoegd aan Root component:
+
+  - `utrecht.root.font-size`
+  - `utrecht.root.font-size-adjust`
+  - `utrecht.root.line-height`
+
+  De volgende tokens zijn toegevoegd aan Page Body component:
+
+  - `utrecht.page-body.content.background-color`
+  - `utrecht.page-body.content.color`
+  - `utrecht.page-body.content.padding-inline-end`
+  - `utrecht.page-body.content.padding-inline-start`
+
+  Token `utrecht.page-body.content.padding-inline` is verwijderd uit Page Body component.
+
+  Root en Page Body tokenset binnen JSON op juiste positie.
+
+### Minor Changes
+
+- 2ffb95a: De volgende tokens zijn toegevoegd aan Icon Button component:
+
+  - `ams.icon-button.color`
+  - `ams.icon-button.cursor`
+  - `ams.icon-button.outline-offset`
+  - `ams.icon-button.disabled.color`
+  - `ams.icon-button.disabled.cursor`
+  - `ams.icon-button.hover.background-color`
+  - `ams.icon-button.hover.color`
+  - `ams.icon-button.contrast.color`
+  - `ams.icon-button.contrast.disabled.color`
+  - `ams.icon-button.contrast.hover.background-color`
+  - `ams.icon-button.contrast.hover.color`
+  - `ams.icon-button.inverse.background-color`
+  - `ams.icon-button.inverse.color`
+  - `ams.icon-button.inverse.disabled.background-color`
+  - `ams.icon-button.inverse.disabled.color`
+  - `ams.icon-button.inverse.hover.background-color`
+  - `ams.icon-button.inverse.hover.color`
+
+- ce19947: De volgende updates zijn gedaan in Community component 'File' van Den Haag:
+
+  - Token `denhaag.file.border-radius` is toegevoegd aan File component.
+  - Description `[code-only]` is toegevoegd aan token `denhaag.file.border-style`.
+  - Tokens zijn in de juiste volgorde gezet.
+
+- f0dface: - Waarde van token `utrecht.form-toggle.color` is gewijzigd van `basis.color.default.color-document` naar `basis.color.default-inverse.color-default`.
+  - Waarde van token `utrecht.form-toggle.hover.color` is gewijzigd van `basis.color.default.color-document` naar `basis.color.default-inverse.color-hover`.
+- bc16ead: De volgende tokens zijn hernoemd in Modal Dialog component:
+
+  - `todo.dialog.border-radius` naar `ams.dialog.border-radius`
+  - `todo.dialog.box-shadow` naar `ams.dialog.box-shadow`
+
+### Patch Changes
+
+- 8015afa: fix: revert ref naar `basis.space.none` voor `$type=other` tokens
+
+## 4.2.0
+
+### Minor Changes
+
+- 2d8b6bd: - Nieuwe basis-tokens toegevoegd: `basis.border-radius.none`, `basis.space.none`, `basis.border-width.none`, `basis.box-shadow.none`
+  - In het Start en Mooi & Anders thema wordt er door component tokens naar deze nieuwe basis-tokens verwezen. Bij het Voorbeeld thema doen we dat later.
+  - In het Start en Voorbeeld thema is de waarde van de box-shadows gelijk getrokken met die van het Mooi & Anders thema.
+- 11f07af: De volgende tokens zijn toegevoegd aan Task List component:
+
+  - `ma.task-list.padding-block-start`
+  - `ma.task-list.item.column-gap`
+  - `ma.task-list.item.margin-block-end`
+  - `ma.task-list.item.margin-block-start`
+  - `ma.task-list.item.marker.block-size`
+  - `ma.task-list.item.marker.inline-size`
+  - `ma.task-list.item.marker.min-inline-size`
+  - `ma.task-list.item.marker-label.block-size`
+  - `ma.task-list.item.marker-label.inline-size`
+  - `ma.task-list.item.marker-label.margin-block`
+  - `ma.task-list.item.marker-label.margin-inline`
+
+## 4.1.0
+
+### Minor Changes
+
+- d443ae5: - Waarde van basis.box-shadow.\* design tokens aangepast waardoor deze minder heftig en natuurlijker over komen.
 
 ## 4.0.0
 

@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-unstable/leiden-design-tokens",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": "Community for NL Design System",
   "description": "NL Design System design tokens for Gemeente Leiden",
   "website": "https://gemeente.leiden.nl/",
@@ -11,7 +11,8 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "type": "git+ssh",
@@ -20,9 +21,10 @@
   },
   "scripts": {
     "clean": "rimraf -rf dist/",
+    "lint-build": "stylelint --config ../../.stylelintrc.dist.json dist/*.css",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
-    "build": "npm-run-all clean build:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'figma/**/*.tokens.json'",
+    "build": "npm-run-all --sequential clean build:style-dictionary build:scss build:custom-css-overview",
     "build:style-dictionary": "node ./style-dictionary.mjs",
     "build:scss": "sass --no-source-map src/:dist/ --pkg-importer=node",
     "build:custom-css-overview": "node generate-custom-css-overview.js"

@@ -2,12 +2,6 @@
 
 const builtinThemes = [
   {
-    className: 'amsterdam-theme',
-    title: 'Gemeente Amsterdam',
-    href: 'https://unpkg.com/@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css',
-    package: '@nl-design-system-unstable/amsterdam-design-tokens',
-  },
-  {
     className: 'bodegraven-theme',
     title: 'Gemeente Bodegraven-Reeuwijk',
     href: 'https://unpkg.com/@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/dist/index.css',
@@ -22,8 +16,8 @@ const builtinThemes = [
   {
     className: 'denhaag-theme',
     title: 'Gemeente Den Haag',
-    href: 'https://unpkg.com/@gemeente-denhaag/design-tokens-components/dist/theme/index.css',
-    package: '@gemeente-denhaag/design-tokens-components',
+    href: 'https://unpkg.com/@gemeente-denhaag/design-tokens/dist/theme/index.css',
+    package: '@gemeente-denhaag/design-tokens',
   },
   {
     className: 'drechterland-theme',
@@ -46,7 +40,7 @@ const builtinThemes = [
   {
     className: 'groningen-theme',
     title: 'Gemeente Groningen',
-    href: 'https://unpkg.com/@nl-design-system-unstable/groningen-design-tokens/dist/index.css',
+    href: 'https://unpkg.com/@nl-design-system-unstable/groningen-design-tokens/dist/theme.css',
     package: '@nl-design-system-unstable/groningen-design-tokens',
   },
   {

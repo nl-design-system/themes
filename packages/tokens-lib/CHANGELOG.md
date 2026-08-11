@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/tokens-lib
 
+## 0.3.1
+
+### Patch Changes
+
+- 7ec8393: Remove unused dependency
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,4 +1,3 @@
-import amsterdam from '@nl-design-system-unstable/amsterdam-design-tokens/src/config.json' with { type: 'json' };
 import bodegraven from '@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens/src/config.json' with { type: 'json' };
 import buren from '@nl-design-system-unstable/buren-design-tokens/src/config.json' with { type: 'json' };
 import drechterland from '@nl-design-system-unstable/drechterland-design-tokens/src/config.json' with { type: 'json' };
@@ -28,7 +27,6 @@ import { writeFile } from 'node:fs/promises';
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 const themes = [
-  amsterdam,
   bodegraven,
   buren,
   drechterland,
