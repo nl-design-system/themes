@@ -26,14 +26,15 @@ const build = async () => {
 
   let sd = new StyleDictionary({
     ...createConfig({
-      selector: `.${themeConfig.prefix}-theme`,
+      className: `${themeConfig.prefix}-theme`,
     }),
     preprocessors: [colorSchemeDefaultPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
-    source: ['figma/**/start.tokens.json'],
+    source: ['src/tokens.json', 'src/*.tokens.json'],
   });
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
+
   // color scheme dark
   let sdDark = new StyleDictionary({
     ...createConfig({
@@ -41,7 +42,7 @@ const build = async () => {
       buildPath: 'dist/color-scheme-dark/',
     }),
     preprocessors: [colorSchemeDarkPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
-    source: ['figma/**/start.tokens.json'],
+    source: ['src/tokens.json', 'src/*.tokens.json'],
   });
 
   await sdDark.cleanAllPlatforms();
