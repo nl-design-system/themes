@@ -11029,14 +11029,6 @@
           "$type": "lineHeights",
           "$value": "{basis.form-control.line-height}"
         },
-        "margin-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.lg}"
-        },
-        "margin-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.lg}"
-        },
         "min-block-size": {
           "$type": "dimension",
           "$value": "{basis.pointer-target.min-block-size}"
@@ -11044,11 +11036,6 @@
         "min-inline-size": {
           "$type": "dimension",
           "$value": "{basis.pointer-target.min-inline-size}"
-        },
-        "outline-offset": {
-          "$type": "other",
-          "$value": "0px",
-          "$description": "[code-only]"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -11066,33 +11053,43 @@
           "$type": "dimension",
           "$value": "{basis.form-control.padding-inline-start}"
         },
-        "value-size": {
-          "xs": {
+        "xs": {
+          "inline-size": {
             "$type": "dimension",
             "$value": "96px",
             "$description": "10ch"
-          },
-          "sm": {
+          }
+        },
+        "sm": {
+          "inline-size": {
             "$type": "dimension",
             "$value": "134px",
             "$description": "14ch"
-          },
-          "md": {
+          }
+        },
+        "md": {
+          "inline-size": {
             "$type": "dimension",
             "$value": "192px",
             "$description": "20ch"
-          },
-          "lg": {
+          }
+        },
+        "lg": {
+          "inline-size": {
             "$type": "dimension",
             "$value": "307px",
             "$description": "32ch"
-          },
-          "xl": {
+          }
+        },
+        "xl": {
+          "inline-size": {
             "$type": "dimension",
             "$value": "460px",
             "$description": "48ch"
-          },
-          "stretch": {
+          }
+        },
+        "stretch": {
+          "inline-size": {
             "$type": "dimension",
             "$value": "328px",
             "$description": "100%"
@@ -11127,33 +11124,13 @@
             "$type": "color",
             "$value": "{basis.form-control.focus.border-color}"
           },
-          "border-width": {
-            "$type": "boxShadow",
-            "$value": {
-              "x": "0",
-              "y": "0",
-              "blur": "0",
-              "spread": "{basis.border-width.md}",
-              "color": "{nl.text-input.focus.border-color}",
-              "type": "innerShadow"
-            }
-          },
           "color": {
             "$type": "color",
             "$value": "{basis.form-control.focus.color}"
-          }
-        },
-        "hover": {
+          },
           "border-width": {
-            "$type": "boxShadow",
-            "$value": {
-              "x": "0",
-              "y": "0",
-              "blur": "0",
-              "spread": "{basis.border-width.md}",
-              "color": "{nl.text-input.border-color}",
-              "type": "innerShadow"
-            }
+            "$type": "dimension",
+            "$value": "{basis.border-width.md}"
           }
         },
         "invalid": {
@@ -11165,20 +11142,13 @@
             "$type": "color",
             "$value": "{basis.form-control.invalid.border-color}"
           },
-          "border-width": {
-            "$type": "boxShadow",
-            "$value": {
-              "x": "0",
-              "y": "0",
-              "blur": "0",
-              "spread": "{basis.border-width.md}",
-              "color": "{nl.text-input.invalid.border-color}",
-              "type": "innerShadow"
-            }
-          },
           "color": {
             "$type": "color",
             "$value": "{basis.form-control.color}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.md}"
           }
         },
         "read-only": {
@@ -11193,6 +11163,12 @@
           "color": {
             "$type": "color",
             "$value": "{basis.form-control.read-only.color}"
+          }
+        },
+        "hover": {
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.md}"
           }
         }
       }
