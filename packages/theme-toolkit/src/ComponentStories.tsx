@@ -32,7 +32,7 @@ export const Heading = ({ level, children }: PropsWithChildren<HeadingProps>) =>
     <p>{children}</p>
   );
 
-interface ComponentStoriesProps {
+export interface ComponentStoriesProps {
   config: {
     name?: string;
     prefix?: string;
@@ -41,7 +41,7 @@ interface ComponentStoriesProps {
   showAll?: boolean;
   theme?: string;
   tokens?: StyleDictionaryDesignToken[];
-  tokensDefinition?: StyleDictionaryDesignToken[];
+  tokensDefinition?: DesignToken[];
   displayDesignTokens?: boolean;
   start?: number;
   end?: number;
