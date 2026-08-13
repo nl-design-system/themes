@@ -74,6 +74,7 @@ import { PageLayout } from '@utrecht/page-layout-react/css';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { Note } from '@utrecht/note-react/css';
+import '@utrecht/note-css';
 import { clsx } from 'clsx';
 
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
