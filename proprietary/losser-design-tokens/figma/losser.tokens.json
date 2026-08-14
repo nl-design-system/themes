@@ -101,117 +101,117 @@
         "default": {
           "bg-document": {
             "$type": "color",
-            "$value": "#FCFCFC"
+            "$value": "#E7E7E7"
           },
           "bg-subtle": {
             "$type": "color",
-            "$value": "#F6F6F6"
+            "$value": "#E0E0E0"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "#F1F1F1"
+            "$value": "#2065A4"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "#EBEBEB"
+            "$value": "#1B5589"
           },
           "bg-active": {
             "$type": "color",
-            "$value": "#E5E5E5"
+            "$value": "#16456F"
           },
           "border-subtle": {
             "$type": "color",
-            "$value": "#C4C4C4"
+            "$value": "#AEAEAE"
           },
           "border-default": {
             "$type": "color",
-            "$value": "#868686"
+            "$value": "#717171"
           },
           "border-hover": {
             "$type": "color",
-            "$value": "#7C7C7C"
+            "$value": "#666666"
           },
           "border-active": {
             "$type": "color",
-            "$value": "#727272"
+            "$value": "#5D5D5D"
           },
           "color-default": {
             "$type": "color",
-            "$value": "#595959"
+            "$value": "#FFFFFF"
           },
           "color-hover": {
             "$type": "color",
-            "$value": "#4B4B4B"
+            "$value": "#363636"
           },
           "color-active": {
             "$type": "color",
-            "$value": "#3E3E3E"
+            "$value": "#292929"
           },
           "color-subtle": {
             "$type": "color",
-            "$value": "#636363"
+            "$value": "#4E4E4E"
           },
           "color-document": {
             "$type": "color",
-            "$value": "#1B1B1B"
+            "$value": "#060606"
           }
         },
         "accent-1": {
           "bg-document": {
             "$type": "color",
-            "$value": "#FBFCFD"
+            "$value": "#D0E5F9"
           },
           "bg-subtle": {
             "$type": "color",
-            "$value": "#F4F7FA"
+            "$value": "#C0DCF5"
           },
           "bg-default": {
             "$type": "color",
-            "$value": "#ECF1F7"
+            "$value": "#2065A4"
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "#E4ECF4"
+            "$value": "#FFFFFF"
           },
           "bg-active": {
             "$type": "color",
-            "$value": "#DDE6F1"
+            "$value": "#16456F"
           },
           "border-subtle": {
             "$type": "color",
-            "$value": "#B0C6DF"
+            "$value": "#AAD0F3"
           },
           "border-default": {
             "$type": "color",
-            "$value": "#5C89BE"
+            "$value": "#2065A4"
           },
           "border-hover": {
             "$type": "color",
-            "$value": "#4E7FB8"
+            "$value": "#1B5589"
           },
           "border-active": {
             "$type": "color",
-            "$value": "#3F74B2"
+            "$value": "#16456F"
           },
           "color-default": {
             "$type": "color",
-            "$value": "#1B59A4"
+            "$value": "#FFFFFF"
           },
           "color-hover": {
             "$type": "color",
-            "$value": "#04499A"
+            "$value": "#000000"
           },
           "color-active": {
             "$type": "color",
-            "$value": "#003B81"
+            "$value": "#FFFFFF"
           },
           "color-subtle": {
             "$type": "color",
-            "$value": "#2964AA"
+            "$value": "#C0DCF5"
           },
           "color-document": {
             "$type": "color",
-            "$value": "#001B3C"
+            "$value": "#213A50"
           }
         },
         "accent-2": {
@@ -3692,15 +3692,15 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-hover}"
+              "$value": "{basis.color.accent-1.bg-hover}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.default.border-hover}"
+              "$value": "{basis.color.accent-1.border-hover}"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.color-hover}"
+              "$value": "{basis.color.accent-1.color-hover}"
             }
           },
           "pressed": {
@@ -3763,7 +3763,7 @@
         "primary": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.action-1-inverse.bg-default}"
+            "$value": "{basis.color.action-1.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -3775,7 +3775,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.action-1-inverse.color-default}"
+            "$value": "{basis.color.action-1.color-default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -3792,7 +3792,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-active}"
+              "$value": "{basis.color.action-1.bg-active}"
             },
             "border-color": {
               "$type": "color",
@@ -3800,7 +3800,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-active}"
+              "$value": "{basis.color.action-1.color-active}"
             }
           },
           "disabled": {
@@ -3820,15 +3820,15 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-hover}"
+              "$value": "{basis.color.action-1.bg-hover}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "{basis.color.action-1.border-default}"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-hover}"
+              "$value": "{basis.color.action-1.color-hover}"
             }
           },
           "pressed": {
@@ -4656,11 +4656,11 @@
       "button": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.transparent}"
+          "$value": "{basis.color.action-1.bg-default}"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.default.border-default}"
+          "$value": "{basis.color.transparent}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -4672,7 +4672,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.default.color-default}"
+          "$value": "{basis.color.action-1.color-default}"
         },
         "column-gap": {
           "$type": "dimension",
@@ -4727,15 +4727,15 @@
         "active": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.default.bg-active}"
+            "$value": "{basis.color.action-1.bg-active}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.default.border-active}"
+            "$value": "{basis.color.transparent}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.color-active}"
+            "$value": "{basis.color.action-1.color-active}"
           }
         },
         "disabled": {
@@ -4769,15 +4769,15 @@
         "hover": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.default.bg-hover}"
+            "$value": "{basis.color.action-1.bg-hover}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{basis.color.default.border-hover}"
+            "$value": "{basis.color.action-1.border-default}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.color-hover}"
+            "$value": "{basis.color.action-1.color-hover}"
           }
         },
         "pressed": {
@@ -4797,7 +4797,7 @@
         "primary-action": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.action-1-inverse.bg-default}"
+            "$value": "{basis.color.action-1.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -4805,7 +4805,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.action-1-inverse.color-default}"
+            "$value": "{basis.color.action-1.color-default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -4822,7 +4822,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-active}"
+              "$value": "{basis.color.action-1.bg-active}"
             },
             "border-color": {
               "$type": "color",
@@ -4830,7 +4830,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-active}"
+              "$value": "{basis.color.action-1.color-active}"
             }
           },
           "disabled": {
@@ -4864,15 +4864,15 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-hover}"
+              "$value": "{basis.color.action-1.bg-hover}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "{basis.color.action-1.border-default}"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-hover}"
+              "$value": "{basis.color.action-1.color-hover}"
             }
           },
           "pressed": {
@@ -5081,6 +5081,10 @@
               "$value": "{basis.color.action-1.color-active}"
             }
           }
+        },
+        "text-transform": {
+          "$type": "textCase",
+          "$value": "Uppercase"
         }
       }
     }
