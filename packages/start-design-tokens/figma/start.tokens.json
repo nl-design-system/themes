@@ -5846,8 +5846,7 @@
           "header": {
             "padding-block-end": {
               "$type": "dimension",
-              "$value": "{basis.space.block.xl}",
-              "$description": "`"
+              "$value": "{basis.space.block.xl}"
             },
             "padding-inline-end": {
               "$type": "dimension",
@@ -5976,6 +5975,12 @@
             "$type": "dimension",
             "$value": "{basis.border-width.sm}"
           },
+          "body": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            }
+          },
           "footer": {
             "padding-inline-start": {
               "$type": "dimension",
@@ -6051,6 +6056,12 @@
               "$type": "dimension",
               "$value": "{basis.space.inline.xl}"
             }
+          },
+          "footer": {
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.none}"
+            }
           }
         },
         "toptask": {
@@ -6083,7 +6094,7 @@
             },
             "padding-inline-end": {
               "$type": "dimension",
-              "$value": "{basis.space.none}"
+              "$value": "{basis.space.inline.xl}"
             },
             "padding-inline-start": {
               "$type": "dimension",
