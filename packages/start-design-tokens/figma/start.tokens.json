@@ -13415,7 +13415,61 @@
       }
     }
   },
-  "components/unordered-list": {
+  "components/unordered-list/nl": {
+    "nl": {
+      "unordered-list": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.none}"
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.none}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.xl}"
+        },
+        "item": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.sm}"
+          },
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.sm}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.md}"
+          }
+        },
+        "marker": {
+          "color": {
+            "$type": "color",
+            "$value": "{nl.unordered-list.color}"
+          }
+        }
+      }
+    }
+  },
+  "components/unordered-list/utrecht": {
     "utrecht": {
       "unordered-list": {
         "font-size": {
@@ -15813,7 +15867,8 @@
       "components/text-area",
       "components/text-input",
       "components/toolbar-button",
-      "components/unordered-list",
+      "components/unordered-list/nl",
+      "components/unordered-list/utrecht",
       "components/body",
       "components/page-header/amsterdam",
       "components/page-header/utrecht",
