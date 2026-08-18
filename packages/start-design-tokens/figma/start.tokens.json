@@ -5697,18 +5697,6 @@
             "$type": "dimension",
             "$value": "12rem"
           },
-          "heading": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.heading.color}"
-            }
-          },
-          "link-icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{todo.card-as-link.link-icon.color}"
-            }
-          },
           "active": {
             "background-color": {
               "$type": "color",
@@ -5729,6 +5717,34 @@
               "$value": "{todo.card-as-link.case.border-color}"
             }
           },
+          "decoration": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.accent-1.bg-active}"
+            },
+            "paper": {
+              "background-color": {
+                "$type": "color",
+                "$value": "#FFFFFF"
+              },
+              "border-radius": {
+                "$type": "dimension",
+                "$value": "{basis.border-radius.none}"
+              }
+            }
+          },
+          "heading": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.heading.color}"
+            }
+          },
+          "link-icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{todo.card-as-link.link-icon.color}"
+            }
+          },
           "archived": {
             "background-color": {
               "$type": "color",
@@ -5741,24 +5757,6 @@
             "color": {
               "$type": "color",
               "$value": "{basis.color.default.color-document}"
-            },
-            "decoration": {
-              "background-color": {
-                "$type": "color",
-                "$value": "{basis.color.default.bg-active}"
-              }
-            },
-            "heading": {
-              "color": {
-                "$type": "color",
-                "$value": "{basis.heading.color}"
-              }
-            },
-            "link-icon": {
-              "color": {
-                "$type": "color",
-                "$value": "{basis.color.default.color-default}"
-              }
             },
             "active": {
               "background-color": {
@@ -5779,21 +5777,23 @@
                 "$type": "color",
                 "$value": "{todo.card-as-link.case.border-color}"
               }
-            }
-          },
-          "decoration": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.accent-1.bg-active}"
             },
-            "paper": {
+            "decoration": {
               "background-color": {
                 "$type": "color",
-                "$value": "#FFFFFF"
-              },
-              "border-radius": {
-                "$type": "dimension",
-                "$value": "{basis.border-radius.none}"
+                "$value": "{basis.color.default.bg-active}"
+              }
+            },
+            "heading": {
+              "color": {
+                "$type": "color",
+                "$value": "{basis.heading.color}"
+              }
+            },
+            "link-icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.default.color-default}"
               }
             }
           }
@@ -5809,7 +5809,7 @@
           },
           "border-width": {
             "$type": "dimension",
-            "$value": "8px"
+            "$value": "{basis.border-width.lg}"
           },
           "color": {
             "$type": "color",
@@ -5818,56 +5818,6 @@
           "min-block-size": {
             "$type": "dimension",
             "$value": "12rem"
-          },
-          "body": {
-            "padding-inline-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.3xl}"
-            },
-            "padding-inline-start": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.3xl}"
-            }
-          },
-          "footer": {
-            "padding-block-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.block.3xl}"
-            },
-            "padding-inline-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.3xl}"
-            },
-            "padding-inline-start": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.3xl}"
-            }
-          },
-          "header": {
-            "padding-block-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.block.xl}"
-            },
-            "padding-inline-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.3xl}"
-            },
-            "padding-inline-start": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.3xl}"
-            }
-          },
-          "heading": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.heading.color}"
-            }
-          },
-          "link-icon": {
-            "color": {
-              "$type": "color",
-              "$value": "{todo.card-as-link.link-icon.color}"
-            }
           },
           "active": {
             "background-color": {
@@ -5889,12 +5839,62 @@
               "$value": "{basis.color.accent-1.bg-active}"
             }
           },
+          "body": {
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            },
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          },
           "decoration": {
             "clip": {
               "color": {
                 "$type": "color",
                 "$value": "{basis.color.accent-1.border-subtle}"
               }
+            }
+          },
+          "footer": {
+            "padding-block-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            },
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          },
+          "header": {
+            "padding-block-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            },
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          },
+          "heading": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.heading.color}"
+            }
+          },
+          "link-icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{todo.card-as-link.link-icon.color}"
             }
           },
           "archived": {
@@ -5909,18 +5909,6 @@
             "color": {
               "$type": "color",
               "$value": "{basis.color.default.color-document}"
-            },
-            "heading": {
-              "color": {
-                "$type": "color",
-                "$value": "{basis.heading.color}"
-              }
-            },
-            "link-icon": {
-              "color": {
-                "$type": "color",
-                "$value": "{basis.color.default.color-default}"
-              }
             },
             "active": {
               "background-color": {
@@ -5949,6 +5937,18 @@
                   "$value": "{basis.color.default.border-subtle}"
                 }
               }
+            },
+            "heading": {
+              "color": {
+                "$type": "color",
+                "$value": "{basis.heading.color}"
+              }
+            },
+            "link-icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{basis.color.default.color-default}"
+              }
             }
           }
         },
@@ -5957,13 +5957,13 @@
             "$type": "color",
             "$value": "{basis.color.accent-1.border-default}"
           },
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{basis.border-radius.none}"
-          },
           "border-block-start-width": {
             "$type": "dimension",
             "$value": "{basis.border-width.lg}"
+          },
+          "border-radius": {
+            "$type": "dimension",
+            "$value": "{basis.border-radius.none}"
           }
         },
         "task": {
@@ -5974,6 +5974,10 @@
           "border-width": {
             "$type": "dimension",
             "$value": "{basis.border-width.sm}"
+          },
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "None"
           },
           "body": {
             "padding-block-start": {
@@ -5995,10 +5999,6 @@
             "padding-block-start": {
               "$type": "dimension",
               "$value": "{basis.space.block.xl}"
-            },
-            "padding-inline-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.none}"
             },
             "padding-inline-start": {
               "$type": "dimension",
@@ -6033,6 +6033,12 @@
               "$value": "{basis.size.icon.xl}"
             }
           },
+          "footer": {
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.none}"
+            }
+          },
           "pre-header": {
             "padding-block-end": {
               "$type": "dimension",
@@ -6042,19 +6048,9 @@
               "$type": "dimension",
               "$value": "{basis.space.block.xl}"
             },
-            "padding-inline-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.none}"
-            },
             "padding-inline-start": {
               "$type": "dimension",
               "$value": "{basis.space.inline.xl}"
-            }
-          },
-          "footer": {
-            "padding-inline-start": {
-              "$type": "dimension",
-              "$value": "{basis.space.none}"
             }
           }
         },
@@ -6070,30 +6066,6 @@
           "color": {
             "$type": "color",
             "$value": "{basis.color.accent-1-inverse.color-default}"
-          },
-          "icon": {
-            "size": {
-              "$type": "dimension",
-              "$value": "{basis.size.icon.4xl}"
-            }
-          },
-          "pre-header": {
-            "padding-block-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.none}"
-            },
-            "padding-block-start": {
-              "$type": "dimension",
-              "$value": "{basis.space.block.xl}"
-            },
-            "padding-inline-end": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.xl}"
-            },
-            "padding-inline-start": {
-              "$type": "dimension",
-              "$value": "{basis.space.inline.xl}"
-            }
           },
           "active": {
             "background-color": {
@@ -6123,10 +6095,30 @@
               "$value": "{basis.color.accent-1-inverse.color-hover}"
             }
           },
+          "icon": {
+            "size": {
+              "$type": "dimension",
+              "$value": "{basis.size.icon.4xl}"
+            }
+          },
           "label": {
             "color": {
               "$type": "color",
               "$value": "{basis.color.accent-1-inverse.color-default}"
+            }
+          },
+          "pre-header": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            },
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
             }
           }
         }
