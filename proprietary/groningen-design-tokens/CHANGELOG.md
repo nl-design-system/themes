@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 3.3.0
+
+### Minor Changes
+
+- 4fe4561: Extra lettertype toegevoegd als fallback-font.
+
 ## 3.2.0
 
 ### Minor Changes

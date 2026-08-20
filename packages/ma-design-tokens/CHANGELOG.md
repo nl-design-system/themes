@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 6.0.1
+
+### Patch Changes
+
+- b435a60: Border-width waardes voor Blockquote omgedraaid.
+
 ## 6.0.0
 
 ### Major Changes
