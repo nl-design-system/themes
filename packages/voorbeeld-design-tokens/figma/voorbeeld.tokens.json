@@ -8459,7 +8459,7 @@
       "grid": {
         "column-count": {
           "$type": "number",
-          "$value": 12
+          "$value": "12"
         },
         "column-gap": {
           "$type": "dimension",
@@ -8500,7 +8500,7 @@
         "vi-medium": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -8510,7 +8510,7 @@
         "vi-wide": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -9925,7 +9925,7 @@
   },
   "components/note": {
     "utrecht": {
-      "spotlight-section": {
+      "note": {
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.default.bg-default}"
@@ -9972,10 +9972,14 @@
           "$type": "dimension",
           "$value": "{basis.space.inline.xl}"
         },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.md}"
+        },
         "info": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -9999,7 +10003,7 @@
         "error": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -10020,10 +10024,10 @@
             }
           }
         },
-        "ok": {
+        "success": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -10047,7 +10051,7 @@
         "warning": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -10067,14 +10071,6 @@
               "$value": "{basis.color.warning.color-default}"
             }
           }
-        }
-      }
-    },
-    "todo": {
-      "spotlight-section": {
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.md}"
         }
       }
     }
