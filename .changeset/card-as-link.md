@@ -1,5 +1,5 @@
 ---
-"@nl-design-system-unstable/start-design-tokens": marjor
+"@nl-design-system-unstable/start-design-tokens": major
 "@nl-design-system-unstable/voorbeeld-design-tokens": major
 "@nl-design-system-community/ma-design-tokens": major
 ---
