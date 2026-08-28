@@ -1,4 +1,3 @@
-import '@utrecht/note-css';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Note } from '@utrecht/note-react/css';
 import { Heading2, Paragraph } from '@utrecht/component-library-react/dist/css-module';
