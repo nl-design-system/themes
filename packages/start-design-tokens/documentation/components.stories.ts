@@ -1,5 +1,5 @@
 import { ComponentStories } from '@nl-design-system-unstable/theme-toolkit/src/ComponentStories';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import config from '../src/config.json';
 import tokens from '../dist/list.json';
 
@@ -13,8 +13,12 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export default meta;
-export const Components: Story = {
-  name: 'Components (color-scheme: light, component 1 - 50)',
+
+// Chromatic has a limit of 25000 pixels per story, so we need to split them
+// into multiple stories.
+
+export const ComponentsPage1: Story = {
+  name: 'Visual regression test (color-scheme: light, component 1 - 50)',
   args: {
     theme: `${config.prefix}-theme`,
     start: 0,
@@ -22,16 +26,25 @@ export const Components: Story = {
   },
 };
 
-export const ComponentsContinued: Story = {
-  name: 'Visual regression test (color-scheme: light, component 51 - ∞)',
+export const ComponentsPage2: Story = {
+  name: 'Visual regression test (color-scheme: light, component 51 - 100)',
   args: {
     theme: `${config.prefix}-theme`,
     start: 51,
+    end: 100,
   },
 };
 
-export const ComponentsDarkMode: Story = {
-  name: 'Components (color-scheme: dark, component 1 - 50)',
+export const ComponentsPage3: Story = {
+  name: 'Visual regression test (color-scheme: light, component 101 - ∞)',
+  args: {
+    theme: `${config.prefix}-theme`,
+    start: 101,
+  },
+};
+
+export const ComponentsDarkModePage1: Story = {
+  name: 'Visual regression test (color-scheme: dark, component 1 - 50)',
   args: {
     theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
     start: 0,
@@ -39,10 +52,19 @@ export const ComponentsDarkMode: Story = {
   },
 };
 
-export const ComponentsDarkModeContinued: Story = {
-  name: 'Visual regression test (color-scheme: dark, component 51 - ∞)',
+export const ComponentsDarkModePage2: Story = {
+  name: 'Visual regression test (color-scheme: dark, component 51 - 100)',
   args: {
     theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
     start: 51,
+    end: 100,
+  },
+};
+
+export const ComponentsDarkModePage3: Story = {
+  name: 'Visual regression test (color-scheme: dark, component 101 - ∞)',
+  args: {
+    theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
+    start: 101,
   },
 };
