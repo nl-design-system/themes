@@ -1,5 +1,17 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 3.3.1
+
+### Patch Changes
+
+- e0cab1a: Republish package with dist folder (the previous release omitted it due to a change in pnpm behavior)
+
+## 3.3.0
+
+### Minor Changes
+
+- 4fe4561: Extra lettertype toegevoegd als fallback-font.
+
 ## 3.2.0
 
 ### Minor Changes

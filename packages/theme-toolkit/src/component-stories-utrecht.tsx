@@ -73,6 +73,7 @@ import { PageBody } from '@utrecht/page-body-react/css';
 import { PageLayout } from '@utrecht/page-layout-react/css';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
+import { Note } from '@utrecht/note-react/css';
 import { clsx } from 'clsx';
 
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
@@ -3262,7 +3263,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
   },
   {
-    storyId: 'react-root--default',
+    storyId: 'react-utrecht-root--default',
     component: 'utrecht-root',
     group: STORY_GROUPS['ROOT'],
     name: 'Utrecht Root',
@@ -3280,7 +3281,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
-    storyId: 'react-page-body--default',
+    storyId: 'react-utrecht-page-body--default',
     component: 'utrecht-page-body',
     group: STORY_GROUPS['PAGE_BODY'],
     name: 'Utrecht Page Body',
@@ -3302,7 +3303,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
-    storyId: 'react-page-layout--default',
+    storyId: 'react-utrecht-page-layout--default',
     component: 'utrecht-page-layout',
     group: STORY_GROUPS['PAGE_LAYOUT'],
     name: 'Utrecht Page Layout',
@@ -3317,6 +3318,46 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: [],
+    },
+  },
+  {
+    storyId: 'react-utrecht-note--default',
+    component: 'utrecht-note',
+    group: STORY_GROUPS['NOTE'],
+    name: 'Utrecht Note',
+    render: () => (
+      <Note>
+        <Heading2>Lorem ipsum</Heading2>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Note>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.note.background-color',
+        'utrecht.note.border-color',
+        'utrecht.note.border-width',
+        'utrecht.note.color',
+        'utrecht.note.padding-block-start',
+        'utrecht.note.padding-block-end',
+        'utrecht.note.padding-inline-start',
+        'utrecht.note.padding-inline-end',
+        'utrecht.note.margin-block-start',
+        'utrecht.note.margin-block-end',
+        'utrecht.note.info.background-color',
+        'utrecht.note.info.color',
+        'utrecht.note.warning.background-color',
+        'utrecht.note.warning.color',
+        'utrecht.note.error.background-color',
+        'utrecht.note.error.color',
+        'utrecht.note.success.background-color',
+        'utrecht.note.success.color',
+      ],
     },
   },
 ];

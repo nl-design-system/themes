@@ -1,7 +1,7 @@
 /**
  * @type {import('prettier').Config}
  */
-module.exports = {
+export default {
   printWidth: 120,
   singleQuote: true,
   // Remove `trailingComma` after we switch to Prettier 3 where this is the default
@@ -29,6 +29,13 @@ module.exports = {
       files: '.changeset/README.md',
       options: {
         proseWrap: 'always',
+      },
+    },
+    {
+      // match pnpm CLI-driven changes behavior
+      files: ['pnpm-workspace.yaml'],
+      options: {
+        singleQuote: true,
       },
     },
   ],

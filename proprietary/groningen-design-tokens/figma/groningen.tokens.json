@@ -162,7 +162,7 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "Roboto, sans-serif"
+            "$value": "Roboto, Arial, sans-serif"
           },
           "monospace": {
             "$type": "fontFamilies",
@@ -7808,7 +7808,7 @@
       "grid": {
         "column-count": {
           "$type": "number",
-          "$value": 12
+          "$value": "12"
         },
         "column-gap": {
           "$type": "dimension",
@@ -7849,7 +7849,7 @@
         "vi-medium": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -7859,7 +7859,7 @@
         "vi-wide": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -9224,14 +9224,14 @@
   },
   "components/note": {
     "utrecht": {
-      "spotlight-section": {
+      "note": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.default.bg-default}"
+          "$value": "{basis.color.accent-1.bg-document}"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.default.border-default}"
+          "$value": "transparent"
         },
         "border-width": {
           "$type": "dimension",
@@ -9271,10 +9271,14 @@
           "$type": "dimension",
           "$value": "{basis.space.inline.xl}"
         },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.md}"
+        },
         "info": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -9298,7 +9302,7 @@
         "error": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -9319,10 +9323,10 @@
             }
           }
         },
-        "ok": {
+        "success": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -9346,7 +9350,7 @@
         "warning": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{utrecht.spotlight-section.border-width}"
+            "$value": "{utrecht.note.border-width}"
           },
           "background-color": {
             "$type": "color",
@@ -9366,14 +9370,6 @@
               "$value": "{basis.color.warning.color-default}"
             }
           }
-        }
-      }
-    },
-    "todo": {
-      "spotlight-section": {
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.md}"
         }
       }
     }
@@ -9950,15 +9946,15 @@
           "current": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-active}"
+              "$value": "{basis.color.action-2.color-default}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
+              "$value": "{basis.color.action-2.color-default}"
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.color-document}"
+              "$value": "{basis.color.default.bg-document}"
             }
           },
           "hover": {

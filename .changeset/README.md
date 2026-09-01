@@ -63,4 +63,4 @@ Gebruik het onderstaande sjabloon voor **kleine correcties**.
 [Korte beschrijving van de correctie.]
 ```
 
-[1]: https://nldesignsystem.nl/handboek/designer/breaking-changes
+[1]: https://nldesignsystem.nl/handboek/designer/design-tokens-versiebeheer/
