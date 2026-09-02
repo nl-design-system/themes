@@ -16,7 +16,7 @@ export interface KnownExtensions {
   'nl.nldesignsystem.css-property-syntax'?: string | string[];
   'nl.nldesignsystem.figma-implementation'?: boolean;
   'nl.nldesignsystem.css.property'?: {
-    syntax: string;
+    syntax: string | string[];
     inherits: boolean;
   };
   'nl.nldesignsystem.deprecated'?: boolean;
@@ -96,7 +96,7 @@ export type DesignTokenDeclaration = StandardDesignTokenDeclaration | LegacyDesi
 
 export interface DesignToken extends Partial<DesignTokenMetadata> {
   type?: string;
-  value: DesignTokenValue;
+  value?: DesignTokenValue;
   $value?: DesignTokenValue;
 }
 

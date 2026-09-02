@@ -14,6 +14,7 @@ import {
 } from '@utrecht/component-library-react/dist/css-module';
 // eslint-disable-next-line no-unused-vars
 import {
+  DesignToken,
   DesignTokenValue,
   getTokenValue,
   StyleDictionaryDesignToken,
@@ -50,7 +51,7 @@ interface DesignTokensTableProps {
   /**
    * Array of tokens definitions.
    */
-  tokensDefinition?: StyleDictionaryDesignToken[] | Map<string, StyleDictionaryDesignToken>;
+  tokensDefinition?: DesignToken[] | Map<string, DesignToken>;
 }
 
 const getLastPathSegment = (token: StyleDictionaryDesignToken) =>
@@ -70,13 +71,13 @@ const getTokenRef = (str: string) => (isTokenRef(str) ? str.replace(/^{(.+)}$/, 
 export const DesignTokensTable = ({ tokens, tokensMap, tokensDefinition }: DesignTokensTableProps) => {
   const vendorPrefixes = ['ams', 'denhaag', 'nl', 'utrecht'];
 
-  const definitionMap: Map<string, StyleDictionaryDesignToken> =
+  const definitionMap: Map<string, StyleDictionaryDesignToken> | Map<string, DesignToken> =
     tokensMap ||
     (tokensDefinition instanceof Map
-      ? (tokensDefinition as Map<string, StyleDictionaryDesignToken>)
+      ? tokensDefinition
       : Array.isArray(tokensDefinition)
         ? arrayToMap(tokensDefinition)
-        : new Map<string, StyleDictionaryDesignToken>());
+        : new Map<string, DesignToken>());
   return (
     <Table
       className="sb-unstyled voorbeeld-theme"
