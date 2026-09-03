@@ -1,5 +1,35 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 4.0.0
+
+### Major Changes
+
+- ddd62fd: ## Card as link in ToDo bibliotheek toegevoegd conform changelog 17.0.0
+  Naam component 'card' van Amsterdam gewijzigd naar 'card-as-link'
+  Component en bijbehorende design tokens van 'case-card' verwijderd
+  Component 'card-as-link/todo' met bijbehorende tokens, zoals gedefinieerd in changelog 17.0.0, toegevoegd aan tokensset. Hierbij de oude tokens direct vervangen.
+  
+  ## Afwijkingen standaard tokens zoals gedefinieerd in 17.0.0
+  Waarde van '{todo.card-as-link.heading.color}' gewijzigd van {basis.color.default.color-document} naar {basis.color.action-1.color-default}
+  Waarde van '{todo.card-as-link.case.border-color}' ,'{todo.card-as-link.case.archived.border-color}', '{todo.card-as-link.plan.border-color}' en '{todo.card-as-link.plan.archived.border-color}' gewijzigd van '{basis.color.transparent}' naar '{{todo.card-as-link.border-color}'
+  Waarde van '{todo.card-as-link.plan.border-width}' gewijzigd van '{basis.border-width.lg}' naar '{basis.border-width.md}'
+- e48917d: ## Hernoemen van component spotlight naar note, conform changelog 18.0.0.
+  Component '{utrecht.spotlight-section}' hernoemd naar '{utrecht.note}'
+  Variant 'ok' hernoemd naar 'success'
+  
+  ## Aanvullende wijzigingen kleuren voor note
+  Waarde '{background-color}' voor '{Note}' gewijzigd van '{basis.color.default.bg-default}' naar '{basis.color.accent-1.bg-document}'
+  Waarde '{border-color}' voor '{Note}' gewijzigd van '{basis.color.default.border-default}' naar 'transparent'
+
+### Patch Changes
+
+- a00ca8b: ### De values van de tokens voor utrecht page number navigation aangepast.
+  Alle wijzigingen zijn hier voor de current page number. Dit omdat de huidige variant een witte cirkel had die niet te zien was op onze doorgaans witte achtergrond.
+  
+  Property value is gewijzigd van '{basis.color.default.bg-active}' naar '{basis.color.action-2.color-default}' in de background-color van de current state.
+  Property value is gewijzigd van '{basis.color.transparent}' naar '{basis.color.action-2.color-default}' in de border-color van de current state.
+  Property value is gewijzigd van '{basis.color.default.color-document}' naar '{basis.color.default.bg-document}' in de color van de current state.
+
 ## 3.3.1
 
 ### Patch Changes

@@ -1,5 +1,48 @@
 # @nl-design-system-unstable/start-design-tokens
 
+## 8.1.0
+
+### Minor Changes
+
+- 1513c62: De volgende tokens zijn hernoemd in Accordion component:
+  
+  - `todo.accordion.button.font-family` naar `utrecht.accordion.button.font-family`
+  - `todo.accordion.button.font-size` naar `utrecht.accordion.button.font-size`
+  - `todo.accordion.button.font-weight` naar `utrecht.accordion.button.font-weight`
+  - `todo.accordion.button.line-height` naar `utrecht.accordion.button.line-height`
+- 57dfaf9: De volgende tokens zijn hernoemd in Checkbox component:
+  
+  - `todo.checkbox.checked.active.background-color` naar `utrecht.checkbox.checked.active.background-color`
+  - `todo.checkbox.checked.active.border-color` naar `utrecht.checkbox.checked.active.border-color`
+  - `todo.checkbox.checked.active.border-width` naar `utrecht.checkbox.checked.active.border-width`
+  - `todo.checkbox.checked.active.color` naar `utrecht.checkbox.checked.active.color`
+  - `todo.checkbox.checked.hover.background-color` naar `utrecht.checkbox.checked.hover.background-color`
+  - `todo.checkbox.checked.hover.border-color` naar `utrecht.checkbox.checked.hover.border-color`
+  - `todo.checkbox.checked.hover.border-width` naar `utrecht.checkbox.checked.hover.border-width`
+  - `todo.checkbox.checked.hover.color` naar `utrecht.checkbox.checked.hover.color`
+  - `todo.checkbox.indeterminate.active.background-color` naar `utrecht.checkbox.indeterminate.active.background-color`
+  - `todo.checkbox.indeterminate.active.border-color` naar `utrecht.checkbox.indeterminate.active.border-color`
+  - `todo.checkbox.indeterminate.active.border-width` naar `utrecht.checkbox.indeterminate.active.border-width`
+  - `todo.checkbox.indeterminate.active.color` naar `utrecht.checkbox.indeterminate.active.color`
+  - `todo.checkbox.indeterminate.hover.background-color` utrecht `todo.checkbox.indeterminate.hover.background-color`
+  - `todo.checkbox.indeterminate.hover.border-color` naar `utrecht.checkbox.indeterminate.hover.border-color`
+  - `todo.checkbox.indeterminate.hover.border-width` naar `utrecht.checkbox.indeterminate.hover.border-width`
+  - `todo.checkbox.indeterminate.hover.color` naar `utrecht.checkbox.indeterminate.hover.color`
+- 5f03cd8: De volgende tokens zijn hernoemd in Text Area component:
+  
+  - `todo.textarea.hover.background-color` naar `utrecht.textarea.hover.background-color`
+  - `todo.textarea.hover.border-color` naar `utrecht.textarea.hover.border-color`
+  - `todo.textarea.hover.color` naar `utrecht.textarea.hover.color`
+- a99f6d3: De volgende tokens zijn hernoemd in Text Input component:
+  
+  - `todo.textbox.hover.background-color` naar `utrecht.textbox.hover.background-color`
+  - `todo.textbox.hover.border-color` naar `utrecht.textbox.hover.border-color`
+  - `todo.textbox.hover.color` naar `utrecht.textbox.hover.color`
+
+### Patch Changes
+
+- dc1a49f: Add documentation to display in Themes Storybook.
+
 ## 8.0.0
 
 ### Major Changes
