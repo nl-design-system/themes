@@ -1,0 +1,54 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { FontDropTarget } from "@nl-design-system-unstable/theme-toolkit/src/FontDropTarget";
+import tokens from "../dist/tokens.json";
+import config from "../src/config.json";
+
+<Meta title="Start Thema/Typography" />
+
+export const typography = tokens["basis"]["text"];
+
+export const textContent = "Tweede Kamerverkiezingen gaan anders dan anders";
+export const renderScale = (scale, fontFamily) => (
+  <div>
+    {Object.entries(scale).map(([key, size]) => {
+      return (
+        <div key={key}>
+          <h3>{key}</h3>
+          {size["description"] && <p>{size["description"]}</p>}
+          <div
+            style={{
+              fontFamily: `var(--${fontFamily.path.join("-")})`,
+              fontSize: size["$value"],
+              fontWeight: typography["font-weight"]["default"]["$value"],
+              lineHeight: typography["line-height"]["md"]["$value"],
+            }}
+          >
+            {textContent}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+);
+
+# Typography
+
+## Default font
+
+<FontDropTarget
+  cssProperty="--basis-text-font-family-default"
+  defaultFontFamily={typography["font-family"]["default"]["$value"]}
+  appearance="subtle"
+>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["default"])}</div>
+</FontDropTarget>
+
+## Monospace font
+
+<FontDropTarget
+  cssProperty="--basis-text-font-family-monospace"
+  defaultFontFamily={typography["font-family"]["monospace"]["$value"]}
+  appearance="subtle"
+>
+  <div>{renderScale(typography["font-size"], typography["font-family"]["monospace"])}</div>
+</FontDropTarget>
