@@ -56,6 +56,11 @@ import '@nl-design-system-unstable/provincie-zuid-holland-design-tokens/dist/ind
 import '@nl-design-system-unstable/start-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/start-design-tokens/dist/color-scheme-dark/theme.css';
 import '@nl-design-system-unstable/start-design-tokens/src/font.js';
+import '@nl-design-system-community/sittard-geleen-design-tokens/src/font.mjs';
+import '@nl-design-system-community/sittard-geleen-design-tokens/src/font.scss';
+import '@nl-design-system-community/sittard-geleen-design-tokens/dist/theme.css';
+import '@nl-design-system-community/sittard-geleen-design-tokens/dist/color-scheme-dark/theme.css';
+import '@nl-design-system-community/sittard-geleen-design-tokens/src/custom.scss';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tubbergen-design-tokens/dist/index.css';
