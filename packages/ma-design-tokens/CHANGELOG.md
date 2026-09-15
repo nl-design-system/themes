@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 7.1.1
+
+### Patch Changes
+
+- 8d5a041: Token `denhaag.side-navigation.mobile.display` is verwijderd uit Side Navigation component.
+
 ## 7.1.0
 
 ### Minor Changes
