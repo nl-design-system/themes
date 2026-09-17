@@ -1,0 +1,77 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 NL Design System Community
+ * All rights reserved
+ */
+
+@import "./responsive";
+
+// Smaller focus-ring offset for form controls, so it doesn't overlap labels/errors.
+.utrecht-textbox,
+.utrecht-textarea,
+.utrecht-select,
+.utrecht-checkbox,
+.utrecht-radio-button,
+.utrecht-form-toggle {
+  --utrecht-focus-outline-offset: 0;
+}
+
+// Underline buttons on hover (not token-driven).
+.utrecht-button:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.nl-button:hover:not(.nl-button--disabled) {
+  text-decoration: underline;
+}
+
+// Custom bullet, since ::marker can't be resized and recentered.
+.utrecht-unordered-list__item {
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+.utrecht-unordered-list__item::before {
+  background-color: var(--utrecht-unordered-list-marker-color, currentColor);
+  block-size: 0.35em;
+  border-radius: 50%;
+  content: "";
+  flex: 0 0 auto;
+  inline-size: 0.35em;
+  margin-inline-end: 0.5em;
+}
+
+// Same treatment for ordered list, so numbers line up with the bullets above.
+.utrecht-ordered-list {
+  counter-reset: utrecht-ordered-list;
+  list-style: none;
+}
+
+.utrecht-ordered-list__item {
+  align-items: center;
+  counter-increment: utrecht-ordered-list;
+  display: flex;
+  list-style: none;
+}
+
+.utrecht-ordered-list__item::before {
+  color: var(--utrecht-ordered-list-marker-color, currentColor);
+  content: counter(utrecht-ordered-list) ".";
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  margin-inline-end: 0.5em;
+}
+
+// Make paragraph/heading text follow the footer's own color, not the theme default.
+.utrecht-page-footer {
+  --utrecht-paragraph-color: currentcolor;
+  --utrecht-heading-1-color: currentcolor;
+  --utrecht-heading-2-color: currentcolor;
+  --utrecht-heading-3-color: currentcolor;
+  --utrecht-heading-4-color: currentcolor;
+  --utrecht-heading-5-color: currentcolor;
+  --utrecht-heading-6-color: currentcolor;
+}
+
+// Fix accordion toggle inheriting the button's round shape.
+.utrecht-accordion__button {
+  border-radius: 6px !important;
+}
