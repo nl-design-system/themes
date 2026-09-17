@@ -61,6 +61,8 @@ import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tubbergen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tubbergen-design-tokens/src/font';
 import '@nl-design-system-unstable/venray-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/vidar-design-tokens/dist/theme.css';
+import '@nl-design-system-unstable/vidar-design-tokens/dist/color-scheme-dark/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/custom.scss';
 import '@nl-design-system-unstable/voorbeeld-design-tokens/src/font';
