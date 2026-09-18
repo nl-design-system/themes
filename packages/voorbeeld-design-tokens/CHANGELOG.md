@@ -1,5 +1,18 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 14.0.0
+
+### Major Changes
+
+- 74da821: De volgende tokens zijn verwijderd uit ToDo Icon Only Button component:
+  
+  - `todo.icon-only-button.padding-block-end`
+  - `todo.icon-only-button.padding-block-start`
+  - `todo.icon-only-button.padding-inline-end`
+  - `todo.icon-only-button.padding-inline-start`
+- 4fbfd1d: - Token `utrecht.form-field.label.margin-block-end` is toegevoegd aan Form Field component.
+  - Token `utrecht.form-label.margin-block-end` verwijderd uit Form Field Label component.
+
 ## 13.1.0
 
 ### Minor Changes
