@@ -8028,6 +8028,12 @@
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           }
+        },
+        "label": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          }
         }
       }
     }
@@ -8176,10 +8182,6 @@
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.default}"
           }
-        },
-        "margin-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.lg}"
         }
       }
     }
@@ -9178,28 +9180,6 @@
       }
     }
   },
-  "components/icon-only-button": {
-    "todo": {
-      "icon-only-button": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.lg}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.lg}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.lg}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.lg}"
-        }
-      }
-    }
-  },
   "components/image": {
     "ams": {
       "image": {
@@ -9596,7 +9576,7 @@
   },
   "components/modal-dialog": {
     "ams": {
-      "dialog": {
+      "modal-dialog": {
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.default.bg-document}"
@@ -9621,10 +9601,6 @@
         "box-shadow": {
           "$type": "boxShadow",
           "$value": "{basis.box-shadow.lg}"
-        },
-        "gap": {
-          "$type": "dimension",
-          "$value": "0px"
         },
         "inline-size": {
           "$type": "dimension",
@@ -9657,13 +9633,17 @@
           }
         },
         "header": {
-          "gap": {
+          "column-gap": {
             "$type": "dimension",
             "$value": "{basis.space.column.xl}"
           },
           "padding-block": {
             "$type": "dimension",
             "$value": "{basis.space.block.xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.sm}"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -9681,6 +9661,10 @@
           }
         },
         "body": {
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          },
           "padding-block": {
             "$type": "dimension",
             "$value": "0px"
@@ -9690,6 +9674,10 @@
             "$value": "{basis.space.inline.xl}"
           },
           "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.none}"
+            },
             "padding-inline": {
               "$type": "dimension",
               "$value": "{basis.space.inline.xl}"
@@ -15208,7 +15196,6 @@
       "components/icon",
       "components/icon-button/amsterdam",
       "components/icon-button/denhaag",
-      "components/icon-only-button",
       "components/image",
       "components/link/nl",
       "components/link/utrecht",
