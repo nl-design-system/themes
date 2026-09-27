@@ -4,6 +4,7 @@ import { ArchiveIcon, CheckCircleIcon, GridIcon, InboxIcon, UserIcon } from '@ge
 import { SideNavigation } from '@gemeente-denhaag/side-navigation';
 import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
+import '@gemeente-denhaag/card/index.css';
 import { ActionSingle } from '@gemeente-denhaag/action';
 import { File } from '@gemeente-denhaag/file';
 import { Status } from '@gemeente-denhaag/process-steps';
