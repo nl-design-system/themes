@@ -2322,12 +2322,24 @@ importers:
       '@gemeente-denhaag/card':
         specifier: 4.1.0
         version: 4.1.0(react-dom@19.2.8)(react@19.2.8)
+      '@nl-design-system-community/color-scale-generator':
+        specifier: 1.0.2
+        version: 1.0.2
       '@nl-design-system-community/design-tokens-definition':
         specifier: workspace:*
         version: link:../../packages/design-tokens-definition
+      '@nl-design-system-community/design-tokens-lint':
+        specifier: 1.0.0
+        version: 1.0.0
+      '@nl-design-system-community/design-tokens-schema':
+        specifier: 2.3.0
+        version: 2.3.0
       '@nl-design-system-unstable/design-tokens-table-react':
         specifier: workspace:*
         version: link:../../packages/components-react/design-tokens-table-react
+      '@nl-design-system-unstable/start-design-tokens':
+        specifier: workspace:*
+        version: link:../../packages/start-design-tokens
       '@nl-design-system-unstable/theme-toolkit':
         specifier: workspace:*
         version: link:../../packages/theme-toolkit
@@ -2355,6 +2367,9 @@ importers:
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
+      colorjs.io:
+        specifier: 0.5.2
+        version: 0.5.2
       html-react-parser:
         specifier: 5.1.12
         version: 5.1.12(@types/react@19.2.18)(react@19.2.8)
@@ -3861,11 +3876,17 @@ packages:
       '@babel/runtime': ^7
       react: ^18 || ^19
 
+  '@nl-design-system-candidate/button-tokens@1.0.0':
+    resolution: {integrity: sha512-2uxqqVUW9kyib/rPn1rvWI09auUVOkA5IUC+rBlYxUz9DVVn4UcXPeOe9KVgh0a1WuM2dzX3k/bpWRBINtKACw==}
+
   '@nl-design-system-candidate/code-block-react@1.3.5':
     resolution: {integrity: sha512-kU+lrX5sciAw8t2vAcjZHTcEupTincmnU8YIxwZKJoCKLzPo8Qp63VPkLpIweIUX29YhcB+SgDG9f1VDjx+NpQ==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
+
+  '@nl-design-system-candidate/code-block-tokens@2.0.3':
+    resolution: {integrity: sha512-cMaLJRxJFbgbxG18E+Dky8mABMCJR/KwugqlfF8ERK7S4K06m4dwHQk3Al18adISuRReApfueJ2CiMTSJL40GQ==}
 
   '@nl-design-system-candidate/code-react@1.2.5':
     resolution: {integrity: sha512-vVjK62KzbSruH4I37xccBCzKYFeIHvg9pby2mb2Z2lDG5Fi7LtKEKOYASxUlIf/7If0VhM0nIrJ8LUbjz4W0Fw==}
@@ -3873,17 +3894,26 @@ packages:
       '@babel/runtime': ^7
       react: ^18
 
+  '@nl-design-system-candidate/code-tokens@3.0.0':
+    resolution: {integrity: sha512-uPjCHB5mvFMFXDjxjAhWk9zmPxdDdRrrza2vUROmB8jSszxP/37f2tPMqEa+F/ugZTyBOt9AYWk/feBfOruhmQ==}
+
   '@nl-design-system-candidate/color-sample-react@1.2.0':
     resolution: {integrity: sha512-WfgoVdLMkjRdbzBoGLV+t7rE9Jox9/omxg9JXuBy2ZYAJC+fcDzbcKI6A7Bkeyo8X9+v9twvHDR+7/Tgyn1GmA==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
 
+  '@nl-design-system-candidate/color-sample-tokens@2.0.3':
+    resolution: {integrity: sha512-B3hIdU+bX70W5XbRpPjXrpi3F1JiNoMhNbsP0PauO0jhK2386uSFgBEqb4iDN0wruqX0qAiBhOcJuepy7vding==}
+
   '@nl-design-system-candidate/data-badge-react@1.1.5':
     resolution: {integrity: sha512-VTtk2tvGGKurf9S7A1ZzdBUsfbDYjF1zsW9Li40w9eku1S9gQEPf0zIpURMSA3oTiGivRQeTkk7/SVcYhYaHqA==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
+
+  '@nl-design-system-candidate/data-badge-tokens@2.0.3':
+    resolution: {integrity: sha512-W2SB4PTND45OEJeXLSeYjA+RT2cyLRFXKcZu1rDTh5Q3n6EED65HsocFmOu6uRK7pAb6WwU6W14X4EAD47QOUA==}
 
   '@nl-design-system-candidate/form-field-description-css@1.0.0':
     resolution: {integrity: sha512-nYUnbZcwjbtExkx5QDVCYSIWYNlJ5cS4F2qEvX0/sjvp52bZvG5iZNs9loH90V6dcwYRhkEz5dwiaYuHlYs4hA==}
@@ -3915,6 +3945,9 @@ packages:
       '@babel/runtime': ^7
       react: ^18
 
+  '@nl-design-system-candidate/heading-tokens@1.1.2':
+    resolution: {integrity: sha512-9A7V/k2JyQ6It6JBViu2h06uN7IbMZ6//hdkznJxc9w7qVJjlx+5sIewgEs/8kkFAlSCMBrgNRkqZsQZaRPTRg==}
+
   '@nl-design-system-candidate/link-docs@1.2.0':
     resolution: {integrity: sha512-mYA6/GvWnjgzs2sxPheg5FWQSKCy+32Iv1trOLLSGqe2lv+62z5LQnDGRfbZoMUwKmbNPr4P+wNNYNmZWajGKQ==}
 
@@ -3930,17 +3963,26 @@ packages:
       '@babel/runtime': ^7
       react: ^18 || ^19
 
+  '@nl-design-system-candidate/link-tokens@3.0.3':
+    resolution: {integrity: sha512-4CS7pyfBpCwCY9u2C1QbQg/sYBLcruB7ZHCprUCJR11NyjcdXGYVnxxnOU+uko/G7UZ6Vuy66bALIbro7Iy+aw==}
+
   '@nl-design-system-candidate/mark-react@1.1.5':
     resolution: {integrity: sha512-tkBAXhewS/lwaly+fz0lHdqwf5LGovdAA4uatGPQyxk0Y0GwY0+P4aRSZgFHzlx+njL1ExYJwIdFykTtUZs1QQ==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
 
+  '@nl-design-system-candidate/mark-tokens@2.0.3':
+    resolution: {integrity: sha512-eA0Poy1qyoGSOAwJUirRHOm4nSzsL33fz1D585FKIucmQTV8EDrBLgLlysRDAdLriWAXPINsETaAkSQ9/EFq0A==}
+
   '@nl-design-system-candidate/number-badge-react@1.3.0':
     resolution: {integrity: sha512-sUel37eUxMVNA7ajE7P+Pr71ANQkzGSeqcpi1xTkFu2Wzma6kg0yQlYuJ539jQ5FhXvInNP8+q/T9os4LQ8yYA==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
+
+  '@nl-design-system-candidate/number-badge-tokens@2.0.3':
+    resolution: {integrity: sha512-LfJVX9ha486SMJ7laHy/yRy31mDdJHS5r8bczsuR4afll5F6xiwvhyxeJlzGv4z/Gsdoub3SWiz3apVObYJErg==}
 
   '@nl-design-system-candidate/paragraph-react@2.2.0':
     resolution: {integrity: sha512-QCVQLc9y1uImaTRUdv+y8hZtJd01+766izVfI5qgOvOu0H50AAOU2oYu+IpwO1NirLU4NFsHT55IC30EWk7iuQ==}
@@ -3954,6 +3996,9 @@ packages:
       '@babel/runtime': ^7
       react: ^18 || ^19
 
+  '@nl-design-system-candidate/paragraph-tokens@1.1.3':
+    resolution: {integrity: sha512-EtFFQagTwkJYL5k9+h8xDQDh9GKzgo4CJnFrSuxWNzM3A3Hi+vAd6bIBAj4ECBZfW5IJBtsONAduSoCiPo5CbA==}
+
   '@nl-design-system-candidate/skip-link-react@1.1.5':
     resolution: {integrity: sha512-zJFAm16NFswU7WfaTVBjus5vs4PoV2mUP8haYp4LwqilUs+/gy8JpYRx1DMUrfs3/E79LjGZx/I4A/a+0bi10A==}
     peerDependencies:
@@ -3965,6 +4010,29 @@ packages:
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18 || ^19
+
+  '@nl-design-system-candidate/skip-link-tokens@1.0.4':
+    resolution: {integrity: sha512-MD1+m55nRqkj2eATcBNOLE8N5jWfvjJg2ax+POX8zXm49wJcBGTS6B/kK4kzIPbMuivYnxVtNlmA+Cz/upFBZA==}
+
+  '@nl-design-system-community/color-scale-generator@1.0.2':
+    resolution: {integrity: sha512-ZoZnsuK0LJVmilLCISmRfybOtIrin+8uuNgsPC7m+0IgPUyQS1JEka7x4w2b+EcCcEOIPFShDaUPj1kDAsSQFQ==}
+
+  '@nl-design-system-community/design-tokens-lint@1.0.0':
+    resolution: {integrity: sha512-fc+QkphdUyyw+wcHgUWpBmfVV0f5lMr1MS6cq484NGkOS1JEb2tw7daKONpvvhMeroLr+J0v6aZRfWNQ/NBI6g==}
+    engines: {node: '>=20.12.0'}
+    hasBin: true
+
+  '@nl-design-system-community/design-tokens-schema@2.2.0':
+    resolution: {integrity: sha512-didIKhO8xa7Bg2BUo2P9Lr4nmKtoJJY76zIYu44w8jiArhjBuQq85hxcsTmywNWv+v2WixJu+v4+zt9FYXFfJA==}
+
+  '@nl-design-system-community/design-tokens-schema@2.3.0':
+    resolution: {integrity: sha512-4/1X4MXdsGW9zjhbncZ/k6Ugi0Qkoc28HSf1fF0btToJk4DG2MXerclmM9Vtfwq53AhrbeMXxl9t3bWQ8wOXTA==}
+
+  '@nl-design-system-community/design-tokens-schema@2.4.0':
+    resolution: {integrity: sha512-rTHsfU/v46inK7Amc3T9y3ga0336SR9glUPE1f1+1lKY8HfRy6hpL+uVTstvLUaIrCJtDiYrNoYMaVvnPq2TCg==}
+
+  '@nl-design-system-unstable/basis-design-tokens@3.1.1':
+    resolution: {integrity: sha512-eENh3scHg7ZXGERZy9SL7wdVi56sg1gqnSEAhC2QpWf60pd5p3FClPoQTI4/hISFnpFKvlHLsl4xJgjT/gLsmg==}
 
   '@nl-design-system/component-index@1.0.0-alpha.30':
     resolution: {integrity: sha512-PA/xZSL6rUYfBJJp9OmEN0Q05QPT0Z5VFApcE/XyjJnjvkPdzNwYVHpPecXDs2J99YeO1iyOXnyFJBrI68r7Kw==}
@@ -4016,6 +4084,14 @@ packages:
   '@pnpm/deps.graph-sequencer@1100.0.1':
     resolution: {integrity: sha512-pOr5+q1fLYKwFN3LAJuGZEnfXDcQ73zqgDHMtGy+K+uIoUqyY+6MeDCWFwfu+4EFuq76I5EPFofoNAI+Bmmq4A==}
     engines: {node: '>=22.13'}
+
+  '@projectwallace/css-parser@0.16.0':
+    resolution: {integrity: sha512-4WJOIU/6Zbscp5snGGvqx2UobIgYOfBaZDGbx6Mj7b7PjcMz34fFufus7h3AbDFlS7nXEkHHlPDZJl/Qu5gumg==}
+    engines: {pnpm: '>=11.0.0'}
+
+  '@projectwallace/css-parser@0.18.6':
+    resolution: {integrity: sha512-o/3Q5YHs28nq5APCR73w/nUC9hr67nU229cbo611T1U72QeCBti11xkLwk7aMmUTzpSKnqqZib1o4bq7QEgapw==}
+    engines: {pnpm: '>=11.0.0'}
 
   '@radix-ui/colors@3.0.0':
     resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
@@ -6094,6 +6170,12 @@ packages:
   colorjs.io@0.5.2:
     resolution: {integrity: sha512-twmVoizEW7ylZSN32OgKdXRmo1qg+wT5/6C3xu5b9QsWzSFAhHLn2xd8ro0diCsKfCj1RdaTP/nrcW+vAoQPIw==}
 
+  colorjs.io@0.6.1:
+    resolution: {integrity: sha512-8lyR2wHzuIykCpqHKgluGsqQi5iDm3/a2IgP2GBZrasn2sBRkE4NOGsglZxWLs/jZQoNkmA/KM/8NV16rLUdBg==}
+
+  colorjs.io@0.7.1:
+    resolution: {integrity: sha512-LY7OHnJZxHwT5UlzNa9bbhHHDbzB6yE5+3MIPwJEQKRvSCt/T4G7epsj+9j2BExUIIfXFIJGsIXUKdfrK9Q5tA==}
+
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
@@ -6383,6 +6465,9 @@ packages:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
 
+  dlv@1.1.3:
+    resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
+
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
@@ -6512,6 +6597,12 @@ packages:
   es-to-primitive@1.2.1:
     resolution: {integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==}
     engines: {node: '>= 0.4'}
+
+  es-toolkit@1.47.0:
+    resolution: {integrity: sha512-n1GuoD0WEQZMBk5tttoZSqwgyLx01oqa5XsBmCHwPyNe1S9jPBEmtR2pSgp2kJuWE3ciFZ6yRHmY4pM4C3OOkw==}
+
+  es-toolkit@1.52.0:
+    resolution: {integrity: sha512-XTNEJQh1tY1ZJVcf6ayP/2n4ZPyaHlW2FWs7xvw5ddPuhUVjLD3olQVQS7kf58JbAB48iL0uL/jerTrjtV3lDA==}
 
   esbuild-register@3.5.0:
     resolution: {integrity: sha512-+4G/XmakeBAsvJuDugJvtyF1x+XJT4FMocynNpxrvEBViirpfUn2PgNpCHedfWhF4WokNsO/OvMKrmJOIJsI5A==}
@@ -9867,6 +9958,12 @@ packages:
     resolution: {integrity: sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==}
     engines: {node: '>=12.20'}
 
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
+
+  zod@4.5.4:
+    resolution: {integrity: sha512-sC95tT5iHHH9gtpj6A81kh+NEaRAUFN+qlUPDUbRfOMvNf5QCBqsb3WgvnpVtK5Y+4UfA6KqufotuTvMGiTlsA==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -11176,6 +11273,8 @@ snapshots:
       clsx: 2.1.1
       react: 19.2.8
 
+  '@nl-design-system-candidate/button-tokens@1.0.0': {}
+
   '@nl-design-system-candidate/code-block-react@1.3.5(@babel/runtime@7.25.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -11186,6 +11285,8 @@ snapshots:
       '@babel/runtime': 7.29.2
       clsx: 2.1.1
 
+  '@nl-design-system-candidate/code-block-tokens@2.0.3': {}
+
   '@nl-design-system-candidate/code-react@1.2.5(@babel/runtime@7.25.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -11193,6 +11294,8 @@ snapshots:
   '@nl-design-system-candidate/code-react@1.2.5(@babel/runtime@7.29.2)':
     dependencies:
       '@babel/runtime': 7.29.2
+
+  '@nl-design-system-candidate/code-tokens@3.0.0': {}
 
   '@nl-design-system-candidate/color-sample-react@1.2.0(@babel/runtime@7.25.0)':
     dependencies:
@@ -11202,6 +11305,8 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.2
 
+  '@nl-design-system-candidate/color-sample-tokens@2.0.3': {}
+
   '@nl-design-system-candidate/data-badge-react@1.1.5(@babel/runtime@7.25.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -11209,6 +11314,8 @@ snapshots:
   '@nl-design-system-candidate/data-badge-react@1.1.5(@babel/runtime@7.29.2)':
     dependencies:
       '@babel/runtime': 7.29.2
+
+  '@nl-design-system-candidate/data-badge-tokens@2.0.3': {}
 
   '@nl-design-system-candidate/form-field-description-css@1.0.0': {}
 
@@ -11250,6 +11357,8 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.2
 
+  '@nl-design-system-candidate/heading-tokens@1.1.2': {}
+
   '@nl-design-system-candidate/link-docs@1.2.0': {}
 
   '@nl-design-system-candidate/link-react@1.1.5(@babel/runtime@7.25.0)':
@@ -11273,6 +11382,8 @@ snapshots:
       clsx: 2.1.1
       react: 19.2.8
 
+  '@nl-design-system-candidate/link-tokens@3.0.3': {}
+
   '@nl-design-system-candidate/mark-react@1.1.5(@babel/runtime@7.25.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -11281,6 +11392,8 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.2
 
+  '@nl-design-system-candidate/mark-tokens@2.0.3': {}
+
   '@nl-design-system-candidate/number-badge-react@1.3.0(@babel/runtime@7.25.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -11288,6 +11401,8 @@ snapshots:
   '@nl-design-system-candidate/number-badge-react@1.3.0(@babel/runtime@7.29.2)':
     dependencies:
       '@babel/runtime': 7.29.2
+
+  '@nl-design-system-candidate/number-badge-tokens@2.0.3': {}
 
   '@nl-design-system-candidate/paragraph-react@2.2.0(@babel/runtime@7.25.0)':
     dependencies:
@@ -11310,6 +11425,8 @@ snapshots:
       clsx: 2.1.1
       react: 19.2.8
 
+  '@nl-design-system-candidate/paragraph-tokens@1.1.3': {}
+
   '@nl-design-system-candidate/skip-link-react@1.1.5(@babel/runtime@7.25.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -11330,6 +11447,82 @@ snapshots:
       '@babel/runtime': 7.29.7
       clsx: 2.1.1
       react: 19.2.8
+
+  '@nl-design-system-candidate/skip-link-tokens@1.0.4': {}
+
+  '@nl-design-system-community/color-scale-generator@1.0.2':
+    dependencies:
+      '@nl-design-system-community/design-tokens-schema': 2.4.0
+      colorjs.io: 0.7.1
+
+  '@nl-design-system-community/design-tokens-lint@1.0.0':
+    dependencies:
+      '@nl-design-system-community/design-tokens-schema': 2.2.0
+
+  '@nl-design-system-community/design-tokens-schema@2.2.0':
+    dependencies:
+      '@nl-design-system-candidate/button-tokens': 1.0.0
+      '@nl-design-system-candidate/code-block-tokens': 2.0.3
+      '@nl-design-system-candidate/code-tokens': 3.0.0
+      '@nl-design-system-candidate/color-sample-tokens': 2.0.3
+      '@nl-design-system-candidate/data-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/heading-tokens': 1.1.2
+      '@nl-design-system-candidate/link-tokens': 3.0.3
+      '@nl-design-system-candidate/mark-tokens': 2.0.3
+      '@nl-design-system-candidate/number-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/paragraph-tokens': 1.1.3
+      '@nl-design-system-candidate/skip-link-tokens': 1.0.4
+      '@nl-design-system-unstable/basis-design-tokens': 3.1.1
+      '@projectwallace/css-parser': 0.16.0
+      colorjs.io: 0.6.1
+      dequal: 2.0.3
+      dlv: 1.1.3
+      es-toolkit: 1.47.0
+      zod: 4.4.3
+
+  '@nl-design-system-community/design-tokens-schema@2.3.0':
+    dependencies:
+      '@nl-design-system-candidate/button-tokens': 1.0.0
+      '@nl-design-system-candidate/code-block-tokens': 2.0.3
+      '@nl-design-system-candidate/code-tokens': 3.0.0
+      '@nl-design-system-candidate/color-sample-tokens': 2.0.3
+      '@nl-design-system-candidate/data-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/heading-tokens': 1.1.2
+      '@nl-design-system-candidate/link-tokens': 3.0.3
+      '@nl-design-system-candidate/mark-tokens': 2.0.3
+      '@nl-design-system-candidate/number-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/paragraph-tokens': 1.1.3
+      '@nl-design-system-candidate/skip-link-tokens': 1.0.4
+      '@nl-design-system-unstable/basis-design-tokens': 3.1.1
+      '@projectwallace/css-parser': 0.18.6
+      colorjs.io: 0.7.1
+      dequal: 2.0.3
+      dlv: 1.1.3
+      es-toolkit: 1.52.0
+      zod: 4.5.4
+
+  '@nl-design-system-community/design-tokens-schema@2.4.0':
+    dependencies:
+      '@nl-design-system-candidate/button-tokens': 1.0.0
+      '@nl-design-system-candidate/code-block-tokens': 2.0.3
+      '@nl-design-system-candidate/code-tokens': 3.0.0
+      '@nl-design-system-candidate/color-sample-tokens': 2.0.3
+      '@nl-design-system-candidate/data-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/heading-tokens': 1.1.2
+      '@nl-design-system-candidate/link-tokens': 3.0.3
+      '@nl-design-system-candidate/mark-tokens': 2.0.3
+      '@nl-design-system-candidate/number-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/paragraph-tokens': 1.1.3
+      '@nl-design-system-candidate/skip-link-tokens': 1.0.4
+      '@nl-design-system-unstable/basis-design-tokens': 3.1.1
+      '@projectwallace/css-parser': 0.18.6
+      colorjs.io: 0.7.1
+      dequal: 2.0.3
+      dlv: 1.1.3
+      es-toolkit: 1.52.0
+      zod: 4.5.4
+
+  '@nl-design-system-unstable/basis-design-tokens@3.1.1': {}
 
   '@nl-design-system/component-index@1.0.0-alpha.30': {}
 
@@ -11393,6 +11586,10 @@ snapshots:
   '@pkgr/core@0.1.1': {}
 
   '@pnpm/deps.graph-sequencer@1100.0.1': {}
+
+  '@projectwallace/css-parser@0.16.0': {}
+
+  '@projectwallace/css-parser@0.18.6': {}
 
   '@radix-ui/colors@3.0.0': {}
 
@@ -14647,6 +14844,10 @@ snapshots:
 
   colorjs.io@0.5.2: {}
 
+  colorjs.io@0.6.1: {}
+
+  colorjs.io@0.7.1: {}
+
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
@@ -14934,6 +15135,8 @@ snapshots:
     dependencies:
       path-type: 4.0.0
 
+  dlv@1.1.3: {}
+
   doctrine@2.1.0:
     dependencies:
       esutils: 2.0.3
@@ -15122,6 +15325,10 @@ snapshots:
       is-callable: 1.2.7
       is-date-object: 1.0.5
       is-symbol: 1.0.4
+
+  es-toolkit@1.47.0: {}
+
+  es-toolkit@1.52.0: {}
 
   esbuild-register@3.5.0(esbuild@0.23.1)(supports-color@9.3.1):
     dependencies:
@@ -19194,5 +19401,9 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yocto-queue@1.2.2: {}
+
+  zod@4.4.3: {}
+
+  zod@4.5.4: {}
 
   zwitch@2.0.4: {}
