@@ -3,16 +3,21 @@ import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
 import { createConfig } from '../../style-dictionary-config.js';
+import { generateTheme } from './src/generate-theme.mts';
+import { hasParentKeys } from './src/util.mts';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
+  const tokens = generateTheme();
+  const useTokensStudio = hasParentKeys(tokens);
+
   StyleDictionary.registerPreprocessor({
     name: 'dtcg-delegate',
     preprocessor: typeDtcgDelegate,
   });
 
   register(StyleDictionary, {
-    excludeParentKeys: true,
+    excludeParentKeys: useTokensStudio,
   });
 
   const lightConfig = createConfig({
@@ -25,8 +30,8 @@ const build = async () => {
 
   let sd = new StyleDictionary({
     ...lightConfig,
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: ['../../packages/basis-design-tokens/figma/**/*.tokens.json', 'figma/figma.tokens.json'],
+    preprocessors: [...(useTokensStudio ? 'tokens-studio' : []), 'dtcg-delegate'],
+    tokens: generateTheme(),
   });
 
   await sd.cleanAllPlatforms();
@@ -37,12 +42,8 @@ const build = async () => {
       className: `${themeConfig.prefix}-theme--color-scheme-dark`,
       buildPath: 'dist/color-scheme-dark/',
     }),
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: [
-      '../../packages/basis-design-tokens/figma/**/*.tokens.json',
-      'figma/figma.tokens.json',
-      'figma/color-scheme-dark.tokens.json',
-    ],
+    preprocessors: [...(useTokensStudio ? 'tokens-studio' : []), 'dtcg-delegate'],
+    tokens: generateTheme({ colorScheme: 'dark' }),
   });
 
   await sd.cleanAllPlatforms();
