@@ -2019,3 +2019,15 @@ input.is-invalid,
 .openforms-datepicker-textbox .openforms-datepicker-textbox__calendar-toggle {
   font-size: 100%;
 }
+
+/*
+  * CUSTOM OVERRIDE
+  * Reason: Custom override for hiding the field with the input name "emailadresMedeOndertekenaarStyleHidden"
+  * Related Component: input name="emailadresMedeOndertekenaar"
+  * Safe to remove when: Medeondertekenaar is working with extra verification
+  * Last verified: 2026-09-15 (OF 3.5.7)
+  */
+
+div.utrecht-form-field:has(input[name="emailadresMedeOndertekenaarStyleHidden"]) {
+  display: none;
+}
