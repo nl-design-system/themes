@@ -5,6 +5,7 @@ import { CodeBlock } from '@nl-design-system-candidate/code-block-react/css';
 import { Code } from '@nl-design-system-candidate/code-react/css';
 import { ColorSample } from '@nl-design-system-candidate/color-sample-react/css';
 import { DataBadge } from '@nl-design-system-candidate/data-badge-react/css';
+import { FormFieldErrorMessage } from '@nl-design-system-candidate/form-field-error-message-react/css';
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Mark } from '@nl-design-system-candidate/mark-react/css';
@@ -1243,6 +1244,29 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
         'nl.skip-link.padding-inline',
         'nl.skip-link.text-decoration-thickness',
         'nl.skip-link.text-underline-offset',
+      ],
+    },
+  },
+  {
+    storyId: 'react-nl-form-field-error-message--default',
+    component: 'nl-form-field-error-message',
+    group: STORY_GROUPS['FORM_FIELD_ERROR_MESSAGE'],
+    name: 'Candidate Form Field Error Message: Default',
+    render: () => (
+      <FormFieldErrorMessage>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</FormFieldErrorMessage>
+    ),
+    detectTokens: {
+      anyOf: [
+        'nl.form-field-error-message.color',
+        'nl.form-field-error-message.column-gap',
+        'nl.form-field-error-message.font-family',
+        'nl.form-field-error-message.font-size',
+        'nl.form-field-error-message.font-weight',
+        'nl.form-field-error-message.line-height',
+        'nl.form-field-error-message.margin-block-end',
+        'nl.form-field-error-message.margin-block-start',
+        'nl.form-field-error-message.icon.color',
+        'nl.form-field-error-message.icon.size',
       ],
     },
   },
