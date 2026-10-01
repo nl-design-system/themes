@@ -1,5 +1,15 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 8.0.1
+
+### Patch Changes
+
+- bd49c91: Waarde van token `ams.icon-button.inverse.background-color` is gewijzigd van `transparent` naar common token `{basis.color.transparent}`.
+  
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+- f8c4a22: - Voegt space relative tokens toe aan M&A-thema ter bevordering van flow.
+  - Past spacing lijsten iets aan, waardoor amsterdam en utrecht op elkaar zijn afgestemd.
+
 ## 8.0.0
 
 ### Major Changes

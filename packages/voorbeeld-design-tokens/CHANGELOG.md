@@ -1,5 +1,13 @@
 # @nl-design-system-unstable/voorbeeld-design-tokens
 
+## 14.0.1
+
+### Patch Changes
+
+- bd49c91: Waarde van token `ams.icon-button.inverse.background-color` is gewijzigd van `transparent` naar common token `{basis.color.transparent}`.
+  
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+
 ## 14.0.0
 
 ### Major Changes
