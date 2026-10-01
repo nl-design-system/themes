@@ -1248,10 +1248,10 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     },
   },
   {
-    storyId: 'react-nl-form-field-description',
+    storyId: 'react-nl-form-field-description--default',
     component: 'nl-form-field-description',
     group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
-    name: 'Candidate Form Field Description',
+    name: 'Candidate Form Field Description: Default',
     render: () => <FormFieldDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</FormFieldDescription>,
     detectTokens: {
       anyOf: [
@@ -1262,8 +1262,19 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
         'nl.form-field-description.line-height',
         'nl.form-field-description.margin-block-end',
         'nl.form-field-description.margin-block-start',
-        'nl.form-field-description.disabled.color',
       ],
+    },
+  },
+  {
+    storyId: 'react-nl-form-field-description--disabled',
+    component: 'nl-form-field-description',
+    group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
+    name: 'Candidate Form Field Description: Disabled',
+    render: () => (
+      <FormFieldDescription disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</FormFieldDescription>
+    ),
+    detectTokens: {
+      anyOf: ['nl.form-field-description.disabled.color'],
     },
   },
 ];
