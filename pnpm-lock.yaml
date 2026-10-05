@@ -752,6 +752,9 @@ importers:
       '@nl-design-system-candidate/form-field-description-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.25.0)
+      '@nl-design-system-candidate/form-field-error-message-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.0)
       '@nl-design-system-candidate/heading-react':
         specifier: 1.1.5
         version: 1.1.5(@babel/runtime@7.25.0)
@@ -1249,6 +1252,12 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       '@nl-design-system-candidate/form-field-description-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.29.2)(react@19.2.8)
+      '@nl-design-system-candidate/form-field-error-message-docs':
+        specifier: 1.0.0
+        version: 1.0.0
+      '@nl-design-system-candidate/form-field-error-message-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.29.2)(react@19.2.8)
       '@nl-design-system-candidate/link-docs':
@@ -3786,6 +3795,18 @@ packages:
 
   '@nl-design-system-candidate/form-field-description-react@1.0.0':
     resolution: {integrity: sha512-rbIXpdESdvAmjsqh5wsNbMS7p/Xapj5EQcOvcQDDeTPcTqbGh2wavuzJZxZXvdBN+w/sZSCawWt7lYd4ui5AgA==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18 || ^19
+
+  '@nl-design-system-candidate/form-field-error-message-css@1.0.0':
+    resolution: {integrity: sha512-aF1fI8FQJpTem5Ys81V57hqkDQP54eDpj/k1LvW01BrhfO1VTXuX3AFYCazputs2I/NV+b7YhTIwv3svirMNpQ==}
+
+  '@nl-design-system-candidate/form-field-error-message-docs@1.0.0':
+    resolution: {integrity: sha512-12yHm+Hseqj50l4SvEwR5UFh42BAopIRPDj9TV4+kjAtoYuFwGsI2a/SrRTcl/jPtCA4BxC5MywtkZGpZ2mt0g==}
+
+  '@nl-design-system-candidate/form-field-error-message-react@1.0.0':
+    resolution: {integrity: sha512-l7hG3J3Vnmu2l5QPkc/6Ytgqnaa8hXtcHP7fK+pP6TGXVOX3aM3weZ0HaCVqtyySB7IHdFsvMReM2tDntp+iaw==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18 || ^19
@@ -11135,6 +11156,21 @@ snapshots:
       '@babel/runtime': 7.29.2
       '@nl-design-system-candidate/form-field-description-css': 1.0.0
       clsx: 2.1.1
+      react: 19.2.8
+
+  '@nl-design-system-candidate/form-field-error-message-css@1.0.0': {}
+
+  '@nl-design-system-candidate/form-field-error-message-docs@1.0.0': {}
+
+  '@nl-design-system-candidate/form-field-error-message-react@1.0.0(@babel/runtime@7.25.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@nl-design-system-candidate/form-field-error-message-css': 1.0.0
+
+  '@nl-design-system-candidate/form-field-error-message-react@1.0.0(@babel/runtime@7.29.2)(react@19.2.8)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@nl-design-system-candidate/form-field-error-message-css': 1.0.0
       react: 19.2.8
 
   '@nl-design-system-candidate/heading-react@1.1.5(@babel/runtime@7.25.0)':
