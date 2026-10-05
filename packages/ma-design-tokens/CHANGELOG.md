@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 8.1.0
+
+### Minor Changes
+
+- 8d6b7bf: - Voegt een eerste set aan design tokens toe voor ma-card.
+
 ## 8.0.1
 
 ### Patch Changes
