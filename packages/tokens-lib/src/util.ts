@@ -88,7 +88,7 @@ export const getColors = <T extends DesignToken = DesignToken>(
   const grouped: T[][] = isDesignTokenMap(tokens)
     ? Object.values(tokens)
         .filter(isDesignTokenMap)
-        .map((map) => Object.values(map))
+        .map((map) => Object.values(map) as T[])
     : [];
 
   const nonGrouped: T[] = Object.values(tokens).filter((value) => isToken(value));
