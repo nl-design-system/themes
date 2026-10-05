@@ -749,6 +749,9 @@ importers:
       '@nl-design-system-candidate/data-badge-react':
         specifier: 1.1.5
         version: 1.1.5(@babel/runtime@7.25.0)
+      '@nl-design-system-candidate/form-field-description-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.25.0)
       '@nl-design-system-candidate/heading-react':
         specifier: 1.1.5
         version: 1.1.5(@babel/runtime@7.25.0)
@@ -1240,6 +1243,12 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       '@nl-design-system-candidate/button-react':
+        specifier: 1.0.0
+        version: 1.0.0(@babel/runtime@7.29.2)(react@19.2.8)
+      '@nl-design-system-candidate/form-field-description-docs':
+        specifier: 1.0.0
+        version: 1.0.0
+      '@nl-design-system-candidate/form-field-description-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.29.2)(react@19.2.8)
       '@nl-design-system-candidate/link-docs':
@@ -3768,6 +3777,18 @@ packages:
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
+
+  '@nl-design-system-candidate/form-field-description-css@1.0.0':
+    resolution: {integrity: sha512-nYUnbZcwjbtExkx5QDVCYSIWYNlJ5cS4F2qEvX0/sjvp52bZvG5iZNs9loH90V6dcwYRhkEz5dwiaYuHlYs4hA==}
+
+  '@nl-design-system-candidate/form-field-description-docs@1.0.0':
+    resolution: {integrity: sha512-TMANwfG8GljfbtwWkrwKy8MBLuiXwwBeNUhIyyldhMSC3vCnmaEdIGDP3RW1i1gmNL4FNOHYla21Kkt6wHFUfg==}
+
+  '@nl-design-system-candidate/form-field-description-react@1.0.0':
+    resolution: {integrity: sha512-rbIXpdESdvAmjsqh5wsNbMS7p/Xapj5EQcOvcQDDeTPcTqbGh2wavuzJZxZXvdBN+w/sZSCawWt7lYd4ui5AgA==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18 || ^19
 
   '@nl-design-system-candidate/heading-react@1.1.5':
     resolution: {integrity: sha512-nM6Lqiz+CHi+tGgEVl+aHBQwP+JTZg1pNx27chwIL6EMIgH47Z4AzE31IHVi5SyTkNElhmeF5esooClRbnMh0A==}
@@ -11099,6 +11120,23 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.2
 
+  '@nl-design-system-candidate/form-field-description-css@1.0.0': {}
+
+  '@nl-design-system-candidate/form-field-description-docs@1.0.0': {}
+
+  '@nl-design-system-candidate/form-field-description-react@1.0.0(@babel/runtime@7.25.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@nl-design-system-candidate/form-field-description-css': 1.0.0
+      clsx: 2.1.1
+
+  '@nl-design-system-candidate/form-field-description-react@1.0.0(@babel/runtime@7.29.2)(react@19.2.8)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@nl-design-system-candidate/form-field-description-css': 1.0.0
+      clsx: 2.1.1
+      react: 19.2.8
+
   '@nl-design-system-candidate/heading-react@1.1.5(@babel/runtime@7.25.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -18005,7 +18043,7 @@ snapshots:
       esbuild: 0.23.1
       esbuild-register: 3.5.0(esbuild@0.23.1)(supports-color@9.3.1)
       recast: 0.23.6
-      semver: 7.6.2
+      semver: 7.8.5
       ws: 8.18.3
     optionalDependencies:
       prettier: 3.4.2
