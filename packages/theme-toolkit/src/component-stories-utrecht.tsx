@@ -5,6 +5,9 @@ import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 
 import {
   Alert,
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
   Button,
   LinkButton,
   ButtonLink,
@@ -3298,7 +3301,63 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
       </ActionGroup>
     ),
   },
-
+  {
+    storyId: 'react-utrecht-breadcrumb-nav--default',
+    component: 'utrecht-breadcrumb-nav',
+    group: STORY_GROUPS['BREADCRUMB_NAV'],
+    name: 'Utrecht Breadcrumb Navigation',
+    render: () => (
+      <BreadcrumbNav label="kruimelpad">
+        {[
+          { href: 'https://example.com', label: 'Een' },
+          { href: 'https://example.com/a', label: 'Twee' },
+          { href: 'https://example.com/a/b', label: 'Drie' },
+        ].map(({ href, label }, index, links) => (
+          <>
+            <BreadcrumbNavLink key={label} href={href}>
+              {label}
+            </BreadcrumbNavLink>
+            {index < links.length - 1 && (
+              <BreadcrumbNavSeparator>
+                <Icon>
+                  <UtrechtIconChevronRight />
+                </Icon>
+              </BreadcrumbNavSeparator>
+            )}
+          </>
+        ))}
+      </BreadcrumbNav>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.breadcrumb-nav.min-block-size',
+        'utrecht.breadcrumb-nav.font-family',
+        'utrecht.breadcrumb-nav.font-size',
+        'utrecht.breadcrumb-nav.line-height',
+        'utrecht.breadcrumb-nav.text-decoration',
+        'utrecht.breadcrumb-nav.text-transform',
+        'utrecht.breadcrumb-nav.item.first.padding-inline-start',
+        'utrecht.breadcrumb-nav.item.padding-block-start',
+        'utrecht.breadcrumb-nav.item.padding-block-end',
+        'utrecht.breadcrumb-nav.item.margin-block-end',
+        'utrecht.breadcrumb-nav.item.padding-inline-end',
+        'utrecht.breadcrumb-nav.item.padding-inline-start',
+        'utrecht.breadcrumb-nav.link.color',
+        'utrecht.breadcrumb-nav.link.focus.background-color',
+        'utrecht.breadcrumb-nav.link.focus.color',
+        'utrecht.breadcrumb-nav.link.focus.text-decoration',
+        'utrecht.breadcrumb-nav.link.hover.color',
+        'utrecht.breadcrumb-nav.link.hover.text-decoration',
+        'utrecht.breadcrumb-nav.link.current.font-weight',
+        'utrecht.breadcrumb-nav.link.disabled.color',
+        'utrecht.breadcrumb-nav.link.icon.size',
+        'utrecht.breadcrumb-nav.separator.color',
+        'utrecht.breadcrumb-nav.separator.icon.size',
+        'utrecht.breadcrumb-nav.arrows.link',
+        'utrecht.breadcrumb-nav.arrows.focus.background-color',
+      ],
+    },
+  },
   {
     storyId: 'react-utrecht-image--default',
     component: 'utrecht-image',
