@@ -6,7 +6,7 @@ import {
   createConfig,
   colorSchemeDarkPreprocessor,
   colorSchemeDefaultPreprocessor,
-} from '../../style-dictionary-config.js';
+} from '../../style-dictionary-config.mjs';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));

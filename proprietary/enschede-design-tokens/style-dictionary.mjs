@@ -2,7 +2,7 @@ import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
-import { createConfig, colorSchemeDefaultPreprocessor } from '../../style-dictionary-config.js';
+import { createConfig, colorSchemeDefaultPreprocessor } from '../../style-dictionary-config.mjs';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
