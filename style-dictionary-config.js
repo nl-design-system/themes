@@ -229,11 +229,15 @@ const createConfig = ({
 
 /**
  * Style Dictionary preprocessor to remove all tokens that start with "color-scheme-".
- *
  * This is used to create a default color scheme configuration.
  *
  * Register with:
+ * ```js
  * StyleDictionary.registerPreprocessor(colorSchemeDefaultPreprocessor);
+ * ```
+ *
+ * @param {DesignTokens} dictionary
+ * @returns {DesignTokens} dictionary
  */
 const colorSchemeDefaultPreprocessor = {
   name: 'color-scheme-default',
@@ -254,7 +258,12 @@ const colorSchemeDefaultPreprocessor = {
  * This is used to create a dark color scheme configuration.
  *
  * Register with:
+ * ```js
  * StyleDictionary.registerPreprocessor(colorSchemeDarkPreprocessor);
+ * ```
+ *
+ * @param {DesignTokens} dictionary
+ * @returns {DesignTokens} dictionary
  */
 const colorSchemeDarkPreprocessor = {
   name: 'color-scheme-dark',
