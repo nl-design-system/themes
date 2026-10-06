@@ -242,14 +242,16 @@ const createConfig = ({
 const colorSchemeDefaultPreprocessor = {
   name: 'color-scheme-default',
   preprocessor(dictionary) {
-    Object.keys(dictionary).forEach((key) => {
+    const clonedDictionary = structuredClone(dictionary);
+
+    Object.keys(clonedDictionary).forEach((key) => {
       if (key.startsWith('color-scheme-')) {
         /* eslint-disable-next-line @typescript-eslint/no-dynamic-delete */
-        delete dictionary[key];
+        delete clonedDictionary[key];
       }
     });
 
-    return dictionary;
+    return clonedDictionary;
   },
 };
 
@@ -268,14 +270,16 @@ const colorSchemeDefaultPreprocessor = {
 const colorSchemeDarkPreprocessor = {
   name: 'color-scheme-dark',
   preprocessor(dictionary) {
-    Object.keys(dictionary).forEach((key) => {
+    const clonedDictionary = structuredClone(dictionary);
+
+    Object.keys(clonedDictionary).forEach((key) => {
       if (!key.startsWith('color-scheme-dark/')) {
         /* eslint-disable-next-line @typescript-eslint/no-dynamic-delete */
-        delete dictionary[key];
+        delete clonedDictionary[key];
       }
     });
 
-    return dictionary;
+    return clonedDictionary;
   },
 };
 
