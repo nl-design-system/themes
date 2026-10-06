@@ -36,10 +36,19 @@ export const ComponentsPage2: Story = {
 };
 
 export const ComponentsPage3: Story = {
-  name: 'Visual regression test (color-scheme: light, component 101 - ∞)',
+  name: 'Visual regression test (color-scheme: light, component 101 - 150)',
   args: {
     theme: `${config.prefix}-theme`,
     start: 101,
+    end: 150,
+  },
+};
+
+export const ComponentsPage4: Story = {
+  name: 'Visual regression test (color-scheme: light, component 151 - ∞)',
+  args: {
+    theme: `${config.prefix}-theme`,
+    start: 151,
   },
 };
 
@@ -62,9 +71,18 @@ export const ComponentsDarkModePage2: Story = {
 };
 
 export const ComponentsDarkModePage3: Story = {
-  name: 'Visual regression test (color-scheme: dark, component 101 - ∞)',
+  name: 'Visual regression test (color-scheme: dark, component 101 - 150)',
   args: {
     theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
     start: 101,
+    end: 150,
+  },
+};
+
+export const ComponentsDarkModePage4: Story = {
+  name: 'Visual regression test (color-scheme: dark, component 151 - ∞)',
+  args: {
+    theme: `${config.prefix}-theme ${config.prefix}-theme--color-scheme-dark`,
+    start: 151,
   },
 };

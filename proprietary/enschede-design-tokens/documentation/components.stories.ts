@@ -36,9 +36,10 @@ export const ComponentsPage2: Story = {
 };
 
 export const ComponentsPage3: Story = {
-  name: 'Visual regression test (component 101 - ∞)',
+  name: 'Visual regression test (component 101 - 150)',
   args: {
     theme: `${config.prefix}-theme`,
     start: 101,
+    end: 150,
   },
 };
