@@ -2,7 +2,7 @@ import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
-import { createConfig } from '../../style-dictionary-config.js';
+import { createConfig, lowercaseNoneTransform } from '../../style-dictionary-config.js';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
@@ -21,14 +21,22 @@ const build = async () => {
     preprocessor: colorSchemeDarkPreprocessor,
   });
 
+  StyleDictionary.registerTransform(lowercaseNoneTransform);
+
   register(StyleDictionary, {
     excludeParentKeys: true,
   });
 
+  const config = createConfig({
+    selector: `.${themeConfig.prefix}-theme`,
+  });
+
+  for (const platform of Object.values(config.platforms)) {
+    platform.transforms.push('value/lowercase-none');
+  }
+
   let sd = new StyleDictionary({
-    ...createConfig({
-      selector: `.${themeConfig.prefix}-theme`,
-    }),
+    ...config,
     preprocessors: ['color-scheme-default', 'tokens-studio', 'dtcg-delegate'],
     source: ['figma/**/leiden.tokens.json'],
   });
