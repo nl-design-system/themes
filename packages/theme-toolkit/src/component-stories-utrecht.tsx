@@ -1708,10 +1708,10 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['LISTS'],
     name: 'Utrecht Ordered list: Item',
     render: () => (
-      <UnorderedList>
-        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
-        <UnorderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</UnorderedListItem>
-      </UnorderedList>
+      <OrderedList>
+        <OrderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</OrderedListItem>
+        <OrderedListItem>The Quick Brown Fox Jumps Over The Lazy Dog</OrderedListItem>
+      </OrderedList>
     ),
     detectTokens: {
       anyOf: [
