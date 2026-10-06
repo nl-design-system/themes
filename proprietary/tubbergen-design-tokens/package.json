@@ -25,7 +25,7 @@
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run --ignore-scripts build' 'src/**/*.tokens.json'",
     "build": "npm-run-all clean build:**",
     "build:scss": "sass --no-source-map src/:dist/",
-    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.js"
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.mjs"
   },
   "devDependencies": {
     "@fontsource/lato": "5.0.21",

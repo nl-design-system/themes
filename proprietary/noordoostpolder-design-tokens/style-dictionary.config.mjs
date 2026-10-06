@@ -1,7 +1,7 @@
-const config = require('./src/config.json');
-const { createConfig } = require('../../style-dictionary-config');
+import config from './src/config.json' with { type: 'json' };
+import { createConfig } from '../../style-dictionary-config.mjs';
 
-module.exports = createConfig({
+export default createConfig({
   backwardsCompatible: true,
   selector: `.${config.prefix}-theme`,
 });

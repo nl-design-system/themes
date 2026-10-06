@@ -299,4 +299,4 @@ const lowercaseNoneTransform = {
   transform: (token) => String(token.value || token.$value).toLowerCase(),
 };
 
-module.exports = { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor, lowercaseNoneTransform };
+export { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor, lowercaseNoneTransform };

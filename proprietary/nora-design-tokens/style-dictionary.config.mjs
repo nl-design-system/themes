@@ -2,7 +2,7 @@ import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
-import { createConfig } from '../../style-dictionary-config.js';
+import { createConfig } from '../../style-dictionary-config.mjs';
 
 const isLargeVwToken = (token) => {
   return token.path && token.path.includes('large-vw');
