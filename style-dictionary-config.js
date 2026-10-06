@@ -270,4 +270,20 @@ const colorSchemeDarkPreprocessor = {
   },
 };
 
-module.exports = { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor };
+/**
+ * In Figma, `none` values are written as `None`, because Tokens Studio does
+ * not properly turn it into a string in the design tokens documentation.
+ * This transform normalizes the value to lowercase `none` (which also passes
+ * stylelint's `value-keyword-case` rule).
+ */
+const lowercaseNoneTransform = {
+  name: 'value/lowercase-none',
+  type: 'value',
+  filter: (token) => {
+    const value = token.value || token.$value;
+    return typeof value === 'string' && /^none$/i.test(value);
+  },
+  transform: (token) => String(token.value || token.$value).toLowerCase(),
+};
+
+module.exports = { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor, lowercaseNoneTransform };
