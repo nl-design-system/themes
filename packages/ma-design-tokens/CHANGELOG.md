@@ -1,5 +1,32 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 8.2.0
+
+### Minor Changes
+
+- befdbdc: De volgende tokens zijn toegevoegd aan Form Field Error Message component:
+  
+  - `nl.form-field-error-message.color`
+  - `nl.form-field-error-message.column-gap`
+  - `nl.form-field-error-message.font-family`
+  - `nl.form-field-error-message.font-size`
+  - `nl.form-field-error-message.font-weight`
+  - `nl.form-field-error-message.line-height`
+  - `nl.form-field-error-message.margin-block-end`
+  - `nl.form-field-error-message.margin-block-start`
+  - `nl.form-field-error-message.icon.color`
+  - `nl.form-field-error-message.icon.size`
+- 1bc2427: De volgende tokens zijn toegevoegd aan Form Field Description component:
+  
+  - `nl.form-field-description.color`
+  - `nl.form-field-description.font-family`
+  - `nl.form-field-description.font-size`
+  - `nl.form-field-description.font-weight`
+  - `nl.form-field-description.line-height`
+  - `nl.form-field-description.margin-block-end`
+  - `nl.form-field-description.margin-block-start`
+  - `nl.form-field-description.disabled.color`
+
 ## 8.1.0
 
 ### Minor Changes
