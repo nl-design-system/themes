@@ -17,7 +17,7 @@ const createConfig = ({
   const legacyPlatforms = {
     legacyJson: {
       transformGroup: transformGroup,
-      transforms: ['name/camel', 'attribute/cti'],
+      transforms: ['name/camel', 'attribute/cti', 'value/lowercase-none'],
       buildPath,
       files: [
         {
@@ -28,7 +28,7 @@ const createConfig = ({
     },
     legacyCss: {
       transformGroup: transformGroup,
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'value/lowercase-none'],
       buildPath,
       files: [
         {
@@ -43,7 +43,7 @@ const createConfig = ({
     },
     legacyLess: {
       transformGroup: transformGroup,
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'value/lowercase-none'],
       buildPath,
       files: [
         {
@@ -57,7 +57,7 @@ const createConfig = ({
     },
     legacyScss: {
       transformGroup: transformGroup,
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'value/lowercase-none'],
       buildPath,
       files: [
         {
@@ -71,7 +71,7 @@ const createConfig = ({
     },
     legacyJs: {
       transformGroup: transformGroup,
-      transforms: ['name/camel'],
+      transforms: ['name/camel', 'value/lowercase-none'],
       buildPath,
       files: [
         {
@@ -92,13 +92,16 @@ const createConfig = ({
           return JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ');
         },
       },
+      transforms: {
+        [lowercaseNoneTransform.name]: lowercaseNoneTransform,
+      },
     },
     source,
     platforms: {
       ...(backwardsCompatible ? legacyPlatforms : {}),
       js: {
         transformGroup: transformGroup,
-        transforms: ['name/camel'],
+        transforms: ['name/camel', 'value/lowercase-none'],
         buildPath,
         files: [
           {
@@ -113,7 +116,7 @@ const createConfig = ({
       },
       tokenTree: {
         transformGroup: transformGroup,
-        transforms: ['name/camel'],
+        transforms: ['name/camel', 'value/lowercase-none'],
         buildPath,
         files: [
           {
@@ -124,7 +127,7 @@ const createConfig = ({
       },
       json: {
         transformGroup: transformGroup,
-        transforms: ['name/camel'],
+        transforms: ['name/camel', 'value/lowercase-none'],
         buildPath,
         files: [
           {
@@ -143,7 +146,7 @@ const createConfig = ({
       },
       css: {
         transformGroup: transformGroup,
-        transforms: ['name/kebab'],
+        transforms: ['name/kebab', 'value/lowercase-none'],
         buildPath,
         files: [
           {
@@ -166,7 +169,7 @@ const createConfig = ({
       },
       scss: {
         transformGroup: transformGroup,
-        transforms: ['name/kebab'],
+        transforms: ['name/kebab', 'value/lowercase-none'],
         buildPath,
         files: [
           {
@@ -181,7 +184,7 @@ const createConfig = ({
       },
       'scss-theme-mixin': {
         transformGroup: transformGroup,
-        transforms: ['name/kebab'],
+        transforms: ['name/kebab', 'value/lowercase-none'],
         buildPath,
         files: [
           {
@@ -196,7 +199,7 @@ const createConfig = ({
       },
       less: {
         transformGroup: transformGroup,
-        transforms: ['name/kebab'],
+        transforms: ['name/kebab', 'value/lowercase-none'],
         buildPath,
         files: [
           {
@@ -209,7 +212,7 @@ const createConfig = ({
         ],
       },
       typescript: {
-        transforms: ['name/camel'],
+        transforms: ['name/camel', 'value/lowercase-none'],
         transformGroup: 'js',
         buildPath,
         files: [

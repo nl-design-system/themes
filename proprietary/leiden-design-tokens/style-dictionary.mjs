@@ -6,7 +6,6 @@ import {
   colorSchemeDefaultPreprocessor,
   colorSchemeDarkPreprocessor,
   createConfig,
-  lowercaseNoneTransform,
 } from '../../style-dictionary-config.mjs';
 
 const build = async () => {
@@ -18,22 +17,15 @@ const build = async () => {
 
   StyleDictionary.registerPreprocessor(colorSchemeDefaultPreprocessor);
   StyleDictionary.registerPreprocessor(colorSchemeDarkPreprocessor);
-  StyleDictionary.registerTransform(lowercaseNoneTransform);
 
   register(StyleDictionary, {
     excludeParentKeys: true,
   });
 
-  const config = createConfig({
-    selector: `.${themeConfig.prefix}-theme`,
-  });
-
-  for (const platform of Object.values(config.platforms)) {
-    platform.transforms.push('value/lowercase-none');
-  }
-
   let sd = new StyleDictionary({
-    ...config,
+    ...createConfig({
+      selector: `.${themeConfig.prefix}-theme`,
+    }),
     preprocessors: ['color-scheme-default', 'tokens-studio', 'dtcg-delegate'],
     source: ['figma/**/leiden.tokens.json'],
   });
