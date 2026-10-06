@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 export const STORY_GROUPS: { [index: string]: string } = {
   ACTION_GROUP: 'Action Group',
   AVATAR: 'Avatars',
+  FORM_FIELD: 'Form Field',
   ALERT: 'Alerts',
   BUTTON_DEFAULT: 'Default Button',
   BUTTON_LINK_DEFAULT: 'Link that looks like a button',
