@@ -3506,15 +3506,91 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.note.padding-inline-end',
         'utrecht.note.margin-block-start',
         'utrecht.note.margin-block-end',
-        'utrecht.note.info.background-color',
-        'utrecht.note.info.color',
-        'utrecht.note.warning.background-color',
-        'utrecht.note.warning.color',
-        'utrecht.note.error.background-color',
-        'utrecht.note.error.color',
-        'utrecht.note.success.background-color',
-        'utrecht.note.success.color',
       ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-note--info',
+    component: 'utrecht-note',
+    group: STORY_GROUPS['NOTE'],
+    name: 'Utrecht Note - Info',
+    render: () => (
+      <Note purpose="info">
+        <Heading2>Lorem ipsum</Heading2>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Note>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.note.info.background-color', 'utrecht.note.info.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-note--warning',
+    component: 'utrecht-note',
+    group: STORY_GROUPS['NOTE'],
+    name: 'Utrecht Note - Warning',
+    render: () => (
+      <Note purpose="warning">
+        <Heading2>Lorem ipsum</Heading2>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Note>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.note.warning.background-color', 'utrecht.note.warning.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-note--error',
+    component: 'utrecht-note',
+    group: STORY_GROUPS['NOTE'],
+    name: 'Utrecht Note - Error',
+    render: () => (
+      <Note purpose="error">
+        <Heading2>Lorem ipsum</Heading2>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Note>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.note.error.background-color', 'utrecht.note.error.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-note--success',
+    component: 'utrecht-note',
+    group: STORY_GROUPS['NOTE'],
+    name: 'Utrecht Note - Success',
+    render: () => (
+      <Note purpose="success">
+        <Heading2>Lorem ipsum</Heading2>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+      </Note>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.note.success.background-color', 'utrecht.note.success.color'],
     },
   },
 ];
