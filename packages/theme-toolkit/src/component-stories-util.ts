@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 export const STORY_GROUPS: { [index: string]: string } = {
+  ACCORDION: 'Accordion',
   ACTION_GROUP: 'Action Group',
   AVATAR: 'Avatars',
   BREADCRUMB_NAV: 'Breadcrumb Navigation',

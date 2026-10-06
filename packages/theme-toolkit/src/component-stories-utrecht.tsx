@@ -4,6 +4,7 @@ import { PropsWithChildren, ReactNode } from 'react';
 import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 
 import {
+  AccordionProvider,
   Alert,
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -3288,6 +3289,31 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['ICON'],
     name: 'Utrecht Icon',
     render: () => <Icon>→</Icon>,
+  },
+  {
+    storyId: 'react-utrecht-accordion--default',
+    component: 'utrecht-accordion',
+    group: STORY_GROUPS['ACCORDION'],
+    name: 'Utrecht Accordion',
+    render: () => (
+      <AccordionProvider
+        appearance="utrecht"
+        sections={[
+          {
+            label: 'Item 1',
+            body: <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>,
+          },
+          {
+            label: 'Item 2',
+            body: <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>,
+          },
+          {
+            label: 'Item 3',
+            body: <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>,
+          },
+        ]}
+      />
+    ),
   },
   {
     storyId: 'react-utrecht-action-group--default',
