@@ -14,6 +14,9 @@ type Story = StoryObj<typeof meta>;
 
 export default meta;
 
+// Chromatic has a limit of 25000 pixels per story, so we need to split them
+// into multiple stories.
+
 export const ComponentsPage1: Story = {
   name: 'Visual regression test (component 1 - 50)',
   args: {
@@ -33,9 +36,18 @@ export const ComponentsPage2: Story = {
 };
 
 export const ComponentsPage3: Story = {
-  name: 'Visual regression test (component 101 - ∞)',
+  name: 'Visual regression test (component 101 - 150)',
   args: {
     theme: `${config.prefix}-theme`,
     start: 101,
+    end: 150,
+  },
+};
+
+export const ComponentsPage4: Story = {
+  name: 'Visual regression test (component 151 - ∞)',
+  args: {
+    theme: `${config.prefix}-theme`,
+    start: 151,
   },
 };
