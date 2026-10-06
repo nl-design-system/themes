@@ -28,6 +28,7 @@ import {
   Checkbox,
   // CustomCheckbox ,
   // Emphasis,
+  FormField,
   FormFieldDescription,
   Fieldset,
   FieldsetLegend,
@@ -2971,6 +2972,45 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
       </Fieldset>
     ),
+  },
+  {
+    storyId: 'react-utrecht-form-field--default',
+    group: STORY_GROUPS['FORM_FIELD'],
+    name: 'Utrecht Form Field',
+    render: () => (
+      <FormField
+        label={<FormFieldLabel>Label for form control</FormFieldLabel>}
+        input={<Textbox />}
+        description={<FormFieldDescription>Helper text for this field</FormFieldDescription>}
+      />
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.form-field.margin-block-start',
+        'utrecht.form-field.margin-block-end',
+        'utrecht.form-field.label.margin-block-end',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-form-field--invalid',
+    group: STORY_GROUPS['FORM_FIELD'],
+    name: 'Utrecht Form Field: Invalid',
+    render: () => (
+      <FormField
+        invalid
+        label={<FormFieldLabel>Label for form control</FormFieldLabel>}
+        input={<Textbox />}
+        errorMessage={<FormFieldErrorMessage>Error message for this field</FormFieldErrorMessage>}
+      />
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.form-field.invalid.border-inline-start-color',
+        'utrecht.form-field.invalid.border-inline-start-width',
+        'utrecht.form-field.invalid.padding-inline-start',
+      ],
+    },
   },
   {
     storyId: 'react-utrecht-form-field-description--default',
