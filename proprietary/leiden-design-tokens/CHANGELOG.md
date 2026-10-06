@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/leiden-design-tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- 13fd789: Figma tokens updated to v23.0.0 and some small changes to OF theme
+
 ## 3.0.0
 
 ### Major Changes
