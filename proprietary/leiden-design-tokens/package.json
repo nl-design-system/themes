@@ -27,7 +27,8 @@
     "build": "npm-run-all --sequential clean build:style-dictionary build:scss build:custom-css-overview",
     "build:style-dictionary": "node ./style-dictionary.mjs",
     "build:scss": "sass --no-source-map src/:dist/ --pkg-importer=node",
-    "build:custom-css-overview": "node generate-custom-css-overview.js"
+    "build:custom-css-overview": "node generate-custom-css-overview.js",
+    "changeset": "changeset add"
   },
   "devDependencies": {
     "@fontsource/open-sans": "5.2.7",
