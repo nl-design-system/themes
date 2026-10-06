@@ -40,7 +40,9 @@ const build = async () => {
       className: `${themeConfig.prefix}-theme--color-scheme-dark`,
       buildPath: 'dist/color-scheme-dark/',
     }),
-    preprocessors: [colorSchemeDarkPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
+    // TODO issue: https://github.com/nl-design-system/themes/issues/1576
+    // preprocessors: [colorSchemeDarkPreprocessor.name, 'tokens-studio', 'dtcg-delegate'],
+    preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: ['figma/**/start.tokens.json'],
   });
 

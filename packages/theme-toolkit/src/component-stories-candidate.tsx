@@ -5,6 +5,8 @@ import { CodeBlock } from '@nl-design-system-candidate/code-block-react/css';
 import { Code } from '@nl-design-system-candidate/code-react/css';
 import { ColorSample } from '@nl-design-system-candidate/color-sample-react/css';
 import { DataBadge } from '@nl-design-system-candidate/data-badge-react/css';
+import { FormFieldDescription } from '@nl-design-system-candidate/form-field-description-react/css';
+import { FormFieldErrorMessage } from '@nl-design-system-candidate/form-field-error-message-react/css';
 import { Heading } from '@nl-design-system-candidate/heading-react/css';
 import { Link } from '@nl-design-system-candidate/link-react/css';
 import { Mark } from '@nl-design-system-candidate/mark-react/css';
@@ -876,15 +878,15 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
     render: () => (
       <CodeBlock>
         {`<!DOCTYPE html>
-        <html lang="nl" dir="ltr">
-          <head>
-            <title>NL Design System</title>
-            <meta charset="utf-8"/>
-          </head>
-          <body>
-            <h1>NL Design System</h1>
-          </body>
-        </html>`}
+<html lang="nl" dir="ltr">
+  <head>
+    <title>NL Design System</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <h1>NL Design System</h1>
+  </body>
+</html>`}
       </CodeBlock>
     ),
     detectTokens: {
@@ -1243,6 +1245,59 @@ export const CANDIDATE_COMPONENT_STORIES: ComponentStory[] = [
         'nl.skip-link.padding-inline',
         'nl.skip-link.text-decoration-thickness',
         'nl.skip-link.text-underline-offset',
+      ],
+    },
+  },
+  {
+    storyId: 'react-nl-form-field-description--default',
+    component: 'nl-form-field-description',
+    group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
+    name: 'Candidate Form Field Description: Default',
+    render: () => <FormFieldDescription>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</FormFieldDescription>,
+    detectTokens: {
+      anyOf: [
+        'nl.form-field-description.color',
+        'nl.form-field-description.font-family',
+        'nl.form-field-description.font-size',
+        'nl.form-field-description.font-weight',
+        'nl.form-field-description.line-height',
+        'nl.form-field-description.margin-block-end',
+        'nl.form-field-description.margin-block-start',
+      ],
+    },
+  },
+  {
+    storyId: 'react-nl-form-field-description--disabled',
+    component: 'nl-form-field-description',
+    group: STORY_GROUPS['FORM_FIELD_DESCRIPTION'],
+    name: 'Candidate Form Field Description: Disabled',
+    render: () => (
+      <FormFieldDescription disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</FormFieldDescription>
+    ),
+    detectTokens: {
+      anyOf: ['nl.form-field-description.disabled.color'],
+    },
+  },
+  {
+    storyId: 'react-nl-form-field-error-message--default',
+    component: 'nl-form-field-error-message',
+    group: STORY_GROUPS['FORM_FIELD_ERROR_MESSAGE'],
+    name: 'Candidate Form Field Error Message: Default',
+    render: () => (
+      <FormFieldErrorMessage>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</FormFieldErrorMessage>
+    ),
+    detectTokens: {
+      anyOf: [
+        'nl.form-field-error-message.color',
+        'nl.form-field-error-message.column-gap',
+        'nl.form-field-error-message.font-family',
+        'nl.form-field-error-message.font-size',
+        'nl.form-field-error-message.font-weight',
+        'nl.form-field-error-message.line-height',
+        'nl.form-field-error-message.margin-block-end',
+        'nl.form-field-error-message.margin-block-start',
+        'nl.form-field-error-message.icon.color',
+        'nl.form-field-error-message.icon.size',
       ],
     },
   },

@@ -1,5 +1,118 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 5.0.0
+
+### Major Changes
+
+- 1bb8eed: Conform changelog NL Design System 21.0.0 ToDo component icon-only-button en bijbehorende design tokens verwijderd.
+- d1f0168: Conform changelog NL Design System bij het component Modal Dialog bijgewerkt.
+  
+  Het component is als geheel hernoemd van 'ams-dialog' naar 'ams.modal-dialog'
+  
+  Token ams.dialog.gap is verwijderd
+  Token ams.dialog.header.gap is verwijderd
+  
+  Token ams.modal-dialog.header.column-gap is toegevoegd, met waarde {basis.space.column.xl}
+  Token ams.modal-dialog.header.row-gap is toegevoegd, met waarde {basis.space.row.sm}
+  Token ams.modal-dialog.body.min-block-size is toegevoegd, met waarde {basis.pointer-target.min-block-size}
+  Token ams.modal-dialog.body.medium.padding-block is toegevoegd, met waarde {basis.space.none}
+  
+  En bij dit component is voor de tokens nieuwe documentatie toegevoegd of verwijderd in Figma, waar van toepassing.
+
+### Minor Changes
+
+- 191be9e: Voor de icon-button van Amsterdam de waarde van ams.icon-button.inverse.background-color gewijzigd van transparent naar {basis.color.transparent}.
+- 0238023: Conform changelog NL Design System de todo tokens van het text input component van Utrecht hernoemd naar utrecht.
+  
+  De todo.textbox.hover.background-color hernoemd naar utrecht.textbox.hover.background-color
+  De todo.textbox.hover.border-color hernoemd naar utrecht.textbox.hover.border-color
+  De todo.textbox.hover.color hernoemd naar utrecht.textbox.hover.color
+  
+  Daarnaast had dit ook invloed op de alfabetische volgorde van de tokens. De hover tokens zijn nu ook voor de 'invalid' tokens geplaatst.
+- 3b220da: Diverse tokens van het Utrecht 'accordion' component hernoemd. Deze tokens hadden eerst de naam 'todo', omdat ze niet in code beschikbaar waren, maar zijn nu wel beschikbaar in code.
+  
+  Token todo.accordion.button.font-family gewijzigd naar utrecht.accordion.button.font-family
+  Token todo.accordion.button.font-size gewijzigd naar utrecht.accordion.button.font-size
+  Token todo.accordion.button.font-weight gewijzigd naar utrecht.accordion.button.font-weight
+  Token todo.accordion.button.line-height gewijzigd naar utrecht.accordion.button.line-height
+- c830b11: Conform changelog 18.2.0 'todo' tokens van de checkbox van Utrecht hernoemd naar 'utrecht', omdat deze nu beschikbaar zijn in code.
+  
+  De todo.checkbox.checked.active.background-color gewijzigd naar utrecht.checkbox.checked.active.background-color
+  De todo.checkbox.checked.active.border-color gewijzigd naar utrecht.checkbox.checked.active.border-color
+  De todo.checkbox.checked.active.border-width gewijzigd naar utrecht.checkbox.checked.active.border-width
+  De todo.checkbox.checked.active.color gewijzigd naar utrecht.checkbox.checked.active.color
+  De todo.checkbox.checked.hover.background-color gewijzigd naar utrecht.checkbox.checked.hover.background-color
+  De todo.checkbox.checked.hover.border-color gewijzigd naar utrecht.checkbox.checked.hover.border-color
+  De todo.checkbox.checked.hover.border-width gewijzigd naar utrecht.checkbox.checked.hover.border-width
+  De todo.checkbox.checked.hover.color gewijzigd naar utrecht.checkbox.checked.hover.color
+  De todo.checkbox.indeterminate.active.background-color gewijzigd naar utrecht.checkbox.indeterminate.active.background-color
+  De todo.checkbox.indeterminate.active.border-color gewijzigd naar utrecht.checkbox.indeterminate.active.border-color
+  De todo.checkbox.indeterminate.active.border-width gewijzigd naar utrecht.checkbox.indeterminate.active.border-width
+  De todo.checkbox.indeterminate.active.color gewijzigd naar utrecht.checkbox.indeterminate.active.color
+  De todo.checkbox.indeterminate.hover.background-color gewijzigd naar utrecht todo.checkbox.indeterminate.hover.background-color
+  De todo.checkbox.indeterminate.hover.border-color gewijzigd naar utrecht.checkbox.indeterminate.hover.border-color
+  De todo.checkbox.indeterminate.hover.border-width gewijzigd naar utrecht.checkbox.indeterminate.hover.border-width
+  De todo.checkbox.indeterminate.hover.border-width gewijzigd naar utrecht.checkbox.indeterminate.hover.border-width
+  De todo.checkbox.indeterminate.hover.color gewijzigd naar utrecht.checkbox.indeterminate.hover.color
+  
+  Hierbij blijven de todo tokens voor de varianten checked.disabled en checked.focus-visible bestaan.
+- 79052ea: Conform changelog NL Design System de todo tokens van het text area component van Utrecht hernoemd naar utrecht.
+  
+  De todo.textarea.hover.background-color hernoemd naar utrecht.textarea.hover.background-color
+  De todo.textarea.hover.border-color hernoemd naar utrecht.textarea.hover.border-color
+  De todo.textarea.hover.color hernoemd naar utrecht.textarea.hover.color
+  
+  Daarnaast had dit ook invloed op de alfabetische volgorde van de tokens. De hover tokens zijn nu ook voor de 'invalid' tokens geplaatst.
+- 46fb812: Conform changelog NL Design System bij het component Form Field Label is een design token verwijderd en bij het component Form Field een design token toegevoegd.
+  
+  utrecht.form-label.margin-block-end is verwijderd
+  utrecht.form-field.label.margin-block-end is toegevoegd
+  
+  Op de componenten Checkbox Group en Radio Group zijn in de labels de utrecht.form-field.label.margin-block-end toegepast (met waarde {basis.space.block.lg}).
+  En bij deze componenten is de nieuwe documentatie toegevoegd of verwijderd in Figma, waar van toepassing.
+
+## 4.0.0
+
+### Major Changes
+
+- ddd62fd: ## Card as link in ToDo bibliotheek toegevoegd conform changelog 17.0.0
+  Naam component 'card' van Amsterdam gewijzigd naar 'card-as-link'
+  Component en bijbehorende design tokens van 'case-card' verwijderd
+  Component 'card-as-link/todo' met bijbehorende tokens, zoals gedefinieerd in changelog 17.0.0, toegevoegd aan tokensset. Hierbij de oude tokens direct vervangen.
+  
+  ## Afwijkingen standaard tokens zoals gedefinieerd in 17.0.0
+  Waarde van '{todo.card-as-link.heading.color}' gewijzigd van {basis.color.default.color-document} naar {basis.color.action-1.color-default}
+  Waarde van '{todo.card-as-link.case.border-color}' ,'{todo.card-as-link.case.archived.border-color}', '{todo.card-as-link.plan.border-color}' en '{todo.card-as-link.plan.archived.border-color}' gewijzigd van '{basis.color.transparent}' naar '{{todo.card-as-link.border-color}'
+  Waarde van '{todo.card-as-link.plan.border-width}' gewijzigd van '{basis.border-width.lg}' naar '{basis.border-width.md}'
+- e48917d: ## Hernoemen van component spotlight naar note, conform changelog 18.0.0.
+  Component '{utrecht.spotlight-section}' hernoemd naar '{utrecht.note}'
+  Variant 'ok' hernoemd naar 'success'
+  
+  ## Aanvullende wijzigingen kleuren voor note
+  Waarde '{background-color}' voor '{Note}' gewijzigd van '{basis.color.default.bg-default}' naar '{basis.color.accent-1.bg-document}'
+  Waarde '{border-color}' voor '{Note}' gewijzigd van '{basis.color.default.border-default}' naar 'transparent'
+
+### Patch Changes
+
+- a00ca8b: ### De values van de tokens voor utrecht page number navigation aangepast.
+  Alle wijzigingen zijn hier voor de current page number. Dit omdat de huidige variant een witte cirkel had die niet te zien was op onze doorgaans witte achtergrond.
+  
+  Property value is gewijzigd van '{basis.color.default.bg-active}' naar '{basis.color.action-2.color-default}' in de background-color van de current state.
+  Property value is gewijzigd van '{basis.color.transparent}' naar '{basis.color.action-2.color-default}' in de border-color van de current state.
+  Property value is gewijzigd van '{basis.color.default.color-document}' naar '{basis.color.default.bg-document}' in de color van de current state.
+
+## 3.3.1
+
+### Patch Changes
+
+- e0cab1a: Republish package with dist folder (the previous release omitted it due to a change in pnpm behavior)
+
+## 3.3.0
+
+### Minor Changes
+
+- 4fe4561: Extra lettertype toegevoegd als fallback-font.
+
 ## 3.2.0
 
 ### Minor Changes

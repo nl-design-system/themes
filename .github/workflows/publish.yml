@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -33,7 +33,7 @@ jobs:
         uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
 
       - name: Set up Node.js version
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .nvmrc
           cache: pnpm
@@ -66,7 +66,7 @@ jobs:
           retention-days: 1
 
       - name: Publish to Chromatic
-        uses: chromaui/action@98132da0fca2211fb41b3af7b49ce85176007851 # v17.8.0
+        uses: chromaui/action@14cfaef73576e69f95f47f60058063f46ca38719 # v18.1.0
         if: |
           github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
@@ -121,7 +121,7 @@ jobs:
 
     steps:
       - name: Download code from GitHub
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           token: ${{ secrets.GH_TOKEN }}
           persist-credentials: true
@@ -130,10 +130,12 @@ jobs:
         uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
 
       - name: Set up Node.js version
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .nvmrc
           cache: pnpm
+          # pass explicitly for changesets/action authentication with NODE_AUTH_TOKEN
+          registry-url: https://registry.npmjs.org
 
       - name: Check for known security issues with npm packages
         run: |
@@ -150,17 +152,16 @@ jobs:
         run: pnpm run lint-release
 
       - name: Publish to npm Registry
-        uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1.9.0
+        uses: changesets/action@8488615a623b1b9c987934bb89eae8af6a946ac1 # v2.1.1
         id: changeset
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
           GIT_AUTHOR_NAME: "NL Design System"
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
           GIT_COMMITTER_NAME: "NL Design System"
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          commit: "docs(release): design system packages"
-          setupGitUser: false
-          title: "docs(release): design system packages"
-          publish: "pnpm run publish"
+          github-token: ${{ secrets.GH_TOKEN }}
+          commit-message: "docs(release): design system packages"
+          pr-title: "docs(release): design system packages"
+          publish-script: "pnpm run publish"

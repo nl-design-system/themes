@@ -1,5 +1,326 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 8.1.0
+
+### Minor Changes
+
+- 8d6b7bf: - Voegt een eerste set aan design tokens toe voor ma-card.
+
+## 8.0.1
+
+### Patch Changes
+
+- bd49c91: Waarde van token `ams.icon-button.inverse.background-color` is gewijzigd van `transparent` naar common token `{basis.color.transparent}`.
+  
+  Controleer of deze wijziging ook wenselijk is voor het thema van jouw organisatie. Zo niet, dan hoef je deze niet over te nemen.
+- f8c4a22: - Voegt space relative tokens toe aan M&A-thema ter bevordering van flow.
+  - Past spacing lijsten iets aan, waardoor amsterdam en utrecht op elkaar zijn afgestemd.
+
+## 8.0.0
+
+### Major Changes
+
+- 74da821: De volgende tokens zijn verwijderd uit ToDo Icon Only Button component:
+  
+  - `todo.icon-only-button.padding-block-end`
+  - `todo.icon-only-button.padding-block-start`
+  - `todo.icon-only-button.padding-inline-end`
+  - `todo.icon-only-button.padding-inline-start`
+- 4fbfd1d: - Token `utrecht.form-field.label.margin-block-end` is toegevoegd aan Form Field component.
+  - Token `utrecht.form-label.margin-block-end` verwijderd uit Form Field Label component.
+- c3a8f8c: Component 'Dialog' is hernoemd naar 'Modal Dialog'.
+  
+  De volgende tokens zijn toegevoegd aan Modal Dialog component:
+  
+  - `ams.modal-dialog.header.column-gap`
+  - `ams.modal-dialog.header.row-gap`
+  - `ams.modal-dialog.body.min-block-size`
+  - `ams.modal-dialog.body.medium.padding-block`
+  
+  De volgende tokens zijn verwijderd uit Modal Dialog component:
+  
+  - `ams.dialog.gap`
+  - `ams.dialog.header.gap`
+
+### Patch Changes
+
+- 5392d56: Waardes van meerdere design tokens aangepast op basis van missing tokens css variabelen.
+
+## 7.1.1
+
+### Patch Changes
+
+- 8d5a041: Token `denhaag.side-navigation.mobile.display` is verwijderd uit Side Navigation component.
+
+## 7.1.0
+
+### Minor Changes
+
+- 1513c62: De volgende tokens zijn hernoemd in Accordion component:
+  
+  - `todo.accordion.button.font-family` naar `utrecht.accordion.button.font-family`
+  - `todo.accordion.button.font-size` naar `utrecht.accordion.button.font-size`
+  - `todo.accordion.button.font-weight` naar `utrecht.accordion.button.font-weight`
+  - `todo.accordion.button.line-height` naar `utrecht.accordion.button.line-height`
+- 57dfaf9: De volgende tokens zijn hernoemd in Checkbox component:
+  
+  - `todo.checkbox.checked.active.background-color` naar `utrecht.checkbox.checked.active.background-color`
+  - `todo.checkbox.checked.active.border-color` naar `utrecht.checkbox.checked.active.border-color`
+  - `todo.checkbox.checked.active.border-width` naar `utrecht.checkbox.checked.active.border-width`
+  - `todo.checkbox.checked.active.color` naar `utrecht.checkbox.checked.active.color`
+  - `todo.checkbox.checked.hover.background-color` naar `utrecht.checkbox.checked.hover.background-color`
+  - `todo.checkbox.checked.hover.border-color` naar `utrecht.checkbox.checked.hover.border-color`
+  - `todo.checkbox.checked.hover.border-width` naar `utrecht.checkbox.checked.hover.border-width`
+  - `todo.checkbox.checked.hover.color` naar `utrecht.checkbox.checked.hover.color`
+  - `todo.checkbox.indeterminate.active.background-color` naar `utrecht.checkbox.indeterminate.active.background-color`
+  - `todo.checkbox.indeterminate.active.border-color` naar `utrecht.checkbox.indeterminate.active.border-color`
+  - `todo.checkbox.indeterminate.active.border-width` naar `utrecht.checkbox.indeterminate.active.border-width`
+  - `todo.checkbox.indeterminate.active.color` naar `utrecht.checkbox.indeterminate.active.color`
+  - `todo.checkbox.indeterminate.hover.background-color` utrecht `todo.checkbox.indeterminate.hover.background-color`
+  - `todo.checkbox.indeterminate.hover.border-color` naar `utrecht.checkbox.indeterminate.hover.border-color`
+  - `todo.checkbox.indeterminate.hover.border-width` naar `utrecht.checkbox.indeterminate.hover.border-width`
+  - `todo.checkbox.indeterminate.hover.color` naar `utrecht.checkbox.indeterminate.hover.color`
+- 5f03cd8: De volgende tokens zijn hernoemd in Text Area component:
+  
+  - `todo.textarea.hover.background-color` naar `utrecht.textarea.hover.background-color`
+  - `todo.textarea.hover.border-color` naar `utrecht.textarea.hover.border-color`
+  - `todo.textarea.hover.color` naar `utrecht.textarea.hover.color`
+- a99f6d3: De volgende tokens zijn hernoemd in Text Input component:
+  
+  - `todo.textbox.hover.background-color` naar `utrecht.textbox.hover.background-color`
+  - `todo.textbox.hover.border-color` naar `utrecht.textbox.hover.border-color`
+  - `todo.textbox.hover.color` naar `utrecht.textbox.hover.color`
+
+## 7.0.0
+
+### Major Changes
+
+- c683394: De volgende tokens zijn toegevoegd voor Card as Link - Help Wanted component:
+
+  - `todo.card-as-link.background-color`
+  - `todo.card-as-link.border-color`
+  - `todo.card-as-link.border-radius`
+  - `todo.card-as-link.border-width`
+  - `todo.card-as-link.color`
+  - `todo.card-as-link.max-inline-size`
+  - `todo.card-as-link.min-block-size`
+  - `todo.card-as-link.active.background-color`
+  - `todo.card-as-link.active.border-color`
+  - `todo.card-as-link.focus.background-color`
+  - `todo.card-as-link.focus.border-color`
+  - `todo.card-as-link.focus.color`
+  - `todo.card-as-link.hover.background-color`
+  - `todo.card-as-link.hover.border-color`
+  - `todo.card-as-link.body.column-gap`
+  - `todo.card-as-link.body.padding-block-end`
+  - `todo.card-as-link.body.padding-block-start`
+  - `todo.card-as-link.body.padding-inline-end`
+  - `todo.card-as-link.body.padding-inline-start`
+  - `todo.card-as-link.body.row-gap`
+  - `todo.card-as-link.description.font-size`
+  - `todo.card-as-link.description.line-height`
+  - `todo.card-as-link.footer.column-gap`
+  - `todo.card-as-link.footer.padding-block-end`
+  - `todo.card-as-link.footer.padding-block-start`
+  - `todo.card-as-link.footer.padding-inline-end`
+  - `todo.card-as-link.footer.padding-inline-start`
+  - `todo.card-as-link.footer.row-gap`
+  - `todo.card-as-link.header.column-gap`
+  - `todo.card-as-link.header.padding-block-end`
+  - `todo.card-as-link.header.padding-block-start`
+  - `todo.card-as-link.header.padding-inline-end`
+  - `todo.card-as-link.header.padding-inline-start`
+  - `todo.card-as-link.header.row-gap`
+  - `todo.card-as-link.heading.color`
+  - `todo.card-as-link.heading.font-family`
+  - `todo.card-as-link.heading.font-size`
+  - `todo.card-as-link.heading.font-weight`
+  - `todo.card-as-link.heading.line-height`
+  - `todo.card-as-link.heading.text-decoration`
+  - `todo.card-as-link.heading.hover.text-decoration`
+  - `todo.card-as-link.icon.color`
+  - `todo.card-as-link.icon.size`
+  - `todo.card-as-link.label.color`
+  - `todo.card-as-link.label.font-family`
+  - `todo.card-as-link.label.font-size`
+  - `todo.card-as-link.label.font-weight`
+  - `todo.card-as-link.label.line-height`
+  - `todo.card-as-link.label.text-decoration`
+  - `todo.card-as-link.label.hover.text-decoration`
+  - `todo.card-as-link.link-icon.color`
+  - `todo.card-as-link.link-icon.size`
+  - `todo.card-as-link.pre-header.column-gap`
+  - `todo.card-as-link.pre-header.padding-block-end`
+  - `todo.card-as-link.pre-header.padding-block-start`
+  - `todo.card-as-link.pre-header.padding-inline-end`
+  - `todo.card-as-link.pre-header.padding-inline-start`
+  - `todo.card-as-link.pre-header.row-gap`
+  - `todo.card-as-link.status-banner.column-gap`
+  - `todo.card-as-link.status-banner.padding-block`
+  - `todo.card-as-link.status-banner.padding-inline`
+  - `todo.card-as-link.status-banner.info.background-color`
+  - `todo.card-as-link.status-banner.info.color`
+  - `todo.card-as-link.status-banner.success.background-color`
+  - `todo.card-as-link.status-banner.success.color`
+  - `todo.card-as-link.status-banner.warning.background-color`
+  - `todo.card-as-link.status-banner.warning.color`
+  - `todo.card-as-link.status-banner.error.background-color`
+  - `todo.card-as-link.status-banner.error.color`
+  - `todo.card-as-link.case.background-color`
+  - `todo.card-as-link.case.border-color`
+  - `todo.card-as-link.case.color`
+  - `todo.card-as-link.case.min-block-size`
+  - `todo.card-as-link.case.active.background-color`
+  - `todo.card-as-link.case.active.border-color`
+  - `todo.card-as-link.case.hover.background-color`
+  - `todo.card-as-link.case.hover.border-color`
+  - `todo.card-as-link.case.decoration.background-color`
+  - `todo.card-as-link.case.decoration.paper.background-color`
+  - `todo.card-as-link.case.decoration.paper.border-radius`
+  - `todo.card-as-link.case.heading.color`
+  - `todo.card-as-link.case.link-icon.color`
+  - `todo.card-as-link.case.archived.background-color`
+  - `todo.card-as-link.case.archived.border-color`
+  - `todo.card-as-link.case.archived.color`
+  - `todo.card-as-link.case.archived.active.background-color`
+  - `todo.card-as-link.case.archived.active.border-color`
+  - `todo.card-as-link.case.archived.hover.background-color`
+  - `todo.card-as-link.case.archived.hover.border-color`
+  - `todo.card-as-link.case.archived.decoration.background-color`
+  - `todo.card-as-link.case.archived.heading.color`
+  - `todo.card-as-link.case.archived.link-icon.color`
+  - `todo.card-as-link.plan.background-color`
+  - `todo.card-as-link.plan.border-color`
+  - `todo.card-as-link.plan.border-width`
+  - `todo.card-as-link.plan.color`
+  - `todo.card-as-link.plan.min-block-size`
+  - `todo.card-as-link.plan.active.background-color`
+  - `todo.card-as-link.plan.active.border-color`
+  - `todo.card-as-link.plan.hover.background-color`
+  - `todo.card-as-link.plan.hover.border-color`
+  - `todo.card-as-link.plan.body.padding-inline-end`
+  - `todo.card-as-link.plan.body.padding-inline-start`
+  - `todo.card-as-link.plan.decoration.clip.color`
+  - `todo.card-as-link.plan.footer.padding-block-end`
+  - `todo.card-as-link.plan.footer.padding-inline-end`
+  - `todo.card-as-link.plan.footer.padding-inline-start`
+  - `todo.card-as-link.plan.header.padding-block-end`
+  - `todo.card-as-link.plan.header.padding-inline-end`
+  - `todo.card-as-link.plan.header.padding-inline-start`
+  - `todo.card-as-link.plan.heading.color`
+  - `todo.card-as-link.plan.link-icon.color`
+  - `todo.card-as-link.plan.archived.background-color`
+  - `todo.card-as-link.plan.archived.border-color`
+  - `todo.card-as-link.plan.archived.color`
+  - `todo.card-as-link.plan.archived.active.background-color`
+  - `todo.card-as-link.plan.archived.active.border-color`
+  - `todo.card-as-link.plan.archived.hover.background-color`
+  - `todo.card-as-link.plan.archived.hover.border-color`
+  - `todo.card-as-link.plan.archived.decoration.clip.color`
+  - `todo.card-as-link.plan.archived.heading.color`
+  - `todo.card-as-link.plan.archived.link-icon.color`
+  - `todo.card-as-link.product.border-block-start-color`
+  - `todo.card-as-link.product.border-block-start-width`
+  - `todo.card-as-link.product.border-radius`
+  - `todo.card-as-link.task.border-radius`
+  - `todo.card-as-link.task.border-width`
+  - `todo.card-as-link.task.max-inline-size`
+  - `todo.card-as-link.task.body.padding-block-start`
+  - `todo.card-as-link.task.footer.padding-inline-start`
+  - `todo.card-as-link.task.pre-header.padding-block-end`
+  - `todo.card-as-link.task.pre-header.padding-block-start`
+  - `todo.card-as-link.task.pre-header.padding-inline-start`
+  - `todo.card-as-link.task.checked.icon.color`
+  - `todo.card-as-link.topic.border-radius`
+  - `todo.card-as-link.topic.border-width`
+  - `todo.card-as-link.topic.icon.color`
+  - `todo.card-as-link.topic.icon.size`
+  - `todo.card-as-link.topic.footer.padding-inline-start`
+  - `todo.card-as-link.topic.pre-header.padding-block-end`
+  - `todo.card-as-link.topic.pre-header.padding-block-start`
+  - `todo.card-as-link.topic.pre-header.padding-inline-start`
+  - `todo.card-as-link.toptask.background-color`
+  - `todo.card-as-link.toptask.border-color`
+  - `todo.card-as-link.toptask.color`
+  - `todo.card-as-link.toptask.active.background-color`
+  - `todo.card-as-link.toptask.active.border-color`
+  - `todo.card-as-link.toptask.active.color`
+  - `todo.card-as-link.toptask.hover.background-color`
+  - `todo.card-as-link.toptask.hover.border-color`
+  - `todo.card-as-link.toptask.hover.color`
+  - `todo.card-as-link.toptask.icon.size`
+  - `todo.card-as-link.toptask.label.color`
+  - `todo.card-as-link.toptask.pre-header.padding-block-start`
+  - `todo.card-as-link.toptask.pre-header.padding-inline-end`
+  - `todo.card-as-link.toptask.pre-header.padding-inline-start`
+
+  De volgende tokens zijn verwijderd uit voor Card as Link - Help Wanted component:
+
+  - `todo.case-card.background-color`
+  - `todo.case-card.border-radius`
+  - `todo.case-card.color`
+  - `todo.case-card.min-block-size`
+  - `todo.case-card.min-inline-size`
+  - `todo.case-card.padding-block`
+  - `todo.case-card.padding-inline`
+  - `todo.case-card.row-gap`
+  - `todo.case-card.description.color`
+  - `todo.case-card.description.font-family`
+  - `todo.case-card.description.font-size`
+  - `todo.case-card.description.font-weight`
+  - `todo.case-card.description.line-height`
+  - `todo.case-card.heading.color`
+  - `todo.case-card.heading.font-family`
+  - `todo.case-card.heading.font-size`
+  - `todo.case-card.heading.font-weight`
+  - `todo.case-card.heading.line-height`
+  - `todo.case-card.metadata.color`
+  - `todo.case-card.metadata.font-family`
+  - `todo.case-card.metadata.font-size`
+  - `todo.case-card.metadata.font-weight`
+  - `todo.case-card.metadata.line-height`
+  - `todo.case-card.icon.color`
+  - `todo.case-card.icon.size`
+  - `todo.case-card.active.background-color`
+  - `todo.case-card.focus.background-color`
+  - `todo.case-card.focus.color`
+  - `todo.case-card.hover.background-color`
+  - `todo.case-card.decoration.folder.background-color`
+  - `todo.case-card.decoration.folder.active.background-color`
+  - `todo.case-card.decoration.folder.hover.background-color`
+  - `todo.case-card.decoration.folder.focus.background-color`
+  - `todo.case-card.decoration.paper.background-color`
+  - `todo.case-card.archived.background-color`
+  - `todo.case-card.archived.color`
+  - `todo.case-card.archived.description.color`
+  - `todo.case-card.archived.heading.color`
+  - `todo.case-card.archived.metadata.color`
+  - `todo.case-card.archived.active.background-color`
+  - `todo.case-card.archived.hover.background-color`
+  - `todo.case-card.archived.decoration.folder.background-color`
+  - `todo.case-card.archived.decoration.folder.active.background-color`
+  - `todo.case-card.archived.decoration.folder.hover.background-color`
+
+- 265415a: - Spotlight-section is hernoemd naar Note.
+  - Type 'OK' is hernoemd naar 'Success'.
+
+### Patch Changes
+
+- e0cab1a: Republish package with dist folder (the previous release omitted it due to a change in pnpm behavior)
+
+## 6.0.1
+
+### Patch Changes
+
+- b435a60: Border-width waardes voor Blockquote omgedraaid.
+
+## 6.0.0
+
+### Major Changes
+
+- 0f0b2d5: - Side Navigation tokens van Den Haag bijgewerkt.
+  - Icon Button tokens van Den Haag toegevoegd.
+
 ## 5.5.0
 
 ### Minor Changes

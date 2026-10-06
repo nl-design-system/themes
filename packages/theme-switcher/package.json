@@ -22,7 +22,7 @@
     "directory": "packages/theme-switcher"
   },
   "scripts": {
-    "build": "mkdir -p dist/ && node src/generate-json.mjs",
+    "build": "mkdirp dist && node src/generate-json.mjs",
     "clean": "rimraf dist/"
   },
   "devDependencies": {
@@ -47,6 +47,7 @@
     "@nl-design-system-unstable/westervoort-design-tokens": "workspace:*",
     "@nl-design-system-unstable/zevenaar-design-tokens": "workspace:*",
     "@nl-design-system-unstable/zwolle-design-tokens": "workspace:*",
+    "mkdirp": "3.0.1",
     "rimraf": "6.0.1"
   }
 }

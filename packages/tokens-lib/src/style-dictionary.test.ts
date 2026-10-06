@@ -13,7 +13,7 @@ const fileExists = async (path: string) => {
   }
 };
 const testDirectory = (distPath: string) => {
-  describe.skip('Style Dictionary build', () => {
+  describe('Style Dictionary build', () => {
     describe('.less output', () => {
       const path = resolve(distPath, './variables.less');
       it('has a `dist/variables.less` file', async () => {
@@ -192,11 +192,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a variable declaration', () => {
-            expect(content).toContain('"utrechtButtonColor":');
-          });
-
-          it('contains a variable assignment', () => {
-            expect(content).toContain('"utrechtButtonColor": "#ababab"');
+            expect(content).toContain('"utrechtButtonColor": "');
           });
         });
       });
@@ -239,7 +235,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a type assignment', () => {
-            expect(content).toContain('"color": DesignToken');
+            expect(content).toContain('"2xl": DesignToken');
           });
         });
       });
@@ -260,11 +256,7 @@ const testDirectory = (distPath: string) => {
           });
 
           it('contains a property declaration', () => {
-            expect(content).toContain('"utrechtButtonColor":');
-          });
-
-          it('contains a property assignment', () => {
-            expect(content).toContain('"utrechtButtonColor": "#ababab"');
+            expect(content).toContain('"utrechtButtonColor": "');
           });
         });
       });
