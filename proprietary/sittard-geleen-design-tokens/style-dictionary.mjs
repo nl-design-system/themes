@@ -23,10 +23,6 @@ const build = async () => {
   const lightConfig = createConfig({
     className: `${themeConfig.prefix}-theme`,
   });
-  // OpenForms only applies our theme class to the <html> root when it is
-  // explicitly configured to do so. Scoping theme.css to :root as well
-  // guarantees the tokens apply even when that configuration step is missed.
-  lightConfig.platforms.css.files[0].options.selector = [':root', `.${themeConfig.prefix}-theme`];
 
   let sd = new StyleDictionary({
     ...lightConfig,
