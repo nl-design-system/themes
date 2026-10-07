@@ -296,10 +296,10 @@ const lowercaseNoneTransform = {
   name: 'value/lowercase-none',
   type: 'value',
   filter: (token) => {
-    const value = token.value || token.$value;
+    const value = token.$value || token.value;
     return typeof value === 'string' && /^none$/i.test(value);
   },
-  transform: (token) => String(token.value || token.$value).toLowerCase(),
+  transform: (token) => String(token.$value || token.value).toLowerCase(),
 };
 
 export { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor, lowercaseNoneTransform };
