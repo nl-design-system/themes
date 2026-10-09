@@ -4,8 +4,9 @@ import {
   setExtension,
   mergeTokens,
   StrictThemeSchema,
+  ColorValueSchema,
+  stringifyColor,
 } from '@nl-design-system-community/design-tokens-schema';
-import Color from 'colorjs.io';
 
 export const PARENT_KEY_EXTENSION = 'nl.nldesignsystem.parent-key';
 
@@ -28,7 +29,7 @@ export const setParentKeyExtensions = (tokens: Record<string, unknown>) => {
         return result;
       } else {
         console.log('x', value);
-        setExtension(value, 'nl.nldesignsystem.parent-key', property);
+        setExtension(value, PARENT_KEY_EXTENSION, property);
       }
     },
     {} as Record<string, unknown>,
@@ -55,48 +56,18 @@ export const groupByParentKeys = (tokens: Record<string, unknown>, defaultTokenS
   );
 };
 
-export interface FancyColorToken {
-  alpha: number;
-  colorSpace: string;
-  components: number[];
-}
-
-/**
- * Detect fancy tokens that look like this:
- *
- *     {
- *       "alpha": 1,
- *       "colorSpace": "srgb",
- *       "components": [0, 0, 0],
- *     }
- */
-export const isFancyColorToken = (arg: any): arg is FancyColorToken =>
-  !!arg &&
-  typeof arg === 'object' &&
-  typeof arg.colorSpace === 'string' &&
-  (typeof arg.alpha === 'number' || typeof arg.number === 'string') &&
-  Array.isArray(arg.components) &&
-  arg.components.every((value: unknown) => typeof value === 'number');
-
-/**
- * Convert color design token objects to a CSS string.
- *
- * TODO: Ideally the `design-tokens-schema` packages provides an option to serialize as color tokens with CSS values.
- */
-export const colorTokenToCss = ({ colorSpace, alpha, components }: FancyColorToken): string => {
-  const color = new Color({ space: colorSpace, coords: components, alpha: alpha ?? 1 });
-  return color.toString();
-};
-
 export const tokensScale = ({ data }) =>
   Object.fromEntries(
-    Object.entries(data).map(([key, $value]) => [
-      key,
-      {
-        $type: 'color',
-        $value: isFancyColorToken($value) ? colorTokenToCss($value) : $value,
-      },
-    ]),
+    Object.entries(data).map(([key, $value]) => {
+      const parsedValue = ColorValueSchema.safeParse($value);
+      return [
+        key,
+        {
+          $type: 'color',
+          $value: parsedValue.success ? stringifyColor(parsedValue.data) : $value,
+        },
+      ];
+    }),
   );
 
 export const setBasisColor = (
