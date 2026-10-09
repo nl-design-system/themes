@@ -1387,6 +1387,30 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
+      description: 'Sittard-Geleen design decision: birght turquoise focus color',
+    },
+    () => {
+      // Design decision by Robbert, to overwrite the yellow default from Start Theme
+      return mergeTokens([
+        theme,
+        {
+          basis: {
+            focus: {
+              'background-color': {
+                $value: '#00FFCC',
+              },
+              color: {
+                $value: 'black',
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
       description: 'Sittard-Geleen design decision: primary color',
     },
     () => {
@@ -2675,6 +2699,58 @@ export const generateTheme = (
                 color: {
                   $value: '{utrecht.link.placeholder.color}',
                 },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Add missing tokens for Utrecht Link',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            link: {
+              placeholder: {
+                color: { $value: '{basis.color.disabled.color-default}' },
+                'font-weight': {},
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Add Open Forms design tokens: white background color',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          basis: {
+            color: {
+              default: {
+                // Overwrite with white
+                // TODO: Generate color scale with white as minimum value
+                'bg-document': {
+                  $value: 'oklch(100% 0.00579 236.76)',
+                },
+              },
+            },
+          },
+          of: {
+            card: {
+              'background-color': {
+                $value: '{basis.color.default.bg-document}',
               },
             },
           },
