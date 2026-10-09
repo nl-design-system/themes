@@ -7,6 +7,7 @@
   --of-utrecht-form-field-radio-margin-block-start: var(--basis-space-block-md);
   --of-utrecht-form-field-description-errors-line-height: var(--utrecht-form-field-error-message-line-height);
   --of-utrecht-form-field-description-errors-font-weight: var(--utrecht-form-field-error-message-font-weight);
+  --of-card-background-color: var(--basis-color-default-bg-document);
   --of-page-footer-fg: var(--utrecht-page-footer-color);
   --of-page-footer-bg: var(--utrecht-page-footer-background-color);
   --of-checkbox-bg: var(--basis-color-transparent);
@@ -2025,7 +2026,7 @@
   --utrecht-link-list-row-gap: var(--basis-space-row-md);
   --utrecht-link-list-margin-block-start: var(--basis-space-none); /* [code-only] */
   --utrecht-link-list-margin-block-end: var(--basis-space-none); /* [code-only] */
-  --utrecht-link-placeholder-color: var(--nl-link-disabled-color);
+  --utrecht-link-placeholder-color: var(--basis-color-disabled-color-default);
   --utrecht-link-visited-color: var(--nl-link-color);
   --utrecht-link-hover-text-decoration-thickness: var(--nl-link-hover-text-decoration-thickness); /* [code-only] */
   --utrecht-link-hover-text-decoration: var(--nl-link-hover-text-decoration-line);
@@ -2568,8 +2569,8 @@
   --basis-focus-outline-offset: var(--basis-space-inline-sm);
   --basis-focus-inverse-outline-color: #ffffff;
   --basis-focus-outline-color: #0b0c0c;
-  --basis-focus-color: #0b0c0c;
-  --basis-focus-background-color: #ffdd00;
+  --basis-focus-color: #000000;
+  --basis-focus-background-color: #00ffcc;
   --basis-action-submit-cursor: pointer;
   --basis-action-activate-cursor: pointer;
   --basis-box-shadow-lg: [object Object],[object Object];
@@ -3107,7 +3108,7 @@
   --basis-color-default-bg-hover: oklch(91.708% 0.00579 236.76);
   --basis-color-default-bg-default: oklch(94.2% 0.00579 236.76);
   --basis-color-default-bg-subtle: oklch(96.276% 0.00579 236.76);
-  --basis-color-default-bg-document: oklch(98.768% 0.00579 236.76);
+  --basis-color-default-bg-document: oklch(100% 0.00579 236.76);
   --basis-color-transparent: rgba(0, 0, 0, 0);
   --basis-text-line-height-4xl: 1.2;
   --basis-text-line-height-3xl: 1.2;

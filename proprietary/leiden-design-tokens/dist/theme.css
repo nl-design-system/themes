@@ -579,7 +579,7 @@
   --ams-icon-button-cursor: default; /** [code-only] */
   --ams-icon-button-outline-offset: auto; /** [code-only] */
   --ams-icon-button-disabled-cursor: disabled; /** [code-only] */
-  --ams-image-aspect-ratio: '16 / 9'; /** [code-only] */
+  --ams-image-aspect-ratio: "16 / 9"; /** [code-only] */
   --ams-modal-dialog-border-style: solid; /** [code-only] */
   --ams-modal-dialog-inline-size: 328px;
   --ams-modal-dialog-max-block-size: 80vh; /** [code-only] */
@@ -966,8 +966,14 @@
   --utrecht-calendar-table-days-item-day-out-of-the-month-border-color: var(--basis-color-transparent);
   --utrecht-calendar-table-days-item-day-selected-border-color: var(--basis-color-transparent);
   --utrecht-calendar-table-weeks-item-width: var(--basis-pointer-target-min-inline-size);
+  --utrecht-checkbox-border-radius: var(--basis-border-radius-sm);
+  --utrecht-checkbox-margin-inline-end: var(--basis-space-inline-md);
+  --utrecht-checkbox-size: var(--basis-size-xs);
+  --utrecht-checkbox-icon-size: var(--basis-size-icon-md);
+  --utrecht-checkbox-checked-border-color: var(--basis-color-transparent);
   --utrecht-checkbox-checked-active-border-color: var(--basis-color-transparent);
   --utrecht-checkbox-checked-hover-border-color: var(--basis-color-transparent);
+  --utrecht-checkbox-indeterminate-border-color: var(--basis-color-transparent);
   --utrecht-checkbox-indeterminate-active-border-color: var(--basis-color-transparent);
   --utrecht-checkbox-indeterminate-hover-border-color: var(--basis-color-transparent);
   --utrecht-code-font-size: var(--basis-text-font-size-md);
@@ -2177,16 +2183,20 @@
   --utrecht-calendar-table-days-item-day-is-today-font-weight: var(--basis-text-font-weight-bold);
   --utrecht-calendar-table-days-item-day-selected-background-color: var(--basis-color-action-2-inverse-bg-default);
   --utrecht-calendar-table-days-item-day-selected-font-weight: var(--basis-text-font-weight-bold);
+  --utrecht-checkbox-background-color: var(--basis-form-control-background-color);
+  --utrecht-checkbox-border-width: var(--basis-form-control-border-width);
+  --utrecht-checkbox-active-border-width: var(--basis-form-control-active-border-width);
+  --utrecht-checkbox-focus-border-width: var(--basis-form-control-focus-border-width);
+  --utrecht-checkbox-hover-border-width: var(--basis-form-control-hover-border-width);
+  --utrecht-checkbox-invalid-background-color: var(--basis-form-control-invalid-background-color);
+  --utrecht-checkbox-invalid-border-color: var(--basis-form-control-invalid-border-color);
+  --utrecht-checkbox-invalid-border-width: var(--basis-form-control-invalid-border-width);
+  --utrecht-checkbox-checked-border-width: var(--basis-form-control-border-width);
   --utrecht-checkbox-checked-active-border-width: var(--basis-form-control-active-border-width);
-  --utrecht-checkbox-checked-active-color: var(--basis-color-default-bg-document);
-  --utrecht-checkbox-checked-focus-visible-border-width: var(--basis-form-control-focus-border-width);
   --utrecht-checkbox-checked-hover-border-width: var(--basis-form-control-hover-border-width);
-  --utrecht-checkbox-checked-hover-color: var(--basis-color-default-bg-document);
+  --utrecht-checkbox-indeterminate-border-width: var(--basis-form-control-border-width);
   --utrecht-checkbox-indeterminate-active-border-width: var(--basis-form-control-active-border-width);
-  --utrecht-checkbox-indeterminate-active-color: var(--basis-color-default-bg-document);
-  --utrecht-checkbox-indeterminate-focus-visible-border-width: var(--basis-form-control-focus-border-width);
   --utrecht-checkbox-indeterminate-hover-border-width: var(--basis-form-control-hover-border-width);
-  --utrecht-checkbox-indeterminate-hover-color: var(--basis-color-default-bg-document);
   --utrecht-code-background-color: var(--basis-color-default-bg-default);
   --utrecht-code-color: var(--basis-color-default-color-document);
   --utrecht-code-font-family: var(--basis-text-font-family-monospace);
@@ -2489,6 +2499,8 @@
   --todo-card-as-link-toptask-hover-border-color: var(--todo-card-as-link-toptask-border-color);
   --todo-card-as-link-toptask-hover-color: var(--basis-color-accent-1-inverse-color-hover);
   --todo-card-as-link-toptask-label-color: var(--basis-color-accent-1-inverse-color-default);
+  --todo-checkbox-checked-focus-visible-border-width: var(--basis-form-control-focus-border-width);
+  --todo-checkbox-indeterminate-focus-visible-border-width: var(--basis-form-control-focus-border-width);
   --todo-contact-timeline-step-header-toggle-focus-visible-background-color: var(--basis-focus-background-color);
   --todo-drawer-background-color: var(--basis-color-default-bg-document);
   --todo-drawer-border-color: var(--basis-color-default-border-subtle);
@@ -2796,10 +2808,19 @@
   --utrecht-calendar-table-days-item-day-is-today-color: var(--basis-color-action-2-color-default);
   --utrecht-calendar-table-days-item-day-out-of-the-month-color: var(--basis-color-disabled-color-subtle);
   --utrecht-calendar-table-days-item-day-selected-color: var(--basis-color-action-2-inverse-color-default);
-  --utrecht-checkbox-checked-focus-visible-background-color: var(--basis-form-control-focus-background-color);
-  --utrecht-checkbox-checked-focus-visible-border-color: var(--basis-form-control-focus-border-color);
-  --utrecht-checkbox-indeterminate-focus-visible-background-color: var(--basis-form-control-focus-background-color);
-  --utrecht-checkbox-indeterminate-focus-visible-border-color: var(--basis-form-control-focus-border-color);
+  --utrecht-checkbox-border-color: var(--basis-form-control-border-color);
+  --utrecht-checkbox-active-background-color: var(--basis-form-control-active-background-color);
+  --utrecht-checkbox-active-border-color: var(--basis-form-control-active-border-color);
+  --utrecht-checkbox-focus-background-color: var(--basis-form-control-focus-background-color);
+  --utrecht-checkbox-focus-border-color: var(--basis-form-control-focus-border-color);
+  --utrecht-checkbox-hover-background-color: var(--basis-form-control-hover-background-color);
+  --utrecht-checkbox-hover-border-color: var(--basis-form-control-hover-border-color);
+  --utrecht-checkbox-checked-color: var(--basis-color-action-1-inverse-color-default);
+  --utrecht-checkbox-checked-active-color: var(--basis-color-action-1-inverse-color-active);
+  --utrecht-checkbox-checked-hover-color: var(--basis-color-action-1-inverse-color-hover);
+  --utrecht-checkbox-indeterminate-color: var(--basis-color-action-1-inverse-color-default);
+  --utrecht-checkbox-indeterminate-active-color: var(--basis-color-action-1-inverse-color-active);
+  --utrecht-checkbox-indeterminate-hover-color: var(--basis-color-action-1-inverse-color-hover);
   --utrecht-form-fieldset-legend-disabled-color: var(--basis-color-disabled-color-subtle);
   --utrecht-form-label-disabled-color: var(--basis-color-disabled-color-subtle);
   --utrecht-heading-1-color: var(--basis-heading-color);
@@ -2925,6 +2946,10 @@
   --todo-card-as-link-case-archived-heading-color: var(--basis-heading-color);
   --todo-card-as-link-plan-heading-color: var(--basis-heading-color);
   --todo-card-as-link-plan-archived-heading-color: var(--basis-heading-color);
+  --todo-checkbox-checked-focus-visible-background-color: var(--basis-form-control-focus-accent-color);
+  --todo-checkbox-checked-focus-visible-border-color: var(--basis-form-control-focus-border-color);
+  --todo-checkbox-indeterminate-focus-visible-background-color: var(--basis-form-control-focus-accent-color);
+  --todo-checkbox-indeterminate-focus-visible-border-color: var(--basis-form-control-focus-border-color);
   --todo-pagination-relative-link-color: var(--basis-color-action-2-color-default);
   --todo-pagination-relative-link-active-color: var(--basis-color-action-2-color-active);
   --todo-pagination-relative-link-disabled-color: var(--basis-color-disabled-color-subtle);
@@ -3036,17 +3061,13 @@
   --lux-login-link-active-color: var(--basis-color-action-2-color-active);
   --lux-login-link-hover-color: var(--basis-color-action-2-color-hover);
   --leiden-upload-disabled-border-color: var(--basis-color-disabled-border-default);
+  --utrecht-checkbox-disabled-background-color: var(--basis-form-control-disabled-background-color);
+  --utrecht-checkbox-disabled-border-color: var(--basis-form-control-disabled-border-color);
+  --utrecht-checkbox-checked-background-color: var(--basis-form-control-accent-color);
   --utrecht-checkbox-checked-active-background-color: var(--basis-form-control-active-accent-color);
-  --utrecht-checkbox-checked-disabled-background-color: var(--basis-form-control-disabled-accent-color);
-  --utrecht-checkbox-checked-disabled-border-color: var(--basis-form-control-disabled-border-color);
-  --utrecht-checkbox-checked-disabled-color: var(--basis-form-control-disabled-color);
-  --utrecht-checkbox-checked-focus-visible-color: var(--basis-form-control-focus-color);
   --utrecht-checkbox-checked-hover-background-color: var(--basis-form-control-hover-accent-color);
+  --utrecht-checkbox-indeterminate-background-color: var(--basis-form-control-accent-color);
   --utrecht-checkbox-indeterminate-active-background-color: var(--basis-form-control-active-accent-color);
-  --utrecht-checkbox-indeterminate-disabled-background-color: var(--basis-form-control-disabled-accent-color);
-  --utrecht-checkbox-indeterminate-disabled-border-color: var(--basis-form-control-disabled-border-color);
-  --utrecht-checkbox-indeterminate-disabled-color: var(--basis-form-control-disabled-color);
-  --utrecht-checkbox-indeterminate-focus-visible-color: var(--basis-form-control-focus-color);
   --utrecht-checkbox-indeterminate-hover-background-color: var(--basis-form-control-hover-accent-color);
   --utrecht-radio-button-color: var(--utrecht-radio-button-border-color);
   --utrecht-radio-button-active-color: var(--utrecht-radio-button-active-border-color);
@@ -3090,6 +3111,14 @@
   --ams-tabs-button-selected-box-shadow: inset 0 -0.25rem 0 0 var(--ams-tabs-button-color);
   --todo-card-as-link-case-link-icon-color: var(--todo-card-as-link-link-icon-color);
   --todo-card-as-link-plan-link-icon-color: var(--todo-card-as-link-link-icon-color);
+  --todo-checkbox-checked-disabled-background-color: var(--basis-form-control-disabled-background-color);
+  --todo-checkbox-checked-disabled-border-color: var(--basis-form-control-disabled-border-color);
+  --todo-checkbox-checked-disabled-color: var(--basis-form-control-disabled-color);
+  --todo-checkbox-checked-focus-visible-color: var(--basis-form-control-focus-color);
+  --todo-checkbox-indeterminate-disabled-background-color: var(--basis-form-control-disabled-accent-color);
+  --todo-checkbox-indeterminate-disabled-border-color: var(--basis-form-control-disabled-border-color);
+  --todo-checkbox-indeterminate-disabled-color: var(--basis-form-control-disabled-color);
+  --todo-checkbox-indeterminate-focus-visible-color: var(--basis-form-control-focus-color);
   --todo-radio-button-checked-disabled-background-color: var(--basis-form-control-disabled-accent-color);
   --todo-radio-button-checked-disabled-border-color: var(--basis-form-control-disabled-border-color);
   --todo-radio-button-checked-disabled-color: var(--basis-form-control-disabled-color);
