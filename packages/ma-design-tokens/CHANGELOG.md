@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 9.0.0
+
+### Major Changes
+
+- bf97b37: Verwijderd `utrecht.icon.color` token zodat `currentColor` gaat werken.
+
 ## 8.2.0
 
 ### Minor Changes
