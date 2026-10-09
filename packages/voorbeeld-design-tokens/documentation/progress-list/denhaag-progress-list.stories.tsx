@@ -7,6 +7,7 @@ const meta = {
   id: 'denhaag-progress-list',
   title: 'Components/Progress List/Den Haag',
   component: Status,
+  parameters: { actions: { disable: true } },
   args: {
     steps: DENHAAG_PROGRESS_LIST_STEPS,
   },
@@ -14,6 +15,11 @@ const meta = {
 
 type Story = StoryObj<typeof meta>;
 export default meta;
+
+export const VoorbeeldTheme: Story = {
+  name: 'Voorbeeld theme',
+  parameters: { theme: 'voorbeeld-theme' },
+};
 
 export const DenHaagTheme: Story = {
   name: 'Den Haag theme',
