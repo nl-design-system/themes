@@ -67,6 +67,12 @@ importers:
       '@nl-design-system/component-index':
         specifier: 1.0.0-alpha.30
         version: 1.0.0-alpha.30
+      '@projectwallace/css-parser':
+        specifier: 0.18.8
+        version: 0.18.8
+      '@projectwallace/format-css':
+        specifier: 3.2.0
+        version: 3.2.0
       '@types/node':
         specifier: 24.10.4
         version: 24.10.4
@@ -4092,6 +4098,15 @@ packages:
   '@projectwallace/css-parser@0.18.6':
     resolution: {integrity: sha512-o/3Q5YHs28nq5APCR73w/nUC9hr67nU229cbo611T1U72QeCBti11xkLwk7aMmUTzpSKnqqZib1o4bq7QEgapw==}
     engines: {pnpm: '>=11.0.0'}
+
+  '@projectwallace/css-parser@0.18.8':
+    resolution: {integrity: sha512-yjXsE/7XZOQdh5lX/y6Vy1k8dldDl4KCGSZXWfN+7nZxIHC123d55gGCx4srU/FE8ACJAtx70WIKCNclFG2iLA==}
+    engines: {pnpm: '>=11.0.0'}
+
+  '@projectwallace/format-css@3.2.0':
+    resolution: {integrity: sha512-iwPr7GtrHcgCFNF8ncsQ5qUk1zgnQ9UlTdt6w9QZwyWl1+7+r2MmgNLroBhDRpCkvEv2Tvy4Bkq+8lYnhhz9Ig==}
+    engines: {node: '>=20.12.0', pnpm: '>=11.0.0'}
+    hasBin: true
 
   '@radix-ui/colors@3.0.0':
     resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
@@ -11560,6 +11575,12 @@ snapshots:
   '@projectwallace/css-parser@0.16.0': {}
 
   '@projectwallace/css-parser@0.18.6': {}
+
+  '@projectwallace/css-parser@0.18.8': {}
+
+  '@projectwallace/format-css@3.2.0':
+    dependencies:
+      '@projectwallace/css-parser': 0.18.8
 
   '@radix-ui/colors@3.0.0': {}
 
