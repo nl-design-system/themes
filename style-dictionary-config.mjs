@@ -1,3 +1,6 @@
+import { parse_value } from '@projectwallace/css-parser';
+import { format_value } from '@projectwallace/format-css';
+
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 const sortByName = (a, b) => stringSort(a.name, b.name);
@@ -17,7 +20,7 @@ const createConfig = ({
   const legacyPlatforms = {
     legacyJson: {
       transformGroup: transformGroup,
-      transforms: ['name/camel', 'attribute/cti', 'value/lowercase-none'],
+      transforms: ['name/camel', 'attribute/cti', 'value/format-css'],
       buildPath,
       files: [
         {
@@ -28,7 +31,7 @@ const createConfig = ({
     },
     legacyCss: {
       transformGroup: transformGroup,
-      transforms: ['name/kebab', 'value/lowercase-none'],
+      transforms: ['name/kebab', 'value/format-css'],
       buildPath,
       files: [
         {
@@ -43,7 +46,7 @@ const createConfig = ({
     },
     legacyLess: {
       transformGroup: transformGroup,
-      transforms: ['name/kebab', 'value/lowercase-none'],
+      transforms: ['name/kebab', 'value/format-css'],
       buildPath,
       files: [
         {
@@ -57,7 +60,7 @@ const createConfig = ({
     },
     legacyScss: {
       transformGroup: transformGroup,
-      transforms: ['name/kebab', 'value/lowercase-none'],
+      transforms: ['name/kebab', 'value/format-css'],
       buildPath,
       files: [
         {
@@ -71,7 +74,7 @@ const createConfig = ({
     },
     legacyJs: {
       transformGroup: transformGroup,
-      transforms: ['name/camel', 'value/lowercase-none'],
+      transforms: ['name/camel', 'value/format-css'],
       buildPath,
       files: [
         {
@@ -93,7 +96,7 @@ const createConfig = ({
         },
       },
       transforms: {
-        [lowercaseNoneTransform.name]: lowercaseNoneTransform,
+        [formatCssTransform.name]: formatCssTransform,
       },
     },
     source,
@@ -101,7 +104,7 @@ const createConfig = ({
       ...(backwardsCompatible ? legacyPlatforms : {}),
       js: {
         transformGroup: transformGroup,
-        transforms: ['name/camel', 'value/lowercase-none'],
+        transforms: ['name/camel', 'value/format-css'],
         buildPath,
         files: [
           {
@@ -116,7 +119,7 @@ const createConfig = ({
       },
       tokenTree: {
         transformGroup: transformGroup,
-        transforms: ['name/camel', 'value/lowercase-none'],
+        transforms: ['name/camel', 'value/format-css'],
         buildPath,
         files: [
           {
@@ -127,7 +130,7 @@ const createConfig = ({
       },
       json: {
         transformGroup: transformGroup,
-        transforms: ['name/camel', 'value/lowercase-none'],
+        transforms: ['name/camel', 'value/format-css'],
         buildPath,
         files: [
           {
@@ -146,7 +149,7 @@ const createConfig = ({
       },
       css: {
         transformGroup: transformGroup,
-        transforms: ['name/kebab', 'value/lowercase-none'],
+        transforms: ['name/kebab', 'value/format-css'],
         buildPath,
         files: [
           {
@@ -169,7 +172,7 @@ const createConfig = ({
       },
       scss: {
         transformGroup: transformGroup,
-        transforms: ['name/kebab', 'value/lowercase-none'],
+        transforms: ['name/kebab', 'value/format-css'],
         buildPath,
         files: [
           {
@@ -184,7 +187,7 @@ const createConfig = ({
       },
       'scss-theme-mixin': {
         transformGroup: transformGroup,
-        transforms: ['name/kebab', 'value/lowercase-none'],
+        transforms: ['name/kebab', 'value/format-css'],
         buildPath,
         files: [
           {
@@ -199,7 +202,7 @@ const createConfig = ({
       },
       less: {
         transformGroup: transformGroup,
-        transforms: ['name/kebab', 'value/lowercase-none'],
+        transforms: ['name/kebab', 'value/format-css'],
         buildPath,
         files: [
           {
@@ -212,7 +215,7 @@ const createConfig = ({
         ],
       },
       typescript: {
-        transforms: ['name/camel', 'value/lowercase-none'],
+        transforms: ['name/camel', 'value/format-css'],
         transformGroup: 'js',
         buildPath,
         files: [
@@ -292,14 +295,14 @@ const colorSchemeDarkPreprocessor = {
  * This transform normalizes the value to lowercase `none` (which also passes
  * stylelint's `value-keyword-case` rule).
  */
-const lowercaseNoneTransform = {
-  name: 'value/lowercase-none',
+const formatCssTransform = {
+  name: 'value/format-css',
   type: 'value',
   filter: (token) => {
     const value = token.$value || token.value;
-    return typeof value === 'string' && /^none$/i.test(value);
+    return typeof value === 'string' && format_value(parse_value(value));
   },
   transform: (token) => String(token.$value || token.value).toLowerCase(),
 };
 
-export { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor, lowercaseNoneTransform };
+export { createConfig, colorSchemeDefaultPreprocessor, colorSchemeDarkPreprocessor, formatCssTransform };
