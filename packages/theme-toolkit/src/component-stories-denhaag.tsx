@@ -7,8 +7,56 @@ import { CaseCard } from '@gemeente-denhaag/card';
 import { ActionSingle } from '@gemeente-denhaag/action';
 import { File } from '@gemeente-denhaag/file';
 import { Status } from '@gemeente-denhaag/process-steps';
+import type { StatusProps } from '@gemeente-denhaag/process-steps';
 import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 // eslint-disable-next-line no-unused-vars
+
+export const DENHAAG_PROGRESS_LIST_STEPS: StatusProps['steps'] = [
+  {
+    id: 'deelname',
+    marker: 1,
+    status: 'checked',
+    steps: [
+      {
+        id: '04aabddd-5234-44d1-a6aa-753c5bd6f7c5',
+        status: 'checked',
+        title: 'Aanmelding ontvangen',
+      },
+    ],
+    title: 'Deelname aan geluidsonderzoek',
+  },
+  {
+    id: 'onderzoek',
+    marker: 2,
+    status: 'current',
+    steps: [
+      {
+        id: '09c4568b-828c-4656-aae2-c14ba6d51a2d',
+        status: 'checked',
+        title: 'Afspraak meten geluidsoverlast gemaakt',
+      },
+      {
+        id: 'd73a140a-64c4-4414-b003-5bc4f6d3ee8c',
+        title: 'Geluidsoverlast gemeten',
+      },
+      {
+        id: 'f8444469-0b19-43fe-bb97-4e50764119c1',
+        title: 'Onderzoek resultaten verwerkt',
+      },
+    ],
+    title: 'Onderzoek naar geluidsoverlast',
+  },
+  {
+    id: 'uitvoeren',
+    marker: 3,
+    title: 'Uitvoeren van maatregelen',
+  },
+  {
+    id: 'klaar',
+    marker: 4,
+    title: 'Maatregelen zijn uitgevoerd',
+  },
+];
 
 export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
   {
@@ -16,56 +64,7 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     component: 'denhaag-steps',
     group: STORY_GROUPS['STEPS'],
     name: 'Den Haag Status',
-    render: () => (
-      <Status
-        steps={[
-          {
-            id: 'deelname',
-            marker: 1,
-            status: 'checked',
-            steps: [
-              {
-                id: '04aabddd-5234-44d1-a6aa-753c5bd6f7c5',
-                status: 'checked',
-                title: 'Aanmelding ontvangen',
-              },
-            ],
-            title: 'Deelname aan geluidsonderzoek',
-          },
-          {
-            id: 'onderzoek',
-            marker: 2,
-            status: 'current',
-            steps: [
-              {
-                id: '09c4568b-828c-4656-aae2-c14ba6d51a2d',
-                status: 'checked',
-                title: 'Afspraak meten geluidsoverlast gemaakt',
-              },
-              {
-                id: 'd73a140a-64c4-4414-b003-5bc4f6d3ee8c',
-                title: 'Geluidsoverlast gemeten',
-              },
-              {
-                id: 'f8444469-0b19-43fe-bb97-4e50764119c1',
-                title: 'Onderzoek resultaten verwerkt',
-              },
-            ],
-            title: 'Onderzoek naar geluidsoverlast',
-          },
-          {
-            id: 'uitvoeren',
-            marker: 3,
-            title: 'Uitvoeren van maatregelen',
-          },
-          {
-            id: 'klaar',
-            marker: 4,
-            title: 'Maatregelen zijn uitgevoerd',
-          },
-        ]}
-      ></Status>
-    ),
+    render: () => <Status steps={DENHAAG_PROGRESS_LIST_STEPS}></Status>,
   },
   {
     storyId: 'react-denhaag-side-navigation--default',
