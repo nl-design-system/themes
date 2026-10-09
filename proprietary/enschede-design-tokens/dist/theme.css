@@ -338,7 +338,7 @@
   --nl-mark-color: var(--basis-color-highlight-inverse-color-default);
   --nl-mark-background-color: var(--basis-color-highlight-inverse-bg-default);
   --nl-link-hover-text-decoration-thickness: auto; /* [code-only] */
-  --nl-link-hover-text-decoration-line: None;
+  --nl-link-hover-text-decoration-line: none;
   --nl-link-hover-color: var(--basis-color-action-2-color-hover);
   --nl-link-disabled-cursor: disabled; /* [code-only] */
   --nl-link-disabled-color: var(--basis-color-disabled-color-subtle);
@@ -636,7 +636,7 @@
   --nl-button-default-active-border-color: var(--basis-color-default-border-active);
   --nl-button-default-active-background-color: var(--basis-color-default-bg-active);
   --nl-button-default-line-height: var(--basis-text-line-height-md);
-  --nl-button-default-text-transform: Uppercase;
+  --nl-button-default-text-transform: uppercase;
   --nl-button-default-font-weight: var(--basis-text-font-weight-bold);
   --nl-button-default-font-size: var(--basis-text-font-size-md);
   --nl-button-default-color: var(--basis-color-default-color-default);
@@ -657,12 +657,12 @@
   --nl-button-padding-block-end: var(--basis-space-block-md);
   --nl-button-min-inline-size: var(--basis-pointer-target-min-inline-size);
   --nl-button-min-block-size: var(--basis-pointer-target-min-block-size);
-  --nl-button-text-transform: Uppercase;
+  --nl-button-text-transform: uppercase;
   --nl-button-font-family: var(--basis-text-font-family-default);
   --nl-button-column-gap: var(--basis-space-text-xs);
   --nl-button-border-radius: var(--basis-border-radius-md);
   --ams-page-footer-spotlight-background-color: var(--basis-color-accent-1-inverse-bg-default);
-  --ams-page-footer-menu-link-hover-text-decoration-line: None;
+  --ams-page-footer-menu-link-hover-text-decoration-line: none;
   --ams-page-footer-menu-link-hover-color: var(--basis-color-action-1-color-hover);
   --ams-page-footer-menu-link-text-underline-offset: auto; /* [code-only] */
   --ams-page-footer-menu-link-text-decoration-thickness: auto; /* [code-only] */
@@ -684,7 +684,7 @@
   --ams-page-header-menu-link-hover-text-decoration-line: underline;
   --ams-page-header-menu-link-text-underline-offset: auto; /* [code-only] */
   --ams-page-header-menu-link-text-decoration-thickness: auto; /* [code-only] */
-  --ams-page-header-menu-link-text-decoration-line: None;
+  --ams-page-header-menu-link-text-decoration-line: none;
   --ams-page-header-menu-item-hover-color: var(--basis-color-action-1-color-hover);
   --ams-page-header-menu-item-padding-block: var(--basis-space-block-lg);
   --ams-page-header-menu-item-outline-offset: auto; /* [code-only] */
@@ -804,7 +804,7 @@
   --ams-heading-font-family: var(--basis-heading-font-family);
   --ams-heading-color: var(--basis-heading-color);
   --ams-file-input-button-hover-color: var(--basis-color-action-1-color-hover);
-  --ams-file-input-button-hover-box-shadow: None;
+  --ams-file-input-button-hover-box-shadow: none;
   --ams-file-input-button-disabled-cursor: disabled; /* [code-only] */
   --ams-file-input-button-disabled-color: var(--basis-color-disabled-color-subtle);
   --ams-file-input-button-padding-inline: var(--basis-space-inline-xl);
@@ -857,14 +857,14 @@
   --ams-date-input-invalid-hover-box-shadow: inset 0 0 0 var(--basis-form-control-hover-border-width) var(--basis-color-negative-border-hover);
   --ams-date-input-invalid-hover-border-color: var(--basis-color-negative-border-hover);
   --ams-date-input-invalid-border-color: var(--basis-form-control-invalid-border-color);
-  --ams-date-input-hover-calendar-picker-indicator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='%23003677'><path d='M28 6V2h-4v4H12V2H8v4H2v28h32V6zm2 24H6V14h24z'/><path d='M10 17h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4h-4zm6 0h4v4h-4z'/></svg>"); /* [code-only] */
+  --ams-date-input-hover-calendar-picker-indicator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 36 36' fill='%23003677'><path d='m28 6v2h-4v4h12v2h8v4h2v28h32v6zm2 24h6v14h24z'/><path d='m10 17h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4h-4zm6 0h4v4h-4z'/></svg>"); /* [code-only] */
   --ams-date-input-hover-box-shadow: inset 0 0 0 var(--basis-form-control-hover-border-width) var(--basis-form-control-hover-border-color);
-  --ams-date-input-disabled-calendar-picker-indicator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='%23767676'><path d='M28 6V2h-4v4H12V2H8v4H2v28h32V6zm2 24H6V14h24z'/><path d='M10 17h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4h-4zm6 0h4v4h-4z'/></svg>"); /* [code-only] */
+  --ams-date-input-disabled-calendar-picker-indicator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 36 36' fill='%23767676'><path d='m28 6v2h-4v4h12v2h8v4h2v28h32v6zm2 24h6v14h24z'/><path d='m10 17h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4h-4zm6 0h4v4h-4z'/></svg>"); /* [code-only] */
   --ams-date-input-disabled-cursor: disabled; /* [code-only] */
   --ams-date-input-disabled-color: var(--basis-form-control-disabled-color);
   --ams-date-input-disabled-border-color: var(--basis-form-control-disabled-border-color);
   --ams-date-input-calendar-picker-indicator-cursor: default; /* [code-only] */
-  --ams-date-input-calendar-picker-indicator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' fill='%23004699'><path d='M28 6V2h-4v4H12V2H8v4H2v28h32V6zm2 24H6V14h24z'/><path d='M10 17h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4h-4zm6 0h4v4h-4z'/></svg>"); /* [code-only] */
+  --ams-date-input-calendar-picker-indicator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 36 36' fill='%23004699'><path d='m28 6v2h-4v4h12v2h8v4h2v28h32v6zm2 24h6v14h24z'/><path d='m10 17h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4h-4zm6 0h4v4h-4z'/></svg>"); /* [code-only] */
   --ams-date-input-padding-inline: var(--basis-form-control-padding-inline-start);
   --ams-date-input-padding-block: var(--basis-form-control-padding-block-start);
   --ams-date-input-outline-offset: auto; /* [code-only] */
@@ -883,14 +883,14 @@
   --ams-card-link-hover-color: var(--basis-color-action-2-color-hover);
   --ams-card-link-text-underline-offset: auto; /* [code-only] */
   --ams-card-link-text-decoration-thickness: auto; /* [code-only] */
-  --ams-card-link-text-decoration-line: None;
+  --ams-card-link-text-decoration-line: none;
   --ams-card-link-color: var(--basis-color-action-2-color-default);
   --ams-card-image-margin-block-end: var(--basis-space-none); /* [code-only] */
   --ams-card-heading-group-margin-block-end: var(--basis-space-none); /* [code-only] */
   --ams-card-heading-group-gap: var(--basis-space-row-sm);
   --ams-card-heading-margin-block-end: var(--basis-space-none); /* [code-only] */
   --ams-card-outline-offset: auto; /* [code-only] */
-  --ams-breadcrumb-link-hover-text-decoration-line: None;
+  --ams-breadcrumb-link-hover-text-decoration-line: none;
   --ams-breadcrumb-link-hover-color: var(--basis-color-action-2-color-hover);
   --ams-breadcrumb-link-text-decoration-thickness: auto; /* [code-only] */
   --ams-breadcrumb-link-text-underline-offset: auto; /* [code-only] */
@@ -900,7 +900,7 @@
   --ams-breadcrumb-separator-margin-inline: var(--basis-space-column-lg);
   --ams-breadcrumb-separator-inline-size: 0.75rem;
   --ams-breadcrumb-separator-block-size: 0.75rem;
-  --ams-breadcrumb-separator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%23000000' fill-rule='evenodd' d='m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z'/></svg>"); /* [code-only] */
+  --ams-breadcrumb-separator-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 32 32'><path fill='%23000000' fill-rule='evenodd' d='m9.757 32-2.9-2.91l19.937 16 6.857 2.91 9.757 0l16 16z'/></svg>"); /* [code-only] */
   --ams-breadcrumb-line-height: var(--basis-text-line-height-md);
   --ams-breadcrumb-font-weight: var(--basis-text-font-weight-default);
   --ams-breadcrumb-font-size: var(--basis-text-font-size-md);
@@ -1088,19 +1088,19 @@
   --todo-progress-list-button-column-gap: var(--basis-space-text-xs);
   --todo-progress-list-button-border-width: var(--basis-border-width-sm);
   --todo-progress-list-button-border-radius: var(--basis-border-radius-md);
-  --todo-pagination-page-link-hover-text-decoration: None;
+  --todo-pagination-page-link-hover-text-decoration: none;
   --todo-pagination-page-link-hover-color: var(--basis-color-action-2-color-hover);
   --todo-pagination-page-link-hover-border-color: var(--basis-color-transparent);
   --todo-pagination-page-link-hover-background-color: var(--basis-color-transparent);
-  --todo-pagination-page-link-focus-visible-text-decoration: None;
+  --todo-pagination-page-link-focus-visible-text-decoration: none;
   --todo-pagination-page-link-focus-visible-color: var(--basis-focus-color);
   --todo-pagination-page-link-focus-visible-background-color: var(--basis-focus-background-color);
-  --todo-pagination-page-link-current-text-decoration: None;
+  --todo-pagination-page-link-current-text-decoration: none;
   --todo-pagination-page-link-current-font-weight: var(--basis-text-font-weight-bold);
   --todo-pagination-page-link-current-color: var(--basis-color-default-color-document);
   --todo-pagination-page-link-current-border-color: var(--basis-color-transparent);
   --todo-pagination-page-link-current-background-color: var(--basis-color-default-bg-active);
-  --todo-pagination-page-link-active-text-decoration: None;
+  --todo-pagination-page-link-active-text-decoration: none;
   --todo-pagination-page-link-active-color: var(--basis-color-action-2-color-active);
   --todo-pagination-page-link-active-border-color: var(--basis-color-transparent);
   --todo-pagination-page-link-active-background-color: var(--basis-color-transparent);
@@ -1117,18 +1117,18 @@
   --todo-pagination-page-link-border-radius: var(--basis-border-radius-none);
   --todo-pagination-page-link-border-color: var(--basis-color-transparent);
   --todo-pagination-page-link-background-color: var(--basis-color-transparent);
-  --todo-pagination-relative-link-hover-text-decoration: None;
+  --todo-pagination-relative-link-hover-text-decoration: none;
   --todo-pagination-relative-link-hover-color: var(--basis-color-action-2-color-hover);
   --todo-pagination-relative-link-hover-border-color: var(--basis-color-transparent);
   --todo-pagination-relative-link-hover-background-color: var(--basis-color-transparent);
-  --todo-pagination-relative-link-focus-visible-text-decoration: None;
+  --todo-pagination-relative-link-focus-visible-text-decoration: none;
   --todo-pagination-relative-link-focus-visible-color: var(--basis-focus-color);
   --todo-pagination-relative-link-focus-visible-background-color: var(--basis-focus-background-color);
-  --todo-pagination-relative-link-disabled-text-decoration: None;
+  --todo-pagination-relative-link-disabled-text-decoration: none;
   --todo-pagination-relative-link-disabled-color: var(--basis-color-disabled-color-subtle);
   --todo-pagination-relative-link-disabled-border-color: var(--basis-color-transparent);
   --todo-pagination-relative-link-disabled-background-color: var(--basis-color-transparent);
-  --todo-pagination-relative-link-active-text-decoration: None;
+  --todo-pagination-relative-link-active-text-decoration: none;
   --todo-pagination-relative-link-active-color: var(--basis-color-action-2-color-active);
   --todo-pagination-relative-link-active-border-color: var(--basis-color-transparent);
   --todo-pagination-relative-link-active-background-color: var(--basis-color-transparent);
@@ -1316,12 +1316,12 @@
   --todo-breadcrumb-nav-separator-size: var(--basis-size-icon-sm);
   --todo-breadcrumb-nav-separator-color: var(--basis-color-default-color-subtle);
   --todo-breadcrumb-nav-link-icon-size: var(--basis-size-icon-md);
-  --todo-breadcrumb-nav-link-hover-text-decoration: None;
+  --todo-breadcrumb-nav-link-hover-text-decoration: none;
   --todo-breadcrumb-nav-link-hover-color: var(--basis-color-action-2-color-hover);
-  --todo-breadcrumb-nav-link-focus-visible-text-decoration: None;
+  --todo-breadcrumb-nav-link-focus-visible-text-decoration: none;
   --todo-breadcrumb-nav-link-focus-visible-color: var(--basis-focus-color);
   --todo-breadcrumb-nav-link-focus-visible-background-color: var(--basis-focus-background-color);
-  --todo-breadcrumb-nav-link-active-text-decoration: None;
+  --todo-breadcrumb-nav-link-active-text-decoration: none;
   --todo-breadcrumb-nav-link-active-color: var(--basis-color-action-2-color-active);
   --todo-breadcrumb-nav-link-text-decoration: underline;
   --todo-breadcrumb-nav-link-column-gap: var(--basis-space-text-xs);
@@ -1546,7 +1546,7 @@
   --utrecht-status-badge-active-color: var(--basis-color-positive-color-default);
   --utrecht-status-badge-active-border-color: var(--basis-color-transparent);
   --utrecht-status-badge-active-background-color: var(--basis-color-positive-bg-default);
-  --utrecht-status-badge-text-transform: Uppercase;
+  --utrecht-status-badge-text-transform: uppercase;
   --utrecht-status-badge-padding-inline: var(--basis-space-inline-sm);
   --utrecht-status-badge-padding-block: var(--basis-space-none);
   --utrecht-status-badge-min-inline-size: var(--basis-size-sm);
@@ -1561,7 +1561,7 @@
   --utrecht-status-badge-border-radius: var(--basis-border-radius-sm);
   --utrecht-status-badge-border-color: var(--basis-color-transparent);
   --utrecht-status-badge-background-color: var(--basis-color-default-bg-default);
-  --utrecht-skip-link-focus-visible-text-decoration: None;
+  --utrecht-skip-link-focus-visible-text-decoration: none;
   --utrecht-skip-link-focus-color: var(--basis-focus-color);
   --utrecht-skip-link-focus-background-color: var(--basis-focus-background-color);
   --utrecht-skip-link-text-decoration: underline;
@@ -1681,7 +1681,7 @@
   --utrecht-pagination-relative-link-hover-color: var(--basis-color-action-2-color-hover);
   --utrecht-pagination-relative-link-hover-border-color: var(--basis-color-transparent);
   --utrecht-pagination-relative-link-hover-background-color: var(--basis-color-default-bg-hover);
-  --utrecht-pagination-relative-link-text-transform: None;
+  --utrecht-pagination-relative-link-text-transform: none;
   --utrecht-pagination-relative-link-text-decoration: underline;
   --utrecht-pagination-relative-link-padding-inline-end: var(--basis-space-inline-xl);
   --utrecht-pagination-relative-link-padding-inline-start: var(--basis-space-inline-xl);
@@ -1787,7 +1787,7 @@
   --utrecht-logo-min-block-size: var(--basis-pointer-target-min-block-size);
   --utrecht-logo-max-inline-size: 200px;
   --utrecht-logo-max-block-size: 120px;
-  --utrecht-link-list-link-text-decoration: None;
+  --utrecht-link-list-link-text-decoration: none;
   --utrecht-link-list-link-font-weight: var(--basis-text-font-weight-default);
   --utrecht-link-list-link-column-gap: var(--basis-space-text-xs);
   --utrecht-link-list-icon-size: var(--basis-size-icon-md);
@@ -1797,10 +1797,10 @@
   --utrecht-link-list-margin-block-end: var(--basis-space-none); /* [code-only] */
   --utrecht-link-visited-color: var(--basis-color-action-2-color-default);
   --utrecht-link-hover-text-decoration-thickness: auto; /* [code-only] */
-  --utrecht-link-hover-text-decoration: None;
+  --utrecht-link-hover-text-decoration: none;
   --utrecht-link-hover-color: var(--basis-color-action-2-color-hover);
   --utrecht-link-focus-visible-text-decoration-thickness: auto; /* [code-only] */
-  --utrecht-link-focus-visible-text-decoration: None;
+  --utrecht-link-focus-visible-text-decoration: none;
   --utrecht-link-focus-color: var(--basis-focus-color);
   --utrecht-link-focus-background-color: var(--basis-focus-background-color);
   --utrecht-link-active-color: var(--basis-color-action-2-color-active);
@@ -2040,7 +2040,7 @@
   --utrecht-calendar-icon-size: var(--basis-size-icon-md);
   --utrecht-calendar-width: fit-content; /* [code-only] */
   --utrecht-calendar-background-color: var(--basis-color-default-bg-document);
-  --utrecht-button-text-transform: Uppercase;
+  --utrecht-button-text-transform: uppercase;
   --utrecht-button-subtle-pressed-color: var(--basis-color-action-1-color-active);
   --utrecht-button-subtle-pressed-border-color: var(--basis-color-transparent);
   --utrecht-button-subtle-pressed-background-color: var(--basis-color-action-1-bg-active);
@@ -2138,14 +2138,14 @@
   --utrecht-button-background-color: var(--basis-color-action-1-bg-default);
   --utrecht-breadcrumb-nav-separator-icon-size: var(--basis-size-icon-sm);
   --utrecht-breadcrumb-nav-separator-color: var(--basis-color-default-color-subtle);
-  --utrecht-breadcrumb-nav-link-hover-text-decoration: None;
+  --utrecht-breadcrumb-nav-link-hover-text-decoration: none;
   --utrecht-breadcrumb-nav-link-hover-color: var(--basis-color-action-2-color-hover);
-  --utrecht-breadcrumb-nav-link-focus-text-decoration: None;
+  --utrecht-breadcrumb-nav-link-focus-text-decoration: none;
   --utrecht-breadcrumb-nav-link-focus-color: var(--basis-focus-color);
   --utrecht-breadcrumb-nav-link-focus-background-color: var(--basis-focus-background-color);
   --utrecht-breadcrumb-nav-link-disabled-color: var(--basis-color-disabled-color-subtle);
   --utrecht-breadcrumb-nav-link-current-font-weight: var(--basis-text-font-weight-default);
-  --utrecht-breadcrumb-nav-link-active-text-decoration: None;
+  --utrecht-breadcrumb-nav-link-active-text-decoration: none;
   --utrecht-breadcrumb-nav-link-active-color: var(--basis-color-action-2-color-active);
   --utrecht-breadcrumb-nav-link-text-decoration: underline;
   --utrecht-breadcrumb-nav-link-color: var(--basis-color-action-2-color-default);
@@ -2252,7 +2252,7 @@
   --utrecht-accordion-button-padding-block-start: var(--basis-space-block-lg);
   --utrecht-accordion-button-padding-block-end: var(--basis-space-block-lg);
   --utrecht-accordion-button-gap: var(--basis-space-text-md);
-  --utrecht-accordion-button-text-transform: Uppercase;
+  --utrecht-accordion-button-text-transform: uppercase;
   --utrecht-accordion-button-color: #ffffff;
   --utrecht-accordion-button-border-width: var(--basis-border-width-sm);
   --utrecht-accordion-button-border-radius: var(--basis-border-radius-none);
@@ -2873,7 +2873,7 @@
   --basis-text-font-size-sm: 0.875rem;
   --basis-text-font-weight-bold: 700;
   --basis-text-font-weight-default: 400;
-  --basis-text-font-family-monospace: 'IBM Plex Mono', monospace;
-  --basis-text-font-family-default: 'IBM Plex Sans', sans-serif;
+  --basis-text-font-family-monospace: 'ibm plex mono', monospace;
+  --basis-text-font-family-default: 'ibm plex sans', sans-serif;
   --enschede-color-primary: #e20d18;
 }
