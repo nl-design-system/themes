@@ -1,0 +1,49 @@
+---
+"@nl-design-system-unstable/provincie-zuid-holland-design-tokens": minor
+"@nl-design-system-unstable/leidschendam-voorburg-design-tokens": minor
+"@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens": minor
+"@nl-design-system-unstable/noordoostpolder-design-tokens": minor
+"@nl-design-system-unstable/haarlemmermeer-design-tokens": minor
+"@nl-design-system-unstable/hoeksche-waard-design-tokens": minor
+"@nl-design-system-unstable/horstaandemaas-design-tokens": minor
+"@nl-design-system-community/voorne-aan-zee-design-tokens": minor
+"@nl-design-system-unstable/drechterland-design-tokens": minor
+"@nl-design-system-unstable/noaberkracht-design-tokens": minor
+"@nl-design-system-unstable/westervoort-design-tokens": minor
+"@nl-design-system-unstable/dinkelland-design-tokens": minor
+"@nl-design-system-unstable/ridderkerk-design-tokens": minor
+"@nl-design-system-unstable/stedebroec-design-tokens": minor
+"@nl-design-system-unstable/enkhuizen-design-tokens": minor
+"@nl-design-system-unstable/groningen-design-tokens": minor
+"@nl-design-system-unstable/noordwijk-design-tokens": minor
+"@nl-design-system-community/purmerend-design-tokens": minor
+"@nl-design-system-unstable/tubbergen-design-tokens": minor
+"@nl-design-system-community/enschede-design-tokens": minor
+"@nl-design-system-unstable/nijmegen-design-tokens": minor
+"@nl-design-system-community/zaanstad-design-tokens": minor
+"@nl-design-system-unstable/zevenaar-design-tokens": minor
+"@nl-design-system-unstable/demodam-design-tokens": minor
+"@nl-design-system-community/example-design-tokens": minor
+"@nl-design-system-unstable/haarlem-design-tokens": minor
+"@nl-design-system-unstable/tilburg-design-tokens": minor
+"@nl-design-system-unstable/voorbeeld-design-tokens": minor
+"@nl-design-system-unstable/duiven-design-tokens": minor
+"@nl-design-system-unstable/leiden-design-tokens": minor
+"@nl-design-system-unstable/venray-design-tokens": minor
+"@nl-design-system-unstable/xxllnc-design-tokens": minor
+"@nl-design-system-unstable/zwolle-design-tokens": minor
+"@nl-design-system-unstable/borne-design-tokens": minor
+"@nl-design-system-unstable/buren-design-tokens": minor
+"@nl-design-system-unstable/hoorn-design-tokens": minor
+"@nl-design-system-unstable/vught-design-tokens": minor
+"@nl-design-system-community/nora-design-tokens": minor
+"@nl-design-system-unstable/duo-design-tokens": minor
+"@nl-design-system-unstable/epe-design-tokens": minor
+"@nl-design-system-unstable/basis-design-tokens": minor
+"@nl-design-system-unstable/start-design-tokens": minor
+"@nl-design-system-community/ma-design-tokens": minor
+"@nl-design-system-unstable/theme-toolkit": minor
+"@nl-design-system-unstable/tokens-lib": minor
+---
+
+Upgrade to [Style Dictionary 5](https://github.com/style-dictionary/style-dictionary/blob/main/CHANGELOG.md#551) (see [breaking changes](https://github.com/style-dictionary/style-dictionary/blob/main/CHANGELOG.md#500))
