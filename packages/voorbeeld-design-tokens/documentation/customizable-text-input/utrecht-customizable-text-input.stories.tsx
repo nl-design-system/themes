@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Textbox } from '@utrecht/component-library-react/dist/css-module';
 import { CustomizableTextInput } from '@utrecht/customizable-text-input-react/css';
 import { UtrechtIconSearch } from '@utrecht/web-component-library-react';
+import './utrecht-customizable-text-input.scss';
 
 const meta = {
   id: 'utrecht-customizable-text-input',
@@ -10,7 +11,7 @@ const meta = {
   parameters: { actions: { disable: true } },
   args: {
     end: (
-      <span style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs)' }}>
+      <span className="example-padding-xs">
         <UtrechtIconSearch />
       </span>
     ),
