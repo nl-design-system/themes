@@ -76,9 +76,10 @@ import {
 import { Root } from '@utrecht/root-react/css';
 import { PageBody } from '@utrecht/page-body-react/css';
 import { PageLayout } from '@utrecht/page-layout-react/css';
-import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import { UtrechtIconChevronRight, UtrechtIconSearch } from '@utrecht/web-component-library-react';
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { Note } from '@utrecht/note-react/css';
+import { CustomizableTextInput } from '@utrecht/customizable-text-input-react/css';
 import { clsx } from 'clsx';
 
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
@@ -3591,6 +3592,28 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: ['utrecht.note.success.background-color', 'utrecht.note.success.color'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-customizable-text-input--default',
+    component: 'utrecht-customizable-text-input',
+    group: STORY_GROUPS['CUSTOMIZABLE_TEXT_INPUT'],
+    name: 'Utrecht Customizable Text Input',
+    render: () => (
+      <CustomizableTextInput
+        end={
+          <span
+            style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs, var(--basis-space-inline-md))' }}
+          >
+            <UtrechtIconSearch />
+          </span>
+        }
+      >
+        <Textbox aria-label="Example textbox" defaultValue="The quick brown fox jumps over the lazy dog" />
+      </CustomizableTextInput>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.textbox.icon.size'],
     },
   },
 ];
