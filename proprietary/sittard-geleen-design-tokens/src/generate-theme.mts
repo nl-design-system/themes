@@ -621,7 +621,7 @@ export const generateTheme = (
                 },
                 'font-weight': {
                   $type: 'fontWeights',
-                  $value: '{basis.text.font-weight.bold}',
+                  $value: '{nl.button.subtle.font-weight}',
                 },
                 'line-height': {
                   $type: 'lineHeights',
@@ -1312,9 +1312,11 @@ export const generateTheme = (
         {
           nl: {
             button: {
-              'font-weight': {
-                $type: 'fontWeights',
-                $value: '{basis.text.font-weight.default}',
+              default: {
+                'font-weight': {
+                  $type: 'fontWeights',
+                  $value: '{basis.text.font-weight.default}',
+                },
               },
             },
           },
