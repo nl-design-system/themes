@@ -1582,15 +1582,6 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: secondary color',
-    },
-    () => {
-      return mergeTokens([theme, {}]);
-    },
-  );
-
-  theme = safeTransform(
-    {
       description: 'Sittard-Geleen design decision: primary button color - not inverse',
     },
     () => {
@@ -1892,15 +1883,6 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: secondary color',
-    },
-    () => {
-      return mergeTokens([theme, {}]);
-    },
-  );
-
-  theme = safeTransform(
-    {
       description: 'Sittard-Geleen design decision: secondary button - color and inverse design',
     },
     () => {
@@ -2011,24 +1993,6 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: link color',
-    },
-    () => {
-      return mergeTokens([theme, {}]);
-    },
-  );
-
-  theme = safeTransform(
-    {
-      description: 'Sittard-Geleen design decision: mark / highlight color',
-    },
-    () => {
-      return mergeTokens([theme, {}]);
-    },
-  );
-
-  theme = safeTransform(
-    {
       description: 'Sittard-Geleen design decision: only hover effect for Checkbox and Radio Button',
     },
     () => {
@@ -2076,15 +2040,6 @@ export const generateTheme = (
           },
         },
       ]);
-    },
-  );
-
-  theme = safeTransform(
-    {
-      description: 'Sittard-Geleen design decision: general focus color / button focus color',
-    },
-    () => {
-      return mergeTokens([theme, {}]);
     },
   );
 
@@ -2322,15 +2277,6 @@ export const generateTheme = (
           },
         },
       ]);
-    },
-  );
-
-  theme = safeTransform(
-    {
-      description: 'Add Open Forms default tokens',
-    },
-    () => {
-      return mergeTokens([theme, {}]);
     },
   );
 
@@ -2865,7 +2811,7 @@ export const generateTheme = (
   );
 
   /*
-
+    Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
     --of-select-menu-margin-block-end: 0;
     --of-select-menu-margin-block-start: -1px;
@@ -2913,7 +2859,6 @@ export const generateTheme = (
     --of-progress-indicator-mobile-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
     --of-progress-indicator-mobile-margin: 15px;
     --of-progress-indicator-sticky-spacing: 20px;
-
     --of-text-desktop-margin: var(--of-text-margin);
     --of-text-laptop-margin: var(--of-text-margin);
     --of-text-mobile-margin: var(--of-text-margin);
@@ -2925,78 +2870,6 @@ export const generateTheme = (
     --of-utrecht-form-field-description-padding-block: 11px;
     --of-utrecht-form-field-description-padding-inline: 16px;
     --of-utrecht-link-font-family: var(--of-typography-sans-serif-font-family);
-
-
-
-    --of-page-footer-bg: var(--of-color-primary);
-    --of-page-footer-fg: var(--of-color-bg);
-    --of-checkbox-bg: #F3F3F3;
-    --of-button-active-bg: #bfbfbf;
-    --of-button-active-color-border: #5e5e5e;
-    --of-button-active-fg: var(--of-color-fg);
-    --of-utrecht-link-muted-color: var(--of-color-fg-muted);
---of-alert-error-bg: #f8d7da;
---of-alert-info-bg: #d9ebf7;
---of-alert-warning-bg: #fff3cd;
---of-color-bg: #ffffff;
---of-color-border: #767676;
---of-color-danger: #D52B1E;
---of-color-fg-muted: #767676;
---of-color-fg: #000000;
---of-color-focus-border: #0177b2;
---of-color-info: #007bc7;
---of-color-primary-light: #d3e3ec;
---of-color-primary: #01689B;
---of-color-read-only-bg: #e9ecef;
---of-color-secondary: #cee0ea;
---of-color-success: green;
---of-color-warning: #E17000;
---of-field-border-color: #979797;
---of-file-upload-drop-area-padding: 15px;
---of-input-group-gap: 12px;
---of-label-font-weight: normal;
---of-language-selection-gap: .2em;
---of-layout-bg: #E6E6E6;
---of-summary-row-spacing: 10px;
---of-text-big-font-size: 1.125rem;
---of-text-font-size: 1rem;
---of-text-margin: 20px;
---of-text-small-font-size: 0.875rem;
---of-typography-sans-serif-font-family: "Fira Sans", Calibri, sans-serif;
-    --of-utrecht-form-field-description-errors-font-weight: bold;
-    --of-utrecht-form-field-description-errors-line-height: 1.33;
-    --of-button-bg: var(--of-color-bg);
-    --of-button-color-border: var(--of-color-border);
-    --of-button-danger-active-bg: #a02017;
-    --of-button-danger-active-color-border: #881b13;
-    --of-button-danger-active-fg: #ee837d;
-    --of-button-danger-bg: var(--of-color-danger);
-    --of-button-danger-color-border: #aa2218;
-    --of-button-danger-fg: #fce9e8;
-    --of-button-danger-hover-bg: #aa2218;
-    --of-button-danger-hover-color-border: #881b13;
-    --of-button-primary-active-bg: #01608f;
-    --of-button-primary-active-color-border: #01537c;
-    --of-button-primary-active-fg: #bfbfbf;
-    --of-button-primary-bg: #0177b2;
-    --of-button-primary-color-border: var(--of-color-primary);
-    --of-button-primary-fg: #ffffff;
-    --of-button-primary-hover-bg: #016698;
-    --of-button-primary-hover-color-border: #01537c;
-    --of-button-fg: var(--of-color-fg);
-    --of-button-hover-bg: #cccccc;
-    --of-button-hover-color-border: #5e5e5e;
-
-    --of-select-menu-background-color: var(--of-color-bg);
-    --of-select-menu-border-radius: 0;
-                --of-select-highlighted-bg: #E6E6E6;
-    --of-select-menu-border: solid 1px var(--of-color-border);
-    --of-select-menu-option-focus-background-color: #E6E6E6;
-    --of-select-menu-option-padding-block-end: 10px;
-    --of-select-menu-option-padding-block-start: 10px;
-    --of-select-menu-option-padding-inline-end: 12px;
-    --of-select-menu-option-padding-inline-start: 12px;
-
     */
 
   return theme;
