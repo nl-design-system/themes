@@ -2453,7 +2453,7 @@ export const generateTheme = (
               },
               success: {
                 $type: 'color',
-                $value: 'green',
+                $value: '{basis.color.positive.color-default}',
               },
               info: {
                 $type: 'color',
