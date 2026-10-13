@@ -611,6 +611,13 @@ export const generateTheme = (
                   $type: 'color',
                   $value: '{nl.button.subtle.border-color}',
                 },
+                // Without this, utrecht.button.subtle falls back to the shared
+                // utrecht.button.border-width (thin), while the candidate component's
+                // own subtle button is deliberately thicker — the two looked different.
+                'border-width': {
+                  $type: 'dimension',
+                  $value: '{nl.button.subtle.border-width}',
+                },
                 color: {
                   $type: 'color',
                   $value: '{nl.button.subtle.color}',
@@ -1435,24 +1442,40 @@ export const generateTheme = (
       description: 'Sittard-Geleen design decision: primary color',
     },
     () => {
-      const scrapedColors = ['#d3dd33', '#c8d400'];
+      const scrapedColors = ['rgb(34, 117, 165)'];
 
       return mergeTokens([
-        setBasisColor(theme, 'action-1', scrapedColors[0], { anchor: 'bg-default' }),
+        setBasisColor(theme, 'action-1', scrapedColors[0], {
+          anchor: 'bg-default',
+          inverseSeedColor: '#005381',
+          inverseAnchor: 'bg-default',
+        }),
         {
           basis: {
             color: {
               'action-1': {
-                'bg-hover': {
-                  $value: scrapedColors[1],
-                },
                 'color-default': {
-                  $value: '#000000',
+                  $value: '#ffffff',
                 },
                 'color-hover': {
-                  $value: '#000000',
+                  $value: '#ffffff',
                 },
                 'color-active': {
+                  $value: '#ffffff',
+                },
+                'border-default': {
+                  $value: '#000000',
+                },
+                'border-hover': {
+                  $value: '#000000',
+                },
+                'border-active': {
+                  $value: '#000000',
+                },
+                'color-subtle': {
+                  $value: '#000000',
+                },
+                'color-document': {
                   $value: '#000000',
                 },
               },
@@ -1468,44 +1491,25 @@ export const generateTheme = (
       description: 'Sittard-Geleen design decision: secondary color',
     },
     () => {
-      const scrapedColors = ['rgb(34, 117, 165)'];
-
-      const tokens = setBasisColor(theme, 'action-2', scrapedColors[0], {
-        anchor: 'color-default',
-        profile: 'neutral',
-      });
+      const scrapedColors = ['#d3dd33', '#c8d400'];
 
       return mergeTokens([
-        tokens,
+        setBasisColor(theme, 'action-2', scrapedColors[0], { anchor: 'bg-default' }),
         {
           basis: {
             color: {
               'action-2': {
-                // The generated bg-hover has insufficient contrast.
-                // As a workaround, use the lighter bg-default as hover color too.
-                // 'bg-hover': {
-                //   $value: tokens['basis']['color']['action-2']['bg-document']['$value'],
-                // },
-                'border-default': {
-                  $value: tokens['basis']['color']['action-2']['border-active']['$value'],
+                'bg-hover': {
+                  $value: scrapedColors[1],
                 },
-                'border-hover': {
-                  $value: tokens['basis']['color']['action-2']['border-active']['$value'],
+                'color-default': {
+                  $value: '#000000',
                 },
-              },
-            },
-          },
-          // Workaround for insufficient contrast due to combining two color scales in one component
-          utrecht: {
-            accordion: {
-              button: {
-                'background-color': {
-                  $type: 'color',
-                  $value: '{basis.color.action-2.bg-default}',
+                'color-hover': {
+                  $value: '#000000',
                 },
-                color: {
-                  $type: 'color',
-                  $value: '{basis.color.action-2.color-default}',
+                'color-active': {
+                  $value: '#000000',
                 },
               },
             },
@@ -1533,9 +1537,7 @@ export const generateTheme = (
     () => {
       const scrapedColors = ['#2274a5', '#007bff', '#2d3691', '#80bdff', '#edf4f8', '#d3e2ed', '#2275a5', '#1b5d84'];
 
-      // TODO
-      // return setBasisColor(theme, 'accent-1', scrapedColors[0]);
-      return theme;
+      return setBasisColor(theme, 'accent-1', scrapedColors[0]);
     },
   );
   theme = safeTransform(
@@ -1888,7 +1890,129 @@ export const generateTheme = (
       description: 'Sittard-Geleen design decision: secondary button - color and inverse design',
     },
     () => {
-      return mergeTokens([theme, {}]);
+      return mergeTokens([
+        theme,
+        {
+          nl: {
+            button: {
+              secondary: {
+                'background-color': {
+                  $type: 'color',
+                  $value: '{basis.color.action-2.bg-default}',
+                },
+                'border-color': {
+                  $type: 'color',
+                  $value: '{basis.color.transparent}',
+                },
+                color: {
+                  $type: 'color',
+                  $value: '{basis.color.action-2.color-default}',
+                },
+                active: {
+                  'background-color': {
+                    $type: 'color',
+                    $value: '{basis.color.action-2.bg-active}',
+                  },
+                  'border-color': {
+                    $type: 'color',
+                    $value: '{basis.color.transparent}',
+                  },
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.action-2.color-active}',
+                  },
+                },
+                disabled: {
+                  'background-color': {
+                    $type: 'color',
+                    $value: '{basis.color.disabled.bg-default}',
+                  },
+                  'border-color': {
+                    $type: 'color',
+                    $value: '{basis.color.transparent}',
+                  },
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.disabled.color-subtle}',
+                  },
+                },
+                hover: {
+                  'background-color': {
+                    $type: 'color',
+                    $value: '{basis.color.action-2.bg-hover}',
+                  },
+                  'border-color': {
+                    $type: 'color',
+                    $value: '{basis.color.transparent}',
+                  },
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.action-2.color-hover}',
+                  },
+                },
+                pressed: {
+                  // Was falling back to `action-1-inverse` (blue) by default; pressed
+                  // is a darker shade of the same green, like primary's pressed state.
+                  'background-color': {
+                    $type: 'color',
+                    $value: '{basis.color.action-2-inverse.bg-default}',
+                  },
+                  'border-color': {
+                    $type: 'color',
+                    $value: '{basis.color.transparent}',
+                  },
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.action-2-inverse.color-default}',
+                  },
+                  active: {
+                    'background-color': {
+                      $type: 'color',
+                      $value: '{basis.color.action-2-inverse.bg-active}',
+                    },
+                    'border-color': {
+                      $type: 'color',
+                      $value: '{basis.color.transparent}',
+                    },
+                    color: {
+                      $type: 'color',
+                      $value: '{basis.color.action-2-inverse.color-active}',
+                    },
+                  },
+                  disabled: {
+                    'background-color': {
+                      $type: 'color',
+                      $value: '{basis.color.disabled-inverse.bg-default}',
+                    },
+                    'border-color': {
+                      $type: 'color',
+                      $value: '{basis.color.transparent}',
+                    },
+                    color: {
+                      $type: 'color',
+                      $value: '{basis.color.disabled-inverse.color-subtle}',
+                    },
+                  },
+                  hover: {
+                    'background-color': {
+                      $type: 'color',
+                      $value: '{basis.color.action-2-inverse.bg-hover}',
+                    },
+                    'border-color': {
+                      $type: 'color',
+                      $value: '{basis.color.transparent}',
+                    },
+                    color: {
+                      $type: 'color',
+                      $value: '{basis.color.action-2-inverse.color-hover}',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ]);
     },
   );
 
@@ -1903,13 +2027,33 @@ export const generateTheme = (
           nl: {
             button: {
               subtle: {
+                'background-color': {
+                  $value: '{basis.color.transparent}',
+                },
+                color: {
+                  $value: '{basis.color.default.color-default}',
+                },
                 'border-color': {
                   $value: '{nl.button.subtle.color}',
                 },
                 'border-width': {
                   $value: '{basis.border-width.md}',
                 },
+                active: {
+                  'background-color': {
+                    $value: '{basis.color.default.bg-active}',
+                  },
+                  color: {
+                    $value: '{basis.color.default.color-active}',
+                  },
+                },
                 hover: {
+                  'background-color': {
+                    $value: '{basis.color.default.bg-hover}',
+                  },
+                  color: {
+                    $value: '{basis.color.default.color-hover}',
+                  },
                   'border-color': {
                     $value: '{nl.button.subtle.border-color}',
                   },
@@ -1917,6 +2061,30 @@ export const generateTheme = (
                 disabled: {
                   'border-color': {
                     $value: '{basis.color.disabled.border-subtle}',
+                  },
+                },
+                pressed: {
+                  'background-color': {
+                    $value: '{basis.color.default-inverse.bg-default}',
+                  },
+                  color: {
+                    $value: '{basis.color.default-inverse.color-default}',
+                  },
+                  active: {
+                    'background-color': {
+                      $value: '{basis.color.default-inverse.bg-active}',
+                    },
+                    color: {
+                      $value: '{basis.color.default-inverse.color-active}',
+                    },
+                  },
+                  hover: {
+                    'background-color': {
+                      $value: '{basis.color.default-inverse.bg-hover}',
+                    },
+                    color: {
+                      $value: '{basis.color.default-inverse.color-hover}',
+                    },
                   },
                 },
                 positive: {
@@ -2108,7 +2276,23 @@ export const generateTheme = (
       description: 'Sittard-Geleen design decision: page footer color / inverse design',
     },
     () => {
-      return mergeTokens([theme, {}]);
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            'page-footer': {
+              'background-color': {
+                $type: 'color',
+                $value: '{basis.color.accent-1-inverse.bg-default}',
+              },
+              color: {
+                $type: 'color',
+                $value: '{basis.color.accent-1-inverse.color-default}',
+              },
+            },
+          },
+        },
+      ]);
     },
   );
 
