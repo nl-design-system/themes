@@ -1658,7 +1658,7 @@ export const generateTheme = (
                   },
                   'border-color': {
                     $type: 'color',
-                    $value: '{basis.color.action-1-inverse.border-default}',
+                    $value: '{basis.color.transparent}',
                   },
                   color: {
                     $type: 'color',
@@ -1671,7 +1671,7 @@ export const generateTheme = (
                     },
                     'border-color': {
                       $type: 'color',
-                      $value: '{basis.color.action-1-inverse.border-active}',
+                      $value: '{basis.color.transparent}',
                     },
                     color: {
                       $type: 'color',
@@ -1685,7 +1685,7 @@ export const generateTheme = (
                     },
                     'border-color': {
                       $type: 'color',
-                      $value: '{basis.color.disabled-inverse.border-subtle}',
+                      $value: '{basis.color.transparent}',
                     },
                     color: {
                       $type: 'color',
@@ -1699,7 +1699,7 @@ export const generateTheme = (
                     },
                     'border-color': {
                       $type: 'color',
-                      $value: '{basis.color.action-1-inverse.border-hover}',
+                      $value: '{basis.color.transparent}',
                     },
                     color: {
                       $type: 'color',
@@ -1755,7 +1755,7 @@ export const generateTheme = (
                     },
                     'border-color': {
                       $type: 'color',
-                      $value: '{basis.color.negative-inverse.border-default}',
+                      $value: '{basis.color.transparent}',
                     },
                     color: {
                       $type: 'color',
@@ -1768,7 +1768,7 @@ export const generateTheme = (
                       },
                       'border-color': {
                         $type: 'color',
-                        $value: '{basis.color.negative-inverse.border-active}',
+                        $value: '{basis.color.transparent}',
                       },
                       color: {
                         $type: 'color',
@@ -1782,7 +1782,7 @@ export const generateTheme = (
                       },
                       'border-color': {
                         $type: 'color',
-                        $value: '{basis.color.negative-inverse.border-hover}',
+                        $value: '{basis.color.transparent}',
                       },
                       color: {
                         $type: 'color',
@@ -1839,7 +1839,7 @@ export const generateTheme = (
                     },
                     'border-color': {
                       $type: 'color',
-                      $value: '{basis.color.positive-inverse.border-default}',
+                      $value: '{basis.color.transparent}',
                     },
                     color: {
                       $type: 'color',
@@ -1852,7 +1852,7 @@ export const generateTheme = (
                       },
                       'border-color': {
                         $type: 'color',
-                        $value: '{basis.color.positive-inverse.border-active}',
+                        $value: '{basis.color.transparent}',
                       },
                       color: {
                         $type: 'color',
@@ -1866,7 +1866,7 @@ export const generateTheme = (
                       },
                       'border-color': {
                         $type: 'color',
-                        $value: '{basis.color.positive-inverse.border-hover}',
+                        $value: '{basis.color.transparent}',
                       },
                       color: {
                         $type: 'color',
