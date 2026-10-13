@@ -1334,7 +1334,7 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: proprietary font',
+      description: 'Sittard-Geleen design decision: font',
     },
     () => {
       return mergeTokens([
@@ -1344,7 +1344,11 @@ export const generateTheme = (
             text: {
               'font-family': {
                 default: {
-                  $value: '"Roobert", sans-serif',
+                  // The site's actual font is Roobert, but we're not licensed to
+                  // reference/ship it here, so we don't name it at all. "Inter" is a
+                  // free, widely-used neo-grotesque UI font that's visually close to
+                  // Roobert — see `@fontsource/inter`, loaded in `font.mjs`.
+                  $value: '"Inter", sans-serif',
                 },
               },
             },
