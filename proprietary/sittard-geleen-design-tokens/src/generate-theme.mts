@@ -1588,6 +1588,24 @@ export const generateTheme = (
     },
   );
 
+  // Shared between primary and secondary's pressed states below: a disabled button
+  // always looks the same regardless of brand color, so this is defined once instead
+  // of being repeated verbatim in both (flagged by SonarCloud as duplicated code).
+  const disabledInversePressedState = {
+    'background-color': {
+      $type: 'color',
+      $value: '{basis.color.disabled-inverse.bg-default}',
+    },
+    'border-color': {
+      $type: 'color',
+      $value: '{basis.color.transparent}',
+    },
+    color: {
+      $type: 'color',
+      $value: '{basis.color.disabled-inverse.color-subtle}',
+    },
+  };
+
   theme = safeTransform(
     {
       description: 'Sittard-Geleen design decision: primary button color - not inverse',
@@ -1684,20 +1702,7 @@ export const generateTheme = (
                       $value: '{basis.color.action-1-inverse.color-active}',
                     },
                   },
-                  disabled: {
-                    'background-color': {
-                      $type: 'color',
-                      $value: '{basis.color.disabled-inverse.bg-default}',
-                    },
-                    'border-color': {
-                      $type: 'color',
-                      $value: '{basis.color.transparent}',
-                    },
-                    color: {
-                      $type: 'color',
-                      $value: '{basis.color.disabled-inverse.color-subtle}',
-                    },
-                  },
+                  disabled: disabledInversePressedState,
                   hover: {
                     'background-color': {
                       $type: 'color',
@@ -1983,20 +1988,7 @@ export const generateTheme = (
                       $value: '{basis.color.action-2-inverse.color-active}',
                     },
                   },
-                  disabled: {
-                    'background-color': {
-                      $type: 'color',
-                      $value: '{basis.color.disabled-inverse.bg-default}',
-                    },
-                    'border-color': {
-                      $type: 'color',
-                      $value: '{basis.color.transparent}',
-                    },
-                    color: {
-                      $type: 'color',
-                      $value: '{basis.color.disabled-inverse.color-subtle}',
-                    },
-                  },
+                  disabled: disabledInversePressedState,
                   hover: {
                     'background-color': {
                       $type: 'color',
@@ -2121,44 +2113,26 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: data badge - border',
+      description: 'Sittard-Geleen design decision: data badge and number badge - border',
     },
     () => {
-      return mergeTokens([
-        theme,
-        {
-          nl: {
-            'data-badge': {
-              'border-color': {
-                $value: '{basis.color.default.border-subtle}',
-              },
-              'border-width': {
-                $value: '{basis.border-width.sm}',
-              },
-            },
-          },
+      // Identical border treatment for both components, so defined together once
+      // instead of two near-duplicate steps (flagged by SonarCloud as duplicated code).
+      const badgeBorder = {
+        'border-color': {
+          $value: '{basis.color.default.border-subtle}',
         },
-      ]);
-    },
-  );
+        'border-width': {
+          $value: '{basis.border-width.sm}',
+        },
+      };
 
-  theme = safeTransform(
-    {
-      description: 'Sittard-Geleen design decision: number badge - border',
-    },
-    () => {
       return mergeTokens([
         theme,
         {
           nl: {
-            'number-badge': {
-              'border-color': {
-                $value: '{basis.color.default.border-subtle}',
-              },
-              'border-width': {
-                $value: '{basis.border-width.sm}',
-              },
-            },
+            'data-badge': badgeBorder,
+            'number-badge': badgeBorder,
           },
         },
       ]);
