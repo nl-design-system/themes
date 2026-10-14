@@ -80,9 +80,18 @@ export const generateTheme = (
         denhaag: {
           'side-navigation': {
             link: {
-              'padding-block-end': { $value: '{basis.space.block.sm}' },
-              'padding-block-start': { $value: '{basis.space.block.sm}' },
-              'padding-inline-start': { $value: '{basis.space.inline.xl}' },
+              'padding-block-end': {
+                $type: 'dimension',
+                $value: '{basis.space.block.sm}',
+              },
+              'padding-block-start': {
+                $type: 'dimension',
+                $value: '{basis.space.block.sm}',
+              },
+              'padding-inline-start': {
+                $type: 'dimension',
+                $value: '{basis.space.inline.xl}',
+              },
             },
           },
         },
@@ -188,20 +197,25 @@ export const generateTheme = (
             // `utrecht.focus` existed first, but since it now is available in Basis Tokens that will be the source of truth
             focus: {
               'outline-width': {
+                $type: 'dimension',
                 $value: '{basis.focus.outline-width}',
               },
               'outline-color': {
+                $type: 'color',
                 $value: '{basis.focus.outline-color}',
               },
               'outline-style': {
+                $type: 'other',
                 $value: '{basis.focus.outline-style}',
               },
               'outline-offset': {
+                $type: 'dimension',
                 $value: '{basis.focus.outline-offset}',
               },
             },
             'pointer-target': {
               'min-size': {
+                $type: 'dimension',
                 $value: '{basis.pointer-target.min-block-size}',
               },
             },
@@ -231,6 +245,7 @@ export const generateTheme = (
             listbox: {
               option: {
                 'min-block-size': {
+                  $type: 'dimension',
                   $value: '{basis.pointer-target.min-block-size}',
                 },
               },
@@ -1061,6 +1076,7 @@ export const generateTheme = (
               },
               placeholder: {
                 color: {
+                  $type: 'color',
                   $value: '{nl.link.disabled.color}',
                 },
                 'font-weight': {},
@@ -1179,9 +1195,11 @@ export const generateTheme = (
                 $value: '{nl.paragraph.line-height}',
               },
               'margin-block-start': {
+                $type: 'dimension',
                 $value: '{nl.paragraph.margin-block-start}',
               },
               'margin-block-end': {
+                $type: 'dimension',
                 $value: '{nl.paragraph.margin-block-end}',
               },
               lead: {
@@ -1295,6 +1313,7 @@ export const generateTheme = (
           nl: {
             button: {
               'font-weight': {
+                $type: 'fontWeights',
                 $value: '{basis.text.font-weight.default}',
               },
             },
@@ -2033,9 +2052,11 @@ export const generateTheme = (
             checkbox: {
               hover: {
                 'background-color': {
+                  $type: 'color',
                   $value: '{basis.color.default.bg-hover}',
                 },
                 color: {
+                  $type: 'color',
                   $value: '{basis.color.default.color-hover}',
                 },
               },
@@ -2043,9 +2064,11 @@ export const generateTheme = (
             'radio-button': {
               hover: {
                 'background-color': {
+                  $type: 'color',
                   $value: '{basis.color.default.bg-hover}',
                 },
                 color: {
+                  $type: 'color',
                   $value: '{basis.color.default.color-hover}',
                 },
               },
@@ -2149,9 +2172,11 @@ export const generateTheme = (
                   $value: pxToRem(18),
                   // Regular text is fixed at 18px
                   min: {
+                    $type: 'fontSizes',
                     $value: pxToRem(18),
                   },
                   max: {
+                    $type: 'fontSizes',
                     $value: pxToRem(18),
                   },
                 },
@@ -2159,9 +2184,11 @@ export const generateTheme = (
                   $value: pxToRem(20),
                   // Heading 5 font-size on sittard-geleen.nl is fluid between 16px and 20px
                   min: {
+                    $type: 'fontSizes',
                     $value: pxToRem(18),
                   },
                   max: {
+                    $type: 'fontSizes',
                     $value: pxToRem(20),
                   },
                 },
@@ -2169,9 +2196,11 @@ export const generateTheme = (
                   $value: pxToRem(20),
                   // Heading 4 font-size on sittard-geleen.nl is fluid between 18px and 20px
                   min: {
+                    $type: 'fontSizes',
                     $value: pxToRem(18),
                   },
                   max: {
+                    $type: 'fontSizes',
                     $value: pxToRem(20),
                   },
                 },
@@ -2179,9 +2208,11 @@ export const generateTheme = (
                   $value: pxToRem(24),
                   // Heading 3 font-size on sittard-geleen.nl is fluid between 20px and 24px
                   min: {
+                    $type: 'fontSizes',
                     $value: pxToRem(20),
                   },
                   max: {
+                    $type: 'fontSizes',
                     $value: pxToRem(24),
                   },
                 },
@@ -2189,9 +2220,11 @@ export const generateTheme = (
                   $value: pxToRem(32),
                   // Heading 2 font-size on sittard-geleen.nl is fluid between 24px and 32px
                   min: {
+                    $type: 'fontSizes',
                     $value: pxToRem(24),
                   },
                   max: {
+                    $type: 'fontSizes',
                     $value: pxToRem(32),
                   },
                 },
@@ -2199,9 +2232,11 @@ export const generateTheme = (
                   $value: pxToRem(40),
                   // Heading 1 font-size on sittard-geleen.nl is fluid between 28px and 40px
                   min: {
+                    $type: 'fontSizes',
                     $value: pxToRem(28),
                   },
                   max: {
+                    $type: 'fontSizes',
                     $value: pxToRem(40),
                   },
                 },
@@ -2340,6 +2375,7 @@ export const generateTheme = (
             'form-field-description': {
               invalid: {
                 color: {
+                  $type: 'color',
                   $value: '{utrecht.form-field-error-message.color}',
                 },
               },
@@ -2366,6 +2402,7 @@ export const generateTheme = (
                 color: {},
                 'font-size': {},
                 'font-weight': {
+                  $type: 'fontWeights',
                   $value: '{basis.text.font-weight.bold}',
                 },
                 'line-height': {},
@@ -2402,303 +2439,20 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Add Open Forms design tokens',
+      description: 'Add missing tokens for Utrecht Link',
     },
     () => {
       return mergeTokens([
         theme,
         {
-          of: {
-            color: {
-              'read-only-bg': {
-                $value: '{basis.color.disabled.bg-default}',
-              },
-              'focus-border': {
-                $value: '{basis.focus.outline-color}',
-              },
-              border: {
-                $value: '{basis.color.default.border-default}',
-              },
-              'fg-muted': {
-                $value: '{basis.color.default.border-subtle}',
-              },
-              fg: {
-                $value: '{basis.color.default.color-default}',
-              },
-              bg: {
-                $value: '{basis.color.default.bg-document}',
-              },
-              danger: {
-                $value: '{basis.color.negative.color-default}',
-              },
-              warning: {
-                $value: '{basis.color.warning.color-default}',
-              },
-              success: {
-                $value: 'green',
-              },
-              info: {
-                $value: '{basis.color.info.color-default}',
-              },
-              secondary: {
-                $value: '{basis.color.action-2.bg-default}',
-              },
-              'primary-light': {
-                $value: '{basis.color.action-1.bg-default}',
-              },
-              primary: {
-                $value: '{basis.color.action-1.color-default}',
-              },
-            },
-            text: {
-              'font-size': {
-                $value: '{basis.text.font-size.md}',
-              },
-              small: {
-                'font-size': {
-                  $value: '{basis.text.font-size.sm}',
-                },
-              },
-              big: {
-                'font-size': {
-                  $value: '{basis.text.font-size.lg}',
-                },
-              },
-              margin: {
-                $value: '{basis.space.block.md}',
-              },
-            },
-            alert: {
-              'error-bg': {
-                $value: {
-                  $value: '{basis.color.negative.bg-default}',
-                },
-              },
-              'warning-bg': {
-                $value: {
-                  $value: '{basis.color.warning.bg-default}',
-                },
-              },
-              'info-bg': {
-                $value: {
-                  $value: '{basis.color.info.bg-default}',
-                },
-              },
-            },
-            field: {
-              'border-color': {
-                $value: '{basis.color.default.border-default}',
-              },
-            },
-            typography: {
-              'sans-serif': {
-                'font-family': {
-                  $value: '{basis.text.font-family.default}',
-                },
-              },
-            },
-            layout: {
-              bg: {
-                $value: '{basis.color.default.bg-default}',
-              },
-            },
-            label: {
-              'font-weight': {
-                $value: '{utrecht.form-label.font-weight}',
-              },
-            },
-            'input-group': {
-              gap: {
-                $value: '{basis.space.inline.lg}',
-              },
-            },
-            'file-upload': {
-              'drop-area': {
-                padding: {
-                  $value: '{basis.space.block.xl}',
-                },
-              },
-            },
-            summary: {
-              'row-spacing': {
-                $value: '{basis.space.block.md}',
-              },
-            },
-            'language-selection': {
-              gap: {
-                $value: '{basis.space.inline.sm}',
-              },
-            },
-            button: {
-              bg: {
-                $value: '{nl.button.default.background-color}',
-              },
-              border: {
-                $value: '{nl.button.default.border-color}',
-              },
-              fg: {
-                $value: '{nl.button.default.color}',
-              },
-              active: {
-                bg: {
-                  $value: '{nl.button.default.active.background-color}',
-                },
-                fg: {
-                  $value: '{nl.button.default.active.color}',
-                },
-                'color-border': {
-                  $value: '{nl.button.default.active.border-color}',
-                },
-              },
-              hover: {
-                bg: {
-                  $value: '{nl.button.default.hover.background-color}',
-                },
-                fg: {
-                  $value: '{nl.button.default.hover.color}',
-                },
-              },
-              primary: {
-                bg: {
-                  $value: '{nl.button.primary.background-color}',
-                },
-                fg: {
-                  $value: '{nl.button.primary.color}',
-                },
-                'color-border': {
-                  $value: '{nl.button.primary.border-color}',
-                },
-                hover: {
-                  bg: {
-                    $value: '{nl.button.primary.hover.background-color}',
-                  },
-                  'color-border': {
-                    $value: '{nl.button.primary.hover.border-color}',
-                  },
-                },
-                active: {
-                  bg: {
-                    $value: '{nl.button.primary.active.background-color}',
-                  },
-                  fg: {
-                    $value: '{nl.button.primary.active.color}',
-                  },
-                  'color-border': {
-                    $value: '{nl.button.primary.active.border-color}',
-                  },
-                },
-              },
-              danger: {
-                bg: {
-                  $value: '{nl.button.primary.negative.background-color}',
-                },
-                fg: {
-                  $value: '{nl.button.primary.negative.color}',
-                },
-                'color-border': {
-                  $value: '{nl.button.primary.negative.border-color}',
-                },
-                hover: {
-                  bg: {
-                    $value: '{nl.button.primary.negative.hover.background-color}',
-                  },
-                  'color-border': {
-                    $value: '{nl.button.primary.negative.hover.border-color}',
-                  },
-                },
-                active: {
-                  bg: {
-                    $value: '{nl.button.primary.negative.active.background-color}',
-                  },
-                  fg: {
-                    $value: '{nl.button.primary.negative.active.color}',
-                  },
-                  'color-border': {
-                    $value: '{nl.button.primary.negative.active.border-color}',
-                  },
-                },
-              },
-            },
-            select: {
-              highlighted: {
-                bg: {
-                  $value: '{basis.color.selected.bg-hover}',
-                },
-              },
-              menu: {
-                'background-color': {
-                  $value: '{utrecht.listbox.background-color}',
-                },
-                'border-radius': {
-                  $value: '{utrecht.listbox.border-radius}',
-                },
-                border: {
-                  $value: 'solid {utrecht.listbox.border-width} {utrecht.listbox.border-color}',
-                },
-                option: {
-                  'background-color': {
-                    $value: '{utrecht.listbox.background-color}',
-                  },
-                  'font-weight': {
-                    $value: '{basis.text.font-weight.default}',
-                  },
-                  focus: {
-                    'background-color': {
-                      $value: '{utrecht.listbox.option.selected.background-color}',
-                    },
-                  },
-                  'padding-block-start': {
-                    $value: '{utrecht.listbox.option.padding-block-start}',
-                  },
-                  'padding-block-end': {
-                    $value: '{utrecht.listbox.option.padding-block-end}',
-                  },
-                  'padding-inline-start': {
-                    $value: '{utrecht.listbox.option.padding-inline-start}',
-                  },
-                  'padding-inline-end': {
-                    $value: '{utrecht.listbox.option.padding-inline-end}',
-                  },
-                },
-              },
-            },
-            checkbox: {
-              bg: {
-                $value: '{basis.color.transparent}',
-              },
-            },
-            'page-footer': {
-              bg: {
-                $value: '{utrecht.page-footer.background-color}',
-              },
-              fg: {
-                $value: '{utrecht.page-footer.color}',
-              },
-            },
-          },
-          'of-utrecht': {
-            'form-field-description': {
-              errors: {
-                'font-weight': {
-                  $value: '{utrecht.form-field-error-message.font-weight}',
-                },
-                'line-height': {
-                  $value: '{utrecht.form-field-error-message.line-height}',
-                },
-              },
-            },
-            'form-field': {
-              radio: {
-                'margin-block-start': {
-                  $value: '{basis.space.block.md}',
-                },
-              },
-            },
+          utrecht: {
             link: {
-              muted: {
+              placeholder: {
                 color: {
-                  $value: '{utrecht.link.placeholder.color}',
+                  $type: 'color',
+                  $value: '{basis.color.disabled.color-default}',
                 },
+                'font-weight': {},
               },
             },
           },
@@ -2709,17 +2463,367 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Add missing tokens for Utrecht Link',
+      description: 'Add Open Forms design tokens',
     },
     () => {
       return mergeTokens([
         theme,
         {
-          utrecht: {
+          of: {
+            color: {
+              'read-only-bg': {
+                $type: 'color',
+                $value: '{basis.color.disabled.bg-default}',
+              },
+              'focus-border': {
+                $type: 'color',
+                $value: '{basis.focus.outline-color}',
+              },
+              border: {
+                $type: 'color',
+                $value: '{basis.color.default.border-default}',
+              },
+              'fg-muted': {
+                $type: 'color',
+                $value: '{basis.color.default.border-subtle}',
+              },
+              fg: {
+                $type: 'color',
+                $value: '{basis.color.default.color-default}',
+              },
+              bg: {
+                $type: 'color',
+                $value: '{basis.color.default.bg-document}',
+              },
+              danger: {
+                $type: 'color',
+                $value: '{basis.color.negative.color-default}',
+              },
+              warning: {
+                $type: 'color',
+                $value: '{basis.color.warning.color-default}',
+              },
+              success: {
+                $type: 'color',
+                $value: 'green',
+              },
+              info: {
+                $type: 'color',
+                $value: '{basis.color.info.color-default}',
+              },
+              secondary: {
+                $type: 'color',
+                $value: '{basis.color.action-2.bg-default}',
+              },
+              'primary-light': {
+                $type: 'color',
+                $value: '{basis.color.action-1.bg-default}',
+              },
+              primary: {
+                $type: 'color',
+                $value: '{basis.color.action-1.color-default}',
+              },
+            },
+            text: {
+              'font-size': {
+                $type: 'fontSizes',
+                $value: '{basis.text.font-size.md}',
+              },
+              small: {
+                'font-size': {
+                  $type: 'fontSizes',
+                  $value: '{basis.text.font-size.sm}',
+                },
+              },
+              big: {
+                'font-size': {
+                  $type: 'fontSizes',
+                  $value: '{basis.text.font-size.lg}',
+                },
+              },
+              margin: {
+                $type: 'dimension',
+                $value: '{basis.space.block.md}',
+              },
+            },
+            alert: {
+              'error-bg': {
+                $type: 'color',
+                $value: '{basis.color.negative.bg-default}',
+              },
+              'warning-bg': {
+                $type: 'color',
+                $value: '{basis.color.warning.bg-default}',
+              },
+              'info-bg': {
+                $type: 'color',
+                $value: '{basis.color.info.bg-default}',
+              },
+            },
+            field: {
+              'border-color': {
+                $type: 'color',
+                $value: '{basis.color.default.border-default}',
+              },
+            },
+            typography: {
+              'sans-serif': {
+                'font-family': {
+                  $type: 'fontFamilies',
+                  $value: '{basis.text.font-family.default}',
+                },
+              },
+            },
+            layout: {
+              bg: {
+                $type: 'color',
+                $value: '{basis.color.default.bg-default}',
+              },
+            },
+            label: {
+              'font-weight': {
+                $type: 'fontWeights',
+                $value: '{utrecht.form-label.font-weight}',
+              },
+            },
+            'input-group': {
+              gap: {
+                $type: 'dimension',
+                $value: '{basis.space.inline.lg}',
+              },
+            },
+            'file-upload': {
+              'drop-area': {
+                padding: {
+                  $type: 'dimension',
+                  $value: '{basis.space.block.xl}',
+                },
+              },
+            },
+            summary: {
+              'row-spacing': {
+                $type: 'dimension',
+                $value: '{basis.space.block.md}',
+              },
+            },
+            'language-selection': {
+              gap: {
+                $type: 'dimension',
+                $value: '{basis.space.inline.sm}',
+              },
+            },
+            button: {
+              bg: {
+                $type: 'color',
+                $value: '{nl.button.default.background-color}',
+              },
+              border: {
+                $type: 'color',
+                $value: '{nl.button.default.border-color}',
+              },
+              fg: {
+                $type: 'color',
+                $value: '{nl.button.default.color}',
+              },
+              active: {
+                bg: {
+                  $type: 'color',
+                  $value: '{nl.button.default.active.background-color}',
+                },
+                fg: {
+                  $type: 'color',
+                  $value: '{nl.button.default.active.color}',
+                },
+                'color-border': {
+                  $type: 'color',
+                  $value: '{nl.button.default.active.border-color}',
+                },
+              },
+              hover: {
+                bg: {
+                  $type: 'color',
+                  $value: '{nl.button.default.hover.background-color}',
+                },
+                fg: {
+                  $type: 'color',
+                  $value: '{nl.button.default.hover.color}',
+                },
+              },
+              primary: {
+                bg: {
+                  $type: 'color',
+                  $value: '{nl.button.primary.background-color}',
+                },
+                fg: {
+                  $type: 'color',
+                  $value: '{nl.button.primary.color}',
+                },
+                'color-border': {
+                  $type: 'color',
+                  $value: '{nl.button.primary.border-color}',
+                },
+                hover: {
+                  bg: {
+                    $type: 'color',
+                    $value: '{nl.button.primary.hover.background-color}',
+                  },
+                  'color-border': {
+                    $type: 'color',
+                    $value: '{nl.button.primary.hover.border-color}',
+                  },
+                },
+                active: {
+                  bg: {
+                    $type: 'color',
+                    $value: '{nl.button.primary.active.background-color}',
+                  },
+                  fg: {
+                    $type: 'color',
+                    $value: '{nl.button.primary.active.color}',
+                  },
+                  'color-border': {
+                    $type: 'color',
+                    $value: '{nl.button.primary.active.border-color}',
+                  },
+                },
+              },
+              danger: {
+                bg: {
+                  $type: 'color',
+                  $value: '{nl.button.primary.negative.background-color}',
+                },
+                fg: {
+                  $type: 'color',
+                  $value: '{nl.button.primary.negative.color}',
+                },
+                'color-border': {
+                  $type: 'color',
+                  $value: '{nl.button.primary.negative.border-color}',
+                },
+                hover: {
+                  bg: {
+                    $type: 'color',
+                    $value: '{nl.button.primary.negative.hover.background-color}',
+                  },
+                  'color-border': {
+                    $type: 'color',
+                    $value: '{nl.button.primary.negative.hover.border-color}',
+                  },
+                },
+                active: {
+                  bg: {
+                    $type: 'color',
+                    $value: '{nl.button.primary.negative.active.background-color}',
+                  },
+                  fg: {
+                    $type: 'color',
+                    $value: '{nl.button.primary.negative.active.color}',
+                  },
+                  'color-border': {
+                    $type: 'color',
+                    $value: '{nl.button.primary.negative.active.border-color}',
+                  },
+                },
+              },
+            },
+            select: {
+              highlighted: {
+                bg: {
+                  $type: 'color',
+                  $value: '{basis.color.selected.bg-hover}',
+                },
+              },
+              menu: {
+                'background-color': {
+                  $type: 'color',
+                  $value: '{utrecht.listbox.background-color}',
+                },
+                'border-radius': {
+                  $type: 'dimension',
+                  $value: '{utrecht.listbox.border-radius}',
+                },
+                border: {
+                  $type: 'color',
+                  $value: 'solid {utrecht.listbox.border-width} {utrecht.listbox.border-color}',
+                },
+                option: {
+                  'background-color': {
+                    $type: 'color',
+                    $value: '{utrecht.listbox.background-color}',
+                  },
+                  'font-weight': {
+                    $type: 'fontWeights',
+                    $value: '{basis.text.font-weight.default}',
+                  },
+                  focus: {
+                    'background-color': {
+                      $type: 'color',
+                      $value: '{utrecht.listbox.option.selected.background-color}',
+                    },
+                  },
+                  'padding-block-start': {
+                    $type: 'dimension',
+                    $value: '{utrecht.listbox.option.padding-block-start}',
+                  },
+                  'padding-block-end': {
+                    $type: 'dimension',
+                    $value: '{utrecht.listbox.option.padding-block-end}',
+                  },
+                  'padding-inline-start': {
+                    $type: 'dimension',
+                    $value: '{utrecht.listbox.option.padding-inline-start}',
+                  },
+                  'padding-inline-end': {
+                    $type: 'dimension',
+                    $value: '{utrecht.listbox.option.padding-inline-end}',
+                  },
+                },
+              },
+            },
+            checkbox: {
+              bg: {
+                $type: 'color',
+                $value: '{basis.color.transparent}',
+              },
+            },
+            'page-footer': {
+              bg: {
+                $type: 'color',
+                $value: '{utrecht.page-footer.background-color}',
+              },
+              fg: {
+                $type: 'color',
+                $value: '{utrecht.page-footer.color}',
+              },
+            },
+          },
+          'of-utrecht': {
+            'form-field-description': {
+              errors: {
+                'font-weight': {
+                  $type: 'fontWeights',
+                  $value: '{utrecht.form-field-error-message.font-weight}',
+                },
+                'line-height': {
+                  $type: 'lineHeights',
+                  $value: '{utrecht.form-field-error-message.line-height}',
+                },
+              },
+            },
+            'form-field': {
+              radio: {
+                'margin-block-start': {
+                  $type: 'dimension',
+                  $value: '{basis.space.block.md}',
+                },
+              },
+            },
             link: {
-              placeholder: {
-                color: { $value: '{basis.color.disabled.color-default}' },
-                'font-weight': {},
+              muted: {
+                color: {
+                  $type: 'color',
+                  $value: '{utrecht.link.placeholder.color}',
+                },
               },
             },
           },
@@ -2750,6 +2854,7 @@ export const generateTheme = (
           of: {
             card: {
               'background-color': {
+                $type: 'color',
                 $value: '{basis.color.default.bg-document}',
               },
             },
