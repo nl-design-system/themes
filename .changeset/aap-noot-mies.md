@@ -1,0 +1,7 @@
+---
+"@nl-design-system-unstable/groningen-design-tokens": major
+---
+
+Conform changelog NL Design System het candidate component 'Form Field Error Message' toegevoegd.
+De huidige components/form-field-error-message hernoemd naar components/form-field-error-message/utrecht.
+De nieuwe tokenset components/form-field-error-message/nl toegevoegd, met bijbehorende design tokens.
