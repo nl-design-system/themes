@@ -2251,6 +2251,84 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
+      description: 'Pointer cursors for Utrecht components',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            action: {
+              activate: {
+                cursor: {
+                  $type: 'other',
+                  $value: 'pointer',
+                },
+              },
+              busy: {
+                cursor: {
+                  $type: 'other',
+                  $value: 'wait',
+                },
+              },
+              disabled: {
+                cursor: {
+                  $type: 'other',
+                  $value: 'not-allowed',
+                },
+              },
+              inert: {
+                cursor: {
+                  $type: 'other',
+                  $value: 'default',
+                },
+              },
+              navigate: {
+                cursor: {
+                  $type: 'other',
+                  $value: 'pointer',
+                },
+              },
+              submit: {
+                cursor: {
+                  $type: 'other',
+                  $value: 'pointer',
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen design decision: page header color / inverse design',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            'page-header': {
+              'background-color': {
+                $type: 'color',
+                $value: '{basis.color.accent-1-inverse.bg-default}',
+              },
+              color: {
+                $type: 'color',
+                $value: '{basis.color.accent-1-inverse.color-default}',
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
       description: 'Sittard-Geleen design decision: page footer color / inverse design',
     },
     () => {
