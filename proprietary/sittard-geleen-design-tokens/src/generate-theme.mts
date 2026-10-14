@@ -1345,10 +1345,10 @@ export const generateTheme = (
               'font-family': {
                 default: {
                   // The site's actual font is Roobert, but we're not licensed to
-                  // reference/ship it here, so we don't name it at all. "Inter" is a
-                  // free, widely-used neo-grotesque UI font that's visually close to
+                  // reference/ship it here, so we use "Inter" is a fallback.
+                  // It's a free, widely-used neo-grotesque UI font that's visually close to
                   // Roobert — see `@fontsource/inter`, loaded in `font.mjs`.
-                  $value: '"Inter", sans-serif',
+                  $value: '"Roobert", "Inter", sans-serif',
                 },
               },
             },
