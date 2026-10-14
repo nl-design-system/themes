@@ -4,7 +4,7 @@ import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
 import { createConfig } from '../../style-dictionary-config.mjs';
 import { generateTheme } from './src/generate-theme.mts';
-import { hasParentKeys } from './src/util.mts';
+import { hasParentKeys } from '@nl-design-system-community/sittard-geleen-design-tokens/src/util.mts';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
