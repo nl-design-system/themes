@@ -3601,15 +3601,32 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Utrecht Customizable Text Input',
     render: () => (
       <CustomizableTextInput
-        end={
+        inputId="customizable-text-input-utrecht"
+        labelEnd={
           <span
             style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs, var(--basis-space-inline-md))' }}
           >
-            <UtrechtIconSearch />
+            <span
+              style={{
+                position: 'absolute',
+                width: '1px',
+                height: '1px',
+                overflow: 'hidden',
+                clipPath: 'inset(50%)',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Zoeken
+            </span>
+            <UtrechtIconSearch aria-hidden="true" />
           </span>
         }
       >
-        <Textbox aria-label="Example textbox" defaultValue="The quick brown fox jumps over the lazy dog" />
+        <Textbox
+          id="customizable-text-input-utrecht"
+          type="search"
+          defaultValue="The quick brown fox jumps over the lazy dog"
+        />
       </CustomizableTextInput>
     ),
     detectTokens: {

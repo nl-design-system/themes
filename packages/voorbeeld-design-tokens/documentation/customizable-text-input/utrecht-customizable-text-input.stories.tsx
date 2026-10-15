@@ -9,16 +9,30 @@ const meta = {
   component: CustomizableTextInput,
   parameters: { actions: { disable: true } },
   args: {
-    end: (
+    inputId: 'textbox-default',
+    labelEnd: (
       <span style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs, var(--basis-space-inline-md))' }}>
-        <UtrechtIconSearch />
+        <span
+          style={{
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+            overflow: 'hidden',
+            clipPath: 'inset(50%)',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Zoeken
+        </span>
+        <UtrechtIconSearch aria-hidden="true" />
       </span>
     ),
-    children: <Textbox id="textbox-default" type="text" defaultValue="The quick brown fox jumps over the lazy dog" />,
+    children: <Textbox id="textbox-default" type="search" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
   argTypes: {
     children: { control: false },
-    end: { control: false },
+    inputId: { control: false },
+    labelEnd: { control: false },
   },
 } satisfies Meta<typeof CustomizableTextInput>;
 
