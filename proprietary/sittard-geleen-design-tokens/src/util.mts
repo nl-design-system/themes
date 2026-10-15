@@ -4,7 +4,9 @@ import {
   setExtension,
   mergeTokens,
   StrictThemeSchema,
+  walkObject,
 } from '@nl-design-system-community/design-tokens-schema';
+
 import Color from 'colorjs.io';
 
 export const PARENT_KEY_EXTENSION = 'nl.nldesignsystem.parent-key';
@@ -153,6 +155,37 @@ export const setBasisColor = (
   ]);
 };
 
+export const isValueObject = (obj: unknown): obj is Record<string, unknown> => {
+  return obj !== null && typeof obj === 'object' && !Array.isArray(obj);
+};
+
+export interface TokenValueLike {
+  $value: any;
+}
+
+export const isTokenValueLike = (obj: unknown): obj is TokenValueLike => {
+  if (!isValueObject(obj)) {
+    return false;
+  }
+
+  // Must have a `$value`
+  return Object.hasOwn(obj, '$value');
+};
+
+export const requireTokenType = (tokensTree: Object) => {
+  const errors: string[] = [];
+
+  walkObject(tokensTree, isTokenValueLike, (token, path) => {
+    if (!token['$type']) {
+      errors.push(`${path.join('.')} is missing $type`);
+    }
+  });
+
+  if (errors.length > 0) {
+    throw new Error(errors.join('\n'));
+  }
+};
+
 export const createTransform =
   ({ log = false, strict = true }: { log?: boolean; strict?: boolean }) =>
   (step: { description: string }, callback: () => Theme) => {
@@ -163,6 +196,10 @@ export const createTransform =
     const transformedTheme = callback();
 
     const result = StrictThemeSchema.safeParse(transformedTheme) satisfies Theme;
+
+    if (strict) {
+      requireTokenType(transformedTheme);
+    }
 
     if (strict && !result.success) {
       console.error(result.error);

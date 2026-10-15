@@ -1,0 +1,56 @@
+{
+  "name": "@nl-design-system-community/vidar-design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Community for NL Design System",
+  "description": "NL Design System design tokens voor Vidar thema",
+  "website": "https://www.vidar.nl/",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/themes.git",
+    "directory": "proprietary/vidar-design-tokens"
+  },
+  "scripts": {
+    "clean": "rimraf -rf dist/ src/generated/",
+    "lint": "design-tokens-lint --exclude-parent-keys src/theme.tokens.json",
+    "watch": "npm-run-all watch:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'pnpm run build' 'figma/**/*.tokens.json'",
+    "build": "npm-run-all clean build:style-dictionary build:scss",
+    "build:scss": "sass --no-source-map src/:dist/",
+    "build:style-dictionary": "node ./style-dictionary.mjs",
+    "build:theme": "node ./src/build-theme.mts",
+    "output-theme": "node ./src/output-theme.mts"
+  },
+  "devDependencies": {
+    "@amsterdam/design-system-react": "4.4.0",
+    "@fontsource/inter": "5.3.0",
+    "@gemeente-denhaag/card": "4.1.0",
+    "@nl-design-system-community/color-scale-generator": "1.0.2",
+    "@nl-design-system-community/design-tokens-definition": "workspace:*",
+    "@nl-design-system-community/design-tokens-lint": "1.0.0",
+    "@nl-design-system-community/design-tokens-schema": "2.3.0",
+    "@nl-design-system-community/sittard-geleen-design-tokens": "workspace:*",
+    "@nl-design-system-unstable/design-tokens-table-react": "workspace:*",
+    "@nl-design-system-unstable/start-design-tokens": "workspace:*",
+    "@nl-design-system-unstable/theme-toolkit": "workspace:*",
+    "@nl-design-system-unstable/tokens-lib": "workspace:*",
+    "@storybook/addon-docs": "9.1.17",
+    "@storybook/react-vite": "9.1.17",
+    "@tokens-studio/sd-transforms": "1.2.3",
+    "@types/react": "19.3.0",
+    "@utrecht/component-library-react": "8.0.3",
+    "@utrecht/components": "7.4.0",
+    "chokidar-cli": "3.0.0",
+    "colorjs.io": "0.5.2",
+    "html-react-parser": "5.1.12",
+    "npm-run-all": "4.1.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "rimraf": "6.1.3",
+    "style-dictionary": "4.0.1"
+  }
+}
