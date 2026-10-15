@@ -545,6 +545,9 @@ importers:
       '@utrecht/components':
         specifier: 7.4.0
         version: 7.4.0
+      '@utrecht/customizable-text-input-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@utrecht/design-tokens':
         specifier: 2.4.0
         version: 2.4.0
@@ -881,6 +884,9 @@ importers:
       '@utrecht/custom-checkbox-css':
         specifier: 1.3.1
         version: 1.3.1
+      '@utrecht/customizable-text-input-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.25.0)(react-dom@19.3.0)
       '@utrecht/data-list-css':
         specifier: 1.4.0
         version: 1.4.0
@@ -1308,6 +1314,9 @@ importers:
       '@utrecht/components':
         specifier: 7.4.0
         version: 7.4.0
+      '@utrecht/customizable-text-input-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@utrecht/note-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.29.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -5055,6 +5064,16 @@ packages:
   '@utrecht/custom-checkbox-css@2.0.1':
     resolution: {integrity: sha512-Gt7D6cnCfotYK0P/VeTcGksIhTrCYo3PEx1LxPnj9X99uMNg57O13ZRRaR/7wqPHsdiUKD7B82pQ1FdjAuY7lA==}
 
+  '@utrecht/customizable-text-input-css@1.0.1':
+    resolution: {integrity: sha512-6r+KDBPYq6NyNeH6Ftfqf0z68MvxOy371PDsOpWKW59YfoOpcS4TQBvAv5MDjOh4+HIHB/peHNGn5SQ6I1qu2g==}
+
+  '@utrecht/customizable-text-input-react@1.0.3':
+    resolution: {integrity: sha512-lyOaQSX8w61HS5zvP3Bg9tUjAxjePkt79kwh0f5Zxp9XoZzZw1nHAYys8szEVLpvIeJ3qKizaLau+n6BevQY0Q==}
+    peerDependencies:
+      '@babel/runtime': ^7.23.6
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
   '@utrecht/data-badge-css@2.0.1':
     resolution: {integrity: sha512-UMisFH+47SvLFKicA+Em9el8ksyfoO2UtNZHODSL6qf+Bb33QQhGHnnBvcuKg1LTtiK1YdjHxVlnk05wCuFSqQ==}
 
@@ -5683,6 +5702,9 @@ packages:
   '@utrecht/textbox-css@3.1.0':
     resolution: {integrity: sha512-KT2r6v1yTcdQPFZhswo/7+dMPL7x8aulBLeYO9SmrlVkpY47owJcB0KrkmMbF51/VvTLh4kW0qbaQ+vKnjwUsg==}
 
+  '@utrecht/textbox-css@4.1.0':
+    resolution: {integrity: sha512-HCudOMXw+qhmB+Qw8bXeHeSBeuUL9oI1cVOJwhGU4FxPi83ZXIqLnEADdMb8dFUeVg1dOrLCy+z8qfPjfhMRMg==}
+
   '@utrecht/textbox-react@1.0.12':
     resolution: {integrity: sha512-ulGmFq6Guq4LSdjX9HtZrMDfoRjHd9Y6PdAl8vk/nne0m9p1XMe9nc+FRaa05gcaDHNxjpVidO7MvOjelIGZKg==}
     peerDependencies:
@@ -5703,6 +5725,13 @@ packages:
       '@babel/runtime': ^7.23.6
       react: '18'
       react-dom: '18'
+
+  '@utrecht/textbox-react@1.1.0':
+    resolution: {integrity: sha512-GIx5jivSUKmbVVEIkBuro+mLyd9oMrKw5V9jZGqSqVwkfwZdni6PNatVP4CPqyesT5tKKUTQcoDKQ/oZA8X3ng==}
+    peerDependencies:
+      '@babel/runtime': ^7.23.6
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   '@utrecht/top-task-link-css@1.4.0':
     resolution: {integrity: sha512-JLE9TUqDQnwN+yw550xDDhuFx8F4AtslmeLP3O9r0eQbRYNeUzoLBvHNXwFi4tlt5ZaNnUV5qMrpD/kHxiZgqw==}
@@ -13353,6 +13382,27 @@ snapshots:
 
   '@utrecht/custom-checkbox-css@2.0.1': {}
 
+  '@utrecht/customizable-text-input-css@1.0.1': {}
+
+  '@utrecht/customizable-text-input-react@1.0.3(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/customizable-text-input-css': 1.0.1
+      '@utrecht/textbox-css': 4.1.0
+      '@utrecht/textbox-react': 1.1.0(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/customizable-text-input-react@1.0.3(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      '@utrecht/customizable-text-input-css': 1.0.1
+      '@utrecht/textbox-css': 4.1.0
+      '@utrecht/textbox-react': 1.1.0(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
   '@utrecht/data-badge-css@2.0.1': {}
 
   '@utrecht/data-badge-react@1.0.7(@babel/runtime@7.25.0)(react-dom@19.3.0)':
@@ -14226,6 +14276,8 @@ snapshots:
 
   '@utrecht/textbox-css@3.1.0': {}
 
+  '@utrecht/textbox-css@4.1.0': {}
+
   '@utrecht/textbox-react@1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -14279,6 +14331,21 @@ snapshots:
   '@utrecht/textbox-react@1.0.4(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       '@babel/runtime': 7.29.7
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/textbox-react@1.1.0(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/textbox-css': 4.1.0
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/textbox-react@1.1.0(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      '@utrecht/textbox-css': 4.1.0
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
