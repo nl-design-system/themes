@@ -11,19 +11,8 @@ const meta = {
   args: {
     inputId: 'textbox-default',
     labelEnd: (
-      <span style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs, var(--basis-space-inline-md))' }}>
-        <span
-          style={{
-            position: 'absolute',
-            width: '1px',
-            height: '1px',
-            overflow: 'hidden',
-            clipPath: 'inset(50%)',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          Zoeken
-        </span>
+      <span className="utrecht-customizable-text-input-example__icon">
+        <span className="utrecht-customizable-text-input-example__visually-hidden">Zoeken</span>
         <UtrechtIconSearch aria-hidden="true" />
       </span>
     ),
