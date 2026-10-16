@@ -1,5 +1,5 @@
 ---
-"<@nl-design-system-unstable/groningen-design-tokens>": patch
+"@nl-design-system-unstable/groningen-design-tokens": patch
 ---
 
 Verschillende wijzigingen in de kleuren van het nl-button component.
