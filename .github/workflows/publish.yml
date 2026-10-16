@@ -55,6 +55,9 @@ jobs:
       - name: Run the test script in package.json scripts
         run: pnpm run --if-present test
 
+      - name: Run the test-build script in package.json scripts
+        run: pnpm run --if-present test-build
+
       - name: Upload coverage-report artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
