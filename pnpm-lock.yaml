@@ -354,17 +354,17 @@ importers:
   packages/storybook:
     devDependencies:
       '@amsterdam/design-system-assets':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.6.0
+        version: 2.6.0
       '@amsterdam/design-system-css':
-        specifier: 3.0.0
-        version: 3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0)
+        specifier: 4.4.0
+        version: 4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0)
       '@amsterdam/design-system-react':
-        specifier: 4.1.0
-        version: 4.1.0(@amsterdam/design-system-css@3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: 4.4.0
+        version: 4.4.0(@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@amsterdam/design-system-tokens':
-        specifier: 3.0.0
-        version: 3.0.0
+        specifier: 4.3.0
+        version: 4.3.0
       '@bundled-es-modules/memfs':
         specifier: 4.9.4
         version: 4.9.4
@@ -398,6 +398,9 @@ importers:
       '@nl-design-system-community/sittard-geleen-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/sittard-geleen-design-tokens
+      '@nl-design-system-community/vidar-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/vidar-design-tokens
       '@nl-design-system-community/voorne-aan-zee-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/voorne-aan-zee-design-tokens
@@ -497,9 +500,6 @@ importers:
       '@nl-design-system-unstable/venray-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/venray-design-tokens
-      '@nl-design-system-community/vidar-design-tokens':
-        specifier: workspace:*
-        version: link:../../proprietary/vidar-design-tokens
       '@nl-design-system-unstable/voorbeeld-design-tokens':
         specifier: workspace:*
         version: link:../voorbeeld-design-tokens
@@ -696,11 +696,11 @@ importers:
         version: 4.17.21
     devDependencies:
       '@amsterdam/design-system-react':
-        specifier: 4.1.0
-        version: 4.1.0(@amsterdam/design-system-css@3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: 4.4.0
+        version: 4.4.0(@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@amsterdam/design-system-react-icons':
-        specifier: 2.0.0
-        version: 2.0.0(react-dom@19.3.0)(react@19.3.0)
+        specifier: 2.2.0
+        version: 2.2.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/plugin-transform-runtime':
         specifier: 7.24.7
         version: 7.24.7(@babel/core@7.29.0(supports-color@9.3.1))(supports-color@9.3.1)
@@ -787,7 +787,7 @@ importers:
         version: link:../tokens-lib
       '@rijkshuisstijl-community/components-react':
         specifier: 14.0.0
-        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
+        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.29.0(supports-color@9.3.1))(@types/babel__core@7.20.5)(rollup@4.19.2)(supports-color@9.3.1)
@@ -1141,8 +1141,8 @@ importers:
         version: 4.17.21
     devDependencies:
       '@amsterdam/design-system-react':
-        specifier: 4.1.0
-        version: 4.1.0(@amsterdam/design-system-css@3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: 4.4.0
+        version: 4.4.0(@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/plugin-transform-runtime':
         specifier: 7.24.7
         version: 7.24.7(@babel/core@7.29.0(supports-color@9.3.1))(supports-color@9.3.1)
@@ -1216,11 +1216,11 @@ importers:
   packages/voorbeeld-design-tokens:
     devDependencies:
       '@amsterdam/design-system-react':
-        specifier: 4.1.0
-        version: 4.1.0(@amsterdam/design-system-css@3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: 4.4.0
+        version: 4.4.0(@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@amsterdam/design-system-react-icons':
-        specifier: 2.0.0
-        version: 2.0.0(react-dom@19.3.0)(react@19.3.0)
+        specifier: 2.2.0
+        version: 2.2.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@fontsource/noto-sans':
         specifier: 5.2.10
         version: 5.2.10
@@ -2216,7 +2216,7 @@ importers:
     devDependencies:
       '@amsterdam/design-system-react':
         specifier: 4.1.0
-        version: 4.1.0(@amsterdam/design-system-css@3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 4.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@fontsource/cantarell':
         specifier: 5.1.0
         version: 5.1.0
@@ -2312,7 +2312,7 @@ importers:
     devDependencies:
       '@amsterdam/design-system-react':
         specifier: 4.4.0
-        version: 4.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 4.4.0(@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@fontsource/inter':
         specifier: 5.3.0
         version: 5.3.0
@@ -2504,7 +2504,7 @@ importers:
     devDependencies:
       '@amsterdam/design-system-react':
         specifier: 4.4.0
-        version: 4.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 4.4.0(@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@fontsource/inter':
         specifier: 5.3.0
         version: 5.3.0
@@ -2811,14 +2811,14 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@amsterdam/design-system-assets@2.0.0':
-    resolution: {integrity: sha512-+cc+m7LW7Fadjczk+U73qiN7EewiD0KrCH5XsriauM3PYEy8pNmJ0zHKBsWj4DlL/pP1t87AJq3o4O+I95orKQ==}
+  '@amsterdam/design-system-assets@2.6.0':
+    resolution: {integrity: sha512-DJ5TP2oUvoD0wOaawJidVfrzxYGqfoQCuOWACBtPvtFKI+FRL2r+M7/+r+5DIY+JOw0/qDhaA4KLCoda/hWwpg==}
 
-  '@amsterdam/design-system-css@3.0.0':
-    resolution: {integrity: sha512-plJxt9Cj8fZyUtfPJIYtgSUj0TKpFu5T3UEPbtXQrOFq6CHWeL2gnjccRqVS9yB/4RqEEf7PVj8t5PYrZ46LmA==}
+  '@amsterdam/design-system-css@4.4.0':
+    resolution: {integrity: sha512-cxvTcdpNkwUo6y+PZwS4c8NKeClyQH1qWWld78lsezVGEL7YBi0O0MlEumrRBx0nC+8K76S8cB4Q4TIpoLK6hQ==}
     peerDependencies:
-      '@amsterdam/design-system-assets': 2.0.0
-      '@amsterdam/design-system-tokens': 3.0.0
+      '@amsterdam/design-system-assets': 2.6.0
+      '@amsterdam/design-system-tokens': 4.3.0
 
   '@amsterdam/design-system-react-icons@1.0.0':
     resolution: {integrity: sha512-rgY7haz069mYWPFJaXqsOFFqZQt+1sMOR9WpxybJB0SmAXevlkdEY5X12CtCCzbeBtzRXgCJxTouYjl+5dZblw==}
@@ -2859,8 +2859,8 @@ packages:
       react: 16 - 19
       react-dom: 16 - 19
 
-  '@amsterdam/design-system-tokens@3.0.0':
-    resolution: {integrity: sha512-+yZW4VnHic9vF77Bz7u+0pLcAw5GVI4ckYkk49x0C5tGjjs9iaUuP4ZHPlNP+g0DnUWn6zfZLURcnBPneZ4cdA==}
+  '@amsterdam/design-system-tokens@4.3.0':
+    resolution: {integrity: sha512-liXQHm6hy1MYoA8wi6n5to+9MDSnqKYl1HtyBatw4YNnmC2dP+Jp/6xevZmO00dhfJp0NoNT8hOY3nXlR2B/KA==}
 
   '@babel/code-frame@7.26.2':
     resolution: {integrity: sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==}
@@ -10055,19 +10055,19 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
 
-  '@amsterdam/design-system-assets@2.0.0': {}
+  '@amsterdam/design-system-assets@2.6.0': {}
 
-  '@amsterdam/design-system-css@3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0)':
+  '@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0)':
     dependencies:
-      '@amsterdam/design-system-assets': 2.0.0
-      '@amsterdam/design-system-tokens': 3.0.0
+      '@amsterdam/design-system-assets': 2.6.0
+      '@amsterdam/design-system-tokens': 4.3.0
 
-  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react-icons@2.0.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react-icons@2.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -10077,32 +10077,32 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/runtime': 7.27.4
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react@4.1.0(@amsterdam/design-system-css@3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@amsterdam/design-system-react@4.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@amsterdam/design-system-css': 3.0.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.0.0)
-      '@amsterdam/design-system-react-icons': 2.0.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react-icons': 2.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/runtime': 7.29.2
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react@4.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@amsterdam/design-system-react@4.4.0(@amsterdam/design-system-css@4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
+      '@amsterdam/design-system-css': 4.4.0(@amsterdam/design-system-assets@2.6.0)(@amsterdam/design-system-tokens@4.3.0)
       '@amsterdam/design-system-react-icons': 2.2.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/runtime': 7.29.7
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-tokens@3.0.0': {}
+  '@amsterdam/design-system-tokens@4.3.0': {}
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -11744,9 +11744,9 @@ snapshots:
       - vite
       - vitest
 
-  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
+  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.25.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.25.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
@@ -11775,7 +11775,7 @@ snapshots:
 
   '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.29.7)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.29.7)(react@19.3.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.29.7)(react@19.3.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.29.7)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
