@@ -2792,7 +2792,7 @@ export const generateTheme = (
               },
               'fg-muted': {
                 $type: 'color',
-                $value: '{basis.color.default.border-subtle}',
+                $value: '{basis.color.default.border-default}',
               },
               fg: {
                 $type: 'color',
