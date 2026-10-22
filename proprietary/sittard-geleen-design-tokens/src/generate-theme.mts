@@ -119,6 +119,9 @@ export const generateTheme = (
             'padding-inline-start': {
               $value: '{basis.space.inline.md}',
             },
+            'background-color': {
+              $value: '{basis.color.default.bg-subtle}',
+            },
           },
         },
         denhaag: {
