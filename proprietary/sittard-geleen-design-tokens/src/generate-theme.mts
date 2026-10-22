@@ -2702,6 +2702,34 @@ export const generateTheme = (
                 },
               },
             },
+            // The stripes on info/warning/error/success blocks default to the `of.color.*`
+            // text colors (warning is dark brown); use the border colors instead.
+            'formio-content': {
+              info: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.info.border-default}',
+                },
+              },
+              warning: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.warning.border-default}',
+                },
+              },
+              error: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.negative.border-default}',
+                },
+              },
+              success: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.positive.border-default}',
+                },
+              },
+            },
             color: {
               'read-only-bg': {
                 $type: 'color',
