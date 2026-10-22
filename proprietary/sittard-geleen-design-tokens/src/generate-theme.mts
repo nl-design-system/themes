@@ -3109,7 +3109,7 @@ export const generateTheme = (
                   focus: {
                     'background-color': {
                       $type: 'color',
-                      $value: '{utrecht.listbox.option.selected.background-color}',
+                      $value: '{basis.color.action-2.bg-default}',
                     },
                   },
                   'padding-block-start': {
