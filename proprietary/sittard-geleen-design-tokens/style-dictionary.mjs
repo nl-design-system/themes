@@ -44,6 +44,20 @@ const build = async () => {
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
+
+  // Open Forms only applies its page layout (centering, background, header) under its
+  // default `openforms-theme` class, and its theme class name field allows only one class.
+  sd = new StyleDictionary({
+    ...createConfig({
+      className: 'openforms-theme',
+      buildPath: 'dist/open-forms/',
+    }),
+    preprocessors: ['tokens-studio', 'dtcg-delegate'],
+    tokens: generateTheme(),
+  });
+
+  await sd.cleanAllPlatforms();
+  await sd.buildAllPlatforms();
 };
 
 build();
