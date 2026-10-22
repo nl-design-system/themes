@@ -2229,9 +2229,22 @@ export const generateTheme = (
         theme,
         {
           basis: {
+            // The black borders made the text fields look too plain, so they now use the theme's
+            // primary blue (accent-1, same blue as the primary color) to bring more of the theme
+            // into forms. Accent-2 (green) was tried first, but did not have enough contrast.
             'form-control': {
               'border-color': {
-                $value: '{basis.color.action-1.border-default}',
+                $value: '{basis.color.accent-1.border-default}',
+              },
+              hover: {
+                'border-color': {
+                  $value: '{basis.color.accent-1.border-hover}',
+                },
+              },
+              focus: {
+                'border-color': {
+                  $value: '{basis.color.accent-1.border-active}',
+                },
               },
             },
           },
