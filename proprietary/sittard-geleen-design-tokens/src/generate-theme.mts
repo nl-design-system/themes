@@ -1084,12 +1084,14 @@ export const generateTheme = (
         {
           utrecht: {
             link: {
-              color: {},
+              color: {
+                $value: '{basis.color.accent-1.color-default}',
+              },
               'text-decoration': {
                 $value: '{nl.link.text-decoration-line}',
               },
               'text-decoration-color': {
-                $value: '{nl.link.text-decoration-color}',
+                $value: 'currentColor',
               },
               'text-decoration-thickness': {
                 $value: '{nl.link.text-decoration-thickness}',
@@ -1116,7 +1118,7 @@ export const generateTheme = (
               },
               hover: {
                 color: {
-                  $value: '{nl.link.hover.color}',
+                  $value: '{basis.color.accent-1.color-hover}',
                 },
                 'text-decoration': {
                   $value: '{nl.link.hover.text-decoration-line}',
@@ -3026,6 +3028,23 @@ export const generateTheme = (
               fg: {
                 $type: 'color',
                 $value: '{utrecht.page-footer.color}',
+              },
+            },
+            'page-header': {
+              bg: {
+                $type: 'color',
+                $value: '{utrecht.page-header.background-color}',
+              },
+              fg: {
+                $type: 'color',
+                $value: '{utrecht.page-header.color}',
+              },
+            },
+            'header-logo': {
+              // Width stays `auto` (Open Forms default) to keep the logo's aspect ratio
+              height: {
+                $type: 'dimension',
+                $value: '{basis.size.lg}',
               },
             },
           },
