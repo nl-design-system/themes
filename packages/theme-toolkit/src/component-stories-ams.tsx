@@ -536,4 +536,11 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
       </Tabs>
     ),
   },
+  {
+    storyId: 'react-ams-page-body--default',
+    component: 'ams-body',
+    group: STORY_GROUPS['PAGE_BODY'],
+    name: 'Amsterdam Page Body',
+    render: () => <div className="ams-body">The Quick Brown Fox Jumps Over The Lazy Dog</div>,
+  },
 ];
