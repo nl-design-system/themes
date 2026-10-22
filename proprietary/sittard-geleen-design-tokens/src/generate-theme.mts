@@ -1463,6 +1463,10 @@ export const generateTheme = (
           basis: {
             color: {
               'action-1': {
+                // The generated hover is only ~1% darker than bg-default, too subtle to notice
+                'bg-hover': {
+                  $value: '{basis.color.action-1-inverse.bg-default}',
+                },
                 'color-default': {
                   $value: '#ffffff',
                 },
@@ -1476,7 +1480,7 @@ export const generateTheme = (
                   $value: '#000000',
                 },
                 'border-hover': {
-                  $value: '#000000',
+                  $value: '#ffffff',
                 },
                 'border-active': {
                   $value: '#000000',
