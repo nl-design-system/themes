@@ -536,4 +536,23 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
       </Tabs>
     ),
   },
+  {
+    storyId: 'react-ams-grid--default',
+    component: 'ams-grid',
+    group: STORY_GROUPS['GRID'],
+    name: 'Amsterdam Grid',
+    render: () => (
+      <Grid>
+        <Grid.Cell span={4}>
+          <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
+        </Grid.Cell>
+        <Grid.Cell span={4}>
+          <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
+        </Grid.Cell>
+        <Grid.Cell span={4}>
+          <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
+        </Grid.Cell>
+      </Grid>
+    ),
+  },
 ];

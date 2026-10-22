@@ -54,6 +54,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   ROOT: 'Root',
   PAGE_BODY: 'Page Body',
   NOTE: 'Note',
+  GRID: 'Grid',
 };
 
 export interface ComponentStory {
