@@ -2680,6 +2680,28 @@ export const generateTheme = (
         theme,
         {
           of: {
+            // Open Forms' default for checkbox/radio option descriptions is a light grey that is
+            // hard to read; use the secondary text color instead.
+            'checkbox-group': {
+              option: {
+                description: {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.default.color-subtle}',
+                  },
+                },
+              },
+            },
+            'radio-group': {
+              option: {
+                description: {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.default.color-subtle}',
+                  },
+                },
+              },
+            },
             color: {
               'read-only-bg': {
                 $type: 'color',
