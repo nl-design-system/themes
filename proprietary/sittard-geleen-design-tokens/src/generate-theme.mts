@@ -2255,6 +2255,53 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
+      description: 'Sittard-Geleen design decision: calendar color',
+    },
+    () => {
+      // The calendar defaults to `action-1.color-*`, which is white for the primary button text,
+      // so the days and navigation were white on white. Using accent-1 (same blue) instead.
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            calendar: {
+              navigation: {
+                color: {
+                  $type: 'color',
+                  $value: '{basis.color.accent-1.color-default}',
+                },
+              },
+              table: {
+                'days-item-day': {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.accent-1.color-default}',
+                  },
+                  'is-today': {
+                    color: {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.color-default}',
+                    },
+                    'background-color': {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.bg-default}',
+                    },
+                    'border-color': {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.border-active}',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
       description: 'Sittard-Geleen design decision: checkbox color',
     },
     () => {
