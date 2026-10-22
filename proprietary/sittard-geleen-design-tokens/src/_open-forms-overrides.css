@@ -1,0 +1,56 @@
+/*
+ * Open Forms overrides
+ *
+ * Open Forms' own stylesheet hardcodes a few button styles that design tokens cannot override.
+ * This file is appended to dist/open-forms/theme.css by style-dictionary.mjs, so the fixes ship
+ * with the theme. The doubled classes only raise specificity above the Open Forms rules.
+ */
+
+/* Open Forms sets a 2px border radius on keyboard focus, which made the round buttons square. */
+.openforms-theme .utrecht-button.utrecht-button:focus-visible,
+.openforms-theme .utrecht-button-link.utrecht-button-link:focus-visible,
+.openforms-theme .utrecht-link-button.utrecht-link-button:focus-visible {
+  --utrecht-button-border-radius: var(--nl-button-border-radius);
+}
+
+/* Buttons in tables:
+ * - Open Forms gives them uneven block padding, which pushed the icons down. Use equal padding
+ *   so the icon sits in the center of the button.
+ * - Open Forms makes their background transparent. Give the edit button the secondary color. */
+.openforms-theme .utrecht-table .utrecht-button.utrecht-button {
+  --utrecht-button-padding-block-start: 0;
+  --utrecht-button-padding-block-end: 0;
+  --_utrecht-button-background-color: var(--basis-color-action-2-bg-default);
+  --_utrecht-button-hover-background-color: var(--basis-color-action-2-bg-hover);
+  --_utrecht-button-active-background-color: var(--basis-color-action-2-bg-active);
+
+  justify-content: center;
+  line-height: 1;
+}
+
+/* The delete (danger) button gets a light red background, matching its red icon. The default
+ * active state is a red background, which made the red icon invisible, so keep it light red
+ * with a darker red icon instead. */
+.openforms-theme .utrecht-table .utrecht-button.utrecht-button--danger {
+  --_utrecht-button-background-color: var(--basis-color-negative-bg-default);
+  --_utrecht-button-hover-background-color: var(--basis-color-negative-bg-hover);
+  --_utrecht-button-active-background-color: var(--basis-color-negative-bg-active);
+  --_utrecht-button-active-color: var(--basis-color-negative-color-active);
+}
+
+/* Space between the edit and delete buttons */
+.openforms-theme .utrecht-table .utrecht-button + .utrecht-button {
+  margin-inline-start: var(--basis-space-column-md);
+}
+
+/* Open Forms makes the top and left border transparent on every button, so only half of the
+ * border was visible. Restore the button's own border color on all sides. */
+.openforms-theme .utrecht-button.utrecht-button:not(:focus, :focus-visible),
+.openforms-theme .utrecht-button.utrecht-button:hover:not(:focus, :focus-visible),
+.openforms-theme .utrecht-button-link.utrecht-button-link:not(:focus, :focus-visible),
+.openforms-theme .utrecht-button-link.utrecht-button-link:hover:not(:focus, :focus-visible),
+.openforms-theme .utrecht-link-button.utrecht-link-button:not(:focus, :focus-visible),
+.openforms-theme .utrecht-link-button.utrecht-link-button:hover:not(:focus, :focus-visible) {
+  border-block-start-color: var(--_utrecht-button-border-color, var(--utrecht-button-border-color, transparent));
+  border-inline-start-color: var(--_utrecht-button-border-color, var(--utrecht-button-border-color, transparent));
+}
