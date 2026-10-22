@@ -1,7 +1,7 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
-import { readFile } from 'node:fs/promises';
+import { appendFile, readFile } from 'node:fs/promises';
 import { createConfig } from '../../style-dictionary-config.mjs';
 import { generateTheme } from './src/generate-theme.mts';
 import { hasParentKeys } from './src/util.mts';
@@ -58,6 +58,11 @@ const build = async () => {
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
+
+  // Some Open Forms styles are hardcoded and cannot be overridden with tokens, so append the
+  // CSS overrides to the Open Forms theme. That way they ship in the same file.
+  const openFormsOverrides = await readFile('./src/_open-forms-overrides.css', 'utf-8');
+  await appendFile('dist/open-forms/theme.css', `\n${openFormsOverrides}`);
 };
 
 build();
