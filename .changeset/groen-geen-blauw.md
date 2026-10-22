@@ -1,5 +1,5 @@
 ---
-"<@nl-design-system-unstable/groningen-design-tokens>": patch
+"@nl-design-system-unstable/groningen-design-tokens": patch
 ---
 
 De default Note aangepast, zodat deze overeenkomt met de info variant van de Note.
