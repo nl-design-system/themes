@@ -26,7 +26,7 @@ const build = async () => {
 
   let sd = new StyleDictionary({
     ...lightConfig,
-    preprocessors: [...(useTokensStudio ? 'tokens-studio' : []), 'dtcg-delegate'],
+    preprocessors: ['tokens-studio', 'dtcg-delegate'],
     tokens: generateTheme(),
   });
 
@@ -38,7 +38,7 @@ const build = async () => {
       className: `${themeConfig.prefix}-theme--color-scheme-dark`,
       buildPath: 'dist/color-scheme-dark/',
     }),
-    preprocessors: [...(useTokensStudio ? 'tokens-studio' : []), 'dtcg-delegate'],
+    preprocessors: ['tokens-studio', 'dtcg-delegate'],
     tokens: generateTheme({ colorScheme: 'dark' }),
   });
 
