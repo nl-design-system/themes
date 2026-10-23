@@ -28,6 +28,10 @@ export const generateTheme = (
           basis: {
             color: {
               'action-1': {
+                // The generated hover is barely darker than bg-default, too subtle to notice
+                'bg-hover': {
+                  $value: '{basis.color.action-1-inverse.bg-default}',
+                },
                 'color-default': {
                   $value: '#ffffff',
                 },
