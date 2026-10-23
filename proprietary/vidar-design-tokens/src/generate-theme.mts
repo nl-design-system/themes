@@ -160,6 +160,17 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
+      description: 'Vidar design decision: accent-1 color',
+    },
+    () => {
+      // Same blue as the primary color, used for the form control borders and calendar.
+      // Anchored on border-default, so the form control borders get the Vidar blue itself.
+      return setBasisColor(theme, 'accent-1', '#00577e', { anchor: 'border-default' });
+    },
+  );
+
+  theme = safeTransform(
+    {
       description: 'Vidar design decision: Utrecht Link uses the same colors as NL Link',
     },
     () => {
