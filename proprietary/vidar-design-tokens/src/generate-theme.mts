@@ -160,6 +160,40 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
+      description: 'Vidar design decision: Utrecht Link uses the same colors as NL Link',
+    },
+    () => {
+      // Open Forms renders links with Utrecht Link, which otherwise uses the accent-1 blue
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            link: {
+              color: {
+                $type: 'color',
+                $value: '{nl.link.color}',
+              },
+              hover: {
+                color: {
+                  $type: 'color',
+                  $value: '{nl.link.hover.color}',
+                },
+              },
+              active: {
+                color: {
+                  $type: 'color',
+                  $value: '{nl.link.active.color}',
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
       description: 'Vidar design decision: focus color',
     },
     () => {
