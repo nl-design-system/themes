@@ -1,36 +1,17 @@
-import { type Theme, ThemeSchema, mergeTokens } from '@nl-design-system-community/design-tokens-schema';
+import { type Theme, mergeTokens } from '@nl-design-system-community/design-tokens-schema';
 import { setBasisColor, createTransform } from '@nl-design-system-community/sittard-geleen-design-tokens/src/util.mts';
-import startTheme from '@nl-design-system-unstable/start-design-tokens/figma/start.tokens.json' with { type: 'json' };
 import { generateTheme as generateSittardGeleenTheme } from '@nl-design-system-community/sittard-geleen-design-tokens/src/generate-theme.mts';
 
 export const generateTheme = (
   config: { initialTheme?: Theme; log?: boolean; colorScheme?: 'light' | 'dark' } = {},
 ): Theme => {
-  // Use the Sittard-Geleen Theme as initial Design Tokens JSON, stack modifications on top of that.
+  // Use an existing theme as initial Design Tokens JSON, stack the Vidar modifications on top of that.
   const initialTheme = generateSittardGeleenTheme(config);
 
   // Create a new theme.
   let theme: Theme = structuredClone(initialTheme);
 
   const safeTransform = createTransform({ log: true });
-
-  // Shared between primary and secondary's pressed states below: a disabled button
-  // always looks the same regardless of brand color, so this is defined once instead
-  // of being repeated verbatim in both.
-  const disabledInversePressedState = {
-    'background-color': {
-      $type: 'color',
-      $value: '{basis.color.disabled-inverse.bg-default}',
-    },
-    'border-color': {
-      $type: 'color',
-      $value: '{basis.color.transparent}',
-    },
-    color: {
-      $type: 'color',
-      $value: '{basis.color.disabled-inverse.color-subtle}',
-    },
-  };
 
   theme = safeTransform(
     {
@@ -47,6 +28,10 @@ export const generateTheme = (
           basis: {
             color: {
               'action-1': {
+                // The generated hover is barely darker than bg-default, too subtle to notice
+                'bg-hover': {
+                  $value: '{basis.color.action-1-inverse.bg-default}',
+                },
                 'color-default': {
                   $value: '#ffffff',
                 },
@@ -70,95 +55,6 @@ export const generateTheme = (
                 },
                 'color-document': {
                   $value: '#000000',
-                },
-              },
-            },
-          },
-          nl: {
-            button: {
-              primary: {
-                'background-color': {
-                  $type: 'color',
-                  $value: '{basis.color.action-1.bg-default}',
-                },
-                'border-color': {
-                  $type: 'color',
-                  $value: '{basis.color.transparent}',
-                },
-                color: {
-                  $type: 'color',
-                  $value: '{basis.color.action-1.color-default}',
-                },
-                active: {
-                  'background-color': {
-                    $type: 'color',
-                    $value: '{basis.color.action-1.bg-active}',
-                  },
-                  'border-color': {
-                    $type: 'color',
-                    $value: '{basis.color.transparent}',
-                  },
-                  color: {
-                    $type: 'color',
-                    $value: '{basis.color.action-1.color-active}',
-                  },
-                },
-                hover: {
-                  'background-color': {
-                    $type: 'color',
-                    $value: '{basis.color.action-1.bg-hover}',
-                  },
-                  'border-color': {
-                    $type: 'color',
-                    $value: '{basis.color.transparent}',
-                  },
-                  color: {
-                    $type: 'color',
-                    $value: '{basis.color.action-1.color-hover}',
-                  },
-                },
-                pressed: {
-                  'background-color': {
-                    $type: 'color',
-                    $value: '{basis.color.action-1-inverse.bg-default}',
-                  },
-                  'border-color': {
-                    $type: 'color',
-                    $value: '{basis.color.transparent}',
-                  },
-                  color: {
-                    $type: 'color',
-                    $value: '{basis.color.action-1-inverse.color-default}',
-                  },
-                  active: {
-                    'background-color': {
-                      $type: 'color',
-                      $value: '{basis.color.action-1-inverse.bg-active}',
-                    },
-                    'border-color': {
-                      $type: 'color',
-                      $value: '{basis.color.transparent}',
-                    },
-                    color: {
-                      $type: 'color',
-                      $value: '{basis.color.action-1-inverse.color-active}',
-                    },
-                  },
-                  disabled: disabledInversePressedState,
-                  hover: {
-                    'background-color': {
-                      $type: 'color',
-                      $value: '{basis.color.action-1-inverse.bg-hover}',
-                    },
-                    'border-color': {
-                      $type: 'color',
-                      $value: '{basis.color.transparent}',
-                    },
-                    color: {
-                      $type: 'color',
-                      $value: '{basis.color.action-1-inverse.color-hover}',
-                    },
-                  },
                 },
               },
             },
@@ -230,10 +126,6 @@ export const generateTheme = (
                   $type: 'color',
                   $value: '{basis.color.action-2.color-default}',
                 },
-                'border-color': {
-                  $type: 'color',
-                  $value: '{basis.color.transparent}',
-                },
                 color: {
                   $type: 'color',
                   $value: '#ffffff',
@@ -242,10 +134,6 @@ export const generateTheme = (
                   'background-color': {
                     $type: 'color',
                     $value: '{basis.color.action-2.color-active}',
-                  },
-                  'border-color': {
-                    $type: 'color',
-                    $value: '{basis.color.transparent}',
                   },
                   color: {
                     $type: 'color',
@@ -257,57 +145,55 @@ export const generateTheme = (
                     $type: 'color',
                     $value: '{basis.color.action-2.color-hover}',
                   },
-                  'border-color': {
-                    $type: 'color',
-                    $value: '{basis.color.transparent}',
-                  },
                   color: {
                     $type: 'color',
                     $value: '#ffffff',
                   },
                 },
-                pressed: {
-                  'background-color': {
-                    $type: 'color',
-                    $value: '{basis.color.action-2-inverse.bg-default}',
-                  },
-                  'border-color': {
-                    $type: 'color',
-                    $value: '{basis.color.transparent}',
-                  },
-                  color: {
-                    $type: 'color',
-                    $value: '{basis.color.action-2-inverse.color-default}',
-                  },
-                  active: {
-                    'background-color': {
-                      $type: 'color',
-                      $value: '{basis.color.action-2-inverse.bg-active}',
-                    },
-                    'border-color': {
-                      $type: 'color',
-                      $value: '{basis.color.transparent}',
-                    },
-                    color: {
-                      $type: 'color',
-                      $value: '{basis.color.action-2-inverse.color-active}',
-                    },
-                  },
-                  disabled: disabledInversePressedState,
-                  hover: {
-                    'background-color': {
-                      $type: 'color',
-                      $value: '{basis.color.action-2-inverse.bg-hover}',
-                    },
-                    'border-color': {
-                      $type: 'color',
-                      $value: '{basis.color.transparent}',
-                    },
-                    color: {
-                      $type: 'color',
-                      $value: '{basis.color.action-2-inverse.color-hover}',
-                    },
-                  },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Vidar design decision: accent-1 color',
+    },
+    () => {
+      // Same blue as the primary color, used for the form control borders and calendar.
+      // Anchored on border-default, so the form control borders get the Vidar blue itself.
+      return setBasisColor(theme, 'accent-1', '#00577e', { anchor: 'border-default' });
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Vidar design decision: Utrecht Link uses the same colors as NL Link',
+    },
+    () => {
+      // Open Forms renders links with Utrecht Link, which otherwise uses the accent-1 blue
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            link: {
+              color: {
+                $type: 'color',
+                $value: '{nl.link.color}',
+              },
+              hover: {
+                color: {
+                  $type: 'color',
+                  $value: '{nl.link.hover.color}',
+                },
+              },
+              active: {
+                color: {
+                  $type: 'color',
+                  $value: '{nl.link.active.color}',
                 },
               },
             },
