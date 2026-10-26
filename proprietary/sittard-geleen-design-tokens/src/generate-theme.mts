@@ -3158,7 +3158,10 @@ export const generateTheme = (
               },
             },
             'header-logo': {
-              // Width stays `auto` (Open Forms default) to keep the logo's aspect ratio
+              width: {
+                $type: 'dimension',
+                $value: '{utrecht.logo.max-inline-size}',
+              },
               height: {
                 $type: 'dimension',
                 $value: '{basis.size.lg}',
