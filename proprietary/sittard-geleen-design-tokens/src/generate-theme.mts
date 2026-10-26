@@ -75,6 +75,9 @@ export const generateTheme = (
             'padding-inline-start': {
               $value: '{basis.space.inline.md}',
             },
+            'background-color': {
+              $value: '{basis.color.default.bg-subtle}',
+            },
           },
         },
         denhaag: {
@@ -1040,12 +1043,14 @@ export const generateTheme = (
         {
           utrecht: {
             link: {
-              color: {},
+              color: {
+                $value: '{basis.color.accent-1.color-default}',
+              },
               'text-decoration': {
                 $value: '{nl.link.text-decoration-line}',
               },
               'text-decoration-color': {
-                $value: '{nl.link.text-decoration-color}',
+                $value: 'currentColor',
               },
               'text-decoration-thickness': {
                 $value: '{nl.link.text-decoration-thickness}',
@@ -1072,7 +1077,7 @@ export const generateTheme = (
               },
               hover: {
                 color: {
-                  $value: '{nl.link.hover.color}',
+                  $value: '{basis.color.accent-1.color-hover}',
                 },
                 'text-decoration': {
                   $value: '{nl.link.hover.text-decoration-line}',
@@ -1458,6 +1463,10 @@ export const generateTheme = (
           basis: {
             color: {
               'action-1': {
+                // The generated hover is only ~1% darker than bg-default, too subtle to notice
+                'bg-hover': {
+                  $value: '{basis.color.action-1-inverse.bg-default}',
+                },
                 'color-default': {
                   $value: '#ffffff',
                 },
@@ -1471,7 +1480,7 @@ export const generateTheme = (
                   $value: '#000000',
                 },
                 'border-hover': {
-                  $value: '#000000',
+                  $value: '#ffffff',
                 },
                 'border-active': {
                   $value: '#000000',
@@ -2220,9 +2229,69 @@ export const generateTheme = (
         theme,
         {
           basis: {
+            // The black borders made the text fields look too plain, so they now use the theme's
+            // primary blue (accent-1, same blue as the primary color) to bring more of the theme
+            // into forms. Accent-2 (green) was tried first, but did not have enough contrast.
             'form-control': {
               'border-color': {
-                $value: '{basis.color.action-1.border-default}',
+                $value: '{basis.color.accent-1.border-default}',
+              },
+              hover: {
+                'border-color': {
+                  $value: '{basis.color.accent-1.border-hover}',
+                },
+              },
+              focus: {
+                'border-color': {
+                  $value: '{basis.color.accent-1.border-active}',
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen design decision: calendar color',
+    },
+    () => {
+      // The calendar defaults to `action-1.color-*`, which is white for the primary button text,
+      // so the days and navigation were white on white. Using accent-1 (same blue) instead.
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            calendar: {
+              navigation: {
+                color: {
+                  $type: 'color',
+                  $value: '{basis.color.accent-1.color-default}',
+                },
+              },
+              table: {
+                'days-item-day': {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.accent-1.color-default}',
+                  },
+                  'is-today': {
+                    color: {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.color-default}',
+                    },
+                    'background-color': {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.bg-default}',
+                    },
+                    'border-color': {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.border-active}',
+                    },
+                  },
+                },
               },
             },
           },
@@ -2658,6 +2727,56 @@ export const generateTheme = (
         theme,
         {
           of: {
+            // Open Forms' default for checkbox/radio option descriptions is a light grey that is
+            // hard to read; use the secondary text color instead.
+            'checkbox-group': {
+              option: {
+                description: {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.default.color-subtle}',
+                  },
+                },
+              },
+            },
+            'radio-group': {
+              option: {
+                description: {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.default.color-subtle}',
+                  },
+                },
+              },
+            },
+            // The stripes on info/warning/error/success blocks default to the `of.color.*`
+            // text colors (warning is dark brown); use the border colors instead.
+            'formio-content': {
+              info: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.info.border-default}',
+                },
+              },
+              warning: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.warning.border-default}',
+                },
+              },
+              error: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.negative.border-default}',
+                },
+              },
+              success: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.positive.border-default}',
+                },
+              },
+            },
             color: {
               'read-only-bg': {
                 $type: 'color',
@@ -2673,7 +2792,7 @@ export const generateTheme = (
               },
               'fg-muted': {
                 $type: 'color',
-                $value: '{basis.color.default.border-subtle}',
+                $value: '{basis.color.default.border-default}',
               },
               fg: {
                 $type: 'color',
@@ -2946,7 +3065,7 @@ export const generateTheme = (
                   focus: {
                     'background-color': {
                       $type: 'color',
-                      $value: '{utrecht.listbox.option.selected.background-color}',
+                      $value: '{basis.color.action-2.bg-default}',
                     },
                   },
                   'padding-block-start': {
@@ -2984,6 +3103,26 @@ export const generateTheme = (
                 $value: '{utrecht.page-footer.color}',
               },
             },
+            'page-header': {
+              bg: {
+                $type: 'color',
+                $value: '{utrecht.page-header.background-color}',
+              },
+              fg: {
+                $type: 'color',
+                $value: '{utrecht.page-header.color}',
+              },
+            },
+            'header-logo': {
+              width: {
+                $type: 'dimension',
+                $value: '{utrecht.logo.max-inline-size}',
+              },
+              height: {
+                $type: 'dimension',
+                $value: '{basis.size.lg}',
+              },
+            },
           },
           'of-utrecht': {
             'form-field-description': {
@@ -3011,6 +3150,16 @@ export const generateTheme = (
                 color: {
                   $type: 'color',
                   $value: '{utrecht.link.placeholder.color}',
+                },
+              },
+            },
+            'data-list': {
+              'item-key': {
+                laptop: {
+                  'font-weight': {
+                    $type: 'fontWeights',
+                    $value: '{utrecht.data-list.item-key.font-weight}',
+                  },
                 },
               },
             },
