@@ -3153,6 +3153,16 @@ export const generateTheme = (
                 },
               },
             },
+            'data-list': {
+              'item-key': {
+                laptop: {
+                  'font-weight': {
+                    $type: 'fontWeights',
+                    $value: '{utrecht.data-list.item-key.font-weight}',
+                  },
+                },
+              },
+            },
           },
         },
       ]);
