@@ -237,5 +237,30 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      description: 'Vidar design decision: page header color / not inverse',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            'page-header': {
+              'background-color': {
+                $type: 'color',
+                $value: '{basis.color.default.bg-document}',
+              },
+              color: {
+                $type: 'color',
+                $value: '{basis.color.default.color-document}',
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   return theme;
 };
