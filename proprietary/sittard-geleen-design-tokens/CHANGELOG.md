@@ -1,5 +1,11 @@
 # @nl-design-system-community/sittard-geleen-design-tokens
 
+## 1.0.2
+
+### Patch Changes
+
+- 136b1f9: Styling tweaks.
+
 ## 1.0.1
 
 ### Patch Changes
