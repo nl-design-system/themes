@@ -24,6 +24,7 @@ import {
   PasswordInput,
   FileInput,
   Tabs,
+  Calendar,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -535,5 +536,12 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         </Tabs.Panel>
       </Tabs>
     ),
+  },
+  {
+    storyId: 'react-ams-calendar--default',
+    component: 'ams-calendar',
+    group: STORY_GROUPS['CALENDAR'],
+    name: 'Amsterdam Calendar',
+    render: () => <Calendar defaultMonth={new Date(2026, 0, 1)} linkTemplate={() => '#'} />,
   },
 ];
