@@ -1,5 +1,5 @@
 ---
-"<@nl-design-system-unstable/groningen-design-tokens>": patch
+"@nl-design-system-unstable/groningen-design-tokens": patch
 ---
 
 De figma bibliotheek nagelopen en enige waardes van design tokens aangepast. Om deze te laten aansluiten bij de huisstijl en componenten met meerdere varianten meer gelijk te trekken.
@@ -11,4 +11,4 @@ De checked.accent.color aangepast van 'basis.color.positive-inverse.bg-default' 
 De disabled.border.color aangepast van 'basis.color.transparent' naar 'basis.color.disabled.border-default'
 
 Voor het component Tab (van Den Haag) de selected.color aangepast van 'basis.color.default.color-document' naar 'basis.color.accent-1.color-default'
-De tab.indicator.boprder.color aangepast van 'basis.color.default.border-active' naar 'basis.color.accent-1.color-default'
+De tab.indicator.border.color aangepast van 'basis.color.default.border-active' naar 'basis.color.accent-1.color-default'
