@@ -24,6 +24,7 @@ import {
   PasswordInput,
   FileInput,
   Tabs,
+  Calendar,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -542,5 +543,12 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['PAGE_BODY'],
     name: 'Amsterdam Page Body',
     render: () => <div className="ams-body">The Quick Brown Fox Jumps Over The Lazy Dog</div>,
+  },
+  {
+    storyId: 'react-ams-calendar--default',
+    component: 'ams-calendar',
+    group: STORY_GROUPS['CALENDAR'],
+    name: 'Amsterdam Calendar',
+    render: () => <Calendar defaultMonth={new Date(2026, 0, 1)} linkTemplate={() => '#'} />,
   },
 ];
