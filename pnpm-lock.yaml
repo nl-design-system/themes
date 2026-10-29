@@ -700,7 +700,7 @@ importers:
         version: 4.5.0(@amsterdam/design-system-css@4.5.0(@amsterdam/design-system-assets@2.7.0)(@amsterdam/design-system-tokens@4.4.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@amsterdam/design-system-react-icons':
         specifier: 2.3.0
-        version: 2.3.0(react-dom@19.3.0)(react@19.3.0)
+        version: 2.3.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/plugin-transform-runtime':
         specifier: 7.24.7
         version: 7.24.7(@babel/core@7.29.0(supports-color@9.3.1))(supports-color@9.3.1)
@@ -787,7 +787,7 @@ importers:
         version: link:../tokens-lib
       '@rijkshuisstijl-community/components-react':
         specifier: 14.0.0
-        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
+        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.29.0(supports-color@9.3.1))(@types/babel__core@7.20.5)(rollup@4.19.2)(supports-color@9.3.1)
@@ -1220,7 +1220,7 @@ importers:
         version: 4.5.0(@amsterdam/design-system-css@4.5.0(@amsterdam/design-system-assets@2.7.0)(@amsterdam/design-system-tokens@4.4.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@amsterdam/design-system-react-icons':
         specifier: 2.3.0
-        version: 2.3.0(react-dom@19.3.0)(react@19.3.0)
+        version: 2.3.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@fontsource/noto-sans':
         specifier: 5.2.10
         version: 5.2.10
@@ -10079,7 +10079,7 @@ snapshots:
       '@amsterdam/design-system-assets': 2.7.0
       '@amsterdam/design-system-tokens': 4.4.0
 
-  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -10094,14 +10094,14 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react-icons@2.3.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react-icons@2.3.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
   '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/runtime': 7.27.4
       clsx: 2.1.1
       react: 19.3.0
@@ -10126,7 +10126,7 @@ snapshots:
   '@amsterdam/design-system-react@4.5.0(@amsterdam/design-system-css@4.5.0(@amsterdam/design-system-assets@2.7.0)(@amsterdam/design-system-tokens@4.4.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       '@amsterdam/design-system-css': 4.5.0(@amsterdam/design-system-assets@2.7.0)(@amsterdam/design-system-tokens@4.4.0)
-      '@amsterdam/design-system-react-icons': 2.3.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react-icons': 2.3.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/runtime': 7.29.10
       clsx: 2.1.1
       react: 19.3.0
@@ -11776,7 +11776,7 @@ snapshots:
       - vite
       - vitest
 
-  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
+  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
       '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.25.0)
