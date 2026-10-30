@@ -1,7 +1,6 @@
 {
   "name": "@nl-design-system-community/vidar-design-tokens",
   "version": "0.1.0",
-  "private": true,
   "author": "Community for NL Design System",
   "description": "NL Design System design tokens voor Vidar thema",
   "website": "https://www.vidar.nl/",
@@ -9,6 +8,11 @@
     "nl-design-system"
   ],
   "license": "SEE LICENSE IN LICENSE.md",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/themes.git",
