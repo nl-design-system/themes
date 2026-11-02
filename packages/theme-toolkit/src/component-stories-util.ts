@@ -28,7 +28,6 @@ export const STORY_GROUPS: { [index: string]: string } = {
   FORM_FIELD_LABEL_DEFAULT: 'Default Form Field Label',
   FORM_FIELD_LABEL_RADIO: 'Form Field Label for Radio Button',
   FORM_FIELD: 'Form Field',
-  FORM_SUMMARY: 'Form Summary',
   GRID: 'Grid',
   HEADINGS: 'Headings',
   ICON: 'Icons',
