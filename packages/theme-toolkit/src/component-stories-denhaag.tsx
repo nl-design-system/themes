@@ -6,6 +6,7 @@ import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
 import { ActionSingle } from '@gemeente-denhaag/action';
 import { File } from '@gemeente-denhaag/file';
+import { DescriptionList } from '@gemeente-denhaag/descriptionlist';
 import { Status } from '@gemeente-denhaag/process-steps';
 import type { StatusProps } from '@gemeente-denhaag/process-steps';
 import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
@@ -135,6 +136,21 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['FILE'],
     name: 'Den Haag File',
     render: () => <File name="Afbeelding.png" href="#" size="123 KB" />,
+  },
+  {
+    storyId: 'react-denhaag-data-summary--default',
+    component: 'denhaag-description-list',
+    group: STORY_GROUPS['DATA_SUMMARY'],
+    name: 'Den Haag Data Summary',
+    render: () => (
+      <DescriptionList
+        items={[
+          { title: 'Naam', detail: 'Jeroen van Drouwen' },
+          { title: 'Geboortedatum', detail: '12 januari 1985' },
+          { title: 'Adres', detail: 'Spui 70, 2511 BT Den Haag' },
+        ]}
+      />
+    ),
   },
   // {
   //   storyId: 'react-denhaag-avatar--default',

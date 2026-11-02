@@ -16,6 +16,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   CODE_BLOCK: 'Code Block',
   CODE: 'Code',
   COLOR_SAMPLE: 'Color Sample',
+  DATA_SUMMARY: 'Data Summary',
   DATE_INPUT: 'Date Input',
   DESCRIPTION_LIST: 'Description List',
   EMPHASIS: 'Emphasis',
