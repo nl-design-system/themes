@@ -9,13 +9,21 @@ const meta = {
   args: {
     children: [
       <Grid.Cell key="1" span={4}>
-        <Paragraph>Breng uw gescheiden afval naar een afvalcontainer, een winkelier die deze producten verkoopt of een inleverpunt in de buurt. Of u brengt alles in 1 keer naar een Recyclepunt.</Paragraph>
+        <Paragraph>
+          Breng uw gescheiden afval naar een afvalcontainer, een winkelier die deze producten verkoopt of een
+          inleverpunt in de buurt. Of u brengt alles in 1 keer naar een Recyclepunt.
+        </Paragraph>
       </Grid.Cell>,
       <Grid.Cell key="2" span={4}>
-        <Paragraph>U kunt uw glas, papier, karton, textiel en restafval kwijt in de containers bij u in de buurt. In sommige buurten staan ook containers voor groente-, fruit- en etensresten (gfe/t) en brood.</Paragraph>
+        <Paragraph>
+          U kunt uw glas, papier, karton, textiel en restafval kwijt in de containers bij u in de buurt. In sommige
+          buurten staan ook containers voor groente-, fruit- en etensresten (gfe/t) en brood.
+        </Paragraph>
       </Grid.Cell>,
       <Grid.Cell key="3" span={4}>
-        <Paragraph>Plastic verpakkingen en metaal mogen bij het restafval. De verwerker haalt dit er zelf uit.</Paragraph>
+        <Paragraph>
+          Plastic verpakkingen en metaal mogen bij het restafval. De verwerker haalt dit er zelf uit.
+        </Paragraph>
       </Grid.Cell>,
     ],
   },
