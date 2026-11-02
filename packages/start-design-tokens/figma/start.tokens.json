@@ -8177,6 +8177,66 @@
       }
     }
   },
+  "components/form-field-status": {
+    "nl": {
+      "form-field-status": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.default}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.none}",
+          "$description": "[code-only]"
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.sm}",
+          "$description": "[code-only]"
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.sm}"
+        },
+        "error": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.color-default}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.text.xs}"
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.negative.color-default}"
+            },
+            "size": {
+              "$type": "dimension",
+              "$value": "{basis.size.icon.md}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/form-summary": {
     "todo": {
       "form-summary": {
@@ -16359,6 +16419,7 @@
       "components/form-field-error-message/utrecht",
       "components/form-field-label",
       "components/form-field-label-suffix",
+      "components/form-field-status",
       "components/form-summary",
       "components/grid",
       "components/heading/nl",
