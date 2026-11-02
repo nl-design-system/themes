@@ -1,5 +1,12 @@
 # @nl-design-system-community/enschede-design-tokens
 
+## 1.0.1
+
+### Patch Changes
+
+- ce82814: Updated color tokens.
+  Updated all border radius tokens to "0px".
+
 ## 1.0.0
 
 ### Major Changes

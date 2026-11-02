@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 9.1.0
+
+### Minor Changes
+
+- 6ad34cd: Token utrecht.textbox.icon.size is toegevoegd aan Text Input component.
+
 ## 9.0.0
 
 ### Major Changes
