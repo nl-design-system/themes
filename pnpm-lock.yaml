@@ -719,9 +719,12 @@ importers:
       '@gemeente-denhaag/card':
         specifier: 4.1.0
         version: 4.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@gemeente-denhaag/descriptionlist':
+        specifier: 4.1.2
+        version: 4.1.2(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@gemeente-denhaag/file':
         specifier: 2.4.0
-        version: 2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)
+        version: 2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)
       '@gemeente-denhaag/icons':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.3.0)(react@19.3.0)
@@ -787,7 +790,7 @@ importers:
         version: link:../tokens-lib
       '@rijkshuisstijl-community/components-react':
         specifier: 14.0.0
-        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
+        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.29.0(supports-color@9.3.1))(@types/babel__core@7.20.5)(rollup@4.19.2)(supports-color@9.3.1)
@@ -1236,6 +1239,9 @@ importers:
       '@gemeente-denhaag/card':
         specifier: 4.1.0
         version: 4.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@gemeente-denhaag/descriptionlist':
+        specifier: 4.1.2
+        version: 4.1.2(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@gemeente-denhaag/file':
         specifier: 2.4.0
         version: 2.4.0(@babel/runtime@7.29.10)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -3683,6 +3689,12 @@ packages:
 
   '@gemeente-denhaag/card@4.1.0':
     resolution: {integrity: sha512-95kPzuca+NMUHO79HIHzuEZvEMvBCoAT9cxbZ8gHEsKEmpEjEX7Z0FtlBFW3D2/FJQCD/FjCvEAkS6h1ohVsOw==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/descriptionlist@4.1.2':
+    resolution: {integrity: sha512-O5FTWu6LLqTPYqIRhdu62k3jGFgIlB5UkHGNElzH4FDuPwBOAHtfM8HJumh148SD6y/LSrtNuKVxyGBj5rFsbg==}
     peerDependencies:
       react: 18 || 19
       react-dom: 18 || 19
@@ -10062,7 +10074,7 @@ snapshots:
       '@amsterdam/design-system-assets': 2.7.0
       '@amsterdam/design-system-tokens': 4.4.0
 
-  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -10077,9 +10089,9 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/runtime': 7.27.4
       clsx: 2.1.1
       react: 19.3.0
@@ -10918,9 +10930,15 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
+  '@gemeente-denhaag/descriptionlist@4.1.2(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
   '@gemeente-denhaag/design-tokens@1.2.0': {}
 
-  '@gemeente-denhaag/file@2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)':
+  '@gemeente-denhaag/file@2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)':
     dependencies:
       '@gemeente-denhaag/icons': 4.0.1(react-dom@19.3.0)(react@19.3.0)
       '@utrecht/component-library-react': 10.3.10(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)
@@ -11744,9 +11762,9 @@ snapshots:
       - vite
       - vitest
 
-  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
+  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.25.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.25.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
@@ -11775,7 +11793,7 @@ snapshots:
 
   '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.29.10)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.29.10)(react@19.3.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.29.10)(react@19.3.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.29.10)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
