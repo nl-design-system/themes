@@ -578,27 +578,9 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     name: 'Amsterdam Page',
     render: () => (
       <Page>
-        <PageHeader brandName="Gemeente Voorbeeld" />
-        <main>
-          <Grid paddingVertical="large">
-            <Grid.Cell span="all">
-              <Heading className="ams-mb-m" level={1}>
-                Parkeervergunning aanvragen
-              </Heading>
-              <Paragraph>
-                Woont u in een buurt waar u betaald moet parkeren? Dan kunt u een parkeervergunning voor bewoners
-                aanvragen. Binnen 8 weken hoort u of u de vergunning krijgt.
-              </Paragraph>
-            </Grid.Cell>
-          </Grid>
-        </main>
-        <PageFooter>
-          <PageFooter.Menu>
-            <PageFooter.MenuLink href="#">Contact</PageFooter.MenuLink>
-            <PageFooter.MenuLink href="#">Privacyverklaring</PageFooter.MenuLink>
-            <PageFooter.MenuLink href="#">Toegankelijkheid</PageFooter.MenuLink>
-          </PageFooter.Menu>
-        </PageFooter>
+        <PageHeader brandName="Header area" />
+        <main>Content area</main>
+        <PageFooter>Footer area</PageFooter>
       </Page>
     ),
   },
