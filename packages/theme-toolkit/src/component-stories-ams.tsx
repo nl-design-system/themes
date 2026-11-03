@@ -25,6 +25,7 @@ import {
   FileInput,
   Tabs,
   Calendar,
+  Page,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -569,5 +570,18 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CALENDAR'],
     name: 'Amsterdam Calendar',
     render: () => <Calendar defaultMonth={new Date(2026, 0, 1)} linkTemplate={() => '#'} />,
+  },
+  {
+    storyId: 'react-ams-page--default',
+    component: 'ams-page',
+    group: STORY_GROUPS['PAGE_LAYOUT'],
+    name: 'Amsterdam Page',
+    render: () => (
+      <Page>
+        <PageHeader brandName="Header area" />
+        <main>Content area</main>
+        <PageFooter>Footer area</PageFooter>
+      </Page>
+    ),
   },
 ];
