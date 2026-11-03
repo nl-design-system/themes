@@ -25,6 +25,7 @@ import {
   FileInput,
   Tabs,
   Calendar,
+  Page,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -569,5 +570,36 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CALENDAR'],
     name: 'Amsterdam Calendar',
     render: () => <Calendar defaultMonth={new Date(2026, 0, 1)} linkTemplate={() => '#'} />,
+  },
+  {
+    storyId: 'react-ams-page--default',
+    component: 'ams-page',
+    group: STORY_GROUPS['PAGE_LAYOUT'],
+    name: 'Amsterdam Page',
+    render: () => (
+      <Page>
+        <PageHeader brandName="Gemeente Voorbeeld" />
+        <main>
+          <Grid paddingVertical="large">
+            <Grid.Cell span="all">
+              <Heading className="ams-mb-m" level={1}>
+                Parkeervergunning aanvragen
+              </Heading>
+              <Paragraph>
+                Woont u in een buurt waar u betaald moet parkeren? Dan kunt u een parkeervergunning voor bewoners
+                aanvragen. Binnen 8 weken hoort u of u de vergunning krijgt.
+              </Paragraph>
+            </Grid.Cell>
+          </Grid>
+        </main>
+        <PageFooter>
+          <PageFooter.Menu>
+            <PageFooter.MenuLink href="#">Contact</PageFooter.MenuLink>
+            <PageFooter.MenuLink href="#">Privacyverklaring</PageFooter.MenuLink>
+            <PageFooter.MenuLink href="#">Toegankelijkheid</PageFooter.MenuLink>
+          </PageFooter.Menu>
+        </PageFooter>
+      </Page>
+    ),
   },
 ];

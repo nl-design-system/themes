@@ -43,6 +43,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   PAGE_BODY: 'Page Body',
   PAGE_FOOTER: 'Page Footer',
   PAGE_HEADER: 'Page Header',
+  PAGE_LAYOUT: 'Page Layout',
   PAGE_NUMBER_NAVIGATION: 'Page Number Navigation',
   PARAGRAPH: 'Paragraph',
   PASSWORD_INPUT: 'Password Input',
