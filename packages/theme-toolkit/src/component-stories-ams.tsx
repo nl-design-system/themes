@@ -544,6 +544,9 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['PAGE_BODY'],
     name: 'Amsterdam Page Body',
     render: () => <div className="ams-body">The Quick Brown Fox Jumps Over The Lazy Dog</div>,
+    detectTokens: {
+      anyOf: ['ams.body.background-color'],
+    },
   },
   {
     storyId: 'react-ams-grid--default',
@@ -563,6 +566,32 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         </Grid.Cell>
       </Grid>
     ),
+    detectTokens: {
+      anyOf: [
+        'ams.grid.cell.background-color',
+        'ams.grid.cell.container-name',
+        'ams.grid.cell.container-type',
+        'ams.grid.cell.padding-block',
+        'ams.grid.cell.padding-inline',
+        'ams.grid.column-count',
+        'ams.grid.column-gap',
+        'ams.grid.medium.column-count',
+        'ams.grid.medium.padding-inline',
+        'ams.grid.padding-block.2xl',
+        'ams.grid.padding-block.l',
+        'ams.grid.padding-block.xl',
+        'ams.grid.padding-inline',
+        'ams.grid.row-gap.2xl',
+        'ams.grid.row-gap.l',
+        'ams.grid.row-gap.xl',
+        'ams.grid.vi-medium.column-count',
+        'ams.grid.vi-medium.padding-inline',
+        'ams.grid.vi-wide.column-count',
+        'ams.grid.vi-wide.padding-inline',
+        'ams.grid.wide.column-count',
+        'ams.grid.wide.padding-inline',
+      ],
+    },
   },
   {
     storyId: 'react-ams-calendar--default',
@@ -570,6 +599,24 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['CALENDAR'],
     name: 'Amsterdam Calendar',
     render: () => <Calendar defaultMonth={new Date(2026, 0, 1)} linkTemplate={() => '#'} />,
+    detectTokens: {
+      anyOf: [
+        'ams.calendar.day.current.font-weight',
+        'ams.calendar.day.link.color',
+        'ams.calendar.day.link.hover.color',
+        'ams.calendar.day.link.hover.text-decoration-line',
+        'ams.calendar.day.link.text-decoration-line',
+        'ams.calendar.day.link.text-decoration-thickness',
+        'ams.calendar.day.link.text-underline-offset',
+        'ams.calendar.day.outline-offset',
+        'ams.calendar.font-family',
+        'ams.calendar.font-size',
+        'ams.calendar.font-weight',
+        'ams.calendar.gap',
+        'ams.calendar.inline-size',
+        'ams.calendar.line-height',
+      ],
+    },
   },
   {
     storyId: 'react-ams-page--default',
@@ -583,5 +630,15 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         <PageFooter>Footer area</PageFooter>
       </Page>
     ),
+    detectTokens: {
+      anyOf: [
+        'ams.page.background-color',
+        'ams.page.container-name',
+        'ams.page.container-type',
+        'ams.page.max-inline-size',
+        'ams.page.with-menu.area-skip-link.margin-inline-end',
+        'ams.page.with-menu.max-inline-size',
+      ],
+    },
   },
 ];
