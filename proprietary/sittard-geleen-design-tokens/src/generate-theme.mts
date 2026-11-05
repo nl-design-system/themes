@@ -2567,10 +2567,10 @@ export const generateTheme = (
                   $value: '{basis.text.line-height.xl}',
                 },
               },
-              // Heading 5 and Heading 6 have the same design
+              // Heading 5 and Heading 6 have the same design, at the same size as the body text
               'level-5': {
                 'font-size': {
-                  $value: '{basis.text.font-size.lg}',
+                  $value: '{basis.text.font-size.md}',
                 },
                 'line-height': {
                   $value: '{basis.text.line-height.lg}',
@@ -2578,7 +2578,7 @@ export const generateTheme = (
               },
               'level-6': {
                 'font-size': {
-                  $value: '{basis.text.font-size.lg}',
+                  $value: '{basis.text.font-size.md}',
                 },
                 'line-height': {
                   $value: '{basis.text.line-height.lg}',
