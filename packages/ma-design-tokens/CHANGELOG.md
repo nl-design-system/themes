@@ -1,5 +1,11 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 9.2.0
+
+### Minor Changes
+
+- 238a7f4: Syntax Highlight op basis van Prism toegevoegd voor MA Code Block
+
 ## 9.1.0
 
 ### Minor Changes
