@@ -1,7 +1,7 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
-import { readFile } from 'node:fs/promises';
+import { appendFile, readFile } from 'node:fs/promises';
 import { createConfig } from '../../style-dictionary-config.mjs';
 import { generateTheme } from './src/generate-theme.mts';
 import { hasParentKeys } from '@nl-design-system-community/sittard-geleen-design-tokens/src/util.mts';
@@ -44,6 +44,30 @@ const build = async () => {
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
+
+  // Open Forms only applies its page layout (centering, background, header) under its
+  // default `openforms-theme` class, and its theme class name field allows only one class.
+  sd = new StyleDictionary({
+    ...createConfig({
+      className: 'openforms-theme',
+      buildPath: 'dist/open-forms/',
+    }),
+    preprocessors: [...(useTokensStudio ? 'tokens-studio' : []), 'dtcg-delegate'],
+    tokens: generateTheme(),
+  });
+
+  await sd.cleanAllPlatforms();
+  await sd.buildAllPlatforms();
+
+  // Some Open Forms styles are hardcoded and cannot be overridden with tokens, so append the
+  // shared CSS overrides to the Open Forms theme. That way they ship in the same file.
+  const openFormsOverrides = await readFile(
+    new URL(
+      import.meta.resolve('@nl-design-system-community/sittard-geleen-design-tokens/src/_open-forms-overrides.css'),
+    ),
+    'utf-8',
+  );
+  await appendFile('dist/open-forms/theme.css', `\n${openFormsOverrides}`);
 };
 
 build();
