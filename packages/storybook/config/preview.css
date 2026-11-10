@@ -2,3 +2,18 @@
   /* avoid `font-size-adjust: 0.5` until the community themes have specified their own values */
   --utrecht-root-font-size-adjust: initial;
 }
+
+/* Styles for story examples only. */
+.utrecht-customizable-text-input-example__icon {
+  display: block;
+  padding-inline: var(--utrecht-space-inline-xs, var(--basis-space-inline-md));
+}
+
+.utrecht-customizable-text-input-example__visually-hidden {
+  block-size: 1px;
+  clip-path: inset(50%);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
