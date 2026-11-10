@@ -43,6 +43,14 @@
   margin-inline-start: var(--basis-space-column-md);
 }
 
+/* On mobile Open Forms removes the space above the card body, so the form title (H1) sat right on
+ * top of the text below it. There is no token for this space. The breakpoint matches Open Forms. */
+@media (width <= 767px) {
+  .openforms-theme .openforms-card:not(.openforms-card--mobile-header-hidden) .openforms-card__body {
+    margin-block-start: var(--basis-space-block-xl);
+  }
+}
+
 /* Open Forms makes the top and left border transparent on every button, so only half of the
  * border was visible. Restore the button's own border color on all sides. */
 .openforms-theme .utrecht-button.utrecht-button:not(:focus, :focus-visible),
