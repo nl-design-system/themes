@@ -3236,6 +3236,56 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      // For example the delete button of an uploaded file in Open Forms: only the icon changes color
+      description: 'Sittard-Geleen subtle danger button without background and border',
+    },
+    () => {
+      const transparent = { $type: 'color', $value: '{basis.color.transparent}' };
+
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            button: {
+              'subtle-danger': {
+                'background-color': transparent,
+                'border-color': transparent,
+                color: { $type: 'color', $value: '{basis.color.negative.color-default}' },
+                active: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-active}' },
+                },
+                disabled: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.disabled.color-default}' },
+                },
+                focus: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-hover}' },
+                },
+                hover: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-hover}' },
+                },
+                pressed: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-active}' },
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
