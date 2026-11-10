@@ -57,6 +57,22 @@
   font-size: var(--basis-form-control-font-size);
 }
 
+/* PDF summaries: keep a heading (such as "Contactgegevens") on the same page as the fields below it,
+ * instead of leaving it alone at the bottom of a page. Only applies to print and PDF. */
+@media print {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
 /* Open Forms makes the top and left border transparent on every button, so only half of the
  * border was visible. Restore the button's own border color on all sides. */
 .openforms-theme .utrecht-button.utrecht-button:not(:focus, :focus-visible),
