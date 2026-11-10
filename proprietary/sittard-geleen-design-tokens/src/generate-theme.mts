@@ -2575,6 +2575,12 @@ export const generateTheme = (
                 },
               },
             },
+            // Headings on sittard-geleen.nl are not bold
+            heading: {
+              'font-weight': {
+                $value: '{basis.text.font-weight.default}',
+              },
+            },
           },
           nl: {
             heading: {
