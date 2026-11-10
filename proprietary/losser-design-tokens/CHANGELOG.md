@@ -1,5 +1,11 @@
 # @nl-design-system-community/losser-design-tokens
 
+## 1.0.2
+
+### Patch Changes
+
+- ce82814: Updated color tokens.
+
 ## 1.0.1
 
 ### Patch Changes

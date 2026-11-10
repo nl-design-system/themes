@@ -6,9 +6,58 @@ import '@gemeente-denhaag/side-navigation/index.css';
 import { CaseCard } from '@gemeente-denhaag/card';
 import { ActionSingle } from '@gemeente-denhaag/action';
 import { File } from '@gemeente-denhaag/file';
+import { DescriptionList } from '@gemeente-denhaag/descriptionlist';
 import { Status } from '@gemeente-denhaag/process-steps';
+import type { StatusProps } from '@gemeente-denhaag/process-steps';
 import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 // eslint-disable-next-line no-unused-vars
+
+export const DENHAAG_PROGRESS_LIST_STEPS: StatusProps['steps'] = [
+  {
+    id: 'deelname',
+    marker: 1,
+    status: 'checked',
+    steps: [
+      {
+        id: '04aabddd-5234-44d1-a6aa-753c5bd6f7c5',
+        status: 'checked',
+        title: 'Aanmelding ontvangen',
+      },
+    ],
+    title: 'Deelname aan geluidsonderzoek',
+  },
+  {
+    id: 'onderzoek',
+    marker: 2,
+    status: 'current',
+    steps: [
+      {
+        id: '09c4568b-828c-4656-aae2-c14ba6d51a2d',
+        status: 'checked',
+        title: 'Afspraak meten geluidsoverlast gemaakt',
+      },
+      {
+        id: 'd73a140a-64c4-4414-b003-5bc4f6d3ee8c',
+        title: 'Geluidsoverlast gemeten',
+      },
+      {
+        id: 'f8444469-0b19-43fe-bb97-4e50764119c1',
+        title: 'Onderzoek resultaten verwerkt',
+      },
+    ],
+    title: 'Onderzoek naar geluidsoverlast',
+  },
+  {
+    id: 'uitvoeren',
+    marker: 3,
+    title: 'Uitvoeren van maatregelen',
+  },
+  {
+    id: 'klaar',
+    marker: 4,
+    title: 'Maatregelen zijn uitgevoerd',
+  },
+];
 
 export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
   {
@@ -16,56 +65,7 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     component: 'denhaag-steps',
     group: STORY_GROUPS['STEPS'],
     name: 'Den Haag Status',
-    render: () => (
-      <Status
-        steps={[
-          {
-            id: 'deelname',
-            marker: 1,
-            status: 'checked',
-            steps: [
-              {
-                id: '04aabddd-5234-44d1-a6aa-753c5bd6f7c5',
-                status: 'checked',
-                title: 'Aanmelding ontvangen',
-              },
-            ],
-            title: 'Deelname aan geluidsonderzoek',
-          },
-          {
-            id: 'onderzoek',
-            marker: 2,
-            status: 'current',
-            steps: [
-              {
-                id: '09c4568b-828c-4656-aae2-c14ba6d51a2d',
-                status: 'checked',
-                title: 'Afspraak meten geluidsoverlast gemaakt',
-              },
-              {
-                id: 'd73a140a-64c4-4414-b003-5bc4f6d3ee8c',
-                title: 'Geluidsoverlast gemeten',
-              },
-              {
-                id: 'f8444469-0b19-43fe-bb97-4e50764119c1',
-                title: 'Onderzoek resultaten verwerkt',
-              },
-            ],
-            title: 'Onderzoek naar geluidsoverlast',
-          },
-          {
-            id: 'uitvoeren',
-            marker: 3,
-            title: 'Uitvoeren van maatregelen',
-          },
-          {
-            id: 'klaar',
-            marker: 4,
-            title: 'Maatregelen zijn uitgevoerd',
-          },
-        ]}
-      ></Status>
-    ),
+    render: () => <Status steps={DENHAAG_PROGRESS_LIST_STEPS}></Status>,
   },
   {
     storyId: 'react-denhaag-side-navigation--default',
@@ -136,6 +136,53 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['FILE'],
     name: 'Den Haag File',
     render: () => <File name="Afbeelding.png" href="#" size="123 KB" />,
+  },
+  {
+    storyId: 'react-denhaag-data-summary--default',
+    component: 'denhaag-description-list',
+    group: STORY_GROUPS['DATA_SUMMARY'],
+    name: 'Den Haag Data Summary',
+    render: () => (
+      <DescriptionList
+        items={[
+          { title: 'Naam', detail: 'Jeroen van Drouwen' },
+          { title: 'Geboortedatum', detail: '12 januari 1985' },
+          { title: 'Adres', detail: 'Spui 70, 2511 BT Den Haag' },
+        ]}
+      />
+    ),
+    detectTokens: {
+      anyOf: [
+        'denhaag.description-list.border-color',
+        'denhaag.description-list.color',
+        'denhaag.description-list.font-family',
+        'denhaag.description-list.font-size',
+        'denhaag.description-list.font-weight',
+        'denhaag.description-list.line-height',
+        'denhaag.description-list.margin-block-end',
+        'denhaag.description-list.margin-block-start',
+        'denhaag.description-list.padding-inline-end',
+        'denhaag.description-list.padding-inline-start',
+        'denhaag.description-list.caption.color',
+        'denhaag.description-list.caption.font-family',
+        'denhaag.description-list.caption.font-size',
+        'denhaag.description-list.caption.font-weight',
+        'denhaag.description-list.caption.line-height',
+        'denhaag.description-list.caption.margin-block-end',
+        'denhaag.description-list.detail.padding-block-end',
+        'denhaag.description-list.detail.padding-block-start',
+        'denhaag.description-list.lg.detail.padding-block-end',
+        'denhaag.description-list.lg.detail.padding-block-start',
+        'denhaag.description-list.lg.padding-inline-end',
+        'denhaag.description-list.lg.padding-inline-start',
+        'denhaag.description-list.lg.title.padding-block-end',
+        'denhaag.description-list.lg.title.padding-block-start',
+        'denhaag.description-list.title.color',
+        'denhaag.description-list.title.font-weight',
+        'denhaag.description-list.title.padding-block-end',
+        'denhaag.description-list.title.padding-block-start',
+      ],
+    },
   },
   // {
   //   storyId: 'react-denhaag-avatar--default',

@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/leiden-design-tokens
 
+## 3.1.1
+
+### Patch Changes
+
+- 206df9b: Fix: restored utrecht.checkbox.* tokens
+
 ## 3.1.0
 
 ### Minor Changes

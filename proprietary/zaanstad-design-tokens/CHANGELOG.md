@@ -1,5 +1,11 @@
 # @nl-design-system-community/zaanstad-design-tokens
 
+## 2.0.0
+
+### Major Changes
+
+- 1098311: Design tokens van Gemeente Zaanstad bijgewerkt naar de nieuwe token sheet uit Figma 23.3.0.
+
 ## 1.1.0
 
 ### Minor Changes

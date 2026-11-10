@@ -6381,10 +6381,122 @@
       }
     }
   },
-  "components/checkbox": {
+  "components/checkbox/utrecht": {
     "utrecht": {
       "checkbox": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.form-control.background-color}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.form-control.border-color}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.sm}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.border-width}"
+        },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
+        "size": {
+          "$type": "dimension",
+          "$value": "{basis.size.xs}"
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
+          }
+        },
+        "active": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.active.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.active.border-color}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.form-control.active.border-width}"
+          }
+        },
+        "disabled": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.disabled.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.disabled.border-color}"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.focus.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.focus.border-color}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.form-control.focus.border-width}"
+          }
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.hover.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.hover.border-color}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.form-control.hover.border-width}"
+          }
+        },
+        "invalid": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.invalid.background-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.invalid.border-color}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.form-control.invalid.border-width}"
+          }
+        },
         "checked": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.accent-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.form-control.border-width}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.color-default}"
+          },
           "active": {
             "background-color": {
               "$type": "color",
@@ -6400,39 +6512,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.disabled.accent-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.disabled.border-color}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.form-control.disabled.color}"
-            }
-          },
-          "focus-visible": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.focus.background-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.focus.border-color}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{basis.form-control.focus.border-width}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.form-control.focus.color}"
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           },
           "hover": {
@@ -6450,11 +6530,27 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-hover}"
             }
           }
         },
         "indeterminate": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.accent-color}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{basis.form-control.border-width}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.color-default}"
+          },
           "active": {
             "background-color": {
               "$type": "color",
@@ -6470,39 +6566,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.disabled.accent-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.disabled.border-color}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.form-control.disabled.color}"
-            }
-          },
-          "focus-visible": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.focus.background-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.form-control.focus.border-color}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{basis.form-control.focus.border-width}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.form-control.focus.color}"
+              "$value": "{basis.color.action-1-inverse.color-active}"
             }
           },
           "hover": {
@@ -6520,7 +6584,81 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.bg-document}"
+              "$value": "{basis.color.action-1-inverse.color-hover}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/checkbox/todo": {
+    "todo": {
+      "checkbox": {
+        "checked": {
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.disabled.background-color}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.disabled.border-color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.form-control.disabled.color}"
+            }
+          },
+          "focus-visible": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.focus.accent-color}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.focus.border-color}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{basis.form-control.focus.border-width}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.form-control.focus.color}"
+            }
+          }
+        },
+        "indeterminate": {
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.disabled.accent-color}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.disabled.border-color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.form-control.disabled.color}"
+            }
+          },
+          "focus-visible": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.focus.accent-color}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.form-control.focus.border-color}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{basis.form-control.focus.border-width}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.form-control.focus.color}"
             }
           }
         }
@@ -15156,7 +15294,8 @@
       "components/calendar",
       "components/card-as-link/amsterdam",
       "components/card-as-link/todo",
-      "components/checkbox",
+      "components/checkbox/utrecht",
+      "components/checkbox/todo",
       "components/code/nl",
       "components/code/utrecht",
       "components/code-block/nl",

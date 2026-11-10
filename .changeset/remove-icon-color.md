@@ -1,5 +1,5 @@
 ---
-"@nl-design-system-community/ma-design-tokens": major
+"@nl-design-system-unstable/voorbeeld-design-tokens": major
 ---
 
-Verwijderd `utrecht.icon.color` token zodat `currentColor` gaat werken.
+- Token `utrecht.icon.color` is verwijderd uit Icon component.

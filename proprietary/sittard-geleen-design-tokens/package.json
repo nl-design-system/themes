@@ -1,6 +1,6 @@
 {
   "name": "@nl-design-system-community/sittard-geleen-design-tokens",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Community for NL Design System",
   "description": "NL Design System design tokens voor Sittard-Geleen thema",
   "website": "https://www.nldesignsystem.nl/",
@@ -8,8 +8,8 @@
     "nl-design-system"
   ],
   "license": "SEE LICENSE IN LICENSE.md",
-  "private": false,
   "publishConfig": {
+    "access": "public",
     "provenance": true
   },
   "repository": {
@@ -29,10 +29,8 @@
     "output-theme": "node ./src/output-theme.mts"
   },
   "devDependencies": {
-    "@amsterdam/design-system-react": "4.4.0",
-    "@fontsource/cantarell": "5.3.0",
-    "@fontsource/fira-sans": "5.3.0",
-    "@fontsource/source-serif-pro": "5.3.0",
+    "@amsterdam/design-system-react": "4.5.0",
+    "@fontsource/inter": "5.3.0",
     "@gemeente-denhaag/card": "4.1.0",
     "@nl-design-system-community/color-scale-generator": "1.0.2",
     "@nl-design-system-community/design-tokens-definition": "workspace:*",
@@ -42,8 +40,8 @@
     "@nl-design-system-unstable/start-design-tokens": "workspace:*",
     "@nl-design-system-unstable/theme-toolkit": "workspace:*",
     "@nl-design-system-unstable/tokens-lib": "workspace:*",
-    "@storybook/addon-docs": "9.1.17",
-    "@storybook/react-vite": "9.1.17",
+    "@storybook/addon-docs": "9.1.21",
+    "@storybook/react-vite": "9.1.21",
     "@tokens-studio/sd-transforms": "1.2.3",
     "@types/react": "19.3.0",
     "@utrecht/component-library-react": "8.0.3",

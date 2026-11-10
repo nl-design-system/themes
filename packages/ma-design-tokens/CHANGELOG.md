@@ -1,5 +1,23 @@
 # @nl-design-system-community/ma-design-tokens
 
+## 9.2.0
+
+### Minor Changes
+
+- 238a7f4: Syntax Highlight op basis van Prism toegevoegd voor MA Code Block
+
+## 9.1.0
+
+### Minor Changes
+
+- 6ad34cd: Token utrecht.textbox.icon.size is toegevoegd aan Text Input component.
+
+## 9.0.0
+
+### Major Changes
+
+- bf97b37: Verwijderd `utrecht.icon.color` token zodat `currentColor` gaat werken.
+
 ## 8.2.0
 
 ### Minor Changes
