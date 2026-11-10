@@ -3209,6 +3209,33 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen design decision: less space between list items',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            'ordered-list': {
+              item: {
+                'margin-block-end': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+                'margin-block-start': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+              },
+            },
+            'unordered-list': {
+              item: {
+                'margin-block-end': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+                'margin-block-start': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
