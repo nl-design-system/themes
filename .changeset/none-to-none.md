@@ -4,7 +4,9 @@
 "@nl-design-system-community/ma-design-tokens": patch
 ---
 
-De waarde van de volgende tokens is gewijzigd van `None` naar `none`
+Door een nieuwe release van Tokens Studio wordt 'none' als waarde inmiddels wel herkend door de Documentatie-functionaliteit.
+
+De waarde van de volgende tokens is gewijzigd van `None` naar `none`:
 
 - `ams.breadcrumb.link.hover.text-decoration-line`
 - `utrecht.breadcrumb-nav.link.active.text-decoration`
