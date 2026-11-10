@@ -2832,9 +2832,11 @@ export const generateTheme = (
                 $type: 'color',
                 $value: '{basis.color.action-1.bg-default}',
               },
+              // Open Forms uses this as the brand color, also as background (selected options of a multi-select) and text
+              // color (fieldset legend). `color-default` is the white text on the primary button, which made those white on white.
               primary: {
                 $type: 'color',
-                $value: '{basis.color.action-1.color-default}',
+                $value: '{basis.color.action-1.bg-default}',
               },
             },
             text: {
