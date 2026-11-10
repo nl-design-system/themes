@@ -51,6 +51,12 @@
   }
 }
 
+/* The options of an open dropdown have no font size of their own, so they were smaller than the
+ * selected value in the field. There is no token for this. */
+.openforms-theme .utrecht-select.utrecht-select--openforms + .rs-menu {
+  font-size: var(--basis-form-control-font-size);
+}
+
 /* Open Forms makes the top and left border transparent on every button, so only half of the
  * border was visible. Restore the button's own border color on all sides. */
 .openforms-theme .utrecht-button.utrecht-button:not(:focus, :focus-visible),
