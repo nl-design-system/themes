@@ -3286,6 +3286,31 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen design decision: form labels a little less bold',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          sg: {
+            text: {
+              'font-weight': {
+                semibold: { $type: 'fontWeights', $value: '600' },
+              },
+            },
+          },
+          utrecht: {
+            'form-label': {
+              'font-weight': { $type: 'fontWeights', $value: '{sg.text.font-weight.semibold}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
