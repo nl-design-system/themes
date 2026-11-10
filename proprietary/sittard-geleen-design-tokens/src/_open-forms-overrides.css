@@ -73,6 +73,31 @@
   }
 }
 
+/* The close button of a modal (such as "Kind toevoegen") is a subtle button that Open Forms makes
+ * half transparent. Show it as a secondary button instead. There is no token for this button. */
+.openforms-theme .openforms-modal .openforms-modal__close,
+.openforms-theme .openforms-modal .openforms-modal__close:hover {
+  --_utrecht-button-appearance-active-background-color: var(--utrecht-button-secondary-action-active-background-color);
+  --_utrecht-button-appearance-active-border-color: var(--utrecht-button-secondary-action-active-border-color);
+  --_utrecht-button-appearance-active-color: var(--utrecht-button-secondary-action-active-color);
+  --_utrecht-button-appearance-background-color: var(--utrecht-button-secondary-action-background-color);
+  --_utrecht-button-appearance-border-color: var(--utrecht-button-secondary-action-border-color);
+  --_utrecht-button-appearance-color: var(--utrecht-button-secondary-action-color);
+  --_utrecht-button-appearance-focus-background-color: var(--utrecht-button-secondary-action-focus-background-color);
+  --_utrecht-button-appearance-focus-border-color: var(--utrecht-button-secondary-action-focus-border-color);
+  --_utrecht-button-appearance-focus-color: var(--utrecht-button-secondary-action-focus-color);
+  --_utrecht-button-appearance-hover-background-color: var(--utrecht-button-secondary-action-hover-background-color);
+  --_utrecht-button-appearance-hover-border-color: var(--utrecht-button-secondary-action-hover-border-color);
+  --_utrecht-button-appearance-hover-color: var(--utrecht-button-secondary-action-hover-color);
+  --_utrecht-button-appearance-pressed-background-color: var(
+    --utrecht-button-secondary-action-pressed-background-color
+  );
+  --_utrecht-button-appearance-pressed-border-color: var(--utrecht-button-secondary-action-pressed-border-color);
+  --_utrecht-button-appearance-pressed-color: var(--utrecht-button-secondary-action-pressed-color);
+
+  opacity: 100%;
+}
+
 /* Open Forms makes the top and left border transparent on every button, so only half of the
  * border was visible. Restore the button's own border color on all sides. */
 .openforms-theme .utrecht-button.utrecht-button:not(:focus, :focus-visible),
