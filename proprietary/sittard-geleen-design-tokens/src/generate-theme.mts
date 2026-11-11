@@ -3567,6 +3567,39 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      description: 'NL Portal: alert',
+    },
+    () => {
+      const color = (name: string) => ({ $type: 'color', $value: `{basis.color.${name}}` });
+      const alert = (status: string) => ({
+        'background-color': color(`${status}.bg-default`),
+        'title-color': color(`${status}.color-document`),
+        'paragraph-color': color(`${status}.color-document`),
+        'icon-color': color(`${status}.color-default`),
+        'close-icon-color': color(`${status}.color-default`),
+        'action-button-background-color': color(`${status}-inverse.bg-default`),
+        'action-button-hover-background-color': color(`${status}-inverse.bg-hover`),
+        'action-button-color': color(`${status}-inverse.color-default`),
+      });
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            alert: {
+              info: alert('info'),
+              success: alert('positive'),
+              warning: alert('warning'),
+              error: alert('negative'),
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
