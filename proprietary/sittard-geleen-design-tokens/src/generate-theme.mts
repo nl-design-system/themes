@@ -3626,6 +3626,28 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      // Den Haag components use the Den Haag fonts (TheSans and TheMix). Use the Sittard-Geleen font instead.
+      description: 'NL Portal: font',
+    },
+    () => {
+      const font = { $type: 'fontFamilies', $value: '{basis.text.font-family.default}' };
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            typography: {
+              'sans-serif': { 'font-family': font },
+              'sans-serif-alternate': { 'font-family': font },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
