@@ -3411,6 +3411,74 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      // Den Haag buttons
+      description: 'NL Portal: buttons',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            button: {
+              'border-radius': { $type: 'dimension', $value: '{nl.button.border-radius}' },
+              'border-width': { $type: 'dimension', $value: '{nl.button.primary.border-width}' },
+              cursor: { $type: 'other', $value: '{basis.action.activate.cursor}' },
+              'font-family': { $type: 'fontFamilies', $value: '{nl.button.font-family}' },
+              'font-size': { $type: 'fontSizes', $value: '{nl.button.primary.font-size}' },
+              'font-weight': { $type: 'fontWeights', $value: '{nl.button.primary.font-weight}' },
+              gap: { $type: 'dimension', $value: '{nl.button.column-gap}' },
+              'icon-only': {
+                height: { $type: 'dimension', $value: '{nl.button.min-block-size}' },
+                'icon-height': { $type: 'dimension', $value: '{basis.size.icon.md}' },
+              },
+              'large-size': {
+                'font-size': { $type: 'fontSizes', $value: '{basis.text.font-size.lg}' },
+                'line-height': { $type: 'lineHeights', $value: '{basis.text.line-height.lg}' },
+                'padding-block': { $type: 'dimension', $value: '{basis.space.block.lg}' },
+                'padding-inline': { $type: 'dimension', $value: '{basis.space.inline.xl}' },
+              },
+              'medium-size': {
+                'padding-block': { $type: 'dimension', $value: '{nl.button.padding-block-start}' },
+                'padding-inline': { $type: 'dimension', $value: '{nl.button.padding-inline-start}' },
+              },
+              'padding-block': { $type: 'dimension', $value: '{nl.button.padding-block-start}' },
+              'padding-inline': { $type: 'dimension', $value: '{nl.button.padding-inline-start}' },
+              'primary-action': {
+                'background-color': { $type: 'color', $value: '{nl.button.primary.background-color}' },
+                color: { $type: 'color', $value: '{nl.button.primary.color}' },
+                disabled: {
+                  'background-color': { $type: 'color', $value: '{nl.button.primary.disabled.background-color}' },
+                  color: { $type: 'color', $value: '{nl.button.primary.disabled.color}' },
+                },
+                hover: {
+                  'background-color': { $type: 'color', $value: '{nl.button.primary.hover.background-color}' },
+                  color: { $type: 'color', $value: '{nl.button.primary.hover.color}' },
+                },
+              },
+              'secondary-action': {
+                'background-color': { $type: 'color', $value: '{nl.button.secondary.background-color}' },
+                'border-color': { $type: 'color', $value: '{nl.button.secondary.border-color}' },
+                color: { $type: 'color', $value: '{nl.button.secondary.color}' },
+                disabled: {
+                  'background-color': { $type: 'color', $value: '{nl.button.secondary.disabled.background-color}' },
+                  'border-color': { $type: 'color', $value: '{nl.button.secondary.disabled.border-color}' },
+                  color: { $type: 'color', $value: '{nl.button.secondary.disabled.color}' },
+                },
+                hover: {
+                  'background-color': { $type: 'color', $value: '{nl.button.secondary.hover.background-color}' },
+                  'border-color': { $type: 'color', $value: '{nl.button.secondary.hover.border-color}' },
+                  color: { $type: 'color', $value: '{nl.button.secondary.hover.color}' },
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
