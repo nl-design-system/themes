@@ -129,11 +129,11 @@ export const generateTheme = (
             link: {
               'padding-block-end': {
                 $type: 'dimension',
-                $value: '{basis.space.block.sm}',
+                $value: '{basis.space.block.md}',
               },
               'padding-block-start': {
                 $type: 'dimension',
-                $value: '{basis.space.block.sm}',
+                $value: '{basis.space.block.md}',
               },
               'padding-inline-start': {
                 $type: 'dimension',
