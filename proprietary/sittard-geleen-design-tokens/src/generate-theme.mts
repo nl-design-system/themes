@@ -3547,6 +3547,26 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      description: 'NL Portal: file',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            file: {
+              left: {
+                'background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-default}' },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
