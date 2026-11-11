@@ -68,6 +68,10 @@ const build = async () => {
   // change other applications that use the theme.
   const gppWooOverrides = await readFile('./src/_gpp-woo-overrides.css', 'utf-8');
   await appendFile('dist/theme.css', `\n${gppWooOverrides}`);
+
+  // NL Portal (Den Haag components) styles that tokens cannot reach. They only match Den Haag classes.
+  const nlPortalOverrides = await readFile('./src/_nl-portal-overrides.css', 'utf-8');
+  await appendFile('dist/theme.css', `\n${nlPortalOverrides}`);
 };
 
 build();
