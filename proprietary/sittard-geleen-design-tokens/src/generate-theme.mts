@@ -3506,6 +3506,47 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      // Like the status timeline on sittard-geleen.nl: square markers, blue for done steps, a blue outline for the
+      // current step and grey for the steps to come.
+      description: 'NL Portal: process steps',
+    },
+    () => {
+      const blue = { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-default}' };
+      const grey = { $type: 'color', $value: '{basis.color.disabled.border-default}' };
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            'step-marker': {
+              'border-radius': { $type: 'dimension', $value: '{basis.border-radius.none}' },
+              checked: {
+                'background-color': blue,
+                'border-color': blue,
+                color: { $type: 'color', $value: '{basis.color.accent-1-inverse.color-default}' },
+              },
+              current: {
+                'background-color': { $type: 'color', $value: '{basis.color.default.bg-document}' },
+                'border-color': blue,
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-default}' },
+              },
+              'not-checked': {
+                'background-color': { $type: 'color', $value: '{basis.color.default.bg-document}' },
+                'border-color': grey,
+              },
+              connector: {
+                checked: { 'outline-color': blue },
+                'not-checked': { 'outline-color': grey },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
