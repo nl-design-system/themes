@@ -3479,6 +3479,33 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      // Open cases ("Mijn zaken") are Sittard-Geleen blue with white text. Closed (archived) cases stay grey.
+      description: 'NL Portal: case card',
+    },
+    () => {
+      const white = { $type: 'color', $value: '{basis.color.accent-1-inverse.color-default}' };
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            'case-card': {
+              'background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-default}' },
+              'background-background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-hover}' },
+              'title-color': white,
+              'subtitle-color': white,
+              'context-color': white,
+              'action-color': white,
+              'action-active-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.color-active}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
