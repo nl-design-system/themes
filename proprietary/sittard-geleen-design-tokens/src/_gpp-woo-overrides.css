@@ -1,0 +1,16 @@
+/*
+ * GPP-Woo overrides
+ *
+ * GPP-Woo puts the `gpp-woo-theme` class on the body, so these rules only apply in GPP-Woo.
+ * This file is appended to dist/theme.css by style-dictionary.mjs.
+ */
+
+/* The blue page header made the blue logo link hard to read. GPP-Woo uses a white header, with a
+ * white navigation bar in it. */
+.gpp-woo-theme,
+.gpp-woo-theme .sg-theme {
+  --utrecht-page-header-background-color: var(--basis-color-default-bg-document);
+  --utrecht-page-header-color: var(--basis-color-default-color-document);
+  --utrecht-nav-bar-background-color: var(--basis-color-default-bg-document);
+  --utrecht-nav-bar-content-background-color: var(--basis-color-default-bg-document);
+}

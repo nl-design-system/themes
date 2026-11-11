@@ -63,6 +63,11 @@ const build = async () => {
   // CSS overrides to the Open Forms theme. That way they ship in the same file.
   const openFormsOverrides = await readFile('./src/_open-forms-overrides.css', 'utf-8');
   await appendFile('dist/open-forms/theme.css', `\n${openFormsOverrides}`);
+
+  // GPP-Woo specific design decisions. They are scoped to its `gpp-woo-theme` class, so they do not
+  // change other applications that use the theme.
+  const gppWooOverrides = await readFile('./src/_gpp-woo-overrides.css', 'utf-8');
+  await appendFile('dist/theme.css', `\n${gppWooOverrides}`);
 };
 
 build();
