@@ -3238,6 +3238,32 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
+      // The Start Theme uses `action-2.color-*` for links, which is the black text on the secondary button.
+      // Use the same blue as `utrecht.link`, so Den Haag links (NL Portal) and visited links are blue too.
+      description: 'Sittard-Geleen design decision: link color',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          nl: {
+            link: {
+              color: { $type: 'color', $value: '{basis.color.accent-1.color-default}' },
+              active: {
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-active}' },
+              },
+              hover: {
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-hover}' },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
       // For example the delete button of an uploaded file in Open Forms: only the icon changes color
       description: 'Sittard-Geleen subtle danger button without background and border',
     },
