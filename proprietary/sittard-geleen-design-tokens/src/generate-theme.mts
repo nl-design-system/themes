@@ -3311,6 +3311,34 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      description: 'Gpp-WOO fixes',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          'gpp-woo': {
+            card: {
+              'background-color': { $type: 'color', $value: '{basis.color.default.bg-document}' },
+              'box-shadow': { $type: 'boxShadow', $value: '{basis.box-shadow.md}' },
+              'content-padding-block': { $type: 'dimension', $value: '{basis.space.block.xl}' },
+              'content-padding-inline': { $type: 'dimension', $value: '{basis.space.inline.xl}' },
+            },
+          },
+          // GPP-Woo also loads the Utrecht theme, which gives text boxes a 3px bottom border through an older token
+          // name. The textbox CSS still reads it, so set it to our own border width.
+          utrecht: {
+            textbox: {
+              'border-bottom-width': { $type: 'dimension', $value: '{basis.form-control.border-width}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
