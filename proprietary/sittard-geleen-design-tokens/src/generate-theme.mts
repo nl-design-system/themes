@@ -3385,6 +3385,32 @@ export const generateTheme = (
     },
   );
 
+  theme = safeTransform(
+    {
+      description: 'NL Portal: side navigation',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            'side-navigation': {
+              link: {
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-default}' },
+                hover: {
+                  color: { $type: 'color', $value: '{basis.color.accent-1.color-hover}' },
+                },
+                active: {
+                  color: { $type: 'color', $value: '{basis.color.accent-1.color-active}' },
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
   /*
     Niet ingesteld
     --of-select-menu-box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
