@@ -3332,7 +3332,7 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: form labels a little less bold',
+      description: 'Sittard-Geleen form labels a little less bold',
     },
     () => {
       return mergeTokens([
