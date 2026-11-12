@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:16.4.2
+FROM node:24.22.3-alpine
 
 ARG TZ=Europe/Amsterdam
 ENV TZ Europe/Amsterdam
