@@ -1,0 +1,111 @@
+/*
+ * Open Forms overrides
+ *
+ * Open Forms' own stylesheet hardcodes a few button styles that design tokens cannot override.
+ * This file is appended to dist/open-forms/theme.css by style-dictionary.mjs, so the fixes ship
+ * with the theme. The doubled classes only raise specificity above the Open Forms rules.
+ */
+
+/* Open Forms sets a 2px border radius on keyboard focus, which made the round buttons square. */
+.openforms-theme .utrecht-button.utrecht-button:focus-visible,
+.openforms-theme .utrecht-button-link.utrecht-button-link:focus-visible,
+.openforms-theme .utrecht-link-button.utrecht-link-button:focus-visible {
+  --utrecht-button-border-radius: var(--nl-button-border-radius);
+}
+
+/* Buttons in tables:
+ * - Open Forms gives them uneven block padding, which pushed the icons down. Use equal padding
+ *   so the icon sits in the center of the button.
+ * - Open Forms makes their background transparent. Give the edit button the secondary color. */
+.openforms-theme .utrecht-table .utrecht-button.utrecht-button {
+  --utrecht-button-padding-block-start: 0;
+  --utrecht-button-padding-block-end: 0;
+  --_utrecht-button-background-color: var(--basis-color-action-2-bg-default);
+  --_utrecht-button-hover-background-color: var(--basis-color-action-2-bg-hover);
+  --_utrecht-button-active-background-color: var(--basis-color-action-2-bg-active);
+
+  justify-content: center;
+  line-height: 1;
+}
+
+/* The delete (danger) button gets a light red background, matching its red icon. The default
+ * active state is a red background, which made the red icon invisible, so keep it light red
+ * with a darker red icon instead. */
+.openforms-theme .utrecht-table .utrecht-button.utrecht-button--danger {
+  --_utrecht-button-background-color: var(--basis-color-negative-bg-default);
+  --_utrecht-button-hover-background-color: var(--basis-color-negative-bg-hover);
+  --_utrecht-button-active-background-color: var(--basis-color-negative-bg-active);
+  --_utrecht-button-active-color: var(--basis-color-negative-color-active);
+}
+
+/* Space between the edit and delete buttons */
+.openforms-theme .utrecht-table .utrecht-button + .utrecht-button {
+  margin-inline-start: var(--basis-space-column-md);
+}
+
+/* On mobile Open Forms removes the space above the card body, so the form title (H1) sat right on
+ * top of the text below it. There is no token for this space. The breakpoint matches Open Forms. */
+@media (width <= 767px) {
+  .openforms-theme .openforms-card:not(.openforms-card--mobile-header-hidden) .openforms-card__body {
+    margin-block-start: var(--basis-space-block-xl);
+  }
+}
+
+/* The options of an open dropdown have no font size of their own, so they were smaller than the
+ * selected value in the field. There is no token for this. */
+.openforms-theme .utrecht-select.utrecht-select--openforms + .rs-menu {
+  font-size: var(--basis-form-control-font-size);
+}
+
+/* PDF summaries: keep a heading (such as "Contactgegevens") on the same page as the fields below it,
+ * instead of leaving it alone at the bottom of a page. Only applies to print and PDF. */
+@media print {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* The close button of a modal (such as "Kind toevoegen") is a subtle button that Open Forms makes
+ * half transparent. Show it as a secondary button instead. There is no token for this button. */
+.openforms-theme .openforms-modal .openforms-modal__close,
+.openforms-theme .openforms-modal .openforms-modal__close:hover {
+  --_utrecht-button-appearance-active-background-color: var(--utrecht-button-secondary-action-active-background-color);
+  --_utrecht-button-appearance-active-border-color: var(--utrecht-button-secondary-action-active-border-color);
+  --_utrecht-button-appearance-active-color: var(--utrecht-button-secondary-action-active-color);
+  --_utrecht-button-appearance-background-color: var(--utrecht-button-secondary-action-background-color);
+  --_utrecht-button-appearance-border-color: var(--utrecht-button-secondary-action-border-color);
+  --_utrecht-button-appearance-color: var(--utrecht-button-secondary-action-color);
+  --_utrecht-button-appearance-focus-background-color: var(--utrecht-button-secondary-action-focus-background-color);
+  --_utrecht-button-appearance-focus-border-color: var(--utrecht-button-secondary-action-focus-border-color);
+  --_utrecht-button-appearance-focus-color: var(--utrecht-button-secondary-action-focus-color);
+  --_utrecht-button-appearance-hover-background-color: var(--utrecht-button-secondary-action-hover-background-color);
+  --_utrecht-button-appearance-hover-border-color: var(--utrecht-button-secondary-action-hover-border-color);
+  --_utrecht-button-appearance-hover-color: var(--utrecht-button-secondary-action-hover-color);
+  --_utrecht-button-appearance-pressed-background-color: var(
+    --utrecht-button-secondary-action-pressed-background-color
+  );
+  --_utrecht-button-appearance-pressed-border-color: var(--utrecht-button-secondary-action-pressed-border-color);
+  --_utrecht-button-appearance-pressed-color: var(--utrecht-button-secondary-action-pressed-color);
+
+  opacity: 100%;
+}
+
+/* Open Forms makes the top and left border transparent on every button, so only half of the
+ * border was visible. Restore the button's own border color on all sides. */
+.openforms-theme .utrecht-button.utrecht-button:not(:focus, :focus-visible),
+.openforms-theme .utrecht-button.utrecht-button:hover:not(:focus, :focus-visible),
+.openforms-theme .utrecht-button-link.utrecht-button-link:not(:focus, :focus-visible),
+.openforms-theme .utrecht-button-link.utrecht-button-link:hover:not(:focus, :focus-visible),
+.openforms-theme .utrecht-link-button.utrecht-link-button:not(:focus, :focus-visible),
+.openforms-theme .utrecht-link-button.utrecht-link-button:hover:not(:focus, :focus-visible) {
+  border-block-start-color: var(--_utrecht-button-border-color, var(--utrecht-button-border-color, transparent));
+  border-inline-start-color: var(--_utrecht-button-border-color, var(--utrecht-button-border-color, transparent));
+}

@@ -1,7 +1,7 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
-import { readFile } from 'node:fs/promises';
+import { appendFile, readFile } from 'node:fs/promises';
 import { createConfig } from '../../style-dictionary-config.mjs';
 import { generateTheme } from './src/generate-theme.mts';
 import { hasParentKeys } from './src/util.mts';
@@ -26,7 +26,7 @@ const build = async () => {
 
   let sd = new StyleDictionary({
     ...lightConfig,
-    preprocessors: [...(useTokensStudio ? 'tokens-studio' : []), 'dtcg-delegate'],
+    preprocessors: ['tokens-studio', 'dtcg-delegate'],
     tokens: generateTheme(),
   });
 
@@ -38,12 +38,40 @@ const build = async () => {
       className: `${themeConfig.prefix}-theme--color-scheme-dark`,
       buildPath: 'dist/color-scheme-dark/',
     }),
-    preprocessors: [...(useTokensStudio ? 'tokens-studio' : []), 'dtcg-delegate'],
+    preprocessors: ['tokens-studio', 'dtcg-delegate'],
     tokens: generateTheme({ colorScheme: 'dark' }),
   });
 
   await sd.cleanAllPlatforms();
   await sd.buildAllPlatforms();
+
+  // Open Forms only applies its page layout (centering, background, header) under its
+  // default `openforms-theme` class, and its theme class name field allows only one class.
+  sd = new StyleDictionary({
+    ...createConfig({
+      className: 'openforms-theme',
+      buildPath: 'dist/open-forms/',
+    }),
+    preprocessors: ['tokens-studio', 'dtcg-delegate'],
+    tokens: generateTheme(),
+  });
+
+  await sd.cleanAllPlatforms();
+  await sd.buildAllPlatforms();
+
+  // Some Open Forms styles are hardcoded and cannot be overridden with tokens, so append the
+  // CSS overrides to the Open Forms theme. That way they ship in the same file.
+  const openFormsOverrides = await readFile('./src/_open-forms-overrides.css', 'utf-8');
+  await appendFile('dist/open-forms/theme.css', `\n${openFormsOverrides}`);
+
+  // GPP-Woo specific design decisions. They are scoped to its `gpp-woo-theme` class, so they do not
+  // change other applications that use the theme.
+  const gppWooOverrides = await readFile('./src/_gpp-woo-overrides.css', 'utf-8');
+  await appendFile('dist/theme.css', `\n${gppWooOverrides}`);
+
+  // NL Portal (Den Haag components) styles that tokens cannot reach. They only match Den Haag classes.
+  const nlPortalOverrides = await readFile('./src/_nl-portal-overrides.css', 'utf-8');
+  await appendFile('dist/theme.css', `\n${nlPortalOverrides}`);
 };
 
 build();

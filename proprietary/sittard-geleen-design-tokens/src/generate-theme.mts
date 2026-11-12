@@ -75,6 +75,9 @@ export const generateTheme = (
             'padding-inline-start': {
               $value: '{basis.space.inline.md}',
             },
+            'background-color': {
+              $value: '{basis.color.default.bg-subtle}',
+            },
           },
         },
         denhaag: {
@@ -82,11 +85,11 @@ export const generateTheme = (
             link: {
               'padding-block-end': {
                 $type: 'dimension',
-                $value: '{basis.space.block.sm}',
+                $value: '{basis.space.block.md}',
               },
               'padding-block-start': {
                 $type: 'dimension',
-                $value: '{basis.space.block.sm}',
+                $value: '{basis.space.block.md}',
               },
               'padding-inline-start': {
                 $type: 'dimension',
@@ -1040,12 +1043,14 @@ export const generateTheme = (
         {
           utrecht: {
             link: {
-              color: {},
+              color: {
+                $value: '{basis.color.accent-1.color-default}',
+              },
               'text-decoration': {
                 $value: '{nl.link.text-decoration-line}',
               },
               'text-decoration-color': {
-                $value: '{nl.link.text-decoration-color}',
+                $value: 'currentColor',
               },
               'text-decoration-thickness': {
                 $value: '{nl.link.text-decoration-thickness}',
@@ -1072,7 +1077,7 @@ export const generateTheme = (
               },
               hover: {
                 color: {
-                  $value: '{nl.link.hover.color}',
+                  $value: '{basis.color.accent-1.color-hover}',
                 },
                 'text-decoration': {
                   $value: '{nl.link.hover.text-decoration-line}',
@@ -1458,6 +1463,10 @@ export const generateTheme = (
           basis: {
             color: {
               'action-1': {
+                // The generated hover is only ~1% darker than bg-default, too subtle to notice
+                'bg-hover': {
+                  $value: '{basis.color.action-1-inverse.bg-default}',
+                },
                 'color-default': {
                   $value: '#ffffff',
                 },
@@ -1471,7 +1480,7 @@ export const generateTheme = (
                   $value: '#000000',
                 },
                 'border-hover': {
-                  $value: '#000000',
+                  $value: '#ffffff',
                 },
                 'border-active': {
                   $value: '#000000',
@@ -2220,9 +2229,69 @@ export const generateTheme = (
         theme,
         {
           basis: {
+            // The black borders made the text fields look too plain, so they now use the theme's
+            // primary blue (accent-1, same blue as the primary color) to bring more of the theme
+            // into forms. Accent-2 (green) was tried first, but did not have enough contrast.
             'form-control': {
               'border-color': {
-                $value: '{basis.color.action-1.border-default}',
+                $value: '{basis.color.accent-1.border-default}',
+              },
+              hover: {
+                'border-color': {
+                  $value: '{basis.color.accent-1.border-hover}',
+                },
+              },
+              focus: {
+                'border-color': {
+                  $value: '{basis.color.accent-1.border-active}',
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen design decision: calendar color',
+    },
+    () => {
+      // The calendar defaults to `action-1.color-*`, which is white for the primary button text,
+      // so the days and navigation were white on white. Using accent-1 (same blue) instead.
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            calendar: {
+              navigation: {
+                color: {
+                  $type: 'color',
+                  $value: '{basis.color.accent-1.color-default}',
+                },
+              },
+              table: {
+                'days-item-day': {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.accent-1.color-default}',
+                  },
+                  'is-today': {
+                    color: {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.color-default}',
+                    },
+                    'background-color': {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.bg-default}',
+                    },
+                    'border-color': {
+                      $type: 'color',
+                      $value: '{basis.color.accent-1.border-active}',
+                    },
+                  },
+                },
               },
             },
           },
@@ -2462,6 +2531,12 @@ export const generateTheme = (
                 },
               },
             },
+            // Headings on sittard-geleen.nl are not bold
+            heading: {
+              'font-weight': {
+                $value: '{basis.text.font-weight.default}',
+              },
+            },
           },
           nl: {
             heading: {
@@ -2498,10 +2573,10 @@ export const generateTheme = (
                   $value: '{basis.text.line-height.xl}',
                 },
               },
-              // Heading 5 and Heading 6 have the same design
+              // Heading 5 and Heading 6 have the same design, at the same size as the body text
               'level-5': {
                 'font-size': {
-                  $value: '{basis.text.font-size.lg}',
+                  $value: '{basis.text.font-size.md}',
                 },
                 'line-height': {
                   $value: '{basis.text.line-height.lg}',
@@ -2509,7 +2584,7 @@ export const generateTheme = (
               },
               'level-6': {
                 'font-size': {
-                  $value: '{basis.text.font-size.lg}',
+                  $value: '{basis.text.font-size.md}',
                 },
                 'line-height': {
                   $value: '{basis.text.line-height.lg}',
@@ -2658,6 +2733,56 @@ export const generateTheme = (
         theme,
         {
           of: {
+            // Open Forms' default for checkbox/radio option descriptions is a light grey that is
+            // hard to read; use the secondary text color instead.
+            'checkbox-group': {
+              option: {
+                description: {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.default.color-subtle}',
+                  },
+                },
+              },
+            },
+            'radio-group': {
+              option: {
+                description: {
+                  color: {
+                    $type: 'color',
+                    $value: '{basis.color.default.color-subtle}',
+                  },
+                },
+              },
+            },
+            // The stripes on info/warning/error/success blocks default to the `of.color.*`
+            // text colors (warning is dark brown); use the border colors instead.
+            'formio-content': {
+              info: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.info.border-default}',
+                },
+              },
+              warning: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.warning.border-default}',
+                },
+              },
+              error: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.negative.border-default}',
+                },
+              },
+              success: {
+                'border-inline-start-color': {
+                  $type: 'color',
+                  $value: '{basis.color.positive.border-default}',
+                },
+              },
+            },
             color: {
               'read-only-bg': {
                 $type: 'color',
@@ -2673,7 +2798,7 @@ export const generateTheme = (
               },
               'fg-muted': {
                 $type: 'color',
-                $value: '{basis.color.default.border-subtle}',
+                $value: '{basis.color.default.border-default}',
               },
               fg: {
                 $type: 'color',
@@ -2707,9 +2832,11 @@ export const generateTheme = (
                 $type: 'color',
                 $value: '{basis.color.action-1.bg-default}',
               },
+              // Open Forms uses this as the brand color, also as background (selected options of a multi-select) and text
+              // color (fieldset legend). `color-default` is the white text on the primary button, which made those white on white.
               primary: {
                 $type: 'color',
-                $value: '{basis.color.action-1.color-default}',
+                $value: '{basis.color.action-1.bg-default}',
               },
             },
             text: {
@@ -2946,7 +3073,7 @@ export const generateTheme = (
                   focus: {
                     'background-color': {
                       $type: 'color',
-                      $value: '{utrecht.listbox.option.selected.background-color}',
+                      $value: '{basis.color.action-2.bg-default}',
                     },
                   },
                   'padding-block-start': {
@@ -2984,6 +3111,26 @@ export const generateTheme = (
                 $value: '{utrecht.page-footer.color}',
               },
             },
+            'page-header': {
+              bg: {
+                $type: 'color',
+                $value: '{utrecht.page-header.background-color}',
+              },
+              fg: {
+                $type: 'color',
+                $value: '{utrecht.page-header.color}',
+              },
+            },
+            'header-logo': {
+              width: {
+                $type: 'dimension',
+                $value: '{utrecht.logo.max-inline-size}',
+              },
+              height: {
+                $type: 'dimension',
+                $value: '{basis.size.lg}',
+              },
+            },
           },
           'of-utrecht': {
             'form-field-description': {
@@ -3011,6 +3158,16 @@ export const generateTheme = (
                 color: {
                   $type: 'color',
                   $value: '{utrecht.link.placeholder.color}',
+                },
+              },
+            },
+            'data-list': {
+              'item-key': {
+                laptop: {
+                  'font-weight': {
+                    $type: 'fontWeights',
+                    $value: '{utrecht.data-list.item-key.font-weight}',
+                  },
                 },
               },
             },
@@ -3045,6 +3202,445 @@ export const generateTheme = (
                 $type: 'color',
                 $value: '{basis.color.default.bg-document}',
               },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen design decision: less space between list items',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            'ordered-list': {
+              item: {
+                'margin-block-end': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+                'margin-block-start': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+              },
+            },
+            'unordered-list': {
+              item: {
+                'margin-block-end': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+                'margin-block-start': { $type: 'dimension', $value: '{basis.space.block.xs}' },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      // The Start Theme uses `action-2.color-*` for links, which is the black text on the secondary button.
+      // Use the same blue as `utrecht.link`, so Den Haag links (NL Portal) and visited links are blue too.
+      description: 'Sittard-Geleen design decision: link color',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          nl: {
+            link: {
+              color: { $type: 'color', $value: '{basis.color.accent-1.color-default}' },
+              active: {
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-active}' },
+              },
+              hover: {
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-hover}' },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      // For example the delete button of an uploaded file in Open Forms: only the icon changes color
+      description: 'Sittard-Geleen subtle danger button without background and border',
+    },
+    () => {
+      const transparent = { $type: 'color', $value: '{basis.color.transparent}' };
+
+      return mergeTokens([
+        theme,
+        {
+          utrecht: {
+            button: {
+              'subtle-danger': {
+                'background-color': transparent,
+                'border-color': transparent,
+                color: { $type: 'color', $value: '{basis.color.negative.color-default}' },
+                active: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-active}' },
+                },
+                disabled: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.disabled.color-default}' },
+                },
+                focus: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-hover}' },
+                },
+                hover: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-hover}' },
+                },
+                pressed: {
+                  'background-color': transparent,
+                  'border-color': transparent,
+                  color: { $type: 'color', $value: '{basis.color.negative.color-active}' },
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen form labels a little less bold',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          sg: {
+            text: {
+              'font-weight': {
+                semibold: { $type: 'fontWeights', $value: '600' },
+              },
+            },
+          },
+          utrecht: {
+            'form-label': {
+              'font-weight': { $type: 'fontWeights', $value: '{sg.text.font-weight.semibold}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Gpp-WOO fixes',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          'gpp-woo': {
+            card: {
+              'background-color': { $type: 'color', $value: '{basis.color.default.bg-document}' },
+              'box-shadow': { $type: 'boxShadow', $value: '{basis.box-shadow.md}' },
+              'content-padding-block': { $type: 'dimension', $value: '{basis.space.block.xl}' },
+              'content-padding-inline': { $type: 'dimension', $value: '{basis.space.inline.xl}' },
+            },
+          },
+          // GPP-Woo also loads the Utrecht theme, which gives text boxes a 3px bottom border through an older token
+          // name. The textbox CSS still reads it, so set it to our own border width.
+          utrecht: {
+            textbox: {
+              'border-bottom-width': { $type: 'dimension', $value: '{basis.form-control.border-width}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'NL Portal: header menu buttons',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            'menu-button': {
+              color: { $type: 'color', $value: '{basis.color.accent-1.color-default}' },
+              'hover-color': { $type: 'color', $value: '{basis.color.accent-1.color-hover}' },
+              'active-color': { $type: 'color', $value: '{basis.color.accent-1.color-active}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'NL Portal: side navigation',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            'side-navigation': {
+              link: {
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-default}' },
+                hover: {
+                  color: { $type: 'color', $value: '{basis.color.accent-1.color-hover}' },
+                },
+                active: {
+                  color: { $type: 'color', $value: '{basis.color.accent-1.color-active}' },
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      // Den Haag buttons
+      description: 'NL Portal: buttons',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            button: {
+              'border-radius': { $type: 'dimension', $value: '{nl.button.border-radius}' },
+              'border-width': { $type: 'dimension', $value: '{nl.button.primary.border-width}' },
+              cursor: { $type: 'other', $value: '{basis.action.activate.cursor}' },
+              'font-family': { $type: 'fontFamilies', $value: '{nl.button.font-family}' },
+              'font-size': { $type: 'fontSizes', $value: '{nl.button.primary.font-size}' },
+              'font-weight': { $type: 'fontWeights', $value: '{nl.button.primary.font-weight}' },
+              gap: { $type: 'dimension', $value: '{nl.button.column-gap}' },
+              'icon-only': {
+                height: { $type: 'dimension', $value: '{nl.button.min-block-size}' },
+                'icon-height': { $type: 'dimension', $value: '{basis.size.icon.md}' },
+              },
+              'large-size': {
+                'font-size': { $type: 'fontSizes', $value: '{basis.text.font-size.lg}' },
+                'line-height': { $type: 'lineHeights', $value: '{basis.text.line-height.lg}' },
+                'padding-block': { $type: 'dimension', $value: '{basis.space.block.lg}' },
+                'padding-inline': { $type: 'dimension', $value: '{basis.space.inline.xl}' },
+              },
+              'medium-size': {
+                'padding-block': { $type: 'dimension', $value: '{nl.button.padding-block-start}' },
+                'padding-inline': { $type: 'dimension', $value: '{nl.button.padding-inline-start}' },
+              },
+              'padding-block': { $type: 'dimension', $value: '{nl.button.padding-block-start}' },
+              'padding-inline': { $type: 'dimension', $value: '{nl.button.padding-inline-start}' },
+              'primary-action': {
+                'background-color': { $type: 'color', $value: '{nl.button.primary.background-color}' },
+                color: { $type: 'color', $value: '{nl.button.primary.color}' },
+                disabled: {
+                  'background-color': { $type: 'color', $value: '{nl.button.primary.disabled.background-color}' },
+                  color: { $type: 'color', $value: '{nl.button.primary.disabled.color}' },
+                },
+                hover: {
+                  'background-color': { $type: 'color', $value: '{nl.button.primary.hover.background-color}' },
+                  color: { $type: 'color', $value: '{nl.button.primary.hover.color}' },
+                },
+              },
+              'secondary-action': {
+                'background-color': { $type: 'color', $value: '{nl.button.secondary.background-color}' },
+                'border-color': { $type: 'color', $value: '{nl.button.secondary.border-color}' },
+                color: { $type: 'color', $value: '{nl.button.secondary.color}' },
+                disabled: {
+                  'background-color': { $type: 'color', $value: '{nl.button.secondary.disabled.background-color}' },
+                  'border-color': { $type: 'color', $value: '{nl.button.secondary.disabled.border-color}' },
+                  color: { $type: 'color', $value: '{nl.button.secondary.disabled.color}' },
+                },
+                hover: {
+                  'background-color': { $type: 'color', $value: '{nl.button.secondary.hover.background-color}' },
+                  'border-color': { $type: 'color', $value: '{nl.button.secondary.hover.border-color}' },
+                  color: { $type: 'color', $value: '{nl.button.secondary.hover.color}' },
+                },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      // Open cases ("Mijn zaken") are Sittard-Geleen blue with white text. Closed (archived) cases stay grey.
+      description: 'NL Portal: case card',
+    },
+    () => {
+      const white = { $type: 'color', $value: '{basis.color.accent-1-inverse.color-default}' };
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            'case-card': {
+              'background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-default}' },
+              'background-background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-hover}' },
+              'title-color': white,
+              'subtitle-color': white,
+              'context-color': white,
+              'action-color': white,
+              'action-active-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.color-active}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      // Like the status timeline on sittard-geleen.nl: square markers, blue for done steps, a blue outline for the
+      // current step and grey for the steps to come.
+      description: 'NL Portal: process steps',
+    },
+    () => {
+      const blue = { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-default}' };
+      const grey = { $type: 'color', $value: '{basis.color.disabled.border-default}' };
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            'step-marker': {
+              'border-radius': { $type: 'dimension', $value: '{basis.border-radius.none}' },
+              checked: {
+                'background-color': blue,
+                'border-color': blue,
+                color: { $type: 'color', $value: '{basis.color.accent-1-inverse.color-default}' },
+              },
+              current: {
+                'background-color': { $type: 'color', $value: '{basis.color.default.bg-document}' },
+                'border-color': blue,
+                color: { $type: 'color', $value: '{basis.color.accent-1.color-default}' },
+              },
+              'not-checked': {
+                'background-color': { $type: 'color', $value: '{basis.color.default.bg-document}' },
+                'border-color': grey,
+              },
+              connector: {
+                checked: { 'outline-color': blue },
+                'not-checked': { 'outline-color': grey },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'NL Portal: file',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            file: {
+              left: {
+                'background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-default}' },
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'NL Portal: alert',
+    },
+    () => {
+      const color = (name: string) => ({ $type: 'color', $value: `{basis.color.${name}}` });
+      const alert = (status: string) => ({
+        'background-color': color(`${status}.bg-default`),
+        'title-color': color(`${status}.color-document`),
+        'paragraph-color': color(`${status}.color-document`),
+        'icon-color': color(`${status}.color-default`),
+        'close-icon-color': color(`${status}.color-default`),
+        'action-button-background-color': color(`${status}-inverse.bg-default`),
+        'action-button-hover-background-color': color(`${status}-inverse.bg-hover`),
+        'action-button-color': color(`${status}-inverse.color-default`),
+      });
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            alert: {
+              info: alert('info'),
+              success: alert('positive'),
+              warning: alert('warning'),
+              error: alert('negative'),
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'NL Portal: footer',
+    },
+    () => {
+      const white = { $type: 'color', $value: '{basis.color.accent-1-inverse.color-default}' };
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            footer: {
+              'background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-default}' },
+              color: white,
+              'heading-color': white,
+              mega: {
+                'background-color': { $type: 'color', $value: '{basis.color.accent-1-inverse.bg-active}' },
+                color: white,
+              },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
+      // Den Haag components use the Den Haag fonts (TheSans and TheMix). Use the Sittard-Geleen font instead.
+      description: 'NL Portal: font',
+    },
+    () => {
+      const font = { $type: 'fontFamilies', $value: '{basis.text.font-family.default}' };
+
+      return mergeTokens([
+        theme,
+        {
+          denhaag: {
+            typography: {
+              'sans-serif': { 'font-family': font },
+              'sans-serif-alternate': { 'font-family': font },
             },
           },
         },
