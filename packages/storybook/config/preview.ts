@@ -63,7 +63,6 @@ import '@nl-design-system-community/sittard-geleen-design-tokens/src/font.mjs';
 import '@nl-design-system-community/sittard-geleen-design-tokens/src/font.scss';
 import '@nl-design-system-community/sittard-geleen-design-tokens/dist/theme.css';
 import '@nl-design-system-unstable/stedebroec-design-tokens/dist/index.css';
-import '@nl-design-system-unstable/tilburg-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tubbergen-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/tubbergen-design-tokens/src/font';
 import '@nl-design-system-unstable/venray-design-tokens/dist/index.css';

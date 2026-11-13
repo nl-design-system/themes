@@ -98,12 +98,6 @@ const builtinThemes = [
     package: '@nl-design-system-unstable/stedebroec-design-tokens',
   },
   {
-    className: 'tilburg-theme',
-    title: 'Gemeente Tilburg',
-    href: 'https://unpkg.com/@nl-design-system-unstable/tilburg-design-tokens/dist/index.css',
-    package: '@nl-design-system-unstable/tilburg-design-tokens',
-  },
-  {
     className: 'utrecht-theme',
     title: 'Gemeente Utrecht',
     href: 'https://unpkg.com/@utrecht/design-tokens/dist/index.css',
