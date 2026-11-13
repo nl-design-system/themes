@@ -13,7 +13,6 @@ import leidschendam from '@nl-design-system-unstable/leidschendam-voorburg-desig
 import noordoostpolder from '@nl-design-system-unstable/noordoostpolder-design-tokens/src/config.json' with { type: 'json' };
 import rotterdam from '../../storybook/src/rotterdam/config.json' with { type: 'json' };
 import stedebroec from '@nl-design-system-unstable/stedebroec-design-tokens/src/config.json' with { type: 'json' };
-import tilburg from '@nl-design-system-unstable/tilburg-design-tokens/src/config.json' with { type: 'json' };
 import venray from '@nl-design-system-unstable/venray-design-tokens/src/config.json' with { type: 'json' };
 import vught from '@nl-design-system-unstable/vught-design-tokens/src/config.json' with { type: 'json' };
 import westervoort from '@nl-design-system-unstable/westervoort-design-tokens/src/config.json' with { type: 'json' };
@@ -42,7 +41,6 @@ const themes = [
   noordoostpolder,
   rotterdam,
   stedebroec,
-  tilburg,
   venray,
   vught,
   westervoort,
