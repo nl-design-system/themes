@@ -55,6 +55,50 @@ export const generateTheme = (
     }
   });
 
+  theme = safeTransform({ description: 'Point action-2 tokens to accent-1, like previous Start thema did' }, () => {
+    return mergeTokens([
+      theme,
+      {
+        basis: {
+          color: {
+            'action-2': {
+              'bg-document': { $value: '{basis.color.accent-1.bg-document}' },
+              'bg-subtle': { $value: '{basis.color.accent-1.bg-subtle}' },
+              'bg-default': { $value: '{basis.color.accent-1.bg-default}' },
+              'bg-hover': { $value: '{basis.color.accent-1.bg-hover}' },
+              'bg-active': { $value: '{basis.color.accent-1.bg-active}' },
+              'border-subtle': { $value: '{basis.color.accent-1.border-subtle}' },
+              'border-default': { $value: '{basis.color.accent-1.border-default}' },
+              'border-hover': { $value: '{basis.color.accent-1.border-hover}' },
+              'border-active': { $value: '{basis.color.accent-1.border-active}' },
+              'color-default': { $value: '{basis.color.accent-1.color-default}' },
+              'color-hover': { $value: '{basis.color.accent-1.color-hover}' },
+              'color-active': { $value: '{basis.color.accent-1.color-active}' },
+              'color-subtle': { $value: '{basis.color.accent-1.color-subtle}' },
+              'color-document': { $value: '{basis.color.accent-1.color-document}' },
+            },
+            'action-2-inverse': {
+              'bg-document': { $value: '{basis.color.accent-1-inverse.bg-document}' },
+              'bg-subtle': { $value: '{basis.color.accent-1-inverse.bg-subtle}' },
+              'bg-default': { $value: '{basis.color.accent-1-inverse.bg-default}' },
+              'bg-hover': { $value: '{basis.color.accent-1-inverse.bg-hover}' },
+              'bg-active': { $value: '{basis.color.accent-1-inverse.bg-active}' },
+              'border-subtle': { $value: '{basis.color.accent-1-inverse.border-subtle}' },
+              'border-default': { $value: '{basis.color.accent-1-inverse.border-default}' },
+              'border-hover': { $value: '{basis.color.accent-1-inverse.border-hover}' },
+              'border-active': { $value: '{basis.color.accent-1-inverse.border-active}' },
+              'color-default': { $value: '{basis.color.accent-1-inverse.color-default}' },
+              'color-hover': { $value: '{basis.color.accent-1-inverse.color-hover}' },
+              'color-active': { $value: '{basis.color.accent-1-inverse.color-active}' },
+              'color-subtle': { $value: '{basis.color.accent-1-inverse.color-subtle}' },
+              'color-document': { $value: '{basis.color.accent-1-inverse.color-document}' },
+            },
+          },
+        },
+      },
+    ]);
+  });
+
   theme = safeTransform({ description: 'Improve tokens for fluid design' }, () => {
     //
     return mergeTokens([
