@@ -30,6 +30,7 @@ import {
   // BadgeCounter,
   // Blockquote,
   Checkbox,
+  Combobox,
   // CustomCheckbox ,
   // Emphasis,
   FormField,
@@ -3572,6 +3573,47 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: ['utrecht.textbox.icon.size'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-combobox--default',
+    component: 'utrecht-combobox',
+    group: STORY_GROUPS['COMBOBOX'],
+    name: 'Utrecht Combobox',
+    render: () => (
+      <div style={{ minBlockSize: '16em' }}>
+        <FormField
+          label={<FormFieldLabel htmlFor="combobox-utrecht-input">Provincie</FormFieldLabel>}
+          input={
+            <Combobox>
+              <Textbox
+                id="combobox-utrecht-input"
+                className="utrecht-combobox__input"
+                role="combobox"
+                autoComplete="off"
+                aria-autocomplete="list"
+                aria-expanded="true"
+                aria-controls="combobox-utrecht-popover"
+                aria-activedescendant="combobox-utrecht-option-noord-brabant"
+                defaultValue="Noord"
+              />
+              <Listbox
+                id="combobox-utrecht-popover"
+                className="utrecht-combobox__popover utrecht-combobox__popover--block-end"
+                tabIndex={-1}
+              >
+                <ListboxOption id="combobox-utrecht-option-noord-brabant" active>
+                  Noord-Brabant
+                </ListboxOption>
+                <ListboxOption id="combobox-utrecht-option-noord-holland">Noord-Holland</ListboxOption>
+              </Listbox>
+            </Combobox>
+          }
+        />
+      </div>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.combobox.popover.z-index'],
     },
   },
 ];
