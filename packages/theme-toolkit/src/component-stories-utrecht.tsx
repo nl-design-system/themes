@@ -30,6 +30,7 @@ import {
   // BadgeCounter,
   // Blockquote,
   Checkbox,
+  Combobox,
   // CustomCheckbox ,
   // Emphasis,
   FormField,
@@ -3572,6 +3573,60 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: ['utrecht.textbox.icon.size'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-combobox--default',
+    component: 'utrecht-combobox',
+    group: STORY_GROUPS['COMBOBOX'],
+    name: 'Utrecht Combobox',
+    render: () => (
+      <div style={{ minBlockSize: '40em' }}>
+        <FormField
+          label={<FormFieldLabel htmlFor="combobox-utrecht-input">Provincie</FormFieldLabel>}
+          input={
+            <Combobox>
+              <Textbox
+                id="combobox-utrecht-input"
+                className="utrecht-combobox__input"
+                role="combobox"
+                autoComplete="off"
+                aria-autocomplete="list"
+                aria-expanded="true"
+                aria-controls="combobox-utrecht-popover"
+                aria-activedescendant="combobox-utrecht-option-drenthe"
+              />
+              <Listbox
+                id="combobox-utrecht-popover"
+                className="utrecht-combobox__popover utrecht-combobox__popover--block-end"
+                tabIndex={-1}
+              >
+                {[
+                  { id: 'combobox-utrecht-option-drenthe', label: 'Drenthe', active: true },
+                  { id: 'combobox-utrecht-option-flevoland', label: 'Flevoland' },
+                  { id: 'combobox-utrecht-option-friesland', label: 'Friesland' },
+                  { id: 'combobox-utrecht-option-gelderland', label: 'Gelderland' },
+                  { id: 'combobox-utrecht-option-groningen', label: 'Groningen' },
+                  { id: 'combobox-utrecht-option-limburg', label: 'Limburg' },
+                  { id: 'combobox-utrecht-option-noord-brabant', label: 'Noord-Brabant' },
+                  { id: 'combobox-utrecht-option-noord-holland', label: 'Noord-Holland' },
+                  { id: 'combobox-utrecht-option-overijssel', label: 'Overijssel' },
+                  { id: 'combobox-utrecht-option-utrecht', label: 'Utrecht' },
+                  { id: 'combobox-utrecht-option-zeeland', label: 'Zeeland' },
+                  { id: 'combobox-utrecht-option-zuid-holland', label: 'Zuid-Holland' },
+                ].map(({ id, label, active }) => (
+                  <ListboxOption key={id} id={id} active={active}>
+                    {label}
+                  </ListboxOption>
+                ))}
+              </Listbox>
+            </Combobox>
+          }
+        />
+      </div>
+    ),
+    detectTokens: {
+      anyOf: ['utrecht.combobox.popover.z-index'],
     },
   },
 ];
