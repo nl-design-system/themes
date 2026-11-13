@@ -46,6 +46,7 @@ import {
   // Pagination ,
   Select,
   SelectOption,
+  Strong,
   Superscript,
   Subscript,
   Textarea,
@@ -2927,12 +2928,16 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
   //   name: 'Utrecht Stressed Emphasis',
   //   render: () => <Emphasis>The Quick Brown Fox Jumps Over The Lazy Dog</Emphasis>,
   // },
-  // {
-  //   storyId: 'react-utrecht-emphasis--strong',
-  //   group: STORY_GROUPS['EMPHASIS'],
-  //   name: 'Utrecht Strong Emphasis',
-  //   render: () => <Emphasis strong>The Quick Brown Fox Jumps Over The Lazy Dog</Emphasis>,
-  // },
+  {
+    storyId: 'react-utrecht-emphasis--strong',
+    component: 'utrecht-emphasis',
+    group: STORY_GROUPS['EMPHASIS'],
+    name: 'Utrecht Strong',
+    render: () => <Strong>Vraag uw parkeervergunning uiterlijk 1 maart aan.</Strong>,
+    detectTokens: {
+      anyOf: ['utrecht.emphasis.strong.font-weight'],
+    },
+  },
   // {
   //   storyId: 'react-utrecht-emphasis--double',
   //   group: STORY_GROUPS['EMPHASIS'],
