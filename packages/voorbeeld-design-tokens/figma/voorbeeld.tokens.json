@@ -7717,6 +7717,36 @@
       }
     }
   },
+  "components/document": {
+    "utrecht": {
+      "document": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.default}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        }
+      }
+    }
+  },
   "components/fieldset": {
     "utrecht": {
       "form-fieldset": {
@@ -16563,6 +16593,7 @@
       "components/drawer/utrecht",
       "components/drawer/todo",
       "components/dot-badge",
+      "components/document",
       "components/fieldset",
       "components/figure/amsterdam",
       "components/figure/utrecht",
