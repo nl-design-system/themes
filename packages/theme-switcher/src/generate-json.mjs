@@ -41,7 +41,6 @@ const themes = [
   noordoostpolder,
   rotterdam,
   stedebroec,
-  tilburg,
   venray,
   vught,
   westervoort,
