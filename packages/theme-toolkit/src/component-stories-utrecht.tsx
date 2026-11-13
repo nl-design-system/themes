@@ -3581,7 +3581,7 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     group: STORY_GROUPS['COMBOBOX'],
     name: 'Utrecht Combobox',
     render: () => (
-      <div style={{ minBlockSize: '16em' }}>
+      <div style={{ minBlockSize: '40em' }}>
         <FormField
           label={<FormFieldLabel htmlFor="combobox-utrecht-input">Provincie</FormFieldLabel>}
           input={
@@ -3594,18 +3594,31 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
                 aria-autocomplete="list"
                 aria-expanded="true"
                 aria-controls="combobox-utrecht-popover"
-                aria-activedescendant="combobox-utrecht-option-noord-brabant"
-                defaultValue="Noord"
+                aria-activedescendant="combobox-utrecht-option-drenthe"
               />
               <Listbox
                 id="combobox-utrecht-popover"
                 className="utrecht-combobox__popover utrecht-combobox__popover--block-end"
                 tabIndex={-1}
               >
-                <ListboxOption id="combobox-utrecht-option-noord-brabant" active>
-                  Noord-Brabant
-                </ListboxOption>
-                <ListboxOption id="combobox-utrecht-option-noord-holland">Noord-Holland</ListboxOption>
+                {[
+                  { id: 'combobox-utrecht-option-drenthe', label: 'Drenthe', active: true },
+                  { id: 'combobox-utrecht-option-flevoland', label: 'Flevoland' },
+                  { id: 'combobox-utrecht-option-friesland', label: 'Friesland' },
+                  { id: 'combobox-utrecht-option-gelderland', label: 'Gelderland' },
+                  { id: 'combobox-utrecht-option-groningen', label: 'Groningen' },
+                  { id: 'combobox-utrecht-option-limburg', label: 'Limburg' },
+                  { id: 'combobox-utrecht-option-noord-brabant', label: 'Noord-Brabant' },
+                  { id: 'combobox-utrecht-option-noord-holland', label: 'Noord-Holland' },
+                  { id: 'combobox-utrecht-option-overijssel', label: 'Overijssel' },
+                  { id: 'combobox-utrecht-option-utrecht', label: 'Utrecht' },
+                  { id: 'combobox-utrecht-option-zeeland', label: 'Zeeland' },
+                  { id: 'combobox-utrecht-option-zuid-holland', label: 'Zuid-Holland' },
+                ].map(({ id, label, active }) => (
+                  <ListboxOption key={id} id={id} active={active}>
+                    {label}
+                  </ListboxOption>
+                ))}
               </Listbox>
             </Combobox>
           }
