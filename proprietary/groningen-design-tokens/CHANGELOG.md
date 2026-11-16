@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 7.0.0
+
+### Major Changes
+
+- d4071cc: Token utrecht.icon.color is verwijderd uit Icon component.
+
 ## 6.0.0
 
 ### Major Changes
