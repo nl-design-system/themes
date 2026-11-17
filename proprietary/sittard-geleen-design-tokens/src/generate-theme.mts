@@ -1424,20 +1424,20 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: birght turquoise focus color',
+      description: 'Sittard-Geleen design decision: purple focus color',
     },
     () => {
-      // Design decision by Robbert, to overwrite the yellow default from Start Theme
+      // Design decision by Sittard-Geleen: purple ("100 paars") from their color palette
       return mergeTokens([
         theme,
         {
           basis: {
             focus: {
               'background-color': {
-                $value: '#00FFCC',
+                $value: '#6C3386',
               },
               color: {
-                $value: 'black',
+                $value: '#ffffff',
               },
             },
           },
