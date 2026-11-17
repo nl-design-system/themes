@@ -13,6 +13,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   CARD_AS_LINK: 'Card as Link',
   CASE_CARD: 'Case Card',
   CHECKBOX: 'Checkbox',
+  CHECKBOX_GROUP: 'Checkbox Group',
   CODE_BLOCK: 'Code Block',
   CODE: 'Code',
   COLOR_SAMPLE: 'Color Sample',

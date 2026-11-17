@@ -34,6 +34,7 @@ import {
   // CustomCheckbox ,
   // Emphasis,
   FormField,
+  FormFieldCheckbox,
   FormFieldDescription,
   Fieldset,
   FieldsetLegend,
@@ -78,6 +79,7 @@ import { UtrechtIconChevronRight, UtrechtIconSearch } from '@utrecht/web-compone
 import { Listbox, ListboxOption } from '@utrecht/listbox-react/css';
 import { Note } from '@utrecht/note-react/css';
 import { CustomizableTextInput } from '@utrecht/customizable-text-input-react/css';
+import { CheckboxGroup } from '@utrecht/checkbox-group-react/css';
 import { clsx } from 'clsx';
 
 const Blockquote = ({ children }: PropsWithChildren) => <div className="utrecht-blockquote">{children}</div>;
@@ -3627,6 +3629,35 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
     ),
     detectTokens: {
       anyOf: ['utrecht.combobox.popover.z-index'],
+    },
+  },
+  {
+    storyId: 'react-utrecht-checkbox-group--default',
+    component: 'utrecht-checkbox-group',
+    group: STORY_GROUPS['CHECKBOX_GROUP'],
+    name: 'Utrecht Checkbox Group',
+    render: () => (
+      <CheckboxGroup
+        label="Hoe wilt u dat wij contact met u opnemen?"
+        description="Wij nemen alleen contact met u op via de manieren die u kiest."
+      >
+        <FormFieldCheckbox name="contact" value="telefoon" label="Telefoon" defaultChecked />
+        <FormFieldCheckbox name="contact" value="e-mail" label="E-mail" />
+        <FormFieldCheckbox name="contact" value="brief" label="Brief" />
+      </CheckboxGroup>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.form-fieldset.legend.color',
+        'utrecht.form-fieldset.legend.font-family',
+        'utrecht.form-fieldset.legend.font-size',
+        'utrecht.form-fieldset.legend.font-weight',
+        'utrecht.form-fieldset.legend.line-height',
+        'utrecht.form-fieldset.legend.margin-block-end',
+        'utrecht.form-fieldset.legend.margin-block-start',
+        'utrecht.form-fieldset.margin-block-end',
+        'utrecht.form-fieldset.margin-block-start',
+      ],
     },
   },
 ];

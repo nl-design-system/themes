@@ -721,7 +721,7 @@ importers:
         version: 4.1.2(react-dom@19.3.0)(react@19.3.0)
       '@gemeente-denhaag/file':
         specifier: 2.4.0
-        version: 2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)
+        version: 2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)
       '@gemeente-denhaag/icons':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.3.0)(react@19.3.0)
@@ -787,7 +787,7 @@ importers:
         version: link:../tokens-lib
       '@rijkshuisstijl-community/components-react':
         specifier: 14.0.0
-        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
+        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.29.0(supports-color@9.3.1))(@types/babel__core@7.20.5)(rollup@4.19.2)(supports-color@9.3.1)
@@ -857,6 +857,9 @@ importers:
       '@utrecht/checkbox-css':
         specifier: 1.5.0
         version: 1.5.0
+      '@utrecht/checkbox-group-react':
+        specifier: 1.0.18
+        version: 1.0.18(@babel/runtime@7.25.0)(react-dom@19.3.0)
       '@utrecht/code-block-css':
         specifier: 1.4.0
         version: 1.4.0
@@ -1305,6 +1308,9 @@ importers:
       '@types/react':
         specifier: 19.3.0
         version: 19.3.0
+      '@utrecht/checkbox-group-react':
+        specifier: 1.0.18
+        version: 1.0.18(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@utrecht/component-library-design-tokens':
         specifier: 1.0.0
         version: 1.0.0
@@ -4918,8 +4924,25 @@ packages:
   '@utrecht/checkbox-css@2.0.1':
     resolution: {integrity: sha512-0965uYatL/BtMpGxVUAcX5Cmj48LmaQISrn/jsoVpY9idBsuzhgKiN0kldC8pSV66CEp9ADTIbE3JFIwswLYWQ==}
 
+  '@utrecht/checkbox-css@3.1.0':
+    resolution: {integrity: sha512-w0eAFkXirilHOPtlziOrzht8ktLd+/EJVm+O3v19zIKLv3yrhD1Ht+U97YwyHkM7ymOLz48HDVR9cCQXo7m2Fw==}
+
+  '@utrecht/checkbox-group-react@1.0.18':
+    resolution: {integrity: sha512-KMlanhvUbnZf5mmU8eCrwijSCAZkKa/NZiNecgc18icFt+x1nA09vVrZJn+//mD8Nn4kutT0RPrGEe62Y+xdvg==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
   '@utrecht/checkbox-react@1.0.11':
     resolution: {integrity: sha512-737zXRk1bDKArItynpB5g5c4Y4e6dBWbpkeT3X8QJHsqwVIg4D8y4Sx7kMhpPgDQqkTqpxAFNRY1PhqUF6pXEA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
+  '@utrecht/checkbox-react@1.0.15':
+    resolution: {integrity: sha512-bX+7aOoKkoigCKT1eJn21Iblkqr9P3OdjHSy2+irqQYlVHXzaNlfgPrdl3k9bA9RpdNGEww+0LSPqrQivzb9WA==}
     peerDependencies:
       '@babel/runtime': '*'
       react: ^18.0.0 || ^19.0.0
@@ -5043,6 +5066,9 @@ packages:
   '@utrecht/custom-checkbox-css@2.0.1':
     resolution: {integrity: sha512-Gt7D6cnCfotYK0P/VeTcGksIhTrCYo3PEx1LxPnj9X99uMNg57O13ZRRaR/7wqPHsdiUKD7B82pQ1FdjAuY7lA==}
 
+  '@utrecht/custom-checkbox-css@3.1.0':
+    resolution: {integrity: sha512-HluxAU1ZyU9MVlDUjFNt+6GaMsh+A7V9J0q4bprQ3mP13TkfqJ4PIWKCWb7tuXqPdZGxKk/RsKDqRwuZrcDGAQ==}
+
   '@utrecht/customizable-text-input-css@1.0.1':
     resolution: {integrity: sha512-6r+KDBPYq6NyNeH6Ftfqf0z68MvxOy371PDsOpWKW59YfoOpcS4TQBvAv5MDjOh4+HIHB/peHNGn5SQ6I1qu2g==}
 
@@ -5109,6 +5135,13 @@ packages:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
+  '@utrecht/fieldset-react@1.0.13':
+    resolution: {integrity: sha512-99qb4O3CNAaz0++W7f4ucA2MDlTABXWzC0Dmn4cUvI0G6Cusg8Qp9YBGI5U40a6TazZEEU4xf/Yj3CgC++AOwA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
   '@utrecht/fieldset-react@1.0.4':
     resolution: {integrity: sha512-mgLV7fPTTWXb+8HatYqOOtHpnce4fACKNfo26OkHKw38nI9BV+VsDkALcHhgPDjfdhvnEXvJRRNx1YxBm+kDBw==}
     peerDependencies:
@@ -5136,11 +5169,21 @@ packages:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
+  '@utrecht/form-field-checkbox-react@1.1.7':
+    resolution: {integrity: sha512-dNXku4kcfgAEpR4JmSjDZ1B8Zf5XYDOJQq4YM+EW4du35kzA/YaW0BEE9CYDR5xYUwzYjgPMtlL/yitW4zEmOw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
   '@utrecht/form-field-css@1.5.0':
     resolution: {integrity: sha512-PGqIYHYlqQKuADgIIQF4niS6XO1VeUv6OWrWDrLbFw0JkKtNwU9Y3ALtb5mSmgXAKOUHEtI7scwFqOxYgKztsw==}
 
   '@utrecht/form-field-css@2.0.1':
     resolution: {integrity: sha512-POiAK/I92tjXHwzBnLCA0BChQWPH0aF0BkF0qB8+Ouc+omkOcvMBmQrz2hgEpEa1W7kenXh/YkL7+/uB9fq0qw==}
+
+  '@utrecht/form-field-css@3.0.1':
+    resolution: {integrity: sha512-4qDWzUmIM79HqB5yZEJgqMtKwXVAwZ+asVrnkMveQQzIVwBq9bM9ZReriYJVpvKA4PEc7gfP+q9Bc9Y6dgT6Pg==}
 
   '@utrecht/form-field-description-css@1.5.0':
     resolution: {integrity: sha512-LGImfd2xFuNPvycIQzwtTg2UIAo9T06MI/KoTbchB56lPzXLmictzfn2rGDzZuaemWTwkxqKUzorLXqdonZ22Q==}
@@ -5148,8 +5191,18 @@ packages:
   '@utrecht/form-field-description-css@2.0.1':
     resolution: {integrity: sha512-M2hYlmEBykGPHSjm46kMkSsuhXTCZgBglQDcW+pWT1KS1rAapqxTDelxjlh2uU7TXLtXWnoeA5C3Gv1nYxUjkA==}
 
+  '@utrecht/form-field-description-css@3.0.1':
+    resolution: {integrity: sha512-S99Fj1qSba3oaFTwpFgDzBOSn5y/KyOYonJsb/pjQlX87IXhwr3YL7ScYIShDGrUmpDH77kbcXceLuQf6U8CgQ==}
+
   '@utrecht/form-field-description-react@1.0.10':
     resolution: {integrity: sha512-tuK+ZdjnqxuWPPpi1O6dehzTmp49dTlE6/SlptILZDISIwS1ud1snwDqWjxAc5ytzdkf1wCJVeIFbAZVm1MMOQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
+  '@utrecht/form-field-description-react@1.0.12':
+    resolution: {integrity: sha512-OXn3p0oTYlj1kbr+0gB2BNWcIYHYy8qVWvHqGdMJRmQHvRVq08ozUlqzZl/bZDe5hGmlBCCBmObMTOYt+UOhSA==}
     peerDependencies:
       '@babel/runtime': '*'
       react: ^18.0.0 || ^19.0.0
@@ -5168,8 +5221,18 @@ packages:
   '@utrecht/form-field-error-message-css@2.0.1':
     resolution: {integrity: sha512-4Oe5aIgMNkKXHcCZ86z+/ClSbaDxZ4atxdqgFPU1mi1L7P07QK2yatUGvjOlV1h4dwXMyl2zcNkxCn62wPhJvw==}
 
+  '@utrecht/form-field-error-message-css@3.0.1':
+    resolution: {integrity: sha512-9nvQkuhJ8Dx+2VyopWTywTd+ZKUXqIFzVXTILfSBL9rAUFp4R6pgfXW4Utuorc4JvEFOFS/b+DwtJ8wv10+zPg==}
+
   '@utrecht/form-field-error-message-react@1.0.10':
     resolution: {integrity: sha512-RJxKw9J1qcoyZ7uGArDQirKcoBTWXoDULXe2W8OzA3ug2hKN4MM1S06HoxSDLIjqvLdjklrPFe3ffBkuIytg9g==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
+  '@utrecht/form-field-error-message-react@1.0.12':
+    resolution: {integrity: sha512-ubu5OIww2yuYE1cHnl22zJ6JamiRFGu8QuNlpietQHUXydRmZ7eLn4X5JMAyMM6wymfiuD1lzZG+ovjShlwGIg==}
     peerDependencies:
       '@babel/runtime': '*'
       react: ^18.0.0 || ^19.0.0
@@ -5196,11 +5259,21 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/form-field-react@2.0.0':
+    resolution: {integrity: sha512-CXU0XX2k9j5Az1Q7G6Q8AbvraNWMLE/68l8oFsfXRvOkfRyH7NfnEHil79o9uP4Th4VcTUukDv2jT8wUJwoLQA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
   '@utrecht/form-fieldset-css@1.4.0':
     resolution: {integrity: sha512-TFwHrfd81BiIGzGMFiB2q2QJeyfWn6N77mirgmqR3K0waCUDMLw8IjdCl9/+HhigSM87rUSn//Zq/zBzfC2zXw==}
 
   '@utrecht/form-fieldset-css@2.0.1':
     resolution: {integrity: sha512-EijyKtu0FK/hGEssXKtV3Q0/Z9eZjChfsAYvtOhUNs5A5bJ0+o7j4jIIO/D9Tj14Phh05hVCXm0YaPq4BJ42KQ==}
+
+  '@utrecht/form-fieldset-css@3.0.1':
+    resolution: {integrity: sha512-SfpZ95i4HuBa6KCi/WE8SWTraLTj9UrdHBKuTDAt2EGCVF5eYpmPGVebAHYw/3ExLHcsXpKgIemLyP14E5ZEZg==}
 
   '@utrecht/form-label-css@1.5.0':
     resolution: {integrity: sha512-IH5x0zeb4jk6TRROaigV6YVATuogpBwk0imvVXOia3nfvKWzFgxrg3bSrlMFC8YMc0qmJcSh7TkRP5q44qLNdw==}
@@ -5208,8 +5281,18 @@ packages:
   '@utrecht/form-label-css@2.0.1':
     resolution: {integrity: sha512-ghkVY1auCGoKaaFzAIPGetXjJE1H1ZXPYnW39xZfhIQjKiUh4NW0uvLHj9sZC24YHGwuuiJmtKGJwTER0X45EA==}
 
+  '@utrecht/form-label-css@3.0.1':
+    resolution: {integrity: sha512-W8OrdRDQnNNaKvygeFGBzFgP16smZbCP4O9SKA6Qq6L+ZPO8SL5mXU/DEwswsyc+RNOjoSnKX9aWX0ZI8aazPg==}
+
   '@utrecht/form-label-react@1.0.10':
     resolution: {integrity: sha512-oJhcTpVg38jRYEl2fOxvZAJHfaEyeQRTpQCxTZ6Mcv1dr1dhE259TwM03DtRXa+JTJoulxUG7vxTyclmxQwY3Q==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
+  '@utrecht/form-label-react@1.0.12':
+    resolution: {integrity: sha512-oAKxrY0e4MYEfgFKDKAKxdd8XsKnk9+t29/362xqYlWkn6FzCZ4GM0LZv4sFKXGPJgOwNigzE2+KPKMlWxEj0A==}
     peerDependencies:
       '@babel/runtime': '*'
       react: ^18.0.0 || ^19.0.0
@@ -10070,7 +10153,7 @@ snapshots:
       '@amsterdam/design-system-assets': 2.7.0
       '@amsterdam/design-system-tokens': 4.4.0
 
-  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -10085,9 +10168,9 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0)(react@19.3.0)':
+  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@babel/runtime': 7.27.4
       clsx: 2.1.1
       react: 19.3.0
@@ -10934,7 +11017,7 @@ snapshots:
 
   '@gemeente-denhaag/design-tokens@1.2.0': {}
 
-  '@gemeente-denhaag/file@2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)':
+  '@gemeente-denhaag/file@2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)':
     dependencies:
       '@gemeente-denhaag/icons': 4.0.1(react-dom@19.3.0)(react@19.3.0)
       '@utrecht/component-library-react': 10.3.10(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)
@@ -11758,9 +11841,9 @@ snapshots:
       - vite
       - vitest
 
-  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
+  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.25.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.25.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
@@ -11789,7 +11872,7 @@ snapshots:
 
   '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.29.10)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.29.10)(react@19.3.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.29.10)(react@19.3.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.29.10)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
@@ -12708,6 +12791,35 @@ snapshots:
 
   '@utrecht/checkbox-css@2.0.1': {}
 
+  '@utrecht/checkbox-css@3.1.0': {}
+
+  '@utrecht/checkbox-group-react@1.0.18(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/checkbox-react': 1.0.15(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/fieldset-react': 1.0.13(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-field-checkbox-react': 1.1.7(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-field-css': 3.0.1
+      '@utrecht/form-field-description-react': 1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-field-error-message-react': 1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-field-react': 2.0.0(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/checkbox-group-react@1.0.18(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/checkbox-react': 1.0.15(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/fieldset-react': 1.0.13(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-field-checkbox-react': 1.1.7(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-field-css': 3.0.1
+      '@utrecht/form-field-description-react': 1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-field-error-message-react': 1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-field-react': 2.0.0(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
   '@utrecht/checkbox-react@1.0.11(@babel/runtime@7.25.0)(react-dom@19.3.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -12721,6 +12833,23 @@ snapshots:
       '@babel/runtime': 7.29.10
       '@utrecht/checkbox-css': 2.0.1
       '@utrecht/custom-checkbox-css': 2.0.1
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/checkbox-react@1.0.15(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/checkbox-css': 3.1.0
+      '@utrecht/custom-checkbox-css': 3.1.0
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/checkbox-react@1.0.15(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/checkbox-css': 3.1.0
+      '@utrecht/custom-checkbox-css': 3.1.0
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -13367,6 +13496,8 @@ snapshots:
 
   '@utrecht/custom-checkbox-css@2.0.1': {}
 
+  '@utrecht/custom-checkbox-css@3.1.0': {}
+
   '@utrecht/customizable-text-input-css@1.0.1': {}
 
   '@utrecht/customizable-text-input-react@1.0.3(@babel/runtime@7.25.0)(react-dom@19.3.0)':
@@ -13442,6 +13573,21 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.10
       '@utrecht/form-fieldset-css': 2.0.1
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/fieldset-react@1.0.13(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/form-fieldset-css': 3.0.1
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/fieldset-react@1.0.13(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/form-fieldset-css': 3.0.1
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -13547,13 +13693,40 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
+  '@utrecht/form-field-checkbox-react@1.1.7(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/checkbox-react': 1.0.15(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-field-description-react': 1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-field-error-message-react': 1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-field-react': 2.0.0(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      '@utrecht/form-label-react': 1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-field-checkbox-react@1.1.7(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/checkbox-react': 1.0.15(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-field-description-react': 1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-field-error-message-react': 1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-field-react': 2.0.0(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@utrecht/form-label-react': 1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
   '@utrecht/form-field-css@1.5.0': {}
 
   '@utrecht/form-field-css@2.0.1': {}
 
+  '@utrecht/form-field-css@3.0.1': {}
+
   '@utrecht/form-field-description-css@1.5.0': {}
 
   '@utrecht/form-field-description-css@2.0.1': {}
+
+  '@utrecht/form-field-description-css@3.0.1': {}
 
   '@utrecht/form-field-description-react@1.0.10(@babel/runtime@7.25.0)(react-dom@19.3.0)':
     dependencies:
@@ -13566,6 +13739,21 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.10
       '@utrecht/form-field-description-css': 2.0.1
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-field-description-react@1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/form-field-description-css': 3.0.1
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-field-description-react@1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/form-field-description-css': 3.0.1
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -13601,6 +13789,8 @@ snapshots:
 
   '@utrecht/form-field-error-message-css@2.0.1': {}
 
+  '@utrecht/form-field-error-message-css@3.0.1': {}
+
   '@utrecht/form-field-error-message-react@1.0.10(@babel/runtime@7.25.0)(react-dom@19.3.0)':
     dependencies:
       '@babel/runtime': 7.25.0
@@ -13612,6 +13802,21 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.10
       '@utrecht/form-field-error-message-css': 2.0.1
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-field-error-message-react@1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/form-field-error-message-css': 3.0.1
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-field-error-message-react@1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/form-field-error-message-css': 3.0.1
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -13685,13 +13890,32 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
+  '@utrecht/form-field-react@2.0.0(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/form-field-css': 3.0.1
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-field-react@2.0.0(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/form-field-css': 3.0.1
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
   '@utrecht/form-fieldset-css@1.4.0': {}
 
   '@utrecht/form-fieldset-css@2.0.1': {}
 
+  '@utrecht/form-fieldset-css@3.0.1': {}
+
   '@utrecht/form-label-css@1.5.0': {}
 
   '@utrecht/form-label-css@2.0.1': {}
+
+  '@utrecht/form-label-css@3.0.1': {}
 
   '@utrecht/form-label-react@1.0.10(@babel/runtime@7.25.0)(react-dom@19.3.0)':
     dependencies:
@@ -13704,6 +13928,21 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.10
       '@utrecht/form-label-css': 2.0.1
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-label-react@1.0.12(@babel/runtime@7.25.0)(react-dom@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      '@utrecht/form-label-css': 3.0.1
+      clsx: 2.1.1
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@utrecht/form-label-react@1.0.12(@babel/runtime@7.29.10)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.10
+      '@utrecht/form-label-css': 3.0.1
       clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)

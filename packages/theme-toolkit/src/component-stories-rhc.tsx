@@ -1,5 +1,13 @@
 import { STORY_GROUPS } from './component-stories-util';
-import { DotBadge, Alert, Heading, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  DotBadge,
+  Alert,
+  FormFieldCheckboxGroup,
+  FormFieldCheckboxOption,
+  Heading,
+  Logo,
+  Paragraph,
+} from '@rijkshuisstijl-community/components-react';
 
 export const RHC_COMPONENT_STORIES = [
   {
@@ -27,5 +35,28 @@ export const RHC_COMPONENT_STORIES = [
         <Paragraph>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Paragraph>
       </Alert>
     ),
+  },
+  {
+    storyId: 'react-rhc-checkbox-group--default',
+    component: 'rhc-checkbox-group',
+    group: STORY_GROUPS['CHECKBOX_GROUP'],
+    name: 'Rijkshuisstijl Checkbox Group',
+    render: () => (
+      <FormFieldCheckboxGroup
+        label="Hoe wilt u dat wij contact met u opnemen?"
+        description="Wij nemen alleen contact met u op via de manieren die u kiest."
+      >
+        <FormFieldCheckboxOption name="contact" value="telefoon" label="Telefoon" defaultChecked />
+        <FormFieldCheckboxOption name="contact" value="e-mail" label="E-mail" />
+        <FormFieldCheckboxOption name="contact" value="brief" label="Brief" />
+      </FormFieldCheckboxGroup>
+    ),
+    detectTokens: {
+      anyOf: [
+        'rhc.checkbox-group.padding-block-end',
+        'rhc.checkbox-group.padding-block-start',
+        'rhc.checkbox-group.row-gap',
+      ],
+    },
   },
 ];
