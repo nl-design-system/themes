@@ -2755,6 +2755,15 @@ export const generateTheme = (
                 },
               },
             },
+            // The abort button ("Annuleren") is red. Without a focus color it stayed red on the focus background.
+            'abort-button': {
+              focus: {
+                color: {
+                  $type: 'color',
+                  $value: '{basis.focus.color}',
+                },
+              },
+            },
             // The stripes on info/warning/error/success blocks default to the `of.color.*`
             // text colors (warning is dark brown); use the border colors instead.
             'formio-content': {
