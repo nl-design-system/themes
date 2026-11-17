@@ -1,0 +1,20 @@
+/*
+ * Focus overrides
+ *
+ * Utrecht links and buttons show the focus background (mint) on :focus, so also after a mouse click.
+ * The focus background is only meant for keyboard focus (:focus-visible), so keep their own colors on a click.
+ * This file is appended to dist/theme.css and dist/open-forms/theme.css by style-dictionary.mjs.
+ */
+
+:is(.sg-theme, .openforms-theme) .utrecht-button:focus:not(:focus-visible),
+:is(.sg-theme, .openforms-theme) .utrecht-button-link:focus:not(:focus-visible) {
+  --_utrecht-button-focus-background-color: var(--_utrecht-button-background-color);
+  --_utrecht-button-focus-border-color: var(--_utrecht-button-border-color);
+  --_utrecht-button-focus-color: var(--_utrecht-button-color);
+}
+
+:is(.sg-theme, .openforms-theme) .utrecht-link:focus:not(:focus-visible),
+:is(.sg-theme, .openforms-theme) .utrecht-link-button:focus:not(:focus-visible) {
+  --utrecht-link-focus-background-color: var(--basis-color-transparent);
+  --utrecht-link-focus-color: var(--utrecht-link-color);
+}
