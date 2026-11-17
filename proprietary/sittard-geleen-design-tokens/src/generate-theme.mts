@@ -2753,6 +2753,18 @@ export const generateTheme = (
                     $value: '{basis.color.default.color-subtle}',
                   },
                 },
+                // Open Forms makes the label 1rem, smaller than its description.
+                label: {
+                  'font-size': {
+                    $type: 'fontSizes',
+                    $value: '{basis.text.font-size.md}',
+                  },
+                  // Same line height as checkbox labels, so the options have the same spacing.
+                  'line-height': {
+                    $type: 'lineHeights',
+                    $value: '{basis.text.line-height.md}',
+                  },
+                },
               },
             },
             // The abort button ("Annuleren") is red. Without a focus color it stayed red on the focus background.
@@ -3142,6 +3154,15 @@ export const generateTheme = (
             },
           },
           'of-utrecht': {
+            // Open Forms makes the checkbox option label 1rem, smaller than its description.
+            'form-label': {
+              checkbox: {
+                'font-size': {
+                  $type: 'fontSizes',
+                  $value: '{basis.text.font-size.md}',
+                },
+              },
+            },
             'form-field-description': {
               errors: {
                 'font-weight': {
