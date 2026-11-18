@@ -3441,6 +3441,25 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
+      description: 'OpenStad fixes',
+    },
+    () => {
+      return mergeTokens([
+        theme,
+        {
+          // OpenStad also gives text areas a 3px bottom border through an older token name.
+          utrecht: {
+            textarea: {
+              'border-bottom-width': { $type: 'dimension', $value: '{basis.form-control.border-width}' },
+            },
+          },
+        },
+      ]);
+    },
+  );
+
+  theme = safeTransform(
+    {
       description: 'NL Portal: header menu buttons',
     },
     () => {
