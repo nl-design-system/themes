@@ -26,6 +26,9 @@ import {
   Tabs,
   Calendar,
   Page,
+  Checkbox,
+  Column,
+  FieldSet,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -638,6 +641,45 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         'ams.page.max-inline-size',
         'ams.page.with-menu.area-skip-link.margin-inline-end',
         'ams.page.with-menu.max-inline-size',
+      ],
+    },
+  },
+  {
+    storyId: 'react-ams-checkbox-group--default',
+    component: 'ams-field-set',
+    group: STORY_GROUPS['CHECKBOX_GROUP'],
+    name: 'Amsterdam Checkbox Group',
+    render: () => (
+      <FieldSet
+        aria-describedby="ams-checkbox-group-regression-description"
+        legend="Hoe wilt u dat wij contact met u opnemen?"
+        role="group"
+      >
+        <Paragraph id="ams-checkbox-group-regression-description" size="small">
+          Wij nemen alleen contact met u op via de manieren die u kiest.
+        </Paragraph>
+        <Column gap="x-small">
+          <Checkbox name="contact" value="telefoon" defaultChecked>
+            Telefoon
+          </Checkbox>
+          <Checkbox name="contact" value="e-mail">
+            E-mail
+          </Checkbox>
+          <Checkbox name="contact" value="brief">
+            Brief
+          </Checkbox>
+        </Column>
+      </FieldSet>
+    ),
+    detectTokens: {
+      anyOf: [
+        'ams.field-set.child.margin-block-end',
+        'ams.field-set.legend.color',
+        'ams.field-set.legend.font-family',
+        'ams.field-set.legend.font-size',
+        'ams.field-set.legend.font-weight',
+        'ams.field-set.legend.line-height',
+        'ams.field-set.legend.margin-block-end',
       ],
     },
   },
