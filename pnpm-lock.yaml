@@ -7,6 +7,7 @@ settings:
 overrides:
   form-data@>=4.0.0 <4.0.4: '>=4.0.4'
   shell-quote@>=1.8.4 <1.11.0: ^1.11.0
+  expr-eval-fork@2.0.2: ^3.0.3
 
 patchedDependencies:
   '@dynamize/color-utilities@1.0.11': 97941e47008d04ce8cdaf7dfb577725f4d1e1759cf78f5c3fe7f364d681c19ba
@@ -383,6 +384,9 @@ importers:
       '@nl-design-system-community/enschede-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/enschede-design-tokens
+      '@nl-design-system-community/kvk-design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/kvk-design-tokens
       '@nl-design-system-community/losser-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/losser-design-tokens
@@ -721,7 +725,7 @@ importers:
         version: 4.1.2(react-dom@19.3.0)(react@19.3.0)
       '@gemeente-denhaag/file':
         specifier: 2.4.0
-        version: 2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)
+        version: 2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)
       '@gemeente-denhaag/icons':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.3.0)(react@19.3.0)
@@ -787,7 +791,7 @@ importers:
         version: link:../tokens-lib
       '@rijkshuisstijl-community/components-react':
         specifier: 14.0.0
-        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
+        version: 14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.29.0(supports-color@9.3.1))(@types/babel__core@7.20.5)(rollup@4.19.2)(supports-color@9.3.1)
@@ -1925,6 +1929,42 @@ importers:
       '@storybook/react-vite':
         specifier: 9.1.21
         version: 9.1.21(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rollup@4.19.2)(storybook@9.1.21(@testing-library/dom@10.4.0)(prettier@3.4.2)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8)))(supports-color@9.3.1)(typescript@5.5.4)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      style-dictionary:
+        specifier: 4.0.1
+        version: 4.0.1
+
+  proprietary/kvk-design-tokens:
+    devDependencies:
+      '@nl-design-system-community/design-tokens-definition':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens-definition
+      '@nl-design-system-unstable/design-tokens-table-react':
+        specifier: workspace:*
+        version: link:../../packages/components-react/design-tokens-table-react
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: workspace:*
+        version: link:../../packages/theme-toolkit
+      '@nl-design-system-unstable/tokens-lib':
+        specifier: workspace:*
+        version: link:../../packages/tokens-lib
+      '@storybook/addon-docs':
+        specifier: 9.1.21
+        version: 9.1.21(@types/react@19.3.0)(storybook@9.1.21(@testing-library/dom@10.4.0)(prettier@3.4.2)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8)))
+      '@storybook/react-vite':
+        specifier: 9.1.21
+        version: 9.1.21(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rollup@4.19.2)(storybook@9.1.21(@testing-library/dom@10.4.0)(prettier@3.4.2)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8)))(supports-color@9.3.1)(typescript@5.5.4)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
+      '@tokens-studio/sd-transforms':
+        specifier: 1.2.3
+        version: 1.2.3(style-dictionary@4.0.1)
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -6930,8 +6970,9 @@ packages:
     resolution: {integrity: sha512-2Zks0hf1VLFYI1kbh0I5jP3KHHyCHpkfyHBzsSXRFgl/Bg9mWYfMW8oD+PdMPlEwy5HNsR9JutYy6pMeOh61nw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
-  expr-eval-fork@2.0.2:
-    resolution: {integrity: sha512-NaAnObPVwHEYrODd7Jzp3zzT9pgTAlUUL4MZiZu9XAYPDpx89cPsfyEImFb2XY0vQNbrqg2CG7CLiI+Rs3seaQ==}
+  expr-eval-fork@3.0.3:
+    resolution: {integrity: sha512-BhC+hbc5lIVjygr840n5DEkW3MQq7H9o+mc1/N7Z5uIiCFVyESLL5DIE7LNq4CYUNxy+XjA+3jRrL/h0Kt2xcg==}
+    engines: {node: '>=16.9.0'}
 
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
@@ -10153,7 +10194,7 @@ snapshots:
       '@amsterdam/design-system-assets': 2.7.0
       '@amsterdam/design-system-tokens': 4.4.0
 
-  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.3.0)(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
@@ -10168,9 +10209,9 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@amsterdam/design-system-react@1.1.0(react-dom@19.3.0)(react@19.3.0)':
     dependencies:
-      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.3.0)(react@19.3.0)
       '@babel/runtime': 7.27.4
       clsx: 2.1.1
       react: 19.3.0
@@ -11017,7 +11058,7 @@ snapshots:
 
   '@gemeente-denhaag/design-tokens@1.2.0': {}
 
-  '@gemeente-denhaag/file@2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)':
+  '@gemeente-denhaag/file@2.4.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)':
     dependencies:
       '@gemeente-denhaag/icons': 4.0.1(react-dom@19.3.0)(react@19.3.0)
       '@utrecht/component-library-react': 10.3.10(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)
@@ -11841,9 +11882,9 @@ snapshots:
       - vite
       - vitest
 
-  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
+  '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.25.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.25.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.25.0)(date-fns@2.30.0)(react-dom@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
@@ -11872,7 +11913,7 @@ snapshots:
 
   '@rijkshuisstijl-community/components-react@14.0.0(@babel/runtime@7.29.10)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))':
     dependencies:
-      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@amsterdam/design-system-react': 1.1.0(react-dom@19.3.0)(react@19.3.0)
       '@nl-design-system-candidate/link-react': 1.1.8(@babel/runtime@7.29.10)(react@19.3.0)
       '@nl-design-system-candidate/skip-link-react': 1.1.7(@babel/runtime@7.29.10)(react@19.3.0)
       '@rijkshuisstijl-community/accordion-react': 3.0.1(@babel/runtime@7.29.10)(date-fns@2.30.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(supports-color@9.3.1)(vite@5.3.5(@types/node@24.10.4)(sass@1.77.8))
@@ -12244,7 +12285,7 @@ snapshots:
       '@bundled-es-modules/postcss-calc-ast-parser': 0.1.6
       '@tokens-studio/types': 0.5.1
       colorjs.io: 0.4.5
-      expr-eval-fork: 2.0.2
+      expr-eval-fork: 3.0.3
       is-mergeable-object: 1.1.1
       style-dictionary: 4.0.1
 
@@ -12254,7 +12295,7 @@ snapshots:
       '@bundled-es-modules/postcss-calc-ast-parser': 0.1.6
       '@tokens-studio/types': 0.5.1
       colorjs.io: 0.4.5
-      expr-eval-fork: 2.0.2
+      expr-eval-fork: 3.0.3
       is-mergeable-object: 1.1.1
       style-dictionary: 4.2.0(prettier@3.4.2)
 
@@ -12264,7 +12305,7 @@ snapshots:
       '@bundled-es-modules/postcss-calc-ast-parser': 0.1.6
       '@tokens-studio/types': 0.5.1
       colorjs.io: 0.5.2
-      expr-eval-fork: 2.0.2
+      expr-eval-fork: 3.0.3
       is-mergeable-object: 1.1.1
       style-dictionary: 5.1.1
 
@@ -15943,7 +15984,7 @@ snapshots:
       jest-message-util: 29.7.0
       jest-util: 29.7.0
 
-  expr-eval-fork@2.0.2: {}
+  expr-eval-fork@3.0.3: {}
 
   extend@3.0.2: {}
 
