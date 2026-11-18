@@ -7384,6 +7384,36 @@
       }
     }
   },
+  "components/document": {
+    "utrecht": {
+      "document": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default.bg-document}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.default}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        }
+      }
+    }
+  },
   "components/dot-badge": {
     "rhc": {
       "dot-badge": {
@@ -16478,6 +16508,7 @@
       "components/data-summary",
       "components/date-input",
       "components/description-list",
+      "components/document",
       "components/dot-badge",
       "components/drawer/utrecht",
       "components/drawer/todo",
