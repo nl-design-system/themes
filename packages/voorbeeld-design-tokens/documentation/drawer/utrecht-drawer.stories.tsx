@@ -5,13 +5,10 @@ const meta = {
   id: 'utrecht-drawer',
   title: 'Components/Drawer/Utrecht',
   component: Drawer,
-  render: (args) => (
-    <Drawer {...args}>
-      <Heading2>Hulp bij uw aanvraag</Heading2>
-      <Paragraph>Heeft u vragen over uw parkeervergunning? Bel 14 030 of stuur ons een bericht.</Paragraph>
-    </Drawer>
-  ),
   argTypes: {
+    children: {
+      description: 'HTML content of the drawer',
+    },
     align: {
       description: 'Side of the screen the drawer opens from',
       control: { type: 'select' },
@@ -27,6 +24,12 @@ const meta = {
     },
   },
   args: {
+    children: (
+      <>
+        <Heading2>Hulp bij uw aanvraag</Heading2>
+        <Paragraph>Heeft u vragen over uw parkeervergunning? Bel 14 030 of stuur ons een bericht.</Paragraph>
+      </>
+    ),
     open: true,
     align: 'inline-start',
     modal: false,
