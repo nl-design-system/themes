@@ -1,3 +1,3 @@
 # KVK Design Tokens
 
-KVK experimenteert met het toepassen van NL Design.
+KVK experimenteert met het toepassen van NL Design System.
