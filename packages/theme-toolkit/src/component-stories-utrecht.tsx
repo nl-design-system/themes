@@ -27,6 +27,7 @@ import {
   OrderedListItem,
   DataBadge,
   Document,
+  Drawer,
   // BadgeCounter,
   // Blockquote,
   Checkbox,
@@ -3657,6 +3658,39 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.form-fieldset.legend.margin-block-start',
         'utrecht.form-fieldset.margin-block-end',
         'utrecht.form-fieldset.margin-block-start',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-drawer--default',
+    component: 'utrecht-drawer',
+    group: STORY_GROUPS['DRAWER'],
+    name: 'Utrecht Drawer',
+    render: () => (
+      <div style={{ blockSize: '20rem', position: 'relative', transform: 'translateZ(0)' }}>
+        <Drawer open align="inline-start">
+          <Heading2>Hulp bij uw aanvraag</Heading2>
+          <Paragraph>Heeft u vragen over uw parkeervergunning? Bel 14 030 of stuur ons een bericht.</Paragraph>
+        </Drawer>
+      </div>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.drawer.backdrop.min-size',
+        'utrecht.drawer.background-color',
+        'utrecht.drawer.border-color',
+        'utrecht.drawer.border-radius',
+        'utrecht.drawer.border-width',
+        'utrecht.drawer.color',
+        'utrecht.drawer.max-block-size',
+        'utrecht.drawer.max-inline-size',
+        'utrecht.drawer.min-block-size',
+        'utrecht.drawer.min-inline-size',
+        'utrecht.drawer.padding-block-end',
+        'utrecht.drawer.padding-block-start',
+        'utrecht.drawer.padding-inline-end',
+        'utrecht.drawer.padding-inline-start',
+        'utrecht.drawer.z-index',
       ],
     },
   },

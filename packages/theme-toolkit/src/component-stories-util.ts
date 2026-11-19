@@ -22,6 +22,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   DATA_SUMMARY: 'Data Summary',
   DATE_INPUT: 'Date Input',
   DESCRIPTION_LIST: 'Description List',
+  DRAWER: 'Drawer',
   EMPHASIS: 'Emphasis',
   FIGURE: 'Figure',
   FILE: 'File',

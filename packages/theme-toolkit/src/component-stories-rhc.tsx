@@ -2,6 +2,7 @@ import { STORY_GROUPS } from './component-stories-util';
 import {
   DotBadge,
   Alert,
+  Drawer,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
   Heading,
@@ -58,5 +59,19 @@ export const RHC_COMPONENT_STORIES = [
         'rhc.checkbox-group.row-gap',
       ],
     },
+  },
+  {
+    storyId: 'react-rhc-drawer--default',
+    component: 'rhc-drawer',
+    group: STORY_GROUPS['DRAWER'],
+    name: 'Rijkshuisstijl Drawer',
+    render: () => (
+      <div style={{ blockSize: '20rem', position: 'relative', transform: 'translateZ(0)' }}>
+        <Drawer open align="inline-start">
+          <Heading level={2}>Hulp bij uw aanvraag</Heading>
+          <Paragraph>Heeft u vragen over uw parkeervergunning? Bel 14 030 of stuur ons een bericht.</Paragraph>
+        </Drawer>
+      </div>
+    ),
   },
 ];
