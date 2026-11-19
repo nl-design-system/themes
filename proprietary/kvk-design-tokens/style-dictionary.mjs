@@ -4,27 +4,23 @@ import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
 import { createConfig } from '../../style-dictionary-config.mjs';
 
-const build = async () => {
-  const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
-  StyleDictionary.registerPreprocessor({
-    name: 'dtcg-delegate',
-    preprocessor: typeDtcgDelegate,
-  });
+const themeConfig = JSON.parse(await readFile('./src/config.json', 'utf-8'));
+StyleDictionary.registerPreprocessor({
+  name: 'dtcg-delegate',
+  preprocessor: typeDtcgDelegate,
+});
 
-  register(StyleDictionary, {
-    excludeParentKeys: true,
-  });
+register(StyleDictionary, {
+  excludeParentKeys: true,
+});
 
-  let sd = new StyleDictionary({
-    ...createConfig({
-      className: `${themeConfig.prefix}-theme`,
-    }),
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
-    source: ['src/tokens.json', 'src/*.tokens.json'],
-  });
+const sd = new StyleDictionary({
+  ...createConfig({
+    className: `${themeConfig.prefix}-theme`,
+  }),
+  preprocessors: ['tokens-studio', 'dtcg-delegate'],
+  source: ['src/tokens.json', 'src/*.tokens.json'],
+});
 
-  await sd.cleanAllPlatforms();
-  await sd.buildAllPlatforms();
-};
-
-build();
+await sd.cleanAllPlatforms();
+await sd.buildAllPlatforms();
