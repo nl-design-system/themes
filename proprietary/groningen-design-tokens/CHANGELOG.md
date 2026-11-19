@@ -1,5 +1,11 @@
 # @nl-design-system-unstable/groningen-design-tokens
 
+## 7.1.0
+
+### Minor Changes
+
+- 5301817: Conform changelog 24.1.0 het component Document toegevoegd, met bijbehorende design tokens.
+
 ## 7.0.0
 
 ### Major Changes
