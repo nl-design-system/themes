@@ -1,0 +1,50 @@
+/*
+ * NL Portal overrides
+ *
+ * NL Portal uses Den Haag components. These rules only match Den Haag classes, so they only apply in NL Portal.
+ * This file is appended to dist/theme.css by style-dictionary.mjs.
+ */
+
+/* Den Haag buttons and links have no focus background and no token for it, so keyboard focus looked
+ * different from the NL Design System links and buttons. Use the same focus colors. */
+.sg-theme .denhaag-button:focus-visible,
+.sg-theme .denhaag-menu-button:focus-visible,
+.sg-theme .denhaag-breadcrumb__link:focus-visible,
+.sg-theme .denhaag-language-switcher__list-item-button:focus-visible,
+.sg-theme .denhaag-link:focus-visible,
+.sg-theme .denhaag-action--single:focus-visible {
+  background-color: var(--basis-focus-background-color);
+  color: var(--basis-focus-color);
+}
+
+/* The icon of a document sits on a blue background (denhaag.file.left.background-color). It takes the
+ * text color, and there is no token for it, so make it white. */
+.sg-theme .denhaag-file__left {
+  color: var(--basis-color-accent-1-inverse-color-default);
+}
+
+/* The footer is the same blue as a primary button, so a primary button in the footer (such as
+ * "Contactpagina") would disappear. Show it as a secondary button, like the menu button on
+ * sittard-geleen.nl. There is no token for buttons in the footer. */
+.sg-theme .denhaag-footer .utrecht-button--primary-action,
+.sg-theme .denhaag-footer .utrecht-button-link--primary-action {
+  --utrecht-button-primary-action-active-background-color: var(
+    --utrecht-button-secondary-action-active-background-color
+  );
+  --utrecht-button-primary-action-active-border-color: var(--utrecht-button-secondary-action-active-border-color);
+  --utrecht-button-primary-action-active-color: var(--utrecht-button-secondary-action-active-color);
+  --utrecht-button-primary-action-background-color: var(--utrecht-button-secondary-action-background-color);
+  --utrecht-button-primary-action-border-color: var(--utrecht-button-secondary-action-border-color);
+  --utrecht-button-primary-action-color: var(--utrecht-button-secondary-action-color);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-button-secondary-action-hover-background-color);
+  --utrecht-button-primary-action-hover-border-color: var(--utrecht-button-secondary-action-hover-border-color);
+  --utrecht-button-primary-action-hover-color: var(--utrecht-button-secondary-action-hover-color);
+}
+
+/* The toggle of a process step (such as "Bezwaar beoordeeld") is a subtle button. It gets no
+ * background when hovered or pressed, only the focus background. */
+.sg-theme .denhaag-process-steps__step-header-toggle {
+  --utrecht-button-subtle-hover-background-color: var(--basis-color-transparent);
+  --utrecht-button-subtle-active-background-color: var(--basis-color-transparent);
+  --utrecht-button-subtle-pressed-background-color: var(--basis-color-transparent);
+}
