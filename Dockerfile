@@ -1,4 +1,4 @@
-FROM node:24.22.3-alpine
+FROM node:26.13.1-alpine
 
 ARG TZ=Europe/Amsterdam
 ENV TZ Europe/Amsterdam
