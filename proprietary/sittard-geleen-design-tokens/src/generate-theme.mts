@@ -1468,20 +1468,29 @@ export const generateTheme = (
 
   theme = safeTransform(
     {
-      description: 'Sittard-Geleen design decision: purple focus color',
+      description: 'Sittard-Geleen design decision: accent-3 color',
     },
     () => {
       // Design decision by Sittard-Geleen: purple ("100 paars") from their color palette
+      return setBasisColor(theme, 'accent-3', '#6C3386', { inverseAnchor: 'bg-default' });
+    },
+  );
+
+  theme = safeTransform(
+    {
+      description: 'Sittard-Geleen design decision: purple focus color',
+    },
+    () => {
       return mergeTokens([
         theme,
         {
           basis: {
             focus: {
               'background-color': {
-                $value: '#6C3386',
+                $value: '{basis.color.accent-3-inverse.bg-default}',
               },
               color: {
-                $value: '#ffffff',
+                $value: '{basis.color.accent-3-inverse.color-default}',
               },
             },
           },
