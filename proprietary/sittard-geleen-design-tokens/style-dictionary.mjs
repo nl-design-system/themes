@@ -68,8 +68,7 @@ const build = async () => {
   const focusOverrides = await readFile('./src/_focus-overrides.css', 'utf-8');
   await appendFile('dist/theme.css', `\n${focusOverrides}`);
   // Open Forms only allows its own theme class, so scope the same rules to `openforms-theme` there.
-  await appendFile('dist/open-forms/theme.css', `\n${focusOverrides.replaceAll('.sg-theme ', '.openforms-theme ')}`);
-
+  await appendFile('dist/open-forms/theme.css', `\n${focusOverrides}`);
   // GPP-Woo specific design decisions. They are scoped to its `gpp-woo-theme` class, so they do not
   // change other applications that use the theme.
   const gppWooOverrides = await readFile('./src/_gpp-woo-overrides.css', 'utf-8');
