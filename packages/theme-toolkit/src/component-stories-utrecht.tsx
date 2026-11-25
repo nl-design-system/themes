@@ -6,6 +6,7 @@ import { ComponentStory, STORY_GROUPS } from './component-stories-util';
 import {
   AccordionProvider,
   Alert,
+  AlertDialog,
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
@@ -3691,6 +3692,31 @@ export const UTRECHT_COMPONENT_STORIES: ComponentStory[] = [
         'utrecht.drawer.padding-inline-end',
         'utrecht.drawer.padding-inline-start',
         'utrecht.drawer.z-index',
+      ],
+    },
+  },
+  {
+    storyId: 'react-utrecht-alert-dialog--default',
+    component: 'utrecht-alert-dialog',
+    group: STORY_GROUPS['ALERT_DIALOG'],
+    name: 'Utrecht Alert Dialog',
+    render: () => (
+      <AlertDialog open>
+        <Heading2>Uw sessie verloopt bijna</Heading2>
+        <Paragraph>U bent 15 minuten niet actief geweest. Over 2 minuten wordt u automatisch uitgelogd.</Paragraph>
+        <Button appearance="primary-action-button">Ingelogd blijven</Button>
+      </AlertDialog>
+    ),
+    detectTokens: {
+      anyOf: [
+        'utrecht.alert-dialog.border-color',
+        'utrecht.alert-dialog.border-radius',
+        'utrecht.alert-dialog.border-width',
+        'utrecht.alert-dialog.box-shadow',
+        'utrecht.alert-dialog.max-block-size',
+        'utrecht.alert-dialog.max-inline-size',
+        'utrecht.alert-dialog.min-block-size',
+        'utrecht.alert-dialog.min-inline-size',
       ],
     },
   },
