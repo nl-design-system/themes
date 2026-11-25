@@ -5,8 +5,9 @@
  * This file is appended to dist/theme.css by style-dictionary.mjs.
  */
 
-/* Den Haag buttons and links have no focus background and no token for it, so keyboard focus looked
- * different from the NL Design System links and buttons. Use the same focus colors. */
+/* Den Haag buttons and links have no focus background and no token for it, and not the same focus ring,
+ * so keyboard focus looked different from the NL Design System links and buttons. Use the same focus
+ * colors, and the focus ring of the `utrecht-focus-ring` mixin. */
 .sg-theme .denhaag-button:focus-visible,
 .sg-theme .denhaag-menu-button:focus-visible,
 .sg-theme .denhaag-breadcrumb__link:focus-visible,
@@ -14,7 +15,13 @@
 .sg-theme .denhaag-link:focus-visible,
 .sg-theme .denhaag-action--single:focus-visible {
   background-color: var(--basis-focus-background-color);
+  box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0) var(--utrecht-focus-inverse-outline-color, transparent);
   color: var(--basis-focus-color);
+  outline-color: var(--utrecht-focus-outline-color, revert);
+  outline-offset: var(--utrecht-focus-outline-offset, revert);
+  outline-style: var(--utrecht-focus-outline-style, revert);
+  outline-width: var(--utrecht-focus-outline-width, revert);
+  z-index: 1;
 }
 
 /* The icon of a document sits on a blue background (denhaag.file.left.background-color). It takes the

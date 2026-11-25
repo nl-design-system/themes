@@ -3661,9 +3661,6 @@ export const generateTheme = (
             link: {
               focus: {
                 color: { $type: 'color', $value: '{basis.focus.color}' },
-                'outline-color': { $type: 'color', $value: '{basis.focus.outline-color}' },
-                'outline-style': { $type: 'other', $value: '{basis.focus.outline-style}' },
-                'outline-width': { $type: 'dimension', $value: '{basis.focus.outline-width}' },
               },
             },
           },
