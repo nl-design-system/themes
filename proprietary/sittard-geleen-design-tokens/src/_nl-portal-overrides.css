@@ -48,3 +48,16 @@
   --utrecht-button-subtle-active-background-color: var(--basis-color-transparent);
   --utrecht-button-subtle-pressed-background-color: var(--basis-color-transparent);
 }
+
+/* The heading in the toggle of a process step or a contact moment has its own color, so it ignored the focus
+ * text color on the focus background. */
+.sg-theme .denhaag-process-steps__step-header-toggle:focus-visible:not(:hover) * {
+  color: var(--basis-focus-color);
+}
+
+/* On tablet and mobile, the menu items use the header menu button color (Sittard-Geleen blue) as focus text color,
+ * so they were blue on the focus background. There is no separate token for it. */
+.sg-theme .denhaag-mobile-menu-list .denhaag-mobile-menu-list-item-link,
+.sg-theme .denhaag-mobile-menu-list .denhaag-mobile-menu-list-item-button {
+  --utrecht-button-subtle-focus-color: var(--basis-focus-color);
+}
