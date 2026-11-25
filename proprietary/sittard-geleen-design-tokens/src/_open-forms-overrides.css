@@ -70,19 +70,17 @@
 }
 
 /* PDF summaries: keep a heading (such as "Contactgegevens") on the same page as the fields below it,
- * instead of leaving it alone at the bottom of a page. Only applies to print and PDF. */
-@media print {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    break-after: avoid;
-    page-break-after: avoid;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
+ * instead of leaving it alone at the bottom of a page. These properties only matter where content is split, such as pages in print and PDF. */
+.openforms-theme h1,
+.openforms-theme h2,
+.openforms-theme h3,
+.openforms-theme h4,
+.openforms-theme h5,
+.openforms-theme h6 {
+  break-after: avoid;
+  page-break-after: avoid;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 /* The close button of a modal (such as "Kind toevoegen") is a subtle button that Open Forms makes
