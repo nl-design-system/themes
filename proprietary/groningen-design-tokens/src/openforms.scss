@@ -1,0 +1,171 @@
+/* =========================================================
+   Gemeente Groningen - Open Formulieren 4.0
+   Aanvullende styling voor de nieuwe renderer
+   ========================================================= */
+
+/* Pagina en centrering */
+.groningen-theme {
+  --utrecht-page-max-inline-size: 1170px;
+}
+
+.groningen-theme .utrecht-page {
+  --utrecht-page-background-color: #fff;
+
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: 0;
+  max-inline-size: none;
+  min-height: 100vh;
+}
+
+.groningen-theme .utrecht-page__content {
+  margin-inline: auto;
+  max-inline-size: var(--utrecht-page-max-inline-size);
+  width: 90%;
+}
+
+.groningen-theme .utrecht-page-content__main {
+  width: 100%;
+}
+
+/* Technisch adresveld */
+.groningen-theme input[name="data[adresgegevens]"] {
+  display: none !important;
+}
+
+.groningen-theme .utrecht-form-field:has(input[name="data[adresgegevens]"]) > .utrecht-form-field__label {
+  display: none !important;
+}
+
+/* Hoofdtitel */
+.groningen-theme .utrecht-heading-1 {
+  font-weight: 700;
+  margin-block-end: 0.67em;
+}
+
+/* Toegankelijkheidsknoppen verbergen */
+.groningen-theme .a11y-toolbar {
+  display: none;
+}
+
+/* Gemeentelogo links uitlijnen */
+.groningen-theme
+  .utrecht-page-header.utrecht-page-header--openforms-with-logo
+  .utrecht-page-header__openforms-return-url {
+  background-position: 0%;
+}
+
+/* Fieldsets */
+.groningen-theme .openforms-fieldset {
+  border: none;
+}
+
+.groningen-theme .openforms-fieldset__legend {
+  margin-inline-start: 0;
+  padding-inline: 0;
+}
+
+/* AdresNL: dubbele legend verbergen */
+.groningen-theme .openforms-addressnl > .openforms-fieldset__legend {
+  display: none !important;
+}
+
+/* Voortgangsindicator */
+.groningen-theme .openforms-progress-indicator-item__label:hover {
+  color: var(--of-color-primary);
+}
+
+.groningen-theme .openforms-progress-indicator-item__marker {
+  color: var(--groningen-color-accent);
+}
+
+.groningen-theme .openforms-progress-indicator-item__marker .utrecht-icon,
+.groningen-theme .openforms-progress-indicator-item__marker i {
+  color: inherit;
+}
+
+/* Subtitel */
+
+/* Rode lijn onder de staptitel */
+.groningen-theme .openforms-card__header--padded > .utrecht-heading-2.openforms-title {
+  border-bottom: 1px solid var(--groningen-color-accent);
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding-bottom: 10px;
+}
+
+/* Modal */
+.groningen-theme .openforms-react-modal__title {
+  font-weight: 700;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin-bottom: 24px;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding-bottom: 12px;
+}
+
+/* Foutmeldingen */
+.groningen-theme .openforms-message,
+.groningen-theme .openforms-message--error {
+  margin-block-start: 15px;
+}
+
+/* Invoervelden en knoppen */
+.groningen-theme .utrecht-textbox,
+.groningen-theme .utrecht-textarea,
+.groningen-theme .utrecht-select,
+.groningen-theme .utrecht-button {
+  border-radius: 4px;
+}
+
+/* Checkbox- en radiovelden zonder grijze achtergrond */
+.groningen-theme .utrecht-form-field--checkbox,
+.groningen-theme .utrecht-form-field--radio,
+.groningen-theme .utrecht-form-label--checkbox,
+.groningen-theme .utrecht-form-label--radio {
+  background-color: transparent;
+}
+
+/* Desktop: formulier en voortgangsindicator */
+@media only screen and (width >=768px) {
+  .groningen-theme .openforms-app {
+    width: 100%;
+  }
+
+  .groningen-theme .openforms-card {
+    max-width: 80ch;
+    /* stylelint-disable-next-line property-disallowed-list */
+    padding: 0;
+  }
+
+  .groningen-theme .openforms-progress-indicator {
+    border: none;
+    /* stylelint-disable-next-line property-disallowed-list */
+    padding: 0;
+    position: static;
+  }
+}
+
+/* Footer */
+.groningen-theme .utrecht-page-footer {
+  background-color: var(--groningen-color-interactive-cta);
+  color: var(--groningen-color-background);
+}
+
+.groningen-theme .utrecht-page-footer .utrecht-link-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.groningen-theme .utrecht-page-footer .utrecht-link,
+.groningen-theme .utrecht-page-footer .utrecht-link:any-link {
+  color: var(--groningen-color-background);
+}
+
+.groningen-theme .utrecht-page-footer .utrecht-link:hover {
+  color: var(--groningen-color-background);
+  text-decoration: underline;
+}
