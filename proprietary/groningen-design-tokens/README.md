@@ -5,3 +5,11 @@ These tokens have been obtained by adding gemeente Groningen tokens to the NL De
 [The NL Design System ToDo bibliotheek gemeente Groningen](https://www.figma.com/design/nncQk7kdiJh4Dh9fDfWwmp/NL-Design-System---ToDo-Bibliotheek---Gemeente-Groningen?node-id=0-1&p=f&t=DhSNORCHY8QifSGr-0)
 
 This groningen-thema complies with the municipalities' branding.
+
+## Custom Files
+
+**openforms.scss**
+Additional styling for Open Formulieren 4.0 voor de nieuwe renderer.
+
+**gpp-woo.scss**
+Additional styling for GGP Woo Groningen. It extends the openforms styling.
