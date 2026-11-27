@@ -4,6 +4,7 @@ export const STORY_GROUPS: { [index: string]: string } = {
   ACCORDION: 'Accordion',
   ACTION_GROUP: 'Action Group',
   ALERT: 'Alerts',
+  ALERT_DIALOG: 'Alert Dialog',
   AVATAR: 'Avatars',
   BADGES: 'Badges',
   BREADCRUMB_NAV: 'Breadcrumb Navigation',
