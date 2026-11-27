@@ -7,6 +7,8 @@ import { CaseCard } from '@gemeente-denhaag/card';
 import { ActionSingle } from '@gemeente-denhaag/action';
 import { File } from '@gemeente-denhaag/file';
 import { DescriptionList } from '@gemeente-denhaag/descriptionlist';
+import { Pagination } from '@gemeente-denhaag/pagination';
+import '@gemeente-denhaag/pagination/index.css';
 import { Status } from '@gemeente-denhaag/process-steps';
 import type { StatusProps } from '@gemeente-denhaag/process-steps';
 import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
@@ -181,6 +183,31 @@ export const DENHAAG_COMPONENT_STORIES: ComponentStory[] = [
         'denhaag.description-list.title.font-weight',
         'denhaag.description-list.title.padding-block-end',
         'denhaag.description-list.title.padding-block-start',
+      ],
+    },
+  },
+  {
+    storyId: 'react-denhaag-pagination--default',
+    component: 'denhaag-pagination',
+    group: STORY_GROUPS['PAGE_NUMBER_NAVIGATION'],
+    name: 'Den Haag Page Number Navigation',
+    render: () => <Pagination index={2} indexLimit={11} />,
+    detectTokens: {
+      anyOf: [
+        'denhaag.pagination.arrow.font-size',
+        'denhaag.pagination.arrow.size',
+        'denhaag.pagination.border.radius',
+        'denhaag.pagination.button.color',
+        'denhaag.pagination.button.current.color',
+        'denhaag.pagination.button.current.disabled.background-color',
+        'denhaag.pagination.button.current.disabled.color',
+        'denhaag.pagination.button.current.font-weight',
+        'denhaag.pagination.button.disabled.color',
+        'denhaag.pagination.button.hover.color',
+        'denhaag.pagination.font.size',
+        'denhaag.pagination.font.weight',
+        'denhaag.pagination.margin-inline',
+        'denhaag.pagination.size',
       ],
     },
   },

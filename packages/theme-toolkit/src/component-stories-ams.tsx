@@ -29,6 +29,7 @@ import {
   Checkbox,
   Column,
   FieldSet,
+  Pagination,
 } from '@amsterdam/design-system-react';
 
 import {
@@ -680,6 +681,70 @@ export const AMS_COMPONENT_STORIES: ComponentStory[] = [
         'ams.field-set.legend.font-weight',
         'ams.field-set.legend.line-height',
         'ams.field-set.legend.margin-block-end',
+      ],
+    },
+  },
+  {
+    storyId: 'react-ams-pagination--default',
+    component: 'ams-pagination',
+    group: STORY_GROUPS['PAGE_NUMBER_NAVIGATION'],
+    name: 'Amsterdam Page Number Navigation',
+    render: () => (
+      <Pagination
+        accessibleName="Paginering zoekresultaten"
+        linkTemplate={(page) => `?pagina=${page}`}
+        page={3}
+        totalPages={12}
+      />
+    ),
+    detectTokens: {
+      anyOf: [
+        'ams.pagination.ellipsis.color',
+        'ams.pagination.ellipsis.padding-block',
+        'ams.pagination.ellipsis.padding-inline',
+        'ams.pagination.font-family',
+        'ams.pagination.font-size',
+        'ams.pagination.font-weight',
+        'ams.pagination.gap',
+        'ams.pagination.line-height',
+        'ams.pagination.link.active.background-color',
+        'ams.pagination.link.active.color',
+        'ams.pagination.link.background-color',
+        'ams.pagination.link.color',
+        'ams.pagination.link.current.background-color',
+        'ams.pagination.link.current.color',
+        'ams.pagination.link.current.font-weight',
+        'ams.pagination.link.current.hover.background-color',
+        'ams.pagination.link.current.hover.color',
+        'ams.pagination.link.font-weight',
+        'ams.pagination.link.gap',
+        'ams.pagination.link.hover.background-color',
+        'ams.pagination.link.hover.color',
+        'ams.pagination.link.hover.text-decoration-line',
+        'ams.pagination.link.min-block-size',
+        'ams.pagination.link.min-inline-size',
+        'ams.pagination.link.outline-offset',
+        'ams.pagination.link.padding-block',
+        'ams.pagination.link.padding-inline',
+        'ams.pagination.link.text-decoration-line',
+        'ams.pagination.link.text-decoration-thickness',
+        'ams.pagination.link.text-underline-offset',
+        'ams.pagination.list.gap',
+        'ams.pagination.relative-link.active.background-color',
+        'ams.pagination.relative-link.active.color',
+        'ams.pagination.relative-link.background-color',
+        'ams.pagination.relative-link.color',
+        'ams.pagination.relative-link.font-weight',
+        'ams.pagination.relative-link.gap',
+        'ams.pagination.relative-link.hover.background-color',
+        'ams.pagination.relative-link.hover.color',
+        'ams.pagination.relative-link.hover.text-decoration-line',
+        'ams.pagination.relative-link.outline-offset',
+        'ams.pagination.relative-link.padding-block',
+        'ams.pagination.relative-link.padding-inline',
+        'ams.pagination.relative-link.text-decoration-line',
+        'ams.pagination.relative-link.text-decoration-thickness',
+        'ams.pagination.relative-link.text-underline-offset',
       ],
     },
   },

@@ -729,6 +729,9 @@ importers:
       '@gemeente-denhaag/icons':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@gemeente-denhaag/pagination':
+        specifier: 3.1.2
+        version: 3.1.2(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@gemeente-denhaag/process-steps':
         specifier: 4.2.3
         version: 4.2.3(react-dom@19.3.0)(react@19.3.0)
@@ -1255,6 +1258,9 @@ importers:
       '@gemeente-denhaag/icons':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.3.0)(react@19.3.0)
+      '@gemeente-denhaag/pagination':
+        specifier: 3.1.2
+        version: 3.1.2(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@gemeente-denhaag/side-navigation':
         specifier: 3.1.0
         version: 3.1.0(react-dom@19.3.0)(react@19.3.0)
@@ -3756,6 +3762,12 @@ packages:
 
   '@gemeente-denhaag/number-badge@1.1.0':
     resolution: {integrity: sha512-7vNMouwysrz9t93MbZrozm6rfYZmPfuwnX+Mag6IwlSoYsn9ZcvzFvDp9cL6dLo/pGIuB9mkmCohZ1HEHyx7XQ==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/pagination@3.1.2':
+    resolution: {integrity: sha512-d/G81SrLI+qEaqSY2g0gEFmiFXLeQABuBzMB44YjXkqfjaMzNWEr0bSq36ESltk+3bVZVIAXXQdZNXXu/0Sprw==}
     peerDependencies:
       react: 18 || 19
       react-dom: 18 || 19
@@ -11113,6 +11125,12 @@ snapshots:
 
   '@gemeente-denhaag/number-badge@1.1.0(react-dom@19.3.0)(react@19.3.0)':
     dependencies:
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+
+  '@gemeente-denhaag/pagination@3.1.2(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      clsx: 2.1.1
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
